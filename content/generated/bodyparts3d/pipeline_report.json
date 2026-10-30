@@ -1,0 +1,143 @@
+{
+ "dataset": "BodyParts3D 4.0 PART-OF",
+ "concepts": 1368,
+ "part_of_edges": 1367,
+ "elements_listed": 1258,
+ "elements_built": 1258,
+ "elements_missing_obj": [],
+ "owner_header_vs_derived_mismatches": [
+  {
+   "element": "FJ3395",
+   "header": "FMA9710",
+   "derived": "FMA59665"
+  },
+  {
+   "element": "FJ3288",
+   "header": "FMA16587",
+   "derived": "FMA20227"
+  },
+  {
+   "element": "FJ3263",
+   "header": "FMA54738",
+   "derived": "FMA59672"
+  },
+  {
+   "element": "FJ3152",
+   "header": "FMA16586",
+   "derived": "FMA20226"
+  },
+  {
+   "element": "FJ2557",
+   "header": "FMA59503",
+   "derived": "FMA59838"
+  },
+  {
+   "element": "FJ2432",
+   "header": "FMA7243",
+   "derived": "FMA86056"
+  },
+  {
+   "element": "FJ2429",
+   "header": "FMA7264",
+   "derived": "FMA9352"
+  },
+  {
+   "element": "FJ2418",
+   "header": "FMA7265",
+   "derived": "FMA86064"
+  },
+  {
+   "element": "FJ1932",
+   "header": "FMA3789",
+   "derived": "FMA259248"
+  },
+  {
+   "element": "FJ1737",
+   "header": "FMA78497",
+   "derived": "FMA75007"
+  },
+  {
+   "element": "FJ1252",
+   "header": "FMA59763",
+   "derived": "FMA54397"
+  }
+ ],
+ "triangles": 3138996,
+ "scene_bounds_m": {
+  "min": [
+   -0.3335,
+   0.0,
+   -0.146
+  ],
+  "max": [
+   0.3335,
+   1.7195,
+   0.146
+  ]
+ },
+ "per_system": {
+  "cardiovascular": {
+   "meshes": 646,
+   "triangles": 818878
+  },
+  "digestive": {
+   "meshes": 104,
+   "triangles": 282996
+  },
+  "endocrine": {
+   "meshes": 3,
+   "triangles": 7454
+  },
+  "integumentary": {
+   "meshes": 2,
+   "triangles": 206342
+  },
+  "lymphatic": {
+   "meshes": 2,
+   "triangles": 2080
+  },
+  "muscular": {
+   "meshes": 58,
+   "triangles": 627108
+  },
+  "nervous": {
+   "meshes": 60,
+   "triangles": 322990
+  },
+  "reproductive": {
+   "meshes": 1,
+   "triangles": 442
+  },
+  "respiratory": {
+   "meshes": 101,
+   "triangles": 66466
+  },
+  "skeletal": {
+   "meshes": 244,
+   "triangles": 584626
+  },
+  "special_senses": {
+   "meshes": 31,
+   "triangles": 209670
+  },
+  "urinary": {
+   "meshes": 6,
+   "triangles": 9944
+  }
+ },
+ "structures_per_system": {
+  "cardiovascular": 503,
+  "digestive": 106,
+  "endocrine": 4,
+  "integumentary": 4,
+  "lymphatic": 5,
+  "muscular": 78,
+  "nervous": 99,
+  "reproductive": 2,
+  "respiratory": 73,
+  "skeletal": 408,
+  "special_senses": 43,
+  "unclassified": 33,
+  "urinary": 10
+ }
+}

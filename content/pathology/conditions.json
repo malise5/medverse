@@ -1,0 +1,72 @@
+{
+  "_comment": "Educational pathology models. Narrative text is a DRAFT pending expert review. Scenarios map a mechanism onto a simulation model's parameters; they illustrate direction of change and are not calibrated to any population or patient.",
+  "conditions": [
+    {
+      "id": "arterial-stiffening",
+      "name": "Arterial stiffening (reduced large-artery compliance)",
+      "category": "cardiovascular",
+      "summary": "Loss of elasticity of the aorta and other large arteries, most commonly with ageing, which reduces their ability to buffer each ventricular ejection.",
+      "mechanism": "Structural changes in the arterial wall, including fragmentation of elastic fibres and increased collagen, reduce distensibility. These changes accompany ageing and are accelerated in conditions such as hypertension and diabetes mellitus.",
+      "anatomical_changes": "The walls of the aorta and other large elastic arteries become less distensible.",
+      "physiological_consequences": "For the same stroke volume, a stiffer arterial system stores less blood during ejection. Systolic pressure therefore rises and diastolic pressure falls, widening pulse pressure, while mean arterial pressure is determined mainly by cardiac output and peripheral resistance. Stiffer arteries also conduct the pressure wave faster, so reflected waves return earlier and further augment systolic pressure; this wave effect is not represented in the Windkessel model used here.",
+      "clinical_manifestations": "Often clinically silent. A widened pulse pressure and isolated systolic hypertension are characteristic findings in older adults.",
+      "complications": "Aortic stiffness has been shown to predict cardiovascular events independently of conventional risk factors in several populations. Raised systolic pressure increases left-ventricular afterload.",
+      "investigations": "Carotid-femoral pulse-wave velocity is regarded as the reference non-invasive measurement of aortic stiffness. Brachial blood-pressure measurement may show a widened pulse pressure.",
+      "management_principles": "Management focuses on the associated cardiovascular risk, particularly control of blood pressure in line with current clinical guidelines. MEDVERSE does not provide treatment recommendations.",
+      "evidence_class": "B",
+      "references": ["laurent2006stiffness", "westerhof2009windkessel"],
+      "affected_structures": [
+        {"structure_id": "FMA:3734", "role": "primary"},
+        {"structure_id": "FMA:3736", "role": "secondary"},
+        {"structure_id": "FMA:3768", "role": "secondary"},
+        {"structure_id": "FMA:3784", "role": "secondary"}
+      ],
+      "scenarios": [
+        {
+          "id": "arterial-stiffening.compliance-50",
+          "model_id": "cv.windkessel3",
+          "title": "Total arterial compliance reduced by 50 %",
+          "description": "Halves total arterial compliance relative to the model default while holding heart rate, stroke volume and peripheral resistance constant.",
+          "parameter_overrides": {"arterial_compliance": 0.55},
+          "assumptions": [
+            "The 50 % reduction is illustrative and is not calibrated to any age group or patient.",
+            "Heart rate, stroke volume and peripheral resistance are held constant: no ventricular adaptation or reflex compensation is modelled.",
+            "Wave propagation and reflection are not modelled, so early wave return, which further raises systolic pressure in stiff arteries, is absent."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "raised-peripheral-resistance",
+      "name": "Raised total peripheral resistance",
+      "category": "cardiovascular",
+      "summary": "An increase in the resistance of the systemic arterioles to blood flow, a key haemodynamic determinant of mean arterial pressure.",
+      "mechanism": "Mean arterial pressure is approximately the product of cardiac output and total peripheral resistance. Narrowing of resistance vessels, from increased vasoconstrictor tone or structural remodelling of the vessel wall, raises resistance and therefore raises mean arterial pressure if cardiac output is unchanged.",
+      "anatomical_changes": "Narrowing of small arteries and arterioles. These vessels are below the resolution of the current 3D asset source, so the systemic arterial system is highlighted as a whole.",
+      "physiological_consequences": "At constant cardiac output, mean, systolic and diastolic pressures all rise. In this model the diastolic decay time constant (resistance multiplied by compliance) also lengthens.",
+      "clinical_manifestations": "Raised blood pressure. Increased peripheral resistance is a characteristic haemodynamic feature of established hypertension.",
+      "complications": null,
+      "investigations": "Blood-pressure measurement. Peripheral resistance itself is not measured routinely and is usually derived from pressure and cardiac output.",
+      "management_principles": "Clinical management of raised blood pressure follows current hypertension guidelines. MEDVERSE does not provide treatment recommendations.",
+      "evidence_class": "B",
+      "references": ["guyton14"],
+      "affected_structures": [
+        {"structure_id": "FMA:45623", "role": "primary"}
+      ],
+      "scenarios": [
+        {
+          "id": "raised-peripheral-resistance.tpr-140",
+          "model_id": "cv.windkessel3",
+          "title": "Total peripheral resistance increased by 40 %",
+          "description": "Raises total peripheral resistance to 140 % of the model default while holding heart rate, stroke volume and compliance constant.",
+          "parameter_overrides": {"peripheral_resistance": 1.4},
+          "assumptions": [
+            "The 40 % increase is illustrative and is not calibrated to any patient group.",
+            "Cardiac output is held constant; in vivo, baroreflex and renal mechanisms would respond.",
+            "Arterial compliance is held constant, although in practice it falls at higher distending pressure."
+          ]
+        }
+      ]
+    }
+  ]
+}

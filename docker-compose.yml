@@ -1,0 +1,65 @@
+# MEDVERSE local development stack.
+#   docker compose up -d db redis        # infrastructure only (run apps on host)
+#   docker compose --profile app up -d   # full stack in containers
+name: medverse
+
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: medverse
+      POSTGRES_PASSWORD: medverse_dev_password
+      POSTGRES_DB: medverse
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./infra/postgres/init:/docker-entrypoint-initdb.d:ro,z
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U medverse -d medverse"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  api:
+    profiles: ["app"]
+    build:
+      context: ./backend
+    environment:
+      MEDVERSE_ENV: development
+      MEDVERSE_DATABASE_URL: postgresql+psycopg://medverse:medverse_dev_password@db:5432/medverse
+      MEDVERSE_REDIS_URL: redis://redis:6379/0
+      MEDVERSE_CONTENT_DIR: /content
+    volumes:
+      - ./content:/content:ro
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+      redis:
+        condition: service_healthy
+
+  web:
+    profiles: ["app"]
+    build:
+      context: ./frontend
+      args:
+        MEDVERSE_API_ORIGIN: http://api:8000
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+
+volumes:
+  pgdata:

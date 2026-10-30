@@ -1,0 +1,213 @@
+{
+  "_comment": "Anatomical systems. The asset pipeline classifies each BodyParts3D concept by (1) its IS-A lineage against `isa_fma` (kind of entity, e.g. bone organ -> skeletal), then (2) its PART-OF lineage against `source_fma` (first match in `priority` order). `dissection_depth` orders layers from superficial (0) to deep (100) for progressive dissection.",
+  "systems": [
+    {
+      "id": "integumentary",
+      "name": "Integumentary system",
+      "fma_id": "FMA:72979",
+      "source_fma": [
+        "FMA7163",
+        "FMA74657",
+        "FMA72979"
+      ],
+      "priority": 1,
+      "display_order": 10,
+      "dissection_depth": 0,
+      "description": "Skin and its appendages.",
+      "isa_fma": [
+        "FMA71012"
+      ]
+    },
+    {
+      "id": "muscular",
+      "name": "Muscular system",
+      "fma_id": null,
+      "source_fma": [
+        "FMA7482"
+      ],
+      "priority": 9,
+      "display_order": 20,
+      "dissection_depth": 20,
+      "description": "Skeletal muscles with their tendons, retinacula and fasciae.",
+      "isa_fma": [
+        "FMA5022",
+        "FMA10474",
+        "FMA7646",
+        "FMA57965"
+      ]
+    },
+    {
+      "id": "cardiovascular",
+      "name": "Cardiovascular system",
+      "fma_id": "FMA:7161",
+      "source_fma": [
+        "FMA7161"
+      ],
+      "priority": 2,
+      "display_order": 30,
+      "dissection_depth": 40,
+      "description": "Heart and blood vessels.",
+      "isa_fma": [
+        "FMA50722",
+        "FMA50723",
+        "FMA86188",
+        "FMA86187",
+        "FMA3710",
+        "FMA7232",
+        "FMA67598",
+        "FMA268955",
+        "FMA86565",
+        "FMA9464",
+        "FMA86212"
+      ]
+    },
+    {
+      "id": "nervous",
+      "name": "Nervous system",
+      "fma_id": "FMA:7157",
+      "source_fma": [
+        "FMA7157"
+      ],
+      "priority": 3,
+      "display_order": 40,
+      "dissection_depth": 45,
+      "description": "Central and peripheral nervous system.",
+      "isa_fma": [
+        "FMA256237"
+      ]
+    },
+    {
+      "id": "respiratory",
+      "name": "Respiratory system",
+      "fma_id": "FMA:7158",
+      "source_fma": [
+        "FMA7158"
+      ],
+      "priority": 4,
+      "display_order": 50,
+      "dissection_depth": 55,
+      "description": "Airways, lungs and associated structures.",
+      "isa_fma": [
+        "FMA12224"
+      ]
+    },
+    {
+      "id": "digestive",
+      "name": "Digestive system",
+      "fma_id": "FMA:7152",
+      "source_fma": [
+        "FMA7152"
+      ],
+      "priority": 5,
+      "display_order": 60,
+      "dissection_depth": 55,
+      "description": "Alimentary tract and associated digestive organs.",
+      "isa_fma": []
+    },
+    {
+      "id": "urinary",
+      "name": "Urinary system",
+      "fma_id": "FMA:7159",
+      "source_fma": [
+        "FMA7159"
+      ],
+      "priority": 6,
+      "display_order": 70,
+      "dissection_depth": 60,
+      "description": "Kidneys, ureters, urinary bladder and urethra.",
+      "isa_fma": []
+    },
+    {
+      "id": "reproductive",
+      "name": "Reproductive system",
+      "fma_id": "FMA:7160",
+      "source_fma": [
+        "FMA7160"
+      ],
+      "priority": 7,
+      "display_order": 80,
+      "dissection_depth": 60,
+      "description": "Male and female reproductive organs. The current asset source models an adult male only.",
+      "isa_fma": []
+    },
+    {
+      "id": "endocrine",
+      "name": "Endocrine system",
+      "fma_id": "FMA:9668",
+      "source_fma": [
+        "FMA9668"
+      ],
+      "priority": 7,
+      "display_order": 90,
+      "dissection_depth": 60,
+      "description": "Endocrine glands and tissues.",
+      "isa_fma": []
+    },
+    {
+      "id": "skeletal",
+      "name": "Skeletal system",
+      "fma_id": "FMA:23881",
+      "source_fma": [
+        "FMA23881"
+      ],
+      "priority": 8,
+      "display_order": 100,
+      "dissection_depth": 80,
+      "description": "Bones, cartilages, joints and ligaments.",
+      "isa_fma": [
+        "FMA5018",
+        "FMA7538",
+        "FMA7591",
+        "FMA55107",
+        "FMA10483"
+      ]
+    },
+    {
+      "id": "lymphatic",
+      "name": "Lymphatic and immune system",
+      "fma_id": null,
+      "source_fma": [],
+      "priority": 50,
+      "display_order": 110,
+      "dissection_depth": 50,
+      "description": "Lymphatic vessels, lymph nodes and lymphoid organs. The current asset source provides the thymus only.",
+      "isa_fma": [
+        "FMA71193"
+      ]
+    },
+    {
+      "id": "special_senses",
+      "name": "Special sensory organs",
+      "fma_id": null,
+      "source_fma": [],
+      "priority": 50,
+      "display_order": 120,
+      "dissection_depth": 50,
+      "description": "Visual, auditory, vestibular, olfactory and gustatory structures.",
+      "isa_fma": [
+        "FMA58071",
+        "FMA58235",
+        "FMA58101",
+        "FMA58241",
+        "FMA265400",
+        "FMA58827",
+        "FMA58838",
+        "FMA59086",
+        "FMA59101",
+        "FMA59402",
+        "FMA86195"
+      ]
+    },
+    {
+      "id": "unclassified",
+      "name": "Regional structures",
+      "fma_id": null,
+      "source_fma": [],
+      "priority": 99,
+      "display_order": 999,
+      "dissection_depth": 50,
+      "description": "Body regions and compound structures that span several systems (e.g. trunk, upper limb). Selecting one highlights all its constituent parts.",
+      "isa_fma": []
+    }
+  ]
+}

@@ -1,0 +1,123 @@
+{
+  "_comment": "Curated educational content layered on top of source-imported structures. Every entry is a DRAFT written from the cited standard references and MUST be reviewed by a credentialed anatomist before its verification_status is raised. Do not add statements that are not supported by a listed reference.",
+  "author": "MEDVERSE engineering (initial draft)",
+  "structures": [
+    {
+      "id": "FMA:7088",
+      "latin_name": "Cor",
+      "synonyms": [{"synonym": "cor", "kind": "latin"}],
+      "content": [
+        {"section": "overview", "body": "The heart is a four-chambered muscular pump. The right atrium and right ventricle receive systemic venous blood and pump it through the pulmonary trunk to the lungs; the left atrium and left ventricle receive oxygenated blood from the pulmonary veins and pump it into the aorta. It lies in the middle mediastinum, enclosed in the pericardium.", "references": ["grays42", "moore8"]},
+        {"section": "blood_supply", "body": "The myocardium is supplied by the right and left coronary arteries, which arise from the aortic sinuses immediately above the aortic valve.", "references": ["grays42", "moore8"]},
+        {"section": "venous_drainage", "body": "Most venous blood from the myocardium returns through cardiac veins that drain into the coronary sinus, which opens into the right atrium. Some small veins drain directly into the cardiac chambers.", "references": ["grays42", "moore8"]},
+        {"section": "innervation", "body": "Autonomic innervation reaches the heart through the cardiac plexus. Sympathetic fibres increase heart rate and the force of contraction; parasympathetic fibres carried by the vagus nerves slow the heart rate.", "references": ["grays42", "guyton14"]},
+        {"section": "physiology", "body": "Each cardiac cycle consists of ventricular contraction and ejection (systole) followed by relaxation and filling (diastole). Cardiac output equals stroke volume multiplied by heart rate.", "references": ["guyton14"]}
+      ],
+      "relations": [
+        {"predicate": "supplied_by", "object": "FMA:3802", "notes": "Right coronary artery (trunk) as modelled in the asset source.", "reference": "grays42"},
+        {"predicate": "supplied_by", "object": "FMA:3855", "notes": "Left coronary artery (trunk) as modelled in the asset source.", "reference": "grays42"},
+        {"predicate": "drained_by", "object": "FMA:4706", "reference": "grays42"},
+        {"predicate": "connected_to", "object": "FMA:3734", "notes": "The aorta arises from the left ventricle.", "reference": "grays42"},
+        {"predicate": "connected_to", "object": "FMA:8612", "notes": "The pulmonary trunk arises from the right ventricle.", "reference": "grays42"}
+      ]
+    },
+    {
+      "id": "FMA:7101",
+      "latin_name": "Ventriculus sinister",
+      "content": [
+        {"section": "overview", "body": "The left ventricle receives oxygenated blood from the left atrium through the mitral valve and ejects it into the aorta through the aortic valve. Its wall is considerably thicker than that of the right ventricle, reflecting the higher pressures of the systemic circulation.", "references": ["grays42", "moore8"]}
+      ],
+      "relations": [
+        {"predicate": "connected_to", "object": "FMA:7235", "notes": "Inflow through the mitral valve.", "reference": "grays42"},
+        {"predicate": "connected_to", "object": "FMA:7236", "notes": "Outflow through the aortic valve.", "reference": "grays42"}
+      ]
+    },
+    {
+      "id": "FMA:3734",
+      "latin_name": "Aorta",
+      "content": [
+        {"section": "overview", "body": "The aorta is the main trunk of the systemic arterial circulation. It arises from the left ventricle at the aortic valve, ascends as the ascending aorta, curves posteriorly and to the left as the arch of the aorta, and continues as the descending aorta through the thorax and abdomen, where it divides into the common iliac arteries.", "references": ["grays42", "moore8"]},
+        {"section": "physiology", "body": "The aorta and other large elastic arteries distend during ventricular ejection and recoil during diastole. By storing part of each stroke volume and releasing it in diastole they convert intermittent cardiac ejection into more continuous peripheral flow; this buffering is described by Windkessel models.", "references": ["westerhof2009windkessel", "guyton14"]},
+        {"section": "clinical_anatomy", "body": "Stiffening of the aorta, which occurs with ageing and in several disease states, reduces its buffering capacity and widens arterial pulse pressure.", "references": ["laurent2006stiffness"]}
+      ],
+      "relations": [
+        {"predicate": "arises_from", "object": "FMA:7101", "reference": "grays42"},
+        {"predicate": "functionally_associated_with", "object": "FMA:7236", "notes": "The aortic valve prevents backflow from the aorta into the left ventricle during diastole.", "reference": "guyton14"}
+      ]
+    },
+    {
+      "id": "FMA:70249",
+      "latin_name": "Arteria femoralis dextra",
+      "synonyms": [{"synonym": "femoral artery", "kind": "related"}],
+      "content": [
+        {"section": "overview", "body": "The femoral artery is the continuation of the external iliac artery distal to the inguinal ligament. It descends through the femoral triangle and the adductor canal and becomes the popliteal artery as it passes through the adductor hiatus. Its largest branch, the deep femoral artery (profunda femoris), arises in the femoral triangle and supplies most of the thigh.", "references": ["grays42", "moore8"]},
+        {"section": "clinical_anatomy", "body": "In the femoral triangle the artery is relatively superficial, so its pulse can be palpated just below the inguinal ligament, and it is a common site for arterial access.", "references": ["moore8"]}
+      ],
+      "relations": [
+        {"predicate": "continuous_with", "object": "FMA:18806", "notes": "Continuation of the right external iliac artery beyond the inguinal ligament.", "reference": "grays42"},
+        {"predicate": "continuous_with", "object": "FMA:77380", "notes": "Becomes the right popliteal artery at the adductor hiatus.", "reference": "grays42"}
+      ]
+    },
+    {
+      "id": "FMA:70250",
+      "latin_name": "Arteria femoralis sinistra",
+      "synonyms": [{"synonym": "femoral artery", "kind": "related"}],
+      "content": [
+        {"section": "overview", "body": "The femoral artery is the continuation of the external iliac artery distal to the inguinal ligament. It descends through the femoral triangle and the adductor canal and becomes the popliteal artery as it passes through the adductor hiatus. Its largest branch, the deep femoral artery (profunda femoris), arises in the femoral triangle and supplies most of the thigh.", "references": ["grays42", "moore8"]}
+      ],
+      "relations": [
+        {"predicate": "continuous_with", "object": "FMA:18807", "notes": "Continuation of the left external iliac artery beyond the inguinal ligament.", "reference": "grays42"},
+        {"predicate": "continuous_with", "object": "FMA:77381", "notes": "Becomes the left popliteal artery at the adductor hiatus.", "reference": "grays42"}
+      ]
+    },
+    {
+      "id": "FMA:20796",
+      "synonyms": [{"synonym": "right profunda femoris artery", "kind": "exact"}, {"synonym": "profunda femoris artery", "kind": "related"}],
+      "relations": [
+        {"predicate": "branch_of", "object": "FMA:70249", "reference": "grays42"}
+      ]
+    },
+    {
+      "id": "FMA:20797",
+      "synonyms": [{"synonym": "left profunda femoris artery", "kind": "exact"}, {"synonym": "profunda femoris artery", "kind": "related"}],
+      "relations": [
+        {"predicate": "branch_of", "object": "FMA:70250", "reference": "grays42"}
+      ]
+    },
+    {
+      "id": "FMA:24474",
+      "latin_name": "Femur dextrum",
+      "synonyms": [{"synonym": "thigh bone", "kind": "related"}],
+      "content": [
+        {"section": "overview", "body": "The femur is the longest bone of the body. Proximally its head articulates with the acetabulum of the hip bone at the hip joint; distally its condyles articulate with the tibia and its patellar surface with the patella at the knee joint.", "references": ["grays42", "moore8"]},
+        {"section": "clinical_anatomy", "body": "Fractures of the femoral neck are common in older adults, particularly with osteoporosis. Displaced fractures can interrupt the blood supply to the femoral head, which comes mainly from branches of the medial circumflex femoral artery, and so risk avascular necrosis of the head.", "references": ["moore8"]}
+      ],
+      "relations": [
+        {"predicate": "articulates_with", "object": "FMA:16586", "notes": "Hip joint (with the acetabulum).", "reference": "grays42"},
+        {"predicate": "articulates_with", "object": "FMA:24477", "notes": "Knee joint.", "reference": "grays42"},
+        {"predicate": "articulates_with", "object": "FMA:24486", "notes": "Patellofemoral part of the knee joint.", "reference": "grays42"}
+      ]
+    },
+    {
+      "id": "FMA:7309",
+      "latin_name": "Pulmo dexter",
+      "content": [
+        {"section": "overview", "body": "The right lung is usually divided by oblique and horizontal fissures into superior, middle and inferior lobes. It is shorter and wider than the left lung because the right dome of the diaphragm is higher.", "references": ["grays42", "moore8"]}
+      ]
+    },
+    {
+      "id": "FMA:7310",
+      "latin_name": "Pulmo sinister",
+      "content": [
+        {"section": "overview", "body": "The left lung is usually divided by an oblique fissure into superior and inferior lobes. Its anterior border has a cardiac notch, reflecting the position of the heart.", "references": ["grays42", "moore8"]}
+      ]
+    },
+    {
+      "id": "FMA:7197",
+      "latin_name": "Hepar",
+      "content": [
+        {"section": "overview", "body": "The liver is the largest internal organ and gland, lying mainly in the right upper quadrant beneath the diaphragm. It has a dual blood supply: the hepatic portal vein carries blood from the gastrointestinal tract and spleen, and the hepatic artery proper carries oxygenated arterial blood. Blood leaves through the hepatic veins into the inferior vena cava.", "references": ["grays42", "moore8"]}
+      ]
+    }
+  ]
+}

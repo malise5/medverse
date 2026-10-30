@@ -1,0 +1,82 @@
+[
+  {
+    "id": "bodyparts3d",
+    "kind": "dataset",
+    "citation": "Mitsuhashi N, Fujieda K, Tamura T, Kawamoto S, Takagi T, Okubo K. BodyParts3D: 3D structure database for anatomical concepts. Nucleic Acids Res. 2009;37(Database issue):D782-D785.",
+    "year": 2009,
+    "doi": "10.1093/nar/gkn613",
+    "pmid": "18835852",
+    "url": "https://dbarchive.biosciencedbc.jp/en/bodyparts3d/",
+    "license_note": "BodyParts3D, (c) The Database Center for Life Science licensed under CC Attribution 4.0 International"
+  },
+  {
+    "id": "rosse2003fma",
+    "kind": "journal_article",
+    "citation": "Rosse C, Mejino JLV Jr. A reference ontology for biomedical informatics: the Foundational Model of Anatomy. J Biomed Inform. 2003;36(6):478-500.",
+    "year": 2003,
+    "doi": "10.1016/j.jbi.2003.11.007",
+    "pmid": null,
+    "url": null,
+    "license_note": "FMA identifiers are used as cross-references; FMA content is not redistributed."
+  },
+  {
+    "id": "fipat2019ta2",
+    "kind": "standard",
+    "citation": "Federative International Programme for Anatomical Terminology (FIPAT). Terminologia Anatomica. 2nd ed. FIPAT.library.dal.ca; 2019.",
+    "year": 2019,
+    "doi": null,
+    "pmid": null,
+    "url": "https://fipat.library.dal.ca/",
+    "license_note": null
+  },
+  {
+    "id": "grays42",
+    "kind": "book",
+    "citation": "Standring S, editor. Gray's Anatomy: The Anatomical Basis of Clinical Practice. 42nd ed. Elsevier; 2020.",
+    "year": 2020,
+    "doi": null,
+    "pmid": null,
+    "url": null,
+    "license_note": null
+  },
+  {
+    "id": "moore8",
+    "kind": "book",
+    "citation": "Moore KL, Dalley AF, Agur AMR. Clinically Oriented Anatomy. 8th ed. Wolters Kluwer; 2018.",
+    "year": 2018,
+    "doi": null,
+    "pmid": null,
+    "url": null,
+    "license_note": null
+  },
+  {
+    "id": "guyton14",
+    "kind": "book",
+    "citation": "Hall JE, Hall ME. Guyton and Hall Textbook of Medical Physiology. 14th ed. Elsevier; 2021.",
+    "year": 2021,
+    "doi": null,
+    "pmid": null,
+    "url": null,
+    "license_note": null
+  },
+  {
+    "id": "westerhof2009windkessel",
+    "kind": "journal_article",
+    "citation": "Westerhof N, Lankhaar JW, Westerhof BE. The arterial Windkessel. Med Biol Eng Comput. 2009;47(2):131-141.",
+    "year": 2009,
+    "doi": "10.1007/s11517-008-0359-2",
+    "pmid": null,
+    "url": null,
+    "license_note": null
+  },
+  {
+    "id": "laurent2006stiffness",
+    "kind": "journal_article",
+    "citation": "Laurent S, Cockcroft J, Van Bortel L, et al. Expert consensus document on arterial stiffness: methodological issues and clinical applications. Eur Heart J. 2006;27(21):2588-2605.",
+    "year": 2006,
+    "doi": "10.1093/eurheartj/ehl254",
+    "pmid": null,
+    "url": null,
+    "license_note": null
+  }
+]
