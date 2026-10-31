@@ -21,6 +21,8 @@ from app.simulation.core import (
     ModelDefinition,
     OutputSpec,
     ParameterSpec,
+    PhasePlot,
+    ReferenceLine,
     SimulationModel,
     SimulationResult,
 )
@@ -41,6 +43,42 @@ def normalised_elastance(tn: float) -> float:
 
 def _p(pid, label, unit, default, lo, hi, desc, step):
     return ParameterSpec(pid, label, unit, default, lo, hi, desc, step)
+
+
+PV_LOOP = PhasePlot(
+    id="pv_loop",
+    title="Pressure-volume loop",
+    x="lv_volume",
+    y="lv_pressure",
+    description=(
+        "Each beat traces one anticlockwise loop: filling along the bottom (mitral valve open), "
+        "isovolumic contraction up the right side, ejection across the top (aortic valve open) "
+        "and isovolumic relaxation down the left side. Loop width is stroke volume; the area "
+        "inside is the stroke work done on the blood."
+    ),
+    lines=[
+        ReferenceLine(
+            label="ESPVR",
+            slope_parameter="e_max",
+            x_intercept_parameter="v0",
+            description=(
+                "End-systolic pressure-volume relationship, P = E_max·(V − V₀). The loop's "
+                "top-left corner sits on it; its slope is contractility."
+            ),
+        ),
+        ReferenceLine(
+            label="EDPVR",
+            slope_parameter="e_min",
+            x_intercept_parameter="v0",
+            description=(
+                "End-diastolic pressure-volume relationship, P = E_min·(V − V₀). Straight here "
+                "because the model ventricle is linear; real ventricles stiffen as they fill."
+            ),
+        ),
+    ],
+    x_min=0,
+    y_min=0,
+)
 
 
 DEFINITION = ModelDefinition(
@@ -96,6 +134,8 @@ DEFINITION = ModelDefinition(
         "Qualitative: higher preload raises stroke volume (Frank–Starling behaviour); higher "
         "E_max raises ejection fraction; higher R raises pressure and lowers stroke volume.",
         "Numerical convergence: quartering the step changes pressures by < 0.2 mmHg.",
+        "Pressure-volume loop stays between the EDPVR and ESPVR lines and touches the ESPVR "
+        "at end-systole (unit test).",
         "Not validated against patient data.",
     ],
     evidence_class=EvidenceClass.C_SIMPLIFIED_EDUCATIONAL,
@@ -221,6 +261,7 @@ DEFINITION = ModelDefinition(
     ],
     linked_structure_ids=[HEART, LV, RV, LA, AORTA],
     visual_mappings={"lv_volume": [HEART], "lv_pressure": [LV], "aortic_pressure": [AORTA]},
+    phase_plots=[PV_LOOP],
     animations=[
         AnimationBinding(
             output="lv_volume",

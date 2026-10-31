@@ -93,6 +93,26 @@ reconstruction of real tissue motion; every binding says so in its description.
 | `neuro.hodgkin_huxley` | brain, spinal cord | glow marks spike timing (explicitly not brain activity); slowed ≈ 67× |
 | `cv.windkessel3` | aorta, heart, LV, … | aorta tints with aortic pressure |
 
+## Phase plots
+
+A model may declare `phase_plots` (`PhasePlot`: one output series `x` against another `y`,
+a description, optional axis minimums to keep the origin in view, and `ReferenceLine`s).
+A reference line is y = slope·(x − x_intercept), where slope and intercept **name model
+parameters**, so the line follows the current inputs. Only declare a line that is an
+exact property of the model equations. A test checks that the slope's unit is
+y-unit/x-unit and the intercept's unit is the x unit.
+
+The Physiology Lab draws every phase plot under the time series. With a pinned baseline it
+overlays both curves, and draws the current run's line only where its parameters differ.
+The 3D function panel shows a compact version with a dot that follows playback.
+
+`cv.cardiac_cycle` declares the left-ventricular **pressure–volume loop** with the ESPVR,
+P = E_max·(V − V₀), and the EDPVR, P = E_min·(V − V₀). Both are exact here because the
+elastance ventricle is linear in volume; real EDPVRs are curved, and the description says
+so. Tests check that every loop point lies between the two lines, that the end-systolic
+corner touches the ESPVR (within 3 %), and that the loop runs anticlockwise with stroke
+work between SV·diastolic pressure and SV·peak LV pressure.
+
 ## Model card: `cv.cardiac_cycle` v1.0.0 (class C)
 
 Time-varying elastance left ventricle (Suga, Sagawa & Shoukas 1973) with the double-Hill
@@ -101,7 +121,7 @@ diode valves; constant left-atrial pressure. Defaults (illustrative): EDV ≈ 11
 ESV ≈ 49 mL, EF ≈ 58 %, ≈ 125/72 mmHg. Tests: valve flows non-negative and never
 simultaneous, mitral = aortic volume per beat = SV, MAP = (R + Z꜀)·mean flow,
 isovolumic phases exist, Frank–Starling / contractility / afterload directions, step
-convergence. No right heart, atrial kick or baroreflex.
+convergence, PV loop bounded by EDPVR and ESPVR. No right heart, atrial kick or baroreflex.
 
 ## Model card: `resp.single_compartment` v1.0.0 (class C)
 

@@ -43,7 +43,7 @@ assets (licensed source required) · ⬜ Playwright E2E incl. 3D selection.
 
 ✅ Cardiac cycle (elastance ventricle) · ✅ action potential (Hodgkin–Huxley, patch) ·
 ✅ respiratory mechanics (single compartment) · ⬜ gas exchange · ⬜ renal filtration · ⬜ glucose–insulin ·
-✅ visual mappings driving 3D (scale/tint/glow bindings) · ⬜ propagation along nerves, right heart, PV-loop chart · ⬜ Celery for heavy models.
+✅ visual mappings driving 3D (scale/tint/glow bindings) · ✅ PV-loop chart (generic phase plots with ESPVR/EDPVR) · ⬜ propagation along nerves, right heart · ⬜ Celery for heavy models.
 
 ## Phase 5: Pathology and injury
 

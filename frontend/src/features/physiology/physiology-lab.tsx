@@ -18,6 +18,8 @@ import type { ModelDefinition, Reference, RunResult } from "@/lib/api/types";
 
 import { MetricsGrid, ModelDocs } from "./model-docs";
 import { chartGroups, type ChartGroup } from "./chart-groups";
+import type { PhaseRun } from "./phase-plot";
+import { ModelPhasePlot } from "./phase-plot-chart";
 import { TimeSeriesChart, type ChartSeries } from "./time-series-chart";
 
 export function useReferences() {
@@ -56,6 +58,15 @@ function ModelRunner({ model }: { model: ModelDefinition }) {
     );
     // eslint-disable-next-line react-hooks/exhaustive-deps -- run is stable per mutation
   }, [debounced, model.id]);
+
+  const phaseRuns = useMemo<PhaseRun[]>(() => {
+    if (!result) return [];
+    const current = { id: "current", label: "current", parameters: result.parameters, series: result.series };
+    return baseline
+      ? [{ id: "baseline", label: "baseline", parameters: baseline.parameters, series: baseline.series },
+         { ...current, dashed: true }]
+      : [current];
+  }, [result, baseline]);
 
   const changed = model.parameters.filter((p) => params[p.id] !== p.default);
   const groups = useMemo(() => chartGroups(model), [model]);
@@ -148,6 +159,9 @@ function ModelRunner({ model }: { model: ModelDefinition }) {
                     timeUnit={model.time_unit}
                     series={seriesFor(g, result)}
                   />
+                ))}
+                {model.phase_plots.map((p) => (
+                  <ModelPhasePlot key={p.id} model={model} plot={p} time={result.time} runs={phaseRuns} />
                 ))}
                 {result.warnings.map((w) => (
                   <p key={w} role="status" className="text-xs text-warning">{w}</p>

@@ -36,6 +36,24 @@ class AnimationBindingOut(BaseModel):
     normalise: Literal["range", "magnitude"]
 
 
+class ReferenceLineOut(BaseModel):
+    label: str
+    slope_parameter: str
+    x_intercept_parameter: str
+    description: str
+
+
+class PhasePlotOut(BaseModel):
+    id: str
+    title: str
+    x: str
+    y: str
+    description: str
+    lines: list[ReferenceLineOut]
+    x_min: float | None
+    y_min: float | None
+
+
 class ModelDefinitionOut(BaseModel):
     id: str
     version: str
@@ -59,6 +77,7 @@ class ModelDefinitionOut(BaseModel):
     animations: list[AnimationBindingOut]
     time_unit: Literal["s", "ms"]
     playback_rate: float
+    phase_plots: list[PhasePlotOut]
     disclaimer: str
 
     @classmethod

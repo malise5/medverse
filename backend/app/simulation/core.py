@@ -61,6 +61,38 @@ class AnimationBinding:
 
 
 @dataclass(frozen=True)
+class ReferenceLine:
+    """A straight line y = slope · (x − x_intercept) drawn on a phase plot.
+
+    Slope and intercept name model parameters, so the line follows the current inputs.
+    Only declare a line that is an exact property of the model equations.
+    """
+
+    label: str
+    slope_parameter: str
+    x_intercept_parameter: str
+    description: str
+
+
+@dataclass(frozen=True)
+class PhasePlot:
+    """One output series plotted against another (e.g. a pressure-volume loop).
+
+    Both series share the result's time base; the renderer draws them as a parametric
+    curve in time order. Axis minimums, when given, keep the origin in view.
+    """
+
+    id: str
+    title: str
+    x: str
+    y: str
+    description: str
+    lines: list[ReferenceLine] = field(default_factory=list)
+    x_min: float | None = None
+    y_min: float | None = None
+
+
+@dataclass(frozen=True)
 class ModelDefinition:
     id: str
     version: str
@@ -86,6 +118,7 @@ class ModelDefinition:
     animations: list[AnimationBinding] = field(default_factory=list)
     time_unit: Literal["s", "ms"] = "s"
     playback_rate: float = 1.0
+    phase_plots: list[PhasePlot] = field(default_factory=list)
     disclaimer: str = (
         "Simplified educational model. It is not validated for, and must not be used for, "
         "clinical decision-making or prediction of individual patient outcomes."

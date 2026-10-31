@@ -154,6 +154,26 @@ export interface AnimationBinding {
   normalise: "range" | "magnitude";
 }
 
+/** y = slope · (x − x_intercept); both name model parameters. */
+export interface ReferenceLine {
+  label: string;
+  slope_parameter: string;
+  x_intercept_parameter: string;
+  description: string;
+}
+
+/** One output series plotted against another (e.g. a pressure–volume loop). */
+export interface PhasePlot {
+  id: string;
+  title: string;
+  x: string;
+  y: string;
+  description: string;
+  lines: ReferenceLine[];
+  x_min: number | null;
+  y_min: number | null;
+}
+
 export interface ModelDefinition {
   id: string;
   version: string;
@@ -178,6 +198,7 @@ export interface ModelDefinition {
   time_unit: "s" | "ms";
   /** Model time units per real second during 3D playback. */
   playback_rate: number;
+  phase_plots: PhasePlot[];
   disclaimer: string;
 }
 

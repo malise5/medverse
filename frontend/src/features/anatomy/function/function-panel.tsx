@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Slider } from "@/components/ui/slider";
 import { EducationalDisclaimer, EvidenceBadge } from "@/features/governance/badges";
 import { chartGroups } from "@/features/physiology/chart-groups";
+import { ModelPhasePlot } from "@/features/physiology/phase-plot-chart";
 import { TimeSeriesChart } from "@/features/physiology/time-series-chart";
 import { useModels } from "@/lib/api/queries";
 import type { ModelDefinition, StructureDetail } from "@/lib/api/types";
@@ -66,6 +67,10 @@ function ActivePlayback({ model }: { model: ModelDefinition }) {
   const groups = chartGroups(model).filter((g) => g.series.some((s) => bound.has(s.id)));
   const outputs = model.series.filter((s) => bound.has(s.id));
   const slow = slowdown(playback.rate, playback.timeUnit) / speed;
+  const phaseRuns = useMemo(
+    () => [{ id: "current", label: "current", parameters: playback.parameters, series: playback.series }],
+    [playback.parameters, playback.series],
+  );
 
   return (
     <div className="grid gap-4">
@@ -121,6 +126,11 @@ function ActivePlayback({ model }: { model: ModelDefinition }) {
           clock={playbackClock}
           series={g.series.map((s) => ({ id: s.id, label: s.label, values: playback.series[s.id] }))}
         />
+      ))}
+
+      {model.phase_plots.map((p) => (
+        <ModelPhasePlot key={p.id} compact model={model} plot={p} time={playback.time} runs={phaseRuns}
+          clock={playbackClock} />
       ))}
 
       <section className="grid gap-3">

@@ -31,6 +31,16 @@ def test_definitions_are_complete(model):
         assert set(b.structure_ids) <= set(d.linked_structure_ids)
         assert b.description and 0 < b.amplitude <= 1
     assert d.playback_rate > 0
+    units = {s.id: s.unit for s in d.series}
+    params = {p.id: p for p in d.parameters}
+    for plot in d.phase_plots:
+        assert {plot.x, plot.y} <= series and plot.x != plot.y, plot.id
+        assert plot.description
+        for line in plot.lines:
+            # slope converts x into y, so its unit must be y-unit per x-unit
+            assert params[line.slope_parameter].unit == f"{units[plot.y]}/{units[plot.x]}"
+            assert params[line.x_intercept_parameter].unit == units[plot.x]
+    assert len({p.id for p in d.phase_plots}) == len(d.phase_plots)
     result = model.run()
     assert all(len(v) == len(result.time) for v in result.series.values())
     assert all(math.isfinite(v) for v in result.metrics.values())
@@ -118,6 +128,27 @@ def test_cardiac_step_convergence():
     b = CARDIAC.simulate(params, dt=0.000125).metrics
     for k in ("systolic_pressure", "diastolic_pressure", "peak_lv_pressure"):
         assert abs(a[k] - b[k]) < 0.2, k
+
+
+@pytest.mark.parametrize("overrides", [{}, {"e_max": 5.0}, {"la_pressure": 16, "e_min": 0.12}])
+def test_pv_loop_lies_between_edpvr_and_espvr(overrides):
+    """E_min ≤ E(t) ≤ E_max·max(Eₙ) and P = E(t)·(V − V₀), so every loop point lies between
+    the two lines, and the end-systolic corner touches the ESPVR (peak elastance)."""
+    params, r = _cardiac(**overrides)
+    v = np.asarray(r.series["lv_volume"]) - params["v0"]
+    p = np.asarray(r.series["lv_pressure"])
+    assert (v > 0).all()
+    tol = 0.002 * p.max() + 0.002  # display series are rounded to 3 decimals
+    assert (p >= params["e_min"] * v - tol).all()
+    assert (p <= params["e_max"] * v * 1.01 + tol).all()
+    assert (p / (params["e_max"] * v)).max() == pytest.approx(1.0, abs=0.03)
+    # Anticlockwise in (V, P) gives a positive shoelace area: the stroke work per beat.
+    # It must lie between SV·(diastolic aortic pressure) and SV·(peak LV pressure).
+    beats_shown = round(r.time[-1] * params["heart_rate"] / 60)
+    work = 0.5 * np.sum(v * np.roll(p, -1) - np.roll(v, -1) * p) / beats_shown
+    m = r.metrics
+    assert m["stroke_volume"] * m["diastolic_pressure"] < work
+    assert work < m["stroke_volume"] * m["peak_lv_pressure"]
 
 
 def test_cardiac_rejects_impossible_timing():

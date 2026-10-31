@@ -27,12 +27,12 @@ const FULL_H = 200;
 const M = { top: 12, right: 16, bottom: 28, left: 48 };
 
 /** Enough precision for small-valued series (gating variables, L/s) without noise. */
-function fmt(v: number): string {
+export function fmt(v: number): string {
   const a = Math.abs(v);
   return v.toFixed(a !== 0 && a < 1 ? 3 : a < 10 ? 2 : 1);
 }
 
-function niceTicks(min: number, max: number, count = 5): number[] {
+export function niceTicks(min: number, max: number, count = 5): number[] {
   const span = max - min || 1;
   const raw = span / count;
   const mag = 10 ** Math.floor(Math.log10(raw));
