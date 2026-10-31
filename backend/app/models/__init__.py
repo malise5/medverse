@@ -15,6 +15,7 @@ from app.models.anatomy import (
 )
 from app.models.clinical import Condition, ConditionScenario, ConditionStructure, SimulationRun
 from app.models.identity import AuditLog, AuthSession, Institution, Permission, Role, User
+from app.models.learning import LearningModule, QuizAttempt, QuizQuestion
 
 __all__ = [
     "AnatomicalSystem",
@@ -25,9 +26,12 @@ __all__ = [
     "ConditionScenario",
     "ConditionStructure",
     "Institution",
+    "LearningModule",
     "Mesh",
     "MeshContact",
     "Permission",
+    "QuizAttempt",
+    "QuizQuestion",
     "Reference",
     "Role",
     "SimulationRun",

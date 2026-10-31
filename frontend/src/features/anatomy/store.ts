@@ -65,6 +65,14 @@ export interface CirculationView {
  * from the API, geometry from asset bundles. Visibility is tracked per mesh because a
  * mesh is the smallest renderable unit; structure-level actions expand to mesh IDs.
  */
+export interface IdentifyQuiz {
+  questionId: string;
+  moduleId: string;
+  stem: string;
+  /** Set once the learner has checked an answer; names stay hidden until then. */
+  answered: boolean;
+}
+
 export interface WorkspaceState {
   selectedId: string | null;
   /** Additional structures selected with Shift/Ctrl for comparison. */
@@ -100,6 +108,8 @@ export interface WorkspaceState {
   circulation: CirculationView | null;
   /** A whole body system shown in spotlight (chosen from search). */
   systemFocus: string | null;
+  /** "Find it in 3D" quiz question in progress (from the learning modules). */
+  quiz: IdentifyQuiz | null;
 
   /** Monotonic command channels consumed by the 3D engine. */
   viewCommand: { preset: ViewPreset; nonce: number } | null;
@@ -130,6 +140,7 @@ export interface WorkspaceState {
   setParts: (parts: PartView[]) => void;
   setCirculation: (circulation: CirculationView | null) => void;
   setSystemFocus: (systemId: string | null) => void;
+  setQuiz: (quiz: IdentifyQuiz | null) => void;
   requestView: (preset: ViewPreset) => void;
   requestFocus: (meshIds: string[]) => void;
   reset: () => void;
@@ -162,6 +173,7 @@ const initial = () => ({
   parts: [] as PartView[],
   circulation: null as CirculationView | null,
   systemFocus: null as string | null,
+  quiz: null as IdentifyQuiz | null,
   viewCommand: null,
   focusCommand: null,
 });
@@ -208,6 +220,7 @@ export const useWorkspace = create<WorkspaceState>()((set) => ({
   setParts: (parts) => set({ parts }),
   setCirculation: (circulation) => set({ circulation }),
   setSystemFocus: (systemFocus) => set({ systemFocus }),
+  setQuiz: (quiz) => set({ quiz }),
   requestView: (preset) => set({ viewCommand: { preset, nonce: ++nonce } }),
   requestFocus: (meshIds) => set({ focusCommand: { meshIds, nonce: ++nonce } }),
   reset: () => set((s) => ({ ...initial(), autoPlay: s.autoPlay, viewCommand: { preset: "anterior", nonce: ++nonce } })),

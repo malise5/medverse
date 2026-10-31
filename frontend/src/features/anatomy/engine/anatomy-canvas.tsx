@@ -48,7 +48,18 @@ function LoadingOverlay() {
 
 function HoverLabel({ names }: { names: Map<string, string> }) {
   const hover = useWorkspace((s) => s.hover);
+  // During a "find it in 3D" question, names would give the answer away.
+  const hideNames = useWorkspace((s) => !!s.quiz && !s.quiz.answered);
   if (!hover) return null;
+  if (hideNames)
+    return (
+      <div
+        className="pointer-events-none fixed z-50 rounded-md border bg-popover/95 px-2 py-1 text-xs shadow-lg"
+        style={{ left: hover.x + 14, top: hover.y + 14 }}
+      >
+        ?
+      </div>
+    );
   return (
     <div
       className="pointer-events-none fixed z-50 rounded-md border bg-popover/95 px-2 py-1 text-xs shadow-lg"

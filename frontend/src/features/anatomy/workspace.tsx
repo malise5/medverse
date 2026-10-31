@@ -7,13 +7,14 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { useCirculation, useModels, useStructure } from "@/lib/api/queries";
+import { useCirculation, useLearningModule, useModels, useStructure } from "@/lib/api/queries";
 
 import { useFunctionPlayer } from "./function/use-function-player";
 import { SystemPanel } from "./panels/system-panel";
 import { cn } from "@/lib/utils";
 
 import { HierarchyPanel } from "./panels/hierarchy-panel";
+import { IdentifyQuizBanner, QuizPanelPlaceholder } from "./quiz/identify-quiz";
 import { LayersPanel } from "./panels/layers-panel";
 import { SearchPanel } from "./panels/search-panel";
 import { StructurePanel } from "./panels/structure-panel";
@@ -97,8 +98,9 @@ export function AnatomyWorkspace() {
   // Body map: colour the selected structure's direct parts (largest first, up to the
   // validated categorical palette length) and trace its blood-vessel routes.
   const { names } = data;
+  const partsHidden = useWorkspace((s) => !!s.quiz && !s.quiz.answered);
   useEffect(() => {
-    const parts = selectedId
+    const parts = selectedId && !partsHidden
       ? (children.get(selectedId) ?? [])
           .map((id) => ({ id, name: names.get(id) ?? id, meshIds: resolveMeshes(id) }))
           .filter((p) => p.meshIds.length)
@@ -107,7 +109,7 @@ export function AnatomyWorkspace() {
           .map((p, i) => ({ ...p, color: PART_COLORS[i] }))
       : [];
     useWorkspace.getState().setParts(parts);
-  }, [selectedId, children, names, resolveMeshes]);
+  }, [selectedId, children, names, resolveMeshes, partsHidden]);
 
   const showCirculation = useWorkspace((s) => s.showCirculation);
   const systemFocus = useWorkspace((s) => s.systemFocus);
@@ -178,6 +180,41 @@ export function AnatomyWorkspace() {
       if (modelId) pendingPlay.current = { id: s, modelId };
     }
   }, [params, select]);
+  // Layer builder: /anatomy?systems=skeletal,muscular shows only the listed systems.
+  const systemsParam = params.get("systems");
+  useEffect(() => {
+    if (!systemsParam || !data.systems.length) return;
+    const wanted = new Set(systemsParam.split(","));
+    const ws = useWorkspace.getState();
+    for (const sys of data.systems) ws.setSystemVisible(sys.id, wanted.has(sys.id));
+    const shallowest = Math.min(...data.systems.filter((x) => wanted.has(x.id)).map((x) => x.dissection_depth));
+    if (Number.isFinite(shallowest) && shallowest < ws.dissectionDepth) ws.setDissectionDepth(shallowest);
+  }, [systemsParam, data.systems]);
+
+  // "Find it in 3D" quiz: /anatomy?quiz=<question id>&module=<module id>. The module's
+  // own layer is exposed (its targets belong to that system) without spotlighting it.
+  const quizId = params.get("quiz");
+  const quizModule = useLearningModule(quizId ? params.get("module") : null);
+  useEffect(() => {
+    const q = quizModule.data?.questions.find((x) => x.id === quizId && x.kind === "identify");
+    const ws = useWorkspace.getState();
+    if (!q || !quizModule.data) {
+      if (!quizId) ws.setQuiz(null);
+      return;
+    }
+    const moduleId = quizModule.data.id;
+    ws.select(null);
+    ws.setSystemFocus(null);
+    ws.setSpotlight(false);
+    ws.stopPlayback();
+    ws.setSystemVisible(moduleId, true);
+    const depth = data.systems.find((x) => x.id === moduleId)?.dissection_depth;
+    if (depth !== undefined && depth < ws.dissectionDepth) ws.setDissectionDepth(depth);
+    ws.setQuiz({ questionId: q.id, moduleId, stem: q.stem, answered: false });
+    return () => useWorkspace.getState().setQuiz(null);
+  }, [quizId, quizModule.data, data.systems]);
+  const quizHidesNames = partsHidden;
+
   useEffect(() => {
     const h = params.get("highlight");
     const ids = h ? h.split(",").flatMap((id) => ownedMeshes.get(id) ?? []) : [];
@@ -211,6 +248,16 @@ export function AnatomyWorkspace() {
     },
     [select, data.systems, manifest, models.data, play, desktop],
   );
+
+  // /anatomy?system=<id> opens a whole system in spotlight (links from learning modules).
+  const systemParam = params.get("system");
+  const openedSystem = useRef<string | null>(null);
+  useEffect(() => {
+    if (!systemParam || !manifest || !data.systems.some((x) => x.id === systemParam)) return;
+    if (openedSystem.current === systemParam) return;
+    openedSystem.current = systemParam;
+    selectSystem(systemParam);
+  }, [systemParam, manifest, data.systems, selectSystem]);
 
   const onPick = useCallback(
     (structureId: string, additive: boolean) => {
@@ -252,7 +299,9 @@ export function AnatomyWorkspace() {
 
   const right = (
     <div className="h-full overflow-y-auto">
-      {systemFocus && !selectedId ? (
+      {quizHidesNames ? (
+        <QuizPanelPlaceholder />
+      ) : systemFocus && !selectedId ? (
         <SystemPanel systemId={systemFocus} systems={data.systems} index={data.index} onSelect={selectFromList} />
       ) : (
         <StructurePanel structureId={selectedId} meshIds={[...selectedMeshIds]} onSelect={selectFromList} />
@@ -294,13 +343,14 @@ export function AnatomyWorkspace() {
           ) : (
             <Skeleton className="m-4 h-[calc(100%-2rem)]" />
           )}
+          <IdentifyQuizBanner onShow={selectFromList} />
         </section>
         {desktop ? (
           <aside className={cn("w-[22rem] shrink-0 border-l bg-card/40", !rightOpen && "hidden")} aria-label="Structure information">
             {right}
           </aside>
         ) : (
-          <Sheet open={rightOpen && (!!selectedId || !!systemFocus)} onOpenChange={setRightOpen}>
+          <Sheet open={rightOpen && !quizHidesNames && (!!selectedId || !!systemFocus)} onOpenChange={setRightOpen}>
             <SheetContent side="bottom" className="h-[70dvh] p-0">
               <SheetTitle className="sr-only">Structure information</SheetTitle>
               {right}

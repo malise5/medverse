@@ -5,118 +5,2454 @@
     {
       "id": "FMA:7088",
       "latin_name": "Cor",
-      "synonyms": [{"synonym": "cor", "kind": "latin"}],
+      "synonyms": [
+        {
+          "synonym": "cor",
+          "kind": "latin"
+        },
+        {
+          "synonym": "cardiac",
+          "kind": "related"
+        }
+      ],
       "content": [
-        {"section": "overview", "body": "The heart is a four-chambered muscular pump. The right atrium and right ventricle receive systemic venous blood and pump it through the pulmonary trunk to the lungs; the left atrium and left ventricle receive oxygenated blood from the pulmonary veins and pump it into the aorta. It lies in the middle mediastinum, enclosed in the pericardium.", "references": ["grays42", "moore8"]},
-        {"section": "blood_supply", "body": "The myocardium is supplied by the right and left coronary arteries, which arise from the aortic sinuses immediately above the aortic valve.", "references": ["grays42", "moore8"]},
-        {"section": "venous_drainage", "body": "Most venous blood from the myocardium returns through cardiac veins that drain into the coronary sinus, which opens into the right atrium. Some small veins drain directly into the cardiac chambers.", "references": ["grays42", "moore8"]},
-        {"section": "innervation", "body": "Autonomic innervation reaches the heart through the cardiac plexus. Sympathetic fibres increase heart rate and the force of contraction; parasympathetic fibres carried by the vagus nerves slow the heart rate.", "references": ["grays42", "guyton14"]},
-        {"section": "physiology", "body": "Each cardiac cycle consists of ventricular contraction and ejection (systole) followed by relaxation and filling (diastole). Cardiac output equals stroke volume multiplied by heart rate.", "references": ["guyton14"]}
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The heart is a muscular pump about the size of your fist, in the middle of your chest. It beats all your life, pushing blood through your body. The right side sends blood to the lungs to pick up oxygen; the left side pumps this oxygen-rich blood to the rest of the body.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "body": "The heart is a four-chambered muscular pump. The right atrium and right ventricle receive systemic venous blood and pump it through the pulmonary trunk to the lungs; the left atrium and left ventricle receive oxygenated blood from the pulmonary veins and pump it into the aorta. It lies in the middle mediastinum, enclosed in the pericardium.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "blood_supply",
+          "body": "The myocardium is supplied by the right and left coronary arteries, which arise from the aortic sinuses immediately above the aortic valve.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "venous_drainage",
+          "body": "Most venous blood from the myocardium returns through cardiac veins that drain into the coronary sinus, which opens into the right atrium. Some small veins drain directly into the cardiac chambers.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "innervation",
+          "body": "Autonomic innervation reaches the heart through the cardiac plexus. Sympathetic fibres increase heart rate and the force of contraction; parasympathetic fibres carried by the vagus nerves slow the heart rate.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "physiology",
+          "body": "Each cardiac cycle consists of ventricular contraction and ejection (systole) followed by relaxation and filling (diastole). Cardiac output equals stroke volume multiplied by heart rate.",
+          "references": [
+            "guyton14"
+          ]
+        }
       ],
       "relations": [
-        {"predicate": "supplied_by", "object": "FMA:3802", "notes": "Right coronary artery (trunk) as modelled in the asset source.", "reference": "grays42"},
-        {"predicate": "supplied_by", "object": "FMA:3855", "notes": "Left coronary artery (trunk) as modelled in the asset source.", "reference": "grays42"},
-        {"predicate": "drained_by", "object": "FMA:4706", "reference": "grays42"},
-        {"predicate": "connected_to", "object": "FMA:3734", "notes": "The aorta arises from the left ventricle.", "reference": "grays42"},
-        {"predicate": "connected_to", "object": "FMA:8612", "notes": "The pulmonary trunk arises from the right ventricle.", "reference": "grays42"}
+        {
+          "predicate": "supplied_by",
+          "object": "FMA:3802",
+          "notes": "Right coronary artery (trunk) as modelled in the asset source.",
+          "reference": "grays42"
+        },
+        {
+          "predicate": "supplied_by",
+          "object": "FMA:3855",
+          "notes": "Left coronary artery (trunk) as modelled in the asset source.",
+          "reference": "grays42"
+        },
+        {
+          "predicate": "drained_by",
+          "object": "FMA:4706",
+          "reference": "grays42"
+        },
+        {
+          "predicate": "connected_to",
+          "object": "FMA:3734",
+          "notes": "The aorta arises from the left ventricle.",
+          "reference": "grays42"
+        },
+        {
+          "predicate": "connected_to",
+          "object": "FMA:8612",
+          "notes": "The pulmonary trunk arises from the right ventricle.",
+          "reference": "grays42"
+        }
       ]
     },
     {
       "id": "FMA:7101",
       "latin_name": "Ventriculus sinister",
       "content": [
-        {"section": "overview", "body": "The left ventricle receives oxygenated blood from the left atrium through the mitral valve and ejects it into the aorta through the aortic valve. Its wall is considerably thicker than that of the right ventricle, reflecting the higher pressures of the systemic circulation.", "references": ["grays42", "moore8"]}
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The left ventricle is the lower left chamber of the heart and its strongest part. It has the thickest wall because it pumps blood out to the whole body.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "body": "The left ventricle receives oxygenated blood from the left atrium through the mitral valve and ejects it into the aorta through the aortic valve. Its wall is considerably thicker than that of the right ventricle, reflecting the higher pressures of the systemic circulation.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
       ],
       "relations": [
-        {"predicate": "connected_to", "object": "FMA:7235", "notes": "Inflow through the mitral valve.", "reference": "grays42"},
-        {"predicate": "connected_to", "object": "FMA:7236", "notes": "Outflow through the aortic valve.", "reference": "grays42"}
+        {
+          "predicate": "connected_to",
+          "object": "FMA:7235",
+          "notes": "Inflow through the mitral valve.",
+          "reference": "grays42"
+        },
+        {
+          "predicate": "connected_to",
+          "object": "FMA:7236",
+          "notes": "Outflow through the aortic valve.",
+          "reference": "grays42"
+        }
       ]
     },
     {
       "id": "FMA:3734",
       "latin_name": "Aorta",
       "content": [
-        {"section": "overview", "body": "The aorta is the main trunk of the systemic arterial circulation. It arises from the left ventricle at the aortic valve, ascends as the ascending aorta, curves posteriorly and to the left as the arch of the aorta, and continues as the descending aorta through the thorax and abdomen, where it divides into the common iliac arteries.", "references": ["grays42", "moore8"]},
-        {"section": "physiology", "body": "The aorta and other large elastic arteries distend during ventricular ejection and recoil during diastole. By storing part of each stroke volume and releasing it in diastole they convert intermittent cardiac ejection into more continuous peripheral flow; this buffering is described by Windkessel models.", "references": ["westerhof2009windkessel", "guyton14"]},
-        {"section": "clinical_anatomy", "body": "Stiffening of the aorta, which occurs with ageing and in several disease states, reduces its buffering capacity and widens arterial pulse pressure.", "references": ["laurent2006stiffness"]}
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The aorta is the largest artery in the body. It leaves the left side of the heart, arches over it and runs down through the chest and abdomen, giving off branches that carry blood to every organ.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "body": "The aorta is the main trunk of the systemic arterial circulation. It arises from the left ventricle at the aortic valve, ascends as the ascending aorta, curves posteriorly and to the left as the arch of the aorta, and continues as the descending aorta through the thorax and abdomen, where it divides into the common iliac arteries.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "body": "The aorta and other large elastic arteries distend during ventricular ejection and recoil during diastole. By storing part of each stroke volume and releasing it in diastole they convert intermittent cardiac ejection into more continuous peripheral flow; this buffering is described by Windkessel models.",
+          "references": [
+            "westerhof2009windkessel",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "body": "Stiffening of the aorta, which occurs with ageing and in several disease states, reduces its buffering capacity and widens arterial pulse pressure.",
+          "references": [
+            "laurent2006stiffness"
+          ]
+        }
       ],
       "relations": [
-        {"predicate": "arises_from", "object": "FMA:7101", "reference": "grays42"},
-        {"predicate": "functionally_associated_with", "object": "FMA:7236", "notes": "The aortic valve prevents backflow from the aorta into the left ventricle during diastole.", "reference": "guyton14"}
+        {
+          "predicate": "arises_from",
+          "object": "FMA:7101",
+          "reference": "grays42"
+        },
+        {
+          "predicate": "functionally_associated_with",
+          "object": "FMA:7236",
+          "notes": "The aortic valve prevents backflow from the aorta into the left ventricle during diastole.",
+          "reference": "guyton14"
+        }
       ]
     },
     {
       "id": "FMA:70249",
       "latin_name": "Arteria femoralis dextra",
-      "synonyms": [{"synonym": "femoral artery", "kind": "related"}],
+      "synonyms": [
+        {
+          "synonym": "femoral artery",
+          "kind": "related"
+        }
+      ],
       "content": [
-        {"section": "overview", "body": "The femoral artery is the continuation of the external iliac artery distal to the inguinal ligament. It descends through the femoral triangle and the adductor canal and becomes the popliteal artery as it passes through the adductor hiatus. Its largest branch, the deep femoral artery (profunda femoris), arises in the femoral triangle and supplies most of the thigh.", "references": ["grays42", "moore8"]},
-        {"section": "clinical_anatomy", "body": "In the femoral triangle the artery is relatively superficial, so its pulse can be palpated just below the inguinal ligament, and it is a common site for arterial access.", "references": ["moore8"]}
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The femoral artery is the main artery of the thigh. You can feel its pulse in the groin, where it is close to the skin.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "body": "The femoral artery is the continuation of the external iliac artery distal to the inguinal ligament. It descends through the femoral triangle and the adductor canal and becomes the popliteal artery as it passes through the adductor hiatus. Its largest branch, the deep femoral artery (profunda femoris), arises in the femoral triangle and supplies most of the thigh.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "body": "In the femoral triangle the artery is relatively superficial, so its pulse can be palpated just below the inguinal ligament, and it is a common site for arterial access.",
+          "references": [
+            "moore8"
+          ]
+        }
       ],
       "relations": [
-        {"predicate": "continuous_with", "object": "FMA:18806", "notes": "Continuation of the right external iliac artery beyond the inguinal ligament.", "reference": "grays42"},
-        {"predicate": "continuous_with", "object": "FMA:77380", "notes": "Becomes the right popliteal artery at the adductor hiatus.", "reference": "grays42"}
+        {
+          "predicate": "continuous_with",
+          "object": "FMA:18806",
+          "notes": "Continuation of the right external iliac artery beyond the inguinal ligament.",
+          "reference": "grays42"
+        },
+        {
+          "predicate": "continuous_with",
+          "object": "FMA:77380",
+          "notes": "Becomes the right popliteal artery at the adductor hiatus.",
+          "reference": "grays42"
+        }
       ]
     },
     {
       "id": "FMA:70250",
       "latin_name": "Arteria femoralis sinistra",
-      "synonyms": [{"synonym": "femoral artery", "kind": "related"}],
+      "synonyms": [
+        {
+          "synonym": "femoral artery",
+          "kind": "related"
+        }
+      ],
       "content": [
-        {"section": "overview", "body": "The femoral artery is the continuation of the external iliac artery distal to the inguinal ligament. It descends through the femoral triangle and the adductor canal and becomes the popliteal artery as it passes through the adductor hiatus. Its largest branch, the deep femoral artery (profunda femoris), arises in the femoral triangle and supplies most of the thigh.", "references": ["grays42", "moore8"]}
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The femoral artery is the main artery of the thigh. You can feel its pulse in the groin, where it is close to the skin.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "body": "The femoral artery is the continuation of the external iliac artery distal to the inguinal ligament. It descends through the femoral triangle and the adductor canal and becomes the popliteal artery as it passes through the adductor hiatus. Its largest branch, the deep femoral artery (profunda femoris), arises in the femoral triangle and supplies most of the thigh.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
       ],
       "relations": [
-        {"predicate": "continuous_with", "object": "FMA:18807", "notes": "Continuation of the left external iliac artery beyond the inguinal ligament.", "reference": "grays42"},
-        {"predicate": "continuous_with", "object": "FMA:77381", "notes": "Becomes the left popliteal artery at the adductor hiatus.", "reference": "grays42"}
+        {
+          "predicate": "continuous_with",
+          "object": "FMA:18807",
+          "notes": "Continuation of the left external iliac artery beyond the inguinal ligament.",
+          "reference": "grays42"
+        },
+        {
+          "predicate": "continuous_with",
+          "object": "FMA:77381",
+          "notes": "Becomes the left popliteal artery at the adductor hiatus.",
+          "reference": "grays42"
+        }
       ]
     },
     {
       "id": "FMA:20796",
-      "synonyms": [{"synonym": "right profunda femoris artery", "kind": "exact"}, {"synonym": "profunda femoris artery", "kind": "related"}],
+      "synonyms": [
+        {
+          "synonym": "right profunda femoris artery",
+          "kind": "exact"
+        },
+        {
+          "synonym": "profunda femoris artery",
+          "kind": "related"
+        }
+      ],
       "relations": [
-        {"predicate": "branch_of", "object": "FMA:70249", "reference": "grays42"}
+        {
+          "predicate": "branch_of",
+          "object": "FMA:70249",
+          "reference": "grays42"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The deep femoral artery is a large branch of the femoral artery that runs deep in the thigh and supplies the thigh muscles.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        }
       ]
     },
     {
       "id": "FMA:20797",
-      "synonyms": [{"synonym": "left profunda femoris artery", "kind": "exact"}, {"synonym": "profunda femoris artery", "kind": "related"}],
+      "synonyms": [
+        {
+          "synonym": "left profunda femoris artery",
+          "kind": "exact"
+        },
+        {
+          "synonym": "profunda femoris artery",
+          "kind": "related"
+        }
+      ],
       "relations": [
-        {"predicate": "branch_of", "object": "FMA:70250", "reference": "grays42"}
+        {
+          "predicate": "branch_of",
+          "object": "FMA:70250",
+          "reference": "grays42"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The deep femoral artery is a large branch of the femoral artery that runs deep in the thigh and supplies the thigh muscles.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        }
       ]
     },
     {
       "id": "FMA:24474",
       "latin_name": "Femur dextrum",
-      "synonyms": [{"synonym": "thigh bone", "kind": "related"}],
+      "synonyms": [
+        {
+          "synonym": "thigh bone",
+          "kind": "related"
+        },
+        {
+          "synonym": "thighbone",
+          "kind": "exact"
+        }
+      ],
       "content": [
-        {"section": "overview", "body": "The femur is the longest bone of the body. Proximally its head articulates with the acetabulum of the hip bone at the hip joint; distally its condyles articulate with the tibia and its patellar surface with the patella at the knee joint.", "references": ["grays42", "moore8"]},
-        {"section": "clinical_anatomy", "body": "Fractures of the femoral neck are common in older adults, particularly with osteoporosis. Displaced fractures can interrupt the blood supply to the femoral head, which comes mainly from branches of the medial circumflex femoral artery, and so risk avascular necrosis of the head.", "references": ["moore8"]}
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The femur, or thigh bone, is the longest and strongest bone in the body. It runs from the hip to the knee and carries the body's weight when you stand and walk.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "body": "The femur is the longest bone of the body. Proximally its head articulates with the acetabulum of the hip bone at the hip joint; distally its condyles articulate with the tibia and its patellar surface with the patella at the knee joint.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "body": "Fractures of the femoral neck are common in older adults, particularly with osteoporosis. Displaced fractures can interrupt the blood supply to the femoral head, which comes mainly from branches of the medial circumflex femoral artery, and so risk avascular necrosis of the head.",
+          "references": [
+            "moore8"
+          ]
+        }
       ],
       "relations": [
-        {"predicate": "articulates_with", "object": "FMA:16586", "notes": "Hip joint (with the acetabulum).", "reference": "grays42"},
-        {"predicate": "articulates_with", "object": "FMA:24477", "notes": "Knee joint.", "reference": "grays42"},
-        {"predicate": "articulates_with", "object": "FMA:24486", "notes": "Patellofemoral part of the knee joint.", "reference": "grays42"}
+        {
+          "predicate": "articulates_with",
+          "object": "FMA:16586",
+          "notes": "Hip joint (with the acetabulum).",
+          "reference": "grays42"
+        },
+        {
+          "predicate": "articulates_with",
+          "object": "FMA:24477",
+          "notes": "Knee joint.",
+          "reference": "grays42"
+        },
+        {
+          "predicate": "articulates_with",
+          "object": "FMA:24486",
+          "notes": "Patellofemoral part of the knee joint.",
+          "reference": "grays42"
+        }
       ]
     },
     {
       "id": "FMA:7309",
       "latin_name": "Pulmo dexter",
       "content": [
-        {"section": "overview", "body": "The right lung is usually divided by oblique and horizontal fissures into superior, middle and inferior lobes. It is shorter and wider than the left lung because the right dome of the diaphragm is higher.", "references": ["grays42", "moore8"]}
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The lungs are two spongy organs in your chest. The right lung has three parts, called lobes. Inside, air tubes branch into millions of tiny air sacs where oxygen enters the blood.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "body": "The right lung is usually divided by oblique and horizontal fissures into superior, middle and inferior lobes. It is shorter and wider than the left lung because the right dome of the diaphragm is higher.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ],
+      "synonyms": [
+        {
+          "synonym": "right pulmonary",
+          "kind": "related"
+        }
       ]
     },
     {
       "id": "FMA:7310",
       "latin_name": "Pulmo sinister",
       "content": [
-        {"section": "overview", "body": "The left lung is usually divided by an oblique fissure into superior and inferior lobes. Its anterior border has a cardiac notch, reflecting the position of the heart.", "references": ["grays42", "moore8"]}
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The lungs are two spongy organs in your chest. The left lung has two lobes and is a little smaller than the right because it makes room for the heart.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "body": "The left lung is usually divided by an oblique fissure into superior and inferior lobes. Its anterior border has a cardiac notch, reflecting the position of the heart.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
       ]
     },
     {
       "id": "FMA:7197",
       "latin_name": "Hepar",
       "content": [
-        {"section": "overview", "body": "The liver is the largest internal organ and gland, lying mainly in the right upper quadrant beneath the diaphragm. It has a dual blood supply: the hepatic portal vein carries blood from the gastrointestinal tract and spleen, and the hepatic artery proper carries oxygenated arterial blood. Blood leaves through the hepatic veins into the inferior vena cava.", "references": ["grays42", "moore8"]}
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The liver is the largest internal organ, in the upper right part of the abdomen under the ribs. It makes bile to help digest fat, stores energy, cleans the blood of many waste products and medicines, and makes important proteins.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "body": "The liver is the largest internal organ and gland, lying mainly in the right upper quadrant beneath the diaphragm. It has a dual blood supply: the hepatic portal vein carries blood from the gastrointestinal tract and spleen, and the hepatic artery proper carries oxygenated arterial blood. Blood leaves through the hepatic veins into the inferior vena cava.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ],
+      "synonyms": [
+        {
+          "synonym": "hepar",
+          "kind": "exact"
+        },
+        {
+          "synonym": "hepatic",
+          "kind": "related"
+        }
+      ]
+    },
+    {
+      "id": "FMA:50801",
+      "latin_name": "Encephalon",
+      "synonyms": [
+        {
+          "synonym": "encephalon",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The brain is the body's control centre. It sits inside the skull and is protected by bone, three membranes and a cushion of fluid. Different parts of the brain handle thinking, memory, feelings, movement, the senses and automatic actions such as breathing.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The brain comprises the cerebrum (two cerebral hemispheres joined by the corpus callosum), the diencephalon (thalamus, hypothalamus, epithalamus), the brainstem (midbrain, pons, medulla oblongata) and the cerebellum. It is enclosed by the meninges (dura mater, arachnoid mater, pia mater) and bathed in cerebrospinal fluid, which is produced mainly by the choroid plexuses of the ventricles.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "blood_supply",
+          "audience": "undergraduate",
+          "body": "The brain is supplied by the two internal carotid arteries and the two vertebral arteries; the vertebral arteries join to form the basilar artery. Branches of these vessels connect at the base of the brain in the cerebral arterial circle (circle of Willis).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Occlusion of a cerebral artery causes ischaemic stroke with deficits that match its territory; for example, a middle cerebral artery occlusion typically causes contralateral weakness and sensory loss of the face and arm, and language impairment if the dominant hemisphere is affected.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:67292",
+        "FMA:61819"
+      ],
+      "latin_name": "Hemispherium cerebri",
+      "synonyms": [
+        {
+          "synonym": "cerebral hemisphere",
+          "kind": "exact"
+        },
+        {
+          "synonym": "cerebrum",
+          "kind": "related"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The cerebrum is the largest part of the brain and is divided into a left and a right half, called hemispheres. Each hemisphere mostly controls and feels the opposite side of the body. Its wrinkled outer layer, the cortex, is where thinking, language and conscious sensation happen.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "Each cerebral hemisphere has frontal, parietal, temporal and occipital lobes and the insula, with an outer layer of grey matter (cerebral cortex) over white matter and deep grey nuclei. The precentral gyrus (primary motor cortex) lies in the frontal lobe and the postcentral gyrus (primary somatosensory cortex) in the parietal lobe; the primary visual cortex is in the occipital lobe and the primary auditory cortex in the temporal lobe.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Motor and sensory pathways cross the midline, so each hemisphere controls movement and receives sensation from the opposite side of the body. In most people language functions are lateralised to the left hemisphere.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:67944",
+      "latin_name": "Cerebellum",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The cerebellum ('little brain') sits at the back of the head, below the main part of the brain. It does not start movements, but it makes them smooth, accurate and well-timed, and it helps you keep your balance.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The cerebellum lies in the posterior cranial fossa behind the pons and medulla, separated from the occipital lobes by the tentorium cerebelli. It has two hemispheres joined by the vermis and is connected to the brainstem by three pairs of cerebellar peduncles. It compares intended with actual movement and corrects errors.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Damage to a cerebellar hemisphere causes ataxia on the same side of the body, with intention tremor, difficulty with rapid alternating movements (dysdiadochokinesia) and past-pointing; midline (vermis) lesions mainly affect gait and trunk balance.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:79876",
+      "latin_name": "Truncus encephali",
+      "synonyms": [
+        {
+          "synonym": "brain stem",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The brainstem connects the brain to the spinal cord. It controls things you need to stay alive without thinking about them, such as breathing, heart rate and staying awake. Most of the nerves to the face and head start here.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The brainstem consists of the midbrain, pons and medulla oblongata. It carries the ascending and descending tracts between the cerebrum and spinal cord, contains the nuclei of cranial nerves III to XII, and houses the reticular formation, including centres that regulate breathing and cardiovascular function.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Because many tracts and cranial nerve nuclei lie close together, a small brainstem lesion can cause cranial nerve palsy on one side with weakness of the opposite side of the body ('crossed' signs).",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:62008",
+      "latin_name": "Hypothalamus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The hypothalamus is a small area deep in the brain, about the size of an almond. It works like a thermostat and control panel, keeping body temperature, hunger, thirst and sleep in balance, and it tells the pituitary gland which hormones to release.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The hypothalamus forms the floor and lower lateral walls of the third ventricle, below the thalamus. It is connected to the pituitary gland by the infundibulum. Its neurons regulate the autonomic nervous system, body temperature, appetite, thirst and circadian rhythms, and control pituitary secretion.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Hypothalamic releasing and inhibiting hormones reach the anterior pituitary through the hypophysial portal vessels. Antidiuretic hormone and oxytocin are made in hypothalamic neurons and travel down their axons to be released from the posterior pituitary.",
+          "references": [
+            "guyton14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:7647",
+      "latin_name": "Medulla spinalis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The spinal cord is a long bundle of nerves running down from the brain inside the backbone. It carries messages between the brain and the body, and it can produce quick reflexes, such as pulling your hand away from something hot, before the brain even knows.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The spinal cord continues from the medulla oblongata at the foramen magnum and, in adults, usually ends at about the L1–L2 vertebral level as the conus medullaris; below this the nerve roots form the cauda equina. It has cervical and lumbosacral enlargements for the limb nerves and gives rise to 31 pairs of spinal nerves. Grey matter is central (H-shaped in cross-section) and white matter peripheral.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Complete spinal cord injury causes loss of movement and sensation below the level of the lesion; injury above about C3–C5 can abolish diaphragm function, which is supplied by the phrenic nerve from these segments.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:7394",
+      "latin_name": "Trachea",
+      "synonyms": [
+        {
+          "synonym": "windpipe",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The trachea, or windpipe, is the tube that carries air from your throat down into your chest. Rings of cartilage keep it open so it does not collapse when you breathe in.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The trachea begins at the lower border of the cricoid cartilage (about the C6 vertebral level) and descends in the midline of the neck and superior mediastinum to divide into the right and left main bronchi at the carina, at about the level of the sternal angle (T4–T5). It is held open by C-shaped rings of hyaline cartilage, open posteriorly where the trachealis muscle lies against the oesophagus. It is lined by ciliated respiratory epithelium.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "In an emergency, the airway can be accessed through the cricothyroid membrane, above the trachea; a surgical tracheostomy is usually made through the upper tracheal rings.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:7396",
+      "latin_name": "Bronchus principalis sinister",
+      "synonyms": [
+        {
+          "synonym": "left primary bronchus",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The left main bronchus is one of the two big branches of the windpipe. It carries air into the left lung.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The left main bronchus is longer, narrower and more horizontal than the right. It passes below the arch of the aorta and in front of the oesophagus and descending aorta to enter the hilum of the left lung, where it divides into superior and inferior lobar bronchi.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:13295",
+      "latin_name": "Diaphragma",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The diaphragm is a dome-shaped sheet of muscle under your lungs. When it tightens, it flattens and pulls air into your lungs. When it relaxes, air flows back out. It is the most important muscle for breathing.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The diaphragm separates the thoracic and abdominal cavities. Its muscular fibres arise from the xiphoid process, the lower six costal cartilages and the lumbar vertebrae (through the crura and arcuate ligaments) and insert into a central tendon. It has openings for the inferior vena cava (about T8), the oesophagus (about T10) and the aorta (about T12, behind the median arcuate ligament).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "innervation",
+          "audience": "undergraduate",
+          "body": "Motor supply is from the phrenic nerves (spinal segments C3–C5). The phrenic nerves also carry sensation from the central part; the periphery receives sensory fibres from the lower intercostal nerves.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Irritation of the central diaphragm (for example by blood or pus under it) can cause pain referred to the shoulder tip, because the phrenic nerve shares segments C3–C5 with the supraclavicular nerves.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:13373",
+        "FMA:13374"
+      ],
+      "latin_name": "Musculus pectoralis major",
+      "synonyms": [
+        {
+          "synonym": "pec major",
+          "kind": "exact"
+        },
+        {
+          "synonym": "pecs",
+          "kind": "related"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The pectoralis major is the large, fan-shaped muscle at the front of the chest. It pulls the arm across the body and helps with pushing and climbing movements.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "Pectoralis major has a clavicular head (from the medial clavicle) and a sternocostal head (from the sternum, upper six costal cartilages and the aponeurosis of the external oblique). Both insert into the lateral lip of the intertubercular sulcus of the humerus. It adducts and medially rotates the arm; the clavicular head also flexes it.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "innervation",
+          "audience": "undergraduate",
+          "body": "It is supplied by the lateral and medial pectoral nerves from the brachial plexus.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:13398",
+        "FMA:13399"
+      ],
+      "latin_name": "Musculus serratus anterior",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The serratus anterior wraps around the side of the ribs like the teeth of a saw. It holds the shoulder blade flat against the chest and helps you raise your arm above your head.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "Serratus anterior arises by digitations from the outer surfaces of the upper eight or nine ribs and inserts into the anterior surface of the medial border of the scapula. It protracts the scapula and, with the trapezius, rotates it upwards so the arm can be raised above the horizontal.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "It is supplied by the long thoracic nerve (C5–C7), which runs on its superficial surface; injury to this nerve causes 'winging' of the scapula when the person pushes against a wall.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:22342",
+        "FMA:22343"
+      ],
+      "latin_name": "Musculus psoas major",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The psoas major is a long, thick muscle deep in the lower back and abdomen. It connects the spine to the thigh bone and lifts the thigh, for example when you climb stairs.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "Psoas major arises from the bodies, intervertebral discs and transverse processes of the T12–L5 vertebrae and joins the iliacus (as iliopsoas) to insert on the lesser trochanter of the femur. It is the most powerful flexor of the hip and is supplied by anterior rami of the lumbar nerves (L1–L3).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Because the psoas lies next to the appendix, kidney and colon, inflammation of these organs can make hip extension painful (the psoas sign).",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:13336",
+        "FMA:13337"
+      ],
+      "latin_name": "Musculus obliquus externus abdominis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The external oblique is the outermost flat muscle on each side of the abdomen. It helps you twist and bend your trunk and squeezes the abdomen when you cough or strain.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "External oblique arises from the outer surfaces of the lower eight ribs; its fibres run inferomedially ('hands in pockets') to the iliac crest and a broad aponeurosis that meets the linea alba. The lower free border of the aponeurosis forms the inguinal ligament. It flexes and rotates the trunk and compresses the abdominal contents.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:7131",
+      "latin_name": "Oesophagus",
+      "synonyms": [
+        {
+          "synonym": "oesophagus",
+          "kind": "exact"
+        },
+        {
+          "synonym": "gullet",
+          "kind": "exact"
+        },
+        {
+          "synonym": "food pipe",
+          "kind": "related"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The oesophagus (US spelling: esophagus) is the muscular tube that carries food and drink from your throat to your stomach. Waves of muscle squeeze the food along, so you can swallow even when lying down.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The oesophagus is a muscular tube about 25 cm long that begins at the pharyngo-oesophageal junction (about C6) and descends through the superior and posterior mediastinum behind the trachea and left atrium, passing through the diaphragm at about T10 to join the stomach. Its muscle is skeletal in the upper third, mixed in the middle and smooth in the lower third.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Because the left atrium lies directly in front of the oesophagus, an enlarged left atrium can indent it and transoesophageal echocardiography gives clear views of the heart. In portal hypertension, veins at the lower end of the oesophagus can dilate (varices) and bleed severely.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:7148",
+      "latin_name": "Gaster",
+      "synonyms": [
+        {
+          "synonym": "ventriculus",
+          "kind": "related"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The stomach is a J-shaped bag in the upper left part of your abdomen. It stores food after a meal, churns it, and mixes it with acid and enzymes to start breaking down protein.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The stomach has a cardia, fundus, body and pyloric part (antrum and canal) ending at the pyloric sphincter. Its mucosa contains gastric glands with parietal cells (hydrochloric acid and intrinsic factor) and chief cells (pepsinogen). Food is mixed into chyme and released gradually into the duodenum.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "blood_supply",
+          "audience": "undergraduate",
+          "body": "The stomach is supplied by branches of the coeliac trunk (US spelling: celiac trunk): the left and right gastric arteries along the lesser curvature, the gastro-omental arteries along the greater curvature, and the short gastric arteries to the fundus.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Peptic ulcers are often associated with Helicobacter pylori infection or anti-inflammatory drugs; a posterior ulcer in the duodenum or stomach can erode nearby arteries and bleed.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:7206",
+      "latin_name": "Duodenum",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The duodenum is the first, short part of the small intestine, just after the stomach. Here food is mixed with bile from the liver and digestive juice from the pancreas.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The duodenum is about 25 cm long and C-shaped, curving around the head of the pancreas in four parts (superior, descending, inferior, ascending). The bile duct and main pancreatic duct open into the descending part at the major duodenal papilla. Apart from its first part, it is retroperitoneal.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:7200",
+      "latin_name": "Intestinum tenue",
+      "synonyms": [
+        {
+          "synonym": "small bowel",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The small intestine is a long, coiled tube where most digestion finishes and most nutrients enter the blood. Its inner wall is covered in millions of tiny finger-like villi, which give it a huge surface for absorbing food.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The small intestine consists of the duodenum, jejunum and ileum. The jejunum and ileum are suspended by the mesentery; the jejunum has thicker walls, more prominent circular folds and fewer arterial arcades than the ileum. Circular folds, villi and microvilli greatly increase the absorptive surface. The ileum absorbs vitamin B12 and bile salts.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "blood_supply",
+          "audience": "undergraduate",
+          "body": "The jejunum and ileum are supplied by branches of the superior mesenteric artery and drain to the superior mesenteric vein, a tributary of the hepatic portal vein.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:7201",
+      "latin_name": "Intestinum crassum",
+      "synonyms": [
+        {
+          "synonym": "large bowel",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The large intestine is the wide last part of the gut. It takes water back from the remains of food and turns them into faeces (US spelling: feces), which are stored in the rectum until you go to the toilet.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The large intestine comprises the caecum (US spelling: cecum) with the appendix, the ascending, transverse, descending and sigmoid colon, the rectum and the anal canal. The colon is recognised by its taeniae coli (three longitudinal muscle bands), haustra and omental appendices. It absorbs water and electrolytes and contains a dense population of bacteria.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "blood_supply",
+          "audience": "undergraduate",
+          "body": "The caecum to about two-thirds along the transverse colon (midgut) is supplied by the superior mesenteric artery; the rest to the upper rectum (hindgut) by the inferior mesenteric artery.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:14542",
+      "latin_name": "Appendix vermiformis",
+      "synonyms": [
+        {
+          "synonym": "vermiform appendix",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The appendix is a small, finger-shaped pouch attached to the beginning of the large intestine, in the lower right part of the abdomen. If it becomes blocked and infected (appendicitis), it may need to be removed.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The vermiform appendix arises from the posteromedial wall of the caecum, where the three taeniae coli converge. Its position varies (retrocaecal is common, pelvic also frequent). It contains abundant lymphoid tissue and is supplied by the appendicular artery, a branch of the ileocolic artery.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "The base of the appendix lies deep to McBurney's point, one-third of the way from the anterior superior iliac spine to the umbilicus, a classic site of tenderness in appendicitis.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:7198",
+      "latin_name": "Pancreas",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The pancreas is a long gland lying behind the stomach. It does two jobs: it makes digestive juice that flows into the small intestine, and it releases the hormones insulin and glucagon into the blood to control blood sugar.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The pancreas lies retroperitoneally across the posterior abdominal wall at about L1–L2. It has a head (within the curve of the duodenum), neck, body and tail (reaching the hilum of the spleen). Its exocrine acini secrete enzymes and bicarbonate through the pancreatic duct into the duodenum; its endocrine pancreatic islets secrete insulin (beta cells), glucagon (alpha cells) and somatostatin (delta cells).",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "A tumour in the head of the pancreas can compress the bile duct and cause painless obstructive jaundice. Acute pancreatitis is commonly caused by gallstones or alcohol.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:7202",
+      "latin_name": "Vesica biliaris",
+      "synonyms": [
+        {
+          "synonym": "gall bladder",
+          "kind": "exact"
+        },
+        {
+          "synonym": "vesica fellea",
+          "kind": "related"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The gallbladder is a small pear-shaped bag under the liver. It stores bile and squeezes it into the intestine after a fatty meal, where bile helps digest fats.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The gallbladder lies in a fossa on the visceral surface of the liver and has a fundus, body and neck continuous with the cystic duct, which joins the common hepatic duct to form the bile duct. It stores and concentrates bile and contracts in response to cholecystokinin.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Gallstones are common. Pain from an inflamed gallbladder is felt in the right upper quadrant and may be referred to the right shoulder; the fundus lies near where the right midclavicular line meets the costal margin.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:54640",
+      "latin_name": "Lingua",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The tongue is a muscular organ in the mouth. It moves food while you chew, pushes it back when you swallow, helps you speak, and carries the taste buds.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The tongue has an oral part (anterior two-thirds) and a pharyngeal part (posterior third), separated by the V-shaped terminal sulcus. Its intrinsic muscles change its shape and its extrinsic muscles change its position. Taste buds are found mainly in the vallate, fungiform and foliate papillae.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "innervation",
+          "audience": "undergraduate",
+          "body": "All tongue muscles except palatoglossus are supplied by the hypoglossal nerve (CN XII). General sensation of the anterior two-thirds is carried by the lingual nerve (from CN V3) and taste by the chorda tympani (CN VII); the posterior third is supplied by the glossopharyngeal nerve (CN IX) for both.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:14544",
+      "latin_name": "Rectum",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The rectum is the last straight part of the large intestine, just before the anus. It stores faeces until it is convenient to empty the bowel.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The rectum continues from the sigmoid colon at about the S3 vertebral level and follows the curve of the sacrum and coccyx to the anorectal junction, where the puborectalis muscle forms a sling. It lacks taeniae coli and haustra. Its anterior relations differ between sexes: the bladder, seminal glands and prostate in males; the vagina and uterus in females.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:7204",
+        "FMA:7205"
+      ],
+      "latin_name": "Ren",
+      "synonyms": [
+        {
+          "synonym": "nephros",
+          "kind": "related"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The kidneys are two bean-shaped organs, each about the size of a fist, at the back of the abdomen on either side of the spine. They clean the blood by filtering out waste and extra water, which become urine.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The kidneys are retroperitoneal on the posterior abdominal wall, at about the T12–L3 vertebral levels; the right is usually slightly lower because of the liver. Each is about 10–12 cm long and is surrounded by perirenal fat and renal fascia. At the hilum, the renal vein lies anterior, the renal artery in the middle and the renal pelvis posterior. Internally, the cortex contains the glomeruli and the medulla forms renal pyramids that drain into minor and major calyces.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "blood_supply",
+          "audience": "undergraduate",
+          "body": "Each kidney is supplied by a renal artery from the abdominal aorta and drained by a renal vein into the inferior vena cava; the left renal vein crosses in front of the aorta, just below the superior mesenteric artery.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Together the kidneys receive about a fifth of the resting cardiac output and filter about 180 L of plasma per day, reabsorbing almost all of it.",
+          "references": [
+            "guyton14"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:15571",
+        "FMA:15572"
+      ],
+      "latin_name": "Ureter",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The ureters are two thin muscular tubes, one from each kidney, that carry urine down to the bladder. Waves of muscle contraction push urine along.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "Each ureter is about 25–30 cm long. It descends on the psoas major, crosses the pelvic brim near the bifurcation of the common iliac artery, and enters the posterolateral bladder wall obliquely, which helps prevent reflux. In the pelvis it passes under the ductus deferens in males and under the uterine artery in females ('water under the bridge').",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "The uterine artery crosses above the ureter near the cervix, so the ureter is at risk of injury during hysterectomy. Stones lodge at the narrowings: the pelviureteric junction, the pelvic brim and the vesicoureteric junction.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:15900",
+      "latin_name": "Vesica urinaria",
+      "synonyms": [
+        {
+          "synonym": "bladder",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The urinary bladder is a stretchy muscular bag in the lower abdomen that stores urine. When it fills, nerves send a signal to the brain that it is time to empty it.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The urinary bladder lies in the anterior pelvis behind the pubic symphysis and rises into the abdomen as it fills. Its wall is mainly smooth muscle (detrusor). The trigone, a smooth triangular area on the inner posterior wall, lies between the two ureteric openings and the internal urethral orifice.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "innervation",
+          "audience": "undergraduate",
+          "body": "Parasympathetic fibres (pelvic splanchnic nerves, S2–S4) make the detrusor contract during voiding; sympathetic fibres relax it during filling; the external urethral sphincter is voluntary and supplied by the pudendal nerve.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:19667",
+      "latin_name": "Urethra",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The urethra is the tube that carries urine from the bladder out of the body. It is much shorter in females than in males.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The female urethra is about 4 cm long and opens in the vestibule in front of the vagina. The male urethra is about 18–22 cm long and has intramural (preprostatic), prostatic, membranous (intermediate) and spongy parts; it carries both urine and semen.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "The short female urethra is one reason urinary tract infections are more common in women. In men, the membranous part is the narrowest and least distensible, and can be injured in pelvic fractures.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:13889",
+      "latin_name": "Hypophysis",
+      "synonyms": [
+        {
+          "synonym": "hypophysis",
+          "kind": "exact"
+        },
+        {
+          "synonym": "master gland",
+          "kind": "related"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The pituitary gland is a pea-sized gland hanging under the brain. It releases hormones that control growth and many other glands, including the thyroid, the adrenal glands and the testes or ovaries.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The pituitary gland lies in the hypophysial fossa of the sella turcica of the sphenoid bone, attached to the hypothalamus by the infundibulum. The anterior lobe (adenohypophysis) secretes growth hormone, prolactin, thyroid-stimulating hormone, adrenocorticotropic hormone, follicle-stimulating hormone and luteinising hormone; the posterior lobe (neurohypophysis) releases antidiuretic hormone and oxytocin made in the hypothalamus.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "The optic chiasm lies just above the gland, so an enlarging pituitary tumour can compress it and cause bitemporal hemianopia. The gland can be reached surgically through the sphenoidal sinus.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:15629",
+        "FMA:15630"
+      ],
+      "latin_name": "Glandula suprarenalis",
+      "synonyms": [
+        {
+          "synonym": "suprarenal gland",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The adrenal glands (TA term: suprarenal glands) sit on top of the kidneys. They release hormones that help the body respond to stress, control blood pressure and balance salt and water.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "Each suprarenal gland lies on the superomedial pole of a kidney within the renal fascia; the right is pyramidal and the left crescent-shaped. The outer cortex has three zones secreting aldosterone (zona glomerulosa), cortisol (zona fasciculata) and androgens (zona reticularis); the inner medulla secretes adrenaline (epinephrine) and noradrenaline (norepinephrine) in response to sympathetic stimulation.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "blood_supply",
+          "audience": "undergraduate",
+          "body": "Each gland receives superior, middle and inferior suprarenal arteries (from the inferior phrenic artery, the aorta and the renal artery respectively). The right suprarenal vein drains directly into the inferior vena cava, the left into the left renal vein.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:62033",
+      "latin_name": "Glandula pinealis",
+      "synonyms": [
+        {
+          "synonym": "pineal gland",
+          "kind": "exact"
+        },
+        {
+          "synonym": "epiphysis cerebri",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The pineal gland is a tiny gland deep in the brain. It releases melatonin, a hormone that rises in the dark and helps control the daily sleep–wake cycle.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The pineal gland is a small midline structure of the epithalamus attached to the roof of the third ventricle, above the superior colliculi. It secretes melatonin in a circadian pattern, with highest levels at night. It often calcifies in adults, which can make it visible on imaging.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:9607",
+      "latin_name": "Thymus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The thymus is a gland behind the breastbone where certain white blood cells, called T cells, learn to recognise germs. It is largest in children and slowly shrinks and turns to fat after puberty.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The thymus is a bilobed lymphoid organ in the anterior (and superior) mediastinum, behind the manubrium of the sternum and in front of the pericardium and great vessels. T-lymphocyte precursors from the bone marrow mature in its cortex and medulla, where cells that react against the body's own tissues are eliminated. It involutes after puberty.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:9600",
+      "latin_name": "Prostata",
+      "synonyms": [
+        {
+          "synonym": "prostate gland",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The prostate is a walnut-sized gland in men, just below the bladder. It wraps around the tube that carries urine (the urethra) and makes part of the fluid in semen.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The prostate lies between the neck of the bladder and the pelvic floor, behind the pubic symphysis and in front of the rectum. The prostatic urethra passes through it and receives the ejaculatory ducts and the prostatic ducts. It is described in zones; benign hyperplasia mainly involves the transition zone around the urethra, and most carcinomas arise in the peripheral zone.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "The posterior surface can be felt through the anterior wall of the rectum on digital rectal examination. Benign enlargement compresses the urethra and causes difficulty passing urine.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:7163",
+      "latin_name": "Cutis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The skin is the body's largest organ. It protects you from germs, injury and sunlight, keeps water in, helps control body temperature, lets you feel touch and pain, and makes vitamin D in sunlight.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The skin consists of the epidermis, a keratinised stratified squamous epithelium, and the dermis, a dense connective tissue containing blood vessels, nerves, hair follicles and sweat and sebaceous glands. It rests on the subcutaneous tissue (tela subcutanea). Thickness varies from very thin on the eyelids to thick on the palms and soles. Tension lines (cleavage lines) reflect the orientation of dermal collagen; incisions along them tend to heal with finer scars.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Skin blood flow and sweating are adjusted by the sympathetic nervous system to regulate body temperature; vitamin D3 is synthesised in the epidermis under ultraviolet B light.",
+          "references": [
+            "guyton14"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:12514",
+        "FMA:12515"
+      ],
+      "latin_name": "Bulbus oculi",
+      "synonyms": [
+        {
+          "synonym": "eye",
+          "kind": "related"
+        },
+        {
+          "synonym": "globe",
+          "kind": "related"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The eyeball is a ball about 2.4 cm across that works like a camera. The clear cornea and the lens focus light onto the retina at the back, which turns the light into nerve signals that travel to the brain.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The eyeball has three layers: an outer fibrous layer (sclera and cornea), a middle vascular layer (choroid, ciliary body and iris) and an inner layer (retina). Its interior contains the aqueous humour in the anterior and posterior chambers, the lens, and the vitreous body. The optic nerve leaves posteriorly, slightly medial to the posterior pole.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "blood_supply",
+          "audience": "undergraduate",
+          "body": "The ophthalmic artery, the first branch of the internal carotid artery, supplies the eyeball; its central retinal artery supplies the inner retina, and occlusion causes sudden painless loss of vision.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:58239",
+        "FMA:58240"
+      ],
+      "latin_name": "Cornea",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The cornea is the clear, curved window at the front of the eye. It lets light in and does most of the focusing.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The cornea is the transparent, avascular anterior part of the fibrous layer of the eyeball, continuous with the sclera at the limbus. Its curvature provides most of the eye's refractive power. It is richly innervated by branches of the ophthalmic nerve (CN V1), which is why corneal injury is very painful and why touching it triggers the blink (corneal) reflex.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:58242",
+        "FMA:58243"
+      ],
+      "latin_name": "Lens",
+      "synonyms": [
+        {
+          "synonym": "crystalline lens",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The lens is a clear, flexible disc behind the coloured iris. It changes shape to focus on near or distant objects. Clouding of the lens, called a cataract, is common in older age and can be treated with surgery.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The lens is a transparent biconvex structure behind the iris, held by the zonular fibres (suspensory ligament) attached to the ciliary body. When the ciliary muscle contracts, the zonular fibres slacken and the elastic lens becomes more rounded for near vision (accommodation). The lens gradually loses elasticity with age (presbyopia).",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:46565",
+      "latin_name": "Cranium",
+      "synonyms": [
+        {
+          "synonym": "cranium",
+          "kind": "exact"
+        },
+        {
+          "synonym": "skull bones",
+          "kind": "related"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The skull is the bony structure of the head. It protects the brain, holds the eyes, ears and nose, and forms the face. In adults, most skull bones are joined firmly together by wavy joints called sutures.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The skull is formed by the neurocranium (frontal, parietal, occipital, temporal, sphenoid and ethmoid bones), which encloses the brain, and the viscerocranium (facial skeleton), which includes the maxillae, zygomatic, nasal and other facial bones and the mandible. Apart from the mandible and auditory ossicles, the bones are united by sutures. The cranial base has anterior, middle and posterior cranial fossae, with foramina for vessels and cranial nerves.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "The pterion, where the frontal, parietal, temporal and sphenoid bones meet, is thin; a fracture here can tear the underlying middle meningeal artery and cause an extradural haematoma.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:13478",
+      "latin_name": "Columna vertebralis",
+      "synonyms": [
+        {
+          "synonym": "spine",
+          "kind": "exact"
+        },
+        {
+          "synonym": "spinal column",
+          "kind": "exact"
+        },
+        {
+          "synonym": "backbone",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The vertebral column, or backbone, is a flexible chain of bones called vertebrae running down the middle of the back. It holds up the head and body, lets you bend and twist, and protects the spinal cord inside it.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The vertebral column usually has 33 vertebrae: 7 cervical, 12 thoracic, 5 lumbar, 5 fused sacral (sacrum) and about 4 coccygeal. Adjacent vertebral bodies are joined by intervertebral discs (anulus fibrosus around a nucleus pulposus) and ligaments. In adults it has four curvatures: cervical and lumbar lordoses and thoracic and sacral kyphoses.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "A herniated lumbar disc usually protrudes posterolaterally and compresses the nerve root that exits one level below (for example, an L4–L5 herniation usually affects the L5 root), causing pain radiating down the leg (sciatica).",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:7485",
+      "latin_name": "Sternum",
+      "synonyms": [
+        {
+          "synonym": "breastbone",
+          "kind": "exact"
+        },
+        {
+          "synonym": "breast bone",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The sternum, or breastbone, is the flat bone in the middle of your chest. Your ribs connect to it at the front, forming a protective cage around the heart and lungs.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The sternum has three parts: the manubrium, the body and the xiphoid process. The manubrium articulates with the clavicles and first costal cartilages; the joint between manubrium and body forms the sternal angle, where the second costal cartilages attach. The body receives the third to seventh costal cartilages.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "The sternal angle is a key landmark: it marks the level of the second costal cartilage (for counting ribs) and roughly the T4–T5 vertebral level, where the trachea divides and the aortic arch begins and ends.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:7480",
+      "latin_name": "Cavea thoracis",
+      "synonyms": [
+        {
+          "synonym": "thoracic cage",
+          "kind": "exact"
+        },
+        {
+          "synonym": "ribs",
+          "kind": "related"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The rib cage is made of 12 pairs of curved ribs, joined to the backbone behind and mostly to the breastbone in front. It protects the heart and lungs and moves up and out when you breathe in.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The thoracic cage comprises the 12 thoracic vertebrae, 12 pairs of ribs with their costal cartilages, and the sternum. Ribs 1–7 are true ribs (attach directly to the sternum), ribs 8–10 are false ribs (attach through the cartilage above) and ribs 11–12 are floating ribs. During inspiration the ribs rise, increasing the anteroposterior and transverse diameters of the thorax.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "The intercostal vein, artery and nerve run in the costal groove along the lower border of each rib, so needles for chest drains or pleural taps are passed just above the upper border of a rib.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:23130",
+        "FMA:23131"
+      ],
+      "latin_name": "Humerus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The humerus is the long bone of the upper arm, between the shoulder and the elbow.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The proximal humerus has a head articulating with the glenoid cavity of the scapula, anatomical and surgical necks, and greater and lesser tubercles separated by the intertubercular sulcus. The shaft carries the deltoid tuberosity and the radial groove; the distal end has the capitulum (for the radius), trochlea (for the ulna) and medial and lateral epicondyles.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Nerves lie against the bone at three sites: the axillary nerve at the surgical neck, the radial nerve in the radial groove of the shaft and the ulnar nerve behind the medial epicondyle, so fractures at these sites can injure them (for example, wrist drop after a shaft fracture).",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:13322",
+        "FMA:13323"
+      ],
+      "latin_name": "Clavicula",
+      "synonyms": [
+        {
+          "synonym": "collarbone",
+          "kind": "exact"
+        },
+        {
+          "synonym": "collar bone",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The clavicle, or collarbone, is the long, S-shaped bone across the top of your chest. It connects the arm to the body and holds the shoulder out to the side.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The clavicle articulates medially with the manubrium of the sternum (sternoclavicular joint) and laterally with the acromion of the scapula (acromioclavicular joint). It is the only bony connection between the upper limb and the axial skeleton and transmits forces from the limb to the trunk.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "It is one of the most commonly fractured bones, usually at the junction of its middle and lateral thirds after a fall onto the shoulder or outstretched hand.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:13395",
+        "FMA:13396"
+      ],
+      "latin_name": "Scapula",
+      "synonyms": [
+        {
+          "synonym": "shoulder blade",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The scapula, or shoulder blade, is a flat, triangular bone at the back of the shoulder. Many muscles that move the arm attach to it.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The scapula lies on the posterolateral thoracic wall over ribs 2–7. Its posterior surface is divided by the spine into supraspinous and infraspinous fossae; the spine ends laterally as the acromion. The glenoid cavity articulates with the head of the humerus, and the coracoid process projects anteriorly. Seventeen muscles attach to it.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:16586",
+        "FMA:16587"
+      ],
+      "latin_name": "Os coxae",
+      "synonyms": [
+        {
+          "synonym": "coxal bone",
+          "kind": "exact"
+        },
+        {
+          "synonym": "innominate bone",
+          "kind": "exact"
+        },
+        {
+          "synonym": "pelvic bone",
+          "kind": "related"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "Each hip bone is a large, flat, curved bone. The two hip bones and the base of the spine (sacrum) form the pelvis, which carries the weight of the upper body to the legs and protects organs such as the bladder.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "Each hip bone is formed by three bones, the ilium, ischium and pubis, which fuse at the acetabulum (the socket of the hip joint) by about the late teens. The hip bones articulate with each other at the pubic symphysis and with the sacrum at the sacro-iliac joints, forming the pelvic girdle.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "The anterior superior iliac spine and iliac crest are palpable landmarks; the highest points of the iliac crests usually lie at about the L4 vertebral level, which guides lumbar puncture.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:24477",
+        "FMA:24478"
+      ],
+      "latin_name": "Tibia",
+      "synonyms": [
+        {
+          "synonym": "shin bone",
+          "kind": "exact"
+        },
+        {
+          "synonym": "shinbone",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The tibia, or shin bone, is the larger of the two bones in the lower leg and carries most of the body's weight. You can feel its sharp front edge under the skin of your shin.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The proximal tibia has medial and lateral condyles that articulate with the femur at the knee, and the tibial tuberosity for the patellar ligament. Its anterior border and medial surface are subcutaneous along the shin. Distally, the medial malleolus and inferior surface articulate with the talus at the ankle.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Because the tibia lies just under the skin, its fractures are often open (compound), and the bone is a common site for intraosseous needle access in emergencies.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:24486",
+        "FMA:24487"
+      ],
+      "latin_name": "Patella",
+      "synonyms": [
+        {
+          "synonym": "kneecap",
+          "kind": "exact"
+        },
+        {
+          "synonym": "knee cap",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The patella, or kneecap, is a small, flat bone at the front of the knee. It protects the knee joint and helps the thigh muscles straighten the leg more efficiently.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The patella is the largest sesamoid bone, embedded in the tendon of the quadriceps femoris. Its posterior surface articulates with the patellar surface of the femur, and the patellar ligament runs from its apex to the tibial tuberosity. It increases the leverage of quadriceps in extending the knee.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:52748",
+      "latin_name": "Mandibula",
+      "synonyms": [
+        {
+          "synonym": "jawbone",
+          "kind": "exact"
+        },
+        {
+          "synonym": "jaw bone",
+          "kind": "exact"
+        },
+        {
+          "synonym": "lower jaw",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The mandible, or lower jaw, is the only skull bone that can move. It holds the lower teeth and moves when you chew and talk.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The mandible has a horseshoe-shaped body carrying the lower teeth and two vertical rami, each ending in a coronoid process (for temporalis) and a condylar process that articulates with the temporal bone at the temporomandibular joint. The mandibular foramen on the inner ramus transmits the inferior alveolar nerve and vessels.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:7096",
+      "latin_name": "Atrium dextrum",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The right atrium is the upper right chamber of the heart. It receives blood that has travelled around the body and passes it down to the right ventricle.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The right atrium receives the superior and inferior venae cavae and the coronary sinus. It has a smooth posterior part (sinus venarum) and a rough-walled anterior part with pectinate muscles, separated internally by the crista terminalis. The fossa ovalis on the interatrial septum is the remnant of the fetal foramen ovale. The sinu-atrial node lies near the opening of the superior vena cava.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:7098",
+      "latin_name": "Ventriculus dexter",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The right ventricle is the lower right chamber of the heart. It pumps blood to the lungs to collect oxygen.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The right ventricle forms most of the anterior (sternocostal) surface of the heart. Blood enters through the tricuspid valve and leaves through the pulmonary valve into the pulmonary trunk. Its wall is thinner than the left ventricle's because the pulmonary circulation has a much lower pressure. It contains trabeculae carneae, papillary muscles and the septomarginal trabecula (moderator band), which carries part of the right bundle branch.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:7097",
+      "latin_name": "Atrium sinistrum",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The left atrium is the upper left chamber of the heart. It receives oxygen-rich blood from the lungs and passes it down to the left ventricle.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The left atrium forms most of the base (posterior surface) of the heart and receives the four pulmonary veins. Blood passes from it through the mitral valve into the left ventricle. It lies directly in front of the oesophagus.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:8612",
+      "latin_name": "Truncus pulmonalis",
+      "synonyms": [
+        {
+          "synonym": "pulmonary artery trunk",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The pulmonary trunk is the large blood vessel that carries blood from the right ventricle towards the lungs. It soon splits into a branch for each lung.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The pulmonary trunk arises from the right ventricle at the pulmonary valve and passes upwards and backwards to divide, in the concavity of the aortic arch, into the right and left pulmonary arteries. It carries deoxygenated blood, which is why it is an artery despite carrying blood low in oxygen. It is joined to the aortic arch by the ligamentum arteriosum, the remnant of the fetal ductus arteriosus.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:4720",
+      "latin_name": "Vena cava superior",
+      "synonyms": [
+        {
+          "synonym": "SVC",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The superior vena cava is a large vein that brings blood back to the heart from the head, neck, arms and chest.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The superior vena cava is formed by the union of the right and left brachiocephalic veins behind the first right costal cartilage and drains into the right atrium. It receives the azygos vein just before entering the pericardium. It has no valves.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:10951",
+      "latin_name": "Vena cava inferior",
+      "synonyms": [
+        {
+          "synonym": "IVC",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The inferior vena cava is the largest vein in the body. It brings blood back to the heart from the legs, pelvis and abdomen.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The inferior vena cava is formed by the union of the common iliac veins at about L5, ascends to the right of the abdominal aorta, receives the renal, hepatic and other veins, and passes through the central tendon of the diaphragm at about T8 to enter the right atrium.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:7235",
+      "latin_name": "Valva mitralis",
+      "synonyms": [
+        {
+          "synonym": "bicuspid valve",
+          "kind": "exact"
+        },
+        {
+          "synonym": "left atrioventricular valve",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The mitral valve is a one-way door between the left atrium and the left ventricle. It opens to let blood fill the ventricle and closes to stop blood flowing backwards when the ventricle pumps.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The mitral valve has anterior and posterior cusps attached by tendinous cords (chordae tendineae) to papillary muscles, which tense during systole to prevent the cusps everting into the atrium. Its closure contributes to the first heart sound; it is best heard at the cardiac apex.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:7236",
+      "latin_name": "Valva aortae",
+      "synonyms": [
+        {
+          "synonym": "aortic semilunar valve",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The aortic valve sits between the left ventricle and the aorta. It opens when the ventricle pumps blood out to the body and closes to stop blood flowing back.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The aortic valve has three semilunar cusps (right, left and posterior). Behind the cusps are the aortic sinuses; the right and left coronary arteries arise from the right and left sinuses. Closure of the aortic valve contributes to the second heart sound.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Aortic stenosis, often due to age-related calcification or a congenitally bicuspid valve, obstructs left ventricular outflow and can cause chest pain, fainting on exertion and breathlessness.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:3941",
+        "FMA:4058"
+      ],
+      "latin_name": "Arteria carotis communis",
+      "synonyms": [
+        {
+          "synonym": "carotid artery",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The common carotid arteries run up each side of the neck and carry blood to the head and brain. You can feel the carotid pulse at the side of your neck.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The right common carotid artery arises from the brachiocephalic trunk and the left directly from the aortic arch. Each ascends in the carotid sheath with the internal jugular vein and vagus nerve and divides at about the level of the upper border of the thyroid cartilage (C3–C4) into the internal carotid artery (to the brain and eye) and the external carotid artery (to the face and neck). The carotid sinus at the bifurcation contains baroreceptors.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
       ]
     }
   ]

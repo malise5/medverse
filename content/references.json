@@ -118,5 +118,15 @@
     "pmid": null,
     "url": null,
     "license_note": null
+  },
+  {
+    "id": "openstax_ap2e",
+    "kind": "book",
+    "citation": "Betts JG, Young KA, Wise JA, et al. Anatomy and Physiology 2e. Houston (TX): OpenStax, Rice University; 2022.",
+    "year": 2022,
+    "doi": null,
+    "pmid": null,
+    "url": "https://openstax.org/details/books/anatomy-and-physiology-2e",
+    "license_note": "Openly licensed (CC BY 4.0); cited as a freely accessible reference, no text reproduced."
   }
 ]

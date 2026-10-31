@@ -5,12 +5,16 @@ import { keepPreviousData, useMutation, useQuery, useQueryClient } from "@tansta
 import { api, structurePath } from "./client";
 import type {
   AnatomicalSystem,
+  AnswerResult,
   AssetManifest,
   AudienceLevel,
   Circulation,
   ConditionDetail,
   ConditionSummary,
+  GlossaryEntry,
   ModelDefinition,
+  ModuleDetail,
+  ModuleSummary,
   RunResult,
   SearchHit,
   StructureDetail,
@@ -34,6 +38,9 @@ export const qk = {
   models: ["simulations", "models"] as const,
   conditions: ["pathology", "conditions"] as const,
   condition: (id: string) => ["pathology", "condition", id] as const,
+  modules: ["learning", "modules"] as const,
+  module: (id: string) => ["learning", "module", id] as const,
+  glossary: ["learning", "glossary"] as const,
 };
 
 export function useMe() {
@@ -166,5 +173,43 @@ export function useCondition(id: string | null) {
     queryFn: () => api<ConditionDetail>(`/pathology/conditions/${encodeURIComponent(id!)}`),
     enabled: !!id,
     staleTime: REFERENCE_STALE,
+  });
+}
+
+// --- Learning --------------------------------------------------------------------------
+
+export function useLearningModules() {
+  return useQuery({
+    queryKey: qk.modules,
+    queryFn: () => api<ModuleSummary[]>("/learning/modules"),
+  });
+}
+
+export function useLearningModule(id: string | null) {
+  return useQuery({
+    queryKey: qk.module(id ?? ""),
+    queryFn: () => api<ModuleDetail>(`/learning/modules/${encodeURIComponent(id!)}`),
+    enabled: !!id,
+  });
+}
+
+export function useGlossary() {
+  return useQuery({
+    queryKey: qk.glossary,
+    queryFn: () => api<GlossaryEntry[]>("/learning/glossary"),
+    staleTime: REFERENCE_STALE,
+  });
+}
+
+/** Submit an answer; the server grades it and records progress for the signed-in learner. */
+export function useAnswerQuestion() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: ({ questionId, response }: { questionId: string; response: string }) =>
+      api<AnswerResult>(`/learning/questions/${encodeURIComponent(questionId)}/answer`, {
+        method: "POST",
+        json: { response },
+      }),
+    onSuccess: () => void qc.invalidateQueries({ queryKey: ["learning"] }),
   });
 }

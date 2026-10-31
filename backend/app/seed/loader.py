@@ -1,9 +1,9 @@
 """Idempotent loader from the version-controlled `content/` directory into PostgreSQL.
 
 Load order matters (foreign keys): references -> systems -> structures -> graph ->
-content -> assets -> pathology -> RBAC. Every reference to an unknown structure or
-citation is collected and reported as a ContentIntegrityError; nothing is silently
-dropped.
+content -> assets -> pathology -> learning modules and quizzes -> RBAC. Every reference
+to an unknown structure or citation is collected and reported as a ContentIntegrityError;
+nothing is silently dropped.
 """
 
 import json
@@ -12,6 +12,7 @@ from collections.abc import Iterable
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from pydantic import ValidationError
 from sqlalchemy import delete, select
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.orm import Session
@@ -23,9 +24,11 @@ from app.models import (
     Condition,
     ConditionScenario,
     ConditionStructure,
+    LearningModule,
     Mesh,
     MeshContact,
     Permission,
+    QuizQuestion,
     Reference,
     Role,
     Structure,
@@ -36,11 +39,13 @@ from app.models import (
     StructureXref,
 )
 from app.models.enums import (
+    AudienceLevel,
     ContentSection,
     EvidenceClass,
     Predicate,
     VerificationStatus,
 )
+from app.schemas.learning import ModuleIn, QuestionIn
 
 log = logging.getLogger("medverse.seed")
 
@@ -187,6 +192,7 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
         ["structure_id", "source"],
     )
     report.counts["structures"] = len(structures)
+
     known = set(db.scalars(select(Structure.id)))
 
     # Graph: part_of from source + curated relations -------------------------
@@ -213,8 +219,20 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
     author = curated.get("author")
     synonym_rows: list[dict] = []
     content_rows: list[dict] = []
-    for entry in curated["structures"]:
+    # An entry may name one structure ("id") or several that share the text ("ids"),
+    # e.g. the left and right member of a paired organ.
+    expanded = [
+        {**entry, "id": sid}
+        for entry in curated["structures"]
+        for sid in (entry["ids"] if "ids" in entry else [entry["id"]])
+    ]
+    seen_ids: set[str] = set()
+    for entry in expanded:
         sid = entry["id"]
+        if sid in seen_ids:
+            problems.append(f"curated entry {sid}: duplicated")
+            continue
+        seen_ids.add(sid)
         if sid not in known:
             problems.append(f"curated entry {sid}: structure does not exist")
             continue
@@ -267,7 +285,7 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
                 {
                     "structure_id": sid,
                     "section": ContentSection(c["section"]).value,
-                    "audience": c.get("audience", "undergraduate"),
+                    "audience": AudienceLevel(c.get("audience", "undergraduate")).value,
                     "body": c["body"],
                     "evidence_class": c.get(
                         "evidence_class", EvidenceClass.B_EVIDENCE_SUPPORTED.value
@@ -375,8 +393,124 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
         db.flush()
     report.counts["conditions"] = len(conditions)
 
+    seed_learning(db, content_dir, report, known=known, ref_ids=ref_ids, system_ids=system_ids)
     seed_rbac(db)
     return report
+
+
+def _validation_problems(where: str, exc: ValidationError) -> list[str]:
+    return [f"{where}: {'.'.join(map(str, e['loc']))}: {e['msg']}" for e in exc.errors()]
+
+
+def seed_learning(
+    db: Session,
+    content_dir: Path,
+    report: SeedReport,
+    *,
+    known: set[str],
+    ref_ids: set[str],
+    system_ids: set[str],
+) -> None:
+    """Body-system modules and quiz questions (content/learning)."""
+    problems = report.problems
+    base = content_dir / "learning"
+    if not (base / "modules.json").exists():
+        return
+    raw_modules = _read(base / "modules.json")
+    modules: list[ModuleIn] = []
+    for raw in raw_modules["modules"]:
+        try:
+            m = ModuleIn.model_validate(raw)
+        except ValidationError as exc:
+            problems.extend(_validation_problems(f"module {raw.get('id')}", exc))
+            continue
+        if m.id not in system_ids:
+            problems.append(f"module {m.id}: no anatomical system with this id")
+            continue
+        for r in m.references:
+            if r not in ref_ids:
+                problems.append(f"module {m.id}: unknown reference {r}")
+        for organ in m.body.organs:
+            if organ.structure_id and organ.structure_id not in known:
+                problems.append(f"module {m.id}: organ {organ.name}: unknown structure")
+        for link in m.body.works_with:
+            if link.system not in system_ids or link.system == m.id:
+                problems.append(f"module {m.id}: works_with {link.system}: invalid system")
+        modules.append(m)
+    module_ids = {m.id for m in modules}
+    if len(module_ids) != len(modules):
+        problems.append("learning modules: duplicate ids")
+
+    raw_questions = (
+        _read(base / "quizzes.json")["questions"] if (base / "quizzes.json").exists() else []
+    )
+    questions: list[QuestionIn] = []
+    for raw in raw_questions:
+        try:
+            q = QuestionIn.model_validate(raw)
+        except ValidationError as exc:
+            problems.extend(_validation_problems(f"question {raw.get('id')}", exc))
+            continue
+        if q.module not in module_ids:
+            problems.append(f"question {q.id}: unknown module {q.module}")
+            continue
+        for r in q.references:
+            if r not in ref_ids:
+                problems.append(f"question {q.id}: unknown reference {r}")
+        if q.kind == "identify":
+            for sid in q.answer:  # type: ignore[union-attr]
+                if sid not in known:
+                    problems.append(f"question {q.id}: unknown structure {sid}")
+        questions.append(q)
+    if len({q.id for q in questions}) != len(questions):
+        problems.append("quiz questions: duplicate ids")
+
+    author = raw_modules.get("author")
+    _upsert(
+        db,
+        LearningModule,
+        [
+            {
+                "id": m.id,
+                "title": m.title,
+                "tagline": m.tagline,
+                "display_order": m.display_order,
+                "body": m.body.model_dump(),
+                "reference_ids": m.references,
+                "evidence_class": EvidenceClass.B_EVIDENCE_SUPPORTED.value,
+                "verification_status": VerificationStatus.DRAFT.value,
+                "author": author,
+                "version": 1,
+            }
+            for m in modules
+        ],
+        ["id"],
+    )
+    order = {mid: 0 for mid in module_ids}
+    rows = []
+    for q in questions:
+        order[q.module] += 1
+        rows.append(
+            {
+                "id": q.id,
+                "module_id": q.module,
+                "kind": q.kind,
+                "level": q.level,
+                "stem": q.stem,
+                "options": q.options,
+                "answer": q.answer,
+                "explanation": q.explanation,
+                "reference_ids": q.references,
+                "display_order": order[q.module],
+                "verification_status": VerificationStatus.DRAFT.value,
+            }
+        )
+    _upsert(db, QuizQuestion, rows, ["id"])
+    # Questions removed from content are removed here (their attempts cascade).
+    db.execute(delete(QuizQuestion).where(QuizQuestion.id.not_in([q.id for q in questions])))
+    db.execute(delete(LearningModule).where(LearningModule.id.not_in(module_ids)))
+    report.counts["learning_modules"] = len(modules)
+    report.counts["quiz_questions"] = len(questions)
 
 
 def run_seed(db: Session, content_dir: Path, *, strict: bool = True) -> SeedReport:

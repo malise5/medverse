@@ -34,6 +34,10 @@ Base path `/api/v1`. OpenAPI: `/api/v1/openapi.json`; Swagger UI: `/api/v1/docs`
 | POST | `/simulations/models/{id}/run` | simulation:run | run, persist record |
 | WS | `/simulations/ws` | simulation:run | interactive runs |
 | GET | `/pathology/conditions[/{id}]` | pathology:read | conditions, scenarios |
+| GET | `/learning/modules` | anatomy:read | body-system modules with the caller's quiz progress |
+| GET | `/learning/modules/{id}` | anatomy:read | module (three-level overview, organs resolved to 3D, terms, facts) and its questions **without answers** |
+| POST | `/learning/questions/{id}/answer` | anatomy:read | `{response}` = option index or selected structure ID; graded server-side (a part of the target counts for identify questions) and recorded per user |
+| GET | `/learning/glossary` | anatomy:read | key terms of all modules, sorted |
 
 ## Planned contracts
 

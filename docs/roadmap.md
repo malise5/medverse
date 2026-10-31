@@ -23,6 +23,7 @@ Legend: ✅ done and tested · 🟡 partial · ⬜ not started
 | Physiology: 3-element Windkessel with model card | ✅ | 14 scientific tests |
 | Pathology: 2 educational scenarios with healthy-vs-scenario comparison | ✅ | |
 | Function playback: search → focus + spotlight → model-driven 3D animation (heart, lungs, brain/spinal cord, aorta) | ✅ | 3 new class C models with scientific tests; verified in headless Chrome |
+| Body-systems learning hub: 12 modules at three levels (beginner / intermediate / advanced), TA2 terminology, SI units, 80 quiz questions incl. "find it in 3D", per-user progress, glossary, layer builder | ✅ | content is draft pending expert review; verified in headless Chrome at desktop and phone widths |
 | Responsive layout (sheets on < 1024 px) | 🟡 | implemented; not tested on real devices |
 | Frontend tests (Vitest) | 🟡 | unit/component; no Playwright E2E in repo yet |
 
@@ -62,8 +63,8 @@ quiz generation with review · ⬜ fictional virtual patients with decision feed
 
 ## Phase 8: Learning management
 
-⬜ Courses, pathways, spaced repetition, assessments (incl. 3D identification), analytics,
-curriculum mapping, notes, bookmarks.
+✅ Body-system modules with quizzes, 3D identification questions and per-user progress (Phase 1 hub) ·
+⬜ courses, pathways, spaced repetition, timed assessments, analytics, curriculum mapping, notes, bookmarks.
 
 ## Phase 9: Enterprise and international
 

@@ -264,3 +264,89 @@ export interface Circulation {
   unrouted_vessels: number;
   method: string;
 }
+
+// --- Learning (body-system modules and quizzes) --------------------------------------
+
+export type LearningLevel = "basic" | "undergraduate" | "clinical";
+
+export interface Progress {
+  questions: number;
+  answered: number;
+  correct: number;
+}
+
+export interface ModuleSummary {
+  id: string;
+  title: string;
+  tagline: string;
+  latin_name: string | null;
+  display_order: number;
+  structure_count: number;
+  mesh_count: number;
+  progress: Progress;
+}
+
+export interface LevelText {
+  basic: string;
+  undergraduate: string;
+  clinical: string;
+}
+
+export interface ModuleOrgan {
+  name: string;
+  latin: string | null;
+  structure_id: string | null;
+  role: string;
+  in_3d: boolean;
+  structure_name: string | null;
+}
+
+export interface KeyTerm {
+  term: string;
+  latin: string | null;
+  origin: string | null;
+  definition: string;
+}
+
+export interface QuizQuestion {
+  id: string;
+  kind: "mcq" | "identify";
+  level: LearningLevel;
+  stem: string;
+  options: string[] | null;
+  /** Result of the learner's most recent attempt, or null if not attempted. */
+  last_correct: boolean | null;
+}
+
+export interface ModuleDetail {
+  id: string;
+  title: string;
+  tagline: string;
+  latin_name: string | null;
+  objectives: string[];
+  overview: LevelText;
+  functions: { title: string; body: string }[];
+  organs: ModuleOrgan[];
+  works_with: { system: string; body: string }[];
+  key_terms: KeyTerm[];
+  facts: { label: string; value: string; note: string | null }[];
+  clinical_notes: string[];
+  asset_note: string | null;
+  questions: QuizQuestion[];
+  references: Reference[];
+  verification_status: VerificationStatus;
+  progress: Progress;
+}
+
+export interface AnswerResult {
+  correct: boolean;
+  correct_option: number | null;
+  accepted: { id: string; name: string }[];
+  explanation: string;
+  references: Reference[];
+}
+
+export interface GlossaryEntry extends KeyTerm {
+  module_id: string;
+  module_title: string;
+}

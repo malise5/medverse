@@ -3,7 +3,7 @@
 import { LogOut, Menu } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState, type ReactNode } from "react";
+import { Suspense, useState, type ReactNode } from "react";
 
 import { Logo } from "@/components/brand/logo";
 import { Badge } from "@/components/ui/badge";
@@ -14,8 +14,23 @@ import { cn } from "@/lib/utils";
 
 import { MODULES } from "./modules";
 
+function ActiveNavList({ onNavigate }: { onNavigate?: () => void }) {
+  return <NavItems pathname={usePathname()} onNavigate={onNavigate} />;
+}
+
+/**
+ * The pathname is runtime data on dynamic routes (e.g. /learn/[moduleId]); the
+ * prerendered shell shows the same links without the active highlight.
+ */
 function NavList({ onNavigate }: { onNavigate?: () => void }) {
-  const pathname = usePathname();
+  return (
+    <Suspense fallback={<NavItems pathname="" onNavigate={onNavigate} />}>
+      <ActiveNavList onNavigate={onNavigate} />
+    </Suspense>
+  );
+}
+
+function NavItems({ pathname, onNavigate }: { pathname: string; onNavigate?: () => void }) {
   return (
     <nav aria-label="Modules" className="grid gap-0.5">
       {MODULES.map((m) => {

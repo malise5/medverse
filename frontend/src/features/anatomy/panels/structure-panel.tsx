@@ -39,9 +39,9 @@ const SECTION_LABELS: Record<string, string> = {
 };
 
 const AUDIENCES: [AudienceLevel, string][] = [
-  ["basic", "Basic"],
-  ["undergraduate", "Undergraduate"],
-  ["clinical", "Clinical"],
+  ["basic", "Beginner"],
+  ["undergraduate", "Intermediate (undergraduate)"],
+  ["clinical", "Advanced (clinical)"],
   ["postgraduate", "Postgraduate"],
   ["specialist", "Specialist"],
 ];

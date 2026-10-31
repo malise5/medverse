@@ -40,9 +40,32 @@ The UI shows the status on every content section, relationship set and condition
 | Structures (BodyParts3D/FMA) | 1,368 | source_imported |
 | PART-OF relationships | 1,367 | source_imported |
 | Curated relationships | 18 | draft |
-| Curated content sections | 17 (heart, LV, aorta, femoral arteries, femur, lungs, liver) | draft |
+| Curated structures with content | 85 (67 entries; paired organs share one text) across all 12 systems | draft |
+| Curated content sections | basic (beginner) overview for every curated structure, plus undergraduate sections (gross anatomy, blood supply, innervation, physiology, clinical anatomy) | draft |
+| Body-system learning modules | 12 (`content/learning/modules.json`) | draft, class B |
+| Quiz questions | 80 (59 multiple choice, 21 "find it in 3D") | draft |
 | Pathology conditions | 2 (arterial stiffening; raised peripheral resistance) | draft, class B text + class C scenarios |
-| References | 12 | citation metadata needs librarian check |
+| References | 13 | citation metadata needs librarian check |
+
+## Learning modules and quizzes
+
+- Text is original, written from the cited textbooks; no text, images or assets are copied from
+  other educational platforms. External platforms (for example LabXchange's "Interactive Human
+  Body") informed only the *structure* of the hub: one module per organ system, systems shown
+  one at a time or combined.
+- **Terminology:** English Terminologia Anatomica 2 term first, Latin in `latin`; common and
+  regional variants are named in the text and loaded as search synonyms (e.g. oesophagus /
+  esophagus, suprarenal / adrenal gland, faeces / feces).
+- **Units:** SI throughout; where clinical practice differs between countries the conventional
+  unit is given alongside (mmHg with kPa, glucose mmol/L with mg/dL, creatinine µmol/L with
+  mg/dL). A test rejects imperial units and mmHg without kPa.
+- **Levels:** every module overview exists at basic, undergraduate and clinical level; each is
+  self-contained. Quiz items are tagged with a level and learners see items up to their level.
+- **Validation:** the seed loader validates modules and questions with Pydantic models
+  (`app/schemas/learning.py`) and reports unknown structures, systems or references as
+  integrity problems. Identify answers must be structures with 3D geometry.
+- **Honesty about assets:** organs missing from the 3D source (thyroid, spleen, gonads,
+  lymph nodes, ...) are listed with `structure_id: null` and shown as "Not in the 3D model yet".
 
 ## Required before any public release
 

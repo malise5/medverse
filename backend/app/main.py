@@ -4,7 +4,7 @@ from fastapi import APIRouter, FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy import text
 
-from app.api.v1 import anatomy, auth, pathology, references, simulations
+from app.api.v1 import anatomy, auth, learning, pathology, references, simulations
 from app.core.config import get_settings
 from app.core.errors import install_error_handlers
 from app.db.session import SessionLocal
@@ -61,7 +61,7 @@ def create_app() -> FastAPI:
             db_ok = False
         return {"status": "ok" if db_ok else "degraded", "database": db_ok}
 
-    for module in (auth, anatomy, references, simulations, pathology):
+    for module in (auth, anatomy, references, simulations, pathology, learning):
         v1.include_router(module.router)
     app.include_router(v1)
     return app
