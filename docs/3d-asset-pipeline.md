@@ -56,6 +56,22 @@ flowchart LR
 6. **Manifest.** SHA-256 and size per bundle; a test fails if a GLB is missing or its
    checksum differs from `bundles.json`.
 
+## Mesh contact graph (`pipeline/bodyparts3d/adjacency.py`)
+
+Run after `build.py` with the same `--source`. For every pair of meshes whose bounding
+boxes (expanded by 10 mm) overlap, it records the minimum vertex-to-vertex distance if
+≤ 10 mm → `content/generated/bodyparts3d/mesh_adjacency.json`, and writes each
+cardiovascular mesh's `render_group` (artery / vein / heart, from the FMA lineage) into
+`meshes.json`. Seeded into `mesh_contacts` and `meshes.render_group`.
+
+The graph is **geometric inference, not curated anatomy**. The API uses it to trace
+likely vessel routes (`GET /anatomy/structures/{id}/circulation`): breadth-first search
+from the vessels touching the heart, over artery-only or vein-only meshes linked within
+2 mm, to the vessels within 4 mm of the structure. Known failure modes: a vessel merely
+passing close by appears as a supply; gaps in decimated meshes break routes (reported as
+`unrouted_vessels`); crossing vessels of the same class can create shortcuts. The UI
+labels routes "Inferred from 3D geometry" and shows this explanation.
+
 ## Runtime loading
 
 - `GET /api/v1/assets/manifest` → bundles + `meshId → [bundleId, structureId]`.

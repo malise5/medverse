@@ -1,6 +1,6 @@
 "use client";
 
-import { Activity, Crosshair, EyeOff, Focus, HeartPulse, MousePointerClick } from "lucide-react";
+import { Activity, Crosshair, EyeOff, Focus, HeartPulse, Lightbulb, MousePointerClick } from "lucide-react";
 import Link from "next/link";
 
 import { Badge } from "@/components/ui/badge";
@@ -12,6 +12,8 @@ import { useStructure } from "@/lib/api/queries";
 import type { AudienceLevel, Relation, StructureDetail, StructureSummary } from "@/lib/api/types";
 
 import { SYSTEM_COLORS } from "../engine/palette";
+import { FunctionPanel } from "../function/function-panel";
+import { BodyMapPanel } from "./body-map-panel";
 import { useWorkspace } from "../store";
 
 const SECTION_LABELS: Record<string, string> = {
@@ -139,6 +141,7 @@ export function StructurePanel({
   const audience = useWorkspace((s) => s.audience);
   const setAudience = useWorkspace((s) => s.setAudience);
   const multi = useWorkspace((s) => s.multiSelection);
+  const spotlight = useWorkspace((s) => s.spotlight);
   const q = useStructure(structureId, audience);
 
   if (!structureId) {
@@ -202,6 +205,16 @@ export function StructurePanel({
           <Button size="sm" variant="secondary" disabled={!meshIds.length} onClick={() => ws.isolateMeshes(meshIds)}>
             <Focus /> Isolate
           </Button>
+          <Button
+            size="sm"
+            variant={spotlight ? "default" : "secondary"}
+            aria-pressed={spotlight}
+            disabled={!meshIds.length}
+            onClick={() => ws.setSpotlight(!spotlight)}
+            title="Fade everything except this structure"
+          >
+            <Lightbulb /> Spotlight
+          </Button>
           <Button size="sm" variant="secondary" disabled={!meshIds.length} onClick={() => ws.hideMeshes(meshIds)}>
             <EyeOff /> Hide
           </Button>
@@ -231,13 +244,23 @@ export function StructurePanel({
         </select>
       </label>
 
-      <Tabs defaultValue="overview">
-        <TabsList className="w-full">
+      <Tabs key={d.id} defaultValue={d.simulations.length ? "function" : "bodymap"}>
+        <TabsList className="h-auto w-full flex-wrap">
+          <TabsTrigger value="function">Function</TabsTrigger>
+          <TabsTrigger value="bodymap">Body map</TabsTrigger>
           <TabsTrigger value="overview">Anatomy</TabsTrigger>
           <TabsTrigger value="relations">Relations</TabsTrigger>
           <TabsTrigger value="clinical">Clinical</TabsTrigger>
           <TabsTrigger value="sources">Sources</TabsTrigger>
         </TabsList>
+
+        <TabsContent value="function" className="pt-3">
+          <FunctionPanel d={d} onSelect={onSelect} />
+        </TabsContent>
+
+        <TabsContent value="bodymap" className="pt-3">
+          <BodyMapPanel structureId={d.id} onSelect={onSelect} />
+        </TabsContent>
 
         <TabsContent value="overview" className="pt-3">
           <Overview d={d} />

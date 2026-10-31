@@ -1,4 +1,15 @@
-from sqlalchemy import Float, String, and_, case, cast, func, or_, select, union_all
+from sqlalchemy import (
+    Float,
+    String,
+    and_,
+    case,
+    cast,
+    func,
+    literal,
+    or_,
+    select,
+    union_all,
+)
 from sqlalchemy.orm import Session
 
 from app.core.errors import not_found
@@ -225,6 +236,23 @@ def _pick_content(rows: list[StructureContent], audience: AudienceLevel) -> list
     return sorted(by_section.values(), key=lambda r: order[r.section])
 
 
+def ancestor_ids(db: Session, structure_id: str, max_depth: int = 30) -> list[str]:
+    """All structures this one is (transitively) part of."""
+    rel = StructureRelationship
+    base = (
+        select(rel.object_id.label("id"), literal(1).label("depth"))
+        .where(rel.subject_id == structure_id, rel.predicate == Predicate.PART_OF)
+        .cte("ancestors", recursive=True)
+    )
+    step = (
+        select(rel.object_id, base.c.depth + 1)
+        .join(base, rel.subject_id == base.c.id)
+        .where(rel.predicate == Predicate.PART_OF, base.c.depth < max_depth)
+    )
+    tree = base.union(step)
+    return list(db.scalars(select(tree.c.id).distinct()))
+
+
 def structure_detail(
     db: Session, structure_id: str, audience: AudienceLevel = AudienceLevel.UNDERGRADUATE
 ) -> StructureDetail:
@@ -317,7 +345,7 @@ def structure_detail(
         ],
         simulations=[
             SimulationLink(model_id=m.definition.id, name=m.definition.name)
-            for m in models_for_structure(s.id)
+            for m in models_for_structure(s.id, ancestor_ids(db, s.id))
         ],
         references=references,
     )

@@ -142,6 +142,18 @@ export interface OutputSpec {
   description: string;
 }
 
+/** How one output series drives the 3D view (presentation only; see backend core.py). */
+export interface AnimationBinding {
+  output: string;
+  structure_ids: string[];
+  effect: "scale" | "tint" | "glow";
+  amplitude: number;
+  description: string;
+  color: string | null;
+  /** "range": min→0, max→1; "magnitude": |v| / max|v| (signed quantities). */
+  normalise: "range" | "magnitude";
+}
+
 export interface ModelDefinition {
   id: string;
   version: string;
@@ -162,6 +174,10 @@ export interface ModelDefinition {
   metrics: OutputSpec[];
   linked_structure_ids: string[];
   visual_mappings: Record<string, string[]>;
+  animations: AnimationBinding[];
+  time_unit: "s" | "ms";
+  /** Model time units per real second during 3D playback. */
+  playback_rate: number;
   disclaimer: string;
 }
 
@@ -207,4 +223,23 @@ export interface ConditionDetail extends ConditionSummary {
   affected_structures: { structure_id: string; name: string; role: string }[];
   scenarios: Scenario[];
   references: Reference[];
+}
+
+export interface StructureRef {
+  id: string;
+  name: string;
+}
+
+/** Inferred vessel routes (geometric contact of meshes, not curated anatomy). */
+export interface Circulation {
+  structure_id: string;
+  mode: "whole_circulation" | "organ_route" | "none";
+  organ_mesh_ids: string[];
+  /** mesh ID -> hops from the heart along the route */
+  arteries: Record<string, number>;
+  veins: Record<string, number>;
+  contact_arteries: StructureRef[];
+  contact_veins: StructureRef[];
+  unrouted_vessels: number;
+  method: string;
 }

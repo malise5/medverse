@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-import type { AudienceLevel } from "@/lib/api/types";
+import type { AnimationBinding, AudienceLevel } from "@/lib/api/types";
 
 export type ViewPreset =
   | "anterior"
@@ -25,6 +25,39 @@ export interface Hover {
   structureId: string;
   x: number;
   y: number;
+}
+
+/** A model run being played back on the 3D anatomy ("function" mode). */
+export interface Playback {
+  modelId: string;
+  modelName: string;
+  time: number[];
+  series: Record<string, number[]>;
+  bindings: AnimationBinding[];
+  /** Model time units per real second at speed 1. */
+  rate: number;
+  timeUnit: "s" | "ms";
+  parameters: Record<string, number>;
+  metrics: Record<string, number>;
+  warnings: string[];
+}
+
+/** A direct part of the shown structure, coloured and labelled in 3D. */
+export interface PartView {
+  id: string;
+  name: string;
+  color: string;
+  meshIds: string[];
+}
+
+/** Inferred vessel routes; values are hops from the heart along the route. */
+export interface CirculationView {
+  structureId: string;
+  mode: "whole_circulation" | "organ_route";
+  arteries: Map<string, number>;
+  veins: Map<string, number>;
+  maxArteryHop: number;
+  maxVeinHop: number;
 }
 
 /**
@@ -52,6 +85,21 @@ export interface WorkspaceState {
   xraySelection: boolean;
   clip: ClipState;
   audience: AudienceLevel;
+  /** Fade everything except the selection (and structures driven by playback). */
+  spotlight: boolean;
+  playback: Playback | null;
+  playing: boolean;
+  speed: number;
+  /** Start function playback automatically when a structure is chosen from search. */
+  autoPlay: boolean;
+  /** Body map: colour/label the shown structure's parts and show its vessel routes. */
+  showParts: boolean;
+  showCirculation: boolean;
+  flowAnimation: boolean;
+  parts: PartView[];
+  circulation: CirculationView | null;
+  /** A whole body system shown in spotlight (chosen from search). */
+  systemFocus: string | null;
 
   /** Monotonic command channels consumed by the 3D engine. */
   viewCommand: { preset: ViewPreset; nonce: number } | null;
@@ -70,6 +118,18 @@ export interface WorkspaceState {
   setXraySelection: (on: boolean) => void;
   setClip: (clip: Partial<ClipState>) => void;
   setAudience: (audience: AudienceLevel) => void;
+  setSpotlight: (on: boolean) => void;
+  startPlayback: (playback: Playback) => void;
+  stopPlayback: () => void;
+  setPlaying: (playing: boolean) => void;
+  setSpeed: (speed: number) => void;
+  setAutoPlay: (on: boolean) => void;
+  setShowParts: (on: boolean) => void;
+  setShowCirculation: (on: boolean) => void;
+  setFlowAnimation: (on: boolean) => void;
+  setParts: (parts: PartView[]) => void;
+  setCirculation: (circulation: CirculationView | null) => void;
+  setSystemFocus: (systemId: string | null) => void;
   requestView: (preset: ViewPreset) => void;
   requestFocus: (meshIds: string[]) => void;
   reset: () => void;
@@ -91,6 +151,17 @@ const initial = () => ({
   xraySelection: true,
   clip: { axis: "none" as ClipAxis, position: 0.5, flip: false },
   audience: "undergraduate" as AudienceLevel,
+  spotlight: false,
+  playback: null as Playback | null,
+  playing: false,
+  speed: 1,
+  autoPlay: true,
+  showParts: true,
+  showCirculation: true,
+  flowAnimation: true,
+  parts: [] as PartView[],
+  circulation: null as CirculationView | null,
+  systemFocus: null as string | null,
   viewCommand: null,
   focusCommand: null,
 });
@@ -102,7 +173,7 @@ export const useWorkspace = create<WorkspaceState>()((set) => ({
 
   select: (id, opts) =>
     set((s) => {
-      if (!opts?.additive || !id) return { selectedId: id, multiSelection: [] };
+      if (!opts?.additive || !id) return { selectedId: id, multiSelection: [], systemFocus: id ? null : s.systemFocus };
       if (s.selectedId === null) return { selectedId: id };
       const others = new Set(s.multiSelection);
       if (id === s.selectedId) return {};
@@ -125,9 +196,21 @@ export const useWorkspace = create<WorkspaceState>()((set) => ({
   setXraySelection: (xraySelection) => set({ xraySelection }),
   setClip: (clip) => set((s) => ({ clip: { ...s.clip, ...clip } })),
   setAudience: (audience) => set({ audience }),
+  setSpotlight: (spotlight) => set({ spotlight }),
+  startPlayback: (playback) => set({ playback, playing: true }),
+  stopPlayback: () => set({ playback: null, playing: false }),
+  setPlaying: (playing) => set({ playing }),
+  setSpeed: (speed) => set({ speed }),
+  setAutoPlay: (autoPlay) => set({ autoPlay }),
+  setShowParts: (showParts) => set({ showParts }),
+  setShowCirculation: (showCirculation) => set({ showCirculation }),
+  setFlowAnimation: (flowAnimation) => set({ flowAnimation }),
+  setParts: (parts) => set({ parts }),
+  setCirculation: (circulation) => set({ circulation }),
+  setSystemFocus: (systemFocus) => set({ systemFocus }),
   requestView: (preset) => set({ viewCommand: { preset, nonce: ++nonce } }),
   requestFocus: (meshIds) => set({ focusCommand: { meshIds, nonce: ++nonce } }),
-  reset: () => set({ ...initial(), viewCommand: { preset: "anterior", nonce: ++nonce } }),
+  reset: () => set((s) => ({ ...initial(), autoPlay: s.autoPlay, viewCommand: { preset: "anterior", nonce: ++nonce } })),
 }));
 
 /** Pure visibility rule shared by the renderer and tests. */
@@ -159,4 +242,28 @@ export function meshVisibility(
 export function ghostDepth(depths: number[], dissectionDepth: number): number | null {
   const removed = depths.filter((d) => d < dissectionDepth);
   return removed.length ? Math.max(...removed) : null;
+}
+
+/**
+ * Spotlight rule: with a selection and spotlight on, visible meshes outside the focus set
+ * are drawn as faint context ghosts. Returns the visibility unchanged otherwise.
+ */
+export function spotlightVisibility(
+  vis: MeshVisibility,
+  meshId: string,
+  focus: Set<string> | null,
+): MeshVisibility {
+  if (!focus || vis !== "visible") return vis;
+  return focus.has(meshId) ? "visible" : "ghost";
+}
+
+/**
+ * Flow-wave level (0..1) for a vessel `hop` contacts from the heart. The wave leaves the
+ * heart along arteries and returns to it along veins; `phase` advances in hops.
+ */
+export function flowLevel(hop: number, maxHop: number, phase: number, towardHeart: boolean, width = 4): number {
+  const period = maxHop + width * 2;
+  const x = towardHeart ? maxHop - hop : hop;
+  const d = (((phase - x) % period) + period) % period;
+  return d < width ? 1 - d / width : 0;
 }

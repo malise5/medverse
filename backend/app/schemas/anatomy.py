@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import Literal
 
 from pydantic import BaseModel, ConfigDict
 
@@ -153,3 +154,22 @@ class AssetManifest(BaseModel):
     bundles: list[BundleOut]
     # mesh id -> [bundle id, structure id]; compact because it covers every mesh.
     meshes: dict[str, tuple[str, str]]
+
+
+class StructureRef(BaseModel):
+    id: str
+    name: str
+
+
+class CirculationOut(BaseModel):
+    """Inferred vessel routes for a structure; mesh -> hops from the heart along the route."""
+
+    structure_id: str
+    mode: Literal["whole_circulation", "organ_route", "none"]
+    organ_mesh_ids: list[str] = []
+    arteries: dict[str, int] = {}
+    veins: dict[str, int] = {}
+    contact_arteries: list[StructureRef] = []
+    contact_veins: list[StructureRef] = []
+    unrouted_vessels: int = 0
+    method: str

@@ -78,5 +78,45 @@
     "pmid": null,
     "url": null,
     "license_note": null
+  },
+  {
+    "id": "suga1973elastance",
+    "kind": "journal_article",
+    "citation": "Suga H, Sagawa K, Shoukas AA. Load independence of the instantaneous pressure-volume ratio of the canine left ventricle and effects of epinephrine and heart rate on the ratio. Circ Res. 1973;32(3):314-322.",
+    "year": 1973,
+    "doi": "10.1161/01.RES.32.3.314",
+    "pmid": null,
+    "url": null,
+    "license_note": null
+  },
+  {
+    "id": "stergiopulos1996determinants",
+    "kind": "journal_article",
+    "citation": "Stergiopulos N, Meister JJ, Westerhof N. Determinants of stroke volume and systolic and diastolic aortic pressure. Am J Physiol. 1996;270(6 Pt 2):H2050-H2059.",
+    "year": 1996,
+    "doi": "10.1152/ajpheart.1996.270.6.H2050",
+    "pmid": null,
+    "url": null,
+    "license_note": null
+  },
+  {
+    "id": "bates2009lungmechanics",
+    "kind": "book",
+    "citation": "Bates JHT. Lung Mechanics: An Inverse Modeling Approach. Cambridge University Press; 2009.",
+    "year": 2009,
+    "doi": null,
+    "pmid": null,
+    "url": null,
+    "license_note": null
+  },
+  {
+    "id": "hodgkin1952quantitative",
+    "kind": "journal_article",
+    "citation": "Hodgkin AL, Huxley AF. A quantitative description of membrane current and its application to conduction and excitation in nerve. J Physiol. 1952;117(4):500-544.",
+    "year": 1952,
+    "doi": "10.1113/jphysiol.1952.sp004764",
+    "pmid": null,
+    "url": null,
+    "license_note": null
   }
 ]

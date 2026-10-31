@@ -24,6 +24,7 @@ from app.models import (
     ConditionScenario,
     ConditionStructure,
     Mesh,
+    MeshContact,
     Permission,
     Reference,
     Role,
@@ -306,6 +307,18 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
         if mid in mesh_ids
     ]
     _upsert(db, StructureMesh, sm_rows, ["structure_id", "mesh_id"])
+
+    # Geometric contact graph (optional pipeline output; see pipeline/bodyparts3d/adjacency.py)
+    contacts_path = gen / "mesh_adjacency.json"
+    contact_rows = []
+    if contacts_path.exists():
+        for a, b, d in _read(contacts_path)["pairs"]:
+            if a in mesh_ids and b in mesh_ids and a != b:
+                lo, hi = sorted((a, b))
+                contact_rows.append({"mesh_a": lo, "mesh_b": hi, "distance_mm": float(d)})
+    db.execute(delete(MeshContact))
+    _upsert(db, MeshContact, contact_rows, ["mesh_a", "mesh_b"])
+    report.counts["mesh_contacts"] = len(contact_rows)
     report.counts["bundles"] = len(bundles)
     report.counts["meshes"] = len(mesh_rows)
 

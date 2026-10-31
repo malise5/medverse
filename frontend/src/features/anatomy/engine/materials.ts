@@ -88,6 +88,43 @@ export class MaterialCache {
     return m;
   }
 
+  /** Spotlight context: like a ghost but a little stronger, so surroundings stay legible. */
+  context(): MeshStandardMaterial {
+    let m = this.cache.get("context");
+    if (!m) {
+      m = this.ghost().clone();
+      m.opacity = 0.12;
+      m.clippingPlanes = this.clippingPlanes;
+      this.cache.set("context", m);
+    }
+    return m;
+  }
+
+  /**
+   * Material owned by a playback binding; its colour/emissive change every frame, so it is
+   * keyed by the caller and never shared with static meshes.
+   */
+  animated(key: string, color: string, opacity: number): MeshStandardMaterial {
+    const k = `anim|${key}|${color}|${opacity}`;
+    let m = this.cache.get(k);
+    if (!m) {
+      m = this.get(color, "normal", opacity).clone();
+      m.clippingPlanes = this.clippingPlanes;
+      m.userData.baseColor = new Color(color);
+      this.cache.set(k, m);
+    }
+    return m;
+  }
+
+  disposeAnimated() {
+    for (const [k, m] of this.cache) {
+      if (k.startsWith("anim|")) {
+        m.dispose();
+        this.cache.delete(k);
+      }
+    }
+  }
+
   dispose() {
     for (const m of this.cache.values()) m.dispose();
     this.cache.clear();

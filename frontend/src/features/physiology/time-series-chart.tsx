@@ -1,13 +1,19 @@
 "use client";
 
-import { useId, useMemo, useRef, useState } from "react";
+import { useEffect, useId, useMemo, useRef, useState } from "react";
 
 /**
  * Single-axis line chart (one measure per chart; compare measures with stacked small
  * multiples, never a dual axis). Series colours were validated for the dark surface
- * with the dataviz palette validator: #3987e5 / #d95926 (CVD ΔE 26.8).
+ * with the dataviz palette validator (fixed categorical order, never cycled):
+ * #3987e5 / #d95926 / #199e70 on #141a20 (worst adjacent CVD ΔE 9.4).
  */
-export const SERIES_COLORS = ["#3987e5", "#d95926"] as const;
+export const SERIES_COLORS = ["#3987e5", "#d95926", "#199e70"] as const;
+
+/** Source of the current playback time (model units), read every animation frame. */
+export interface PlaybackClock {
+  now: () => number | null;
+}
 
 export interface ChartSeries {
   id: string;
@@ -17,8 +23,14 @@ export interface ChartSeries {
 }
 
 const W = 640;
-const H = 200;
+const FULL_H = 200;
 const M = { top: 12, right: 16, bottom: 28, left: 48 };
+
+/** Enough precision for small-valued series (gating variables, L/s) without noise. */
+function fmt(v: number): string {
+  const a = Math.abs(v);
+  return v.toFixed(a !== 0 && a < 1 ? 3 : a < 10 ? 2 : 1);
+}
 
 function niceTicks(min: number, max: number, count = 5): number[] {
   const span = max - min || 1;
@@ -36,15 +48,24 @@ export function TimeSeriesChart({
   time,
   series,
   yMin,
+  timeUnit = "s",
+  clock,
+  compact = false,
 }: {
   title: string;
   unit: string;
   time: number[];
   series: ChartSeries[];
   yMin?: number;
+  timeUnit?: "s" | "ms";
+  /** When given, a playhead follows the clock (3D function playback). */
+  clock?: PlaybackClock;
+  compact?: boolean;
 }) {
   const id = useId();
   const svgRef = useRef<SVGSVGElement>(null);
+  const playheadRef = useRef<SVGLineElement>(null);
+  const H = compact ? 120 : FULL_H;
   const [hoverIdx, setHoverIdx] = useState<number | null>(null);
   const [showTable, setShowTable] = useState(false);
 
@@ -67,7 +88,29 @@ export function TimeSeriesChart({
         s.values.map((v, i) => `${i ? "L" : "M"}${sx(time[i]).toFixed(1)},${sy(v).toFixed(1)}`).join(""),
       ),
     };
-  }, [series, time, yMin]);
+  }, [series, time, yMin, H]);
+
+  // Move the playhead outside React rendering: it updates every animation frame.
+  useEffect(() => {
+    if (!clock) return;
+    let raf = 0;
+    const t1 = time[time.length - 1] || 1;
+    const tick = () => {
+      const t = clock.now();
+      const el = playheadRef.current;
+      if (el) {
+        el.style.display = t === null ? "none" : "";
+        if (t !== null) {
+          const px = String(x(Math.min(t, t1)));
+          el.setAttribute("x1", px);
+          el.setAttribute("x2", px);
+        }
+      }
+      raf = requestAnimationFrame(tick);
+    };
+    raf = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(raf);
+  }, [clock, time, x]);
 
   function onMove(e: React.PointerEvent<SVGSVGElement>) {
     const rect = svgRef.current!.getBoundingClientRect();
@@ -125,8 +168,12 @@ export function TimeSeriesChart({
             </text>
           ))}
           <text x={W - M.right} y={H - 2} textAnchor="end" className="fill-muted-foreground text-[10px]">
-            time (s)
+            time ({timeUnit})
           </text>
+          {clock && (
+            <line ref={playheadRef} y1={M.top} y2={H - M.bottom} stroke="currentColor" strokeWidth="1.5"
+              className="text-foreground/70" style={{ display: "none" }} />
+          )}
           {paths.map((d, i) => (
             <path key={series[i].id} d={d} fill="none" stroke={SERIES_COLORS[i]} strokeWidth="2"
               strokeLinejoin="round" strokeDasharray={series[i].dashed ? "6 4" : undefined} />
@@ -146,12 +193,12 @@ export function TimeSeriesChart({
             className="pointer-events-none absolute top-1 rounded-md border bg-popover/95 px-2 py-1 text-xs shadow"
             style={{ left: `${(hx / W) * 100}%`, transform: hx > W * 0.6 ? "translateX(calc(-100% - 8px))" : "translateX(8px)" }}
           >
-            <p className="text-muted-foreground">t = {time[hoverIdx].toFixed(3)} s</p>
+            <p className="text-muted-foreground">t = {time[hoverIdx].toFixed(3)} {timeUnit}</p>
             {series.map((s, i) => (
               <p key={s.id} className="flex items-center gap-1.5 tabular-nums">
                 <span className="size-2 rounded-full" style={{ background: SERIES_COLORS[i] }} />
                 {series.length > 1 && <span className="text-muted-foreground">{s.label}:</span>}
-                {s.values[hoverIdx].toFixed(1)} {unit}
+                {fmt(s.values[hoverIdx])} {unit}
               </p>
             ))}
           </div>
@@ -163,10 +210,10 @@ export function TimeSeriesChart({
       {showTable && (
         <div className="max-h-48 overflow-auto rounded border">
           <table className="w-full text-xs tabular-nums">
-            <caption className="sr-only">{title}, sampled every 50 ms</caption>
+            <caption className="sr-only">{title}, every tenth sample</caption>
             <thead className="sticky top-0 bg-card">
               <tr>
-                <th className="px-2 py-1 text-left">t (s)</th>
+                <th className="px-2 py-1 text-left">t ({timeUnit})</th>
                 {series.map((s) => <th key={s.id} className="px-2 py-1 text-right">{s.label} ({unit})</th>)}
               </tr>
             </thead>
@@ -175,7 +222,7 @@ export function TimeSeriesChart({
                 i % 10 === 0 ? (
                   <tr key={i} className="odd:bg-muted/30">
                     <td className="px-2">{t.toFixed(3)}</td>
-                    {series.map((s) => <td key={s.id} className="px-2 text-right">{s.values[i].toFixed(1)}</td>)}
+                    {series.map((s) => <td key={s.id} className="px-2 text-right">{fmt(s.values[i])}</td>)}
                   </tr>
                 ) : null,
               )}

@@ -27,6 +27,7 @@ Base path `/api/v1`. OpenAPI: `/api/v1/openapi.json`; Swagger UI: `/api/v1/docs`
 | GET | `/anatomy/hierarchy/roots?system=` | anatomy:read | subtree roots |
 | GET | `/anatomy/structures/{id}?audience=` | anatomy:read | full detail |
 | GET | `/anatomy/structures/{id}/children` | anatomy:read | part_of children |
+| GET | `/anatomy/structures/{id}/circulation` | anatomy:read | inferred artery/vein routes to the heart (mesh → hops); `mode` whole_circulation / organ_route / none |
 | GET | `/assets/manifest` | anatomy:read | bundles + mesh→structure map |
 | GET | `/references`, `/references/{id}` | anatomy:read | citations |
 | GET | `/simulations/models[/{id}]` | anatomy:read | model definitions |

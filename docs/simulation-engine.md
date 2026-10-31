@@ -72,6 +72,52 @@ arterial tree (no wave propagation or reflection, so central and peripheral pres
 identical); linear constant R and C; no baroreflex. Not CFD. See the model definition for
 the full lists shown in the UI.
 
+## Function playback in the 3D workspace
+
+Selecting a structure from search, the hierarchy or a link **shows** it (camera focus +
+spotlight: everything else fades to context) and, if a model is linked to the structure
+or to anything it is `part_of`, **plays its function** on the 3D model. The registry order
+decides the primary model (`models_for_structure(id, ancestor_ids)`).
+
+The model runs once on the server; the browser only replays its output. Each model
+declares `animations` (`AnimationBinding`: output, structure IDs, effect `scale` / `tint` /
+`glow`, amplitude, normalisation `range` / `magnitude`, and a plain-language description
+shown in the UI), plus `time_unit` and `playback_rate`. Effects are presentation only and
+never feed back into the model. Scaling a static mesh is a schematic cue, not a
+reconstruction of real tissue motion; every binding says so in its description.
+
+| Model | Linked structures | 3D effect |
+|---|---|---|
+| `cv.cardiac_cycle` | heart, LV, RV, LA, aorta (+ parts) | heart scales with LV volume (±5 %); LV tints with LV pressure; aorta tints with aortic pressure |
+| `resp.single_compartment` | right/left lung, trachea, diaphragm | each lung scales with lung volume (±5 %); trachea glows with airflow magnitude |
+| `neuro.hodgkin_huxley` | brain, spinal cord | glow marks spike timing (explicitly not brain activity); slowed ≈ 67× |
+| `cv.windkessel3` | aorta, heart, LV, … | aorta tints with aortic pressure |
+
+## Model card: `cv.cardiac_cycle` v1.0.0 (class C)
+
+Time-varying elastance left ventricle (Suga, Sagawa & Shoukas 1973) with the double-Hill
+normalised elastance and WK3 coupling of Stergiopulos, Meister & Westerhof (1996); ideal
+diode valves; constant left-atrial pressure. Defaults (illustrative): EDV ≈ 119 mL,
+ESV ≈ 49 mL, EF ≈ 58 %, ≈ 125/72 mmHg. Tests: valve flows non-negative and never
+simultaneous, mitral = aortic volume per beat = SV, MAP = (R + Z꜀)·mean flow,
+isovolumic phases exist, Frank–Starling / contractility / afterload directions, step
+convergence. No right heart, atrial kick or baroreflex.
+
+## Model card: `resp.single_compartment` v1.0.0 (class C)
+
+R·dV/dt + V/C = P_mus(t) (Bates 2009); half-sine inspiratory muscle pressure, passive
+expiration. Defaults give tidal volume ≈ 0.48 L at 12/min. Tests: expiratory decay
+constant = R·C, V_peak → C·P_max when R·C ≪ Tᵢ, linearity, zero net flow per breath,
+gas trapping with high resistance, step convergence. No airway collapse, no regional
+ventilation, no gas exchange or control of breathing.
+
+## Model card: `neuro.hodgkin_huxley` v1.0.0 (class C)
+
+Hodgkin & Huxley (1952) squid-axon kinetics in the modern −65 mV convention; single
+isopotential patch with a rectangular pulse train. Tests: rest stable at −65 mV,
+all-or-none threshold, peak +30 to +50 mV, refractoriness, gates within [0, 1], sodium
+block abolishes spikes, step convergence. No propagation, myelin or synapses.
+
 ## Planned models (Phase 4)
 
 Each must ship a model card, unit-tagged specs, analytic/benchmark tests and references

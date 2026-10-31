@@ -17,7 +17,8 @@ import { useModels, useRunSimulation } from "@/lib/api/queries";
 import type { ModelDefinition, Reference, RunResult } from "@/lib/api/types";
 
 import { MetricsGrid, ModelDocs } from "./model-docs";
-import { TimeSeriesChart } from "./time-series-chart";
+import { chartGroups, type ChartGroup } from "./chart-groups";
+import { TimeSeriesChart, type ChartSeries } from "./time-series-chart";
 
 export function useReferences() {
   return useQuery({
@@ -57,12 +58,16 @@ function ModelRunner({ model }: { model: ModelDefinition }) {
   }, [debounced, model.id]);
 
   const changed = model.parameters.filter((p) => params[p.id] !== p.default);
-  const series = result
-    ? [
-        ...(baseline ? [{ id: "baseline", label: "Pinned baseline", values: baseline.series.aortic_pressure }] : []),
-        { id: "current", label: "Current", values: result.series.aortic_pressure, dashed: !!baseline },
-      ]
-    : [];
+  const groups = useMemo(() => chartGroups(model), [model]);
+  // With a pinned baseline, each chart compares the baseline and current run of its
+  // first series (two series per chart keeps the comparison readable).
+  const seriesFor = (g: ChartGroup, r: RunResult): ChartSeries[] =>
+    baseline
+      ? [
+          { id: "baseline", label: `${g.series[0].label}: baseline`, values: baseline.series[g.series[0].id] },
+          { id: "current", label: `${g.series[0].label}: current`, values: r.series[g.series[0].id], dashed: true },
+        ]
+      : g.series.map((s) => ({ id: s.id, label: s.label, values: r.series[s.id] }));
 
   return (
     <div className="grid gap-4 xl:grid-cols-[20rem_1fr]">
@@ -109,7 +114,7 @@ function ModelRunner({ model }: { model: ModelDefinition }) {
       <div className="grid min-w-0 gap-4">
         <Card>
           <CardHeader className="flex flex-row flex-wrap items-center justify-between gap-2">
-            <CardTitle className="text-sm">Output (final three beats at periodic steady state)</CardTitle>
+            <CardTitle className="text-sm">Model output</CardTitle>
             <div className="flex gap-2">
               {baseline ? (
                 <Button size="sm" variant="ghost" onClick={() => setBaseline(null)}>Clear baseline</Button>
@@ -121,7 +126,7 @@ function ModelRunner({ model }: { model: ModelDefinition }) {
               {model.linked_structure_ids.length > 0 && (
                 <Button size="sm" variant="ghost" asChild>
                   <Link
-                    href={`/anatomy?structure=${encodeURIComponent(model.linked_structure_ids[0])}&highlight=${encodeURIComponent(model.linked_structure_ids.join(","))}`}
+                    href={`/anatomy?structure=${encodeURIComponent(model.linked_structure_ids[0])}&highlight=${encodeURIComponent(model.linked_structure_ids.join(","))}${model.animations.length ? `&play=${encodeURIComponent(model.id)}` : ""}`}
                   >
                     <Box /> Linked anatomy in 3D
                   </Link>
@@ -134,14 +139,16 @@ function ModelRunner({ model }: { model: ModelDefinition }) {
               <Skeleton className="h-64" />
             ) : (
               <>
-                <TimeSeriesChart title="Aortic pressure" unit="mmHg" time={result.time} series={series} />
-                <TimeSeriesChart
-                  title="Ventricular ejection into the aorta"
-                  unit="mL/s"
-                  time={result.time}
-                  yMin={0}
-                  series={[{ id: "q", label: "Ejection", values: result.series.aortic_inflow }]}
-                />
+                {groups.map((g) => (
+                  <TimeSeriesChart
+                    key={g.key}
+                    title={g.title}
+                    unit={g.unit}
+                    time={result.time}
+                    timeUnit={model.time_unit}
+                    series={seriesFor(g, result)}
+                  />
+                ))}
                 {result.warnings.map((w) => (
                   <p key={w} role="status" className="text-xs text-warning">{w}</p>
                 ))}

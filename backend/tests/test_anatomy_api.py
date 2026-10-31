@@ -112,3 +112,14 @@ def test_structure_index_is_consistent(auth_client):
     assert all(-1 <= p < n for p in idx["parents"])
     aorta = idx["ids"].index("FMA:3736")
     assert idx["ids"][idx["parents"][aorta]] == "FMA:3734"
+
+
+def test_function_models_link_through_part_of(auth_client):
+    lv = auth_client.get("/api/v1/anatomy/structures/FMA%3A7101").json()
+    assert lv["simulations"][0]["model_id"] == "cv.cardiac_cycle"
+    lung = auth_client.get("/api/v1/anatomy/structures/FMA%3A7309").json()
+    part = lung["children"][0]["id"]
+    detail = auth_client.get(f"/api/v1/anatomy/structures/{part.replace(':', '%3A')}").json()
+    assert [s["model_id"] for s in detail["simulations"]] == ["resp.single_compartment"]
+    femur = auth_client.get("/api/v1/anatomy/structures/FMA%3A24474").json()
+    assert femur["simulations"] == []

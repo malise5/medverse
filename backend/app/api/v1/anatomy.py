@@ -10,6 +10,7 @@ from app.models.enums import AudienceLevel
 from app.schemas.anatomy import (
     AssetManifest,
     BundleOut,
+    CirculationOut,
     Page,
     SearchHit,
     StructureDetail,
@@ -17,7 +18,7 @@ from app.schemas.anatomy import (
     StructureSummary,
     SystemOut,
 )
-from app.services import anatomy_service
+from app.services import anatomy_service, circulation_service
 
 # Anatomy reference data is readable by any authenticated user with anatomy:read.
 router = APIRouter(tags=["anatomy"], dependencies=[Depends(require(Perm.ANATOMY_READ))])
@@ -73,6 +74,12 @@ def get_structure(
     audience: AudienceLevel = AudienceLevel.UNDERGRADUATE,
 ):
     return anatomy_service.structure_detail(db, structure_id, audience)
+
+
+@router.get("/anatomy/structures/{structure_id}/circulation", response_model=CirculationOut)
+def get_circulation(structure_id: str, db: DbSession, response: Response):
+    response.headers["Cache-Control"] = CACHE_REFERENCE
+    return circulation_service.circulation(db, structure_id)
 
 
 @router.get("/anatomy/structures/{structure_id}/children", response_model=list[StructureSummary])

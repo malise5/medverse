@@ -22,6 +22,7 @@ Legend: ✅ done and tested · 🟡 partial · ⬜ not started
 | Information panel (content, relations, clinical, sources, audience level) | ✅ | content exists for 9 structures only |
 | Physiology: 3-element Windkessel with model card | ✅ | 14 scientific tests |
 | Pathology: 2 educational scenarios with healthy-vs-scenario comparison | ✅ | |
+| Function playback: search → focus + spotlight → model-driven 3D animation (heart, lungs, brain/spinal cord, aorta) | ✅ | 3 new class C models with scientific tests; verified in headless Chrome |
 | Responsive layout (sheets on < 1024 px) | 🟡 | implemented; not tested on real devices |
 | Frontend tests (Vitest) | 🟡 | unit/component; no Playwright E2E in repo yet |
 
@@ -40,9 +41,9 @@ assets (licensed source required) · ⬜ Playwright E2E incl. 3D selection.
 
 ## Phase 4: Physiology
 
-⬜ Cardiac cycle (elastance ventricle) · ⬜ action potential (Hodgkin–Huxley) ·
-⬜ respiratory mechanics & gas exchange · ⬜ renal filtration · ⬜ glucose–insulin ·
-⬜ visual mappings driving 3D (e.g. pressure → aortic colour) · ⬜ Celery for heavy models.
+✅ Cardiac cycle (elastance ventricle) · ✅ action potential (Hodgkin–Huxley, patch) ·
+✅ respiratory mechanics (single compartment) · ⬜ gas exchange · ⬜ renal filtration · ⬜ glucose–insulin ·
+✅ visual mappings driving 3D (scale/tint/glow bindings) · ⬜ propagation along nerves, right heart, PV-loop chart · ⬜ Celery for heavy models.
 
 ## Phase 5: Pathology and injury
 

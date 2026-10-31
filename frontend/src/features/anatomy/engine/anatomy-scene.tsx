@@ -3,15 +3,25 @@
 /* eslint-disable react-hooks/immutability -- three.js renderer, raycaster and scene-graph
    objects are mutable by design and live outside React state (standard R3F practice). */
 
-import { CameraControls, useGLTF } from "@react-three/drei";
-import { useThree, type ThreeEvent } from "@react-three/fiber";
-import { Suspense, useCallback, useEffect, useMemo, useRef } from "react";
-import { Box3, Mesh, Plane, Vector3, type BufferGeometry, type Object3D } from "three";
+import { CameraControls, Html, useGLTF } from "@react-three/drei";
+import { useFrame, useThree, type ThreeEvent } from "@react-three/fiber";
+import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import { Box3, Color, Mesh, Plane, Vector3, type BufferGeometry, type Material, type Object3D } from "three";
 import { acceleratedRaycast, computeBoundsTree, type MeshBVH } from "three-mesh-bvh";
 
-import type { AnatomicalSystem, AssetBundle } from "@/lib/api/types";
+import type { AnatomicalSystem, AnimationBinding, AssetBundle } from "@/lib/api/types";
 
-import { ghostDepth, meshVisibility, useWorkspace, type ViewPreset } from "../store";
+import { advance, effectStrength, playbackClock, sampleAt, seriesRange, type SeriesRange } from "../function/animation";
+import {
+  flowLevel,
+  ghostDepth,
+  meshVisibility,
+  spotlightVisibility,
+  useWorkspace,
+  type PartView,
+  type Playback,
+  type ViewPreset,
+} from "../store";
 import { MaterialCache, type MeshState } from "./materials";
 import { meshColor } from "./palette";
 
@@ -37,7 +47,32 @@ export interface RegisteredMesh {
   systemId: string;
   group?: string;
   overlay?: Mesh;
+  /** Material chosen by the static view rules; animations fall back to it. */
+  baseMaterial?: Material;
+  /** Rest transform, restored when playback stops. */
+  basePosition: Vector3;
+  baseScale: Vector3;
 }
+
+interface AnimatedTarget {
+  binding: AnimationBinding;
+  index: number;
+  values: number[];
+  range: SeriesRange;
+  /** One group per bound structure: scale effects pivot about each group's centre. */
+  groups: { meshes: RegisteredMesh[]; pivot: Vector3 }[];
+}
+
+interface AnimationState {
+  playback: Playback;
+  targets: AnimatedTarget[];
+  t: number;
+  /** Registry size when targets were built; rebuilt as bundles finish loading. */
+  builtAt: number;
+}
+
+const FLOW_HOPS_PER_SECOND = 9;
+const FLOW_LEVELS = 5;
 
 const noRaycast = () => {};
 // BVH-accelerated picking: the scene holds ~1M triangles across ~1,300 meshes.
@@ -67,6 +102,8 @@ function BundleLayer({
         structureId,
         systemId: bundle.system_id ?? "unclassified",
         group: obj.userData.group,
+        basePosition: obj.position.clone(),
+        baseScale: obj.scale.clone(),
       });
     });
     onLoaded(bundle.id, meshes);
@@ -80,12 +117,15 @@ export function AnatomyScene({
   selectedMeshIds,
   multiMeshIds,
   onPick,
+  resolveMeshes,
 }: {
   bundles: AssetBundle[];
   systems: AnatomicalSystem[];
   selectedMeshIds: Set<string>;
   multiMeshIds: Set<string>;
   onPick: (structureId: string, additive: boolean) => void;
+  /** All mesh IDs of a structure including its parts. */
+  resolveMeshes: (structureId: string) => string[];
 }) {
   const { invalidate, gl, raycaster } = useThree();
   const controls = useRef<CameraControls>(null);
@@ -94,6 +134,7 @@ export function AnatomyScene({
   const clipPlanes = useMemo<Plane[]>(() => [], []);
   const materials = useMemo(() => new MaterialCache(clipPlanes), [clipPlanes]);
   const sceneBox = useRef(new Box3());
+  const anim = useRef<AnimationState | null>(null);
 
   useEffect(() => {
     gl.localClippingEnabled = true;
@@ -125,33 +166,57 @@ export function AnatomyScene({
       clipPlanes.push(clipPlane);
     }
 
+    // Spotlight keeps the selection (or focused system), anything driven by playback and
+    // the shown vessel routes; the rest is context.
+    let focus: Set<string> | null = null;
+    if (s.spotlight && (selectedMeshIds.size || s.systemFocus)) {
+      focus = new Set([...selectedMeshIds, ...multiMeshIds]);
+      for (const target of anim.current?.targets ?? []) {
+        for (const g of target.groups) for (const m of g.meshes) focus.add(m.meshId);
+      }
+      if (s.showCirculation && s.circulation) {
+        for (const id of s.circulation.arteries.keys()) focus.add(id);
+        for (const id of s.circulation.veins.keys()) focus.add(id);
+      }
+      if (s.systemFocus) {
+        for (const r of registry.current.values()) if (r.systemId === s.systemFocus) focus.add(r.meshId);
+      }
+    }
+    const partColor = new Map<string, string>();
+    if (s.showParts) for (const p of s.parts) for (const id of p.meshIds) partColor.set(id, p.color);
+
     const hoveredMesh = s.hover?.meshId;
     for (const r of registry.current.values()) {
-      const vis = meshVisibility(s, {
+      const base = meshVisibility(s, {
         meshId: r.meshId,
         systemId: r.systemId,
         systemDepth: depthBySystem[r.systemId] ?? 50,
         removedGhostDepth: removedGhost,
       });
+      const vis = spotlightVisibility(base, r.meshId, focus);
+      const contextOnly = vis === "ghost" && base === "visible";
       const { mesh } = r;
       mesh.visible = vis !== "hidden";
       mesh.raycast = vis === "visible" ? defaultRaycast : noRaycast;
       if (vis !== "visible" && r.overlay) r.overlay.visible = false;
       if (vis === "ghost") {
-        mesh.material = materials.ghost();
+        mesh.material = contextOnly ? materials.context() : materials.ghost();
         mesh.renderOrder = -1;
         continue;
       }
       let state: MeshState = "normal";
-      if (selectedMeshIds.has(r.meshId)) state = "selected";
+      // In spotlight the selection is already obvious; natural colours read better.
+      if (selectedMeshIds.has(r.meshId)) state = focus ? "normal" : "selected";
       else if (multiMeshIds.has(r.meshId)) state = "multi";
       else if (s.highlightedMeshes.has(r.meshId)) state = "highlighted";
       else if (hoveredMesh === r.meshId) state = "hovered";
       const opacity = s.systemOpacity[r.systemId] ?? 1;
-      mesh.material = materials.get(meshColor(r.systemId, r.group), state, opacity);
+      const color = partColor.get(r.meshId) ?? meshColor(r.systemId, r.group);
+      mesh.material = materials.get(color, state, opacity);
+      r.baseMaterial = mesh.material;
       mesh.renderOrder = opacity < 1 ? 1 : 0;
       // Overlay child (shared geometry) shows the selection through occluding anatomy.
-      const wantOverlay = state === "selected" && s.xraySelection;
+      const wantOverlay = state === "selected" && s.xraySelection && !focus;
       if (wantOverlay && !r.overlay) {
         r.overlay = new Mesh(mesh.geometry, materials.xray());
         r.overlay.raycast = noRaycast;
@@ -176,12 +241,195 @@ export function AnatomyScene({
         state.ghostRemovedLayer !== prev.ghostRemovedLayer ||
         state.clip !== prev.clip ||
         state.xraySelection !== prev.xraySelection ||
+        state.spotlight !== prev.spotlight ||
+        state.systemFocus !== prev.systemFocus ||
+        state.parts !== prev.parts ||
+        state.showParts !== prev.showParts ||
+        state.circulation !== prev.circulation ||
+        state.showCirculation !== prev.showCirculation ||
+        state.flowAnimation !== prev.flowAnimation ||
         state.highlightedMeshes !== prev.highlightedMeshes
       ) {
         apply();
       }
     });
   }, [apply]);
+
+  // ---- Function playback ---------------------------------------------------------
+  // The model already ran on the server; here its output only drives presentation:
+  // uniform scaling about a pivot, colour tint, or emissive glow.
+  const restoreTransforms = useCallback(() => {
+    for (const target of anim.current?.targets ?? []) {
+      for (const g of target.groups) {
+        for (const r of g.meshes) {
+          r.mesh.position.copy(r.basePosition);
+          r.mesh.scale.copy(r.baseScale);
+        }
+      }
+    }
+  }, []);
+
+  const buildTargets = useCallback(
+    (playback: Playback): AnimatedTarget[] =>
+      playback.bindings
+        .map((binding, index) => {
+          const values = playback.series[binding.output] ?? [];
+          const groups = binding.structure_ids
+            .map((sid) => {
+              const meshes = resolveMeshes(sid)
+                .map((id) => registry.current.get(id))
+                .filter((r): r is RegisteredMesh => !!r);
+              const box = new Box3();
+              for (const r of meshes) {
+                r.mesh.updateWorldMatrix(true, false);
+                box.union(new Box3().setFromObject(r.mesh));
+              }
+              return { meshes, pivot: box.isEmpty() ? new Vector3() : box.getCenter(new Vector3()) };
+            })
+            .filter((g) => g.meshes.length);
+          return { binding, index, values, range: seriesRange(values), groups };
+        })
+        .filter((t) => t.values.length && t.groups.length),
+    [resolveMeshes],
+  );
+
+  const syncPlayback = useCallback(() => {
+    const playback = useWorkspace.getState().playback;
+    const current = anim.current;
+    if (current && (current.playback !== playback || current.builtAt !== registry.current.size)) {
+      restoreTransforms(); // pivots must be measured at rest
+    }
+    if (!playback) {
+      if (current) {
+        anim.current = null;
+        playbackClock.t = null;
+        materials.disposeAnimated();
+        apply();
+      }
+      return;
+    }
+    if (current?.playback === playback && current.builtAt === registry.current.size) return;
+    const t = current?.playback.modelId === playback.modelId ? current.t : playback.time[0];
+    anim.current = { playback, targets: buildTargets(playback), t, builtAt: registry.current.size };
+    apply();
+  }, [apply, buildTargets, materials, restoreTransforms]);
+
+  useEffect(() => {
+    syncPlayback();
+    return useWorkspace.subscribe((state, prev) => {
+      if (state.playback !== prev.playback) syncPlayback();
+      if (state.playing !== prev.playing || state.speed !== prev.speed) invalidate();
+    });
+  }, [syncPlayback, invalidate]);
+
+  useEffect(
+    () => () => {
+      restoreTransforms();
+      playbackClock.t = null;
+    },
+    [restoreTransforms],
+  );
+
+  // ---- Blood-flow wave along inferred vessel routes --------------------------------
+  // Schematic: a brightness pulse leaves the heart along arteries and returns along veins,
+  // stepping one vessel segment (mesh) at a time. It shows direction, not real velocity.
+  const flowPhase = useRef(0);
+  useFrame((_, delta) => {
+    const s = useWorkspace.getState();
+    const c = s.circulation;
+    if (!c || !s.showCirculation || !s.flowAnimation) return;
+    flowPhase.current += Math.min(delta, 0.1) * FLOW_HOPS_PER_SECOND;
+    const paint = (hops: Map<string, number>, maxHop: number, towardHeart: boolean, glow: string) => {
+      for (const [meshId, hop] of hops) {
+        const r = registry.current.get(meshId);
+        if (!r || r.mesh.raycast !== defaultRaycast || !r.baseMaterial) continue;
+        const level = Math.round(flowLevel(hop, maxHop, flowPhase.current, towardHeart) * FLOW_LEVELS);
+        if (!level) {
+          r.mesh.material = r.baseMaterial;
+          continue;
+        }
+        const base = r.baseMaterial as Material & { color?: Color };
+        const m = materials.animated(`flow${towardHeart ? "v" : "a"}${level}`, `#${base.color?.getHexString() ?? "ffffff"}`, base.opacity);
+        m.emissive.set(glow);
+        m.emissiveIntensity = (level / FLOW_LEVELS) * 0.9;
+        r.mesh.material = m;
+      }
+    };
+    paint(c.arteries, c.maxArteryHop, false, "#ffb3a6");
+    paint(c.veins, c.maxVeinHop, true, "#a9c4ff");
+    invalidate();
+  });
+
+  // Part labels: anchored at each part's centre; recomputed when parts change or more
+  // bundles load (event-driven, so the registry ref is never read during render).
+  const [labels, setLabels] = useState<(PartView & { at: Vector3 })[]>([]);
+  const refreshLabels = useCallback(() => {
+    const { parts, showParts } = useWorkspace.getState();
+    setLabels(
+      (showParts ? parts : [])
+        .map((p) => {
+          const box = new Box3();
+          for (const id of p.meshIds) {
+            const r = registry.current.get(id);
+            if (r) box.union(new Box3().setFromObject(r.mesh));
+          }
+          return box.isEmpty() ? null : { ...p, at: box.getCenter(new Vector3()) };
+        })
+        .filter((p) => p !== null),
+    );
+  }, []);
+  useEffect(
+    () =>
+      useWorkspace.subscribe((state, prev) => {
+        if (state.parts !== prev.parts || state.showParts !== prev.showParts) refreshLabels();
+      }),
+    [refreshLabels],
+  );
+
+  const tmpColor = useMemo(() => new Color(), []);
+  useFrame((_, delta) => {
+    const a = anim.current;
+    if (!a) return;
+    const { playing, speed } = useWorkspace.getState();
+    const { time, rate } = a.playback;
+    // Clamp delta so a background tab does not jump a whole cycle on return.
+    if (playing) a.t = advance(a.t, Math.min(delta, 0.1), rate, speed, time[0], time[time.length - 1]);
+    playbackClock.t = a.t;
+    for (const target of a.targets) {
+      const { binding } = target;
+      const k = effectStrength(binding, sampleAt(time, target.values, a.t), target.range);
+      if (binding.effect === "scale") {
+        for (const g of target.groups) {
+          for (const r of g.meshes) {
+            r.mesh.position.copy(r.basePosition).sub(g.pivot).multiplyScalar(k).add(g.pivot);
+            r.mesh.scale.copy(r.baseScale).multiplyScalar(k);
+          }
+        }
+        continue;
+      }
+      const touched = new Set<Material>();
+      for (const g of target.groups) {
+        for (const r of g.meshes) {
+          if (r.mesh.raycast !== defaultRaycast) continue; // hidden or ghosted: leave alone
+          const opacity = (r.mesh.material as Material).opacity;
+          const m = materials.animated(String(target.index), meshColor(r.systemId, r.group), opacity);
+          r.mesh.material = m;
+          if (touched.has(m)) continue;
+          touched.add(m);
+          const accent = tmpColor.set(binding.color ?? "#ffffff");
+          if (binding.effect === "tint") {
+            m.color.copy(m.userData.baseColor as Color).lerp(accent, k);
+            m.emissive.copy(accent);
+            m.emissiveIntensity = 0.35 * k;
+          } else {
+            m.emissive.copy(accent);
+            m.emissiveIntensity = 1.2 * k;
+          }
+        }
+      }
+    }
+    if (playing) invalidate();
+  });
 
   // Focus requests can arrive before their bundle has loaded (deep links); keep the
   // request pending and retry whenever new meshes register.
@@ -223,9 +471,11 @@ export function AnatomyScene({
         sceneBox.current.union(box.setFromObject(m.mesh));
       }
       apply();
+      refreshLabels();
+      syncPlayback(); // bound structures may have just loaded
       tryFocus();
     },
-    [apply, tryFocus],
+    [apply, refreshLabels, syncPlayback, tryFocus],
   );
 
   // CameraControls owns the camera once mounted; set the initial anterior view here.
@@ -294,6 +544,14 @@ export function AnatomyScene({
             </Suspense>
           ))}
       </group>
+      {labels.map((p) => (
+        <Html key={p.id} position={p.at} center zIndexRange={[20, 0]} style={{ pointerEvents: "none" }}>
+          <div className="flex items-center gap-1 whitespace-nowrap rounded-full border bg-background/85 px-2 py-0.5 text-[11px] shadow backdrop-blur">
+            <span className="size-2 rounded-full" style={{ background: p.color }} />
+            {p.name}
+          </div>
+        </Html>
+      ))}
       <gridHelper args={[3, 30, "#2c3a48", "#1d2731"]} position={[0, -0.002, 0]} />
     </>
   );

@@ -7,6 +7,7 @@ import type {
   AnatomicalSystem,
   AssetManifest,
   AudienceLevel,
+  Circulation,
   ConditionDetail,
   ConditionSummary,
   ModelDefinition,
@@ -27,6 +28,7 @@ export const qk = {
   manifest: ["assets", "manifest"] as const,
   structure: (id: string, audience: AudienceLevel) => ["anatomy", "structure", id, audience] as const,
   children: (id: string) => ["anatomy", "children", id] as const,
+  circulation: (id: string) => ["anatomy", "circulation", id] as const,
   roots: (system: string) => ["anatomy", "roots", system] as const,
   search: (q: string, system?: string) => ["anatomy", "search", q, system ?? ""] as const,
   models: ["simulations", "models"] as const,
@@ -84,6 +86,15 @@ export function useStructure(id: string | null, audience: AudienceLevel = "under
   });
 }
 
+export function useCirculation(id: string | null, enabled = true) {
+  return useQuery({
+    queryKey: qk.circulation(id ?? ""),
+    queryFn: () => api<Circulation>(`${structurePath(id!)}/circulation`),
+    enabled: !!id && enabled,
+    staleTime: REFERENCE_STALE,
+  });
+}
+
 export function useChildren(id: string | null) {
   return useQuery({
     queryKey: qk.children(id ?? ""),
@@ -114,11 +125,20 @@ export function useSearch(q: string, system?: string) {
   });
 }
 
+export const modelsQuery = {
+  queryKey: qk.models,
+  queryFn: () => api<ModelDefinition[]>("/simulations/models"),
+  staleTime: REFERENCE_STALE,
+};
+
 export function useModels() {
-  return useQuery({
-    queryKey: qk.models,
-    queryFn: () => api<ModelDefinition[]>("/simulations/models"),
-    staleTime: REFERENCE_STALE,
+  return useQuery(modelsQuery);
+}
+
+export function runSimulation(modelId: string, parameters: Record<string, number> = {}, scenarioId: string | null = null) {
+  return api<RunResult>(`/simulations/models/${encodeURIComponent(modelId)}/run`, {
+    method: "POST",
+    json: { parameters, scenario_id: scenarioId },
   });
 }
 
@@ -128,11 +148,7 @@ export function useRunSimulation() {
       modelId: string;
       parameters?: Record<string, number>;
       scenarioId?: string | null;
-    }) =>
-      api<RunResult>(`/simulations/models/${encodeURIComponent(args.modelId)}/run`, {
-        method: "POST",
-        json: { parameters: args.parameters ?? {}, scenario_id: args.scenarioId ?? null },
-      }),
+    }) => runSimulation(args.modelId, args.parameters, args.scenarioId ?? null),
   });
 }
 

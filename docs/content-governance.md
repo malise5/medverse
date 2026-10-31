@@ -6,7 +6,7 @@
 |---|---|---|
 | A | Anatomically validated | none yet (requires expert review) |
 | B | Evidence-supported educational explanation | curated content sections, pathology narratives |
-| C | Simplified educational simulation | `cv.windkessel3` and its pathology scenarios |
+| C | Simplified educational simulation | `cv.windkessel3`, `cv.cardiac_cycle`, `resp.single_compartment`, `neuro.hodgkin_huxley`, pathology scenarios |
 | D | Experimental / unvalidated | none |
 
 ## Verification status lifecycle
@@ -42,7 +42,7 @@ The UI shows the status on every content section, relationship set and condition
 | Curated relationships | 18 | draft |
 | Curated content sections | 17 (heart, LV, aorta, femoral arteries, femur, lungs, liver) | draft |
 | Pathology conditions | 2 (arterial stiffening; raised peripheral resistance) | draft, class B text + class C scenarios |
-| References | 8 | citation metadata needs librarian check |
+| References | 12 | citation metadata needs librarian check |
 
 ## Required before any public release
 
