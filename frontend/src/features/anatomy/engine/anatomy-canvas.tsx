@@ -107,6 +107,7 @@ export default function AnatomyCanvas({
           <color attach="background" args={["#0d1217"]} />
           <Suspense fallback={null}>
             <AnatomyScene
+              key={manifest.body_model}
               bundles={bundles}
               systems={systems}
               selectedMeshIds={selectedMeshIds}

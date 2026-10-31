@@ -8,6 +8,8 @@ import type {
   AnswerResult,
   AssetManifest,
   AudienceLevel,
+  BodyModel,
+  BodyModelInfo,
   Circulation,
   ConditionDetail,
   ConditionSummary,
@@ -27,9 +29,10 @@ const REFERENCE_STALE = 5 * 60_000;
 
 export const qk = {
   me: ["auth", "me"] as const,
-  systems: ["anatomy", "systems"] as const,
+  systems: (model?: BodyModel) => ["anatomy", "systems", model ?? "all"] as const,
+  bodyModels: ["assets", "models"] as const,
   index: ["anatomy", "index"] as const,
-  manifest: ["assets", "manifest"] as const,
+  manifest: (model: BodyModel) => ["assets", "manifest", model] as const,
   structure: (id: string, audience: AudienceLevel) => ["anatomy", "structure", id, audience] as const,
   children: (id: string) => ["anatomy", "children", id] as const,
   circulation: (id: string) => ["anatomy", "circulation", id] as const,
@@ -60,10 +63,19 @@ export function useLogout() {
   });
 }
 
-export function useSystems() {
+/** Systems with structure counts; mesh counts are for `model` when given. */
+export function useSystems(model?: BodyModel) {
   return useQuery({
-    queryKey: qk.systems,
-    queryFn: () => api<AnatomicalSystem[]>("/anatomy/systems"),
+    queryKey: qk.systems(model),
+    queryFn: () => api<AnatomicalSystem[]>("/anatomy/systems", { query: { model } }),
+    staleTime: REFERENCE_STALE,
+  });
+}
+
+export function useBodyModels() {
+  return useQuery({
+    queryKey: qk.bodyModels,
+    queryFn: () => api<BodyModelInfo[]>("/assets/models"),
     staleTime: REFERENCE_STALE,
   });
 }
@@ -76,10 +88,10 @@ export function useStructureIndex() {
   });
 }
 
-export function useAssetManifest() {
+export function useAssetManifest(model: BodyModel = "male") {
   return useQuery({
-    queryKey: qk.manifest,
-    queryFn: () => api<AssetManifest>("/assets/manifest"),
+    queryKey: qk.manifest(model),
+    queryFn: () => api<AssetManifest>("/assets/manifest", { query: { model } }),
     staleTime: REFERENCE_STALE,
   });
 }

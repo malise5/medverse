@@ -212,6 +212,8 @@ class AssetBundle(Base):
     byte_size: Mapped[int] = mapped_column(BigInteger)
     mesh_count: Mapped[int] = mapped_column(Integer)
     is_placeholder: Mapped[bool] = mapped_column(default=False)
+    # Which body the bundle belongs to ("male" or "female"); each has its own source.
+    body_model: Mapped[str] = mapped_column(String(16), default="male", index=True)
 
 
 class Mesh(Base):

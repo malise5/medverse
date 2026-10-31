@@ -101,8 +101,16 @@ def test_asset_manifest_links_meshes_to_structures(auth_client):
     assert m["bundles"] and all(b["license"] == "CC BY 4.0" for b in m["bundles"])
     bundle_ids = {b["id"] for b in m["bundles"]}
     assert all(bundle in bundle_ids for bundle, _ in m["meshes"].values())
+    assert m["body_model"] == "male" and all(b["body_model"] == "male" for b in m["bundles"])
+    female = auth_client.get("/api/v1/assets/manifest", params={"model": "female"}).json()
+    assert female["bundles"] and all(b["body_model"] == "female" for b in female["bundles"])
+    assert not set(m["meshes"]) & set(female["meshes"])
+    # The heart is one structure with meshes in both bodies.
     heart = auth_client.get("/api/v1/anatomy/structures/FMA:7088").json()
-    assert all(mid in m["meshes"] for mid in heart["mesh_ids"])
+    assert set(heart["mesh_ids"]) <= set(m["meshes"]) | set(female["meshes"])
+    assert set(heart["mesh_ids"]) & set(m["meshes"]) and set(heart["mesh_ids"]) & set(
+        female["meshes"]
+    )
 
 
 def test_structure_index_is_consistent(auth_client):

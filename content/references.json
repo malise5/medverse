@@ -128,5 +128,15 @@
     "pmid": null,
     "url": "https://openstax.org/details/books/anatomy-and-physiology-2e",
     "license_note": "Openly licensed (CC BY 4.0); cited as a freely accessible reference, no text reproduced."
+  },
+  {
+    "id": "hra2021",
+    "kind": "dataset",
+    "citation": "Börner K, Teichmann SA, Quardokus EM, et al. Anatomical structures, cell types and biomarkers of the Human Reference Atlas. Nat Cell Biol. 2021;23(11):1117-1128. 3D Reference Object Library (Visible Human Female organs) of the HuBMAP Human Reference Atlas.",
+    "year": 2021,
+    "doi": "10.1038/s41556-021-00788-6",
+    "pmid": null,
+    "url": "https://humanatlas.io/3d-reference-library",
+    "license_note": "3D reference organs licensed CC BY 4.0; organ-level DOIs in content/generated/hra-female/pipeline_report.json"
   }
 ]

@@ -94,3 +94,22 @@ describe("flowLevel", () => {
     expect(flowLevel(0, 10, 10, true)).toBe(1);
   });
 });
+
+describe("body model switch", () => {
+  it("keeps the selected structure and clears mesh-level state", () => {
+    const ws = useWorkspace.getState();
+    ws.reset();
+    ws.select("FMA:7088");
+    ws.hideMeshes(["FJ1"]);
+    ws.isolateMeshes(["FJ2"]);
+    ws.setBodyModel("female");
+    const s = useWorkspace.getState();
+    expect(s.bodyModel).toBe("female");
+    expect(s.selectedId).toBe("FMA:7088");
+    expect(s.hiddenMeshes.size).toBe(0);
+    expect(s.isolatedMeshes).toBeNull();
+    s.reset();
+    expect(useWorkspace.getState().bodyModel).toBe("female"); // reset keeps the chosen body
+    useWorkspace.getState().setBodyModel("male");
+  });
+});

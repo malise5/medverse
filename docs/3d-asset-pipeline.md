@@ -1,6 +1,41 @@
 # 3D asset pipeline
 
-## Current source: BodyParts3D 4.0 (PART-OF, 99 % polygon reduction)
+MEDVERSE has two complete, separately sourced 3D bodies. They share one knowledge graph
+(structure IDs, content, search, quizzes) but no geometry: the female body is not a
+modified copy of the male body.
+
+| Body | Source | Licence | Meshes | Triangles | Bundles |
+|---|---|---|---|---|---|
+| Male | BodyParts3D 4.0 (whole-body segmentation, FMA IDs) | CC BY 4.0 | 1,258 | ≈ 3.1 M | 12 GLBs, 13 MB |
+| Female | Human Reference Atlas 3D reference organs, Visible Human Female (HuBMAP) | CC BY 4.0 (checked per organ) | 872 | ≈ 2.0 M | 10 GLBs, 7.7 MB |
+
+Each bundle row carries `body_model` (`male` / `female`); `GET /assets/manifest?model=`
+serves one body and `GET /assets/models` lists both with per-system coverage.
+
+### Coverage by system
+
+| System | Male | Female |
+|---|---|---|
+| Skeletal | whole skeleton | pelvis (hip bones, sacrum, coccyx), femur, tibia, fibula, patella, sternum, intervertebral discs |
+| Muscular | trunk, girdle and eye muscles, diaphragm | — (no open female muscle source) |
+| Cardiovascular | heart, great vessels, systemic arteries and veins | heart (chambers, valves), named arteries and veins incl. uterine and ovarian vessels |
+| Nervous | brain, spinal cord | brain (283 atlas regions), spinal cord by segment |
+| Respiratory | trachea, bronchial tree, lungs | larynx, trachea, bronchi, lungs by bronchopulmonary segment |
+| Digestive | mouth to rectum, liver, pancreas, gallbladder | mouth and teeth, liver, pancreas, small and large intestine, omentum (no oesophagus or stomach) |
+| Urinary | kidneys, ureters, bladder, urethra | kidneys (cortex, pyramids, papillae), renal pelvis, ureters, bladder |
+| Reproductive | prostate | uterus (fundus, body, cervix, walls), uterine tubes, ovaries, breasts |
+| Endocrine | pituitary, pineal, suprarenal glands | — |
+| Lymphatic | thymus | thymus, spleen, palatine tonsils, a mesenteric lymph node |
+| Integumentary | skin | skin |
+| Special senses | eyes, lacrimal apparatus | eyes (cornea, lens, retina, vitreous …) |
+
+The UI states the gaps where they matter: systems a body lacks are listed as "Not in the
+female body's 3D source", and a structure that exists only in the other body (e.g. the
+prostate or the uterus) offers "Show in the male/female body". Vessel routes
+(`/circulation`) are computed from the male contact graph and are offered for the male
+body only.
+
+## Male body: BodyParts3D 4.0 (PART-OF, 99 % polygon reduction)
 
 | Metric | Value |
 |---|---|
@@ -48,12 +83,19 @@ flowchart LR
 3. **Geometry.** BodyParts3D is mm, +x patient-left, +y posterior, +z superior. Output is
    metres, Y-up, facing +Z: `(x, y, z) → (x, z, −y)·0.001` (det +1, laterality preserved),
    feet at y = 0. Normals are omitted and computed on the client.
-4. **Bundles.** One GLB per system → progressive loading and per-system visibility.
+4. **Smoothing.** BodyParts3D is only distributed at 99 % polygon reduction, which leaves
+   visible facets. Each mesh gets 3 passes of Taubin λ|μ smoothing (λ = 0.5, μ = −0.53),
+   which removes facets without the shrinkage of Laplacian smoothing (volume change
+   < 0.1 % on a test sample). Open-rim vertices are pinned and every vertex's
+   displacement is capped at min(2 mm, 1.5 % of the mesh extent), so thin structures keep
+   their shape (`--smooth-iterations 0` disables it). The contact graph is computed from
+   the unsmoothed source geometry.
+5. **Bundles.** One GLB per system → progressive loading and per-system visibility.
    Node and mesh names are element IDs; `extras.structureId` and (vascular) `extras.group`
    (`artery`/`vein`/`heart`, derived from FMA lineage) are rendering hints.
-5. **Compression.** `@gltf-transform/cli@4.2.1 meshopt` (EXT_meshopt_compression +
+6. **Compression.** `@gltf-transform/cli@4.2.1 meshopt` (EXT_meshopt_compression +
    KHR_mesh_quantization). Verified to preserve names and extras.
-6. **Manifest.** SHA-256 and size per bundle; a test fails if a GLB is missing or its
+7. **Manifest.** SHA-256 and size per bundle; a test fails if a GLB is missing or its
    checksum differs from `bundles.json`.
 
 ## Mesh contact graph (`pipeline/bodyparts3d/adjacency.py`)
@@ -87,3 +129,53 @@ labels routes "Inferred from 3D geometry" and shows this explanation.
   same pipeline: import → map to structure IDs → validate → review → bundle.
 - Quality review: per-mesh screenshot sheets for anatomist sign-off before release.
 - Cross-sectional caps (stencil) for clipping planes; currently cut surfaces are open.
+
+## Female body: Human Reference Atlas, Visible Human Female (`pipeline/hra/`)
+
+```bash
+backend/.venv/bin/python pipeline/hra/fetch.py --dest SRC   # downloads + organ licences
+backend/.venv/bin/python pipeline/hra/build.py --source SRC
+cd backend && .venv/bin/python -m app.seed
+```
+
+1. **Inputs** (`fetch.py`): the HRA reference-organ catalogue and female scene
+   (`apps.humanatlas.io/api/v1`), the ASCT+B 3D crosswalk (node name → UBERON/FMA), the
+   45 female organ GLBs, each organ's dataset metadata (licence, DOI citation) and
+   Uberon (`uberon-base.obo`, used only for UBERON → FMA cross-references). Downloads are
+   parsed as data; nothing downloaded is executed.
+2. **Licence gate.** Every organ dataset must declare CC BY 4.0; otherwise the build
+   stops. Organ citations and DOIs are written to `pipeline_report.json`.
+3. **Selection.** 43 organ files are used. The full-term placenta (pregnancy-specific)
+   and the subcutaneous adipose sample blocks are excluded.
+4. **Identity.** Each mesh node is mapped through the crosswalk. FMA terms are used
+   directly; UBERON terms become FMA when Uberon lists exactly one FMA cross-reference,
+   so the female heart, kidneys, liver … are the *same structures* as in the male body
+   (152 shared). Other terms become new structures (384, FMA or UBERON CURIEs) named
+   from the crosswalk label of the node that maps to them. Unmapped nodes (mostly fine
+   brain-atlas parcels) belong to their nearest mapped ancestor or their organ.
+   Laterality comes from term labels only. A non-lateral part present in both the left
+   and right organ (e.g. "kidney capsule") is placed under the two organs' nearest
+   common ancestor, and every mesh also belongs to the organ of its file, so selecting
+   "right kidney" selects all of its meshes.
+5. **Systems.** The organ file decides the system (a lung segment is respiratory even
+   where the male source classed the same FMA term otherwise); vessel nodes inside any
+   organ are cardiovascular. Breasts are layered with the reproductive organs so that
+   the skin can be hidden independently (TA2 lists the breast with the integument, as
+   the learning content says).
+6. **Geometry.** The HRA scene is metres, Y-up, facing +Z, patient's left = +X: the
+   MEDVERSE convention. Organ placements are applied; the body is translated so the
+   feet rest on y = 0 (height 1.658 m). Vertices are welded and each organ is
+   simplified with meshoptimizer (`gltf-transform simplify`, max error 0.4 % of extent)
+   to a per-organ budget (e.g. brain 180 k, vasculature 220 k triangles; 7.5 M → 2.0 M
+   in total), then bundled per system and meshopt-compressed as for the male body.
+
+## Rendering
+
+- Image-based lighting from a procedural studio room (three.js `RoomEnvironment`, no
+  download), plus warm key, cool fill and rim lights; ACES tone mapping.
+- Surface finishes per tissue class: matte bone, moist viscera with a thin clearcoat,
+  smoother vessels and eyes (`engine/materials.ts`). Colours remain the system palette.
+- Selection: a soft tint on the structure plus a Fresnel rim "x-ray" overlay drawn
+  through occluding anatomy, so deep structures read as 3D shapes.
+- Switching body remounts the scene (fresh mesh registry); bundles stay cached, the
+  selected structure is kept and re-framed in the new body.

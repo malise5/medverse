@@ -95,7 +95,13 @@ function Overview({ d }: { d: StructureDetail }) {
       <div className="grid gap-2 rounded-md border border-dashed p-3 text-sm text-muted-foreground">
         <p>
           No curated educational content for this structure yet. Its identity, hierarchy and 3D
-          geometry come from {d.identity_source === "bodyparts3d-4.0" ? "BodyParts3D 4.0 (FMA)" : d.identity_source}.
+          geometry come from{" "}
+          {d.identity_source === "bodyparts3d-4.0"
+            ? "BodyParts3D 4.0 (FMA)"
+            : d.identity_source === "hra-vhf"
+              ? "the Human Reference Atlas (Visible Human Female)"
+              : d.identity_source}
+          .
         </p>
         <p className="text-xs">Content is added through the expert-reviewed authoring workflow.</p>
       </div>
@@ -125,6 +131,22 @@ function Overview({ d }: { d: StructureDetail }) {
           </p>
         </section>
       ))}
+    </div>
+  );
+}
+
+/** The selected structure exists only in the other body (e.g. uterus, prostate). */
+function OtherBodyNotice() {
+  const bodyModel = useWorkspace((s) => s.bodyModel);
+  const other = bodyModel === "male" ? "female" : "male";
+  return (
+    <div className="flex flex-wrap items-center gap-2 rounded-md border border-dashed p-2 text-xs text-muted-foreground">
+      <span className="flex-1">
+        Not present in the {bodyModel} body model; it is modelled in the {other} body.
+      </span>
+      <Button size="xs" variant="secondary" onClick={() => useWorkspace.getState().setBodyModel(other)}>
+        Show in the {other} body
+      </Button>
     </div>
   );
 }
@@ -198,6 +220,7 @@ export function StructurePanel({
           )}
           <VerificationBadge status={d.verification_status} />
         </div>
+        {!meshIds.length && d.mesh_ids.length > 0 && <OtherBodyNotice />}
         <div className="flex flex-wrap gap-1.5">
           <Button size="sm" variant="secondary" disabled={!meshIds.length} onClick={() => ws.requestFocus(meshIds)}>
             <Crosshair /> Focus

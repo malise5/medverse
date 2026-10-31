@@ -6,7 +6,18 @@
 import { CameraControls, Html, useGLTF } from "@react-three/drei";
 import { useFrame, useThree, type ThreeEvent } from "@react-three/fiber";
 import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Box3, Color, Mesh, Plane, Vector3, type BufferGeometry, type Material, type Object3D } from "three";
+import {
+  Box3,
+  Color,
+  Mesh,
+  PMREMGenerator,
+  Plane,
+  Vector3,
+  type BufferGeometry,
+  type Material,
+  type Object3D,
+} from "three";
+import { RoomEnvironment } from "three/examples/jsm/environments/RoomEnvironment.js";
 import { acceleratedRaycast, computeBoundsTree, type MeshBVH } from "three-mesh-bvh";
 
 import type { AnatomicalSystem, AnimationBinding, AssetBundle } from "@/lib/api/types";
@@ -77,6 +88,29 @@ const FLOW_LEVELS = 5;
 const noRaycast = () => {};
 // BVH-accelerated picking: the scene holds ~1M triangles across ~1,300 meshes.
 const defaultRaycast = acceleratedRaycast;
+
+/**
+ * Image-based lighting from a procedural studio room (three.js RoomEnvironment): soft
+ * reflections that give organs and bone their form. Generated locally, no download.
+ */
+function StudioEnvironment() {
+  const { gl, scene, invalidate } = useThree();
+  useEffect(() => {
+    const pmrem = new PMREMGenerator(gl);
+    const room = new RoomEnvironment();
+    const env = pmrem.fromScene(room, 0.04).texture;
+    scene.environment = env;
+    scene.environmentIntensity = 0.32;
+    invalidate();
+    return () => {
+      scene.environment = null;
+      env.dispose();
+      room.dispose();
+      pmrem.dispose();
+    };
+  }, [gl, scene, invalidate]);
+  return null;
+}
 
 function BundleLayer({
   bundle,
@@ -212,7 +246,7 @@ export function AnatomyScene({
       else if (hoveredMesh === r.meshId) state = "hovered";
       const opacity = s.systemOpacity[r.systemId] ?? 1;
       const color = partColor.get(r.meshId) ?? meshColor(r.systemId, r.group);
-      mesh.material = materials.get(color, state, opacity);
+      mesh.material = materials.get(color, state, opacity, r.systemId);
       r.baseMaterial = mesh.material;
       mesh.renderOrder = opacity < 1 ? 1 : 0;
       // Overlay child (shared geometry) shows the selection through occluding anatomy.
@@ -519,9 +553,12 @@ export function AnatomyScene({
 
   return (
     <>
-      <hemisphereLight args={["#e8f1ff", "#2a2420", 1.1]} />
-      <directionalLight position={[2, 4, 3]} intensity={1.6} />
-      <directionalLight position={[-3, 2, -2]} intensity={0.6} />
+      <StudioEnvironment />
+      <hemisphereLight args={["#e8f1ff", "#2a2420", 0.55]} />
+      {/* key (warm, front-left high), fill (cool, right), rim (behind) for silhouettes */}
+      <directionalLight position={[2, 4, 3]} intensity={1.35} color="#fff4e8" />
+      <directionalLight position={[-3, 1.5, 1.5]} intensity={0.45} color="#dce8ff" />
+      <directionalLight position={[0, 2.5, -4]} intensity={0.9} color="#cfe0ff" />
       <CameraControls
         ref={controls}
         makeDefault

@@ -148,9 +148,28 @@ class BundleOut(ORM):
     byte_size: int
     mesh_count: int
     is_placeholder: bool
+    body_model: str
+
+
+class BodyModelSystem(BaseModel):
+    system_id: str
+    mesh_count: int
+
+
+class BodyModelOut(BaseModel):
+    """A complete 3D body (male or female) and what its source covers."""
+
+    id: str
+    label: str
+    description: str
+    sources: list[str]
+    license: str
+    mesh_count: int
+    systems: list[BodyModelSystem]
 
 
 class AssetManifest(BaseModel):
+    body_model: str
     bundles: list[BundleOut]
     # mesh id -> [bundle id, structure id]; compact because it covers every mesh.
     meshes: dict[str, tuple[str, str]]

@@ -136,6 +136,8 @@ class ModuleSummary(BaseModel):
 class OrganOut(OrganItem):
     in_3d: bool
     structure_name: str | None
+    # bodies whose 3D model contains the organ (e.g. ["female"] for the uterus)
+    body_models: list[str] = []
 
 
 class QuestionOut(BaseModel):
@@ -147,6 +149,8 @@ class QuestionOut(BaseModel):
     stem: str
     options: list[str] | None
     last_correct: bool | None
+    # identify questions: bodies in which an accepted structure can be selected
+    body_models: list[str] = []
 
 
 class ModuleDetail(BaseModel):

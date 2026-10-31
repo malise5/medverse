@@ -157,8 +157,12 @@ export function Quiz({ module, level }: { module: ModuleDetail; level: LearningL
                   back here afterwards.
                 </p>
                 <Button size="sm" className="justify-self-start" asChild>
-                  <Link href={`/anatomy?quiz=${encodeURIComponent(q.id)}&module=${encodeURIComponent(module.id)}`}>
-                    <Crosshair /> Find it in 3D
+                  <Link
+                    href={`/anatomy?quiz=${encodeURIComponent(q.id)}&module=${encodeURIComponent(module.id)}${
+                      q.body_models.length === 1 ? `&model=${q.body_models[0]}` : ""
+                    }`}
+                  >
+                    <Crosshair /> Find it in 3D{q.body_models.length === 1 ? ` (${q.body_models[0]} body)` : ""}
                   </Link>
                 </Button>
               </div>

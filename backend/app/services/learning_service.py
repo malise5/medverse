@@ -92,6 +92,15 @@ def get_module(db: Session, module_id: str, user_id: uuid.UUID) -> ModuleDetail:
         )
     )
     results = _latest_results(db, user_id)
+    targets = {sid for q in questions if q.kind == "identify" for sid in q.answer}  # type: ignore[union-attr]
+    bodies = anatomy_service.body_models_of(db, sorted(set(organ_ids) | targets))
+
+    def question_bodies(q: QuizQuestion) -> list[str]:
+        if q.kind != "identify":
+            return []
+        found = {b for sid in q.answer for b in bodies.get(sid, [])}  # type: ignore[union-attr]
+        return [b for b in ("male", "female") if b in found]
+
     return ModuleDetail(
         id=m.id,
         title=m.title,
@@ -103,8 +112,9 @@ def get_module(db: Session, module_id: str, user_id: uuid.UUID) -> ModuleDetail:
         organs=[
             OrganOut(
                 **o.model_dump(),
-                in_3d=o.structure_id in names,
+                in_3d=bool(o.structure_id and bodies.get(o.structure_id)),
                 structure_name=names.get(o.structure_id) if o.structure_id else None,
+                body_models=bodies.get(o.structure_id, []) if o.structure_id else [],
             )
             for o in body.organs
         ],
@@ -121,6 +131,7 @@ def get_module(db: Session, module_id: str, user_id: uuid.UUID) -> ModuleDetail:
                 stem=q.stem,
                 options=q.options,
                 last_correct=results.get(q.id),
+                body_models=question_bodies(q),
             )
             for q in questions
         ],

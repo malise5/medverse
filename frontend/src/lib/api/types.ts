@@ -117,9 +117,24 @@ export interface AssetBundle {
   byte_size: number;
   mesh_count: number;
   is_placeholder: boolean;
+  body_model: BodyModel;
+}
+
+/** The two complete 3D bodies; each comes from its own anatomical source. */
+export type BodyModel = "male" | "female";
+
+export interface BodyModelInfo {
+  id: BodyModel;
+  label: string;
+  description: string;
+  sources: string[];
+  license: string;
+  mesh_count: number;
+  systems: { system_id: string; mesh_count: number }[];
 }
 
 export interface AssetManifest {
+  body_model: BodyModel;
   bundles: AssetBundle[];
   meshes: Record<string, [bundleId: string, structureId: string]>;
 }
@@ -299,6 +314,8 @@ export interface ModuleOrgan {
   role: string;
   in_3d: boolean;
   structure_name: string | null;
+  /** Bodies whose 3D model contains this organ. */
+  body_models: BodyModel[];
 }
 
 export interface KeyTerm {
@@ -316,6 +333,8 @@ export interface QuizQuestion {
   options: string[] | null;
   /** Result of the learner's most recent attempt, or null if not attempted. */
   last_correct: boolean | null;
+  /** Identify questions: bodies in which the answer can be selected. */
+  body_models: BodyModel[];
 }
 
 export interface ModuleDetail {

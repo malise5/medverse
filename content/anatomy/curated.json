@@ -2454,6 +2454,258 @@
           ]
         }
       ]
+    },
+    {
+      "id": "FMA:17558",
+      "latin_name": "Uterus",
+      "synonyms": [
+        {
+          "synonym": "womb",
+          "kind": "exact"
+        },
+        {
+          "synonym": "metra",
+          "kind": "related"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The uterus, or womb, is a hollow, muscular organ in the pelvis, shaped roughly like an upside-down pear. A baby grows inside it during pregnancy. Each month, if no pregnancy begins, its inner lining is shed as the menstrual period.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The uterus lies in the lesser pelvis between the urinary bladder anteriorly and the rectum posteriorly. It has a fundus (above the openings of the uterine tubes), a body and a cervix, which projects into the vagina; the narrow isthmus joins body and cervix. Its wall has three layers: the endometrium (mucosa), the myometrium (smooth muscle) and the perimetrium (serosa). In most women it is anteverted (tilted forwards on the vagina) and anteflexed (body bent forwards on the cervix).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "blood_supply",
+          "audience": "undergraduate",
+          "body": "The uterine arteries, branches of the internal iliac arteries, run in the base of the broad ligament and anastomose with the ovarian arteries. Near the cervix each uterine artery crosses above the ureter.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Because the uterine artery crosses just above the ureter close to the cervix, the ureter is at risk of being clamped or cut during hysterectomy. Fibroids (leiomyomas), benign tumours of the myometrium, are common and can cause heavy menstrual bleeding.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:7213",
+        "FMA:7214"
+      ],
+      "latin_name": "Ovarium",
+      "synonyms": [
+        {
+          "synonym": "ovaries",
+          "kind": "related"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The ovaries are two small, almond-shaped organs, one on each side of the uterus. They contain the eggs (oocytes) and release one about once a month. They also make the hormones oestrogen and progesterone (US spelling: estrogen).",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "Each ovary lies in the ovarian fossa on the lateral pelvic wall, attached to the broad ligament by the mesovarium, to the uterus by the ovarian ligament and to the pelvic wall by the suspensory ligament, which carries its vessels. It is not covered by peritoneum, so an ovulated oocyte passes briefly into the peritoneal cavity before entering the uterine tube.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "blood_supply",
+          "audience": "undergraduate",
+          "body": "The ovarian arteries arise from the abdominal aorta at about the L2 level. The right ovarian vein drains into the inferior vena cava and the left into the left renal vein; lymph drains to the para-aortic (lumbar) nodes.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:18483",
+        "FMA:18484"
+      ],
+      "latin_name": "Tuba uterina",
+      "synonyms": [
+        {
+          "synonym": "fallopian tube",
+          "kind": "exact"
+        },
+        {
+          "synonym": "oviduct",
+          "kind": "related"
+        },
+        {
+          "synonym": "salpinx",
+          "kind": "related"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The uterine tubes (also called fallopian tubes) are two thin tubes that run from the top of the uterus towards the ovaries. They catch the egg when it is released and carry it to the uterus. Fertilisation usually happens inside a uterine tube.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "Each uterine tube is about 10 cm long and lies in the upper free edge of the broad ligament. From lateral to medial it has an infundibulum with finger-like fimbriae, a wide ampulla (the usual site of fertilisation), a narrow isthmus and a uterine (intramural) part that passes through the uterine wall. Ciliated epithelium and peristalsis move the oocyte or embryo towards the uterus.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Implantation of an embryo in the uterine tube (tubal ectopic pregnancy), most often in the ampulla, can rupture the tube and cause life-threatening bleeding. Scarring of the tubes after pelvic infection is an important cause of infertility.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:57987",
+        "FMA:57991"
+      ],
+      "latin_name": "Glandula mammaria",
+      "synonyms": [
+        {
+          "synonym": "breast",
+          "kind": "related"
+        },
+        {
+          "synonym": "mamma",
+          "kind": "related"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "Each breast contains a mammary gland, which can make milk to feed a baby after birth. The gland is made of lobes connected by ducts that open at the nipple, surrounded by fat that gives the breast its shape.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The breast lies on the deep fascia over pectoralis major and serratus anterior, from about the 2nd to the 6th rib, with an axillary tail extending towards the axilla. The mammary gland consists of 15–20 lobes drained by lactiferous ducts, each widening into a lactiferous sinus before opening on the nipple. Suspensory ligaments (of Cooper) run from the skin to the deep fascia. In TA2 the breast is part of the integument.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "About three-quarters of lymph from the breast drains to the axillary lymph nodes, which are therefore examined and sampled in breast cancer. A tumour that shortens the suspensory ligaments can dimple the overlying skin.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:7196",
+      "latin_name": "Splen",
+      "synonyms": [
+        {
+          "synonym": "lien",
+          "kind": "related"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The spleen is a soft organ about the size of a fist in the upper left part of the abdomen, behind the stomach and under the ribs. It filters the blood, removes old red blood cells and helps fight infection.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "The spleen lies in the left hypochondrium, deep to the 9th–11th ribs, with its long axis along the 10th rib. Its diaphragmatic surface is convex; its visceral surface touches the stomach, left kidney, left colic flexure and tail of the pancreas. The splenic artery (from the coeliac trunk) and splenic vein enter and leave at the hilum. Internally, red pulp filters blood and white pulp contains lymphoid tissue.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "The spleen is the abdominal organ most often injured in blunt trauma, and fractures of the overlying left lower ribs should raise suspicion of splenic injury. After splenectomy, vaccination against encapsulated bacteria is recommended.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:54973",
+        "FMA:54974"
+      ],
+      "latin_name": "Tonsilla palatina",
+      "synonyms": [
+        {
+          "synonym": "tonsil",
+          "kind": "related"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The palatine tonsils are the two lumps of lymphoid tissue you can see at the back of the throat, one on each side. They help protect the body against germs that enter through the mouth and nose.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "overview",
+          "audience": "undergraduate",
+          "body": "Each palatine tonsil lies in the tonsillar fossa between the palatoglossal and palatopharyngeal arches. It is a mass of lymphoid tissue covered by stratified squamous epithelium with deep crypts. Together with the pharyngeal and lingual tonsils it forms a ring of lymphoid tissue around the entrance to the airway and gut.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
     }
   ]
 }

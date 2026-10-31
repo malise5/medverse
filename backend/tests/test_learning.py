@@ -191,3 +191,19 @@ def test_structure_detail_serves_basic_level(auth_client):
         next(c for c in d["content"] if c["section"] == "overview")["audience"] == "undergraduate"
     )
     assert d["latin_name"] == "Gaster"
+
+
+def test_organs_and_questions_name_the_body_they_are_in(auth_client):
+    d = auth_client.get("/api/v1/learning/modules/reproductive").json()
+    organs = {o["structure_id"]: o for o in d["organs"] if o["structure_id"]}
+    assert organs["FMA:17558"]["body_models"] == ["female"] and organs["FMA:17558"]["in_3d"]
+    assert organs["FMA:9600"]["body_models"] == ["male"]
+    qs = {q["id"]: q for q in d["questions"]}
+    assert qs["rep-id-02"]["body_models"] == ["female"]
+    assert qs["rep-id-01"]["body_models"] == ["male"]
+    cv = auth_client.get("/api/v1/learning/modules/cardiovascular").json()
+    assert next(q for q in cv["questions"] if q["id"] == "cv-id-01")["body_models"] == [
+        "male",
+        "female",
+    ]
+    assert next(q for q in cv["questions"] if q["kind"] == "mcq")["body_models"] == []

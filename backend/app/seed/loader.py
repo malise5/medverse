@@ -50,6 +50,8 @@ from app.schemas.learning import ModuleIn, QuestionIn
 log = logging.getLogger("medverse.seed")
 
 BP3D_SOURCE = "bodyparts3d-4.0"
+HRA_SOURCE = "hra-vhf"  # Human Reference Atlas 3D reference organs, Visible Human Female
+HRA_REFERENCE = "hra2021"
 CURATED_SOURCE = "medverse-curated"
 CHUNK = 1000
 
@@ -151,6 +153,14 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
         ["id"],
     )
     system_ids = {s["id"] for s in systems}
+    overrides = {
+        sid: system
+        for system, ids in _read(content_dir / "systems.json")
+        .get("structure_system_overrides", {})
+        .items()
+        if not system.startswith("_")
+        for sid in ids
+    }
     report.counts["systems"] = len(systems)
 
     # Source-imported structures (BodyParts3D) --------------------------------
@@ -166,7 +176,7 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
             {
                 "id": s["id"],
                 "name": s["name"],
-                "system_id": s["system_id"],
+                "system_id": overrides.get(s["id"], s["system_id"]),
                 "laterality": s["laterality"],
                 "is_compound": s["is_compound"],
                 "identity_source": BP3D_SOURCE,
@@ -193,6 +203,48 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
     )
     report.counts["structures"] = len(structures)
 
+    # Female body (HRA): new structures only; shared ones keep their male-source record.
+    hra = content_dir / "generated" / "hra-female"
+    hra_structures = _read(hra / "structures.json") if (hra / "structures.json").exists() else []
+    # Upsert every female-source structure the male source does not define, so renamed
+    # or re-classified records from a newer female build replace older ones.
+    bp3d_ids = {s["id"] for s in structures}
+    hra_new = [s for s in hra_structures if s["id"] not in bp3d_ids]
+    for s in hra_new:
+        if s["system_id"] not in system_ids:
+            problems.append(f"female structure {s['id']}: unknown system {s['system_id']}")
+    _upsert(
+        db,
+        Structure,
+        [
+            {
+                "id": s["id"],
+                "name": s["name"],
+                "system_id": s["system_id"],
+                "laterality": s["laterality"],
+                "is_compound": s["is_compound"],
+                "identity_source": HRA_SOURCE,
+                "verification_status": VerificationStatus.SOURCE_IMPORTED.value,
+            }
+            for s in hra_new
+        ],
+        ["id"],
+    )
+    _upsert(
+        db,
+        StructureXref,
+        [
+            {
+                "structure_id": s["id"],
+                "source": s["id"].split(":", 1)[0],
+                "code": s["id"].split(":", 1)[1],
+                "license": "Identifier only (FMA CC BY 3.0 / Uberon CC BY 3.0)",
+            }
+            for s in hra_new
+        ],
+        ["structure_id", "source"],
+    )
+    report.counts["female_new_structures"] = len(hra_new)
     known = set(db.scalars(select(Structure.id)))
 
     # Graph: part_of from source + curated relations -------------------------
@@ -212,6 +264,26 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
                 "verification_status": VerificationStatus.SOURCE_IMPORTED.value,
                 "notes": None,
                 "reference_id": "bodyparts3d",
+            }
+        )
+
+    bp3d_triples = {(r["subject_id"], r["object_id"]) for r in rel_rows}
+    for r in _read(hra / "relationships.json") if (hra / "relationships.json").exists() else []:
+        if r["subject"] not in known or r["object"] not in known:
+            problems.append(f"female relation {r}: unknown structure")
+            continue
+        if (r["subject"], r["object"]) in bp3d_triples:
+            continue
+        rel_rows.append(
+            {
+                "subject_id": r["subject"],
+                "predicate": Predicate.PART_OF.value,
+                "object_id": r["object"],
+                "relation_class": Predicate.PART_OF.relation_class.value,
+                "source": HRA_SOURCE,
+                "verification_status": VerificationStatus.SOURCE_IMPORTED.value,
+                "notes": None,
+                "reference_id": HRA_REFERENCE if HRA_REFERENCE in ref_ids else None,
             }
         )
 
@@ -302,20 +374,26 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
     report.counts["relationships"] = len(rel_rows)
     report.counts["content_sections"] = len(content_rows)
 
-    # 3D assets ----------------------------------------------------------------
-    bundles = _read(gen / "bundles.json") if (gen / "bundles.json").exists() else []
+    # 3D assets: one generated directory per body model ------------------------
+    bundles, meshes, sm = [], [], {}
+    for directory, body_model in ((gen, "male"), (hra, "female")):
+        for b in _read(directory / "bundles.json") if (directory / "bundles.json").exists() else []:
+            bundles.append({**b, "body_model": b.get("body_model", body_model)})
+        if (directory / "meshes.json").exists():
+            meshes.extend(_read(directory / "meshes.json"))
+        if (directory / "structure_meshes.json").exists():
+            for sid, mids in _read(directory / "structure_meshes.json").items():
+                sm.setdefault(sid, []).extend(mids)
     _upsert(db, AssetBundle, bundles, ["id"])
     bundle_ids = {b["id"] for b in bundles}
-    meshes = _read(gen / "meshes.json") if (gen / "meshes.json").exists() else []
     mesh_rows = []
     for m in meshes:
         if m["bundle_id"] not in bundle_ids or m["structure_id"] not in known:
             problems.append(f"mesh {m['id']}: unknown bundle or structure")
             continue
-        mesh_rows.append(m)
+        mesh_rows.append({"render_group": None, **m})
     _upsert(db, Mesh, mesh_rows, ["id"])
     mesh_ids = {m["id"] for m in mesh_rows}
-    sm = _read(gen / "structure_meshes.json") if (gen / "structure_meshes.json").exists() else {}
     db.execute(delete(StructureMesh))
     sm_rows = [
         {"structure_id": sid, "mesh_id": mid}

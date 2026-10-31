@@ -966,6 +966,54 @@
    ]
   },
   {
+   "id": "rep-id-02",
+   "module": "reproductive",
+   "kind": "identify",
+   "level": "basic",
+   "stem": "Find the uterus in the female body.",
+   "answer": [
+    "FMA:17558"
+   ],
+   "explanation": "The uterus lies in the pelvis between the urinary bladder (in front) and the rectum (behind).",
+   "references": [
+    "grays42",
+    "moore8"
+   ]
+  },
+  {
+   "id": "rep-id-03",
+   "module": "reproductive",
+   "kind": "identify",
+   "level": "undergraduate",
+   "stem": "Select an ovary.",
+   "answer": [
+    "FMA:7213",
+    "FMA:7214"
+   ],
+   "explanation": "Each ovary lies on the lateral wall of the pelvis, close to the fimbriated end of the uterine tube.",
+   "references": [
+    "grays42",
+    "moore8"
+   ]
+  },
+  {
+   "id": "rep-id-04",
+   "module": "reproductive",
+   "kind": "identify",
+   "level": "basic",
+   "stem": "Select a breast (mammary gland).",
+   "answer": [
+    "FMA:57987",
+    "FMA:57991"
+   ],
+   "explanation": "The breasts lie on the anterior chest wall over the pectoralis major; in TA2 they are part of the integument.",
+   "references": [
+    "grays42",
+    "moore8",
+    "fipat2019ta2"
+   ]
+  },
+  {
    "id": "endo-01",
    "module": "endocrine",
    "kind": "mcq",
@@ -1171,6 +1219,21 @@
    "explanation": "The thymus lies in the anterior mediastinum, behind the sternum.",
    "references": [
     "grays42"
+   ]
+  },
+  {
+   "id": "lymph-id-02",
+   "module": "lymphatic",
+   "kind": "identify",
+   "level": "undergraduate",
+   "stem": "Find the spleen.",
+   "answer": [
+    "FMA:7196"
+   ],
+   "explanation": "The spleen lies in the left upper abdomen under the 9th to 11th ribs, behind the stomach.",
+   "references": [
+    "grays42",
+    "moore8"
    ]
   },
   {

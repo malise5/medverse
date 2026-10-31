@@ -24,6 +24,7 @@ Legend: ✅ done and tested · 🟡 partial · ⬜ not started
 | Pathology: 2 educational scenarios with healthy-vs-scenario comparison | ✅ | |
 | Function playback: search → focus + spotlight → model-driven 3D animation (heart, lungs, brain/spinal cord, aorta) | ✅ | 3 new class C models with scientific tests; verified in headless Chrome |
 | Body-systems learning hub: 12 modules at three levels (beginner / intermediate / advanced), TA2 terminology, SI units, 80 quiz questions incl. "find it in 3D", per-user progress, glossary, layer builder | ✅ | content is draft pending expert review; verified in headless Chrome at desktop and phone widths |
+| Male and female 3D bodies with switcher; shared knowledge graph; studio lighting, tissue finishes, rim-lit selection; smoothed male meshes | ✅ | female body from HRA Visible Human Female (CC BY 4.0); verified in headless Chrome |
 | Responsive layout (sheets on < 1024 px) | 🟡 | implemented; not tested on real devices |
 | Frontend tests (Vitest) | 🟡 | unit/component; no Playwright E2E in repo yet |
 
@@ -31,8 +32,8 @@ Legend: ✅ done and tested · 🟡 partial · ⬜ not started
 
 ⬜ Saved views and annotations · ⬜ distance measurement (scene is metric) · ⬜ capped
 cross-sections (stencil) · ⬜ keyboard navigation of the 3D scene · ⬜ LOD tier and
-low-bandwidth mode · ⬜ IS-A asset set (cranial nerves) · ⬜ female and peripheral-nerve
-assets (licensed source required) · ⬜ Playwright E2E incl. 3D selection.
+low-bandwidth mode · ⬜ IS-A asset set (cranial nerves) · ✅ female body (Human Reference
+Atlas, Visible Human Female; muscles, endocrine glands and upper skeleton not in that source) · ⬜ peripheral-nerve assets · ⬜ Playwright E2E incl. 3D selection.
 
 ## Phase 3: Knowledge database
 

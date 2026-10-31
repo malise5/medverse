@@ -9,7 +9,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Skeleton } from "@/components/ui/skeleton";
 import { SYSTEM_COLORS } from "@/features/anatomy/engine/palette";
 import { EducationalDisclaimer } from "@/features/governance/badges";
-import { useAssetManifest, useConditions, useMe, useModels, useSystems } from "@/lib/api/queries";
+import { useBodyModels, useConditions, useMe, useModels, useSystems } from "@/lib/api/queries";
 import { cn } from "@/lib/utils";
 
 const QUICK_STARTS = [
@@ -38,12 +38,12 @@ function Stat({ label, value, hint }: { label: string; value: string | number | 
 export function Dashboard() {
   const me = useMe();
   const systems = useSystems();
-  const manifest = useAssetManifest();
+  const bodies = useBodyModels();
   const models = useModels();
   const conditions = useConditions();
 
   const structures = systems.data?.reduce((n, s) => n + s.structure_count, 0);
-  const meshes = manifest.data ? Object.keys(manifest.data.meshes).length : undefined;
+  const meshes = bodies.data ? bodies.data.reduce((n, b) => n + b.mesh_count, 0) : undefined;
   const maxMeshes = Math.max(1, ...(systems.data ?? []).map((s) => s.mesh_count));
 
   return (
@@ -60,7 +60,7 @@ export function Dashboard() {
       <Card>
         <CardContent className="grid grid-cols-2 gap-6 pt-6 md:grid-cols-5">
           <Stat label="Anatomical structures" value={structures} hint="FMA-identified" />
-          <Stat label="Selectable 3D meshes" value={meshes} hint="BodyParts3D 4.0" />
+          <Stat label="Selectable 3D meshes" value={meshes} hint="Male and female bodies" />
           <Stat label="Body systems with geometry" value={systems.data?.filter((s) => s.mesh_count > 0).length} />
           <Stat label="Simulation models" value={models.data?.length} hint="documented, tested" />
           <Stat label="Pathology models" value={conditions.data?.length} hint="educational" />

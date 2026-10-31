@@ -3,2419 +3,2822 @@
   "id": "FJ1654",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50029",
-  "triangle_count": 400
+  "triangle_count": 400,
+  "render_group": "artery"
  },
  {
   "id": "FJ1654M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50030",
-  "triangle_count": 400
+  "triangle_count": 400,
+  "render_group": "artery"
  },
  {
   "id": "FJ1655",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50169",
-  "triangle_count": 80
+  "triangle_count": 80,
+  "render_group": "artery"
  },
  {
   "id": "FJ1656",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50544",
-  "triangle_count": 766
+  "triangle_count": 766,
+  "render_group": "artery"
  },
  {
   "id": "FJ1656M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50544",
-  "triangle_count": 766
+  "triangle_count": 766,
+  "render_group": "artery"
  },
  {
   "id": "FJ1657",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50532",
-  "triangle_count": 304
+  "triangle_count": 304,
+  "render_group": "artery"
  },
  {
   "id": "FJ1658",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50088",
-  "triangle_count": 418
+  "triangle_count": 418,
+  "render_group": "artery"
  },
  {
   "id": "FJ1658M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50089",
-  "triangle_count": 418
+  "triangle_count": 418,
+  "render_group": "artery"
  },
  {
   "id": "FJ1661",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50678",
-  "triangle_count": 2488
+  "triangle_count": 2488,
+  "render_group": "artery"
  },
  {
   "id": "FJ1661M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50679",
-  "triangle_count": 2488
+  "triangle_count": 2488,
+  "render_group": "artery"
  },
  {
   "id": "FJ1662",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50377",
-  "triangle_count": 1226
+  "triangle_count": 1226,
+  "render_group": "artery"
  },
  {
   "id": "FJ1663",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50377",
-  "triangle_count": 316
+  "triangle_count": 316,
+  "render_group": "artery"
  },
  {
   "id": "FJ1672",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50542",
-  "triangle_count": 262
+  "triangle_count": 262,
+  "render_group": "artery"
  },
  {
   "id": "FJ1675",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50670",
-  "triangle_count": 778
+  "triangle_count": 778,
+  "render_group": "artery"
  },
  {
   "id": "FJ1675M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50671",
-  "triangle_count": 778
+  "triangle_count": 778,
+  "render_group": "artery"
  },
  {
   "id": "FJ1677",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50684",
-  "triangle_count": 262
+  "triangle_count": 262,
+  "render_group": "artery"
  },
  {
   "id": "FJ1677M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50685",
-  "triangle_count": 262
+  "triangle_count": 262,
+  "render_group": "artery"
  },
  {
   "id": "FJ1678",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50684",
-  "triangle_count": 1276
+  "triangle_count": 1276,
+  "render_group": "artery"
  },
  {
   "id": "FJ1678M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50685",
-  "triangle_count": 1276
+  "triangle_count": 1276,
+  "render_group": "artery"
  },
  {
   "id": "FJ1680",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50680",
-  "triangle_count": 1486
+  "triangle_count": 1486,
+  "render_group": "artery"
  },
  {
   "id": "FJ1680M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50681",
-  "triangle_count": 1486
+  "triangle_count": 1486,
+  "render_group": "artery"
  },
  {
   "id": "FJ1682",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3949",
-  "triangle_count": 1272
+  "triangle_count": 1272,
+  "render_group": "artery"
  },
  {
   "id": "FJ1682M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4062",
-  "triangle_count": 1272
+  "triangle_count": 1272,
+  "render_group": "artery"
  },
  {
   "id": "FJ1684",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50568",
-  "triangle_count": 558
+  "triangle_count": 558,
+  "render_group": "artery"
  },
  {
   "id": "FJ1684M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50569",
-  "triangle_count": 558
+  "triangle_count": 558,
+  "render_group": "artery"
  },
  {
   "id": "FJ1687",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50643",
-  "triangle_count": 2204
+  "triangle_count": 2204,
+  "render_group": "artery"
  },
  {
   "id": "FJ1687M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50644",
-  "triangle_count": 2204
+  "triangle_count": 2204,
+  "render_group": "artery"
  },
  {
   "id": "FJ1689",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50566",
-  "triangle_count": 294
+  "triangle_count": 294,
+  "render_group": "artery"
  },
  {
   "id": "FJ1689M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50567",
-  "triangle_count": 294
+  "triangle_count": 294,
+  "render_group": "artery"
  },
  {
   "id": "FJ1691",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50645",
-  "triangle_count": 2588
+  "triangle_count": 2588,
+  "render_group": "artery"
  },
  {
   "id": "FJ1691M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50646",
-  "triangle_count": 2588
+  "triangle_count": 2588,
+  "render_group": "artery"
  },
  {
   "id": "FJ1692",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50366",
-  "triangle_count": 800
+  "triangle_count": 800,
+  "render_group": "artery"
  },
  {
   "id": "FJ1695",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:49869",
-  "triangle_count": 2410
+  "triangle_count": 2410,
+  "render_group": "artery"
  },
  {
   "id": "FJ1695M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:49870",
-  "triangle_count": 2410
+  "triangle_count": 2410,
+  "render_group": "artery"
  },
  {
   "id": "FJ1700",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50519",
-  "triangle_count": 326
+  "triangle_count": 326,
+  "render_group": "artery"
  },
  {
   "id": "FJ1700M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50520",
-  "triangle_count": 326
+  "triangle_count": 326,
+  "render_group": "artery"
  },
  {
   "id": "FJ1701",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50519",
-  "triangle_count": 306
+  "triangle_count": 306,
+  "render_group": "artery"
  },
  {
   "id": "FJ1701M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50520",
-  "triangle_count": 306
+  "triangle_count": 306,
+  "render_group": "artery"
  },
  {
   "id": "FJ1702",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50519",
-  "triangle_count": 240
+  "triangle_count": 240,
+  "render_group": "artery"
  },
  {
   "id": "FJ1702M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50520",
-  "triangle_count": 240
+  "triangle_count": 240,
+  "render_group": "artery"
  },
  {
   "id": "FJ1703",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50519",
-  "triangle_count": 224
+  "triangle_count": 224,
+  "render_group": "artery"
  },
  {
   "id": "FJ1703M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50520",
-  "triangle_count": 224
+  "triangle_count": 224,
+  "render_group": "artery"
  },
  {
   "id": "FJ1704",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50519",
-  "triangle_count": 286
+  "triangle_count": 286,
+  "render_group": "artery"
  },
  {
   "id": "FJ1704M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50520",
-  "triangle_count": 286
+  "triangle_count": 286,
+  "render_group": "artery"
  },
  {
   "id": "FJ1705",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50519",
-  "triangle_count": 322
+  "triangle_count": 322,
+  "render_group": "artery"
  },
  {
   "id": "FJ1705M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50520",
-  "triangle_count": 322
+  "triangle_count": 322,
+  "render_group": "artery"
  },
  {
   "id": "FJ1706",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50519",
-  "triangle_count": 292
+  "triangle_count": 292,
+  "render_group": "artery"
  },
  {
   "id": "FJ1706M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50520",
-  "triangle_count": 292
+  "triangle_count": 292,
+  "render_group": "artery"
  },
  {
   "id": "FJ1707",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50519",
-  "triangle_count": 84
+  "triangle_count": 84,
+  "render_group": "artery"
  },
  {
   "id": "FJ1707M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50520",
-  "triangle_count": 84
+  "triangle_count": 84,
+  "render_group": "artery"
  },
  {
   "id": "FJ1708",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50519",
-  "triangle_count": 86
+  "triangle_count": 86,
+  "render_group": "artery"
  },
  {
   "id": "FJ1708M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50520",
-  "triangle_count": 86
+  "triangle_count": 86,
+  "render_group": "artery"
  },
  {
   "id": "FJ1709",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50519",
-  "triangle_count": 176
+  "triangle_count": 176,
+  "render_group": "artery"
  },
  {
   "id": "FJ1709M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50520",
-  "triangle_count": 176
+  "triangle_count": 176,
+  "render_group": "artery"
  },
  {
   "id": "FJ1710",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50519",
-  "triangle_count": 166
+  "triangle_count": 166,
+  "render_group": "artery"
  },
  {
   "id": "FJ1710M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50520",
-  "triangle_count": 166
+  "triangle_count": 166,
+  "render_group": "artery"
  },
  {
   "id": "FJ1711",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50519",
-  "triangle_count": 736
+  "triangle_count": 736,
+  "render_group": "artery"
  },
  {
   "id": "FJ1711M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50520",
-  "triangle_count": 736
+  "triangle_count": 736,
+  "render_group": "artery"
  },
  {
   "id": "FJ1713",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50085",
-  "triangle_count": 204
+  "triangle_count": 204,
+  "render_group": "artery"
  },
  {
   "id": "FJ1713M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50086",
-  "triangle_count": 204
+  "triangle_count": 204,
+  "render_group": "artery"
  },
  {
   "id": "FJ1715",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50519",
-  "triangle_count": 796
+  "triangle_count": 796,
+  "render_group": "artery"
  },
  {
   "id": "FJ1715M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50520",
-  "triangle_count": 796
+  "triangle_count": 796,
+  "render_group": "artery"
  },
  {
   "id": "FJ1720",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50664",
-  "triangle_count": 706
+  "triangle_count": 706,
+  "render_group": "artery"
  },
  {
   "id": "FJ1720M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50665",
-  "triangle_count": 706
+  "triangle_count": 706,
+  "render_group": "artery"
  },
  {
   "id": "FJ1723",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50639",
-  "triangle_count": 282
+  "triangle_count": 282,
+  "render_group": "artery"
  },
  {
   "id": "FJ1723M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50640",
-  "triangle_count": 282
+  "triangle_count": 282,
+  "render_group": "artery"
  },
  {
   "id": "FJ1725",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3958",
-  "triangle_count": 800
+  "triangle_count": 800,
+  "render_group": "artery"
  },
  {
   "id": "FJ1725M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4066",
-  "triangle_count": 800
+  "triangle_count": 800,
+  "render_group": "artery"
  },
  {
   "id": "FJ1726",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50574",
-  "triangle_count": 406
+  "triangle_count": 406,
+  "render_group": "artery"
  },
  {
   "id": "FJ1726M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50575",
-  "triangle_count": 406
+  "triangle_count": 406,
+  "render_group": "artery"
  },
  {
   "id": "FJ1727",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50672",
-  "triangle_count": 880
+  "triangle_count": 880,
+  "render_group": "artery"
  },
  {
   "id": "FJ1727M",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50673",
-  "triangle_count": 880
+  "triangle_count": 880,
+  "render_group": "artery"
  },
  {
   "id": "FJ1844",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50542",
-  "triangle_count": 244
+  "triangle_count": 244,
+  "render_group": "artery"
  },
  {
   "id": "FJ1846",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50737",
-  "triangle_count": 238
+  "triangle_count": 238,
+  "render_group": "artery"
  },
  {
   "id": "FJ1853",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50735",
-  "triangle_count": 3582
+  "triangle_count": 3582,
+  "render_group": "vein"
  },
  {
   "id": "FJ1893",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:15415",
-  "triangle_count": 1354
+  "triangle_count": 1354,
+  "render_group": "vein"
  },
  {
   "id": "FJ1913",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:15414",
-  "triangle_count": 3286
+  "triangle_count": 3286,
+  "render_group": "vein"
  },
  {
   "id": "FJ1914",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:82706",
-  "triangle_count": 316
+  "triangle_count": 316,
+  "render_group": "vein"
  },
  {
   "id": "FJ1916",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:70447",
-  "triangle_count": 362
+  "triangle_count": 362,
+  "render_group": "artery"
  },
  {
   "id": "FJ1928",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14749",
-  "triangle_count": 1088
+  "triangle_count": 1088,
+  "render_group": "artery"
  },
  {
   "id": "FJ1931",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:87217",
-  "triangle_count": 2290
+  "triangle_count": 2290,
+  "render_group": "artery"
  },
  {
   "id": "FJ1932",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3789",
-  "triangle_count": 2270
+  "triangle_count": 2270,
+  "render_group": "artery"
  },
  {
   "id": "FJ1934",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4149",
-  "triangle_count": 1010
+  "triangle_count": 1010,
+  "render_group": "artery"
  },
  {
   "id": "FJ1935",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:5042",
-  "triangle_count": 184
+  "triangle_count": 184,
+  "render_group": "artery"
  },
  {
   "id": "FJ1936",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3988",
-  "triangle_count": 2252
+  "triangle_count": 2252,
+  "render_group": "artery"
  },
  {
   "id": "FJ1937",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3969",
-  "triangle_count": 3546
+  "triangle_count": 3546,
+  "render_group": "artery"
  },
  {
   "id": "FJ1938",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22675",
-  "triangle_count": 2350
+  "triangle_count": 2350,
+  "render_group": "artery"
  },
  {
   "id": "FJ1967",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4634",
-  "triangle_count": 1526
+  "triangle_count": 1526,
+  "render_group": "artery"
  },
  {
   "id": "FJ1969",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:10692",
-  "triangle_count": 2528
+  "triangle_count": 2528,
+  "render_group": "artery"
  },
  {
   "id": "FJ1970",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4088",
-  "triangle_count": 206
+  "triangle_count": 206,
+  "render_group": "artery"
  },
  {
   "id": "FJ1971",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4083",
-  "triangle_count": 2270
+  "triangle_count": 2270,
+  "render_group": "artery"
  },
  {
   "id": "FJ1972",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4068",
-  "triangle_count": 3642
+  "triangle_count": 3642,
+  "render_group": "artery"
  },
  {
   "id": "FJ1976",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22676",
-  "triangle_count": 2350
+  "triangle_count": 2350,
+  "render_group": "artery"
  },
  {
   "id": "FJ1977",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4654",
-  "triangle_count": 1334
+  "triangle_count": 1334,
+  "render_group": "artery"
  },
  {
   "id": "FJ1979",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4077",
-  "triangle_count": 2564
+  "triangle_count": 2564,
+  "render_group": "artery"
  },
  {
   "id": "FJ1986",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4797",
-  "triangle_count": 786
+  "triangle_count": 786,
+  "render_group": "vein"
  },
  {
   "id": "FJ1993",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4758",
-  "triangle_count": 3038
+  "triangle_count": 3038,
+  "render_group": "vein"
  },
  {
   "id": "FJ2011",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14749",
-  "triangle_count": 958
+  "triangle_count": 958,
+  "render_group": "artery"
  },
  {
   "id": "FJ2013",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50737",
-  "triangle_count": 238
+  "triangle_count": 238,
+  "render_group": "artery"
  },
  {
   "id": "FJ2025",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14824",
-  "triangle_count": 2106
+  "triangle_count": 2106,
+  "render_group": "artery"
  },
  {
   "id": "FJ2034",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14819",
-  "triangle_count": 114
+  "triangle_count": 114,
+  "render_group": "artery"
  },
  {
   "id": "FJ2038",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14752",
-  "triangle_count": 206
+  "triangle_count": 206,
+  "render_group": "artery"
  },
  {
   "id": "FJ2041",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8620",
-  "triangle_count": 290
+  "triangle_count": 290,
+  "render_group": "artery"
  },
  {
   "id": "FJ2044",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8620",
-  "triangle_count": 276
+  "triangle_count": 276,
+  "render_group": "artery"
  },
  {
   "id": "FJ2046",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14753",
-  "triangle_count": 288
+  "triangle_count": 288,
+  "render_group": "artery"
  },
  {
   "id": "FJ2055",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:43916",
-  "triangle_count": 1102
+  "triangle_count": 1102,
+  "render_group": "artery"
  },
  {
   "id": "FJ2058",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:69517",
-  "triangle_count": 786
+  "triangle_count": 786,
+  "render_group": "artery"
  },
  {
   "id": "FJ2064",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:69517",
-  "triangle_count": 732
+  "triangle_count": 732,
+  "render_group": "artery"
  },
  {
   "id": "FJ2065",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:43897",
-  "triangle_count": 17412
+  "triangle_count": 17412,
+  "render_group": "artery"
  },
  {
   "id": "FJ2067",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:69495",
-  "triangle_count": 642
+  "triangle_count": 642,
+  "render_group": "artery"
  },
  {
   "id": "FJ2069",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22508",
-  "triangle_count": 6530
+  "triangle_count": 6530,
+  "render_group": "artery"
  },
  {
   "id": "FJ2073",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:43917",
-  "triangle_count": 1148
+  "triangle_count": 1148,
+  "render_group": "artery"
  },
  {
   "id": "FJ2074",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:70250",
-  "triangle_count": 740
+  "triangle_count": 740,
+  "render_group": "artery"
  },
  {
   "id": "FJ2078",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:20802",
-  "triangle_count": 1102
+  "triangle_count": 1102,
+  "render_group": "artery"
  },
  {
   "id": "FJ2079",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:43932",
-  "triangle_count": 900
+  "triangle_count": 900,
+  "render_group": "artery"
  },
  {
   "id": "FJ2081",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:69491",
-  "triangle_count": 1608
+  "triangle_count": 1608,
+  "render_group": "artery"
  },
  {
   "id": "FJ2082",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:43930",
-  "triangle_count": 764
+  "triangle_count": 764,
+  "render_group": "artery"
  },
  {
   "id": "FJ2085",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:43944",
-  "triangle_count": 1200
+  "triangle_count": 1200,
+  "render_group": "artery"
  },
  {
   "id": "FJ2086",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:77381",
-  "triangle_count": 16732
+  "triangle_count": 16732,
+  "render_group": "artery"
  },
  {
   "id": "FJ2087",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:43899",
-  "triangle_count": 13218
+  "triangle_count": 13218,
+  "render_group": "artery"
  },
  {
   "id": "FJ2089",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:43938",
-  "triangle_count": 948
+  "triangle_count": 948,
+  "render_group": "artery"
  },
  {
   "id": "FJ2096",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:43956",
-  "triangle_count": 2724
+  "triangle_count": 2724,
+  "render_group": "artery"
  },
  {
   "id": "FJ2130",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:43896",
-  "triangle_count": 17334
+  "triangle_count": 17334,
+  "render_group": "artery"
  },
  {
   "id": "FJ2133",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:69494",
-  "triangle_count": 634
+  "triangle_count": 634,
+  "render_group": "artery"
  },
  {
   "id": "FJ2137",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22507",
-  "triangle_count": 6536
+  "triangle_count": 6536,
+  "render_group": "artery"
  },
  {
   "id": "FJ2143",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:70249",
-  "triangle_count": 752
+  "triangle_count": 752,
+  "render_group": "artery"
  },
  {
   "id": "FJ2158",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:20801",
-  "triangle_count": 1110
+  "triangle_count": 1110,
+  "render_group": "artery"
  },
  {
   "id": "FJ2159",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:43931",
-  "triangle_count": 936
+  "triangle_count": 936,
+  "render_group": "artery"
  },
  {
   "id": "FJ2163",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:69490",
-  "triangle_count": 1700
+  "triangle_count": 1700,
+  "render_group": "artery"
  },
  {
   "id": "FJ2164",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:43929",
-  "triangle_count": 772
+  "triangle_count": 772,
+  "render_group": "artery"
  },
  {
   "id": "FJ2169",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:43943",
-  "triangle_count": 1230
+  "triangle_count": 1230,
+  "render_group": "artery"
  },
  {
   "id": "FJ2170",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:77380",
-  "triangle_count": 16778
+  "triangle_count": 16778,
+  "render_group": "artery"
  },
  {
   "id": "FJ2172",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:43898",
-  "triangle_count": 13130
+  "triangle_count": 13130,
+  "render_group": "artery"
  },
  {
   "id": "FJ2179",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:43937",
-  "triangle_count": 898
+  "triangle_count": 898,
+  "render_group": "artery"
  },
  {
   "id": "FJ2206",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:43956",
-  "triangle_count": 2644
+  "triangle_count": 2644,
+  "render_group": "artery"
  },
  {
   "id": "FJ2209",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:10697",
-  "triangle_count": 482
+  "triangle_count": 482,
+  "render_group": "artery"
  },
  {
   "id": "FJ2210",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:10680",
-  "triangle_count": 480
+  "triangle_count": 480,
+  "render_group": "artery"
  },
  {
   "id": "FJ2211",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:23069",
-  "triangle_count": 974
+  "triangle_count": 974,
+  "render_group": "artery"
  },
  {
   "id": "FJ2212",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22683",
-  "triangle_count": 3272
+  "triangle_count": 3272,
+  "render_group": "artery"
  },
  {
   "id": "FJ2214",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22813",
-  "triangle_count": 1966
+  "triangle_count": 1966,
+  "render_group": "artery"
  },
  {
   "id": "FJ2215",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22713",
-  "triangle_count": 1176
+  "triangle_count": 1176,
+  "render_group": "artery"
  },
  {
   "id": "FJ2218",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22910",
-  "triangle_count": 18338
+  "triangle_count": 18338,
+  "render_group": "vein"
  },
  {
   "id": "FJ2219",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22692",
-  "triangle_count": 3470
+  "triangle_count": 3470,
+  "render_group": "artery"
  },
  {
   "id": "FJ2220",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:13326",
-  "triangle_count": 22874
+  "triangle_count": 22874,
+  "render_group": "vein"
  },
  {
   "id": "FJ2221",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:23181",
-  "triangle_count": 762
+  "triangle_count": 762,
+  "render_group": "artery"
  },
  {
   "id": "FJ2223",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22808",
-  "triangle_count": 436
+  "triangle_count": 436,
+  "render_group": "artery"
  },
  {
   "id": "FJ2224",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4086",
-  "triangle_count": 242
+  "triangle_count": 242,
+  "render_group": "artery"
  },
  {
   "id": "FJ2225",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22697",
-  "triangle_count": 2506
+  "triangle_count": 2506,
+  "render_group": "artery"
  },
  {
   "id": "FJ2226",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4134",
-  "triangle_count": 1100
+  "triangle_count": 1100,
+  "render_group": "artery"
  },
  {
   "id": "FJ2230",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:23073",
-  "triangle_count": 788
+  "triangle_count": 788,
+  "render_group": "artery"
  },
  {
   "id": "FJ2231",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22773",
-  "triangle_count": 320
+  "triangle_count": 320,
+  "render_group": "artery"
  },
  {
   "id": "FJ2232",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:10552",
-  "triangle_count": 4532
+  "triangle_count": 4532,
+  "render_group": "artery"
  },
  {
   "id": "FJ2236",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22822",
-  "triangle_count": 724
+  "triangle_count": 724,
+  "render_group": "artery"
  },
  {
   "id": "FJ2239",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22687",
-  "triangle_count": 974
+  "triangle_count": 974,
+  "render_group": "artery"
  },
  {
   "id": "FJ2240",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22687",
-  "triangle_count": 688
+  "triangle_count": 688,
+  "render_group": "artery"
  },
  {
   "id": "FJ2241",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22805",
-  "triangle_count": 378
+  "triangle_count": 378,
+  "render_group": "artery"
  },
  {
   "id": "FJ2242",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22734",
-  "triangle_count": 7764
+  "triangle_count": 7764,
+  "render_group": "artery"
  },
  {
   "id": "FJ2243",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22766",
-  "triangle_count": 2606
+  "triangle_count": 2606,
+  "render_group": "artery"
  },
  {
   "id": "FJ2246",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22679",
-  "triangle_count": 790
+  "triangle_count": 790,
+  "render_group": "artery"
  },
  {
   "id": "FJ2251",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:10681",
-  "triangle_count": 1928
+  "triangle_count": 1928,
+  "render_group": "artery"
  },
  {
   "id": "FJ2252",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:66564",
-  "triangle_count": 468
+  "triangle_count": 468,
+  "render_group": "artery"
  },
  {
   "id": "FJ2253",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:66322",
-  "triangle_count": 2104
+  "triangle_count": 2104,
+  "render_group": "artery"
  },
  {
   "id": "FJ2255",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4084",
-  "triangle_count": 122
+  "triangle_count": 122,
+  "render_group": "artery"
  },
  {
   "id": "FJ2256",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:10683",
-  "triangle_count": 646
+  "triangle_count": 646,
+  "render_group": "artery"
  },
  {
   "id": "FJ2257",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:10682",
-  "triangle_count": 366
+  "triangle_count": 366,
+  "render_group": "artery"
  },
  {
   "id": "FJ2258",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22798",
-  "triangle_count": 7114
+  "triangle_count": 7114,
+  "render_group": "artery"
  },
  {
   "id": "FJ2259",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22802",
-  "triangle_count": 466
+  "triangle_count": 466,
+  "render_group": "artery"
  },
  {
   "id": "FJ2263",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:23068",
-  "triangle_count": 996
+  "triangle_count": 996,
+  "render_group": "artery"
  },
  {
   "id": "FJ2264",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22682",
-  "triangle_count": 3238
+  "triangle_count": 3238,
+  "render_group": "artery"
  },
  {
   "id": "FJ2266",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22812",
-  "triangle_count": 1992
+  "triangle_count": 1992,
+  "render_group": "artery"
  },
  {
   "id": "FJ2267",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22712",
-  "triangle_count": 1204
+  "triangle_count": 1204,
+  "render_group": "artery"
  },
  {
   "id": "FJ2270",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22909",
-  "triangle_count": 18150
+  "triangle_count": 18150,
+  "render_group": "vein"
  },
  {
   "id": "FJ2271",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22691",
-  "triangle_count": 3112
+  "triangle_count": 3112,
+  "render_group": "artery"
  },
  {
   "id": "FJ2272",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:13325",
-  "triangle_count": 22622
+  "triangle_count": 22622,
+  "render_group": "vein"
  },
  {
   "id": "FJ2273",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:23180",
-  "triangle_count": 778
+  "triangle_count": 778,
+  "render_group": "artery"
  },
  {
   "id": "FJ2275",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22807",
-  "triangle_count": 430
+  "triangle_count": 430,
+  "render_group": "artery"
  },
  {
   "id": "FJ2276",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:5039",
-  "triangle_count": 244
+  "triangle_count": 244,
+  "render_group": "artery"
  },
  {
   "id": "FJ2277",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22696",
-  "triangle_count": 2346
+  "triangle_count": 2346,
+  "render_group": "artery"
  },
  {
   "id": "FJ2278",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:10660",
-  "triangle_count": 1104
+  "triangle_count": 1104,
+  "render_group": "artery"
  },
  {
   "id": "FJ2282",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:23072",
-  "triangle_count": 812
+  "triangle_count": 812,
+  "render_group": "artery"
  },
  {
   "id": "FJ2283",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22772",
-  "triangle_count": 312
+  "triangle_count": 312,
+  "render_group": "artery"
  },
  {
   "id": "FJ2284",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4057",
-  "triangle_count": 4446
+  "triangle_count": 4446,
+  "render_group": "artery"
  },
  {
   "id": "FJ2288",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22821",
-  "triangle_count": 730
+  "triangle_count": 730,
+  "render_group": "artery"
  },
  {
   "id": "FJ2291",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22685",
-  "triangle_count": 984
+  "triangle_count": 984,
+  "render_group": "artery"
  },
  {
   "id": "FJ2292",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22685",
-  "triangle_count": 1126
+  "triangle_count": 1126,
+  "render_group": "artery"
  },
  {
   "id": "FJ2293",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22804",
-  "triangle_count": 380
+  "triangle_count": 380,
+  "render_group": "artery"
  },
  {
   "id": "FJ2294",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22733",
-  "triangle_count": 7472
+  "triangle_count": 7472,
+  "render_group": "artery"
  },
  {
   "id": "FJ2295",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22764",
-  "triangle_count": 2602
+  "triangle_count": 2602,
+  "render_group": "artery"
  },
  {
   "id": "FJ2298",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22678",
-  "triangle_count": 786
+  "triangle_count": 786,
+  "render_group": "artery"
  },
  {
   "id": "FJ2303",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:10698",
-  "triangle_count": 1912
+  "triangle_count": 1912,
+  "render_group": "artery"
  },
  {
   "id": "FJ2304",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:66563",
-  "triangle_count": 472
+  "triangle_count": 472,
+  "render_group": "artery"
  },
  {
   "id": "FJ2305",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:66321",
-  "triangle_count": 2108
+  "triangle_count": 2108,
+  "render_group": "artery"
  },
  {
   "id": "FJ2307",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3992",
-  "triangle_count": 108
+  "triangle_count": 108,
+  "render_group": "artery"
  },
  {
   "id": "FJ2308",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:10700",
-  "triangle_count": 624
+  "triangle_count": 624,
+  "render_group": "artery"
  },
  {
   "id": "FJ2309",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:10699",
-  "triangle_count": 364
+  "triangle_count": 364,
+  "render_group": "artery"
  },
  {
   "id": "FJ2310",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22797",
-  "triangle_count": 6876
+  "triangle_count": 6876,
+  "render_group": "artery"
  },
  {
   "id": "FJ2311",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22801",
-  "triangle_count": 472
+  "triangle_count": 472,
+  "render_group": "artery"
  },
  {
   "id": "FJ2330",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:23064",
-  "triangle_count": 3376
+  "triangle_count": 3376,
+  "render_group": "artery"
  },
  {
   "id": "FJ2341",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22935",
-  "triangle_count": 2570
+  "triangle_count": 2570,
+  "render_group": "vein"
  },
  {
   "id": "FJ2361",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:23063",
-  "triangle_count": 3400
+  "triangle_count": 3400,
+  "render_group": "artery"
  },
  {
   "id": "FJ2373",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22707",
-  "triangle_count": 1476
+  "triangle_count": 1476,
+  "render_group": "artery"
  },
  {
   "id": "FJ2374",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:22708",
-  "triangle_count": 1476
+  "triangle_count": 1476,
+  "render_group": "artery"
  },
  {
   "id": "FJ2386",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:70447",
-  "triangle_count": 362
+  "triangle_count": 362,
+  "render_group": "artery"
  },
  {
   "id": "FJ2404",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:15415",
-  "triangle_count": 6706
+  "triangle_count": 6706,
+  "render_group": "vein"
  },
  {
   "id": "FJ2405",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:15414",
-  "triangle_count": 3230
+  "triangle_count": 3230,
+  "render_group": "vein"
  },
  {
   "id": "FJ2415",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14339",
-  "triangle_count": 1386
+  "triangle_count": 1386,
+  "render_group": "vein"
  },
  {
   "id": "FJ2416",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14338",
-  "triangle_count": 3538
+  "triangle_count": 3538,
+  "render_group": "vein"
  },
  {
   "id": "FJ2417",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:7247",
-  "triangle_count": 1272
+  "triangle_count": 1272,
+  "render_group": "vein"
  },
  {
   "id": "FJ2418",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:7265",
-  "triangle_count": 816
+  "triangle_count": 816,
+  "render_group": "heart"
  },
  {
   "id": "FJ2419",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:7260",
-  "triangle_count": 882
+  "triangle_count": 882,
+  "render_group": "vein"
  },
  {
   "id": "FJ2420",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:7242",
-  "triangle_count": 7558
+  "triangle_count": 7558,
+  "render_group": "heart"
  },
  {
   "id": "FJ2421",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:7238",
-  "triangle_count": 8160
+  "triangle_count": 8160,
+  "render_group": "vein"
  },
  {
   "id": "FJ2422",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9466",
-  "triangle_count": 1722
+  "triangle_count": 1722,
+  "render_group": "heart"
  },
  {
   "id": "FJ2423",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9291",
-  "triangle_count": 1918
+  "triangle_count": 1918,
+  "render_group": "vein"
  },
  {
   "id": "FJ2424",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:11359",
-  "triangle_count": 2244
+  "triangle_count": 2244,
+  "render_group": "vein"
  },
  {
   "id": "FJ2425",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9465",
-  "triangle_count": 1064
+  "triangle_count": 1064,
+  "render_group": "heart"
  },
  {
   "id": "FJ2426",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:7254",
-  "triangle_count": 914
+  "triangle_count": 914,
+  "render_group": "heart"
  },
  {
   "id": "FJ2427",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:7250",
-  "triangle_count": 996
+  "triangle_count": 996,
+  "render_group": "vein"
  },
  {
   "id": "FJ2429",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:7264",
-  "triangle_count": 780
+  "triangle_count": 780,
+  "render_group": "heart"
  },
  {
   "id": "FJ2430",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:7261",
-  "triangle_count": 692
+  "triangle_count": 692,
+  "render_group": "vein"
  },
  {
   "id": "FJ2431",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:7252",
-  "triangle_count": 316
+  "triangle_count": 316,
+  "render_group": "heart"
  },
  {
   "id": "FJ2432",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:7243",
-  "triangle_count": 3820
+  "triangle_count": 3820,
+  "render_group": "heart"
  },
  {
   "id": "FJ2433",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:7239",
-  "triangle_count": 4926
+  "triangle_count": 4926,
+  "render_group": "vein"
  },
  {
   "id": "FJ2434",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:7249",
-  "triangle_count": 1370
+  "triangle_count": 1370,
+  "render_group": "vein"
  },
  {
   "id": "FJ2435",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:7253",
-  "triangle_count": 920
+  "triangle_count": 920,
+  "render_group": "heart"
  },
  {
   "id": "FJ2436",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:7240",
-  "triangle_count": 4526
+  "triangle_count": 4526,
+  "render_group": "vein"
  },
  {
   "id": "FJ2437",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:7262",
-  "triangle_count": 844
+  "triangle_count": 844,
+  "render_group": "vein"
  },
  {
   "id": "FJ2438",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9531",
-  "triangle_count": 7544
+  "triangle_count": 7544,
+  "render_group": "heart"
  },
  {
   "id": "FJ2439",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9457",
-  "triangle_count": 17784
+  "triangle_count": 17784,
+  "render_group": "vein"
  },
  {
   "id": "FJ2562",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14773",
-  "triangle_count": 1674
+  "triangle_count": 1674,
+  "render_group": "artery"
  },
  {
   "id": "FJ2631",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:74912",
-  "triangle_count": 3032
+  "triangle_count": 3032,
+  "render_group": "artery"
  },
  {
   "id": "FJ2632",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3872",
-  "triangle_count": 108
+  "triangle_count": 108,
+  "render_group": "artery"
  },
  {
   "id": "FJ2633",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3860",
-  "triangle_count": 492
+  "triangle_count": 492,
+  "render_group": "artery"
  },
  {
   "id": "FJ2634",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3860",
-  "triangle_count": 196
+  "triangle_count": 196,
+  "render_group": "artery"
  },
  {
   "id": "FJ2635",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3860",
-  "triangle_count": 766
+  "triangle_count": 766,
+  "render_group": "artery"
  },
  {
   "id": "FJ2636",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3860",
-  "triangle_count": 420
+  "triangle_count": 420,
+  "render_group": "artery"
  },
  {
   "id": "FJ2637",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3860",
-  "triangle_count": 160
+  "triangle_count": 160,
+  "render_group": "artery"
  },
  {
   "id": "FJ2638",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3860",
-  "triangle_count": 290
+  "triangle_count": 290,
+  "render_group": "artery"
  },
  {
   "id": "FJ2639",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3860",
-  "triangle_count": 150
+  "triangle_count": 150,
+  "render_group": "artery"
  },
  {
   "id": "FJ2640",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3860",
-  "triangle_count": 260
+  "triangle_count": 260,
+  "render_group": "artery"
  },
  {
   "id": "FJ2641",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3876",
-  "triangle_count": 442
+  "triangle_count": 442,
+  "render_group": "artery"
  },
  {
   "id": "FJ2642",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3860",
-  "triangle_count": 964
+  "triangle_count": 964,
+  "render_group": "artery"
  },
  {
   "id": "FJ2643",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3868",
-  "triangle_count": 478
+  "triangle_count": 478,
+  "render_group": "artery"
  },
  {
   "id": "FJ2644",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3868",
-  "triangle_count": 306
+  "triangle_count": 306,
+  "render_group": "artery"
  },
  {
   "id": "FJ2645",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3872",
-  "triangle_count": 318
+  "triangle_count": 318,
+  "render_group": "artery"
  },
  {
   "id": "FJ2646",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3874",
-  "triangle_count": 470
+  "triangle_count": 470,
+  "render_group": "artery"
  },
  {
   "id": "FJ2647",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3876",
-  "triangle_count": 306
+  "triangle_count": 306,
+  "render_group": "artery"
  },
  {
   "id": "FJ2648",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3860",
-  "triangle_count": 286
+  "triangle_count": 286,
+  "render_group": "artery"
  },
  {
   "id": "FJ2649",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3895",
-  "triangle_count": 1380
+  "triangle_count": 1380,
+  "render_group": "artery"
  },
  {
   "id": "FJ2650",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3895",
-  "triangle_count": 396
+  "triangle_count": 396,
+  "render_group": "artery"
  },
  {
   "id": "FJ2651",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3895",
-  "triangle_count": 510
+  "triangle_count": 510,
+  "render_group": "artery"
  },
  {
   "id": "FJ2652",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3895",
-  "triangle_count": 308
+  "triangle_count": 308,
+  "render_group": "artery"
  },
  {
   "id": "FJ2653",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3895",
-  "triangle_count": 252
+  "triangle_count": 252,
+  "render_group": "artery"
  },
  {
   "id": "FJ2654",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3895",
-  "triangle_count": 172
+  "triangle_count": 172,
+  "render_group": "artery"
  },
  {
   "id": "FJ2655",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4706",
-  "triangle_count": 624
+  "triangle_count": 624,
+  "render_group": "vein"
  },
  {
   "id": "FJ2656",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4707",
-  "triangle_count": 826
+  "triangle_count": 826,
+  "render_group": "vein"
  },
  {
   "id": "FJ2667",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3818",
-  "triangle_count": 360
+  "triangle_count": 360,
+  "render_group": "artery"
  },
  {
   "id": "FJ2668",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3818",
-  "triangle_count": 216
+  "triangle_count": 216,
+  "render_group": "artery"
  },
  {
   "id": "FJ2670",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3807",
-  "triangle_count": 442
+  "triangle_count": 442,
+  "render_group": "artery"
  },
  {
   "id": "FJ2671",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3815",
-  "triangle_count": 478
+  "triangle_count": 478,
+  "render_group": "artery"
  },
  {
   "id": "FJ2672",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3818",
-  "triangle_count": 742
+  "triangle_count": 742,
+  "render_group": "artery"
  },
  {
   "id": "FJ2673",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3815",
-  "triangle_count": 338
+  "triangle_count": 338,
+  "render_group": "artery"
  },
  {
   "id": "FJ2674",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3818",
-  "triangle_count": 284
+  "triangle_count": 284,
+  "render_group": "artery"
  },
  {
   "id": "FJ2675",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3818",
-  "triangle_count": 200
+  "triangle_count": 200,
+  "render_group": "artery"
  },
  {
   "id": "FJ2676",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3807",
-  "triangle_count": 304
+  "triangle_count": 304,
+  "render_group": "artery"
  },
  {
   "id": "FJ2677",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3815",
-  "triangle_count": 252
+  "triangle_count": 252,
+  "render_group": "artery"
  },
  {
   "id": "FJ2678",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4713",
-  "triangle_count": 770
+  "triangle_count": 770,
+  "render_group": "vein"
  },
  {
   "id": "FJ2679",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4713",
-  "triangle_count": 252
+  "triangle_count": 252,
+  "render_group": "vein"
  },
  {
   "id": "FJ2680",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4713",
-  "triangle_count": 376
+  "triangle_count": 376,
+  "render_group": "vein"
  },
  {
   "id": "FJ2681",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4713",
-  "triangle_count": 204
+  "triangle_count": 204,
+  "render_group": "vein"
  },
  {
   "id": "FJ2682",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4713",
-  "triangle_count": 360
+  "triangle_count": 360,
+  "render_group": "vein"
  },
  {
   "id": "FJ2683",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4713",
-  "triangle_count": 168
+  "triangle_count": 168,
+  "render_group": "vein"
  },
  {
   "id": "FJ2684",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4713",
-  "triangle_count": 264
+  "triangle_count": 264,
+  "render_group": "vein"
  },
  {
   "id": "FJ2685",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4713",
-  "triangle_count": 236
+  "triangle_count": 236,
+  "render_group": "vein"
  },
  {
   "id": "FJ2686",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4713",
-  "triangle_count": 280
+  "triangle_count": 280,
+  "render_group": "vein"
  },
  {
   "id": "FJ2687",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4713",
-  "triangle_count": 618
+  "triangle_count": 618,
+  "render_group": "vein"
  },
  {
   "id": "FJ2688",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4713",
-  "triangle_count": 306
+  "triangle_count": 306,
+  "render_group": "vein"
  },
  {
   "id": "FJ2689",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4713",
-  "triangle_count": 274
+  "triangle_count": 274,
+  "render_group": "vein"
  },
  {
   "id": "FJ2690",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4713",
-  "triangle_count": 364
+  "triangle_count": 364,
+  "render_group": "vein"
  },
  {
   "id": "FJ2691",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4713",
-  "triangle_count": 156
+  "triangle_count": 156,
+  "render_group": "vein"
  },
  {
   "id": "FJ2692",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3840",
-  "triangle_count": 930
+  "triangle_count": 930,
+  "render_group": "artery"
  },
  {
   "id": "FJ2693",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3840",
-  "triangle_count": 766
+  "triangle_count": 766,
+  "render_group": "artery"
  },
  {
   "id": "FJ2694",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3840",
-  "triangle_count": 424
+  "triangle_count": 424,
+  "render_group": "artery"
  },
  {
   "id": "FJ2695",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3840",
-  "triangle_count": 236
+  "triangle_count": 236,
+  "render_group": "artery"
  },
  {
   "id": "FJ2696",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3840",
-  "triangle_count": 336
+  "triangle_count": 336,
+  "render_group": "artery"
  },
  {
   "id": "FJ2697",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3840",
-  "triangle_count": 220
+  "triangle_count": 220,
+  "render_group": "artery"
  },
  {
   "id": "FJ2698",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3840",
-  "triangle_count": 200
+  "triangle_count": 200,
+  "render_group": "artery"
  },
  {
   "id": "FJ2699",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3840",
-  "triangle_count": 126
+  "triangle_count": 126,
+  "render_group": "artery"
  },
  {
   "id": "FJ2700",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3840",
-  "triangle_count": 280
+  "triangle_count": 280,
+  "render_group": "artery"
  },
  {
   "id": "FJ2701",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4712",
-  "triangle_count": 834
+  "triangle_count": 834,
+  "render_group": "vein"
  },
  {
   "id": "FJ2702",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4712",
-  "triangle_count": 254
+  "triangle_count": 254,
+  "render_group": "vein"
  },
  {
   "id": "FJ2703",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4708",
-  "triangle_count": 960
+  "triangle_count": 960,
+  "render_group": "vein"
  },
  {
   "id": "FJ2704",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4708",
-  "triangle_count": 280
+  "triangle_count": 280,
+  "render_group": "vein"
  },
  {
   "id": "FJ2705",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4708",
-  "triangle_count": 238
+  "triangle_count": 238,
+  "render_group": "vein"
  },
  {
   "id": "FJ2706",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4712",
-  "triangle_count": 356
+  "triangle_count": 356,
+  "render_group": "vein"
  },
  {
   "id": "FJ2707",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4712",
-  "triangle_count": 508
+  "triangle_count": 508,
+  "render_group": "vein"
  },
  {
   "id": "FJ2708",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4712",
-  "triangle_count": 446
+  "triangle_count": 446,
+  "render_group": "vein"
  },
  {
   "id": "FJ2709",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4712",
-  "triangle_count": 468
+  "triangle_count": 468,
+  "render_group": "vein"
  },
  {
   "id": "FJ2710",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4712",
-  "triangle_count": 224
+  "triangle_count": 224,
+  "render_group": "vein"
  },
  {
   "id": "FJ2711",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4712",
-  "triangle_count": 184
+  "triangle_count": 184,
+  "render_group": "vein"
  },
  {
   "id": "FJ2712",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4712",
-  "triangle_count": 126
+  "triangle_count": 126,
+  "render_group": "vein"
  },
  {
   "id": "FJ2713",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4712",
-  "triangle_count": 310
+  "triangle_count": 310,
+  "render_group": "vein"
  },
  {
   "id": "FJ2714",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3837",
-  "triangle_count": 794
+  "triangle_count": 794,
+  "render_group": "artery"
  },
  {
   "id": "FJ2715",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3837",
-  "triangle_count": 218
+  "triangle_count": 218,
+  "render_group": "artery"
  },
  {
   "id": "FJ2716",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3837",
-  "triangle_count": 232
+  "triangle_count": 232,
+  "render_group": "artery"
  },
  {
   "id": "FJ2717",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3837",
-  "triangle_count": 340
+  "triangle_count": 340,
+  "render_group": "artery"
  },
  {
   "id": "FJ2718",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3837",
-  "triangle_count": 186
+  "triangle_count": 186,
+  "render_group": "artery"
  },
  {
   "id": "FJ2719",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3837",
-  "triangle_count": 380
+  "triangle_count": 380,
+  "render_group": "artery"
  },
  {
   "id": "FJ2720",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3837",
-  "triangle_count": 320
+  "triangle_count": 320,
+  "render_group": "artery"
  },
  {
   "id": "FJ2721",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3837",
-  "triangle_count": 256
+  "triangle_count": 256,
+  "render_group": "artery"
  },
  {
   "id": "FJ2722",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3837",
-  "triangle_count": 320
+  "triangle_count": 320,
+  "render_group": "artery"
  },
  {
   "id": "FJ2723",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3802",
-  "triangle_count": 4502
+  "triangle_count": 4502,
+  "render_group": "artery"
  },
  {
   "id": "FJ2724",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4714",
-  "triangle_count": 570
+  "triangle_count": 570,
+  "render_group": "vein"
  },
  {
   "id": "FJ2727",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4716",
-  "triangle_count": 970
+  "triangle_count": 970,
+  "render_group": "vein"
  },
  {
   "id": "FJ2728",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4716",
-  "triangle_count": 282
+  "triangle_count": 282,
+  "render_group": "vein"
  },
  {
   "id": "FJ2729",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4716",
-  "triangle_count": 222
+  "triangle_count": 222,
+  "render_group": "vein"
  },
  {
   "id": "FJ2731",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4714",
-  "triangle_count": 892
+  "triangle_count": 892,
+  "render_group": "vein"
  },
  {
   "id": "FJ2737",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3855",
-  "triangle_count": 204
+  "triangle_count": 204,
+  "render_group": "artery"
  },
  {
   "id": "FJ2881",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8647",
-  "triangle_count": 1748
+  "triangle_count": 1748,
+  "render_group": "artery"
  },
  {
   "id": "FJ2882",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8646",
-  "triangle_count": 62
+  "triangle_count": 62,
+  "render_group": "artery"
  },
  {
   "id": "FJ2883",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8645",
-  "triangle_count": 2400
+  "triangle_count": 2400,
+  "render_group": "artery"
  },
  {
   "id": "FJ2884",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8644",
-  "triangle_count": 1274
+  "triangle_count": 1274,
+  "render_group": "artery"
  },
  {
   "id": "FJ2885",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8644",
-  "triangle_count": 462
+  "triangle_count": 462,
+  "render_group": "artery"
  },
  {
   "id": "FJ2886",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8645",
-  "triangle_count": 138
+  "triangle_count": 138,
+  "render_group": "artery"
  },
  {
   "id": "FJ2887",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8645",
-  "triangle_count": 104
+  "triangle_count": 104,
+  "render_group": "artery"
  },
  {
   "id": "FJ2888",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8642",
-  "triangle_count": 590
+  "triangle_count": 590,
+  "render_group": "artery"
  },
  {
   "id": "FJ2889",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8642",
-  "triangle_count": 94
+  "triangle_count": 94,
+  "render_group": "artery"
  },
  {
   "id": "FJ2890",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8642",
-  "triangle_count": 114
+  "triangle_count": 114,
+  "render_group": "artery"
  },
  {
   "id": "FJ2891",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8642",
-  "triangle_count": 418
+  "triangle_count": 418,
+  "render_group": "artery"
  },
  {
   "id": "FJ2892",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8647",
-  "triangle_count": 150
+  "triangle_count": 150,
+  "render_group": "artery"
  },
  {
   "id": "FJ2893",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8642",
-  "triangle_count": 126
+  "triangle_count": 126,
+  "render_group": "artery"
  },
  {
   "id": "FJ2894",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8642",
-  "triangle_count": 416
+  "triangle_count": 416,
+  "render_group": "artery"
  },
  {
   "id": "FJ2895",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8642",
-  "triangle_count": 136
+  "triangle_count": 136,
+  "render_group": "artery"
  },
  {
   "id": "FJ2896",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8640",
-  "triangle_count": 2112
+  "triangle_count": 2112,
+  "render_group": "artery"
  },
  {
   "id": "FJ2897",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8640",
-  "triangle_count": 486
+  "triangle_count": 486,
+  "render_group": "artery"
  },
  {
   "id": "FJ2898",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8639",
-  "triangle_count": 1084
+  "triangle_count": 1084,
+  "render_group": "artery"
  },
  {
   "id": "FJ2899",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8639",
-  "triangle_count": 84
+  "triangle_count": 84,
+  "render_group": "artery"
  },
  {
   "id": "FJ2900",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8639",
-  "triangle_count": 210
+  "triangle_count": 210,
+  "render_group": "artery"
  },
  {
   "id": "FJ2901",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8639",
-  "triangle_count": 200
+  "triangle_count": 200,
+  "render_group": "artery"
  },
  {
   "id": "FJ2902",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:13279",
-  "triangle_count": 692
+  "triangle_count": 692,
+  "render_group": "artery"
  },
  {
   "id": "FJ2903",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8647",
-  "triangle_count": 618
+  "triangle_count": 618,
+  "render_group": "artery"
  },
  {
   "id": "FJ2904",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:13279",
-  "triangle_count": 210
+  "triangle_count": 210,
+  "render_group": "artery"
  },
  {
   "id": "FJ2905",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:13279",
-  "triangle_count": 280
+  "triangle_count": 280,
+  "render_group": "artery"
  },
  {
   "id": "FJ2906",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:13279",
-  "triangle_count": 1006
+  "triangle_count": 1006,
+  "render_group": "artery"
  },
  {
   "id": "FJ2907",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:13279",
-  "triangle_count": 150
+  "triangle_count": 150,
+  "render_group": "artery"
  },
  {
   "id": "FJ2908",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:13279",
-  "triangle_count": 786
+  "triangle_count": 786,
+  "render_group": "artery"
  },
  {
   "id": "FJ2909",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:13279",
-  "triangle_count": 120
+  "triangle_count": 120,
+  "render_group": "artery"
  },
  {
   "id": "FJ2910",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:13279",
-  "triangle_count": 210
+  "triangle_count": 210,
+  "render_group": "artery"
  },
  {
   "id": "FJ2911",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8635",
-  "triangle_count": 318
+  "triangle_count": 318,
+  "render_group": "artery"
  },
  {
   "id": "FJ2912",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8635",
-  "triangle_count": 150
+  "triangle_count": 150,
+  "render_group": "artery"
  },
  {
   "id": "FJ2913",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8635",
-  "triangle_count": 198
+  "triangle_count": 198,
+  "render_group": "artery"
  },
  {
   "id": "FJ2914",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8647",
-  "triangle_count": 92
+  "triangle_count": 92,
+  "render_group": "artery"
  },
  {
   "id": "FJ2915",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8634",
-  "triangle_count": 418
+  "triangle_count": 418,
+  "render_group": "artery"
  },
  {
   "id": "FJ2916",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8634",
-  "triangle_count": 174
+  "triangle_count": 174,
+  "render_group": "artery"
  },
  {
   "id": "FJ2917",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8634",
-  "triangle_count": 196
+  "triangle_count": 196,
+  "render_group": "artery"
  },
  {
   "id": "FJ2918",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8634",
-  "triangle_count": 188
+  "triangle_count": 188,
+  "render_group": "artery"
  },
  {
   "id": "FJ2919",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8647",
-  "triangle_count": 560
+  "triangle_count": 560,
+  "render_group": "artery"
  },
  {
   "id": "FJ2920",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8647",
-  "triangle_count": 262
+  "triangle_count": 262,
+  "render_group": "artery"
  },
  {
   "id": "FJ2921",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8646",
-  "triangle_count": 1710
+  "triangle_count": 1710,
+  "render_group": "artery"
  },
  {
   "id": "FJ2922",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8646",
-  "triangle_count": 670
+  "triangle_count": 670,
+  "render_group": "artery"
  },
  {
   "id": "FJ2923",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8646",
-  "triangle_count": 236
+  "triangle_count": 236,
+  "render_group": "artery"
  },
  {
   "id": "FJ2924",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50873",
-  "triangle_count": 5450
+  "triangle_count": 5450,
+  "render_group": "artery"
  },
  {
   "id": "FJ2925",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:49916",
-  "triangle_count": 414
+  "triangle_count": 414,
+  "render_group": "vein"
  },
  {
   "id": "FJ2926",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9438",
-  "triangle_count": 250
+  "triangle_count": 250,
+  "render_group": "vein"
  },
  {
   "id": "FJ2927",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9438",
-  "triangle_count": 332
+  "triangle_count": 332,
+  "render_group": "vein"
  },
  {
   "id": "FJ2928",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9438",
-  "triangle_count": 334
+  "triangle_count": 334,
+  "render_group": "vein"
  },
  {
   "id": "FJ2929",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9438",
-  "triangle_count": 150
+  "triangle_count": 150,
+  "render_group": "vein"
  },
  {
   "id": "FJ2930",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8667",
-  "triangle_count": 468
+  "triangle_count": 468,
+  "render_group": "vein"
  },
  {
   "id": "FJ2931",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8667",
-  "triangle_count": 242
+  "triangle_count": 242,
+  "render_group": "vein"
  },
  {
   "id": "FJ2932",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8667",
-  "triangle_count": 128
+  "triangle_count": 128,
+  "render_group": "vein"
  },
  {
   "id": "FJ2933",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:49916",
-  "triangle_count": 472
+  "triangle_count": 472,
+  "render_group": "vein"
  },
  {
   "id": "FJ2934",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8669",
-  "triangle_count": 278
+  "triangle_count": 278,
+  "render_group": "vein"
  },
  {
   "id": "FJ2935",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8669",
-  "triangle_count": 136
+  "triangle_count": 136,
+  "render_group": "vein"
  },
  {
   "id": "FJ2936",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9437",
-  "triangle_count": 448
+  "triangle_count": 448,
+  "render_group": "vein"
  },
  {
   "id": "FJ2937",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8668",
-  "triangle_count": 416
+  "triangle_count": 416,
+  "render_group": "vein"
  },
  {
   "id": "FJ2938",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8668",
-  "triangle_count": 180
+  "triangle_count": 180,
+  "render_group": "vein"
  },
  {
   "id": "FJ2939",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9438",
-  "triangle_count": 522
+  "triangle_count": 522,
+  "render_group": "vein"
  },
  {
   "id": "FJ2940",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9438",
-  "triangle_count": 112
+  "triangle_count": 112,
+  "render_group": "vein"
  },
  {
   "id": "FJ2941",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9438",
-  "triangle_count": 190
+  "triangle_count": 190,
+  "render_group": "vein"
  },
  {
   "id": "FJ2942",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9438",
-  "triangle_count": 168
+  "triangle_count": 168,
+  "render_group": "vein"
  },
  {
   "id": "FJ2943",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9438",
-  "triangle_count": 176
+  "triangle_count": 176,
+  "render_group": "vein"
  },
  {
   "id": "FJ2944",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:49913",
-  "triangle_count": 310
+  "triangle_count": 310,
+  "render_group": "vein"
  },
  {
   "id": "FJ2945",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9451",
-  "triangle_count": 376
+  "triangle_count": 376,
+  "render_group": "vein"
  },
  {
   "id": "FJ2946",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9451",
-  "triangle_count": 200
+  "triangle_count": 200,
+  "render_group": "vein"
  },
  {
   "id": "FJ2947",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9437",
-  "triangle_count": 174
+  "triangle_count": 174,
+  "render_group": "vein"
  },
  {
   "id": "FJ2948",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9451",
-  "triangle_count": 104
+  "triangle_count": 104,
+  "render_group": "vein"
  },
  {
   "id": "FJ2949",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9451",
-  "triangle_count": 190
+  "triangle_count": 190,
+  "render_group": "vein"
  },
  {
   "id": "FJ2950",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:49913",
-  "triangle_count": 326
+  "triangle_count": 326,
+  "render_group": "vein"
  },
  {
   "id": "FJ2951",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9450",
-  "triangle_count": 678
+  "triangle_count": 678,
+  "render_group": "vein"
  },
  {
   "id": "FJ2952",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9450",
-  "triangle_count": 144
+  "triangle_count": 144,
+  "render_group": "vein"
  },
  {
   "id": "FJ2953",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9450",
-  "triangle_count": 168
+  "triangle_count": 168,
+  "render_group": "vein"
  },
  {
   "id": "FJ2954",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9450",
-  "triangle_count": 110
+  "triangle_count": 110,
+  "render_group": "vein"
  },
  {
   "id": "FJ2955",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:49913",
-  "triangle_count": 556
+  "triangle_count": 556,
+  "render_group": "vein"
  },
  {
   "id": "FJ2956",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8678",
-  "triangle_count": 590
+  "triangle_count": 590,
+  "render_group": "vein"
  },
  {
   "id": "FJ2957",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8678",
-  "triangle_count": 136
+  "triangle_count": 136,
+  "render_group": "vein"
  },
  {
   "id": "FJ2958",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9437",
-  "triangle_count": 314
+  "triangle_count": 314,
+  "render_group": "vein"
  },
  {
   "id": "FJ2959",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8678",
-  "triangle_count": 504
+  "triangle_count": 504,
+  "render_group": "vein"
  },
  {
   "id": "FJ2960",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8678",
-  "triangle_count": 162
+  "triangle_count": 162,
+  "render_group": "vein"
  },
  {
   "id": "FJ2961",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9437",
-  "triangle_count": 188
+  "triangle_count": 188,
+  "render_group": "vein"
  },
  {
   "id": "FJ2962",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9437",
-  "triangle_count": 200
+  "triangle_count": 200,
+  "render_group": "vein"
  },
  {
   "id": "FJ2963",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9437",
-  "triangle_count": 114
+  "triangle_count": 114,
+  "render_group": "vein"
  },
  {
   "id": "FJ2964",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9437",
-  "triangle_count": 174
+  "triangle_count": 174,
+  "render_group": "vein"
  },
  {
   "id": "FJ2965",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9438",
-  "triangle_count": 142
+  "triangle_count": 142,
+  "render_group": "vein"
  },
  {
   "id": "FJ2966",
@@ -2427,1453 +2830,1695 @@
   "id": "FJ2967",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68662",
-  "triangle_count": 360
+  "triangle_count": 360,
+  "render_group": "artery"
  },
  {
   "id": "FJ2968",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68670",
-  "triangle_count": 90
+  "triangle_count": 90,
+  "render_group": "artery"
  },
  {
   "id": "FJ2969",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68670",
-  "triangle_count": 120
+  "triangle_count": 120,
+  "render_group": "artery"
  },
  {
   "id": "FJ2970",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68673",
-  "triangle_count": 726
+  "triangle_count": 726,
+  "render_group": "artery"
  },
  {
   "id": "FJ2971",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68673",
-  "triangle_count": 134
+  "triangle_count": 134,
+  "render_group": "artery"
  },
  {
   "id": "FJ2972",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68673",
-  "triangle_count": 236
+  "triangle_count": 236,
+  "render_group": "artery"
  },
  {
   "id": "FJ2973",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68197",
-  "triangle_count": 486
+  "triangle_count": 486,
+  "render_group": "artery"
  },
  {
   "id": "FJ2974",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68677",
-  "triangle_count": 302
+  "triangle_count": 302,
+  "render_group": "artery"
  },
  {
   "id": "FJ2975",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68683",
-  "triangle_count": 240
+  "triangle_count": 240,
+  "render_group": "artery"
  },
  {
   "id": "FJ2976",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68683",
-  "triangle_count": 102
+  "triangle_count": 102,
+  "render_group": "artery"
  },
  {
   "id": "FJ2977",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68683",
-  "triangle_count": 178
+  "triangle_count": 178,
+  "render_group": "artery"
  },
  {
   "id": "FJ2978",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68665",
-  "triangle_count": 250
+  "triangle_count": 250,
+  "render_group": "artery"
  },
  {
   "id": "FJ2979",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68683",
-  "triangle_count": 130
+  "triangle_count": 130,
+  "render_group": "artery"
  },
  {
   "id": "FJ2980",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68677",
-  "triangle_count": 130
+  "triangle_count": 130,
+  "render_group": "artery"
  },
  {
   "id": "FJ2981",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68677",
-  "triangle_count": 424
+  "triangle_count": 424,
+  "render_group": "artery"
  },
  {
   "id": "FJ2982",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68691",
-  "triangle_count": 490
+  "triangle_count": 490,
+  "render_group": "artery"
  },
  {
   "id": "FJ2983",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68690",
-  "triangle_count": 232
+  "triangle_count": 232,
+  "render_group": "artery"
  },
  {
   "id": "FJ2984",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68690",
-  "triangle_count": 68
+  "triangle_count": 68,
+  "render_group": "artery"
  },
  {
   "id": "FJ2985",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68691",
-  "triangle_count": 80
+  "triangle_count": 80,
+  "render_group": "artery"
  },
  {
   "id": "FJ2986",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68693",
-  "triangle_count": 72
+  "triangle_count": 72,
+  "render_group": "artery"
  },
  {
   "id": "FJ2987",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68694",
-  "triangle_count": 108
+  "triangle_count": 108,
+  "render_group": "artery"
  },
  {
   "id": "FJ2988",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68694",
-  "triangle_count": 180
+  "triangle_count": 180,
+  "render_group": "artery"
  },
  {
   "id": "FJ2989",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68665",
-  "triangle_count": 620
+  "triangle_count": 620,
+  "render_group": "artery"
  },
  {
   "id": "FJ2990",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68693",
-  "triangle_count": 604
+  "triangle_count": 604,
+  "render_group": "artery"
  },
  {
   "id": "FJ2991",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68712",
-  "triangle_count": 630
+  "triangle_count": 630,
+  "render_group": "artery"
  },
  {
   "id": "FJ2992",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68712",
-  "triangle_count": 172
+  "triangle_count": 172,
+  "render_group": "artery"
  },
  {
   "id": "FJ2993",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68712",
-  "triangle_count": 56
+  "triangle_count": 56,
+  "render_group": "artery"
  },
  {
   "id": "FJ2994",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68706",
-  "triangle_count": 236
+  "triangle_count": 236,
+  "render_group": "artery"
  },
  {
   "id": "FJ2995",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68706",
-  "triangle_count": 604
+  "triangle_count": 604,
+  "render_group": "artery"
  },
  {
   "id": "FJ2996",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68706",
-  "triangle_count": 296
+  "triangle_count": 296,
+  "render_group": "artery"
  },
  {
   "id": "FJ2997",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68709",
-  "triangle_count": 294
+  "triangle_count": 294,
+  "render_group": "artery"
  },
  {
   "id": "FJ2998",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68709",
-  "triangle_count": 254
+  "triangle_count": 254,
+  "render_group": "artery"
  },
  {
   "id": "FJ2999",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68709",
-  "triangle_count": 854
+  "triangle_count": 854,
+  "render_group": "artery"
  },
  {
   "id": "FJ3000",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68665",
-  "triangle_count": 202
+  "triangle_count": 202,
+  "render_group": "artery"
  },
  {
   "id": "FJ3001",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68725",
-  "triangle_count": 414
+  "triangle_count": 414,
+  "render_group": "artery"
  },
  {
   "id": "FJ3002",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68723",
-  "triangle_count": 144
+  "triangle_count": 144,
+  "render_group": "artery"
  },
  {
   "id": "FJ3003",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68723",
-  "triangle_count": 316
+  "triangle_count": 316,
+  "render_group": "artery"
  },
  {
   "id": "FJ3004",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68728",
-  "triangle_count": 190
+  "triangle_count": 190,
+  "render_group": "artery"
  },
  {
   "id": "FJ3005",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68728",
-  "triangle_count": 416
+  "triangle_count": 416,
+  "render_group": "artery"
  },
  {
   "id": "FJ3006",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68728",
-  "triangle_count": 1456
+  "triangle_count": 1456,
+  "render_group": "artery"
  },
  {
   "id": "FJ3007",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68728",
-  "triangle_count": 310
+  "triangle_count": 310,
+  "render_group": "artery"
  },
  {
   "id": "FJ3008",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68741",
-  "triangle_count": 806
+  "triangle_count": 806,
+  "render_group": "artery"
  },
  {
   "id": "FJ3009",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68735",
-  "triangle_count": 154
+  "triangle_count": 154,
+  "render_group": "artery"
  },
  {
   "id": "FJ3010",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68735",
-  "triangle_count": 68
+  "triangle_count": 68,
+  "render_group": "artery"
  },
  {
   "id": "FJ3011",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68665",
-  "triangle_count": 174
+  "triangle_count": 174,
+  "render_group": "artery"
  },
  {
   "id": "FJ3012",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68741",
-  "triangle_count": 70
+  "triangle_count": 70,
+  "render_group": "artery"
  },
  {
   "id": "FJ3013",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68738",
-  "triangle_count": 1506
+  "triangle_count": 1506,
+  "render_group": "artery"
  },
  {
   "id": "FJ3014",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68738",
-  "triangle_count": 642
+  "triangle_count": 642,
+  "render_group": "artery"
  },
  {
   "id": "FJ3015",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68662",
-  "triangle_count": 112
+  "triangle_count": 112,
+  "render_group": "artery"
  },
  {
   "id": "FJ3016",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68662",
-  "triangle_count": 856
+  "triangle_count": 856,
+  "render_group": "artery"
  },
  {
   "id": "FJ3017",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68662",
-  "triangle_count": 212
+  "triangle_count": 212,
+  "render_group": "artery"
  },
  {
   "id": "FJ3018",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68670",
-  "triangle_count": 912
+  "triangle_count": 912,
+  "render_group": "artery"
  },
  {
   "id": "FJ3019",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:50872",
-  "triangle_count": 678
+  "triangle_count": 678,
+  "render_group": "artery"
  },
  {
   "id": "FJ3020",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:49914",
-  "triangle_count": 324
+  "triangle_count": 324,
+  "render_group": "vein"
  },
  {
   "id": "FJ3021",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68928",
-  "triangle_count": 254
+  "triangle_count": 254,
+  "render_group": "vein"
  },
  {
   "id": "FJ3022",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8663",
-  "triangle_count": 228
+  "triangle_count": 228,
+  "render_group": "vein"
  },
  {
   "id": "FJ3023",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8663",
-  "triangle_count": 168
+  "triangle_count": 168,
+  "render_group": "vein"
  },
  {
   "id": "FJ3024",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8663",
-  "triangle_count": 110
+  "triangle_count": 110,
+  "render_group": "vein"
  },
  {
   "id": "FJ3025",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8663",
-  "triangle_count": 164
+  "triangle_count": 164,
+  "render_group": "vein"
  },
  {
   "id": "FJ3026",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8663",
-  "triangle_count": 188
+  "triangle_count": 188,
+  "render_group": "vein"
  },
  {
   "id": "FJ3027",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68926",
-  "triangle_count": 298
+  "triangle_count": 298,
+  "render_group": "vein"
  },
  {
   "id": "FJ3028",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8662",
-  "triangle_count": 202
+  "triangle_count": 202,
+  "render_group": "vein"
  },
  {
   "id": "FJ3029",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8662",
-  "triangle_count": 124
+  "triangle_count": 124,
+  "render_group": "vein"
  },
  {
   "id": "FJ3030",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68982",
-  "triangle_count": 526
+  "triangle_count": 526,
+  "render_group": "vein"
  },
  {
   "id": "FJ3031",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68880",
-  "triangle_count": 266
+  "triangle_count": 266,
+  "render_group": "vein"
  },
  {
   "id": "FJ3032",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68983",
-  "triangle_count": 486
+  "triangle_count": 486,
+  "render_group": "vein"
  },
  {
   "id": "FJ3033",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68983",
-  "triangle_count": 106
+  "triangle_count": 106,
+  "render_group": "vein"
  },
  {
   "id": "FJ3034",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68945",
-  "triangle_count": 390
+  "triangle_count": 390,
+  "render_group": "vein"
  },
  {
   "id": "FJ3035",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68945",
-  "triangle_count": 226
+  "triangle_count": 226,
+  "render_group": "vein"
  },
  {
   "id": "FJ3036",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68945",
-  "triangle_count": 308
+  "triangle_count": 308,
+  "render_group": "vein"
  },
  {
   "id": "FJ3037",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68944",
-  "triangle_count": 416
+  "triangle_count": 416,
+  "render_group": "vein"
  },
  {
   "id": "FJ3038",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68944",
-  "triangle_count": 250
+  "triangle_count": 250,
+  "render_group": "vein"
  },
  {
   "id": "FJ3039",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68944",
-  "triangle_count": 224
+  "triangle_count": 224,
+  "render_group": "vein"
  },
  {
   "id": "FJ3040",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:49911",
-  "triangle_count": 196
+  "triangle_count": 196,
+  "render_group": "vein"
  },
  {
   "id": "FJ3041",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9428",
-  "triangle_count": 586
+  "triangle_count": 586,
+  "render_group": "vein"
  },
  {
   "id": "FJ3042",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68921",
-  "triangle_count": 188
+  "triangle_count": 188,
+  "render_group": "vein"
  },
  {
   "id": "FJ3043",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9428",
-  "triangle_count": 254
+  "triangle_count": 254,
+  "render_group": "vein"
  },
  {
   "id": "FJ3044",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9428",
-  "triangle_count": 126
+  "triangle_count": 126,
+  "render_group": "vein"
  },
  {
   "id": "FJ3045",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9428",
-  "triangle_count": 206
+  "triangle_count": 206,
+  "render_group": "vein"
  },
  {
   "id": "FJ3046",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9428",
-  "triangle_count": 178
+  "triangle_count": 178,
+  "render_group": "vein"
  },
  {
   "id": "FJ3047",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9428",
-  "triangle_count": 226
+  "triangle_count": 226,
+  "render_group": "vein"
  },
  {
   "id": "FJ3048",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9428",
-  "triangle_count": 170
+  "triangle_count": 170,
+  "render_group": "vein"
  },
  {
   "id": "FJ3049",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8673",
-  "triangle_count": 322
+  "triangle_count": 322,
+  "render_group": "vein"
  },
  {
   "id": "FJ3050",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8670",
-  "triangle_count": 548
+  "triangle_count": 548,
+  "render_group": "vein"
  },
  {
   "id": "FJ3051",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8670",
-  "triangle_count": 338
+  "triangle_count": 338,
+  "render_group": "vein"
  },
  {
   "id": "FJ3052",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8670",
-  "triangle_count": 102
+  "triangle_count": 102,
+  "render_group": "vein"
  },
  {
   "id": "FJ3053",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68921",
-  "triangle_count": 178
+  "triangle_count": 178,
+  "render_group": "vein"
  },
  {
   "id": "FJ3054",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9422",
-  "triangle_count": 206
+  "triangle_count": 206,
+  "render_group": "vein"
  },
  {
   "id": "FJ3055",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9422",
-  "triangle_count": 80
+  "triangle_count": 80,
+  "render_group": "vein"
  },
  {
   "id": "FJ3056",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8673",
-  "triangle_count": 264
+  "triangle_count": 264,
+  "render_group": "vein"
  },
  {
   "id": "FJ3057",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9428",
-  "triangle_count": 122
+  "triangle_count": 122,
+  "render_group": "vein"
  },
  {
   "id": "FJ3058",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9428",
-  "triangle_count": 174
+  "triangle_count": 174,
+  "render_group": "vein"
  },
  {
   "id": "FJ3059",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9425",
-  "triangle_count": 424
+  "triangle_count": 424,
+  "render_group": "vein"
  },
  {
   "id": "FJ3060",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9425",
-  "triangle_count": 216
+  "triangle_count": 216,
+  "render_group": "vein"
  },
  {
   "id": "FJ3061",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9425",
-  "triangle_count": 152
+  "triangle_count": 152,
+  "render_group": "vein"
  },
  {
   "id": "FJ3062",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:9425",
-  "triangle_count": 218
+  "triangle_count": 218,
+  "render_group": "vein"
  },
  {
   "id": "FJ3063",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8670",
-  "triangle_count": 134
+  "triangle_count": 134,
+  "render_group": "vein"
  },
  {
   "id": "FJ3064",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8681",
-  "triangle_count": 230
+  "triangle_count": 230,
+  "render_group": "vein"
  },
  {
   "id": "FJ3065",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8670",
-  "triangle_count": 146
+  "triangle_count": 146,
+  "render_group": "vein"
  },
  {
   "id": "FJ3066",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8670",
-  "triangle_count": 136
+  "triangle_count": 136,
+  "render_group": "vein"
  },
  {
   "id": "FJ3067",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8681",
-  "triangle_count": 204
+  "triangle_count": 204,
+  "render_group": "vein"
  },
  {
   "id": "FJ3068",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8681",
-  "triangle_count": 102
+  "triangle_count": 102,
+  "render_group": "vein"
  },
  {
   "id": "FJ3069",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8663",
-  "triangle_count": 356
+  "triangle_count": 356,
+  "render_group": "vein"
  },
  {
   "id": "FJ3070",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:8663",
-  "triangle_count": 230
+  "triangle_count": 230,
+  "render_group": "vein"
  },
  {
   "id": "FJ3073",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:15420",
-  "triangle_count": 770
+  "triangle_count": 770,
+  "render_group": "vein"
  },
  {
   "id": "FJ3074",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:15421",
-  "triangle_count": 2832
+  "triangle_count": 2832,
+  "render_group": "vein"
  },
  {
   "id": "FJ3075",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:70443",
-  "triangle_count": 1666
+  "triangle_count": 1666,
+  "render_group": "artery"
  },
  {
   "id": "FJ3076",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:70442",
-  "triangle_count": 892
+  "triangle_count": 892,
+  "render_group": "artery"
  },
  {
   "id": "FJ3077",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:70455",
-  "triangle_count": 430
+  "triangle_count": 430,
+  "render_group": "artery"
  },
  {
   "id": "FJ3078",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14771",
-  "triangle_count": 348
+  "triangle_count": 348,
+  "render_group": "artery"
  },
  {
   "id": "FJ3081",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14772",
-  "triangle_count": 358
+  "triangle_count": 358,
+  "render_group": "artery"
  },
  {
   "id": "FJ3082",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:71904",
-  "triangle_count": 3582
+  "triangle_count": 3582,
+  "render_group": "vein"
  },
  {
   "id": "FJ3083",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:15800",
-  "triangle_count": 2806
+  "triangle_count": 2806,
+  "render_group": "vein"
  },
  {
   "id": "FJ3086",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:15800",
-  "triangle_count": 990
+  "triangle_count": 990,
+  "render_group": "vein"
  },
  {
   "id": "FJ3091",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:70452",
-  "triangle_count": 598
+  "triangle_count": 598,
+  "render_group": "artery"
  },
  {
   "id": "FJ3092",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:70453",
-  "triangle_count": 618
+  "triangle_count": 618,
+  "render_group": "artery"
  },
  {
   "id": "FJ3093",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:70452",
-  "triangle_count": 658
+  "triangle_count": 658,
+  "render_group": "artery"
  },
  {
   "id": "FJ3095",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:70457",
-  "triangle_count": 1328
+  "triangle_count": 1328,
+  "render_group": "artery"
  },
  {
   "id": "FJ3102",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:82697",
-  "triangle_count": 730
+  "triangle_count": 730,
+  "render_group": "vein"
  },
  {
   "id": "FJ3106",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:70450",
-  "triangle_count": 754
+  "triangle_count": 754,
+  "render_group": "artery"
  },
  {
   "id": "FJ3107",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:70449",
-  "triangle_count": 612
+  "triangle_count": 612,
+  "render_group": "artery"
  },
  {
   "id": "FJ3111",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:15424",
-  "triangle_count": 2194
+  "triangle_count": 2194,
+  "render_group": "vein"
  },
  {
   "id": "FJ3112",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:15423",
-  "triangle_count": 1100
+  "triangle_count": 1100,
+  "render_group": "vein"
  },
  {
   "id": "FJ3113",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:15423",
-  "triangle_count": 1712
+  "triangle_count": 1712,
+  "render_group": "vein"
  },
  {
   "id": "FJ3114",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:70446",
-  "triangle_count": 772
+  "triangle_count": 772,
+  "render_group": "artery"
  },
  {
   "id": "FJ3115",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:70445",
-  "triangle_count": 1616
+  "triangle_count": 1616,
+  "render_group": "artery"
  },
  {
   "id": "FJ3116",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:70445",
-  "triangle_count": 814
+  "triangle_count": 814,
+  "render_group": "artery"
  },
  {
   "id": "FJ3117",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:70456",
-  "triangle_count": 442
+  "triangle_count": 442,
+  "render_group": "artery"
  },
  {
   "id": "FJ3122",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:82695",
-  "triangle_count": 206
+  "triangle_count": 206,
+  "render_group": "vein"
  },
  {
   "id": "FJ3124",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:15425",
-  "triangle_count": 494
+  "triangle_count": 494,
+  "render_group": "vein"
  },
  {
   "id": "FJ3125",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:15432",
-  "triangle_count": 2284
+  "triangle_count": 2284,
+  "render_group": "vein"
  },
  {
   "id": "FJ3126",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:15431",
-  "triangle_count": 2364
+  "triangle_count": 2364,
+  "render_group": "vein"
  },
  {
   "id": "FJ3127",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:15428",
-  "triangle_count": 1162
+  "triangle_count": 1162,
+  "render_group": "vein"
  },
  {
   "id": "FJ3128",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:15429",
-  "triangle_count": 1660
+  "triangle_count": 1660,
+  "render_group": "vein"
  },
  {
   "id": "FJ3406",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14816",
-  "triangle_count": 120
+  "triangle_count": 120,
+  "render_group": "artery"
  },
  {
   "id": "FJ3410",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14818",
-  "triangle_count": 868
+  "triangle_count": 868,
+  "render_group": "artery"
  },
  {
   "id": "FJ3411",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3768",
-  "triangle_count": 670
+  "triangle_count": 670,
+  "render_group": "artery"
  },
  {
   "id": "FJ3413",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3736",
-  "triangle_count": 396
+  "triangle_count": 396,
+  "render_group": "artery"
  },
  {
   "id": "FJ3414",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14820",
-  "triangle_count": 358
+  "triangle_count": 358,
+  "render_group": "artery"
  },
  {
   "id": "FJ3416",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4838",
-  "triangle_count": 18260
+  "triangle_count": 18260,
+  "render_group": "vein"
  },
  {
   "id": "FJ3417",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3932",
-  "triangle_count": 262
+  "triangle_count": 262,
+  "render_group": "artery"
  },
  {
   "id": "FJ3420",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14773",
-  "triangle_count": 440
+  "triangle_count": 440,
+  "render_group": "artery"
  },
  {
   "id": "FJ3421",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14812",
-  "triangle_count": 238
+  "triangle_count": 238,
+  "render_group": "artery"
  },
  {
   "id": "FJ3427",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3784",
-  "triangle_count": 4562
+  "triangle_count": 4562,
+  "render_group": "artery"
  },
  {
   "id": "FJ3432",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:76574",
-  "triangle_count": 204
+  "triangle_count": 204,
+  "render_group": "artery"
  },
  {
   "id": "FJ3434",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4944",
-  "triangle_count": 4266
+  "triangle_count": 4266,
+  "render_group": "vein"
  },
  {
   "id": "FJ3437",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14809",
-  "triangle_count": 186
+  "triangle_count": 186,
+  "render_group": "artery"
  },
  {
   "id": "FJ3439",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14815",
-  "triangle_count": 244
+  "triangle_count": 244,
+  "render_group": "artery"
  },
  {
   "id": "FJ3441",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:10951",
-  "triangle_count": 1410
+  "triangle_count": 1410,
+  "render_group": "vein"
  },
  {
   "id": "FJ3442",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14750",
-  "triangle_count": 546
+  "triangle_count": 546,
+  "render_group": "artery"
  },
  {
   "id": "FJ3446",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14805",
-  "triangle_count": 260
+  "triangle_count": 260,
+  "render_group": "artery"
  },
  {
   "id": "FJ3447",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68068",
-  "triangle_count": 1042
+  "triangle_count": 1042,
+  "render_group": "vein"
  },
  {
   "id": "FJ3448",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68068",
-  "triangle_count": 798
+  "triangle_count": 798,
+  "render_group": "vein"
  },
  {
   "id": "FJ3449",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68068",
-  "triangle_count": 500
+  "triangle_count": 500,
+  "render_group": "vein"
  },
  {
   "id": "FJ3450",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68068",
-  "triangle_count": 328
+  "triangle_count": 328,
+  "render_group": "vein"
  },
  {
   "id": "FJ3451",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68068",
-  "triangle_count": 592
+  "triangle_count": 592,
+  "render_group": "vein"
  },
  {
   "id": "FJ3452",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:68068",
-  "triangle_count": 992
+  "triangle_count": 992,
+  "render_group": "vein"
  },
  {
   "id": "FJ3464",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14766",
-  "triangle_count": 248
+  "triangle_count": 248,
+  "render_group": "artery"
  },
  {
   "id": "FJ3465",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:21388",
-  "triangle_count": 430
+  "triangle_count": 430,
+  "render_group": "vein"
  },
  {
   "id": "FJ3466",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:18807",
-  "triangle_count": 462
+  "triangle_count": 462,
+  "render_group": "artery"
  },
  {
   "id": "FJ3467",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:69266",
-  "triangle_count": 954
+  "triangle_count": 954,
+  "render_group": "artery"
  },
  {
   "id": "FJ3468",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:18810",
-  "triangle_count": 270
+  "triangle_count": 270,
+  "render_group": "artery"
  },
  {
   "id": "FJ3469",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:18888",
-  "triangle_count": 208
+  "triangle_count": 208,
+  "render_group": "vein"
  },
  {
   "id": "FJ3470",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:18888",
-  "triangle_count": 176
+  "triangle_count": 176,
+  "render_group": "vein"
  },
  {
   "id": "FJ3471",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:18888",
-  "triangle_count": 180
+  "triangle_count": 180,
+  "render_group": "vein"
  },
  {
   "id": "FJ3472",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14756",
-  "triangle_count": 552
+  "triangle_count": 552,
+  "render_group": "artery"
  },
  {
   "id": "FJ3476",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:66364",
-  "triangle_count": 258
+  "triangle_count": 258,
+  "render_group": "artery"
  },
  {
   "id": "FJ3479",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4694",
-  "triangle_count": 646
+  "triangle_count": 646,
+  "render_group": "artery"
  },
  {
   "id": "FJ3480",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14349",
-  "triangle_count": 674
+  "triangle_count": 674,
+  "render_group": "vein"
  },
  {
   "id": "FJ3481",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:70493",
-  "triangle_count": 1296
+  "triangle_count": 1296,
+  "render_group": "artery"
  },
  {
   "id": "FJ3482",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4761",
-  "triangle_count": 748
+  "triangle_count": 748,
+  "render_group": "vein"
  },
  {
   "id": "FJ3483",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4058",
-  "triangle_count": 170
+  "triangle_count": 170,
+  "render_group": "artery"
  },
  {
   "id": "FJ3484",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:18886",
-  "triangle_count": 670
+  "triangle_count": 670,
+  "render_group": "vein"
  },
  {
   "id": "FJ3494",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14826",
-  "triangle_count": 182
+  "triangle_count": 182,
+  "render_group": "artery"
  },
  {
   "id": "FJ3499",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14768",
-  "triangle_count": 1100
+  "triangle_count": 1100,
+  "render_group": "artery"
  },
  {
   "id": "FJ3511",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:20689",
-  "triangle_count": 6824
+  "triangle_count": 6824,
+  "render_group": "artery"
  },
  {
   "id": "FJ3514",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14747",
-  "triangle_count": 742
+  "triangle_count": 742,
+  "render_group": "artery"
  },
  {
   "id": "FJ3515",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14747",
-  "triangle_count": 772
+  "triangle_count": 772,
+  "render_group": "artery"
  },
  {
   "id": "FJ3516",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14747",
-  "triangle_count": 334
+  "triangle_count": 334,
+  "render_group": "artery"
  },
  {
   "id": "FJ3517",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14747",
-  "triangle_count": 384
+  "triangle_count": 384,
+  "render_group": "artery"
  },
  {
   "id": "FJ3518",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14747",
-  "triangle_count": 556
+  "triangle_count": 556,
+  "render_group": "artery"
  },
  {
   "id": "FJ3519",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14747",
-  "triangle_count": 266
+  "triangle_count": 266,
+  "render_group": "artery"
  },
  {
   "id": "FJ3520",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14747",
-  "triangle_count": 188
+  "triangle_count": 188,
+  "render_group": "artery"
  },
  {
   "id": "FJ3522",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:18886",
-  "triangle_count": 168
+  "triangle_count": 168,
+  "render_group": "vein"
  },
  {
   "id": "FJ3523",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:18886",
-  "triangle_count": 186
+  "triangle_count": 186,
+  "render_group": "vein"
  },
  {
   "id": "FJ3524",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:18886",
-  "triangle_count": 112
+  "triangle_count": 112,
+  "render_group": "vein"
  },
  {
   "id": "FJ3529",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:20736",
-  "triangle_count": 2622
+  "triangle_count": 2622,
+  "render_group": "artery"
  },
  {
   "id": "FJ3532",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14760",
-  "triangle_count": 12420
+  "triangle_count": 12420,
+  "render_group": "artery"
  },
  {
   "id": "FJ3533",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14345",
-  "triangle_count": 14488
+  "triangle_count": 14488,
+  "render_group": "vein"
  },
  {
   "id": "FJ3534",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14831",
-  "triangle_count": 2106
+  "triangle_count": 2106,
+  "render_group": "artery"
  },
  {
   "id": "FJ3542",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14810",
-  "triangle_count": 1430
+  "triangle_count": 1430,
+  "render_group": "artery"
  },
  {
   "id": "FJ3544",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14773",
-  "triangle_count": 2588
+  "triangle_count": 2588,
+  "render_group": "artery"
  },
  {
   "id": "FJ3553",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14817",
-  "triangle_count": 90
+  "triangle_count": 90,
+  "render_group": "artery"
  },
  {
   "id": "FJ3564",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3941",
-  "triangle_count": 884
+  "triangle_count": 884,
+  "render_group": "artery"
  },
  {
   "id": "FJ3565",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14765",
-  "triangle_count": 220
+  "triangle_count": 220,
+  "render_group": "artery"
  },
  {
   "id": "FJ3566",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:21387",
-  "triangle_count": 358
+  "triangle_count": 358,
+  "render_group": "vein"
  },
  {
   "id": "FJ3567",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:18806",
-  "triangle_count": 396
+  "triangle_count": 396,
+  "render_group": "artery"
  },
  {
   "id": "FJ3568",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:18885",
-  "triangle_count": 724
+  "triangle_count": 724,
+  "render_group": "vein"
  },
  {
   "id": "FJ3569",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:18809",
-  "triangle_count": 276
+  "triangle_count": 276,
+  "render_group": "artery"
  },
  {
   "id": "FJ3570",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:18887",
-  "triangle_count": 216
+  "triangle_count": 216,
+  "render_group": "vein"
  },
  {
   "id": "FJ3571",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:18887",
-  "triangle_count": 202
+  "triangle_count": 202,
+  "render_group": "vein"
  },
  {
   "id": "FJ3572",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:18887",
-  "triangle_count": 192
+  "triangle_count": 192,
+  "render_group": "vein"
  },
  {
   "id": "FJ3576",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:66363",
-  "triangle_count": 282
+  "triangle_count": 282,
+  "render_group": "artery"
  },
  {
   "id": "FJ3579",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:3953",
-  "triangle_count": 452
+  "triangle_count": 452,
+  "render_group": "artery"
  },
  {
   "id": "FJ3580",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14343",
-  "triangle_count": 608
+  "triangle_count": 608,
+  "render_group": "vein"
  },
  {
   "id": "FJ3581",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:70492",
-  "triangle_count": 468
+  "triangle_count": 468,
+  "render_group": "artery"
  },
  {
   "id": "FJ3582",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:70492",
-  "triangle_count": 606
+  "triangle_count": 606,
+  "render_group": "artery"
  },
  {
   "id": "FJ3583",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4751",
-  "triangle_count": 546
+  "triangle_count": 546,
+  "render_group": "vein"
  },
  {
   "id": "FJ3584",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:69265",
-  "triangle_count": 754
+  "triangle_count": 754,
+  "render_group": "artery"
  },
  {
   "id": "FJ3585",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4754",
-  "triangle_count": 226
+  "triangle_count": 226,
+  "render_group": "vein"
  },
  {
   "id": "FJ3586",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14755",
-  "triangle_count": 654
+  "triangle_count": 654,
+  "render_group": "artery"
  },
  {
   "id": "FJ3587",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4755",
-  "triangle_count": 368
+  "triangle_count": 368,
+  "render_group": "vein"
  },
  {
   "id": "FJ3590",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14811",
-  "triangle_count": 1000
+  "triangle_count": 1000,
+  "render_group": "artery"
  },
  {
   "id": "FJ3594",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14776",
-  "triangle_count": 478
+  "triangle_count": 478,
+  "render_group": "artery"
  },
  {
   "id": "FJ3604",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:20688",
-  "triangle_count": 6888
+  "triangle_count": 6888,
+  "render_group": "artery"
  },
  {
   "id": "FJ3607",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:18887",
-  "triangle_count": 94
+  "triangle_count": 94,
+  "render_group": "vein"
  },
  {
   "id": "FJ3608",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:18887",
-  "triangle_count": 202
+  "triangle_count": 202,
+  "render_group": "vein"
  },
  {
   "id": "FJ3609",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:18887",
-  "triangle_count": 74
+  "triangle_count": 74,
+  "render_group": "vein"
  },
  {
   "id": "FJ3614",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:20735",
-  "triangle_count": 2924
+  "triangle_count": 2924,
+  "render_group": "artery"
  },
  {
   "id": "FJ3617",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14759",
-  "triangle_count": 12938
+  "triangle_count": 12938,
+  "render_group": "artery"
  },
  {
   "id": "FJ3618",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14341",
-  "triangle_count": 13640
+  "triangle_count": 13640,
+  "render_group": "vein"
  },
  {
   "id": "FJ3619",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14746",
-  "triangle_count": 840
+  "triangle_count": 840,
+  "render_group": "artery"
  },
  {
   "id": "FJ3620",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14746",
-  "triangle_count": 734
+  "triangle_count": 734,
+  "render_group": "artery"
  },
  {
   "id": "FJ3621",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14746",
-  "triangle_count": 440
+  "triangle_count": 440,
+  "render_group": "artery"
  },
  {
   "id": "FJ3622",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14746",
-  "triangle_count": 380
+  "triangle_count": 380,
+  "render_group": "artery"
  },
  {
   "id": "FJ3623",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14746",
-  "triangle_count": 238
+  "triangle_count": 238,
+  "render_group": "artery"
  },
  {
   "id": "FJ3624",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14746",
-  "triangle_count": 502
+  "triangle_count": 502,
+  "render_group": "artery"
  },
  {
   "id": "FJ3625",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14746",
-  "triangle_count": 342
+  "triangle_count": 342,
+  "render_group": "artery"
  },
  {
   "id": "FJ3626",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14746",
-  "triangle_count": 286
+  "triangle_count": 286,
+  "render_group": "artery"
  },
  {
   "id": "FJ3638",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14830",
-  "triangle_count": 1702
+  "triangle_count": 1702,
+  "render_group": "artery"
  },
  {
   "id": "FJ3640",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14773",
-  "triangle_count": 1742
+  "triangle_count": 1742,
+  "render_group": "artery"
  },
  {
   "id": "FJ3644",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:66358",
-  "triangle_count": 1506
+  "triangle_count": 1506,
+  "render_group": "artery"
  },
  {
   "id": "FJ3645",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:4720",
-  "triangle_count": 598
+  "triangle_count": 598,
+  "render_group": "vein"
  },
  {
   "id": "FJ3648",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:78121",
-  "triangle_count": 682
+  "triangle_count": 682,
+  "render_group": "vein"
  },
  {
   "id": "FJ3649",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:78121",
-  "triangle_count": 308
+  "triangle_count": 308,
+  "render_group": "vein"
  },
  {
   "id": "FJ3650",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:78121",
-  "triangle_count": 418
+  "triangle_count": 418,
+  "render_group": "vein"
  },
  {
   "id": "FJ3651",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:78121",
-  "triangle_count": 346
+  "triangle_count": 346,
+  "render_group": "vein"
  },
  {
   "id": "FJ3652",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:78121",
-  "triangle_count": 556
+  "triangle_count": 556,
+  "render_group": "vein"
  },
  {
   "id": "FJ3653",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:78121",
-  "triangle_count": 1610
+  "triangle_count": 1610,
+  "render_group": "vein"
  },
  {
   "id": "FJ3654",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:78121",
-  "triangle_count": 382
+  "triangle_count": 382,
+  "render_group": "vein"
  },
  {
   "id": "FJ3656",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:14832",
-  "triangle_count": 418
+  "triangle_count": 418,
+  "render_group": "artery"
  },
  {
   "id": "FJ3659",
   "bundle_id": "bp3d-4.0-cardiovascular",
   "structure_id": "FMA:10951",
-  "triangle_count": 1670
+  "triangle_count": 1670,
+  "render_group": "vein"
  },
  {
   "id": "FJ1252",

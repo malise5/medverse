@@ -20,7 +20,7 @@ Base path `/api/v1`. OpenAPI: `/api/v1/openapi.json`; Swagger UI: `/api/v1/docs`
 | POST | `/auth/login` | none (rate-limited) | start session |
 | POST | `/auth/logout` | auth | revoke session |
 | GET | `/auth/me` | auth | current user, roles, permissions |
-| GET | `/anatomy/systems` | anatomy:read | systems with structure/mesh counts |
+| GET | `/anatomy/systems?model=` | anatomy:read | systems with structure counts; mesh counts for one body (`male`/`female`) or all |
 | GET | `/anatomy/index` | anatomy:read | compact columnar index of all structures |
 | GET | `/anatomy/structures` | anatomy:read | paginated list (`system`, `with_geometry`) |
 | GET | `/anatomy/search?q=` | anatomy:read | ranked fuzzy search over names, synonyms, Latin |
@@ -28,7 +28,8 @@ Base path `/api/v1`. OpenAPI: `/api/v1/openapi.json`; Swagger UI: `/api/v1/docs`
 | GET | `/anatomy/structures/{id}?audience=` | anatomy:read | full detail |
 | GET | `/anatomy/structures/{id}/children` | anatomy:read | part_of children |
 | GET | `/anatomy/structures/{id}/circulation` | anatomy:read | inferred artery/vein routes to the heart (mesh → hops); `mode` whole_circulation / organ_route / none |
-| GET | `/assets/manifest` | anatomy:read | bundles + mesh→structure map |
+| GET | `/assets/manifest?model=` | anatomy:read | bundles + mesh→structure map of one body (default `male`) |
+| GET | `/assets/models` | anatomy:read | the available bodies with sources, licence and meshes per system |
 | GET | `/references`, `/references/{id}` | anatomy:read | citations |
 | GET | `/simulations/models[/{id}]` | anatomy:read | model definitions |
 | POST | `/simulations/models/{id}/run` | simulation:run | run, persist record |

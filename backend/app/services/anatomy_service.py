@@ -15,6 +15,7 @@ from sqlalchemy.orm import Session
 from app.core.errors import not_found
 from app.models import (
     AnatomicalSystem,
+    AssetBundle,
     Condition,
     ConditionStructure,
     Mesh,
@@ -64,17 +65,21 @@ def summaries(db: Session, structures: list[Structure]) -> list[StructureSummary
     ]
 
 
-def list_systems(db: Session) -> list[SystemOut]:
+def list_systems(db: Session, body_model: str | None = None) -> list[SystemOut]:
+    """Systems with structure counts; mesh counts for one body model, or all bodies."""
     counts = dict(
         db.execute(select(Structure.system_id, func.count()).group_by(Structure.system_id)).all()
     )
-    mesh_counts = dict(
-        db.execute(
-            select(Structure.system_id, func.count(Mesh.id))
-            .join(Mesh, Mesh.structure_id == Structure.id)
-            .group_by(Structure.system_id)
-        ).all()
+    mesh_q = (
+        select(Structure.system_id, func.count(Mesh.id))
+        .join(Mesh, Mesh.structure_id == Structure.id)
+        .group_by(Structure.system_id)
     )
+    if body_model:
+        mesh_q = mesh_q.join(AssetBundle, AssetBundle.id == Mesh.bundle_id).where(
+            AssetBundle.body_model == body_model
+        )
+    mesh_counts = dict(db.execute(mesh_q).all())
     systems = db.scalars(select(AnatomicalSystem).order_by(AnatomicalSystem.display_order))
     return [
         SystemOut.model_validate(s).model_copy(
@@ -349,3 +354,21 @@ def structure_detail(
         ],
         references=references,
     )
+
+
+def body_models_of(db: Session, structure_ids: list[str]) -> dict[str, list[str]]:
+    """Structure -> body models ("male", "female") that have at least one of its meshes."""
+    if not structure_ids:
+        return {}
+    rows = db.execute(
+        select(StructureMesh.structure_id, AssetBundle.body_model)
+        .join(Mesh, Mesh.id == StructureMesh.mesh_id)
+        .join(AssetBundle, AssetBundle.id == Mesh.bundle_id)
+        .where(StructureMesh.structure_id.in_(structure_ids))
+        .distinct()
+    )
+    out: dict[str, set[str]] = {}
+    for sid, model in rows:
+        out.setdefault(sid, set()).add(model)
+    order = {"male": 0, "female": 1}
+    return {sid: sorted(models, key=order.get) for sid, models in out.items()}

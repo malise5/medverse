@@ -71,7 +71,8 @@ def load_isa_parents(src: Path) -> dict[str, set[str]]:
             isa[c].add(p)
     else:
         print(
-            "warning: IS-A relations not found; classification uses PART-OF only", file=sys.stderr
+            "warning: IS-A relations not found; classification uses PART-OF only",
+            file=sys.stderr,
         )
     return isa
 
@@ -178,7 +179,11 @@ def parse_obj(path: Path) -> tuple[np.ndarray, np.ndarray, str | None]:
                 idx = [i - 1 if i > 0 else len(verts) + i for i in idx]
                 for k in range(1, len(idx) - 1):
                     faces.append([idx[0], idx[k], idx[k + 1]])
-    return np.asarray(verts, dtype=np.float64), np.asarray(faces, dtype=np.uint32), concept
+    return (
+        np.asarray(verts, dtype=np.float64),
+        np.asarray(faces, dtype=np.uint32),
+        concept,
+    )
 
 
 def read_header_concept(path: Path) -> str | None:
@@ -189,11 +194,57 @@ def read_header_concept(path: Path) -> str | None:
     return None
 
 
+def taubin_smooth(
+    v: np.ndarray,
+    f: np.ndarray,
+    iterations: int,
+    lam: float = 0.5,
+    mu: float = -0.53,
+    max_shift: float = 2.0,
+) -> np.ndarray:
+    """Taubin lambda|mu smoothing: removes the faceting left by 99 % decimation without
+    the shrinkage of plain Laplacian smoothing. Boundary vertices (open rims) are pinned
+    so that openings keep their size and neighbouring meshes stay in contact."""
+    if iterations <= 0 or len(f) == 0:
+        return v
+    edges = np.concatenate([f[:, [0, 1]], f[:, [1, 2]], f[:, [2, 0]]])
+    key = np.sort(edges, axis=1)
+    _, inverse, counts = np.unique(key, axis=0, return_inverse=True, return_counts=True)
+    boundary = np.zeros(len(v), dtype=bool)
+    open_edges = key[counts[inverse.ravel()] == 1]
+    boundary[open_edges.ravel()] = True
+    src = np.concatenate([edges[:, 0], edges[:, 1]])
+    dst = np.concatenate([edges[:, 1], edges[:, 0]])
+    degree = np.bincount(src, minlength=len(v)).astype(np.float64)
+    degree[degree == 0] = 1
+    out = v.astype(np.float64).copy()
+    movable = ~boundary[:, None]
+    for _ in range(iterations):
+        for factor in (lam, mu):
+            nbr = np.zeros_like(out)
+            np.add.at(nbr, src, out[dst])
+            delta = nbr / degree[:, None] - out
+            out = out + factor * delta * movable
+    # Never move a vertex further than max_shift (mm) or 1.5 % of the mesh's extent, so
+    # thin structures keep their shape; the aim is to remove facets, not to remodel.
+    cap = min(max_shift, 0.015 * float(np.linalg.norm(v.max(0) - v.min(0))))
+    shift = out - v
+    norm = np.linalg.norm(shift, axis=1, keepdims=True)
+    scale = np.minimum(1.0, cap / np.maximum(norm, 1e-12))
+    return v + shift * scale
+
+
 def to_scene(v: np.ndarray) -> np.ndarray:
     return np.stack([v[:, 0], v[:, 2], -v[:, 1]], axis=1) * 0.001
 
 
-def write_glb(path: Path, meshes: list[dict]) -> None:
+def write_glb(
+    path: Path,
+    meshes: list[dict],
+    *,
+    generator: str = "medverse-pipeline/bodyparts3d",
+    copyright: str | None = None,
+) -> None:
     """Minimal glTF 2.0 binary writer: one node + mesh per element, no materials.
 
     Normals are omitted (computed on the client) to halve payload size.
@@ -209,7 +260,12 @@ def write_glb(path: Path, meshes: list[dict]) -> None:
             bin_chunks.append(b"\x00" * pad)
             offset += pad
         buffer_views.append(
-            {"buffer": 0, "byteOffset": offset, "byteLength": len(data), "target": target}
+            {
+                "buffer": 0,
+                "byteOffset": offset,
+                "byteLength": len(data),
+                "target": target,
+            }
         )
         bin_chunks.append(data)
         offset += len(data)
@@ -243,7 +299,10 @@ def write_glb(path: Path, meshes: list[dict]) -> None:
         )
         ia = len(accessors) - 1
         gl_meshes.append(
-            {"name": m["id"], "primitives": [{"attributes": {"POSITION": pa}, "indices": ia}]}
+            {
+                "name": m["id"],
+                "primitives": [{"attributes": {"POSITION": pa}, "indices": ia}],
+            }
         )
         extras = {"structureId": m["structure_id"]}
         if m.get("group"):
@@ -255,8 +314,8 @@ def write_glb(path: Path, meshes: list[dict]) -> None:
     gltf = {
         "asset": {
             "version": "2.0",
-            "generator": "medverse-pipeline/bodyparts3d",
-            "copyright": ATTRIBUTION,
+            "generator": generator,
+            "copyright": copyright or ATTRIBUTION,
         },
         "scene": 0,
         "scenes": [{"nodes": list(range(len(nodes)))}],
@@ -300,12 +359,22 @@ def main() -> int:
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
     ap.add_argument("--source", type=Path, required=True)
+    ap.add_argument(
+        "--smooth-iterations",
+        type=int,
+        default=3,
+        help="Taubin smoothing passes per mesh (0 disables); see taubin_smooth()",
+    )
     ap.add_argument("--out-content", type=Path, default=REPO / "content/generated/bodyparts3d")
     ap.add_argument(
-        "--out-assets", type=Path, default=REPO / "frontend/public/assets/anatomy/bp3d-4.0"
+        "--out-assets",
+        type=Path,
+        default=REPO / "frontend/public/assets/anatomy/bp3d-4.0",
     )
     ap.add_argument(
-        "--no-compress", action="store_true", help="skip meshopt compression (needs npx)"
+        "--no-compress",
+        action="store_true",
+        help="skip meshopt compression (needs npx)",
     )
     args = ap.parse_args()
 
@@ -319,7 +388,10 @@ def main() -> int:
     obj_files = {p.stem: p for p in args.source.rglob("*.obj")}
     missing_obj = sorted(set(owners) - set(obj_files))
     if missing_obj:
-        print(f"warning: {len(missing_obj)} element files listed but not found", file=sys.stderr)
+        print(
+            f"warning: {len(missing_obj)} element files listed but not found",
+            file=sys.stderr,
+        )
 
     # Each OBJ header names its element's concept authoritatively; the tree-derived
     # owner is the cross-check and the fallback when a header is absent.
@@ -397,7 +469,7 @@ def main() -> int:
         if len(v) == 0 or len(f) == 0:
             print(f"warning: {fj} is empty; skipped", file=sys.stderr)
             continue
-        v = to_scene(v)
+        v = to_scene(taubin_smooth(v, f, args.smooth_iterations))
         raw[fj] = (v, f)
         lo, hi = np.minimum(lo, v.min(0)), np.maximum(hi, v.max(0))
     shift = np.array([-(lo[0] + hi[0]) / 2, -lo[1], -(lo[2] + hi[2]) / 2])
@@ -488,7 +560,10 @@ def main() -> int:
             "max": (hi + shift).round(4).tolist(),
         },
         "per_system": {
-            sys_id: {"meshes": len(items), "triangles": int(sum(len(m["indices"]) for m in items))}
+            sys_id: {
+                "meshes": len(items),
+                "triangles": int(sum(len(m["indices"]) for m in items)),
+            }
             for sys_id, items in sorted(by_system.items())
         },
         "structures_per_system": {
@@ -498,7 +573,10 @@ def main() -> int:
     }
     dump("pipeline_report.json", report)
     print(
-        json.dumps({k: (len(v) if isinstance(v, list) else v) for k, v in report.items()}, indent=1)
+        json.dumps(
+            {k: (len(v) if isinstance(v, list) else v) for k, v in report.items()},
+            indent=1,
+        )
     )
     return 0
 

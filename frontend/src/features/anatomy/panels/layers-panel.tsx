@@ -80,6 +80,7 @@ export function LayersPanel({ systems }: { systems: AnatomicalSystem[] }) {
   const opacity = useWorkspace((s) => s.systemOpacity);
   const setVisible = useWorkspace((s) => s.setSystemVisible);
   const setOpacity = useWorkspace((s) => s.setSystemOpacity);
+  const bodyModel = useWorkspace((s) => s.bodyModel);
 
   return (
     <div className="grid gap-5">
@@ -89,6 +90,7 @@ export function LayersPanel({ systems }: { systems: AnatomicalSystem[] }) {
           Anatomical systems
         </h3>
         {systems.map((s) => {
+          if (s.id === "unclassified" && !s.mesh_count) return null;
           const on = visible[s.id] !== false;
           const hasMeshes = s.mesh_count > 0;
           return (
@@ -104,7 +106,7 @@ export function LayersPanel({ systems }: { systems: AnatomicalSystem[] }) {
                   <span className="block text-[11px] text-muted-foreground">
                     {hasMeshes
                       ? `${s.structure_count} structures · ${s.mesh_count} meshes`
-                      : "Placeholder · no 3D assets yet"}
+                      : `Not in the ${bodyModel} body's 3D source`}
                   </span>
                 </span>
                 <button

@@ -40,12 +40,23 @@ The UI shows the status on every content section, relationship set and condition
 | Structures (BodyParts3D/FMA) | 1,368 | source_imported |
 | PART-OF relationships | 1,367 | source_imported |
 | Curated relationships | 18 | draft |
-| Curated structures with content | 85 (67 entries; paired organs share one text) across all 12 systems | draft |
+| Curated structures with content | 95 (73 entries; paired organs share one text) across all 12 systems, incl. female-only structures | draft |
 | Curated content sections | basic (beginner) overview for every curated structure, plus undergraduate sections (gross anatomy, blood supply, innervation, physiology, clinical anatomy) | draft |
 | Body-system learning modules | 12 (`content/learning/modules.json`) | draft, class B |
-| Quiz questions | 80 (59 multiple choice, 21 "find it in 3D") | draft |
+| Quiz questions | 84 (59 multiple choice, 25 "find it in 3D", each tagged with the bodies it can be answered in) | draft |
 | Pathology conditions | 2 (arterial stiffening; raised peripheral resistance) | draft, class B text + class C scenarios |
-| References | 13 | citation metadata needs librarian check |
+| References | 14 | citation metadata needs librarian check |
+
+## 3D sources and classification corrections
+
+- Male body: BodyParts3D 4.0 (CC BY 4.0). Female body: Human Reference Atlas 3D reference
+  organs, Visible Human Female (CC BY 4.0, verified per organ by the pipeline; organ DOIs
+  in `content/generated/hra-female/pipeline_report.json`). Female-source structures are
+  `source_imported` with `identity_source = hra-vhf`.
+- `content/systems.json → structure_system_overrides` holds reviewed corrections to the
+  automatic system classification (currently: the left lung, its lobes and segments and
+  the right main bronchus were classed cardiovascular because most of their BodyParts3D
+  meshes are pulmonary vessels; they are respiratory).
 
 ## Learning modules and quizzes
 

@@ -40,11 +40,22 @@ function Organs({ m }: { m: ModuleDetail }) {
               <p className="text-sm text-muted-foreground">{o.role}</p>
             </div>
             {o.in_3d && o.structure_id ? (
-              <Button size="xs" variant="secondary" className="self-start sm:self-center" asChild>
-                <Link href={`/anatomy?structure=${encodeURIComponent(o.structure_id)}`}>
-                  <Box /> View in 3D
-                </Link>
-              </Button>
+              <div className="flex flex-wrap items-center gap-1.5 self-start sm:self-center">
+                {o.body_models.length === 1 && (
+                  <Badge variant="outline" className="text-[10px] capitalize text-muted-foreground">
+                    {o.body_models[0]} body
+                  </Badge>
+                )}
+                <Button size="xs" variant="secondary" asChild>
+                  <Link
+                    href={`/anatomy?structure=${encodeURIComponent(o.structure_id)}${
+                      o.body_models.length === 1 ? `&model=${o.body_models[0]}` : ""
+                    }`}
+                  >
+                    <Box /> View in 3D
+                  </Link>
+                </Button>
+              </div>
             ) : (
               <Badge variant="outline" className="self-start text-[10px] text-muted-foreground sm:self-center">
                 Not in the 3D model yet

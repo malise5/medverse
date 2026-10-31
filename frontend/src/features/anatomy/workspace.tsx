@@ -57,11 +57,13 @@ export function AnatomyWorkspace() {
 
   // Selection may be a compound structure (e.g. "heart"); its meshes come from the API.
   // Until the detail loads, fall back to meshes owned directly by the structure.
+  // Structure detail lists meshes of both bodies; keep those of the body on screen.
+  const inBody = useCallback((ids: string[]) => ids.filter((id) => data.manifest?.meshes[id]), [data.manifest]);
   const selectedMeshIds = useMemo(() => {
     if (!selectedId) return new Set<string>();
-    const ids = detail.data?.id === selectedId ? detail.data.mesh_ids : data.ownedMeshes.get(selectedId);
+    const ids = detail.data?.id === selectedId ? inBody(detail.data.mesh_ids) : data.ownedMeshes.get(selectedId);
     return new Set(ids ?? []);
-  }, [selectedId, detail.data, data.ownedMeshes]);
+  }, [selectedId, detail.data, data.ownedMeshes, inBody]);
 
   const multiMeshIds = useMemo(
     () => new Set(multi.flatMap((id) => data.ownedMeshes.get(id) ?? [])),
@@ -114,11 +116,12 @@ export function AnatomyWorkspace() {
   const showCirculation = useWorkspace((s) => s.showCirculation);
   const systemFocus = useWorkspace((s) => s.systemFocus);
   const circulationTarget = selectedId ?? (systemFocus === "cardiovascular" ? HEART : null);
-  const circ = useCirculation(circulationTarget, showCirculation);
+  const routesAvailable = data.bodyModel === "male";
+  const circ = useCirculation(circulationTarget, showCirculation && routesAvailable);
   useEffect(() => {
     const c = circ.data;
     const ws = useWorkspace.getState();
-    if (!showCirculation || !c || c.structure_id !== circulationTarget || c.mode === "none") {
+    if (!routesAvailable || !showCirculation || !c || c.structure_id !== circulationTarget || c.mode === "none") {
       ws.setCirculation(null);
       return;
     }
@@ -132,7 +135,7 @@ export function AnatomyWorkspace() {
       maxArteryHop: Math.max(0, ...arteries.values()),
       maxVeinHop: Math.max(0, ...veins.values()),
     });
-  }, [circ.data, circulationTarget, showCirculation]);
+  }, [circ.data, circulationTarget, showCirculation, routesAvailable]);
 
   // Choosing a structure from search/hierarchy/links shows it: once its meshes are known
   // the camera focuses, the rest of the body fades (spotlight) and, if a documented
@@ -154,7 +157,8 @@ export function AnatomyWorkspace() {
     if (!detail.data) return;
     const d = detail.data;
     if (pendingFocus.current === d.id) {
-      if (d.mesh_ids.length) useWorkspace.getState().requestFocus(d.mesh_ids);
+      const own = inBody(d.mesh_ids);
+      if (own.length) useWorkspace.getState().requestFocus(own);
       pendingFocus.current = null;
     }
     if (pendingPlay.current?.id === d.id) {
@@ -167,7 +171,7 @@ export function AnatomyWorkspace() {
         ws.stopPlayback();
       }
     }
-  }, [detail.data, play]);
+  }, [detail.data, play, inBody]);
 
   // Deep links: /anatomy?structure=FMA:3734&highlight=FMA:3734,FMA:3736&play=cv.windkessel3
   const params = useSearchParams();
@@ -180,6 +184,25 @@ export function AnatomyWorkspace() {
       if (modelId) pendingPlay.current = { id: s, modelId };
     }
   }, [params, select]);
+  // After switching body, frame the selected structure again in the new body.
+  const bodyOnScreen = data.manifest?.body_model;
+  const framedBody = useRef(bodyOnScreen);
+  useEffect(() => {
+    if (!bodyOnScreen || framedBody.current === bodyOnScreen) return;
+    framedBody.current = bodyOnScreen;
+    const d = detail.data;
+    if (d && d.id === useWorkspace.getState().selectedId) {
+      const own = inBody(d.mesh_ids);
+      if (own.length) useWorkspace.getState().requestFocus(own);
+    }
+  }, [bodyOnScreen, detail.data, inBody]);
+
+  // Body: /anatomy?model=female (otherwise the body chosen earlier stays).
+  const modelParam = params.get("model");
+  useEffect(() => {
+    if (modelParam === "male" || modelParam === "female") useWorkspace.getState().setBodyModel(modelParam);
+  }, [modelParam]);
+
   // Layer builder: /anatomy?systems=skeletal,muscular shows only the listed systems.
   const systemsParam = params.get("systems");
   useEffect(() => {

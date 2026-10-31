@@ -1214,22 +1214,28 @@
             "role": "Carries sperm from the epididymis towards the urethra."
           },
           {
-            "name": "Ovary",
+            "name": "Ovary (left shown)",
             "latin": "Ovarium",
-            "structure_id": null,
+            "structure_id": "FMA:7214",
             "role": "Produces oocytes, oestrogen and progesterone."
           },
           {
-            "name": "Uterine tube",
+            "name": "Uterine tube (left shown)",
             "latin": "Tuba uterina",
-            "structure_id": null,
+            "structure_id": "FMA:18484",
             "role": "Carries the oocyte; usual site of fertilisation."
           },
           {
             "name": "Uterus",
             "latin": "Uterus",
-            "structure_id": null,
+            "structure_id": "FMA:17558",
             "role": "Muscular organ where the embryo implants and develops."
+          },
+          {
+            "name": "Breast (mammary gland)",
+            "latin": "Mamma",
+            "structure_id": "FMA:57991",
+            "role": "Contains the mammary gland, which produces milk after childbirth. TA2 classifies the breast with the integument; it is shown with the female reproductive organs in 3D."
           }
         ],
         "works_with": [
@@ -1293,7 +1299,7 @@
           "Benign prostatic hyperplasia is common in older men and can obstruct urine flow.",
           "Sexually transmitted infections can damage the uterine tubes and reduce fertility."
         ],
-        "asset_note": "The current 3D source models an adult male and includes the prostate only. Other reproductive organs are described here but are not yet available in 3D."
+        "asset_note": "The 3D male body (BodyParts3D) includes the prostate; the 3D female body (Human Reference Atlas, Visible Human Female) includes the uterus, uterine tubes, ovaries and breasts. Testes, ductus deferens and external genitalia are not yet modelled in 3D."
       }
     },
     {
@@ -1500,21 +1506,21 @@
             "role": "Where T lymphocytes mature; largest in childhood."
           },
           {
-            "name": "Lymph nodes",
+            "name": "Lymph node (mesenteric example)",
             "latin": "Nodi lymphoidei",
-            "structure_id": null,
+            "structure_id": "FMA:12795",
             "role": "Filter lymph and host immune responses."
           },
           {
             "name": "Spleen",
             "latin": "Splen",
-            "structure_id": null,
+            "structure_id": "FMA:7196",
             "role": "Filters blood, removes old red blood cells and mounts immune responses."
           },
           {
-            "name": "Tonsils",
+            "name": "Palatine tonsil (right shown)",
             "latin": "Tonsillae",
-            "structure_id": null,
+            "structure_id": "FMA:54973",
             "role": "Lymphoid tissue guarding the entrance to the airway and gut."
           },
           {
@@ -1580,7 +1586,7 @@
           "Tender, enlarged lymph nodes usually indicate infection; hard, painless, fixed nodes need investigation for cancer.",
           "People without a spleen should be vaccinated against encapsulated bacteria."
         ],
-        "asset_note": "The current 3D source includes the thymus only; lymph nodes, the spleen and lymphatic vessels are not yet modelled."
+        "asset_note": "The male body includes the thymus; the female body includes the thymus, spleen, palatine tonsils and an example mesenteric lymph node. Lymphatic vessels and most lymph nodes are not yet modelled."
       }
     },
     {
@@ -1722,7 +1728,7 @@
           "Sunburn and repeated ultraviolet exposure increase the risk of skin cancer.",
           "Pressure injuries develop over bony points in people who cannot move."
         ],
-        "asset_note": "The 3D model shows the skin as one surface; its layers and appendages are described here but not modelled."
+        "asset_note": "The skin is one surface in both bodies. The breasts (part of the integument in TA2) are shown with the female reproductive organs in 3D so that the skin can be hidden independently. Skin layers and appendages are described here but not modelled."
       }
     },
     {

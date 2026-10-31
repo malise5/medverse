@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-import type { AnimationBinding, AudienceLevel } from "@/lib/api/types";
+import type { AnimationBinding, AudienceLevel, BodyModel } from "@/lib/api/types";
 
 export type ViewPreset =
   | "anterior"
@@ -74,6 +74,8 @@ export interface IdentifyQuiz {
 }
 
 export interface WorkspaceState {
+  /** Which body is shown. Structure IDs are shared by both; mesh IDs are not. */
+  bodyModel: BodyModel;
   selectedId: string | null;
   /** Additional structures selected with Shift/Ctrl for comparison. */
   multiSelection: string[];
@@ -115,6 +117,8 @@ export interface WorkspaceState {
   viewCommand: { preset: ViewPreset; nonce: number } | null;
   focusCommand: { meshIds: string[]; nonce: number } | null;
 
+  /** Switch body; keeps the selected structure, clears mesh-level state. */
+  setBodyModel: (model: BodyModel) => void;
   select: (id: string | null, opts?: { additive?: boolean }) => void;
   setHover: (hover: Hover | null) => void;
   setHighlighted: (meshIds: Iterable<string>) => void;
@@ -149,6 +153,7 @@ export interface WorkspaceState {
 export const DEFAULT_DISSECTION_DEPTH = 10; // skin removed (ghosted), muscles exposed
 
 const initial = () => ({
+  bodyModel: "male" as BodyModel,
   selectedId: null,
   multiSelection: [] as string[],
   highlightedMeshes: new Set<string>(),
@@ -220,10 +225,30 @@ export const useWorkspace = create<WorkspaceState>()((set) => ({
   setParts: (parts) => set({ parts }),
   setCirculation: (circulation) => set({ circulation }),
   setSystemFocus: (systemFocus) => set({ systemFocus }),
+  setBodyModel: (bodyModel) =>
+    set((s) =>
+      s.bodyModel === bodyModel
+        ? {}
+        : {
+            bodyModel,
+            hiddenMeshes: new Set<string>(),
+            isolatedMeshes: null,
+            highlightedMeshes: new Set<string>(),
+            hover: null,
+            parts: [],
+            circulation: null,
+          },
+    ),
   setQuiz: (quiz) => set({ quiz }),
   requestView: (preset) => set({ viewCommand: { preset, nonce: ++nonce } }),
   requestFocus: (meshIds) => set({ focusCommand: { meshIds, nonce: ++nonce } }),
-  reset: () => set((s) => ({ ...initial(), autoPlay: s.autoPlay, viewCommand: { preset: "anterior", nonce: ++nonce } })),
+  reset: () =>
+    set((s) => ({
+      ...initial(),
+      bodyModel: s.bodyModel,
+      autoPlay: s.autoPlay,
+      viewCommand: { preset: "anterior", nonce: ++nonce },
+    })),
 }));
 
 /** Pure visibility rule shared by the renderer and tests. */

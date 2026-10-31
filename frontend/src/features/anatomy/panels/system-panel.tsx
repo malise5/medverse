@@ -33,7 +33,8 @@ export function SystemPanel({
   const ws = useWorkspace.getState();
   const models = useModels();
   const isCirculatory = systemId === "cardiovascular";
-  const circ = useCirculation(isCirculatory ? HEART : null, showCirculation);
+  const routesAvailable = useWorkspace((s) => s.bodyModel === "male");
+  const circ = useCirculation(isCirculatory ? HEART : null, showCirculation && routesAvailable);
 
   const roots = useMemo(() => {
     if (!index) return [];
@@ -78,7 +79,7 @@ export function SystemPanel({
         </section>
       )}
 
-      {isCirculatory && (
+      {isCirculatory && routesAvailable && (
         <section className="grid gap-2">
           <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Blood vessels</h4>
           <Toggle id="sys-vessels" label="Show vessel routes from the heart" checked={showCirculation} onChange={ws.setShowCirculation} />

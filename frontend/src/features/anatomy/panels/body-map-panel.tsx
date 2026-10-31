@@ -145,7 +145,9 @@ export function BodyMapPanel({ structureId, onSelect }: { structureId: string; o
   const flow = useWorkspace((s) => s.flowAnimation);
   const spotlight = useWorkspace((s) => s.spotlight);
   const ws = useWorkspace.getState();
-  const circ = useCirculation(structureId, showCirculation);
+  // Routes are inferred from the male body's mesh contact graph (see 3d-asset-pipeline.md).
+  const routesAvailable = useWorkspace((s) => s.bodyModel === "male");
+  const circ = useCirculation(structureId, showCirculation && routesAvailable);
 
   return (
     <div className="grid gap-4">
@@ -181,7 +183,12 @@ export function BodyMapPanel({ structureId, onSelect }: { structureId: string; o
 
       <section className="grid gap-1.5">
         <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Blood vessels</h4>
-        {!showCirculation ? (
+        {!routesAvailable ? (
+          <p className="text-sm text-muted-foreground">
+            Vessel routes are inferred from the male body&apos;s 3D vessel contacts and are not yet available
+            for the female body. Its named arteries and veins can still be selected in the cardiovascular layer.
+          </p>
+        ) : !showCirculation ? (
           <p className="text-sm text-muted-foreground">Turn on “Show blood vessel routes” to trace them.</p>
         ) : circ.isLoading ? (
           <Loader2 className="size-4 animate-spin text-muted-foreground" />
@@ -190,7 +197,7 @@ export function BodyMapPanel({ structureId, onSelect }: { structureId: string; o
         ) : (
           <p className="text-sm text-destructive">Could not load vessel routes.</p>
         )}
-        {showCirculation && !spotlight && (
+        {routesAvailable && showCirculation && !spotlight && (
           <p className="text-xs text-muted-foreground">Turn on Spotlight to see the route clearly.</p>
         )}
       </section>
