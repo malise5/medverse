@@ -51,6 +51,7 @@ log = logging.getLogger("medverse.seed")
 
 BP3D_SOURCE = "bodyparts3d-4.0"
 HRA_SOURCE = "hra-vhf"  # Human Reference Atlas 3D reference organs, Visible Human Female
+ZA_SOURCE = "z-anatomy"  # Z-Anatomy head supplement (CC BY-SA 4.0)
 HRA_REFERENCE = "hra2021"
 CURATED_SOURCE = "medverse-curated"
 CHUNK = 1000
@@ -245,6 +246,49 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
         ["structure_id", "source"],
     )
     report.counts["female_new_structures"] = len(hra_new)
+
+    # Z-Anatomy head supplement (CC BY-SA 4.0, both bodies): structures neither body
+    # source defines. See pipeline/zanatomy/build.py.
+    za = content_dir / "generated" / "zanatomy-head"
+    za_structures = _read(za / "structures.json") if (za / "structures.json").exists() else []
+    hra_ids = {s["id"] for s in hra_structures}
+    za_new = [s for s in za_structures if s["id"] not in bp3d_ids and s["id"] not in hra_ids]
+    for s in za_new:
+        if s["system_id"] not in system_ids:
+            problems.append(f"Z-Anatomy structure {s['id']}: unknown system {s['system_id']}")
+    _upsert(
+        db,
+        Structure,
+        [
+            {
+                "id": s["id"],
+                "name": s["name"],
+                "system_id": overrides.get(s["id"], s["system_id"]),
+                "laterality": s["laterality"],
+                "is_compound": s["is_compound"],
+                "identity_source": s.get("identity_source", ZA_SOURCE),
+                "verification_status": VerificationStatus.SOURCE_IMPORTED.value,
+            }
+            for s in za_new
+        ],
+        ["id"],
+    )
+    _upsert(
+        db,
+        StructureXref,
+        [
+            {
+                "structure_id": s["id"],
+                "source": "FMA",
+                "code": s["id"].split(":", 1)[1],
+                "license": "Identifier only (FMA, CC BY 3.0)",
+            }
+            for s in za_new
+            if s["id"].startswith("FMA:")
+        ],
+        ["structure_id", "source"],
+    )
+    report.counts["zanatomy_new_structures"] = len(za_new)
     known = set(db.scalars(select(Structure.id)))
 
     # Graph: part_of from source + curated relations -------------------------
@@ -284,6 +328,25 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
                 "verification_status": VerificationStatus.SOURCE_IMPORTED.value,
                 "notes": None,
                 "reference_id": HRA_REFERENCE if HRA_REFERENCE in ref_ids else None,
+            }
+        )
+    seen_pairs = {(r["subject_id"], r["object_id"]) for r in rel_rows}
+    for r in _read(za / "relationships.json") if (za / "relationships.json").exists() else []:
+        if r["subject"] not in known or r["object"] not in known:
+            problems.append(f"Z-Anatomy relation {r}: unknown structure")
+            continue
+        if (r["subject"], r["object"]) in seen_pairs:
+            continue
+        rel_rows.append(
+            {
+                "subject_id": r["subject"],
+                "predicate": Predicate.PART_OF.value,
+                "object_id": r["object"],
+                "relation_class": Predicate.PART_OF.relation_class.value,
+                "source": ZA_SOURCE,
+                "verification_status": VerificationStatus.SOURCE_IMPORTED.value,
+                "notes": None,
+                "reference_id": None,
             }
         )
 
@@ -376,7 +439,8 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
 
     # 3D assets: one generated directory per body model ------------------------
     bundles, meshes, sm = [], [], {}
-    for directory, body_model in ((gen, "male"), (hra, "female")):
+    # Z-Anatomy bundles name their body model themselves (male and female).
+    for directory, body_model in ((gen, "male"), (hra, "female"), (za, "male")):
         for b in _read(directory / "bundles.json") if (directory / "bundles.json").exists() else []:
             bundles.append({**b, "body_model": b.get("body_model", body_model)})
         if (directory / "meshes.json").exists():

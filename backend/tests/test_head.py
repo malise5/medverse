@@ -60,3 +60,63 @@ def test_head_content_has_location_function_and_clinical_sections(auth_client):
     assert stapes["identity_source"] == "spl-atlas" and stapes["content"]
     teeth = auth_client.get("/api/v1/anatomy/structures/FMA:55681").json()
     assert teeth["identity_source"] == "bodyparts3d-4.0-isa"
+
+
+# --- Z-Anatomy head supplement (CC BY-SA 4.0), pipeline/zanatomy/build.py -------------
+ZA = CONTENT / "generated/zanatomy-head"
+
+
+def _mesh_ids(auth_client, model, structure_id):
+    manifest = auth_client.get("/api/v1/assets/manifest", params={"model": model}).json()
+    ids = auth_client.get(f"/api/v1/anatomy/structures/{structure_id}").json()["mesh_ids"]
+    return [i for i in ids if i in manifest["meshes"]]
+
+
+def test_zanatomy_bundles_are_share_alike_and_separate():
+    bundles = json.loads((ZA / "bundles.json").read_text())
+    assert bundles and {b["body_model"] for b in bundles} == {"male", "female"}
+    for b in bundles:
+        assert b["license"] == "CC BY-SA 4.0"
+        assert b["uri"].startswith("/assets/anatomy/zanatomy-head/")
+        assert "Z-Anatomy" in b["attribution"] and "BodyParts3D" in b["attribution"]
+        if b["body_model"] == "female":
+            assert "male-derived" in b["attribution"] and "male-derived" in b["source_dataset"]
+    text = (
+        BACKEND_DIR.parent / "frontend/public/assets/anatomy/zanatomy-head/LICENSE.txt"
+    ).read_text()
+    assert "CC BY-SA 4.0" in text and "NOT female anatomy" in text
+
+
+def test_zanatomy_registration_residuals_are_reported():
+    report = json.loads((ZA / "pipeline_report.json").read_text())
+    male = report["male_registration"]
+    assert male["median_mm"] < 2 and male["p90_mm"] < 8 and 0.95 < male["scale"] < 1.08
+    for anchor, r in report["female_fit"]["anchors"].items():
+        assert r["median_mm"] < 7, anchor
+
+
+def test_zanatomy_fills_male_head_gaps(auth_client):
+    for sid in (
+        "FMA:46781",  # orbital part of orbicularis oculi
+        "FMA:46836",  # left buccinator
+        "FMA:50887",  # left abducens nerve (VI)
+        "FMA:50903",  # left hypoglossal nerve (XII)
+        "FMA:50767",  # superior sagittal sinus
+        "FMA:57417",  # frontal sinus
+        "FMA:55561",  # left superior parathyroid gland
+    ):
+        ids = _mesh_ids(auth_client, "male", sid)
+        assert ids and all(i.startswith("ZAM-") for i in ids), sid
+        d = auth_client.get(f"/api/v1/anatomy/structures/{sid}").json()
+        assert d["identity_source"] == "z-anatomy", sid
+
+
+def test_female_head_has_fitted_skull_but_keeps_its_own_organs(auth_client):
+    for sid in ("FMA:52734", "FMA:52748", "FMA:74052"):  # frontal bone, mandible, malleus
+        ids = _mesh_ids(auth_client, "female", sid)
+        assert ids and all(i.startswith("ZAF-") for i in ids), sid
+    # the male skull stays BodyParts3D; female eyes and brain stay female-donor geometry
+    assert not any(i.startswith("ZA") for i in _mesh_ids(auth_client, "male", "FMA:52734"))
+    for sid in ("FMA:50801", "FMA:58271"):  # brain, right sclera
+        ids = _mesh_ids(auth_client, "female", sid)
+        assert ids and not any(i.startswith("ZA") for i in ids), sid

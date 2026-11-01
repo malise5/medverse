@@ -104,7 +104,9 @@ function Overview({ d }: { d: StructureDetail }) {
                 ? "BodyParts3D 4.0 (IS-A set, FMA)"
                 : d.identity_source === "spl-atlas"
                   ? "the SPL Head and Neck / Inner Ear atlases (Brigham and Women's Hospital), registered to the BodyParts3D skull"
-                  : d.identity_source}
+                  : d.identity_source === "z-anatomy"
+                    ? "Z-Anatomy (CC BY-SA 4.0), registered to the BodyParts3D skull; on the female body these meshes are fitted from a male-derived model"
+                    : d.identity_source}
           .
         </p>
         <p className="text-xs">Content is added through the expert-reviewed authoring workflow.</p>
@@ -225,6 +227,15 @@ export function StructurePanel({
           <VerificationBadge status={d.verification_status} />
         </div>
         {!meshIds.length && d.mesh_ids.length > 0 && <OtherBodyNotice />}
+        {meshIds.some((m) => m.startsWith("ZAF-")) && (
+          <p className="rounded-md border border-dashed p-2 text-[11px] text-muted-foreground">
+            3D model on this body: Z-Anatomy (CC BY-SA 4.0), made from a male body and fitted to this
+            female head. Its shape is an approximation, not female anatomy.
+          </p>
+        )}
+        {meshIds.some((m) => m.startsWith("ZAM-")) && (
+          <p className="text-[11px] text-muted-foreground">3D model: Z-Anatomy (CC BY-SA 4.0), registered to this body.</p>
+        )}
         <div className="flex flex-wrap gap-1.5">
           <Button size="sm" variant="secondary" disabled={!meshIds.length} onClick={() => ws.requestFocus(meshIds)}>
             <Crosshair /> Focus

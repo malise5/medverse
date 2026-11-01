@@ -205,21 +205,55 @@ backend/.venv/bin/python pipeline/bodyparts3d/build.py --source SRC \
    `frontend/public/assets/anatomy/bp3d-4.0/LICENSE-3D-Slicer-Part-B.txt`, and affected
    bundles list both licences.
 
+### Z-Anatomy head supplement (both bodies, `pipeline/zanatomy/`)
+
+[Z-Anatomy](https://www.z-anatomy.com) (CC BY-SA 4.0; itself derived from BodyParts3D,
+CC BY-SA 2.1 Japan, with Brainder brain models) fills the remaining head gaps. Its files
+are **share-alike**, so they are built into their own bundles
+(`frontend/public/assets/anatomy/zanatomy-head/{male,female}-<system>.glb`, licence
+`CC BY-SA 4.0`, notice in `LICENSE.txt` there), separate from the CC BY 4.0 bundles.
+
+```bash
+# once per FBX from github.com/LluisV/Z-Anatomy (Resources/Models/FBX), Blender 4.2 LTS:
+blender --background --factory-startup --python pipeline/zanatomy/blender_export.py \
+  -- SkeletalSystem100.fbx GLB_DIR/skeletal.glb   # also muscular, nervous, cardio, visceral, lymphoid
+backend/.venv/bin/python pipeline/zanatomy/build.py --glb-dir GLB_DIR
+```
+
+- **Selection** (`head_selection.json`, 226 entries): every Z-Anatomy mesh in the head
+  was compared with the male build by FMA concept (present with geometry or not) and by
+  surface overlap with the BodyParts3D/SPL meshes; only missing structures are kept.
+  Names were mapped to FMA terms (left/right where FMA has them) from the FMA ontology.
+  Brain gyri/sulci and cerebellar lobules are not used (they duplicate the cortex).
+- **Male**: Z-Anatomy is built on the same body, so its skull is registered onto the
+  built male skull by a similarity transform (median 1.23 mm, p90 5.03 mm, scale 1.027).
+  Structures carry `identity_source = z-anatomy`; mesh ids start with `ZAM-`.
+- **Female**: Z-Anatomy has no female anatomy. The same meshes are fitted to the HRA
+  female head with a bounded affine transform estimated from brain, both scleras, upper
+  and lower teeth and thyroid cartilage (median residual 3.2–5.8 mm per anchor). They are
+  labelled everywhere (bundle attribution, structure panel, head-layers notice) as fitted
+  from a male-derived model, not female anatomy; mesh ids start with `ZAF-`. Structures
+  the female already has (brain, eyes, mouth, larynx, ophthalmic vessels) are never added.
+- Meshes are welded and simplified (meshoptimizer, 30 % ratio with an error cap): 2.1 M
+  source triangles → 0.71 M, 3.1 MB for both bodies.
+
 ### Head coverage (current)
 
 Registration residuals: head-and-neck atlas median 3.25 mm / 90th percentile 6.64 mm;
-inner ear right 4.08 / 11.49 mm, left (mirrored) 4.07 / 10.99 mm.
+inner ear right 4.08 / 11.49 mm, left (mirrored) 4.07 / 10.99 mm; Z-Anatomy see above.
+"ZA" = Z-Anatomy; on the female body ZA meshes are fitted from a male-derived model.
 
-| Group | Male body | Female body | Missing (needs licensed assets) |
+| Group | Male body | Female body | Still missing |
 |---|---|---|---|
-| Brain and CNS | lobes, gyri, cerebellum, midbrain, pons, medulla, thalamus, hypothalamus, epithalamus, corpus callosum, basal nuclei, amygdala, fornix, mammillary bodies, ventricles and aqueduct, cranial dura, spinal cord | 283 atlas regions, spinal cord by segment, dura | arachnoid and pia mater; cranial nerves VI, IX–XII (V2/V3, VII only intratemporal) |
-| Eye | eyeball layers, cornea, iris, lens, retina, choroid, sclera, optic nerve, chiasm and tract, extra-ocular muscles, lacrimal gland and drainage, orbital bones | eyeball layers, optic nerve and chiasm, extra-ocular muscles | — |
-| Vessels | internal carotid, vertebral, basilar, circle of Willis, cerebral arteries and branches, ophthalmic, external carotid (SPL), internal jugular | ophthalmic vessels, some cervical vessels | dural venous sinuses, facial and superficial temporal vessels, external jugular |
-| Skull | all 14 named cranial and facial bones, hyoid, conchae, teeth (28, no third molars) | teeth (mouth model) | female skull |
-| Muscles | temporalis, masseter, zygomaticus major (SPL), extra-ocular, tongue, suprahyoid/infrahyoid, pharyngeal, laryngeal, sternocleidomastoid, platysma | extra-ocular | orbicularis oculi/oris, buccinator, frontalis/occipitalis, pterygoids, most expression muscles |
-| Ear | external ear; bony labyrinth, malleus, incus, stapes, tympanic membrane, round window, tensor tympani, stapedius, facial/cochlear/vestibular nerves (SPL) | — | ear canal as a separate structure |
-| Nose and mouth | nasal septum, conchae, tongue, soft palate, salivary glands incl. parotid (SPL), pharynx muscles, larynx | mouth, teeth, tongue, palate, salivary glands, larynx, tonsils | nasal cavity, paranasal sinuses as spaces |
-| Glands and other | pituitary, pineal, thyroid (SPL), skin, hair of head, eyebrows | pineal, thymus, skin | parathyroids, lymph nodes of the head, fat pads |
+| Brain and CNS | lobes, gyri, cerebellum, brainstem, thalamus, hypothalamus, basal nuclei, limbic structures, ventricles, cranial dura, falx and tentorium (ZA), cranial nerve nuclei (ZA), spinal cord | 283 atlas regions, spinal cord by segment; falx and tentorium (ZA) | arachnoid and pia mater |
+| Cranial nerves | I–XII incl. trigeminal divisions and branches (ZA for I, III, V, VI, VII, IX–XII) | I–XII (ZA) | small autonomic ganglia branches |
+| Eye | eyeball layers, lens, retina, optic nerve, chiasm, tract, extra-ocular muscles, lacrimal apparatus, tarsal plates | eyeball layers (female donor); extra-ocular muscles, optic nerve, lacrimal apparatus, tarsal plates (ZA) | — |
+| Vessels | carotid and vertebral systems, circle of Willis and cortical branches, dural venous sinuses, facial, scalp, maxillary and orbital vessels, jugular veins (ZA for sinuses, facial/scalp/maxillary vessels, EJV) | orbital vessels (female donor); carotids, vertebral, basilar, circle of Willis, sinuses, facial and scalp vessels, jugular veins (ZA) | cortical branches on the female body |
+| Skull | 14 cranial and facial bones, hyoid, conchae, teeth; frontal, sphenoidal and ethmoidal sinuses (ZA) | full skull, hyoid, atlas, axis, nasal cartilages, sinuses (ZA); teeth (female donor) | third molars |
+| Muscles | all expression, mastication and scalp muscles (ZA), extra-ocular, tongue, supra/infrahyoid, pharyngeal, laryngeal, neck | expression, mastication, extra-ocular, suprahyoid, pharyngeal, suboccipital and neck muscles (ZA) | laryngeal muscles on the female body |
+| Ear | external ear; labyrinth, ossicles, tympanic membrane, middle-ear muscles, VII/VIII (SPL); auditory tube (ZA) | ossicles, cochlea, tympanic membrane, auditory tube (ZA) | external ear on the female body |
+| Nose, mouth, pharynx | septum, conchae, tongue, palate, salivary glands and ducts, pharynx regions (ZA), larynx | mouth, teeth, tongue, palate, salivary glands, larynx, tonsils (female donor); parotid duct, pharynx regions (ZA) | nasal cavity as a space |
+| Glands, lymph | pituitary (with adeno/neurohypophysis, ZA), pineal, thyroid, parathyroids (ZA), head lymph nodes (ZA) | pineal, thymus (female donor); parathyroids, head lymph nodes (ZA) | fat pads |
 
 ### Head study mode (UI)
 

@@ -1,0 +1,26 @@
+Z-Anatomy head supplement (files in this directory)
+====================================================
+
+These 3D models are derivative works of Z-Anatomy and are licensed under the
+Creative Commons Attribution-ShareAlike 4.0 International licence (CC BY-SA 4.0):
+https://creativecommons.org/licenses/by-sa/4.0/
+
+Attribution (as requested by the Z-Anatomy authors):
+  - "Z-Anatomy - The open source atlas of anatomy - CC-BY-SA 4.0" (https://www.z-anatomy.com,
+    https://github.com/LluisV/Z-Anatomy)
+  - "BodyParts3D - The Database Center for Life Science - CC-BY-SA 2.1 Japan"
+  - Brain models included in Z-Anatomy: "Brainder"
+
+Changes made by MEDVERSE: the meshes were exported from the Z-Anatomy FBX files,
+selected (head structures absent from the BodyParts3D build), registered to the
+BodyParts3D skull by a similarity transform, renamed to FMA identifiers, re-bundled
+and meshopt-compressed. The female-* files were additionally fitted to the HRA
+Visible Human Female head by a bounded affine transform: they are an approximation
+derived from a male model, NOT female anatomy.
+
+Share-alike: you may redistribute and adapt these files only under CC BY-SA 4.0 (or a
+compatible licence), with the attribution above. This licence applies to the files in
+this directory only; the other MEDVERSE 3D assets keep their own licences (CC BY 4.0
+and the 3D Slicer License Part B, see the neighbouring directories).
+
+Educational use only; not for diagnosis or treatment.

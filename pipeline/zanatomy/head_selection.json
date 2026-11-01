@@ -1,0 +1,4621 @@
+{
+ "_comment": "Z-Anatomy head structures added to MEDVERSE; see pipeline/zanatomy/build.py",
+ "structures": [
+  {
+   "za": "Bucinator",
+   "concept": "FMA:46834",
+   "concept_name": "buccinator",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Bucinator.l",
+     "FMA:46836",
+     "left buccinator"
+    ],
+    [
+     "Bucinator.r",
+     "FMA:46835",
+     "right buccinator"
+    ]
+   ]
+  },
+  {
+   "za": "Corrugator supercilii",
+   "concept": "FMA:46794",
+   "concept_name": "corrugator supercilii",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Corrugator supercilii.l",
+     "FMA:46797",
+     "left corrugator supercilii"
+    ],
+    [
+     "Corrugator supercilii.r",
+     "FMA:46796",
+     "right corrugator supercilii"
+    ]
+   ]
+  },
+  {
+   "za": "Depressor anguli oris",
+   "concept": "FMA:46828",
+   "concept_name": "depressor anguli oris",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Depressor anguli oris.l",
+     "FMA:46830",
+     "left depressor anguli oris"
+    ],
+    [
+     "Depressor anguli oris.r",
+     "FMA:46829",
+     "right depressor anguli oris"
+    ]
+   ]
+  },
+  {
+   "za": "Depressor labii inferioris",
+   "concept": "FMA:46816",
+   "concept_name": "depressor labii inferioris",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Depressor labii inferioris.l",
+     "FMA:46818",
+     "left depressor labii inferioris"
+    ],
+    [
+     "Depressor labii inferioris.r",
+     "FMA:46817",
+     "right depressor labii inferioris"
+    ]
+   ]
+  },
+  {
+   "za": "Depressor septi nasi",
+   "concept": "FMA:46777",
+   "concept_name": "depressor septi nasi",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Depressor septi nasi.l",
+     "FMA:55609",
+     "left depressor septi nasi"
+    ],
+    [
+     "Depressor septi nasi.r",
+     "FMA:55608",
+     "right depressor septi nasi"
+    ]
+   ]
+  },
+  {
+   "za": "Frontalis muscle",
+   "concept": "FMA:46757",
+   "concept_name": "frontalis",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Frontalis muscle.l",
+     "FMA:46760",
+     "left frontalis"
+    ],
+    [
+     "Frontalis muscle.r",
+     "FMA:46759",
+     "right frontalis"
+    ]
+   ]
+  },
+  {
+   "za": "Occipitalis muscle",
+   "concept": "FMA:46758",
+   "concept_name": "occipitalis",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Occipitalis muscle.l",
+     "FMA:46762",
+     "left occipitalis"
+    ],
+    [
+     "Occipitalis muscle.r",
+     "FMA:46761",
+     "right occipitalis"
+    ]
+   ]
+  },
+  {
+   "za": "Epicranial aponeurosis",
+   "concept": "FMA:46768",
+   "concept_name": "aponeurosis of epicranius",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Epicranial aponeurosis.l",
+     "FMA:46768",
+     "aponeurosis of epicranius"
+    ],
+    [
+     "Epicranial aponeurosis.r",
+     "FMA:46768",
+     "aponeurosis of epicranius"
+    ]
+   ]
+  },
+  {
+   "za": "Temporoparietalis muscle",
+   "concept": "FMA:46753",
+   "concept_name": "temporoparietalis",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Temporoparietalis muscle.l",
+     "FMA:46764",
+     "left temporoparietalis"
+    ],
+    [
+     "Temporoparietalis muscle.r",
+     "FMA:46763",
+     "right temporoparietalis"
+    ]
+   ]
+  },
+  {
+   "za": "Levator anguli oris",
+   "concept": "FMA:46822",
+   "concept_name": "levator anguli oris",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Levator anguli oris.l",
+     "FMA:46824",
+     "left levator anguli oris"
+    ],
+    [
+     "Levator anguli oris.r",
+     "FMA:46823",
+     "right levator anguli oris"
+    ]
+   ]
+  },
+  {
+   "za": "Levator labii superioris",
+   "concept": "FMA:46805",
+   "concept_name": "levator labii superioris",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Levator labii superioris.l",
+     "FMA:46807",
+     "left levator labii superioris"
+    ],
+    [
+     "Levator labii superioris.r",
+     "FMA:46806",
+     "right levator labii superioris"
+    ]
+   ]
+  },
+  {
+   "za": "Levator nasolabialis",
+   "concept": "FMA:46802",
+   "concept_name": "levator labii superioris alaeque nasi",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Levator nasolabialis.l",
+     "FMA:46804",
+     "left levator labii superioris alaeque nasi"
+    ],
+    [
+     "Levator nasolabialis.r",
+     "FMA:46803",
+     "right levator labii superioris alaeque nasi"
+    ]
+   ]
+  },
+  {
+   "za": "Mentalis muscle",
+   "concept": "FMA:46825",
+   "concept_name": "mentalis",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Mentalis muscle.l",
+     "FMA:46827",
+     "left mentalis"
+    ],
+    [
+     "Mentalis muscle.r",
+     "FMA:46826",
+     "right mentalis"
+    ]
+   ]
+  },
+  {
+   "za": "Nasalis muscle",
+   "concept": "FMA:46770",
+   "concept_name": "nasalis",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Nasalis muscle.l",
+     "FMA:55607",
+     "left nasalis"
+    ],
+    [
+     "Nasalis muscle.r",
+     "FMA:55606",
+     "right nasalis"
+    ]
+   ]
+  },
+  {
+   "za": "Orbicularis oris muscle",
+   "concept": "FMA:46841",
+   "concept_name": "orbicularis oris",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Orbicularis oris muscle.l",
+     "FMA:46841",
+     "orbicularis oris"
+    ],
+    [
+     "Orbicularis oris muscle.r",
+     "FMA:46841",
+     "orbicularis oris"
+    ]
+   ]
+  },
+  {
+   "za": "Orbital part of orbicularis oculi",
+   "concept": "FMA:46781",
+   "concept_name": "orbital part of orbicularis oculi",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Orbital part of orbicularis oculi.l",
+     "FMA:46781",
+     "orbital part of orbicularis oculi"
+    ],
+    [
+     "Orbital part of orbicularis oculi.r",
+     "FMA:46781",
+     "orbital part of orbicularis oculi"
+    ]
+   ]
+  },
+  {
+   "za": "Palpebral part of orbicularis oculi",
+   "concept": "FMA:46784",
+   "concept_name": "palpebral part of orbicularis oculi",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Palpebral part of orbicularis oculi.l",
+     "FMA:46784",
+     "palpebral part of orbicularis oculi"
+    ],
+    [
+     "Palpebral part of orbicularis oculi.r",
+     "FMA:46784",
+     "palpebral part of orbicularis oculi"
+    ]
+   ]
+  },
+  {
+   "za": "Procerus muscle",
+   "concept": "FMA:46769",
+   "concept_name": "procerus",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Procerus muscle.l",
+     "FMA:55611",
+     "left procerus"
+    ],
+    [
+     "Procerus muscle.r",
+     "FMA:55610",
+     "right procerus"
+    ]
+   ]
+  },
+  {
+   "za": "Risorius muscle",
+   "concept": "FMA:46838",
+   "concept_name": "risorius",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Risorius muscle.l",
+     "FMA:46840",
+     "left risorius"
+    ],
+    [
+     "Risorius muscle.r",
+     "FMA:46839",
+     "right risorius"
+    ]
+   ]
+  },
+  {
+   "za": "Zygomaticus minor muscle",
+   "concept": "FMA:46811",
+   "concept_name": "zygomaticus minor",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Zygomaticus minor muscle.l",
+     "FMA:46815",
+     "left zygomaticus minor"
+    ],
+    [
+     "Zygomaticus minor muscle.r",
+     "FMA:46814",
+     "right zygomaticus minor"
+    ]
+   ]
+  },
+  {
+   "za": "Zygomaticus major muscle",
+   "concept": "FMA:46810",
+   "concept_name": "zygomaticus major",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Zygomaticus major muscle.l",
+     "FMA:46813",
+     "left zygomaticus major"
+    ],
+    [
+     "Zygomaticus major muscle.r",
+     "FMA:46812",
+     "right zygomaticus major"
+    ]
+   ]
+  },
+  {
+   "za": "Temporalis muscle",
+   "concept": "FMA:49006",
+   "concept_name": "temporalis",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Temporalis muscle.l",
+     "FMA:49008",
+     "left temporalis"
+    ],
+    [
+     "Temporalis muscle.r",
+     "FMA:49007",
+     "right temporalis"
+    ]
+   ]
+  },
+  {
+   "za": "Superficial part of masseter",
+   "concept": "FMA:49000",
+   "concept_name": "superficial part of masseter",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Superficial part of masseter.l",
+     "FMA:49000",
+     "superficial part of masseter"
+    ],
+    [
+     "Superficial part of masseter.r",
+     "FMA:49000",
+     "superficial part of masseter"
+    ]
+   ]
+  },
+  {
+   "za": "Deep part of masseter",
+   "concept": "FMA:49003",
+   "concept_name": "deep part of masseter",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Deep part of masseter.l",
+     "FMA:49003",
+     "deep part of masseter"
+    ],
+    [
+     "Deep part of masseter.r",
+     "FMA:49003",
+     "deep part of masseter"
+    ]
+   ]
+  },
+  {
+   "za": "Medial pterygoid muscle",
+   "concept": "FMA:49011",
+   "concept_name": "medial pterygoid",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Medial pterygoid muscle.l",
+     "FMA:49013",
+     "left medial pterygoid"
+    ],
+    [
+     "Medial pterygoid muscle.r",
+     "FMA:49012",
+     "right medial pterygoid"
+    ]
+   ]
+  },
+  {
+   "za": "Superior head of lateral pterygoid muscle",
+   "concept": "FMA:49020",
+   "concept_name": "upper head of lateral pterygoid",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Superior head of lateral pterygoid muscle.l",
+     "FMA:49020",
+     "upper head of lateral pterygoid"
+    ],
+    [
+     "Superior head of lateral pterygoid muscle.r",
+     "FMA:49020",
+     "upper head of lateral pterygoid"
+    ]
+   ]
+  },
+  {
+   "za": "Inferior head of lateral pterygoid muscle",
+   "concept": "FMA:49021",
+   "concept_name": "lower head of lateral pterygoid",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Inferior head of lateral pterygoid muscle.l",
+     "FMA:49021",
+     "lower head of lateral pterygoid"
+    ],
+    [
+     "Inferior head of lateral pterygoid muscle.r",
+     "FMA:49021",
+     "lower head of lateral pterygoid"
+    ]
+   ]
+  },
+  {
+   "za": "Anterior belly of digastric muscle",
+   "concept": "FMA:46302",
+   "concept_name": "anterior belly of digastric",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Anterior belly of digastric muscle.l",
+     "FMA:46302",
+     "anterior belly of digastric"
+    ],
+    [
+     "Anterior belly of digastric muscle.r",
+     "FMA:46302",
+     "anterior belly of digastric"
+    ]
+   ]
+  },
+  {
+   "za": "Posterior belly of digastric muscle",
+   "concept": "FMA:46303",
+   "concept_name": "posterior belly of digastric",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Posterior belly of digastric muscle.l",
+     "FMA:46303",
+     "posterior belly of digastric"
+    ],
+    [
+     "Posterior belly of digastric muscle.r",
+     "FMA:46303",
+     "posterior belly of digastric"
+    ]
+   ]
+  },
+  {
+   "za": "Superficial layer of temporal fascia",
+   "concept": "FMA:76864",
+   "concept_name": "superficial layer of temporal fascia",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Superficial layer of temporal fascia.l",
+     "FMA:76864",
+     "superficial layer of temporal fascia"
+    ],
+    [
+     "Superficial layer of temporal fascia.r",
+     "FMA:76864",
+     "superficial layer of temporal fascia"
+    ]
+   ]
+  },
+  {
+   "za": "Masseteric fascia",
+   "concept": "FMA:76861",
+   "concept_name": "masseteric fascia",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Masseteric fascia.l",
+     "FMA:76861",
+     "masseteric fascia"
+    ],
+    [
+     "Masseteric fascia.r",
+     "FMA:76861",
+     "masseteric fascia"
+    ]
+   ]
+  },
+  {
+   "za": "Olfactory nerve (I)",
+   "concept": "FMA:46787",
+   "concept_name": "olfactory nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Olfactory nerve (I).l",
+     "FMA:52593",
+     "left olfactory nerve"
+    ],
+    [
+     "Olfactory nerve (I).r",
+     "FMA:52592",
+     "right olfactory nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Oculomotor nerve (III)",
+   "concept": "FMA:50864",
+   "concept_name": "oculomotor nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Oculomotor nerve (III).l",
+     "FMA:50880",
+     "left oculomotor nerve"
+    ],
+    [
+     "Oculomotor nerve (III).r",
+     "FMA:50879",
+     "right oculomotor nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Trigeminal nerve (V)",
+   "concept": "FMA:50866",
+   "concept_name": "trigeminal nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Trigeminal nerve (V).l",
+     "FMA:50885",
+     "left trigeminal nerve"
+    ],
+    [
+     "Trigeminal nerve (V).r",
+     "FMA:50884",
+     "right trigeminal nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Sensory root of trigeminal nerve",
+   "concept": "FMA:52611",
+   "concept_name": "sensory root of trigeminal nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Sensory root of trigeminal nerve.l",
+     "FMA:52611",
+     "sensory root of trigeminal nerve"
+    ],
+    [
+     "Sensory root of trigeminal nerve.r",
+     "FMA:52611",
+     "sensory root of trigeminal nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Motor root of trigeminal nerve",
+   "concept": "FMA:52612",
+   "concept_name": "motor root of trigeminal nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Motor root of trigeminal nerve.l",
+     "FMA:52612",
+     "motor root of trigeminal nerve"
+    ],
+    [
+     "Motor root of trigeminal nerve.r",
+     "FMA:52612",
+     "motor root of trigeminal nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Maxillary nerve",
+   "concept": "FMA:52724",
+   "concept_name": "maxillary nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Maxillary nerve.l",
+     "FMA:52726",
+     "left maxillary nerve"
+    ],
+    [
+     "Maxillary nerve.r",
+     "FMA:52725",
+     "right maxillary nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Meningeal branch of maxillary nerve",
+   "concept": "FMA:52728",
+   "concept_name": "middle meningeal nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Meningeal branch of maxillary nerve.l",
+     "FMA:52730",
+     "left middle meningeal nerve"
+    ],
+    [
+     "Meningeal branch of maxillary nerve.r",
+     "FMA:52729",
+     "right middle meningeal nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Anterior division of mandibular nerve",
+   "concept": "FMA:53059",
+   "concept_name": "anterior trunk of mandibular nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Anterior division of mandibular nerve.l",
+     "FMA:53059",
+     "anterior trunk of mandibular nerve"
+    ],
+    [
+     "Anterior division of mandibular nerve.r",
+     "FMA:53059",
+     "anterior trunk of mandibular nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Posterior division of mandibular nerve",
+   "concept": "FMA:53061",
+   "concept_name": "posterior trunk of mandibular nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Posterior division of mandibular nerve.l",
+     "FMA:53061",
+     "posterior trunk of mandibular nerve"
+    ],
+    [
+     "Posterior division of mandibular nerve.r",
+     "FMA:53061",
+     "posterior trunk of mandibular nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Buccal nerve",
+   "concept": "FMA:53066",
+   "concept_name": "buccal nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Buccal nerve.l",
+     "FMA:53068",
+     "left buccal nerve"
+    ],
+    [
+     "Buccal nerve.r",
+     "FMA:53067",
+     "right buccal nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Inferior alveolar nerve",
+   "concept": "FMA:53243",
+   "concept_name": "inferior alveolar nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Inferior alveolar nerve.l",
+     "FMA:53245",
+     "left inferior alveolar nerve"
+    ],
+    [
+     "Inferior alveolar nerve.r",
+     "FMA:53244",
+     "right inferior alveolar nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Lingual nerve",
+   "concept": "FMA:53218",
+   "concept_name": "lingual nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Lingual nerve.l",
+     "FMA:53220",
+     "left lingual nerve"
+    ],
+    [
+     "Lingual nerve.r",
+     "FMA:53219",
+     "right lingual nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Mental nerve",
+   "concept": "FMA:53250",
+   "concept_name": "mental nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Mental nerve.l",
+     "FMA:53252",
+     "left mental nerve"
+    ],
+    [
+     "Mental nerve.r",
+     "FMA:53251",
+     "right mental nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Nerve to mylohyoid muscle",
+   "concept": "FMA:53247",
+   "concept_name": "mylohyoid nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Nerve to mylohyoid muscle.l",
+     "FMA:53249",
+     "left mylohyoid nerve"
+    ],
+    [
+     "Nerve to mylohyoid muscle.r",
+     "FMA:53248",
+     "right mylohyoid nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Abducens nerve (VI)",
+   "concept": "FMA:50867",
+   "concept_name": "abducens nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Abducens nerve (VI).l",
+     "FMA:50887",
+     "left abducens nerve"
+    ],
+    [
+     "Abducens nerve (VI).r",
+     "FMA:50886",
+     "right abducens nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Facial nerve (VII)",
+   "concept": "FMA:50868",
+   "concept_name": "facial nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Facial nerve (VII).l",
+     "FMA:50889",
+     "left facial nerve"
+    ],
+    [
+     "Facial nerve (VII).r",
+     "FMA:50888",
+     "right facial nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Chorda tympani",
+   "concept": "FMA:53228",
+   "concept_name": "chorda tympani",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Chorda tympani.l",
+     "FMA:53230",
+     "left chorda tympani"
+    ],
+    [
+     "Chorda tympani.r",
+     "FMA:53229",
+     "right chorda tympani"
+    ]
+   ]
+  },
+  {
+   "za": "Glossopharyngeal nerve (IX)",
+   "concept": "FMA:50870",
+   "concept_name": "glossopharyngeal nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Glossopharyngeal nerve (IX).l",
+     "FMA:50894",
+     "left glossopharyngeal nerve"
+    ],
+    [
+     "Glossopharyngeal nerve (IX).r",
+     "FMA:50892",
+     "right glossopharyngeal nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Vagus nerve (X)",
+   "concept": "FMA:5731",
+   "concept_name": "vagus nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Vagus nerve (X).l",
+     "FMA:6220",
+     "left vagus nerve"
+    ],
+    [
+     "Vagus nerve (X).r",
+     "FMA:6219",
+     "right vagus nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Accessory nerve (XI)",
+   "concept": "FMA:6720",
+   "concept_name": "spinal accessory nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Accessory nerve (XI).l",
+     "FMA:50899",
+     "left spinal accessory nerve"
+    ],
+    [
+     "Accessory nerve (XI).r",
+     "FMA:50897",
+     "right spinal accessory nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Hypoglossal nerve (XII)",
+   "concept": "FMA:50871",
+   "concept_name": "hypoglossal nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Hypoglossal nerve (XII).l",
+     "FMA:50903",
+     "left hypoglossal nerve"
+    ],
+    [
+     "Hypoglossal nerve (XII).r",
+     "FMA:50901",
+     "right hypoglossal nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Nucleus of oculomotor nerve",
+   "concept": "FMA:54510",
+   "concept_name": "oculomotor nuclear complex",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": false,
+   "objects": [
+    [
+     "Nucleus of oculomotor nerve.l",
+     "FMA:223416",
+     "left oculomotor nuclear complex"
+    ],
+    [
+     "Nucleus of oculomotor nerve.r",
+     "FMA:223415",
+     "right oculomotor nuclear complex"
+    ]
+   ]
+  },
+  {
+   "za": "Nucleus of trochlear nerve",
+   "concept": "FMA:54518",
+   "concept_name": "trochlear nucleus",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": false,
+   "objects": [
+    [
+     "Nucleus of trochlear nerve.l",
+     "FMA:54520",
+     "left trochlear nucleus"
+    ],
+    [
+     "Nucleus of trochlear nerve.r",
+     "FMA:54519",
+     "right trochlear nucleus"
+    ]
+   ]
+  },
+  {
+   "za": "Nucleus of abducens nerve",
+   "concept": "FMA:54504",
+   "concept_name": "abducens nucleus",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": false,
+   "objects": [
+    [
+     "Nucleus of abducens nerve.l",
+     "FMA:54507",
+     "left abducens nucleus"
+    ],
+    [
+     "Nucleus of abducens nerve.r",
+     "FMA:54506",
+     "right abducens nucleus"
+    ]
+   ]
+  },
+  {
+   "za": "Motor nucleus of facial nerve",
+   "concept": "FMA:54582",
+   "concept_name": "motor nucleus of facial nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": false,
+   "objects": [
+    [
+     "Motor nucleus of facial nerve.l",
+     "FMA:54582",
+     "motor nucleus of facial nerve"
+    ],
+    [
+     "Motor nucleus of facial nerve.r",
+     "FMA:54582",
+     "motor nucleus of facial nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Superior salivatory nucleus",
+   "concept": "FMA:72482",
+   "concept_name": "superior salivatory nucleus",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": false,
+   "objects": [
+    [
+     "Superior salivatory nucleus.l",
+     "FMA:73595",
+     "left superior salivatory nucleus"
+    ],
+    [
+     "Superior salivatory nucleus.r",
+     "FMA:73594",
+     "right superior salivatory nucleus"
+    ]
+   ]
+  },
+  {
+   "za": "Inferior salivatory nucleus",
+   "concept": "FMA:72601",
+   "concept_name": "inferior salivatory nucleus",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": false,
+   "objects": [
+    [
+     "Inferior salivatory nucleus.l",
+     "FMA:73802",
+     "left inferior salivatory nucleus"
+    ],
+    [
+     "Inferior salivatory nucleus.r",
+     "FMA:73801",
+     "right inferior salivatory nucleus"
+    ]
+   ]
+  },
+  {
+   "za": "Anterior cochlear nucleus",
+   "concept": "FMA:54621",
+   "concept_name": "anterior cochlear nucleus",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": false,
+   "objects": [
+    [
+     "Anterior cochlear nucleus.l",
+     "FMA:54623",
+     "left anterior cochlear nucleus"
+    ],
+    [
+     "Anterior cochlear nucleus.r",
+     "FMA:54622",
+     "right anterior cochlear nucleus"
+    ]
+   ]
+  },
+  {
+   "za": "Posterior cochlear nucleus",
+   "concept": "FMA:54624",
+   "concept_name": "posterior cochlear nucleus",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": false,
+   "objects": [
+    [
+     "Posterior cochlear nucleus.l",
+     "FMA:54626",
+     "left posterior cochlear nucleus"
+    ],
+    [
+     "Posterior cochlear nucleus.r",
+     "FMA:54625",
+     "right posterior cochlear nucleus"
+    ]
+   ]
+  },
+  {
+   "za": "Vestibular nuclei",
+   "concept": "FMA:72239",
+   "concept_name": "vestibular nuclear complex",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": false,
+   "objects": [
+    [
+     "Vestibular nuclei.l",
+     "FMA:73711",
+     "left vestibular nuclear complex"
+    ],
+    [
+     "Vestibular nuclei.r",
+     "FMA:73710",
+     "right vestibular nuclear complex"
+    ]
+   ]
+  },
+  {
+   "za": "Nucleus ambiguus",
+   "concept": "FMA:54588",
+   "concept_name": "nucleus ambiguus",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": false,
+   "objects": [
+    [
+     "Nucleus ambiguus.l",
+     "FMA:54590",
+     "left nucleus ambiguus"
+    ],
+    [
+     "Nucleus ambiguus.r",
+     "FMA:54589",
+     "right nucleus ambiguus"
+    ]
+   ]
+  },
+  {
+   "za": "Nucleus of solitary tract",
+   "concept": "FMA:256691",
+   "concept_name": "nucleus of solitary tract",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": false,
+   "objects": [
+    [
+     "Nucleus of solitary tract.l",
+     "FMA:256691",
+     "nucleus of solitary tract"
+    ],
+    [
+     "Nucleus of solitary tract.r",
+     "FMA:256691",
+     "nucleus of solitary tract"
+    ]
+   ]
+  },
+  {
+   "za": "Posterior nucleus of vagus nerve",
+   "concept": "FMA:54585",
+   "concept_name": "dorsal nucleus of vagus nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": false,
+   "objects": [
+    [
+     "Posterior nucleus of vagus nerve.l",
+     "FMA:54585",
+     "dorsal nucleus of vagus nerve"
+    ],
+    [
+     "Posterior nucleus of vagus nerve.r",
+     "FMA:54585",
+     "dorsal nucleus of vagus nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Nucleus of hypoglossal nerve",
+   "concept": "FMA:54505",
+   "concept_name": "hypoglossal nerve nucleus",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": false,
+   "objects": [
+    [
+     "Nucleus of hypoglossal nerve.l",
+     "FMA:54509",
+     "left hypoglossal nerve nucleus"
+    ],
+    [
+     "Nucleus of hypoglossal nerve.r",
+     "FMA:54508",
+     "right hypoglossal nerve nucleus"
+    ]
+   ]
+  },
+  {
+   "za": "Nucleus of accessory nerve",
+   "concept": "FMA:83965",
+   "concept_name": "nucleus of accessory nerve",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": false,
+   "objects": [
+    [
+     "Nucleus of accessory nerve.l",
+     "FMA:83965",
+     "nucleus of accessory nerve"
+    ],
+    [
+     "Nucleus of accessory nerve.r",
+     "FMA:83965",
+     "nucleus of accessory nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Red nucleus",
+   "concept": "FMA:62407",
+   "concept_name": "red nucleus",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": false,
+   "objects": [
+    [
+     "Red nucleus.l",
+     "FMA:73492",
+     "left red nucleus"
+    ],
+    [
+     "Red nucleus.r",
+     "FMA:73491",
+     "right red nucleus"
+    ]
+   ]
+  },
+  {
+   "za": "Superior cerebellar peduncle",
+   "concept": "FMA:72495",
+   "concept_name": "superior cerebellar peduncle",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": false,
+   "objects": [
+    [
+     "Superior cerebellar peduncle.l",
+     "FMA:73615",
+     "left superior cerebellar peduncle"
+    ],
+    [
+     "Superior cerebellar peduncle.r",
+     "FMA:73614",
+     "right superior cerebellar peduncle"
+    ]
+   ]
+  },
+  {
+   "za": "Falx cerebri",
+   "concept": "FMA:83967",
+   "concept_name": "falx cerebri",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Falx cerebri",
+     "FMA:83967",
+     "falx cerebri"
+    ]
+   ]
+  },
+  {
+   "za": "Tentorium cerebelli",
+   "concept": "FMA:83966",
+   "concept_name": "tentorium cerebelli",
+   "system": "nervous",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Tentorium cerebelli.l",
+     "FMA:83966",
+     "tentorium cerebelli"
+    ],
+    [
+     "Tentorium cerebelli.r",
+     "FMA:83966",
+     "tentorium cerebelli"
+    ]
+   ]
+  },
+  {
+   "za": "Suspensory ligament of eyeball",
+   "concept": "FMA:322153",
+   "concept_name": "suspensory ligament of eyeball",
+   "system": "special_senses",
+   "group": null,
+   "male": true,
+   "female": false,
+   "objects": [
+    [
+     "Suspensory ligament of eyeball.l",
+     "FMA:322153",
+     "suspensory ligament of eyeball"
+    ],
+    [
+     "Suspensory ligament of eyeball.r",
+     "FMA:322153",
+     "suspensory ligament of eyeball"
+    ]
+   ]
+  },
+  {
+   "za": "Auditory tube",
+   "concept": "FMA:9705",
+   "concept_name": "pharyngotympanic tube",
+   "system": "special_senses",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Auditory tube.l",
+     "FMA:60055",
+     "left pharyngotympanic tube"
+    ],
+    [
+     "Auditory tube.r",
+     "FMA:60054",
+     "right pharyngotympanic tube"
+    ]
+   ]
+  },
+  {
+   "za": "Superior sagittal sinus",
+   "concept": "FMA:50767",
+   "concept_name": "superior sagittal sinus",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Superior sagittal sinus",
+     "FMA:50767",
+     "superior sagittal sinus"
+    ]
+   ]
+  },
+  {
+   "za": "Inferior sagittal sinus",
+   "concept": "FMA:50768",
+   "concept_name": "inferior sagittal sinus",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Inferior sagittal sinus",
+     "FMA:50768",
+     "inferior sagittal sinus"
+    ]
+   ]
+  },
+  {
+   "za": "Straight sinus",
+   "concept": "FMA:50769",
+   "concept_name": "straight sinus",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Straight sinus",
+     "FMA:50769",
+     "straight sinus"
+    ]
+   ]
+  },
+  {
+   "za": "Transverse sinus",
+   "concept": "FMA:50763",
+   "concept_name": "transverse sinus",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Transverse sinus.l",
+     "FMA:50765",
+     "left transverse sinus"
+    ],
+    [
+     "Transverse sinus.r",
+     "FMA:50764",
+     "right transverse sinus"
+    ]
+   ]
+  },
+  {
+   "za": "Sigmoid sinus",
+   "concept": "FMA:50782",
+   "concept_name": "sigmoid sinus",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Sigmoid sinus.l",
+     "FMA:51294",
+     "left sigmoid sinus"
+    ],
+    [
+     "Sigmoid sinus.r",
+     "FMA:51293",
+     "right sigmoid sinus"
+    ]
+   ]
+  },
+  {
+   "za": "Occipital sinus",
+   "concept": "FMA:50781",
+   "concept_name": "occipital sinus",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Occipital sinus",
+     "FMA:50781",
+     "occipital sinus"
+    ]
+   ]
+  },
+  {
+   "za": "Cavernous sinus",
+   "concept": "FMA:50772",
+   "concept_name": "cavernous sinus",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Cavernous sinus.l",
+     "FMA:51403",
+     "left cavernous sinus"
+    ],
+    [
+     "Cavernous sinus.r",
+     "FMA:51402",
+     "right cavernous sinus"
+    ]
+   ]
+  },
+  {
+   "za": "Superior petrosal sinus",
+   "concept": "FMA:50771",
+   "concept_name": "superior petrosal sinus",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Superior petrosal sinus.l",
+     "FMA:51290",
+     "left superior petrosal sinus"
+    ],
+    [
+     "Superior petrosal sinus.r",
+     "FMA:51289",
+     "right superior petrosal sinus"
+    ]
+   ]
+  },
+  {
+   "za": "Inferior petrosal sinus",
+   "concept": "FMA:50770",
+   "concept_name": "inferior petrosal sinus",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Inferior petrosal sinus.l",
+     "FMA:51292",
+     "left inferior petrosal sinus"
+    ],
+    [
+     "Inferior petrosal sinus.r",
+     "FMA:51291",
+     "right inferior petrosal sinus"
+    ]
+   ]
+  },
+  {
+   "za": "Anterior intercavernous sinus",
+   "concept": "FMA:50774",
+   "concept_name": "anterior intercavernous sinus",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Anterior intercavernous sinus",
+     "FMA:50774",
+     "anterior intercavernous sinus"
+    ]
+   ]
+  },
+  {
+   "za": "Posterior intercavernous sinus",
+   "concept": "FMA:50775",
+   "concept_name": "posterior intercavernous sinus",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Posterior intercavernous sinus",
+     "FMA:50775",
+     "posterior intercavernous sinus"
+    ]
+   ]
+  },
+  {
+   "za": "Superior ophthalmic vein",
+   "concept": "FMA:51246",
+   "concept_name": "superior ophthalmic vein",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Superior ophthalmic vein.l",
+     "FMA:51249",
+     "left superior ophthalmic vein"
+    ],
+    [
+     "Superior ophthalmic vein.r",
+     "FMA:51248",
+     "right superior ophthalmic vein"
+    ]
+   ]
+  },
+  {
+   "za": "Inferior ophthalmic vein",
+   "concept": "FMA:51247",
+   "concept_name": "inferior ophthalmic vein",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Inferior ophthalmic vein.l",
+     "FMA:51251",
+     "left inferior ophthalmic vein"
+    ],
+    [
+     "Inferior ophthalmic vein.r",
+     "FMA:51250",
+     "right inferior ophthalmic vein"
+    ]
+   ]
+  },
+  {
+   "za": "Facial vein",
+   "concept": "FMA:50874",
+   "concept_name": "facial vein",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Facial vein.l",
+     "FMA:50877",
+     "left facial vein"
+    ],
+    [
+     "Facial vein.r",
+     "FMA:50876",
+     "right facial vein"
+    ]
+   ]
+  },
+  {
+   "za": "Angular vein",
+   "concept": "FMA:50893",
+   "concept_name": "angular vein",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Angular vein.l",
+     "FMA:50896",
+     "left angular vein"
+    ],
+    [
+     "Angular vein.r",
+     "FMA:50895",
+     "right angular vein"
+    ]
+   ]
+  },
+  {
+   "za": "Retromandibular vein",
+   "concept": "FMA:50928",
+   "concept_name": "retromandibular vein",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Retromandibular vein.l",
+     "FMA:50930",
+     "left retromandibular vein"
+    ],
+    [
+     "Retromandibular vein.r",
+     "FMA:50929",
+     "right retromandibular vein"
+    ]
+   ]
+  },
+  {
+   "za": "Superficial temporal veins",
+   "concept": "FMA:70849",
+   "concept_name": "set of superficial temporal veins",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Superficial temporal veins.l",
+     "FMA:70849",
+     "set of superficial temporal veins"
+    ],
+    [
+     "Superficial temporal veins.r",
+     "FMA:70849",
+     "set of superficial temporal veins"
+    ]
+   ]
+  },
+  {
+   "za": "Maxillary veins",
+   "concept": "FMA:70850",
+   "concept_name": "set of maxillary veins",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Maxillary veins.l",
+     "FMA:70850",
+     "set of maxillary veins"
+    ],
+    [
+     "Maxillary veins.r",
+     "FMA:70850",
+     "set of maxillary veins"
+    ]
+   ]
+  },
+  {
+   "za": "Posterior auricular vein",
+   "concept": "FMA:50851",
+   "concept_name": "posterior auricular vein",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Posterior auricular vein.l",
+     "FMA:50853",
+     "left posterior auricular vein"
+    ],
+    [
+     "Posterior auricular vein.r",
+     "FMA:50852",
+     "right posterior auricular vein"
+    ]
+   ]
+  },
+  {
+   "za": "Occipital vein",
+   "concept": "FMA:50802",
+   "concept_name": "occipital vein",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Occipital vein.l",
+     "FMA:51490",
+     "left occipital vein"
+    ],
+    [
+     "Occipital vein.r",
+     "FMA:51489",
+     "right occipital vein"
+    ]
+   ]
+  },
+  {
+   "za": "External jugular vein",
+   "concept": "FMA:13110",
+   "concept_name": "external jugular vein",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "External jugular vein.l",
+     "FMA:13112",
+     "left external jugular vein"
+    ],
+    [
+     "External jugular vein.r",
+     "FMA:13111",
+     "right external jugular vein"
+    ]
+   ]
+  },
+  {
+   "za": "Lingual vein",
+   "concept": "FMA:14326",
+   "concept_name": "lingual vein",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Lingual vein.l",
+     "FMA:52566",
+     "left lingual vein"
+    ],
+    [
+     "Lingual vein.r",
+     "FMA:52565",
+     "right lingual vein"
+    ]
+   ]
+  },
+  {
+   "za": "Submental vein",
+   "concept": "FMA:50925",
+   "concept_name": "submental vein",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Submental vein.l",
+     "FMA:50927",
+     "left submental vein"
+    ],
+    [
+     "Submental vein.r",
+     "FMA:50926",
+     "right submental vein"
+    ]
+   ]
+  },
+  {
+   "za": "Superior labial vein",
+   "concept": "FMA:52538",
+   "concept_name": "superior labial vein",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Superior labial vein.l",
+     "FMA:52540",
+     "left superior labial vein"
+    ],
+    [
+     "Superior labial vein.r",
+     "FMA:52539",
+     "right superior labial vein"
+    ]
+   ]
+  },
+  {
+   "za": "Inferior labial veins",
+   "concept": "FMA:70848",
+   "concept_name": "set of inferior labial veins",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Inferior labial veins.l",
+     "FMA:70848",
+     "set of inferior labial veins"
+    ],
+    [
+     "Inferior labial veins.r",
+     "FMA:70848",
+     "set of inferior labial veins"
+    ]
+   ]
+  },
+  {
+   "za": "Vertebral vein",
+   "concept": "FMA:4727",
+   "concept_name": "vertebral vein",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Vertebral vein.l",
+     "FMA:4764",
+     "left vertebral vein"
+    ],
+    [
+     "Vertebral vein.r",
+     "FMA:4756",
+     "right vertebral vein"
+    ]
+   ]
+  },
+  {
+   "za": "Facial artery",
+   "concept": "FMA:49549",
+   "concept_name": "facial artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Facial artery.l",
+     "FMA:49551",
+     "left facial artery"
+    ],
+    [
+     "Facial artery.r",
+     "FMA:49550",
+     "right facial artery"
+    ]
+   ]
+  },
+  {
+   "za": "Angular artery",
+   "concept": "FMA:49583",
+   "concept_name": "angular artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Angular artery.l",
+     "FMA:49585",
+     "left angular artery"
+    ],
+    [
+     "Angular artery.r",
+     "FMA:49584",
+     "right angular artery"
+    ]
+   ]
+  },
+  {
+   "za": "Superior labial artery",
+   "concept": "FMA:49570",
+   "concept_name": "superior labial artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Superior labial artery.l",
+     "FMA:49572",
+     "left superior labial artery"
+    ],
+    [
+     "Superior labial artery.r",
+     "FMA:49571",
+     "right superior labial artery"
+    ]
+   ]
+  },
+  {
+   "za": "Inferior labial artery",
+   "concept": "FMA:49567",
+   "concept_name": "inferior labial artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Inferior labial artery.l",
+     "FMA:49569",
+     "left inferior labial artery"
+    ],
+    [
+     "Inferior labial artery.r",
+     "FMA:49568",
+     "right inferior labial artery"
+    ]
+   ]
+  },
+  {
+   "za": "Submental artery",
+   "concept": "FMA:49561",
+   "concept_name": "submental artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Submental artery.l",
+     "FMA:49563",
+     "left submental artery"
+    ],
+    [
+     "Submental artery.r",
+     "FMA:49562",
+     "right submental artery"
+    ]
+   ]
+  },
+  {
+   "za": "Transverse facial artery",
+   "concept": "FMA:49657",
+   "concept_name": "transverse facial artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Transverse facial artery.l",
+     "FMA:49659",
+     "left transverse facial artery"
+    ],
+    [
+     "Transverse facial artery.r",
+     "FMA:49658",
+     "right transverse facial artery"
+    ]
+   ]
+  },
+  {
+   "za": "Superficial temporal artery",
+   "concept": "FMA:49650",
+   "concept_name": "superficial temporal artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Superficial temporal artery.l",
+     "FMA:49652",
+     "left superficial temporal artery"
+    ],
+    [
+     "Superficial temporal artery.r",
+     "FMA:49651",
+     "right superficial temporal artery"
+    ]
+   ]
+  },
+  {
+   "za": "Frontal branch of superficial temporal artery",
+   "concept": "FMA:49669",
+   "concept_name": "frontal branch of superficial temporal artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Frontal branch of superficial temporal artery.l",
+     "FMA:49669",
+     "frontal branch of superficial temporal artery"
+    ],
+    [
+     "Frontal branch of superficial temporal artery.r",
+     "FMA:49669",
+     "frontal branch of superficial temporal artery"
+    ]
+   ]
+  },
+  {
+   "za": "Occipital artery",
+   "concept": "FMA:49586",
+   "concept_name": "occipital artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Occipital artery.l",
+     "FMA:49588",
+     "left occipital artery"
+    ],
+    [
+     "Occipital artery.r",
+     "FMA:49587",
+     "right occipital artery"
+    ]
+   ]
+  },
+  {
+   "za": "Ascending pharyngeal artery",
+   "concept": "FMA:49497",
+   "concept_name": "ascending pharyngeal artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Ascending pharyngeal artery.l",
+     "FMA:49499",
+     "left ascending pharyngeal artery"
+    ],
+    [
+     "Ascending pharyngeal artery.r",
+     "FMA:49498",
+     "right ascending pharyngeal artery"
+    ]
+   ]
+  },
+  {
+   "za": "Maxillary artery",
+   "concept": "FMA:49675",
+   "concept_name": "maxillary artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Maxillary artery.l",
+     "FMA:49677",
+     "left maxillary artery"
+    ],
+    [
+     "Maxillary artery.r",
+     "FMA:49676",
+     "right maxillary artery"
+    ]
+   ]
+  },
+  {
+   "za": "Middle meningeal artery",
+   "concept": "FMA:49711",
+   "concept_name": "middle meningeal artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Middle meningeal artery.l",
+     "FMA:49713",
+     "left middle meningeal artery"
+    ],
+    [
+     "Middle meningeal artery.r",
+     "FMA:49712",
+     "right middle meningeal artery"
+    ]
+   ]
+  },
+  {
+   "za": "Accessory branch of middle meningeal artery",
+   "concept": "FMA:49715",
+   "concept_name": "accessory branch of middle meningeal artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Accessory branch of middle meningeal artery.l",
+     "FMA:49715",
+     "accessory branch of middle meningeal artery"
+    ],
+    [
+     "Accessory branch of middle meningeal artery.r",
+     "FMA:49715",
+     "accessory branch of middle meningeal artery"
+    ]
+   ]
+  },
+  {
+   "za": "Inferior alveolar artery",
+   "concept": "FMA:49695",
+   "concept_name": "inferior alveolar artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Inferior alveolar artery.l",
+     "FMA:49697",
+     "left inferior alveolar artery"
+    ],
+    [
+     "Inferior alveolar artery.r",
+     "FMA:49696",
+     "right inferior alveolar artery"
+    ]
+   ]
+  },
+  {
+   "za": "Buccal artery",
+   "concept": "FMA:49754",
+   "concept_name": "buccal artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Buccal artery.l",
+     "FMA:49756",
+     "left buccal artery"
+    ],
+    [
+     "Buccal artery.r",
+     "FMA:49755",
+     "right buccal artery"
+    ]
+   ]
+  },
+  {
+   "za": "Anterior deep temporal artery",
+   "concept": "FMA:49745",
+   "concept_name": "anterior deep temporal artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Anterior deep temporal artery.l",
+     "FMA:49748",
+     "left anterior deep temporal artery"
+    ],
+    [
+     "Anterior deep temporal artery.r",
+     "FMA:49747",
+     "right anterior deep temporal artery"
+    ]
+   ]
+  },
+  {
+   "za": "Posterior deep temporal artery",
+   "concept": "FMA:49746",
+   "concept_name": "posterior deep temporal artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Posterior deep temporal artery.l",
+     "FMA:49750",
+     "left posterior deep temporal artery"
+    ],
+    [
+     "Posterior deep temporal artery.r",
+     "FMA:49749",
+     "right posterior deep temporal artery"
+    ]
+   ]
+  },
+  {
+   "za": "Posterior superior alveolar artery",
+   "concept": "FMA:49757",
+   "concept_name": "posterior superior alveolar artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Posterior superior alveolar artery.l",
+     "FMA:49759",
+     "left posterior superior alveolar artery"
+    ],
+    [
+     "Posterior superior alveolar artery.r",
+     "FMA:49758",
+     "right posterior superior alveolar artery"
+    ]
+   ]
+  },
+  {
+   "za": "Infra-orbital artery",
+   "concept": "FMA:49767",
+   "concept_name": "infra-orbital artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Infra-orbital artery.l",
+     "FMA:49769",
+     "left infra-orbital artery"
+    ],
+    [
+     "Infra-orbital artery.r",
+     "FMA:49768",
+     "right infra-orbital artery"
+    ]
+   ]
+  },
+  {
+   "za": "Descending palatine artery",
+   "concept": "FMA:49791",
+   "concept_name": "descending palatine artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Descending palatine artery.l",
+     "FMA:49793",
+     "left descending palatine artery"
+    ],
+    [
+     "Descending palatine artery.r",
+     "FMA:49792",
+     "right descending palatine artery"
+    ]
+   ]
+  },
+  {
+   "za": "Greater palatine artery",
+   "concept": "FMA:49795",
+   "concept_name": "greater palatine artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Greater palatine artery.l",
+     "FMA:49799",
+     "left greater palatine artery"
+    ],
+    [
+     "Greater palatine artery.r",
+     "FMA:49798",
+     "right greater palatine artery"
+    ]
+   ]
+  },
+  {
+   "za": "Artery of pterygoid canal",
+   "concept": "FMA:85528",
+   "concept_name": "artery of pterygoid canal",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Artery of pterygoid canal.l",
+     "FMA:85528",
+     "artery of pterygoid canal"
+    ],
+    [
+     "Artery of pterygoid canal.r",
+     "FMA:85528",
+     "artery of pterygoid canal"
+    ]
+   ]
+  },
+  {
+   "za": "Posterior lateral nasal branches of sphenopalatine artery.",
+   "concept": "FMA:49808",
+   "concept_name": "posterior lateral nasal artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Posterior lateral nasal branches of sphenopalatine artery..l",
+     "FMA:49811",
+     "left posterior lateral nasal artery"
+    ],
+    [
+     "Posterior lateral nasal branches of sphenopalatine artery..r",
+     "FMA:49810",
+     "right posterior lateral nasal artery"
+    ]
+   ]
+  },
+  {
+   "za": "Supra-orbital artery",
+   "concept": "FMA:49973",
+   "concept_name": "supra-orbital artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Supra-orbital artery.l",
+     "FMA:49975",
+     "left supra-orbital artery"
+    ],
+    [
+     "Supra-orbital artery.r",
+     "FMA:49974",
+     "right supra-orbital artery"
+    ]
+   ]
+  },
+  {
+   "za": "Supratrochlear artery",
+   "concept": "FMA:50025",
+   "concept_name": "supratrochlear artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Supratrochlear artery.l",
+     "FMA:50027",
+     "left supratrochlear artery"
+    ],
+    [
+     "Supratrochlear artery.r",
+     "FMA:50026",
+     "right supratrochlear artery"
+    ]
+   ]
+  },
+  {
+   "za": "Lacrimal artery",
+   "concept": "FMA:49927",
+   "concept_name": "lacrimal artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Lacrimal artery.l",
+     "FMA:49929",
+     "left lacrimal artery"
+    ],
+    [
+     "Lacrimal artery.r",
+     "FMA:49928",
+     "right lacrimal artery"
+    ]
+   ]
+  },
+  {
+   "za": "Anterior ethmoidal artery",
+   "concept": "FMA:49986",
+   "concept_name": "anterior ethmoidal artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Anterior ethmoidal artery.l",
+     "FMA:49988",
+     "left anterior ethmoidal artery"
+    ],
+    [
+     "Anterior ethmoidal artery.r",
+     "FMA:49987",
+     "right anterior ethmoidal artery"
+    ]
+   ]
+  },
+  {
+   "za": "Posterior ethmoidal artery",
+   "concept": "FMA:49989",
+   "concept_name": "posterior ethmoidal artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Posterior ethmoidal artery.l",
+     "FMA:49991",
+     "left posterior ethmoidal artery"
+    ],
+    [
+     "Posterior ethmoidal artery.r",
+     "FMA:49990",
+     "right posterior ethmoidal artery"
+    ]
+   ]
+  },
+  {
+   "za": "Central retinal artery",
+   "concept": "FMA:49879",
+   "concept_name": "central retinal artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": true,
+   "female": false,
+   "objects": [
+    [
+     "Central retinal artery.l",
+     "FMA:49881",
+     "left central retinal artery"
+    ],
+    [
+     "Central retinal artery.r",
+     "FMA:49880",
+     "right central retinal artery"
+    ]
+   ]
+  },
+  {
+   "za": "Sinus of frontal bone",
+   "concept": "FMA:57417",
+   "concept_name": "frontal sinus",
+   "system": "respiratory",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Sinus of frontal bone",
+     "FMA:57417",
+     "frontal sinus"
+    ]
+   ]
+  },
+  {
+   "za": "Sinus of sphenoid bone",
+   "concept": "FMA:54683",
+   "concept_name": "sphenoidal sinus",
+   "system": "respiratory",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Sinus of sphenoid bone",
+     "FMA:54683",
+     "sphenoidal sinus"
+    ]
+   ]
+  },
+  {
+   "za": "Anterior cells of ethmoid bone",
+   "concept": null,
+   "concept_name": null,
+   "system": "respiratory",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Anterior cells of ethmoid bone.l",
+     "FMA:57469",
+     "left anterior ethmoidal cell"
+    ],
+    [
+     "Anterior cells of ethmoid bone.r",
+     "FMA:57468",
+     "right anterior ethmoidal cell"
+    ]
+   ]
+  },
+  {
+   "za": "Middle cells of ethmoid bone",
+   "concept": null,
+   "concept_name": null,
+   "system": "respiratory",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Middle cells of ethmoid bone.l",
+     "FMA:57471",
+     "left middle ethmoidal cell"
+    ],
+    [
+     "Middle cells of ethmoid bone.r",
+     "FMA:57470",
+     "right middle ethmoidal cell"
+    ]
+   ]
+  },
+  {
+   "za": "Posterior cells of ethmoid bone",
+   "concept": null,
+   "concept_name": null,
+   "system": "respiratory",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Posterior cells of ethmoid bone.l",
+     "FMA:57473",
+     "left posterior ethmoidal cell"
+    ],
+    [
+     "Posterior cells of ethmoid bone.r",
+     "FMA:57472",
+     "right posterior ethmoidal cell"
+    ]
+   ]
+  },
+  {
+   "za": "Superior parathyroid gland",
+   "concept": "FMA:55558",
+   "concept_name": "superior parathyroid gland",
+   "system": "endocrine",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Superior parathyroid gland.l",
+     "FMA:55561",
+     "left superior parathyroid gland"
+    ],
+    [
+     "Superior parathyroid gland.r",
+     "FMA:55560",
+     "right superior parathyroid gland"
+    ]
+   ]
+  },
+  {
+   "za": "Inferior parathyroid gland",
+   "concept": "FMA:55559",
+   "concept_name": "inferior parathyroid gland",
+   "system": "endocrine",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Inferior parathyroid gland.l",
+     "FMA:55563",
+     "left inferior parathyroid gland"
+    ],
+    [
+     "Inferior parathyroid gland.r",
+     "FMA:55562",
+     "right inferior parathyroid gland"
+    ]
+   ]
+  },
+  {
+   "za": "Adenohypophysis",
+   "concept": "FMA:74627",
+   "concept_name": "adenohypophysis",
+   "system": "endocrine",
+   "group": null,
+   "male": true,
+   "female": false,
+   "objects": [
+    [
+     "Adenohypophysis",
+     "FMA:74627",
+     "adenohypophysis"
+    ]
+   ]
+  },
+  {
+   "za": "Neurohypophysis",
+   "concept": "FMA:74628",
+   "concept_name": "neurohypophysis",
+   "system": "endocrine",
+   "group": null,
+   "male": true,
+   "female": false,
+   "objects": [
+    [
+     "Neurohypophysis",
+     "FMA:74628",
+     "neurohypophysis"
+    ]
+   ]
+  },
+  {
+   "za": "Parotid duct",
+   "concept": "FMA:10420",
+   "concept_name": "parotid duct",
+   "system": "digestive",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Parotid duct.l",
+     "FMA:59867",
+     "left parotid duct"
+    ],
+    [
+     "Parotid duct.r",
+     "FMA:59866",
+     "right parotid duct"
+    ]
+   ]
+  },
+  {
+   "za": "(Accessory parotid gland)",
+   "concept": "FMA:59823",
+   "concept_name": "accessory parotid gland",
+   "system": "digestive",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "(Accessory parotid gland).l",
+     "FMA:59826",
+     "left accessory parotid gland"
+    ],
+    [
+     "(Accessory parotid gland).r",
+     "FMA:59825",
+     "right accessory parotid gland"
+    ]
+   ]
+  },
+  {
+   "za": "Submandibular duct",
+   "concept": "FMA:86266",
+   "concept_name": "submandibular duct",
+   "system": "digestive",
+   "group": null,
+   "male": true,
+   "female": false,
+   "objects": [
+    [
+     "Submandibular duct.l",
+     "FMA:86266",
+     "submandibular duct"
+    ],
+    [
+     "Submandibular duct.r",
+     "FMA:86266",
+     "submandibular duct"
+    ]
+   ]
+  },
+  {
+   "za": "Nasopharynx",
+   "concept": "FMA:54878",
+   "concept_name": "nasopharynx",
+   "system": "respiratory",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Nasopharynx",
+     "FMA:54878",
+     "nasopharynx"
+    ]
+   ]
+  },
+  {
+   "za": "Oropharynx",
+   "concept": "FMA:54879",
+   "concept_name": "oropharynx",
+   "system": "digestive",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Oropharynx",
+     "FMA:54879",
+     "oropharynx"
+    ]
+   ]
+  },
+  {
+   "za": "Laryngopharynx",
+   "concept": "FMA:54880",
+   "concept_name": "laryngopharynx",
+   "system": "digestive",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Laryngopharynx",
+     "FMA:54880",
+     "laryngopharynx"
+    ]
+   ]
+  },
+  {
+   "za": "Frontal bone",
+   "concept": "FMA:52734",
+   "concept_name": "frontal bone",
+   "system": "skeletal",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Frontal bone",
+     "FMA:52734",
+     "frontal bone"
+    ]
+   ]
+  },
+  {
+   "za": "Parietal bone",
+   "concept": "FMA:9613",
+   "concept_name": "parietal bone",
+   "system": "skeletal",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Parietal bone.l",
+     "FMA:52789",
+     "left parietal bone"
+    ],
+    [
+     "Parietal bone.r",
+     "FMA:52788",
+     "right parietal bone"
+    ]
+   ]
+  },
+  {
+   "za": "Temporal bone",
+   "concept": "FMA:52737",
+   "concept_name": "temporal bone",
+   "system": "skeletal",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Temporal bone.l",
+     "FMA:52739",
+     "left temporal bone"
+    ],
+    [
+     "Temporal bone.r",
+     "FMA:52738",
+     "right temporal bone"
+    ]
+   ]
+  },
+  {
+   "za": "Occipital bone",
+   "concept": "FMA:52735",
+   "concept_name": "occipital bone",
+   "system": "skeletal",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Occipital bone",
+     "FMA:52735",
+     "occipital bone"
+    ]
+   ]
+  },
+  {
+   "za": "Sphenoid bone",
+   "concept": "FMA:52736",
+   "concept_name": "sphenoid bone",
+   "system": "skeletal",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Sphenoid bone",
+     "FMA:52736",
+     "sphenoid bone"
+    ]
+   ]
+  },
+  {
+   "za": "Ethmoid bone",
+   "concept": "FMA:52740",
+   "concept_name": "ethmoid",
+   "system": "skeletal",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Ethmoid bone",
+     "FMA:52740",
+     "ethmoid"
+    ]
+   ]
+  },
+  {
+   "za": "Maxilla",
+   "concept": "FMA:9711",
+   "concept_name": "maxilla",
+   "system": "skeletal",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Maxilla.l",
+     "FMA:53650",
+     "left maxilla"
+    ],
+    [
+     "Maxilla.r",
+     "FMA:53649",
+     "right maxilla"
+    ]
+   ]
+  },
+  {
+   "za": "Zygomatic bone",
+   "concept": "FMA:52747",
+   "concept_name": "zygomatic bone",
+   "system": "skeletal",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Zygomatic bone.l",
+     "FMA:52893",
+     "left zygomatic bone"
+    ],
+    [
+     "Zygomatic bone.r",
+     "FMA:52892",
+     "right zygomatic bone"
+    ]
+   ]
+  },
+  {
+   "za": "Nasal bone",
+   "concept": "FMA:52745",
+   "concept_name": "nasal bone",
+   "system": "skeletal",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Nasal bone.l",
+     "FMA:53648",
+     "left nasal bone"
+    ],
+    [
+     "Nasal bone.r",
+     "FMA:53647",
+     "right nasal bone"
+    ]
+   ]
+  },
+  {
+   "za": "Lacrimal bone",
+   "concept": "FMA:52741",
+   "concept_name": "lacrimal bone",
+   "system": "skeletal",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Lacrimal bone.l",
+     "FMA:53646",
+     "left lacrimal bone"
+    ],
+    [
+     "Lacrimal bone.r",
+     "FMA:53645",
+     "right lacrimal bone"
+    ]
+   ]
+  },
+  {
+   "za": "Palatine bone",
+   "concept": "FMA:52746",
+   "concept_name": "palatine bone",
+   "system": "skeletal",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Palatine bone.l",
+     "FMA:53656",
+     "left palatine bone"
+    ],
+    [
+     "Palatine bone.r",
+     "FMA:53655",
+     "right palatine bone"
+    ]
+   ]
+  },
+  {
+   "za": "Vomer",
+   "concept": "FMA:9710",
+   "concept_name": "vomer",
+   "system": "skeletal",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Vomer",
+     "FMA:9710",
+     "vomer"
+    ]
+   ]
+  },
+  {
+   "za": "Inferior nasal concha bone",
+   "concept": "FMA:54736",
+   "concept_name": "inferior nasal concha",
+   "system": "skeletal",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Inferior nasal concha bone.l",
+     "FMA:54738",
+     "left inferior nasal concha"
+    ],
+    [
+     "Inferior nasal concha bone.r",
+     "FMA:54737",
+     "right inferior nasal concha"
+    ]
+   ]
+  },
+  {
+   "za": "Mandible",
+   "concept": "FMA:52748",
+   "concept_name": "mandible",
+   "system": "skeletal",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Mandible",
+     "FMA:52748",
+     "mandible"
+    ]
+   ]
+  },
+  {
+   "za": "Hyoid bone",
+   "concept": "FMA:52749",
+   "concept_name": "hyoid bone",
+   "system": "skeletal",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Hyoid bone",
+     "FMA:52749",
+     "hyoid bone"
+    ]
+   ]
+  },
+  {
+   "za": "Atlas (C1)",
+   "concept": "FMA:12519",
+   "concept_name": "atlas",
+   "system": "skeletal",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Atlas (C1)",
+     "FMA:12519",
+     "atlas"
+    ]
+   ]
+  },
+  {
+   "za": "Axis (C2)",
+   "concept": "FMA:12520",
+   "concept_name": "axis",
+   "system": "skeletal",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Axis (C2)",
+     "FMA:12520",
+     "axis"
+    ]
+   ]
+  },
+  {
+   "za": "Malleus",
+   "concept": "FMA:52753",
+   "concept_name": "malleus",
+   "system": "special_senses",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Malleus.l",
+     "FMA:74053",
+     "left malleus"
+    ],
+    [
+     "Malleus.r",
+     "FMA:74052",
+     "right malleus"
+    ]
+   ]
+  },
+  {
+   "za": "Incus",
+   "concept": "FMA:52752",
+   "concept_name": "incus",
+   "system": "special_senses",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Incus.l",
+     "FMA:74051",
+     "left incus"
+    ],
+    [
+     "Incus.r",
+     "FMA:74050",
+     "right incus"
+    ]
+   ]
+  },
+  {
+   "za": "Stapes",
+   "concept": "FMA:52751",
+   "concept_name": "stapes",
+   "system": "special_senses",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Stapes.l",
+     "FMA:74049",
+     "left stapes"
+    ],
+    [
+     "Stapes.r",
+     "FMA:74048",
+     "right stapes"
+    ]
+   ]
+  },
+  {
+   "za": "Nasal septal cartilage",
+   "concept": "FMA:59503",
+   "concept_name": "septal nasal cartilage",
+   "system": "respiratory",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Nasal septal cartilage",
+     "FMA:59503",
+     "septal nasal cartilage"
+    ]
+   ]
+  },
+  {
+   "za": "Major alar cartilage",
+   "concept": "FMA:59504",
+   "concept_name": "major alar cartilage",
+   "system": "respiratory",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Major alar cartilage.l",
+     "FMA:59506",
+     "left major alar cartilage"
+    ],
+    [
+     "Major alar cartilage.r",
+     "FMA:59505",
+     "right major alar cartilage"
+    ]
+   ]
+  },
+  {
+   "za": "Lateral process of nasal septal cartilage",
+   "concept": "FMA:59511",
+   "concept_name": "lateral nasal cartilage",
+   "system": "respiratory",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Lateral process of nasal septal cartilage.l",
+     "FMA:59513",
+     "left lateral nasal cartilage"
+    ],
+    [
+     "Lateral process of nasal septal cartilage.r",
+     "FMA:59512",
+     "right lateral nasal cartilage"
+    ]
+   ]
+  },
+  {
+   "za": "Superior rectus muscle",
+   "concept": "FMA:49035",
+   "concept_name": "superior rectus",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Superior rectus muscle.l",
+     "FMA:49045",
+     "left superior rectus"
+    ],
+    [
+     "Superior rectus muscle.r",
+     "FMA:49044",
+     "right superior rectus"
+    ]
+   ]
+  },
+  {
+   "za": "Inferior rectus muscle",
+   "concept": "FMA:49036",
+   "concept_name": "inferior rectus",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Inferior rectus muscle.l",
+     "FMA:49047",
+     "left inferior rectus"
+    ],
+    [
+     "Inferior rectus muscle.r",
+     "FMA:49046",
+     "right inferior rectus"
+    ]
+   ]
+  },
+  {
+   "za": "Medial rectus muscle",
+   "concept": "FMA:49037",
+   "concept_name": "medial rectus",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Medial rectus muscle.l",
+     "FMA:49057",
+     "left medial rectus"
+    ],
+    [
+     "Medial rectus muscle.r",
+     "FMA:49056",
+     "right medial rectus"
+    ]
+   ]
+  },
+  {
+   "za": "Lateral rectus muscle",
+   "concept": "FMA:49038",
+   "concept_name": "lateral rectus",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Lateral rectus muscle.l",
+     "FMA:49055",
+     "left lateral rectus"
+    ],
+    [
+     "Lateral rectus muscle.r",
+     "FMA:49054",
+     "right lateral rectus"
+    ]
+   ]
+  },
+  {
+   "za": "Superior oblique muscle",
+   "concept": "FMA:49039",
+   "concept_name": "superior oblique",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Superior oblique muscle.l",
+     "FMA:49053",
+     "left superior oblique"
+    ],
+    [
+     "Superior oblique muscle.r",
+     "FMA:49052",
+     "right superior oblique"
+    ]
+   ]
+  },
+  {
+   "za": "Inferior oblique muscle",
+   "concept": "FMA:49040",
+   "concept_name": "inferior oblique",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Inferior oblique muscle.l",
+     "FMA:49051",
+     "left inferior oblique"
+    ],
+    [
+     "Inferior oblique muscle.r",
+     "FMA:49050",
+     "right inferior oblique"
+    ]
+   ]
+  },
+  {
+   "za": "Levator palpebrae superioris",
+   "concept": "FMA:49041",
+   "concept_name": "levator palpebrae superioris",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Levator palpebrae superioris.l",
+     "FMA:49049",
+     "left levator palpebrae superioris"
+    ],
+    [
+     "Levator palpebrae superioris.r",
+     "FMA:49048",
+     "right levator palpebrae superioris"
+    ]
+   ]
+  },
+  {
+   "za": "Trochlea of superior oblique muscle",
+   "concept": "FMA:49065",
+   "concept_name": "trochlea of superior oblique",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Trochlea of superior oblique muscle.l",
+     "FMA:49065",
+     "trochlea of superior oblique"
+    ],
+    [
+     "Trochlea of superior oblique muscle.r",
+     "FMA:49065",
+     "trochlea of superior oblique"
+    ]
+   ]
+  },
+  {
+   "za": "Common tendinous ring",
+   "concept": "FMA:49071",
+   "concept_name": "common tendinous ring",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Common tendinous ring.l",
+     "FMA:49073",
+     "left common tendinous ring"
+    ],
+    [
+     "Common tendinous ring.r",
+     "FMA:49072",
+     "right common tendinous ring"
+    ]
+   ]
+  },
+  {
+   "za": "Superior tarsus",
+   "concept": "FMA:59087",
+   "concept_name": "tarsal plate of upper eyelid",
+   "system": "special_senses",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Superior tarsus.l",
+     "FMA:59087",
+     "tarsal plate of upper eyelid"
+    ],
+    [
+     "Superior tarsus.r",
+     "FMA:59087",
+     "tarsal plate of upper eyelid"
+    ]
+   ]
+  },
+  {
+   "za": "Inferior tarsus",
+   "concept": "FMA:59088",
+   "concept_name": "tarsal plate of lower eyelid",
+   "system": "special_senses",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Inferior tarsus.l",
+     "FMA:59088",
+     "tarsal plate of lower eyelid"
+    ],
+    [
+     "Inferior tarsus.r",
+     "FMA:59088",
+     "tarsal plate of lower eyelid"
+    ]
+   ]
+  },
+  {
+   "za": "Mylohyoid muscle",
+   "concept": "FMA:46320",
+   "concept_name": "mylohyoid",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Mylohyoid muscle.l",
+     "FMA:46322",
+     "left mylohyoid"
+    ],
+    [
+     "Mylohyoid muscle.r",
+     "FMA:46321",
+     "right mylohyoid"
+    ]
+   ]
+  },
+  {
+   "za": "Geniohyoid muscle",
+   "concept": "FMA:46325",
+   "concept_name": "geniohyoid",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Geniohyoid muscle.l",
+     "FMA:46327",
+     "left geniohyoid"
+    ],
+    [
+     "Geniohyoid muscle.r",
+     "FMA:46326",
+     "right geniohyoid"
+    ]
+   ]
+  },
+  {
+   "za": "Stylohyoid muscle",
+   "concept": "FMA:9625",
+   "concept_name": "stylohyoid",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Stylohyoid muscle.l",
+     "FMA:45827",
+     "left stylohyoid"
+    ],
+    [
+     "Stylohyoid muscle.r",
+     "FMA:45826",
+     "right stylohyoid"
+    ]
+   ]
+  },
+  {
+   "za": "Superior pharyngeal constrictor",
+   "concept": "FMA:46621",
+   "concept_name": "superior pharyngeal constrictor",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Superior pharyngeal constrictor.l",
+     "FMA:46632",
+     "left superior pharyngeal constrictor"
+    ],
+    [
+     "Superior pharyngeal constrictor.r",
+     "FMA:46631",
+     "right superior pharyngeal constrictor"
+    ]
+   ]
+  },
+  {
+   "za": "Middle pharyngeal constrictor",
+   "concept": "FMA:46622",
+   "concept_name": "middle pharyngeal constrictor",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Middle pharyngeal constrictor.l",
+     "FMA:46634",
+     "left middle pharyngeal constrictor"
+    ],
+    [
+     "Middle pharyngeal constrictor.r",
+     "FMA:46633",
+     "right middle pharyngeal constrictor"
+    ]
+   ]
+  },
+  {
+   "za": "Palatopharyngeus muscle",
+   "concept": "FMA:46666",
+   "concept_name": "palatopharyngeus",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Palatopharyngeus muscle.l",
+     "FMA:46672",
+     "left palatopharyngeus"
+    ],
+    [
+     "Palatopharyngeus muscle.r",
+     "FMA:46671",
+     "right palatopharyngeus"
+    ]
+   ]
+  },
+  {
+   "za": "Stylopharyngeus muscle",
+   "concept": "FMA:46664",
+   "concept_name": "stylopharyngeus",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Stylopharyngeus muscle.l",
+     "FMA:46668",
+     "left stylopharyngeus"
+    ],
+    [
+     "Stylopharyngeus muscle.r",
+     "FMA:46667",
+     "right stylopharyngeus"
+    ]
+   ]
+  },
+  {
+   "za": "Sternocleidomastoid muscle",
+   "concept": "FMA:13407",
+   "concept_name": "sternocleidomastoid",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Sternocleidomastoid muscle.l",
+     "FMA:13409",
+     "left sternocleidomastoid"
+    ],
+    [
+     "Sternocleidomastoid muscle.r",
+     "FMA:13408",
+     "right sternocleidomastoid"
+    ]
+   ]
+  },
+  {
+   "za": "Splenius capitis muscle",
+   "concept": "FMA:22653",
+   "concept_name": "splenius capitis",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Splenius capitis muscle.l",
+     "FMA:22729",
+     "left splenius capitis"
+    ],
+    [
+     "Splenius capitis muscle.r",
+     "FMA:22728",
+     "right splenius capitis"
+    ]
+   ]
+  },
+  {
+   "za": "Longus capitis muscle",
+   "concept": "FMA:46308",
+   "concept_name": "longus capitis",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Longus capitis muscle.l",
+     "FMA:46310",
+     "left longus capitis"
+    ],
+    [
+     "Longus capitis muscle.r",
+     "FMA:46309",
+     "right longus capitis"
+    ]
+   ]
+  },
+  {
+   "za": "Rectus posterior major capitis muscle",
+   "concept": "FMA:32525",
+   "concept_name": "rectus capitis posterior major",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Rectus posterior major capitis muscle.l",
+     "FMA:32531",
+     "left rectus capitis posterior major"
+    ],
+    [
+     "Rectus posterior major capitis muscle.r",
+     "FMA:32530",
+     "right rectus capitis posterior major"
+    ]
+   ]
+  },
+  {
+   "za": "Rectus posterior minor capitis muscle",
+   "concept": "FMA:32526",
+   "concept_name": "rectus capitis posterior minor",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Rectus posterior minor capitis muscle.l",
+     "FMA:32533",
+     "left rectus capitis posterior minor"
+    ],
+    [
+     "Rectus posterior minor capitis muscle.r",
+     "FMA:32532",
+     "right rectus capitis posterior minor"
+    ]
+   ]
+  },
+  {
+   "za": "Obliquus superior capitis muscle",
+   "concept": "FMA:32527",
+   "concept_name": "obliquus capitis superior",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Obliquus superior capitis muscle.l",
+     "FMA:32535",
+     "left obliquus capitis superior"
+    ],
+    [
+     "Obliquus superior capitis muscle.r",
+     "FMA:32534",
+     "right obliquus capitis superior"
+    ]
+   ]
+  },
+  {
+   "za": "Obliquus inferior capitis muscle",
+   "concept": "FMA:32528",
+   "concept_name": "obliquus capitis inferior",
+   "system": "muscular",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Obliquus inferior capitis muscle.l",
+     "FMA:32537",
+     "left obliquus capitis inferior"
+    ],
+    [
+     "Obliquus inferior capitis muscle.r",
+     "FMA:32536",
+     "right obliquus capitis inferior"
+    ]
+   ]
+  },
+  {
+   "za": "Optic nerve (II)",
+   "concept": "FMA:50863",
+   "concept_name": "optic nerve",
+   "system": "nervous",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Optic nerve (II).l",
+     "FMA:50878",
+     "left optic nerve"
+    ],
+    [
+     "Optic nerve (II).r",
+     "FMA:50875",
+     "right optic nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Trochlear nerve (IV)",
+   "concept": "FMA:50865",
+   "concept_name": "trochlear nerve",
+   "system": "nervous",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Trochlear nerve (IV).l",
+     "FMA:50882",
+     "left trochlear nerve"
+    ],
+    [
+     "Trochlear nerve (IV).r",
+     "FMA:50881",
+     "right trochlear nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Ophthalmic nerve",
+   "concept": "FMA:52621",
+   "concept_name": "ophthalmic nerve",
+   "system": "nervous",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Ophthalmic nerve.l",
+     "FMA:52623",
+     "left ophthalmic nerve"
+    ],
+    [
+     "Ophthalmic nerve.r",
+     "FMA:52622",
+     "right ophthalmic nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Vestibulocochlear nerve (VIII)",
+   "concept": "FMA:50869",
+   "concept_name": "vestibulocochlear nerve",
+   "system": "nervous",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Vestibulocochlear nerve (VIII).l",
+     "FMA:50891",
+     "left vestibulocochlear nerve"
+    ],
+    [
+     "Vestibulocochlear nerve (VIII).r",
+     "FMA:50890",
+     "right vestibulocochlear nerve"
+    ]
+   ]
+  },
+  {
+   "za": "Lacrimal gland",
+   "concept": "FMA:59101",
+   "concept_name": "lacrimal gland",
+   "system": "special_senses",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Lacrimal gland.l",
+     "FMA:59103",
+     "left lacrimal gland"
+    ],
+    [
+     "Lacrimal gland.r",
+     "FMA:59102",
+     "right lacrimal gland"
+    ]
+   ]
+  },
+  {
+   "za": "Lacrimal sac",
+   "concept": "FMA:20289",
+   "concept_name": "lacrimal sac",
+   "system": "special_senses",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Lacrimal sac.l",
+     "FMA:59546",
+     "left lacrimal sac"
+    ],
+    [
+     "Lacrimal sac.r",
+     "FMA:59545",
+     "right lacrimal sac"
+    ]
+   ]
+  },
+  {
+   "za": "Lacrimal canaliculus",
+   "concept": "FMA:58245",
+   "concept_name": "lacrimal canaliculus",
+   "system": "special_senses",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Lacrimal canaliculus.l",
+     "FMA:59583",
+     "left lacrimal canaliculus"
+    ],
+    [
+     "Lacrimal canaliculus.r",
+     "FMA:59582",
+     "right lacrimal canaliculus"
+    ]
+   ]
+  },
+  {
+   "za": "Nasolacrimal duct",
+   "concept": "FMA:9703",
+   "concept_name": "nasolacrimal duct",
+   "system": "special_senses",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Nasolacrimal duct.l",
+     "FMA:59556",
+     "left nasolacrimal duct"
+    ],
+    [
+     "Nasolacrimal duct.r",
+     "FMA:59555",
+     "right nasolacrimal duct"
+    ]
+   ]
+  },
+  {
+   "za": "Cochlea",
+   "concept": "FMA:60201",
+   "concept_name": "cochlea",
+   "system": "special_senses",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Cochlea.l",
+     "FMA:60203",
+     "left cochlea"
+    ],
+    [
+     "Cochlea.r",
+     "FMA:60202",
+     "right cochlea"
+    ]
+   ]
+  },
+  {
+   "za": "Tympanic membrane",
+   "concept": "FMA:9595",
+   "concept_name": "tympanic membrane",
+   "system": "special_senses",
+   "group": null,
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Tympanic membrane.l",
+     "FMA:56428",
+     "left tympanic membrane"
+    ],
+    [
+     "Tympanic membrane.r",
+     "FMA:56427",
+     "right tympanic membrane"
+    ]
+   ]
+  },
+  {
+   "za": "Internal carotid artery",
+   "concept": "FMA:3947",
+   "concept_name": "internal carotid artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Internal carotid artery.l",
+     "FMA:4062",
+     "left internal carotid artery"
+    ],
+    [
+     "Internal carotid artery.r",
+     "FMA:3949",
+     "right internal carotid artery"
+    ]
+   ]
+  },
+  {
+   "za": "External carotid artery",
+   "concept": "FMA:10635",
+   "concept_name": "external carotid artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "External carotid artery.l",
+     "FMA:4060",
+     "left external carotid artery"
+    ],
+    [
+     "External carotid artery.r",
+     "FMA:3945",
+     "right external carotid artery"
+    ]
+   ]
+  },
+  {
+   "za": "Vertebral artery",
+   "concept": "FMA:3956",
+   "concept_name": "vertebral artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Vertebral artery.l",
+     "FMA:4066",
+     "left vertebral artery"
+    ],
+    [
+     "Vertebral artery.r",
+     "FMA:3958",
+     "right vertebral artery"
+    ]
+   ]
+  },
+  {
+   "za": "Basilar artery",
+   "concept": "FMA:50542",
+   "concept_name": "basilar artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Basilar artery",
+     "FMA:50542",
+     "basilar artery"
+    ]
+   ]
+  },
+  {
+   "za": "Anterior communicating artery",
+   "concept": "FMA:50169",
+   "concept_name": "anterior communicating artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Anterior communicating artery",
+     "FMA:50169",
+     "anterior communicating artery"
+    ]
+   ]
+  },
+  {
+   "za": "Posterior communicating artery",
+   "concept": "FMA:50084",
+   "concept_name": "posterior communicating artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Posterior communicating artery.l",
+     "FMA:50086",
+     "left posterior communicating artery"
+    ],
+    [
+     "Posterior communicating artery.r",
+     "FMA:50085",
+     "right posterior communicating artery"
+    ]
+   ]
+  },
+  {
+   "za": "Anterior cerebral artery",
+   "concept": "FMA:50028",
+   "concept_name": "anterior cerebral artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Anterior cerebral artery.l",
+     "FMA:50030",
+     "left anterior cerebral artery"
+    ],
+    [
+     "Anterior cerebral artery.r",
+     "FMA:50029",
+     "right anterior cerebral artery"
+    ]
+   ]
+  },
+  {
+   "za": "Middle cerebral artery (M1-segment)",
+   "concept": "FMA:50079",
+   "concept_name": "middle cerebral artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Middle cerebral artery (M1-segment).l",
+     "FMA:50083",
+     "left middle cerebral artery"
+    ],
+    [
+     "Middle cerebral artery (M1-segment).r",
+     "FMA:50082",
+     "right middle cerebral artery"
+    ]
+   ]
+  },
+  {
+   "za": "Posterior cerebral artery",
+   "concept": "FMA:50583",
+   "concept_name": "posterior cerebral artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Posterior cerebral artery.l",
+     "FMA:50585",
+     "left posterior cerebral artery"
+    ],
+    [
+     "Posterior cerebral artery.r",
+     "FMA:50584",
+     "right posterior cerebral artery"
+    ]
+   ]
+  },
+  {
+   "za": "Superior cerebellar artery",
+   "concept": "FMA:50573",
+   "concept_name": "superior cerebellar artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Superior cerebellar artery.l",
+     "FMA:50575",
+     "left superior cerebellar artery"
+    ],
+    [
+     "Superior cerebellar artery.r",
+     "FMA:50574",
+     "right superior cerebellar artery"
+    ]
+   ]
+  },
+  {
+   "za": "Anterior inferior cerebellar artery",
+   "concept": "FMA:50544",
+   "concept_name": "anterior inferior cerebellar artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Anterior inferior cerebellar artery.l",
+     "FMA:50546",
+     "left anterior inferior cerebellar artery"
+    ],
+    [
+     "Anterior inferior cerebellar artery.r",
+     "FMA:50545",
+     "right anterior inferior cerebellar artery"
+    ]
+   ]
+  },
+  {
+   "za": "Posterior inferior cerebellar artery",
+   "concept": "FMA:50518",
+   "concept_name": "posterior inferior cerebellar artery",
+   "system": "cardiovascular",
+   "group": "artery",
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Posterior inferior cerebellar artery.l",
+     "FMA:50520",
+     "left posterior inferior cerebellar artery"
+    ],
+    [
+     "Posterior inferior cerebellar artery.r",
+     "FMA:50519",
+     "right posterior inferior cerebellar artery"
+    ]
+   ]
+  },
+  {
+   "za": "Internal jugular vein",
+   "concept": "FMA:4724",
+   "concept_name": "internal jugular vein",
+   "system": "cardiovascular",
+   "group": "vein",
+   "male": false,
+   "female": true,
+   "objects": [
+    [
+     "Internal jugular vein.l",
+     "FMA:4762",
+     "left internal jugular vein"
+    ],
+    [
+     "Internal jugular vein.r",
+     "FMA:4754",
+     "right internal jugular vein"
+    ]
+   ]
+  },
+  {
+   "za": "Occipital nodes",
+   "concept": "FMA:71711",
+   "concept_name": "set of occipital lymph nodes",
+   "system": "lymphatic",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Occipital nodes.l",
+     "FMA:224424",
+     "set of left occipital lymph nodes"
+    ],
+    [
+     "Occipital nodes.r",
+     "FMA:224422",
+     "set of right occipital lymph nodes"
+    ]
+   ]
+  },
+  {
+   "za": "Mastoid nodes",
+   "concept": "FMA:71712",
+   "concept_name": "set of mastoid lymph nodes",
+   "system": "lymphatic",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Mastoid nodes.l",
+     "FMA:224428",
+     "set of left mastoid lymph nodes"
+    ],
+    [
+     "Mastoid nodes.r",
+     "FMA:224426",
+     "set of right mastoid lymph nodes"
+    ]
+   ]
+  },
+  {
+   "za": "Pre-auricular nodes",
+   "concept": "FMA:228925",
+   "concept_name": "set of anterior auricular lymph nodes",
+   "system": "lymphatic",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Pre-auricular nodes.l",
+     "FMA:231509",
+     "set of left anterior auricular lymph nodes"
+    ],
+    [
+     "Pre-auricular nodes.r",
+     "FMA:231507",
+     "set of right anterior auricular lymph nodes"
+    ]
+   ]
+  },
+  {
+   "za": "Infra-auricular nodes",
+   "concept": "FMA:71716",
+   "concept_name": "set of infra-auricular lymph nodes",
+   "system": "lymphatic",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Infra-auricular nodes.l",
+     "FMA:224444",
+     "set of left infra-auricular lymph nodes"
+    ],
+    [
+     "Infra-auricular nodes.r",
+     "FMA:224442",
+     "set of right infra-auricular lymph nodes"
+    ]
+   ]
+  },
+  {
+   "za": "Superficial parotid nodes",
+   "concept": "FMA:71713",
+   "concept_name": "set of superficial parotid lymph nodes",
+   "system": "lymphatic",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Superficial parotid nodes.l",
+     "FMA:224432",
+     "set of left superficial parotid lymph nodes"
+    ],
+    [
+     "Superficial parotid nodes.r",
+     "FMA:224430",
+     "set of right superficial parotid lymph nodes"
+    ]
+   ]
+  },
+  {
+   "za": "Intraglandular parotid nodes",
+   "concept": "FMA:71714",
+   "concept_name": "set of deep parotid lymph nodes",
+   "system": "lymphatic",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Intraglandular parotid nodes.l",
+     "FMA:224436",
+     "set of left deep parotid lymph nodes"
+    ],
+    [
+     "Intraglandular parotid nodes.r",
+     "FMA:224434",
+     "set of right deep parotid lymph nodes"
+    ]
+   ]
+  },
+  {
+   "za": "Bucinator node",
+   "concept": "FMA:232196",
+   "concept_name": "set of buccinator lymph nodes",
+   "system": "lymphatic",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Bucinator node.l",
+     "FMA:232200",
+     "set of left buccinator lymph nodes"
+    ],
+    [
+     "Bucinator node.r",
+     "FMA:232198",
+     "set of right buccinator lymph nodes"
+    ]
+   ]
+  },
+  {
+   "za": "Nasolabial node",
+   "concept": "FMA:61225",
+   "concept_name": "nasolabial lymph node",
+   "system": "lymphatic",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Nasolabial node.l",
+     "FMA:232656",
+     "left nasolabial lymph node"
+    ],
+    [
+     "Nasolabial node.r",
+     "FMA:232654",
+     "right nasolabial lymph node"
+    ]
+   ]
+  },
+  {
+   "za": "Mandibular node",
+   "concept": "FMA:61227",
+   "concept_name": "mandibular lymph node",
+   "system": "lymphatic",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Mandibular node.l",
+     "FMA:232668",
+     "left mandibular lymph node"
+    ],
+    [
+     "Mandibular node.r",
+     "FMA:232664",
+     "right mandibular lymph node"
+    ]
+   ]
+  },
+  {
+   "za": "Submandibular nodes",
+   "concept": "FMA:71721",
+   "concept_name": "set of submandibular lymph nodes",
+   "system": "lymphatic",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Submandibular nodes.l",
+     "FMA:224452",
+     "set of left submandibular lymph nodes"
+    ],
+    [
+     "Submandibular nodes.r",
+     "FMA:224450",
+     "set of right submandibular lymph nodes"
+    ]
+   ]
+  },
+  {
+   "za": "Submental nodes",
+   "concept": "FMA:71720",
+   "concept_name": "set of submental lymph nodes",
+   "system": "lymphatic",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Submental nodes.l",
+     "FMA:71720",
+     "set of submental lymph nodes"
+    ],
+    [
+     "Submental nodes.r",
+     "FMA:71720",
+     "set of submental lymph nodes"
+    ]
+   ]
+  },
+  {
+   "za": "Jugulodigastric node",
+   "concept": "FMA:232509",
+   "concept_name": "set of jugulodigastric lymph nodes",
+   "system": "lymphatic",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Jugulodigastric node.l",
+     "FMA:232513",
+     "set of left jugulodigastric lymph nodes"
+    ],
+    [
+     "Jugulodigastric node.r",
+     "FMA:232511",
+     "set of right jugulodigastric lymph nodes"
+    ]
+   ]
+  },
+  {
+   "za": "Retropharyngeal nodes",
+   "concept": "FMA:71731",
+   "concept_name": "set of retropharyngeal lymph nodes",
+   "system": "lymphatic",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Retropharyngeal nodes.l",
+     "FMA:224476",
+     "set of left retropharyngeal lymph nodes"
+    ],
+    [
+     "Retropharyngeal nodes.r",
+     "FMA:224474",
+     "set of right retropharyngeal lymph nodes"
+    ]
+   ]
+  }
+ ]
+}

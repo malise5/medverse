@@ -20,8 +20,8 @@ def test_models_endpoint_lists_both_bodies_with_coverage(auth_client):
     female = {s["system_id"]: s["mesh_count"] for s in models["female"]["systems"]}
     male = {s["system_id"]: s["mesh_count"] for s in models["male"]["systems"]}
     assert female["reproductive"] > 0 and male["reproductive"] > 0
-    assert "muscular" in male and "muscular" not in female  # not in the female source
-    assert models["female"]["license"] == "CC BY 4.0"
+    assert 0 < female["muscular"] < male["muscular"]  # female: fitted head muscles only
+    assert models["female"]["license"] == "CC BY 4.0, CC BY-SA 4.0"  # HRA + Z-Anatomy head
     # male: BodyParts3D (CC BY 4.0) plus registered SPL atlas meshes (3D Slicer License Part B)
     assert "CC BY 4.0" in models["male"]["license"] and "3D Slicer" in models["male"]["license"]
     assert any("Human Reference Atlas" in s for s in models["female"]["sources"])
@@ -62,7 +62,8 @@ def test_systems_counts_per_body(auth_client):
         for s in auth_client.get("/api/v1/anatomy/systems", params={"model": "female"}).json()
     }
     allb = {s["id"]: s for s in auth_client.get("/api/v1/anatomy/systems").json()}
-    assert female["muscular"]["mesh_count"] == 0 and allb["muscular"]["mesh_count"] > 0
+    # female muscles exist only in the head (Z-Anatomy, fitted from a male-derived model)
+    assert 0 < female["muscular"]["mesh_count"] < allb["muscular"]["mesh_count"]
     assert 0 < female["reproductive"]["mesh_count"] < allb["reproductive"]["mesh_count"] + 1
 
 

@@ -148,13 +148,14 @@ export function HeadLayers({
       </div>
       {bodyModel === "female" && (
         <p className="rounded-md border border-dashed p-2 text-[11px] text-muted-foreground">
-          The female body&apos;s source (Human Reference Atlas, Visible Human Female) has the brain, eyes,
-          mouth, teeth, salivary glands, larynx, tonsils and skin of the head, but no skull, facial muscles,
-          ear or most head vessels. Those presets show only what exists;{" "}
+          The brain, eyes, mouth, teeth, salivary glands, larynx, tonsils and skin of this head come
+          from a female donor (Human Reference Atlas, Visible Human Female). The skull, ossicles,
+          muscles, cranial nerves, head vessels and lymph nodes are Z-Anatomy models of a male body
+          fitted to this head (CC BY-SA 4.0): an approximation, not female anatomy.{" "}
           <button type="button" className="text-primary hover:underline" onClick={() => useWorkspace.getState().setBodyModel("male")}>
-            switch to the male body
+            Switch to the male body
           </button>{" "}
-          for the full head.
+          to compare.
         </p>
       )}
       <p className="text-[11px] text-muted-foreground">

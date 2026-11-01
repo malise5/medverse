@@ -100,7 +100,9 @@ def test_asset_manifest_links_meshes_to_structures(auth_client):
     m = auth_client.get("/api/v1/assets/manifest").json()
     # BodyParts3D (CC BY 4.0); bundles with registered SPL atlas meshes add the 3D Slicer
     # License Part B, whose text ships next to the bundles.
-    assert m["bundles"] and all(b["license"].startswith("CC BY 4.0") for b in m["bundles"])
+    assert m["bundles"] and all(
+        b["license"].startswith(("CC BY 4.0", "CC BY-SA 4.0")) for b in m["bundles"]
+    )
     bundle_ids = {b["id"] for b in m["bundles"]}
     assert all(bundle in bundle_ids for bundle, _ in m["meshes"].values())
     assert m["body_model"] == "male" and all(b["body_model"] == "male" for b in m["bundles"])
