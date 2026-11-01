@@ -11,7 +11,7 @@ import { useWorkspace } from "../store";
  * for context layers (e.g. a faint skull around the vessels) and, optionally, a
  * structure to frame. Presets only change view state; they never alter anatomy.
  */
-interface HeadPreset {
+export interface HeadPreset {
   id: string;
   label: string;
   hint: string;
@@ -50,6 +50,16 @@ export const HEAD_PRESETS: HeadPreset[] = [
     opacity: { skeletal: 0.18 },
   },
   { id: "brain", label: "Brain", hint: "Brain, brainstem, ventricles", systems: ["nervous"], depth: 10, focus: [BRAIN] },
+  {
+    // The meninges render only while this preset is active (see anatomy-scene.tsx).
+    id: "meninges",
+    label: "Meninges",
+    hint: "Dura, arachnoid, pia (schematic), venous sinuses",
+    systems: ["nervous", "cardiovascular", "skeletal"],
+    depth: 10,
+    // no focus: selecting the brain would draw its highlight over the meninges
+    opacity: { skeletal: 0.12, cardiovascular: 0.6 },
+  },
   {
     id: "nerves",
     label: "Nerves",
@@ -110,24 +120,32 @@ export function applyHeadPreset(
   if (preset.focus) focus(preset.focus);
 }
 
-export function HeadLayers({
+/** Grid of layer presets for a study region, with an optional note under it. */
+export function LayerPresets({
+  id,
+  title,
+  presets,
   systems,
   onFocus,
+  children,
 }: {
+  id: string;
+  title: string;
+  presets: HeadPreset[];
   systems: AnatomicalSystem[];
   /** Frames the first of the given structures that exists in the body on screen. */
   onFocus: (structureIds: string[]) => void;
+  children?: React.ReactNode;
 }) {
   const active = useWorkspace((s) => s.headPreset);
-  const bodyModel = useWorkspace((s) => s.bodyModel);
   const setActive = useWorkspace((s) => s.setHeadPreset);
   return (
-    <section aria-labelledby="head-layers-h" className="grid gap-2">
-      <h3 id="head-layers-h" className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-        Head layers
+    <section aria-labelledby={`${id}-h`} className="grid gap-2">
+      <h3 id={`${id}-h`} className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+        {title}
       </h3>
       <div className="grid grid-cols-2 gap-1.5">
-        {HEAD_PRESETS.map((p) => (
+        {presets.map((p) => (
           <button
             key={p.id}
             type="button"
@@ -146,22 +164,45 @@ export function HeadLayers({
           </button>
         ))}
       </div>
-      {bodyModel === "female" && (
-        <p className="rounded-md border border-dashed p-2 text-[11px] text-muted-foreground">
-          The brain, eyes, mouth, teeth, salivary glands, larynx, tonsils and skin of this head come
-          from a female donor (Human Reference Atlas, Visible Human Female). The skull, ossicles,
-          muscles, cranial nerves, head vessels and lymph nodes are Z-Anatomy models of a male body
-          fitted to this head (CC BY-SA 4.0): an approximation, not female anatomy.{" "}
-          <button type="button" className="text-primary hover:underline" onClick={() => useWorkspace.getState().setBodyModel("male")}>
-            Switch to the male body
-          </button>{" "}
-          to compare.
-        </p>
-      )}
+      {children}
       <p className="text-[11px] text-muted-foreground">
-        Fine-tune below: each system can be hidden or faded, and Section plane (bottom bar) cuts the head
+        Fine-tune below: each system can be hidden or faded, and Section plane (bottom bar) cuts the region
         in any anatomical plane.
       </p>
     </section>
+  );
+}
+
+/** Note shown on the female body: which parts are female-donor and which are fitted. */
+export function FittedNotice({ children }: { children: React.ReactNode }) {
+  const bodyModel = useWorkspace((s) => s.bodyModel);
+  if (bodyModel !== "female") return null;
+  return (
+    <p className="rounded-md border border-dashed p-2 text-[11px] text-muted-foreground">
+      {children}{" "}
+      <button type="button" className="text-primary hover:underline" onClick={() => useWorkspace.getState().setBodyModel("male")}>
+        Switch to the male body
+      </button>{" "}
+      to compare.
+    </p>
+  );
+}
+
+export function HeadLayers({
+  systems,
+  onFocus,
+}: {
+  systems: AnatomicalSystem[];
+  onFocus: (structureIds: string[]) => void;
+}) {
+  return (
+    <LayerPresets id="head-layers" title="Head layers" presets={HEAD_PRESETS} systems={systems} onFocus={onFocus}>
+      <FittedNotice>
+        The brain, eyes, mouth, teeth, salivary glands, larynx, tonsils and skin of this head come from a
+        female donor (Human Reference Atlas, Visible Human Female). The skull, ossicles, muscles, cranial
+        nerves, head vessels and lymph nodes are Z-Anatomy models of a male body fitted to this head (CC
+        BY-SA 4.0), and the meninges are schematic: an approximation, not female anatomy.
+      </FittedNotice>
+    </LayerPresets>
   );
 }

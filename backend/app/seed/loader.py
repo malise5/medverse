@@ -52,6 +52,9 @@ log = logging.getLogger("medverse.seed")
 BP3D_SOURCE = "bodyparts3d-4.0"
 HRA_SOURCE = "hra-vhf"  # Human Reference Atlas 3D reference organs, Visible Human Female
 ZA_SOURCE = "z-anatomy"  # Z-Anatomy head supplement (CC BY-SA 4.0)
+# Supplement outputs used by both bodies; their bundles name their body model.
+# zanatomy: pipeline/zanatomy/build.py; meninges: pipeline/meninges/build.py
+SUPPLEMENT_DIRS = ("zanatomy", "meninges")
 HRA_REFERENCE = "hra2021"
 CURATED_SOURCE = "medverse-curated"
 CHUNK = 1000
@@ -247,10 +250,15 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
     )
     report.counts["female_new_structures"] = len(hra_new)
 
-    # Z-Anatomy head supplement (CC BY-SA 4.0, both bodies): structures neither body
-    # source defines. See pipeline/zanatomy/build.py.
-    za = content_dir / "generated" / "zanatomy-head"
-    za_structures = _read(za / "structures.json") if (za / "structures.json").exists() else []
+    # Supplements (Z-Anatomy head, derived meninges; both bodies): structures neither
+    # body source defines. See SUPPLEMENT_DIRS.
+    supplements = [content_dir / "generated" / d for d in SUPPLEMENT_DIRS]
+    za_structures = [
+        s
+        for d in supplements
+        if (d / "structures.json").exists()
+        for s in _read(d / "structures.json")
+    ]
     hra_ids = {s["id"] for s in hra_structures}
     za_new = [s for s in za_structures if s["id"] not in bp3d_ids and s["id"] not in hra_ids]
     for s in za_new:
@@ -288,7 +296,7 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
         ],
         ["structure_id", "source"],
     )
-    report.counts["zanatomy_new_structures"] = len(za_new)
+    report.counts["supplement_new_structures"] = len(za_new)
     known = set(db.scalars(select(Structure.id)))
 
     # Graph: part_of from source + curated relations -------------------------
@@ -331,7 +339,13 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
             }
         )
     seen_pairs = {(r["subject_id"], r["object_id"]) for r in rel_rows}
-    for r in _read(za / "relationships.json") if (za / "relationships.json").exists() else []:
+    za_rels = [
+        r
+        for d in supplements
+        if (d / "relationships.json").exists()
+        for r in _read(d / "relationships.json")
+    ]
+    for r in za_rels:
         if r["subject"] not in known or r["object"] not in known:
             problems.append(f"Z-Anatomy relation {r}: unknown structure")
             continue
@@ -440,7 +454,11 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
     # 3D assets: one generated directory per body model ------------------------
     bundles, meshes, sm = [], [], {}
     # Z-Anatomy bundles name their body model themselves (male and female).
-    for directory, body_model in ((gen, "male"), (hra, "female"), (za, "male")):
+    for directory, body_model in (
+        (gen, "male"),
+        (hra, "female"),
+        *((d, "male") for d in supplements),
+    ):
         for b in _read(directory / "bundles.json") if (directory / "bundles.json").exists() else []:
             bundles.append({**b, "body_model": b.get("body_model", body_model)})
         if (directory / "meshes.json").exists():
@@ -478,6 +496,10 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
                 contact_rows.append({"mesh_a": lo, "mesh_b": hi, "distance_mm": float(d)})
     db.execute(delete(MeshContact))
     _upsert(db, MeshContact, contact_rows, ["mesh_a", "mesh_b"])
+    # Bundles and meshes no longer produced by any pipeline (renamed or removed outputs)
+    # would stay in the manifest and 404; remove them (meshes and links cascade).
+    db.execute(delete(Mesh).where(Mesh.id.not_in(mesh_ids)))
+    db.execute(delete(AssetBundle).where(AssetBundle.id.not_in(bundle_ids)))
     report.counts["mesh_contacts"] = len(contact_rows)
     report.counts["bundles"] = len(bundles)
     report.counts["meshes"] = len(mesh_rows)

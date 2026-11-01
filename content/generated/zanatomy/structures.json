@@ -320,6 +320,22 @@
   "identity_source": "z-anatomy"
  },
  {
+  "id": "FMA:46609",
+  "name": "straight part of cricothyroid",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46610",
+  "name": "oblique part of cricothyroid",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
   "id": "FMA:46753",
   "name": "temporoparietalis",
   "system_id": "muscular",
@@ -2584,6 +2600,54 @@
   "identity_source": "z-anatomy"
  },
  {
+  "id": "FMA:57050",
+  "name": "articular capsule of temporomandibular joint",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:57059",
+  "name": "articular disk of temporomandibular joint",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:57071",
+  "name": "lateral ligament of temporomandibular joint",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:57083",
+  "name": "stylomandibular ligament",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:57084",
+  "name": "right stylomandibular ligament",
+  "system_id": "skeletal",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:57086",
+  "name": "left stylomandibular ligament",
+  "system_id": "skeletal",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
   "id": "FMA:5731",
   "name": "vagus nerve",
   "system_id": "nervous",
@@ -2659,6 +2723,14 @@
   "id": "FMA:59088",
   "name": "tarsal plate of lower eyelid",
   "system_id": "special_senses",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:59684",
+  "name": "mucosa of nose",
+  "system_id": "respiratory",
   "laterality": "unspecified",
   "is_compound": false,
   "identity_source": "z-anatomy"

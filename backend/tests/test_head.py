@@ -63,7 +63,7 @@ def test_head_content_has_location_function_and_clinical_sections(auth_client):
 
 
 # --- Z-Anatomy head supplement (CC BY-SA 4.0), pipeline/zanatomy/build.py -------------
-ZA = CONTENT / "generated/zanatomy-head"
+ZA = CONTENT / "generated/zanatomy"
 
 
 def _mesh_ids(auth_client, model, structure_id):
@@ -76,14 +76,16 @@ def test_zanatomy_bundles_are_share_alike_and_separate():
     bundles = json.loads((ZA / "bundles.json").read_text())
     assert bundles and {b["body_model"] for b in bundles} == {"male", "female"}
     for b in bundles:
+        if b["id"].startswith("fitted-"):  # BodyParts3D meshes fitted to the female
+            assert b["license"] == "CC BY 4.0" and b["body_model"] == "female"
+            assert "BodyParts3D" in b["attribution"] and "male-derived" in b["attribution"]
+            continue
         assert b["license"] == "CC BY-SA 4.0"
-        assert b["uri"].startswith("/assets/anatomy/zanatomy-head/")
+        assert b["uri"].startswith("/assets/anatomy/zanatomy/")
         assert "Z-Anatomy" in b["attribution"] and "BodyParts3D" in b["attribution"]
         if b["body_model"] == "female":
             assert "male-derived" in b["attribution"] and "male-derived" in b["source_dataset"]
-    text = (
-        BACKEND_DIR.parent / "frontend/public/assets/anatomy/zanatomy-head/LICENSE.txt"
-    ).read_text()
+    text = (BACKEND_DIR.parent / "frontend/public/assets/anatomy/zanatomy/LICENSE.txt").read_text()
     assert "CC BY-SA 4.0" in text and "NOT female anatomy" in text
 
 
@@ -120,3 +122,31 @@ def test_female_head_has_fitted_skull_but_keeps_its_own_organs(auth_client):
     for sid in ("FMA:50801", "FMA:58271"):  # brain, right sclera
         ids = _mesh_ids(auth_client, "female", sid)
         assert ids and not any(i.startswith("ZA") for i in ids), sid
+
+
+def test_female_gets_fitted_external_ear_and_laryngeal_muscles(auth_client):
+    for sid in ("FMA:52781", "FMA:46589"):  # external ear, right thyro-arytenoid
+        ids = _mesh_ids(auth_client, "female", sid)
+        assert ids and all(i.startswith("FIT-") for i in ids), sid
+
+
+def test_schematic_meninges_in_both_bodies(auth_client):
+    report = json.loads((CONTENT / "generated/meninges/pipeline_report.json").read_text())
+    for body in ("male", "female"):
+        layers = report["layers"][body]
+        # nested in order: pia closest to the brain, then arachnoid, then dura
+        d = {k: v["median_distance_to_brain_mm"] for k, v in layers.items()}
+        assert d["pia"] < d["arachnoid"] < d["dura"] < 6, (body, d)
+    for sid in ("FMA:71236", "FMA:83981", "FMA:78443"):  # dura, arachnoid, pia
+        detail = auth_client.get(f"/api/v1/anatomy/structures/{sid}").json()
+        assert detail["identity_source"] == "medverse-derived" and detail["content"]
+        for model in ("male", "female"):
+            assert _mesh_ids(auth_client, model, sid), (sid, model)
+
+
+def test_manifest_lists_only_bundles_that_exist_on_disk(auth_client):
+    root = BACKEND_DIR.parent / "frontend/public"
+    for model in ("male", "female"):
+        manifest = auth_client.get("/api/v1/assets/manifest", params={"model": model}).json()
+        for b in manifest["bundles"]:
+            assert (root / b["uri"].lstrip("/")).is_file(), b["uri"]

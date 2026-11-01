@@ -9,10 +9,10 @@ Source: Z-Anatomy (https://www.z-anatomy.com, github.com/LluisV/Z-Anatomy), lice
 CC BY-SA 4.0 and itself derived from BodyParts3D (CC BY-SA 2.1 Japan) with brain models
 from Brainder. Everything this script writes is a derivative work and is distributed
 under CC BY-SA 4.0 (share-alike): the meshes go to their own bundles
-(frontend/public/assets/anatomy/zanatomy-head/) with a licence notice, separate from the
+(frontend/public/assets/anatomy/zanatomy/) with a licence notice, separate from the
 CC BY 4.0 BodyParts3D and HRA bundles.
 
-Only the structures listed in head_selection.json are used; its "male" and "female"
+Only the structures listed in selection.json are used; its "male" and "female"
 flags say which bodies receive each one. The list was made by comparing every Z-Anatomy
 mesh in the head with the existing male build (FMA concept present with geometry, and
 geometric overlap with BodyParts3D PART-OF/IS-A meshes and the SPL atlases) and keeping,
@@ -29,15 +29,16 @@ its skull onto the built male skull places every mesh (residuals are reported).
 
 Female: Z-Anatomy has no female anatomy. For the female body the same meshes are fitted
 to the HRA female head: a bounded affine transform is estimated from structures both
-bodies have (brain, eyeballs, upper and lower teeth, thyroid cartilage) and applied to
-the male-derived meshes. They are an approximation of female anatomy, labelled as such
-in the bundle metadata and in the app; only structure kinds the female model lacks are
-added (skull, muscles, cranial nerves, venous sinuses ...), never ones it has.
+bodies have (brain, scleras, upper and lower teeth, thyroid cartilage) and applied to
+the male-derived meshes. They are an
+approximation of female anatomy, labelled as such in the bundle metadata and in the
+app; only structure kinds the female model lacks are added (skull, muscles, cranial
+nerves, venous sinuses ...), never ones it has.
 
 Outputs:
-    content/generated/zanatomy-head/{structures,relationships,meshes,structure_meshes,
+    content/generated/zanatomy/{structures,relationships,meshes,structure_meshes,
                                      bundles,pipeline_report}.json
-    frontend/public/assets/anatomy/zanatomy-head/{male,female}-<system>.glb
+    frontend/public/assets/anatomy/zanatomy/{male,female}-<system>.glb
 """
 
 import argparse
@@ -75,7 +76,7 @@ compress, write_glb, laterality, GLTF_TRANSFORM = (
     _bp3d.GLTF_TRANSFORM,
 )
 
-SOURCE_FILES = ["skeletal", "muscular", "nervous", "cardio", "visceral", "lymphoid"]
+SOURCE_FILES = ["skeletal", "muscular", "nervous", "cardio", "visceral", "lymphoid", "joints"]
 LICENSE = "CC BY-SA 4.0"
 ATTRIBUTION = (
     "Z-Anatomy - The open source atlas of anatomy (z-anatomy.com), CC BY-SA 4.0; "
@@ -86,7 +87,12 @@ FEMALE_NOTE = (
     "; fitted to the HRA Visible Human Female head from a male-derived model "
     "(approximation, not female anatomy)"
 )
-BUNDLE_URI_PREFIX = "/assets/anatomy/zanatomy-head"
+BUNDLE_URI_PREFIX = "/assets/anatomy/zanatomy"
+BP3D_LICENSE = "CC BY 4.0"
+BP3D_ATTRIBUTION = (
+    "BodyParts3D, (c) The Database Center for Life Science licensed under CC Attribution "
+    "4.0 International; meshes fitted by MEDVERSE"
+)
 IDENTITY_SOURCE = "z-anatomy"
 SIMPLIFY_RATIO = 0.3
 
@@ -181,7 +187,44 @@ def body_points(content: Path, assets: Path, tmp: Path, ids: list[str]) -> dict[
     return {k: np.vstack(v) for k, v in out.items()}
 
 
-def fit_parts(pairs: list[tuple[np.ndarray, np.ndarray]], iterations: int = 30) -> np.ndarray:
+def body_meshes(content: Path, assets: Path, tmp: Path, ids: list[str]) -> list[dict]:
+    """Built meshes (scene metres, with triangles) of the given structures."""
+    meshes = json.loads((content / "meshes.json").read_text())
+    sm = json.loads((content / "structure_meshes.json").read_text())
+    bundles = {b["id"]: b for b in json.loads((content / "bundles.json").read_text())}
+    owner = {m["id"]: m for m in meshes}
+    wanted = {mid for sid in ids for mid in sm.get(sid, [])}
+    out = []
+    for bid in sorted({owner[mid]["bundle_id"] for mid in wanted}):
+        src = assets / bundles[bid]["uri"].removeprefix("/assets/anatomy/")
+        dst = tmp / f"{bid}.glb"
+        if not dst.exists():
+            dequantize(src, dst)
+        for n in read_mesh_nodes(dst):
+            if n.name not in wanted:
+                continue
+            pos, tris, off = [], [], 0
+            for p in n.primitives:
+                pos.append(p.positions)
+                tris.append(p.triangles + off)
+                off += len(p.positions)
+            m = owner[n.name]
+            out.append(
+                {
+                    "id": n.name,
+                    "structure_id": m["structure_id"],
+                    "system_id": bundles[bid]["system_id"],
+                    "positions": np.vstack(pos),
+                    "indices": np.vstack(tris),
+                    "group": m.get("render_group"),
+                }
+            )
+    return out
+
+
+def fit_parts(
+    pairs: list[tuple[np.ndarray, np.ndarray]], iterations: int = 30, affine: bool = True
+) -> np.ndarray:
     """Bounded affine fit of several corresponding point clouds (mm), each weighted equally.
 
     Symmetric nearest-neighbour correspondences are recomputed per part each iteration,
@@ -210,7 +253,7 @@ def fit_parts(pairs: list[tuple[np.ndarray, np.ndarray]], iterations: int = 30) 
             a_list.append(a[sel])
             b_list.append(b[sel])
         a, b = np.vstack(a_list), np.vstack(b_list)
-        if it < iterations // 2:
+        if it < iterations // 2 or not affine:
             from register import _umeyama  # similarity first, affine once settled
 
             m = _umeyama(a, b)
@@ -241,17 +284,16 @@ def main() -> int:
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
     ap.add_argument("--glb-dir", type=Path, required=True, help="blender_export.py outputs")
+    ap.add_argument("--selection", type=Path, default=Path(__file__).with_name("selection.json"))
+    ap.add_argument("--out-content", type=Path, default=REPO / "content/generated/zanatomy")
     ap.add_argument(
-        "--selection", type=Path, default=Path(__file__).with_name("head_selection.json")
-    )
-    ap.add_argument("--out-content", type=Path, default=REPO / "content/generated/zanatomy-head")
-    ap.add_argument(
-        "--out-assets", type=Path, default=REPO / "frontend/public/assets/anatomy/zanatomy-head"
+        "--out-assets", type=Path, default=REPO / "frontend/public/assets/anatomy/zanatomy"
     )
     ap.add_argument("--no-compress", action="store_true")
     args = ap.parse_args()
 
-    selection = json.loads(args.selection.read_text())["structures"]
+    selection_doc = json.loads(args.selection.read_text())
+    selection = selection_doc["structures"]
     assets_root = REPO / "frontend/public/assets/anatomy"
     male_content = REPO / "content/generated/bodyparts3d"
     female_content = REPO / "content/generated/hra-female"
@@ -259,6 +301,7 @@ def main() -> int:
     hra_ids = {s["id"] for s in json.loads((female_content / "structures.json").read_text())}
     # female structures that already have their own (female-donor) geometry
     female_has = set(json.loads((female_content / "structure_meshes.json").read_text()))
+    male_has = set(json.loads((male_content / "structure_meshes.json").read_text()))
 
     # Z-Anatomy meshes, glTF scene axes (metres, Y up, facing +Z, patient's left = +X).
     za: dict[str, tuple[np.ndarray, np.ndarray]] = {}
@@ -303,21 +346,38 @@ def main() -> int:
         if len(pairs) < 3:
             raise SystemExit(f"too few female anchors found: {labels}")
         fit = fit_parts(pairs)
-        to_female = fit.copy()
-        to_female[:3, 3] /= 1000
-        to_female = to_female @ to_male
         report["female_fit"] = {
             "anchors": residuals(pairs, fit, labels),
             "linear_singular_values": np.linalg.svd(fit[:3, :3], compute_uv=False)
             .round(4)
             .tolist(),
         }
+        head_m = fit.copy()
+        head_m[:3, 3] /= 1000
+
+        def male_to_female(p: np.ndarray) -> np.ndarray:
+            """Male scene (m) -> female scene with the head fit."""
+            return p @ head_m[:3, :3].T + head_m[:3, 3]
+
+        # Male BodyParts3D meshes the female lacks (external ear, laryngeal muscles ...),
+        # fitted the same way; they keep their CC BY 4.0 licence.
+        fitted_bp3d = body_meshes(
+            male_content, assets_root, tmp, selection_doc.get("female_fitted_bodyparts3d", [])
+        )
 
     structures: dict[str, dict] = {}
     relationships: set[tuple[str, str]] = set()
-    by_bundle: dict[tuple[str, str], list[dict]] = defaultdict(list)
+    # bundle key: (body, source, system); source "za" (Z-Anatomy) or "bp3d" (fitted)
+    by_bundle: dict[tuple[str, str, str], list[dict]] = defaultdict(list)
     structure_meshes: dict[str, list[str]] = defaultdict(list)
     missing = []
+    for m in fitted_bp3d:
+        if m["structure_id"] in female_has:
+            continue
+        mid = "FIT-" + m["id"]
+        pos = male_to_female(m["positions"])
+        by_bundle[("female", "bp3d", m["system_id"])].append({**m, "id": mid, "positions": pos})
+        structure_meshes[m["structure_id"]].append(mid)
     for entry in selection:
         for obj, sid, name in entry["objects"]:
             if obj not in za:
@@ -347,14 +407,14 @@ def main() -> int:
                         "is_compound": True,
                         "identity_source": IDENTITY_SOURCE,
                     }
-            bodies = (["male"] if entry.get("male", True) else []) + (
+            bodies = (["male"] if entry.get("male", True) and sid not in male_has else []) + (
                 ["female"] if entry.get("female") and sid not in female_has else []
             )
+            in_male = v @ to_male[:3, :3].T + to_male[:3, 3]
             for body in bodies:
-                m = to_male if body == "male" else to_female
-                pos = v @ m[:3, :3].T + m[:3, 3]
+                pos = in_male if body == "male" else male_to_female(in_male)
                 mid = mesh_id(body, obj)
-                by_bundle[(body, entry["system"])].append(
+                by_bundle[(body, "za", entry["system"])].append(
                     {
                         "id": mid,
                         "structure_id": sid,
@@ -376,39 +436,48 @@ def main() -> int:
     bundles, meshes = [], []
     tris_source = sum(len(m["indices"]) for items in by_bundle.values() for m in items)
     simplify_tmp = tempfile.TemporaryDirectory()
-    for (body, sys_id), items in sorted(by_bundle.items()):
+    for (body, source, sys_id), items in sorted(by_bundle.items()):
         items.sort(key=lambda m: m["id"])
+        za_src = source == "za"
         # Weld + meshoptimizer simplification (Z-Anatomy meshes are dense); the error cap
-        # keeps thin vessels and nerves from collapsing.
-        tris = sum(len(m["indices"]) for m in items)
-        items = _hra.simplify_nodes(
-            items, int(tris * SIMPLIFY_RATIO), Path(simplify_tmp.name), f"{body}-{sys_id}"
+        # keeps thin vessels and nerves from collapsing. BodyParts3D meshes are already
+        # reduced and are copied as they are.
+        if za_src:
+            tris = sum(len(m["indices"]) for m in items)
+            items = _hra.simplify_nodes(
+                items, int(tris * SIMPLIFY_RATIO), Path(simplify_tmp.name), f"{body}-{sys_id}"
+            )
+        stem = f"{body}-{sys_id}" if za_src else f"{body}-fitted-bp3d-{sys_id}"
+        lic = LICENSE if za_src else BP3D_LICENSE
+        attribution = (ATTRIBUTION if za_src else BP3D_ATTRIBUTION) + (
+            FEMALE_NOTE if body == "female" else ""
         )
-        path = args.out_assets / f"{body}-{sys_id}.glb"
+        path = args.out_assets / f"{stem}.glb"
         write_glb(
             path,
             items,
             generator="medverse-pipeline/zanatomy",
-            copyright=f"{ATTRIBUTION} ({LICENSE})",
+            copyright=f"{attribution} ({lic})",
         )
         if not args.no_compress:
             compress(path)
         data = path.read_bytes()
-        bid = f"zanatomy-head-{body}-{sys_id}"
+        bid = f"zanatomy-{stem}" if za_src else f"fitted-{stem}"
+        dataset = "Z-Anatomy head supplement" if za_src else "BodyParts3D 4.0 head meshes"
         bundles.append(
             {
                 "id": bid,
                 "uri": f"{BUNDLE_URI_PREFIX}/{path.name}",
                 "system_id": sys_id,
                 "body_model": body,
-                "source_dataset": "Z-Anatomy head supplement"
+                "source_dataset": dataset
                 + (
                     " (fitted to the female head from a male-derived model)"
                     if body == "female"
                     else ""
                 ),
-                "license": LICENSE,
-                "attribution": ATTRIBUTION + (FEMALE_NOTE if body == "female" else ""),
+                "license": lic,
+                "attribution": attribution,
                 "version": "1.0",
                 "sha256": hashlib.sha256(data).hexdigest(),
                 "byte_size": len(data),
@@ -449,7 +518,8 @@ def main() -> int:
             "meshes": {
                 body: sum(1 for m in meshes if m["id"].startswith(f"ZA{body[0].upper()}-"))
                 for body in ("male", "female")
-            },
+            }
+            | {"female_fitted_bodyparts3d": sum(1 for m in meshes if m["id"].startswith("FIT-"))},
             "triangles_source": int(tris_source),
             "triangles": int(sum(m["triangle_count"] for m in meshes)),
             "per_bundle": {b["id"]: b["mesh_count"] for b in bundles},

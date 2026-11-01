@@ -1,0 +1,73 @@
+{
+ "source": "Z-Anatomy - The open source atlas of anatomy (z-anatomy.com), CC BY-SA 4.0; derived from BodyParts3D, The Database Center for Life Science, CC BY-SA 2.1 Japan; brain models from Brainder. Meshes registered and modified by MEDVERSE",
+ "male_registration": {
+  "scale": 1.0269,
+  "median_mm": 1.23,
+  "p90_mm": 5.03
+ },
+ "female_fit": {
+  "anchors": {
+   "brain": {
+    "median_mm": 3.95,
+    "p90_mm": 9.39
+   },
+   "left sclera": {
+    "median_mm": 3.68,
+    "p90_mm": 7.02
+   },
+   "right sclera": {
+    "median_mm": 3.65,
+    "p90_mm": 7.28
+   },
+   "upper teeth": {
+    "median_mm": 5.76,
+    "p90_mm": 8.85
+   },
+   "lower teeth": {
+    "median_mm": 3.16,
+    "p90_mm": 7.75
+   },
+   "thyroid cartilage": {
+    "median_mm": 4.09,
+    "p90_mm": 8.8
+   }
+  },
+  "linear_singular_values": [
+   1.1325,
+   1.0868,
+   0.8932
+  ]
+ },
+ "selected_entries": 233,
+ "new_structures": 398,
+ "meshes": {
+  "male": 301,
+  "female": 395,
+  "female_fitted_bodyparts3d": 22
+ },
+ "triangles_source": 2271337,
+ "triangles": 828663,
+ "per_bundle": {
+  "fitted-female-fitted-bp3d-muscular": 17,
+  "fitted-female-fitted-bp3d-respiratory": 4,
+  "fitted-female-fitted-bp3d-special_senses": 1,
+  "zanatomy-female-cardiovascular": 122,
+  "zanatomy-female-digestive": 6,
+  "zanatomy-female-endocrine": 4,
+  "zanatomy-female-lymphatic": 26,
+  "zanatomy-female-muscular": 112,
+  "zanatomy-female-nervous": 53,
+  "zanatomy-female-respiratory": 15,
+  "zanatomy-female-skeletal": 33,
+  "zanatomy-female-special_senses": 24,
+  "zanatomy-male-cardiovascular": 104,
+  "zanatomy-male-digestive": 8,
+  "zanatomy-male-endocrine": 6,
+  "zanatomy-male-lymphatic": 26,
+  "zanatomy-male-muscular": 58,
+  "zanatomy-male-nervous": 77,
+  "zanatomy-male-respiratory": 10,
+  "zanatomy-male-skeletal": 8,
+  "zanatomy-male-special_senses": 4
+ }
+}

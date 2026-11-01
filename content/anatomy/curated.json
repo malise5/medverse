@@ -5622,6 +5622,972 @@
           ]
         }
       ]
+    },
+    {
+      "id": "FMA:71236",
+      "latin_name": "Dura mater cranialis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The dura mater is the tough outer membrane around the brain, lining the inside of the skull. In this model it is a schematic surface drawn around the brain.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The cranial dura has an outer (endosteal) layer fused to the inner table of the skull and an inner (meningeal) layer. The meningeal layer folds inward to form the falx cerebri, tentorium cerebelli, falx cerebelli and diaphragma sellae; between the two layers run the dural venous sinuses.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "It protects the brain, anchors it through its folds so it moves less within the skull, and carries the venous sinuses that drain blood and cerebrospinal fluid from the head.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "An extradural (epidural) haematoma, usually from a torn middle meningeal artery, collects between dura and skull; a subdural haematoma, from torn bridging veins, collects between dura and arachnoid. The dura is pain-sensitive (trigeminal and upper cervical nerves), which contributes to headache.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:83981",
+      "latin_name": "Arachnoidea mater cranialis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The arachnoid is the thin middle membrane around the brain. Under it lies the subarachnoid space, filled with cerebrospinal fluid. In this model it is a schematic surface.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The arachnoid lies against the inner surface of the dura and bridges over the sulci without dipping into them. Fine trabeculae cross the subarachnoid space to the pia; the space widens into cisterns (for example the cerebellomedullary cistern and the cisterns around the brainstem).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Cerebrospinal fluid circulating in the subarachnoid space cushions the brain; arachnoid granulations projecting into the dural venous sinuses return the fluid to the blood.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Rupture of a berry aneurysm of the circle of Willis bleeds into the subarachnoid space (subarachnoid haemorrhage, sudden severe headache). Lumbar puncture samples cerebrospinal fluid from the spinal subarachnoid space.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:78443",
+      "latin_name": "Pia mater cranialis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The pia mater is the delicate innermost membrane that clings to the surface of the brain, following every fold. In this model it is a schematic surface close to the brain.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The pia is adherent to the brain surface, follows the gyri into the sulci and accompanies vessels for a short distance as they enter the brain. With the arachnoid it forms the leptomeninges.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "It carries the small vessels that supply the cortex and, with ependyma, forms the tela choroidea from which the choroid plexuses that secrete cerebrospinal fluid develop.",
+          "references": [
+            "grays42"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Meningitis is inflammation of the leptomeninges (arachnoid and pia), usually infective; neck stiffness, headache and fever are typical, and the cerebrospinal fluid is examined after lumbar puncture.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:52592",
+        "FMA:52593"
+      ],
+      "latin_name": "Nervus olfactorius",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The olfactory nerves carry the sense of smell from the roof of the nose to the brain.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "About 20 bundles of olfactory nerve fibres pass from the olfactory mucosa through the cribriform plate of the ethmoid bone to end in the olfactory bulb.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Fractures of the anterior cranial fossa can tear the fibres (loss of smell, anosmia) and allow cerebrospinal fluid to leak from the nose.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:50879",
+        "FMA:50880"
+      ],
+      "latin_name": "Nervus oculomotorius",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The oculomotor nerve moves most of the eye muscles, lifts the upper eyelid and makes the pupil smaller.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "CN III emerges from the midbrain in the interpeduncular fossa, passes between the posterior cerebral and superior cerebellar arteries, runs in the lateral wall of the cavernous sinus and enters the orbit through the superior orbital fissure, dividing into superior and inferior branches.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Motor to the superior, inferior and medial recti, inferior oblique and levator palpebrae superioris; parasympathetic fibres (via the ciliary ganglion) constrict the pupil and accommodate the lens.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "A complete palsy gives ptosis and an eye turned 'down and out'; a dilated pupil suggests compression, for example by a posterior communicating artery aneurysm or uncal herniation.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:50884",
+        "FMA:50885"
+      ],
+      "latin_name": "Nervus trigeminus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The trigeminal nerve carries feeling from the face, mouth and teeth, and controls the chewing muscles.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "CN V leaves the lateral pons as a large sensory and a small motor root, forms the trigeminal ganglion on the petrous temporal bone and divides into the ophthalmic (V1, superior orbital fissure), maxillary (V2, foramen rotundum) and mandibular (V3, foramen ovale) nerves.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "General sensation from the face, scalp to the vertex, cornea, nasal and oral cavities, teeth and anterior two-thirds of the tongue and most of the dura; motor to the muscles of mastication, mylohyoid, anterior digastric, tensor tympani and tensor veli palatini (through V3).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Trigeminal neuralgia causes brief, severe stabbing pain in one division; the corneal reflex tests V1 (afferent) with VII (efferent).",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:50886",
+        "FMA:50887"
+      ],
+      "latin_name": "Nervus abducens",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The abducens nerve moves the eye outward, away from the nose.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "CN VI leaves the brainstem at the pontomedullary junction, climbs the clivus, bends over the petrous apex, runs through the cavernous sinus beside the internal carotid artery and enters the orbit through the superior orbital fissure to the lateral rectus.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Its long intracranial course makes it vulnerable to raised intracranial pressure; a palsy causes double vision on looking to the affected side and the eye turns inward.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:50892",
+        "FMA:50894"
+      ],
+      "latin_name": "Nervus glossopharyngeus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The glossopharyngeal nerve carries taste and feeling from the back of the tongue and throat, and helps with swallowing.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "CN IX leaves the medulla behind the olive, exits through the jugular foramen and passes between the internal and external carotid arteries along stylopharyngeus to the tongue and pharynx.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Sensory from the posterior third of the tongue (including taste), oropharynx, middle ear and the carotid sinus and body; motor to stylopharyngeus; parasympathetic to the parotid gland (via the otic ganglion).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "It is the afferent limb of the gag reflex (the vagus is the efferent limb).",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:6219",
+        "FMA:6220"
+      ],
+      "latin_name": "Nervus vagus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The vagus nerve runs from the brainstem down to the abdomen. It controls swallowing and the voice and slows the heart.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "CN X leaves the medulla, exits the skull through the jugular foramen and descends in the carotid sheath between the internal jugular vein and carotid arteries into the thorax and abdomen.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Motor to the pharynx, soft palate and larynx; parasympathetic to the heart, lungs and gut to the left colic flexure; sensory from the larynx, thoracic and abdominal viscera.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Injury to its recurrent laryngeal branches (for example in thyroid surgery) causes hoarseness; a unilateral lesion deviates the uvula away from the affected side.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:50897",
+        "FMA:50899"
+      ],
+      "latin_name": "Nervus accessorius",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The accessory nerve moves two large neck and shoulder muscles: sternocleidomastoid and trapezius.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Its spinal root arises from the upper cervical cord, ascends through the foramen magnum and leaves through the jugular foramen, then crosses the posterior triangle of the neck to trapezius.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Its superficial course in the posterior triangle puts it at risk during lymph-node biopsy, causing weak shoulder shrugging and a drooping shoulder.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:50901",
+        "FMA:50903"
+      ],
+      "latin_name": "Nervus hypoglossus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The hypoglossal nerve moves the tongue.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "CN XII leaves the medulla between the pyramid and olive, exits through the hypoglossal canal and curves forward below the posterior belly of digastric, above the hyoid, to the tongue.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "A lower motor neuron lesion makes the protruded tongue deviate toward the affected side, with wasting and fasciculation.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:50767",
+      "latin_name": "Sinus sagittalis superior",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The superior sagittal sinus is a large vein channel along the top of the head, inside the dura, draining blood from the brain.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It runs in the attached upper border of the falx cerebri from the crista galli to the confluence of sinuses at the internal occipital protuberance, receiving the superior cerebral veins and arachnoid granulations.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Thrombosis of the sinus (for example in dehydration, pregnancy or thrombophilia) causes headache, raised intracranial pressure and venous infarcts.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:50764",
+        "FMA:50765"
+      ],
+      "latin_name": "Sinus transversus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The transverse sinuses carry blood from the back of the head toward the jugular veins.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Each runs laterally from the confluence of sinuses in the attached margin of the tentorium cerebelli and continues as the sigmoid sinus.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:51293",
+        "FMA:51294"
+      ],
+      "latin_name": "Sinus sigmoideus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The sigmoid sinus is an S-shaped vein channel that drains into the internal jugular vein.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It curves down in a groove on the mastoid part of the temporal bone and occipital bone to the jugular foramen, where it becomes the internal jugular vein.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Its closeness to the mastoid air cells means mastoiditis can spread to cause sigmoid sinus thrombosis.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:51402",
+        "FMA:51403"
+      ],
+      "latin_name": "Sinus cavernosus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The cavernous sinuses lie on each side of the pituitary gland. The internal carotid artery and several eye nerves pass through them.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Each lies beside the body of the sphenoid bone; the internal carotid artery and CN VI run through it, and CN III, IV, V1 and V2 run in its lateral wall. It receives the ophthalmic veins and drains through the petrosal sinuses.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Infection from the 'danger area' of the face can spread through the facial and ophthalmic veins to cause cavernous sinus thrombosis (eye swelling and multiple cranial nerve palsies).",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:50769",
+      "latin_name": "Sinus rectus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The straight sinus drains blood from deep inside the brain toward the back of the head.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It runs along the junction of the falx cerebri and tentorium cerebelli, formed by the inferior sagittal sinus and great cerebral vein, ending at the confluence of sinuses.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:46781",
+      "latin_name": "Pars orbitalis musculi orbicularis oculi",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The orbicularis oculi is the ring of muscle around the eye. Its outer part screws the eyes shut tightly.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The orbital part encircles the orbital margin, arising from the medial orbital margin and medial palpebral ligament.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "It closes the eyelids forcibly; the palpebral part closes them gently in blinking and sleep. Innervation: facial nerve (temporal and zygomatic branches).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "In facial nerve palsy the eye cannot close, risking corneal drying (exposure keratitis).",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:46784",
+      "latin_name": "Pars palpebralis musculi orbicularis oculi",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The palpebral part of orbicularis oculi lies in the eyelids and closes them gently when blinking.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It lies within the eyelids, from the medial palpebral ligament to the lateral palpebral raphe; facial nerve.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:46841",
+      "latin_name": "Musculus orbicularis oris",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The orbicularis oris is the ring of muscle in the lips. It closes and purses the lips.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It encircles the mouth within the lips, blending with the buccinator and the other muscles inserting at the modiolus; facial nerve (buccal and marginal mandibular branches).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Closes the lips, protrudes them (as in whistling) and keeps food in the mouth during chewing.",
+          "references": [
+            "grays42"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:46835",
+        "FMA:46836"
+      ],
+      "latin_name": "Musculus buccinator",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The buccinator is the muscle of the cheek. It keeps food between the teeth while chewing and helps blow air out.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It arises from the alveolar processes of the maxilla and mandible opposite the molars and the pterygomandibular raphe, and runs forward to the angle of the mouth; the parotid duct pierces it. Facial nerve (buccal branches).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Presses the cheek against the teeth during chewing and expels air when the cheeks are distended.",
+          "references": [
+            "grays42"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:46759",
+        "FMA:46760"
+      ],
+      "latin_name": "Venter frontalis musculi occipitofrontalis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The frontalis raises the eyebrows and wrinkles the forehead.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The frontal belly of occipitofrontalis runs from the epicranial aponeurosis to the skin of the eyebrows; facial nerve (temporal branches).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:49012",
+        "FMA:49013"
+      ],
+      "latin_name": "Musculus pterygoideus medialis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The medial pterygoid is a chewing muscle on the inside of the jaw that helps close the mouth.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It arises from the medial surface of the lateral pterygoid plate (deep head) and the maxillary tuberosity (superficial head) and inserts on the inner surface of the ramus and angle of the mandible; mandibular nerve.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Elevates and protrudes the mandible and, acting on one side, moves it to the opposite side in grinding.",
+          "references": [
+            "grays42"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:49020",
+        "FMA:49021"
+      ],
+      "latin_name": "Musculus pterygoideus lateralis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The lateral pterygoid pulls the jaw forward and helps open the mouth.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Its upper head arises from the greater wing of the sphenoid and its lower head from the lateral surface of the lateral pterygoid plate; both insert on the neck of the mandible and the articular disc and capsule of the temporomandibular joint. Mandibular nerve.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Protrudes the mandible and pulls the condyle and disc forward onto the articular tubercle as the mouth opens wide; alternating action gives side-to-side grinding.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:57417",
+      "latin_name": "Sinus frontalis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The frontal sinuses are air spaces in the forehead bone, above the eyes.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Paired, often asymmetric air cells in the frontal bone behind the superciliary arches; each drains through the frontonasal duct into the middle meatus of the nose.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Frontal sinusitis causes pain above the eye; infection can rarely spread to the orbit or anterior cranial fossa.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:54683",
+      "latin_name": "Sinus sphenoidalis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The sphenoid sinuses are air spaces deep in the middle of the skull, just below the pituitary gland.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "In the body of the sphenoid, draining into the spheno-ethmoidal recess; related above to the pituitary gland and optic chiasm and laterally to the cavernous sinus and internal carotid artery.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "It is the route of transsphenoidal surgery to the pituitary gland.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:55560",
+        "FMA:55561",
+        "FMA:55562",
+        "FMA:55563"
+      ],
+      "latin_name": "Glandula parathyroidea",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The parathyroid glands are four small glands behind the thyroid that control calcium levels in the blood.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Usually two on each side on the posterior surface of the thyroid lobes; the superior glands are more constant in position, the inferior glands (which descend with the thymus) more variable.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Parathyroid hormone raises blood calcium by releasing calcium from bone, increasing renal reabsorption and promoting vitamin D activation.",
+          "references": [
+            "guyton14"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Accidental removal during thyroidectomy causes hypocalcaemia (tingling, muscle cramps, tetany).",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:57059",
+      "latin_name": "Discus articularis articulationis temporomandibularis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The jaw joint disc is a pad of fibrous cartilage between the jaw bone and the skull that lets the jaw glide and hinge smoothly.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "A biconcave fibrocartilage disc dividing the temporomandibular joint into upper (gliding) and lower (hinge) compartments, attached to the capsule and to the upper head of lateral pterygoid.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Anterior displacement of the disc causes clicking and locking of the jaw (temporomandibular disorder).",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:59684",
+      "latin_name": "Tunica mucosa nasi",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The lining of the nose warms, moistens and filters the air we breathe; its roof carries the smell receptors.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Respiratory mucosa (ciliated epithelium with a rich venous plexus) covers most of the nasal cavity, including the conchae; olfactory mucosa covers the roof, upper septum and superior concha.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Most nosebleeds arise from the anterior septum (Kiesselbach area), where several arteries anastomose.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
     }
   ]
 }

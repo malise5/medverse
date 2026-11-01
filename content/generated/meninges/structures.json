@@ -1,0 +1,26 @@
+[
+ {
+  "id": "FMA:71236",
+  "name": "cranial dura mater",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "medverse-derived"
+ },
+ {
+  "id": "FMA:83981",
+  "name": "cranial arachnoid mater",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "medverse-derived"
+ },
+ {
+  "id": "FMA:78443",
+  "name": "cranial pia mater",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "medverse-derived"
+ }
+]

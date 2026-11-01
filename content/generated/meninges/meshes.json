@@ -1,0 +1,44 @@
+[
+ {
+  "id": "MEN-M-pia",
+  "bundle_id": "meninges-male-nervous",
+  "structure_id": "FMA:78443",
+  "triangle_count": 120000,
+  "render_group": "pia"
+ },
+ {
+  "id": "MEN-M-arachnoid",
+  "bundle_id": "meninges-male-nervous",
+  "structure_id": "FMA:83981",
+  "triangle_count": 10448,
+  "render_group": "arachnoid"
+ },
+ {
+  "id": "MEN-M-dura",
+  "bundle_id": "meninges-male-nervous",
+  "structure_id": "FMA:71236",
+  "triangle_count": 10448,
+  "render_group": "dura"
+ },
+ {
+  "id": "MEN-F-pia",
+  "bundle_id": "meninges-female-nervous",
+  "structure_id": "FMA:78443",
+  "triangle_count": 120000,
+  "render_group": "pia"
+ },
+ {
+  "id": "MEN-F-arachnoid",
+  "bundle_id": "meninges-female-nervous",
+  "structure_id": "FMA:83981",
+  "triangle_count": 8932,
+  "render_group": "arachnoid"
+ },
+ {
+  "id": "MEN-F-dura",
+  "bundle_id": "meninges-female-nervous",
+  "structure_id": "FMA:71236",
+  "triangle_count": 8932,
+  "render_group": "dura"
+ }
+]

@@ -104,9 +104,11 @@ function Overview({ d }: { d: StructureDetail }) {
                 ? "BodyParts3D 4.0 (IS-A set, FMA)"
                 : d.identity_source === "spl-atlas"
                   ? "the SPL Head and Neck / Inner Ear atlases (Brigham and Women's Hospital), registered to the BodyParts3D skull"
-                  : d.identity_source === "z-anatomy"
-                    ? "Z-Anatomy (CC BY-SA 4.0), registered to the BodyParts3D skull; on the female body these meshes are fitted from a male-derived model"
-                    : d.identity_source}
+                  : d.identity_source === "medverse-derived"
+                    ? "a schematic surface MEDVERSE derived from this body's brain (no open dataset segments the cranial meninges); it shows where the layer lies, not its exact shape"
+                    : d.identity_source === "z-anatomy"
+                      ? "Z-Anatomy (CC BY-SA 4.0), registered to the BodyParts3D skull; on the female body these meshes are fitted from a male-derived model"
+                      : d.identity_source}
           .
         </p>
         <p className="text-xs">Content is added through the expert-reviewed authoring workflow.</p>
@@ -227,10 +229,11 @@ export function StructurePanel({
           <VerificationBadge status={d.verification_status} />
         </div>
         {!meshIds.length && d.mesh_ids.length > 0 && <OtherBodyNotice />}
-        {meshIds.some((m) => m.startsWith("ZAF-")) && (
+        {meshIds.some((m) => m.startsWith("ZAF-") || m.startsWith("FIT-")) && (
           <p className="rounded-md border border-dashed p-2 text-[11px] text-muted-foreground">
-            3D model on this body: Z-Anatomy (CC BY-SA 4.0), made from a male body and fitted to this
-            female head. Its shape is an approximation, not female anatomy.
+            3D model on this body:{" "}
+            {meshIds.some((m) => m.startsWith("ZAF-")) ? "Z-Anatomy (CC BY-SA 4.0)" : "BodyParts3D (CC BY 4.0)"}, made
+            from a male body and fitted to this female head. Its shape is an approximation, not female anatomy.
           </p>
         )}
         {meshIds.some((m) => m.startsWith("ZAM-")) && (

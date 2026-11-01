@@ -210,7 +210,7 @@ backend/.venv/bin/python pipeline/bodyparts3d/build.py --source SRC \
 [Z-Anatomy](https://www.z-anatomy.com) (CC BY-SA 4.0; itself derived from BodyParts3D,
 CC BY-SA 2.1 Japan, with Brainder brain models) fills the remaining head gaps. Its files
 are **share-alike**, so they are built into their own bundles
-(`frontend/public/assets/anatomy/zanatomy-head/{male,female}-<system>.glb`, licence
+(`frontend/public/assets/anatomy/zanatomy/{male,female}-<system>.glb`, licence
 `CC BY-SA 4.0`, notice in `LICENSE.txt` there), separate from the CC BY 4.0 bundles.
 
 ```bash
@@ -220,7 +220,7 @@ blender --background --factory-startup --python pipeline/zanatomy/blender_export
 backend/.venv/bin/python pipeline/zanatomy/build.py --glb-dir GLB_DIR
 ```
 
-- **Selection** (`head_selection.json`, 226 entries): every Z-Anatomy mesh in the head
+- **Selection** (`selection.json`, 226 entries): every Z-Anatomy mesh in the head
   was compared with the male build by FMA concept (present with geometry or not) and by
   surface overlap with the BodyParts3D/SPL meshes; only missing structures are kept.
   Names were mapped to FMA terms (left/right where FMA has them) from the FMA ontology.
@@ -234,8 +234,27 @@ backend/.venv/bin/python pipeline/zanatomy/build.py --glb-dir GLB_DIR
   labelled everywhere (bundle attribution, structure panel, head-layers notice) as fitted
   from a male-derived model, not female anatomy; mesh ids start with `ZAF-`. Structures
   the female already has (brain, eyes, mouth, larynx, ophthalmic vessels) are never added.
-- Meshes are welded and simplified (meshoptimizer, 30 % ratio with an error cap): 2.1 M
-  source triangles → 0.71 M, 3.1 MB for both bodies.
+- **BodyParts3D meshes fitted to the female** (`female_fitted_bodyparts3d` in the
+  selection): the external ear, laryngeal muscles and ligaments the female model lacks
+  are copied from the built male body and fitted with the same transform. They stay
+  CC BY 4.0 (`female-fitted-bp3d-*.glb`, bundle ids `fitted-*`, mesh ids `FIT-`).
+- Z-Anatomy meshes are welded and simplified (meshoptimizer, 30 % ratio with an error
+  cap); total for both bodies about 0.83 M triangles.
+
+### Schematic cranial meninges (`pipeline/meninges/`)
+
+No open dataset segments the cranial dura, arachnoid or pia, so they are derived from
+each body's own brain surface with Blender (`blender_meninges.py`): the pia is a 1 mm
+voxel remesh offset 0.3 mm (it follows the gyri), the arachnoid and dura a 5 mm voxel
+envelope (bridging the sulci) offset 1.5 and 2.5 mm. They are teaching schematics of
+where the layers lie (`identity_source = medverse-derived`, render groups `dura`,
+`arachnoid`, `pia`), CC BY 4.0 as derivatives of BodyParts3D / HRA. The viewer hides
+them except in the head "Meninges" preset or when one is selected, since they enclose
+the brain.
+
+```bash
+backend/.venv/bin/python pipeline/meninges/build.py --blender /path/to/blender
+```
 
 ### Head coverage (current)
 
@@ -245,15 +264,15 @@ inner ear right 4.08 / 11.49 mm, left (mirrored) 4.07 / 10.99 mm; Z-Anatomy see 
 
 | Group | Male body | Female body | Still missing |
 |---|---|---|---|
-| Brain and CNS | lobes, gyri, cerebellum, brainstem, thalamus, hypothalamus, basal nuclei, limbic structures, ventricles, cranial dura, falx and tentorium (ZA), cranial nerve nuclei (ZA), spinal cord | 283 atlas regions, spinal cord by segment; falx and tentorium (ZA) | arachnoid and pia mater |
+| Brain and CNS | lobes, gyri, cerebellum, brainstem, thalamus, hypothalamus, basal nuclei, limbic structures, ventricles, falx and tentorium (ZA), cranial nerve nuclei (ZA), spinal cord; dura, arachnoid, pia (schematic) | 283 atlas regions, spinal cord by segment; falx and tentorium (ZA); dura, arachnoid, pia (schematic) | segmented (non-schematic) meninges |
 | Cranial nerves | I–XII incl. trigeminal divisions and branches (ZA for I, III, V, VI, VII, IX–XII) | I–XII (ZA) | small autonomic ganglia branches |
 | Eye | eyeball layers, lens, retina, optic nerve, chiasm, tract, extra-ocular muscles, lacrimal apparatus, tarsal plates | eyeball layers (female donor); extra-ocular muscles, optic nerve, lacrimal apparatus, tarsal plates (ZA) | — |
 | Vessels | carotid and vertebral systems, circle of Willis and cortical branches, dural venous sinuses, facial, scalp, maxillary and orbital vessels, jugular veins (ZA for sinuses, facial/scalp/maxillary vessels, EJV) | orbital vessels (female donor); carotids, vertebral, basilar, circle of Willis, sinuses, facial and scalp vessels, jugular veins (ZA) | cortical branches on the female body |
-| Skull | 14 cranial and facial bones, hyoid, conchae, teeth; frontal, sphenoidal and ethmoidal sinuses (ZA) | full skull, hyoid, atlas, axis, nasal cartilages, sinuses (ZA); teeth (female donor) | third molars |
-| Muscles | all expression, mastication and scalp muscles (ZA), extra-ocular, tongue, supra/infrahyoid, pharyngeal, laryngeal, neck | expression, mastication, extra-ocular, suprahyoid, pharyngeal, suboccipital and neck muscles (ZA) | laryngeal muscles on the female body |
-| Ear | external ear; labyrinth, ossicles, tympanic membrane, middle-ear muscles, VII/VIII (SPL); auditory tube (ZA) | ossicles, cochlea, tympanic membrane, auditory tube (ZA) | external ear on the female body |
-| Nose, mouth, pharynx | septum, conchae, tongue, palate, salivary glands and ducts, pharynx regions (ZA), larynx | mouth, teeth, tongue, palate, salivary glands, larynx, tonsils (female donor); parotid duct, pharynx regions (ZA) | nasal cavity as a space |
-| Glands, lymph | pituitary (with adeno/neurohypophysis, ZA), pineal, thyroid, parathyroids (ZA), head lymph nodes (ZA) | pineal, thymus (female donor); parathyroids, head lymph nodes (ZA) | fat pads |
+| Skull | 14 cranial and facial bones, hyoid, conchae, teeth; frontal, sphenoidal and ethmoidal sinuses, jaw joint disc, capsule and ligaments (ZA) | full skull, hyoid, atlas, axis, nasal cartilages, sinuses, jaw joint (ZA); teeth (female donor) | third molars |
+| Muscles | all expression, mastication and scalp muscles, cricothyroid (ZA), extra-ocular, tongue, supra/infrahyoid, pharyngeal, laryngeal, neck | expression, mastication, extra-ocular, suprahyoid, pharyngeal, suboccipital and neck muscles, cricothyroid (ZA); laryngeal muscles (fitted BodyParts3D) | — |
+| Ear | external ear; labyrinth, ossicles, tympanic membrane, middle-ear muscles, VII/VIII (SPL); auditory tube (ZA) | external ear (fitted BodyParts3D); ossicles, cochlea, tympanic membrane, auditory tube (ZA) | — |
+| Nose, mouth, pharynx | septum, conchae, tongue, palate, salivary glands and ducts, pharynx regions, nasal mucosa (ZA), larynx | mouth, teeth, tongue, palate, salivary glands, larynx, tonsils (female donor); parotid duct, pharynx regions, nasal mucosa (ZA) | — |
+| Glands, lymph | pituitary (with adeno/neurohypophysis, ZA), pineal, thyroid, parathyroids (ZA), head lymph nodes (ZA) | pineal, thymus (female donor); parathyroids, head lymph nodes (ZA) | buccal and orbital fat pads (no open source) |
 
 ### Head study mode (UI)
 
@@ -261,7 +280,8 @@ The Body/Head switch (or `/anatomy?region=head`) adds a horizontal clipping plan
 below the vertex (head plus upper neck: hyoid, larynx, thyroid), hides meshes entirely
 below it, frames the camera on the head, scales the section plane to the head and
 offers head layer presets (external, see-through skin, muscles, skull, vessels, brain,
-nerves, eye and orbit, ear, mouth and teeth, glands). Picking ignores clipped geometry.
+meninges, nerves, eye and orbit, ear, mouth and teeth, glands). Picking ignores clipped
+geometry.
 
 ## Rendering
 

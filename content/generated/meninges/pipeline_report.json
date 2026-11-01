@@ -1,0 +1,33 @@
+{
+ "method": "Usage:\n    python pipeline/meninges/build.py --blender /path/to/blender",
+ "layers": {
+  "male": {
+   "pia": {
+    "triangles": 120000,
+    "median_distance_to_brain_mm": 1.41
+   },
+   "arachnoid": {
+    "triangles": 10448,
+    "median_distance_to_brain_mm": 2.75
+   },
+   "dura": {
+    "triangles": 10448,
+    "median_distance_to_brain_mm": 3.31
+   }
+  },
+  "female": {
+   "pia": {
+    "triangles": 120000,
+    "median_distance_to_brain_mm": 1.55
+   },
+   "arachnoid": {
+    "triangles": 8932,
+    "median_distance_to_brain_mm": 2.48
+   },
+   "dura": {
+    "triangles": 8932,
+    "median_distance_to_brain_mm": 3.13
+   }
+  }
+ }
+}

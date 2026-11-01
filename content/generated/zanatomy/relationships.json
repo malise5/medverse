@@ -1040,6 +1040,16 @@
   "object": "FMA:9595"
  },
  {
+  "subject": "FMA:57084",
+  "predicate": "part_of",
+  "object": "FMA:57083"
+ },
+ {
+  "subject": "FMA:57086",
+  "predicate": "part_of",
+  "object": "FMA:57083"
+ },
+ {
   "subject": "FMA:59825",
   "predicate": "part_of",
   "object": "FMA:59823"

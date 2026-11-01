@@ -253,6 +253,59 @@
  "FMA:46327": [
   "ZAF-3b14a13848dc"
  ],
+ "FMA:46577": [
+  "FIT-FJ2800"
+ ],
+ "FMA:46578": [
+  "FIT-FJ2782"
+ ],
+ "FMA:46580": [
+  "FIT-FJ2796"
+ ],
+ "FMA:46581": [
+  "FIT-FJ2778"
+ ],
+ "FMA:46582": [
+  "FIT-FJ2809"
+ ],
+ "FMA:46584": [
+  "FIT-FJ2798"
+ ],
+ "FMA:46585": [
+  "FIT-FJ2780"
+ ],
+ "FMA:46589": [
+  "FIT-FJ2802",
+  "FIT-FJ2803"
+ ],
+ "FMA:46590": [
+  "FIT-FJ2784",
+  "FIT-FJ2785"
+ ],
+ "FMA:46592": [
+  "FIT-FJ2806"
+ ],
+ "FMA:46593": [
+  "FIT-FJ2788"
+ ],
+ "FMA:46604": [
+  "FIT-FJ2791"
+ ],
+ "FMA:46605": [
+  "FIT-FJ2774"
+ ],
+ "FMA:46609": [
+  "ZAF-1f9826b82664",
+  "ZAF-c716dac7df46",
+  "ZAM-1f9826b82664",
+  "ZAM-c716dac7df46"
+ ],
+ "FMA:46610": [
+  "ZAF-0e4c7df4e92a",
+  "ZAF-c54d03442e34",
+  "ZAM-0e4c7df4e92a",
+  "ZAM-c54d03442e34"
+ ],
  "FMA:46631": [
   "ZAF-dcd320e9fc8b"
  ],
@@ -1487,6 +1540,9 @@
   "ZAF-8b10b875e610",
   "ZAF-98db24e196e7"
  ],
+ "FMA:52781": [
+  "FIT-FJ2811"
+ ],
  "FMA:52788": [
   "ZAF-90b763a95c28"
  ],
@@ -1713,6 +1769,18 @@
   "ZAF-0033ce15aa2f",
   "ZAM-0033ce15aa2f"
  ],
+ "FMA:54921": [
+  "FIT-FJ2771"
+ ],
+ "FMA:55230": [
+  "FIT-FJ2807"
+ ],
+ "FMA:55245": [
+  "FIT-FJ2805"
+ ],
+ "FMA:55246": [
+  "FIT-FJ2787"
+ ],
  "FMA:55558": [
   "ZAF-aae9bd88c76b",
   "ZAF-ef1bbe848335",
@@ -1770,6 +1838,38 @@
  ],
  "FMA:56428": [
   "ZAF-692797372fca"
+ ],
+ "FMA:57050": [
+  "ZAF-493db39376b2",
+  "ZAF-4b7720b4079e",
+  "ZAM-493db39376b2",
+  "ZAM-4b7720b4079e"
+ ],
+ "FMA:57059": [
+  "ZAF-9179ddf4eea3",
+  "ZAF-afd8787521b9",
+  "ZAM-9179ddf4eea3",
+  "ZAM-afd8787521b9"
+ ],
+ "FMA:57071": [
+  "ZAF-4b0d03b5ab5b",
+  "ZAF-4e4ddcd91a80",
+  "ZAM-4b0d03b5ab5b",
+  "ZAM-4e4ddcd91a80"
+ ],
+ "FMA:57083": [
+  "ZAF-3bacf1decb1a",
+  "ZAF-65a1239ed8bb",
+  "ZAM-3bacf1decb1a",
+  "ZAM-65a1239ed8bb"
+ ],
+ "FMA:57084": [
+  "ZAF-65a1239ed8bb",
+  "ZAM-65a1239ed8bb"
+ ],
+ "FMA:57086": [
+  "ZAF-3bacf1decb1a",
+  "ZAM-3bacf1decb1a"
  ],
  "FMA:5731": [
   "ZAF-6df9aeaeb0de",
@@ -1851,6 +1951,10 @@
  ],
  "FMA:59583": [
   "ZAF-a1e04390b779"
+ ],
+ "FMA:59684": [
+  "ZAF-6a2ea473ab42",
+  "ZAM-6a2ea473ab42"
  ],
  "FMA:59823": [
   "ZAF-02f57c471556",
@@ -1991,6 +2095,12 @@
  "FMA:72239": [
   "ZAM-11541eeabf46",
   "ZAM-e376e804acf6"
+ ],
+ "FMA:72309": [
+  "FIT-FJ2764"
+ ],
+ "FMA:72311": [
+  "FIT-FJ2763"
  ],
  "FMA:72482": [
   "ZAM-a463986ccc8d",

@@ -4345,6 +4345,148 @@
    ]
   },
   {
+   "za": "Mucosa of nasal cavity",
+   "concept": "FMA:59684",
+   "concept_name": "mucosa of nose",
+   "system": "respiratory",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Mucosa of nasal cavity",
+     "FMA:59684",
+     "mucosa of nose"
+    ]
+   ]
+  },
+  {
+   "za": "Articular disc of temporomandibular joint",
+   "concept": "FMA:57059",
+   "concept_name": "articular disk of temporomandibular joint",
+   "system": "skeletal",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Articular disc of temporomandibular joint.l",
+     "FMA:57059",
+     "articular disk of temporomandibular joint"
+    ],
+    [
+     "Articular disc of temporomandibular joint.r",
+     "FMA:57059",
+     "articular disk of temporomandibular joint"
+    ]
+   ]
+  },
+  {
+   "za": "Articular capsule of temporomandibular joint",
+   "concept": "FMA:57050",
+   "concept_name": "articular capsule of temporomandibular joint",
+   "system": "skeletal",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Articular capsule of temporomandibular joint.l",
+     "FMA:57050",
+     "articular capsule of temporomandibular joint"
+    ],
+    [
+     "Articular capsule of temporomandibular joint.r",
+     "FMA:57050",
+     "articular capsule of temporomandibular joint"
+    ]
+   ]
+  },
+  {
+   "za": "Lateral temporomandibular ligament",
+   "concept": "FMA:57071",
+   "concept_name": "lateral ligament of temporomandibular joint",
+   "system": "skeletal",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Lateral temporomandibular ligament.l",
+     "FMA:57071",
+     "lateral ligament of temporomandibular joint"
+    ],
+    [
+     "Lateral temporomandibular ligament.r",
+     "FMA:57071",
+     "lateral ligament of temporomandibular joint"
+    ]
+   ]
+  },
+  {
+   "za": "Stylomandibular ligament",
+   "concept": "FMA:57083",
+   "concept_name": "stylomandibular ligament",
+   "system": "skeletal",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Stylomandibular ligament.l",
+     "FMA:57086",
+     "left stylomandibular ligament"
+    ],
+    [
+     "Stylomandibular ligament.r",
+     "FMA:57084",
+     "right stylomandibular ligament"
+    ]
+   ]
+  },
+  {
+   "za": "Straight part of cricothyroid muscle",
+   "concept": "FMA:46609",
+   "concept_name": "straight part of cricothyroid",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Straight part of cricothyroid muscle.l",
+     "FMA:46609",
+     "straight part of cricothyroid"
+    ],
+    [
+     "Straight part of cricothyroid muscle.r",
+     "FMA:46609",
+     "straight part of cricothyroid"
+    ]
+   ]
+  },
+  {
+   "za": "Oblique part of cricothyroid muscle",
+   "concept": "FMA:46610",
+   "concept_name": "oblique part of cricothyroid",
+   "system": "muscular",
+   "group": null,
+   "male": true,
+   "female": true,
+   "objects": [
+    [
+     "Oblique part of cricothyroid muscle.l",
+     "FMA:46610",
+     "oblique part of cricothyroid"
+    ],
+    [
+     "Oblique part of cricothyroid muscle.r",
+     "FMA:46610",
+     "oblique part of cricothyroid"
+    ]
+   ]
+  },
+  {
    "za": "Occipital nodes",
    "concept": "FMA:71711",
    "concept_name": "set of occipital lymph nodes",
@@ -4617,5 +4759,27 @@
     ]
    ]
   }
+ ],
+ "female_fitted_bodyparts3d": [
+  "FMA:52781",
+  "FMA:46604",
+  "FMA:46605",
+  "FMA:46580",
+  "FMA:46581",
+  "FMA:46584",
+  "FMA:46585",
+  "FMA:46577",
+  "FMA:46578",
+  "FMA:46589",
+  "FMA:46590",
+  "FMA:46592",
+  "FMA:46593",
+  "FMA:46582",
+  "FMA:55245",
+  "FMA:55246",
+  "FMA:55230",
+  "FMA:54921",
+  "FMA:72309",
+  "FMA:72311"
  ]
 }

@@ -19,8 +19,14 @@ Visible Human Female head by a bounded affine transform: they are an approximati
 derived from a male model, NOT female anatomy.
 
 Share-alike: you may redistribute and adapt these files only under CC BY-SA 4.0 (or a
-compatible licence), with the attribution above. This licence applies to the files in
-this directory only; the other MEDVERSE 3D assets keep their own licences (CC BY 4.0
-and the 3D Slicer License Part B, see the neighbouring directories).
+compatible licence), with the attribution above. This licence applies to the male-* and
+female-* Z-Anatomy files in this directory; the other MEDVERSE 3D assets keep their own
+licences (CC BY 4.0 and the 3D Slicer License Part B, see the neighbouring directories).
+
+Exception: female-fitted-bp3d-*.glb are BodyParts3D meshes (external ear, laryngeal
+muscles and ligaments), (c) The Database Center for Life Science, licensed under CC
+Attribution 4.0 International (https://creativecommons.org/licenses/by/4.0/), fitted to
+the female head by MEDVERSE with the same transform. They are not Z-Anatomy files and
+remain CC BY 4.0.
 
 Educational use only; not for diagnosis or treatment.

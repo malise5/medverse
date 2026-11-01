@@ -35,7 +35,7 @@ import {
 } from "../store";
 import { BloodFlow, PathwayAnimator } from "./head-processes";
 import { MaterialCache, type MeshState } from "./materials";
-import { meshColor } from "./palette";
+import { MENINGES_OPACITY, meshColor } from "./palette";
 
 /** Scene bounds (metres) of the BodyParts3D model after pipeline normalisation. */
 const TARGET = new Vector3(0, 0.88, 0);
@@ -260,7 +260,10 @@ export function AnatomyScene({
         removedGhostDepth: removedGhost,
       });
       const belowRegion = floor !== null && r.maxY !== undefined && r.maxY < floor;
-      const vis = belowRegion ? "hidden" : spotlightVisibility(base, r.meshId, focus);
+      // Meninges enclose the brain: shown only in the meninges preset or when selected.
+      const meninx = r.group !== undefined && r.group in MENINGES_OPACITY;
+      const meningesHidden = meninx && s.headPreset !== "meninges" && !selectedMeshIds.has(r.meshId);
+      const vis = belowRegion || meningesHidden ? "hidden" : spotlightVisibility(base, r.meshId, focus);
       const contextOnly = vis === "ghost" && base === "visible";
       const { mesh } = r;
       mesh.visible = vis !== "hidden";
@@ -277,7 +280,7 @@ export function AnatomyScene({
       else if (multiMeshIds.has(r.meshId)) state = "multi";
       else if (s.highlightedMeshes.has(r.meshId)) state = "highlighted";
       else if (hoveredMesh === r.meshId) state = "hovered";
-      const opacity = s.systemOpacity[r.systemId] ?? 1;
+      const opacity = (s.systemOpacity[r.systemId] ?? 1) * (meninx ? MENINGES_OPACITY[r.group!] : 1);
       const color = partColor.get(r.meshId) ?? meshColor(r.systemId, r.group);
       mesh.material = materials.get(color, state, opacity, r.systemId);
       r.baseMaterial = mesh.material;
@@ -308,6 +311,7 @@ export function AnatomyScene({
         state.ghostRemovedLayer !== prev.ghostRemovedLayer ||
         state.clip !== prev.clip ||
         state.region !== prev.region ||
+        state.headPreset !== prev.headPreset ||
         state.xraySelection !== prev.xraySelection ||
         state.spotlight !== prev.spotlight ||
         state.systemFocus !== prev.systemFocus ||

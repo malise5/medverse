@@ -22,6 +22,17 @@ const GROUP_COLORS: Record<string, string> = {
   artery: "#c8343a",
   vein: "#3f66c9",
   heart: "#a8343b",
+  // schematic meninges (pipeline/meninges), translucent so the layers read as nested
+  dura: "#c9b49b",
+  arachnoid: "#d9d4ea",
+  pia: "#e49a8f",
+};
+
+/** Opacity of each meningeal layer; they are shown only on request (head preset). */
+export const MENINGES_OPACITY: Record<string, number> = {
+  dura: 0.35,
+  arachnoid: 0.3,
+  pia: 0.55,
 };
 
 export function meshColor(systemId: string, group?: string): string {
