@@ -1,0 +1,696 @@
+{
+  "_comment": "Kiswahili quiz questions (content/learning/quizzes.json): stem, options in the same order as English (answers are graded by option number), explanation. DRAFT: pending review by Swahili-speaking health professionals.",
+  "status": "draft",
+  "items": {
+    "skel-01": {
+      "stem": "Ipi kati ya hizi SI kazi ya mifupa?",
+      "options": [
+        "Kuhifadhi kalsiamu",
+        "Kutengeneza seli za damu",
+        "Kusukuma damu mwilini kote",
+        "Kulinda ubongo"
+      ],
+      "explanation": "Mifupa hutegemeza, hulinda, huhifadhi madini na ina uboho mwekundu unaotengeneza seli za damu. Kusukuma damu ni kazi ya moyo."
+    },
+    "skel-02": {
+      "stem": "Ni mfupa upi mrefu zaidi katika mwili wa binadamu?",
+      "options": [
+        "Humerasi",
+        "Fupa la paja (femur)",
+        "Tibia",
+        "Uti wa mgongo"
+      ],
+      "explanation": "Fupa la paja (femur) ndio mfupa mrefu na wenye nguvu zaidi. Uti wa mgongo ni mfululizo wa mifupa mingi, si mfupa mmoja."
+    },
+    "skel-03": {
+      "stem": "Ni mifupa ipi ni sehemu ya kiunzi cha mhimili?",
+      "options": [
+        "Fuvu, uti wa mgongo, mbavu na fupa la kidari",
+        "Klavikali, skapula na mifupa ya nyonga",
+        "Humerasi, radiasi na ulna",
+        "Fupa la paja (femur), tibia na fibula"
+      ],
+      "explanation": "Kiunzi cha mhimili huunda mhimili wa kati: fuvu, uti wa mgongo, mbavu na fupa la kidari. Mishipi na viungo vya mikono na miguu huunda kiunzi cha viambatisho."
+    },
+    "skel-04": {
+      "stem": "Ni seli zipi humeng'enya (huvunja) matriksi ya mfupa?",
+      "options": [
+        "Osteoblasti",
+        "Osteositi",
+        "Osteoklasti",
+        "Kondrositi"
+      ],
+      "explanation": "Osteoklasti huvunja mfupa; osteoblasti huujenga; osteositi ni seli za mfupa zilizokomaa ndani ya matriksi; kondrositi ni seli za gegedu."
+    },
+    "skel-05": {
+      "stem": "Kuvunjika kwa shingo ya fupa la paja kulikohamisha vipande kuna uwezekano mkubwa zaidi wa kuhatarisha nini kati ya vifuatavyo?",
+      "options": [
+        "Usambazaji wa damu kwa kichwa cha fupa la paja",
+        "Neva ya siatiki kwenye goti",
+        "Ukuaji wa tibia",
+        "Ateri ya fupa la paja katika mfereji wa adakta"
+      ],
+      "explanation": "Mishipa ya damu kwenda kichwa cha fupa la paja hupita kando ya shingo ya fupa la paja, hivyo kuvunjika kwa shingo kulikohamisha vipande kunaweza kuikata na kusababisha kufa kwa kichwa cha fupa la paja kwa kukosa damu (avascular necrosis)."
+    },
+    "skel-id-01": {
+      "stem": "Tafuta fupa la kidari (mfupa wa kifua) kwenye modeli ya 3D.",
+      "explanation": "Fupa la kidari iko katikati ya ukuta wa mbele wa kifua; mbavu na klavikali hushikamana nayo."
+    },
+    "skel-id-02": {
+      "stem": "Chagua mfupa wa mshipi wa nyonga.",
+      "explanation": "Mshipi wa nyonga huundwa na mifupa miwili ya nyonga, inayoungana na sakramu kwa nyuma kwenye viungo vya sakro-iliaki."
+    },
+    "musc-01": {
+      "stem": "Ni aina gani ya misuli inayopatikana kwenye moyo pekee?",
+      "options": [
+        "Misuli ya kiunzi",
+        "Misuli laini",
+        "Misuli ya moyo",
+        "Misuli ya hiari"
+      ],
+      "explanation": "Misuli ya moyo hupatikana kwenye ukuta wa moyo pekee. Ina michirizi kama misuli ya kiunzi lakini hufanya kazi bila hiari."
+    },
+    "musc-02": {
+      "stem": "Kwa nini misuli ya kiunzi kwa kawaida hufanya kazi kwa jozi?",
+      "options": [
+        "Kwa sababu misuli inaweza kuvuta tu, haiwezi kusukuma",
+        "Kwa sababu kila msuli unahitaji mwenzake ili upokee damu",
+        "Kwa sababu msuli mmoja huwa umelala kila wakati",
+        "Kwa sababu misuli husukuma mifupa iachane"
+      ],
+      "explanation": "Msuli unaweza tu kusinyaa na kuvuta. Msuli unaopingana nao (antagonisti) unahitajika kurudisha kiungo mahali pake."
+    },
+    "musc-03": {
+      "stem": "Ni ioni ipi, inayotolewa na retikulamu ya sakoplazimu, huanzisha kusinyaa kwa misuli ya kiunzi?",
+      "options": [
+        "Sodiamu",
+        "Potasiamu",
+        "Kalsiamu",
+        "Kloridi"
+      ],
+      "explanation": "Kalsiamu hujifunga kwenye troponini, na kuisogeza tropomiosini kutoka sehemu za kujifungia kwenye aktini ili vichwa vya miosini viweze kushikamana na kuzunguka."
+    },
+    "musc-04": {
+      "stem": "Sehemu ya msuli ya kushikamana inayosogea zaidi, ambayo husogea msuli unaposinyaa, huitwa:",
+      "options": [
+        "Asili (origin)",
+        "Kishikizo (insertion)",
+        "Tumbo la msuli",
+        "Fasia"
+      ],
+      "explanation": "Kishikizo kwa kawaida husogea kuelekea asili, ambayo ndiyo sehemu ya kushikamana iliyotulia zaidi."
+    },
+    "musc-05": {
+      "stem": "Mgonjwa ana udhaifu pamoja na kunyauka kwa misuli, mvutano uliopungua na kukosekana kwa reflexi katika kiungo kimoja. Kidonda kina uwezekano mkubwa wa kuwa wapi?",
+      "options": [
+        "Gamba la mwendo (motor cortex)",
+        "Kapsuli ya ndani",
+        "Neuroni ya chini ya mwendo (seli ya pembe ya mbele au neva ya pembeni)",
+        "Serebelamu"
+      ],
+      "explanation": "Kunyauka, mvutano mdogo na kukosekana kwa reflexi ni dalili za neuroni ya chini ya mwendo. Vidonda vya neuroni ya juu ya mwendo huleta mvutano ulioongezeka na reflexi kali."
+    },
+    "musc-id-01": {
+      "stem": "Tafuta kiwambo (diaphragm), msuli mkuu wa kupumua.",
+      "explanation": "Kiwambo ni kuba la msuli na kano linalotenganisha tundu la kifua na tundu la tumbo."
+    },
+    "musc-id-02": {
+      "stem": "Chagua msuli mkubwa wa kifua (pectoralis major).",
+      "explanation": "Msuli mkubwa wa kifua (pectoralis major) ni msuli mkubwa wenye umbo la feni kwenye ukuta wa mbele wa kifua; husogeza mkono kuelekea mwili na kuuzungusha ndani."
+    },
+    "cv-01": {
+      "stem": "Ni mishipa ipi ya damu hubeba damu KUTOKA kwenye moyo?",
+      "options": [
+        "Vena",
+        "Ateri",
+        "Kapilari",
+        "Mishipa ya limfu"
+      ],
+      "explanation": "Ateri hubeba damu kutoka kwenye moyo; vena huirudisha. Kapilari huunganisha hizo mbili."
+    },
+    "cv-02": {
+      "stem": "Ni upande upi wa moyo husukuma damu kwenda kwenye mapafu?",
+      "options": [
+        "Upande wa kushoto",
+        "Upande wa kulia",
+        "Pande zote mbili sawa, kila moja kwa pafu lake",
+        "Hakuna: damu hufika kwenye mapafu kwa mvuto"
+      ],
+      "explanation": "Ventrikali ya kulia husukuma damu isiyo na oksijeni kwenye shina la mapafu na kuendelea hadi kwenye mapafu."
+    },
+    "cv-03": {
+      "stem": "Damu inayotoka atiria ya kushoto hupita kwenye valvu ipi?",
+      "options": [
+        "Valvu ya trikuspidi",
+        "Valvu ya mapafu",
+        "Valvu ya mitrali",
+        "Valvu ya aota"
+      ],
+      "explanation": "Valvu ya mitrali (valvu ya atrioventrikula ya kushoto) iko kati ya atiria ya kushoto na ventrikali ya kushoto."
+    },
+    "cv-04": {
+      "stem": "Kiasi cha damu kwa kila mpigo wa mtu ni mL 70 na mapigo ya moyo ni 70 kwa dakika. Kiasi cha damu inayosukumwa na moyo kwa dakika (cardiac output) ni kipi?",
+      "options": [
+        "L 1.0 kwa dakika",
+        "L 4.9 kwa dakika",
+        "L 7.0 kwa dakika",
+        "mL 140 kwa dakika"
+      ],
+      "explanation": "Kiasi kwa dakika = kiasi kwa mpigo × mapigo ya moyo = mL 70 × 70 kwa dakika = mL 4,900 kwa dakika, takriban L 4.9 kwa dakika."
+    },
+    "cv-05": {
+      "stem": "Shinikizo la damu la mmHg 120/80 ni takriban sawa na:",
+      "options": [
+        "kPa 12/8",
+        "kPa 16/10.7",
+        "kPa 900/600",
+        "kPa 1.2/0.8"
+      ],
+      "explanation": "kPa 1 ≈ mmHg 7.5, hivyo mmHg 120 ≈ kPa 16.0 na mmHg 80 ≈ kPa 10.7."
+    },
+    "cv-06": {
+      "stem": "Kwa nini mapigo ya moyo ya haraka hupunguza mtiririko wa damu kwenda kwenye misuli ya moyo?",
+      "options": [
+        "Ateri za koronari hujaa hasa wakati wa diastoli, ambayo hufupika zaidi mapigo yanapokuwa ya haraka",
+        "Valvu ya aota hufunga milango ya koronari wakati wa diastoli",
+        "Vena za koronari hubanwa wakati wa diastoli",
+        "Mapigo ya moyo hayana athari kwa mtiririko wa koronari"
+      ],
+      "explanation": "Mtiririko wa koronari ya kushoto hutokea zaidi wakati wa diastoli, misuli ya moyo inapotulia. Diastoli hufupika zaidi kuliko sistoli kadiri mapigo ya moyo yanavyoongezeka."
+    },
+    "cv-id-01": {
+      "stem": "Tafuta moyo kwenye modeli ya 3D.",
+      "explanation": "Moyo uko katika mediastinamu ya kati, nyuma ya fupa la kidari na kidogo upande wa kushoto."
+    },
+    "cv-id-02": {
+      "stem": "Chagua mshipa unaorudisha damu kutoka sehemu ya chini ya mwili kwenda kwenye moyo.",
+      "explanation": "Vena kava ya chini hukusanya damu kutoka tumboni, nyongani na miguuni na kuipeleka atiria ya kulia."
+    },
+    "nerv-01": {
+      "stem": "Ni viungo vipi viwili vinavyounda mfumo mkuu wa neva?",
+      "options": [
+        "Ubongo na kamba ya uti wa mgongo",
+        "Ubongo na moyo",
+        "Kamba ya uti wa mgongo na neva",
+        "Macho na masikio"
+      ],
+      "explanation": "Mfumo mkuu wa neva ni ubongo na kamba ya uti wa mgongo. Neva zilizo nje yake huunda mfumo wa neva wa pembeni."
+    },
+    "nerv-02": {
+      "stem": "Ni sehemu ipi ya ubongo huratibu hasa usawa na mwendo laini?",
+      "options": [
+        "Serebramu",
+        "Serebelamu",
+        "Tezi ya pituitari",
+        "Kamba ya uti wa mgongo"
+      ],
+      "explanation": "Serebelamu huratibu mwendo, mkao na usawa."
+    },
+    "nerv-03": {
+      "stem": "Kuna jozi ngapi za neva za fuvu?",
+      "options": [
+        "8",
+        "12",
+        "31",
+        "33"
+      ],
+      "explanation": "Kuna jozi 12 za neva za fuvu na jozi 31 za neva za uti wa mgongo."
+    },
+    "nerv-04": {
+      "stem": "Ni kitengo kipi cha mfumo wa neva unaojiendesha hutawala wakati wa 'kupumzika na kumeng'enya'?",
+      "options": [
+        "Simpathetiki",
+        "Parasimpathetiki",
+        "Somatiki",
+        "Enteriki pekee"
+      ],
+      "explanation": "Kitengo cha parasimpathetiki hupunguza kasi ya moyo na kuhimiza umeng'enyaji; kitengo cha simpathetiki hujiandaa kwa 'kupigana au kukimbia'."
+    },
+    "nerv-05": {
+      "stem": "Kwa nini kutoboa kiuno (lumbar puncture) kwa watu wazima kwa kawaida hufanywa katika usawa wa L3–L4 au L4–L5?",
+      "options": [
+        "Kamba ya uti wa mgongo kwa kawaida huishia takriban L1–L2, hivyo sindano huingia chini yake",
+        "Hakuna majimaji ya ubongo na uti wa mgongo juu ya L3",
+        "Vertebra hazipo katika usawa huu",
+        "Dura huishia L2"
+      ],
+      "explanation": "Kwa watu wazima kamba ya uti wa mgongo kwa kawaida huishia takriban L1–L2; chini ya hapo nafasi ya subaraknoidi ina mizizi ya neva (kauda ekwina) na majimaji ya ubongo na uti wa mgongo, hivyo kamba huepukwa."
+    },
+    "nerv-id-01": {
+      "stem": "Tafuta serebelamu.",
+      "explanation": "Serebelamu iko nyuma ya kichwa, chini ya ndewe za oksipitali na nyuma ya shina la ubongo."
+    },
+    "nerv-id-02": {
+      "stem": "Chagua sehemu ya mfumo mkuu wa neva inayoendelea kutoka shina la ubongo kushuka ndani ya mfereji wa vertebra.",
+      "explanation": "Kamba ya uti wa mgongo huendelea kutoka medula oblongata kwenye forameni magnamu."
+    },
+    "resp-01": {
+      "stem": "Ni wapi kwenye mapafu oksijeni huingia kwenye damu?",
+      "options": [
+        "Trakea",
+        "Bronkasi",
+        "Alveoli",
+        "Pleura"
+      ],
+      "explanation": "Ubadilishanaji wa gesi hutokea kwenye alveoli, vifuko vidogo vya hewa vilivyozungukwa na kapilari."
+    },
+    "resp-02": {
+      "stem": "Nini hutokea kwa kiwambo unapovuta pumzi?",
+      "options": [
+        "Hutulia na kupanda juu",
+        "Husinyaa na kubapa",
+        "Hakisogei",
+        "Husukuma hewa nje"
+      ],
+      "explanation": "Kiwambo husinyaa na kubapa, na kupanua kifua ili hewa iingie."
+    },
+    "resp-03": {
+      "stem": "Pafu la kushoto kwa kawaida lina ndewe ngapi?",
+      "options": [
+        "Moja",
+        "Mbili",
+        "Tatu",
+        "Nne"
+      ],
+      "explanation": "Pafu la kushoto lina ndewe ya juu na ya chini; pafu la kulia lina ndewe tatu."
+    },
+    "resp-04": {
+      "stem": "Kutoa pumzi kwa utulivu wakati wa kupumzika hutokana hasa na:",
+      "options": [
+        "Kusinyaa kwa misuli ya tumbo",
+        "Kurudi nyuma kwa unyumbufu wa mapafu na ukuta wa kifua",
+        "Kusinyaa kwa misuli ya nje ya kati ya mbavu",
+        "Kusinyaa kwa kiwambo"
+      ],
+      "explanation": "Kutoa pumzi kwa utulivu hakuhitaji nguvu: mapafu na ukuta wa kifua uliovutika hurudi nyuma misuli ya kuvuta pumzi inapotulia."
+    },
+    "resp-05": {
+      "stem": "Karanga iliyovutwa kwa pumzi ina uwezekano mkubwa wa kukwama kwenye njia ipi ya hewa?",
+      "options": [
+        "Bronkasi kuu ya kushoto",
+        "Bronkasi kuu ya kulia",
+        "Umio",
+        "Bronkasi ya ndewe ya juu ya kushoto"
+      ],
+      "explanation": "Bronkasi kuu ya kulia ni pana zaidi, fupi zaidi na iliyosimama wima zaidi kuliko ya kushoto."
+    },
+    "resp-id-01": {
+      "stem": "Tafuta trakea (koromeo la hewa).",
+      "explanation": "Trakea huanzia zoloto shingoni hadi inapogawanyika kuwa bronkasi kuu kifuani."
+    },
+    "resp-id-02": {
+      "stem": "Chagua pafu lenye ndewe tatu.",
+      "explanation": "Pafu la kulia lina ndewe ya juu, ya kati na ya chini."
+    },
+    "dig-01": {
+      "stem": "Virutubisho vingi hufyonzwa kuingia kwenye damu wapi?",
+      "options": [
+        "Tumbo",
+        "Utumbo mwembamba",
+        "Utumbo mpana",
+        "Umio"
+      ],
+      "explanation": "Utumbo mwembamba una eneo kubwa sana la uso (mikunjo, vilasi, mikrovilasi) na hufyonza virutubisho vingi."
+    },
+    "dig-02": {
+      "stem": "Kazi kuu ya utumbo mpana ni ipi?",
+      "options": [
+        "Kumeng'enya protini",
+        "Kufyonza maji na kutengeneza kinyesi",
+        "Kutengeneza nyongo",
+        "Kuzalisha insulini"
+      ],
+      "explanation": "Utumbo mpana hufyonza maji na elektroliti na kutengeneza kinyesi."
+    },
+    "dig-03": {
+      "stem": "Ni kiungo kipi huzalisha nyongo?",
+      "options": [
+        "Kibofu cha nyongo",
+        "Kongosho",
+        "Ini",
+        "Duodenamu"
+      ],
+      "explanation": "Ini huzalisha nyongo; kibofu cha nyongo huihifadhi na kuikoleza."
+    },
+    "dig-04": {
+      "stem": "Mpangilio sahihi wa sehemu za utumbo mwembamba ni upi?",
+      "options": [
+        "Jejunamu, ileamu, duodenamu",
+        "Duodenamu, jejunamu, ileamu",
+        "Ileamu, duodenamu, jejunamu",
+        "Duodenamu, ileamu, jejunamu"
+      ],
+      "explanation": "Chakula hupita kutoka tumboni kwenda duodenamu, kisha jejunamu, kisha ileamu."
+    },
+    "dig-05": {
+      "stem": "Apendisaitisi ya mwanzo mara nyingi husababisha maumivu kuzunguka kitovu. Kwa nini?",
+      "options": [
+        "Apendiksi hutokana na utumbo wa kati, na maumivu ya viungo vya utumbo wa kati huhisiwa eneo la kuzunguka kitovu",
+        "Apendiksi iko nyuma ya kitovu",
+        "Vena ya kitovu hukusanya damu ya apendiksi",
+        "Maumivu hutoka kwenye misuli ya ukuta wa tumbo"
+      ],
+      "explanation": "Maumivu ya viungo vya ndani vinavyotokana na utumbo wa kati huhisiwa eneo la kuzunguka kitovu; huhamia fosa ya iliaki ya kulia peritoneamu ya ukuta inapovimba."
+    },
+    "dig-06": {
+      "stem": "Damu kutoka matumboni hufika kwenye kiungo kipi kabla ya mzunguko wa jumla?",
+      "options": [
+        "Figo",
+        "Wengu",
+        "Ini",
+        "Mapafu"
+      ],
+      "explanation": "Vena ya portali ya ini hubeba damu kutoka matumboni kwenda kwenye ini kwanza, jambo linaloeleza umetaboli wa kupita mara ya kwanza (first-pass) wa dawa za kumeza."
+    },
+    "dig-id-01": {
+      "stem": "Tafuta tumbo.",
+      "explanation": "Tumbo liko hasa sehemu ya juu kushoto ya fumbatio, chini ya kiwambo."
+    },
+    "dig-id-02": {
+      "stem": "Chagua kiungo kinachohifadhi na kukoleza nyongo.",
+      "explanation": "Kibofu cha nyongo kiko kwenye uso wa chini (wa viungo) wa ini."
+    },
+    "uri-01": {
+      "stem": "Ni mrija upi hubeba mkojo kutoka kila figo kwenda kibofu?",
+      "options": [
+        "Urethra",
+        "Ureta",
+        "Ateri ya figo",
+        "Mrija wa mbegu (ductus deferens)"
+      ],
+      "explanation": "Kila ureta hubeba mkojo kutoka figo kwenda kibofu cha mkojo. Urethra hutoa mkojo nje ya mwili."
+    },
+    "uri-02": {
+      "stem": "Damu huchujwa kwa mara ya kwanza wapi kwenye nefroni?",
+      "options": [
+        "Mrija mkusanyaji",
+        "Kitanzi cha nefroni (kitanzi cha Henle)",
+        "Glomerulasi",
+        "Mrija uliojikunja wa mbali"
+      ],
+      "explanation": "Uchujaji hutokea kwenye glomerulasi kuingia kapsuli ya glomerulasi (ya Bowman)."
+    },
+    "uri-03": {
+      "stem": "Ni homoni ipi inayozalishwa na figo huchochea utengenezaji wa seli nyekundu za damu?",
+      "options": [
+        "Renini",
+        "Erithropoietini",
+        "Aldosteroni",
+        "Insulini"
+      ],
+      "explanation": "Erithropoietini kutoka kwenye figo huchochea uboho kutengeneza seli nyekundu za damu."
+    },
+    "uri-04": {
+      "stem": "Kasi ya kawaida ya uchujaji wa glomerulasi ya takriban mL 125 kwa dakika ni sawa na kiasi gani cha kiowevu kilichochujwa kwa siku?",
+      "options": [
+        "L 1.8",
+        "L 18",
+        "L 180",
+        "L 1,800"
+      ],
+      "explanation": "mL 125 kwa dakika × dakika 1,440 kwa siku ≈ mL 180,000 ≈ L 180 kwa siku; karibu chote hufyonzwa tena."
+    },
+    "uri-05": {
+      "stem": "Ipi SI sehemu ya kawaida ambapo jiwe la ureta hukwama?",
+      "options": [
+        "Kiungo cha pelvisi na ureta",
+        "Pale ureta inapovuka ukingo wa pelvisi",
+        "Kiungo cha kibofu na ureta",
+        "Gamba la figo"
+      ],
+      "explanation": "Mawe hukwama kwenye sehemu tatu nyembamba za ureta; gamba la figo si sehemu ya ureta."
+    },
+    "uri-id-01": {
+      "stem": "Tafuta figo.",
+      "explanation": "Figo ziko kwenye ukuta wa nyuma wa fumbatio pande zote mbili za uti wa mgongo."
+    },
+    "uri-id-02": {
+      "stem": "Chagua kiungo kinachohifadhi mkojo.",
+      "explanation": "Kibofu cha mkojo kiko kwenye pelvisi nyuma ya simfisisi ya pubisi."
+    },
+    "rep-01": {
+      "stem": "Ni viungo vipi huzalisha mayai (oositi)?",
+      "options": [
+        "Korodani",
+        "Ovari",
+        "Mfuko wa uzazi",
+        "Figo"
+      ],
+      "explanation": "Ovari huzalisha oositi na homoni za estrojeni na projesteroni."
+    },
+    "rep-02": {
+      "stem": "Utungisho kwa kawaida hutokea wapi?",
+      "options": [
+        "Mfuko wa uzazi",
+        "Mrija wa uzazi (fallopian)",
+        "Ovari",
+        "Uke"
+      ],
+      "explanation": "Utungisho kwa kawaida hutokea kwenye ampula ya mrija wa uzazi; kiinitete kisha hujipandikiza kwenye mfuko wa uzazi."
+    },
+    "rep-03": {
+      "stem": "Ni seli zipi za korodani huzalisha testosteroni?",
+      "options": [
+        "Seli za Sertoli",
+        "Seli za Leydig (seli za kati)",
+        "Spermatogonia",
+        "Seli za granulosa"
+      ],
+      "explanation": "Seli za Leydig, zilizo kati ya mirija ya seminiferasi, huzalisha testosteroni."
+    },
+    "rep-04": {
+      "stem": "Kwa nini kuongezeka kusiko kwa saratani kwa tezi dume (BPH) husababisha ugumu wa kukojoa?",
+      "options": [
+        "Tezi dume huzunguka sehemu ya kwanza ya urethra na inaweza kuibana",
+        "Tezi dume huzalisha mkojo",
+        "Tezi dume huziba ureta",
+        "Tezi dume hudhoofisha ukuta wa kibofu moja kwa moja"
+      ],
+      "explanation": "Urethra ya tezi dume hupita ndani ya tezi, hivyo kuongezeka kwake kunaweza kuzuia mtiririko wa mkojo."
+    },
+    "rep-id-01": {
+      "stem": "Tafuta tezi dume.",
+      "explanation": "Tezi dume iko chini ya kibofu, ikizunguka sehemu ya kwanza ya urethra ya mwanaume."
+    },
+    "rep-id-02": {
+      "stem": "Tafuta mfuko wa uzazi katika mwili wa mwanamke.",
+      "explanation": "Mfuko wa uzazi uko kwenye pelvisi kati ya kibofu cha mkojo (mbele) na rektamu (nyuma)."
+    },
+    "rep-id-03": {
+      "stem": "Chagua ovari.",
+      "explanation": "Kila ovari iko kwenye ukuta wa pembeni wa pelvisi, karibu na mwisho wenye vidole wa mrija wa uzazi."
+    },
+    "rep-id-04": {
+      "stem": "Chagua titi (tezi ya maziwa).",
+      "explanation": "Matiti yako kwenye ukuta wa mbele wa kifua juu ya msuli mkubwa wa kifua; katika TA2 ni sehemu ya ngozi na viambatisho vyake."
+    },
+    "endo-01": {
+      "stem": "Homoni husafiri vipi kufikia seli zinazolengwa?",
+      "options": [
+        "Kupitia neva",
+        "Ndani ya damu",
+        "Kupitia hewa",
+        "Kupitia mirija hadi kwenye ngozi"
+      ],
+      "explanation": "Tezi za endokrini hutoa homoni ndani ya damu, ambayo huzibeba mwilini kote."
+    },
+    "endo-02": {
+      "stem": "Ni homoni ipi hushusha sukari (glukosi) kwenye damu?",
+      "options": [
+        "Glukagoni",
+        "Adrenalini",
+        "Insulini",
+        "Kotisoli"
+      ],
+      "explanation": "Insulini kutoka visiwa vya kongosho hushusha glukosi kwenye damu; glukagoni, adrenalini na kotisoli huipandisha."
+    },
+    "endo-03": {
+      "stem": "Ni muundo upi hudhibiti moja kwa moja pituitari ya mbele?",
+      "options": [
+        "Tezi ya thairoidi",
+        "Haipothalamasi",
+        "Serebelamu",
+        "Tezi ya paineal"
+      ],
+      "explanation": "Haipothalamasi hutoa homoni kwenye mishipa ya portali ya hipofisisi inayodhibiti utoaji wa homoni wa pituitari ya mbele."
+    },
+    "endo-04": {
+      "stem": "Glukosi ya damu kabla ya kula ya mmol/L 5.0 ni takriban:",
+      "options": [
+        "mg/dL 50",
+        "mg/dL 90",
+        "mg/dL 180",
+        "mg/dL 500"
+      ],
+      "explanation": "mmol/L 1 ≈ mg/dL 18, hivyo mmol/L 5.0 ≈ mg/dL 90, ndani ya kiwango cha kawaida kabla ya kula."
+    },
+    "endo-05": {
+      "stem": "Uvimbe wa pituitari unaokua kuelekea juu kwa kawaida husababisha kasoro ipi ya uwanja wa kuona?",
+      "options": [
+        "Kupoteza nusu ya nje ya uwanja wa kuona kwa macho yote mawili (bitemporal hemianopia)",
+        "Upofu kamili wa jicho moja",
+        "Kupoteza nusu moja ya upande uleule kwa macho yote (homonymous hemianopia)",
+        "Doa la kutoona katikati kwa macho yote mawili"
+      ],
+      "explanation": "Huibana kiasma ya neva za macho, ambapo nyuzi za retina za upande wa pua (zinazohudumia nyanja za nje) huvukana."
+    },
+    "endo-id-01": {
+      "stem": "Tafuta tezi ya adrenali (suprarenali).",
+      "explanation": "Tezi za adrenali zimekaa juu ya ncha za juu za figo."
+    },
+    "endo-id-02": {
+      "stem": "Chagua tezi ya pituitari.",
+      "explanation": "Tezi ya pituitari inaning'inia chini ya haipothalamasi ndani ya fosa ya hipofisisi ya mfupa wa sfenoidi."
+    },
+    "lymph-01": {
+      "stem": "Ni ipi kazi moja kuu ya tezi za limfu?",
+      "options": [
+        "Kusukuma damu",
+        "Kuchuja limfu na kupambana na maambukizi",
+        "Kutengeneza nyongo",
+        "Kuzalisha mkojo"
+      ],
+      "explanation": "Tezi za limfu huchuja limfu; limfositi zake huitikia vijidudu na antijeni nyingine."
+    },
+    "lymph-02": {
+      "stem": "Limfositi T hukomaa katika kiungo kipi?",
+      "options": [
+        "Wengu",
+        "Thymus",
+        "Ini",
+        "Tonsili"
+      ],
+      "explanation": "Seli T hukomaa kwenye thymus ('T' kwa thymus); seli B hukomaa kwenye uboho."
+    },
+    "lymph-03": {
+      "stem": "Mfereji wa kifua (thoracic duct) humwaga limfu kwenye mfumo wa vena kwenye:",
+      "options": [
+        "Atiria ya kulia",
+        "Kiungo cha vena ya subklavia ya kushoto na vena ya jugula ya ndani ya kushoto",
+        "Vena kava ya chini usawa wa figo",
+        "Vena ya portali ya ini"
+      ],
+      "explanation": "Mfereji wa kifua humwaga kwenye pembe ya vena ya kushoto, ambapo vena ya subklavia ya kushoto na vena ya jugula ya ndani hukutana."
+    },
+    "lymph-04": {
+      "stem": "Kwa nini watu walioondolewa wengu hushauriwa kupata chanjo?",
+      "options": [
+        "Wako katika hatari kubwa zaidi ya maambukizi makali ya bakteria wenye kapsuli",
+        "Hawawezi kuzalisha seli nyekundu za damu",
+        "Hupoteza tezi zao zote za limfu",
+        "Chanjo huchukua nafasi ya wengu katika kuchuja nyongo"
+      ],
+      "explanation": "Wengu ni muhimu katika kuondoa bakteria wenye kapsuli kama nimokokasi; chanjo hupunguza hatari."
+    },
+    "lymph-id-01": {
+      "stem": "Tafuta thymus.",
+      "explanation": "Thymus iko kwenye mediastinamu ya mbele, nyuma ya fupa la kidari."
+    },
+    "lymph-id-02": {
+      "stem": "Tafuta wengu.",
+      "explanation": "Wengu uko sehemu ya juu kushoto ya fumbatio chini ya mbavu ya 9 hadi 11, nyuma ya tumbo."
+    },
+    "integ-01": {
+      "stem": "Kutoa jasho husaidiaje mwili?",
+      "options": [
+        "Hupasha ngozi joto",
+        "Hupoza mwili jasho linapovukiza",
+        "Hutengeneza vitamini D",
+        "Huhifadhi mafuta"
+      ],
+      "explanation": "Kuvukiza kwa jasho huondoa joto kutoka kwenye uso wa ngozi."
+    },
+    "integ-02": {
+      "stem": "Ngozi hutengeneza vitamini ipi inapopigwa na mwanga wa jua?",
+      "options": [
+        "Vitamini A",
+        "Vitamini C",
+        "Vitamini D",
+        "Vitamini K"
+      ],
+      "explanation": "Mwanga wa urujuanimno B (UVB) hubadilisha kitokanacho na kolesteroli kwenye ngozi kuwa vitamini D3."
+    },
+    "integ-03": {
+      "stem": "Ni tabaka lipi la ngozi lina mishipa ya damu, neva na vinyweleo vya nywele?",
+      "options": [
+        "Epidermisi",
+        "Dermisi",
+        "Tabaka la pembe (stratum corneum)",
+        "Lamina ya msingi"
+      ],
+      "explanation": "Epidermisi haina mishipa ya damu; mishipa, neva na vinyweleo viko kwenye dermisi."
+    },
+    "integ-04": {
+      "stem": "Kwa nini kuungua kwa unene wote wa ngozi kunaweza kusiwe na maumivu?",
+      "options": [
+        "Ncha za neva kwenye dermisi zimeharibiwa",
+        "Maumivu daima huchelewa kwa saa 24",
+        "Epidermisi iko salama",
+        "Mafuta pekee ndiyo yameathirika"
+      ],
+      "explanation": "Kuungua kwa unene wote huharibu dermisi, pamoja na ncha zake za neva za hisia."
+    },
+    "integ-id-01": {
+      "stem": "Chagua ngozi.",
+      "explanation": "Ngozi hufunika uso wote wa nje wa mwili."
+    },
+    "sense-01": {
+      "stem": "Ni sehemu ipi ya jicho huhisi mwanga?",
+      "options": [
+        "Konea",
+        "Lenzi",
+        "Retina",
+        "Iris"
+      ],
+      "explanation": "Vipokezi vya mwanga (rodi na koni) kwenye retina hubadilisha mwanga kuwa ishara za neva."
+    },
+    "sense-02": {
+      "stem": "Mbali na kusikia, sikio la ndani pia linahusika na:",
+      "options": [
+        "Kunusa",
+        "Usawa",
+        "Kuonja",
+        "Kuona"
+      ],
+      "explanation": "Vestibuli na mifereji ya nusuduara ya sikio la ndani hutambua mkao na mwendo wa kichwa."
+    },
+    "sense-03": {
+      "stem": "Ni muundo upi hutoa sehemu kubwa ya nguvu ya kupinda mwanga (kulenga) ya jicho?",
+      "options": [
+        "Lenzi",
+        "Konea",
+        "Kiowevu cha vitreasi",
+        "Retina"
+      ],
+      "explanation": "Konea hutoa sehemu kubwa ya nguvu ya kupinda mwanga; lenzi hurekebisha ulengaji kwa vitu vilivyo karibu na mbali."
+    },
+    "sense-04": {
+      "stem": "Mpangilio sahihi wa vifupa vya sikio kutoka kiwambo cha sikio kuelekea ndani ni upi?",
+      "options": [
+        "Stapisi, inkasi, maleasi",
+        "Maleasi, inkasi, stapisi",
+        "Inkasi, maleasi, stapisi",
+        "Maleasi, stapisi, inkasi"
+      ],
+      "explanation": "Maleasi hushikamana na kiwambo cha sikio, inkasi huiunganisha na stapisi, na stapisi hukaa kwenye dirisha la oval."
+    },
+    "sense-05": {
+      "stem": "Myopia (kutoona mbali) hurekebishwa kwa aina gani ya lenzi?",
+      "options": [
+        "Mbonyeo (inayokusanya mwanga)",
+        "Mbonyeko (inayotawanya mwanga)",
+        "Ya silinda pekee",
+        "Hakuna lenzi: haiwezi kurekebishwa"
+      ],
+      "explanation": "Katika myopia mwanga hulenga mbele ya retina; lenzi inayotawanya mwanga husogeza ulengaji nyuma hadi kwenye retina."
+    },
+    "sense-id-01": {
+      "stem": "Tafuta mboni ya jicho.",
+      "explanation": "Kila mboni ya jicho hukaa ndani ya tundu lake la mfupa (obiti), ikilindwa na kope."
+    },
+    "sense-id-02": {
+      "stem": "Chagua lenzi ya jicho lolote.",
+      "explanation": "Lenzi iko nyuma ya iris na hushikiliwa na kano ya kuning'iniza (nyuzi za zonula)."
+    }
+  }
+}

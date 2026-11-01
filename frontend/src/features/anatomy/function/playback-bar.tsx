@@ -3,6 +3,7 @@
 import { Pause, Play, Square } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
+import { useT } from "@/lib/i18n/client";
 
 import { useWorkspace } from "../store";
 
@@ -21,21 +22,27 @@ export function PlaybackBar() {
   const setPlaying = useWorkspace((s) => s.setPlaying);
   const setSpeed = useWorkspace((s) => s.setSpeed);
   const stop = useWorkspace((s) => s.stopPlayback);
+  const { t } = useT();
   if (!playback) return null;
   const slow = slowdown(playback.rate, playback.timeUnit) / speed;
   return (
     <div
       role="region"
-      aria-label="Function simulation playback"
+      aria-label={t("explorer.function.playbackAria")}
       className="absolute left-3 top-3 flex items-center gap-1 rounded-full border bg-background/85 py-1 pl-3 pr-1 text-xs shadow-lg backdrop-blur"
     >
       <span className={playing ? "size-2 animate-pulse rounded-full bg-primary" : "size-2 rounded-full bg-muted-foreground"} aria-hidden />
       <span className="max-w-48 truncate font-medium">{playback.modelName}</span>
       <span className="hidden text-muted-foreground sm:inline">
-        · {Math.abs(slow - 1) < 0.01 ? "real time" : slow > 1 ? `${Math.round(slow)}× slower` : `${(1 / slow).toFixed(1)}× faster`}
+        ·{" "}
+        {Math.abs(slow - 1) < 0.01
+          ? t("explorer.function.realTimeShort")
+          : slow > 1
+            ? t("explorer.function.slower", { n: Math.round(slow) })
+            : t("explorer.function.faster", { n: (1 / slow).toFixed(1) })}
       </span>
       <select
-        aria-label="Playback speed"
+        aria-label={t("explorer.function.speed")}
         value={speed}
         onChange={(e) => setSpeed(Number(e.target.value))}
         className="ml-1 h-6 rounded-md border border-input bg-transparent px-1 text-xs"
@@ -46,10 +53,10 @@ export function PlaybackBar() {
           </option>
         ))}
       </select>
-      <Button size="icon-xs" variant="ghost" aria-label={playing ? "Pause" : "Play"} onClick={() => setPlaying(!playing)}>
+      <Button size="icon-xs" variant="ghost" aria-label={playing ? t("explorer.function.pause") : t("explorer.function.play")} onClick={() => setPlaying(!playing)}>
         {playing ? <Pause /> : <Play />}
       </Button>
-      <Button size="icon-xs" variant="ghost" aria-label="Stop function simulation" onClick={stop}>
+      <Button size="icon-xs" variant="ghost" aria-label={t("explorer.function.stopSim")} onClick={stop}>
         <Square />
       </Button>
     </div>

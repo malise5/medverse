@@ -6,6 +6,8 @@ from sqlalchemy import func, select
 from sqlalchemy.orm import Session
 
 from app.core.errors import ApiError, not_found
+from app.i18n import DEFAULT_LOCALE, overlay
+from app.i18n import state as translation_state
 from app.models import LearningModule, QuizAttempt, QuizQuestion, Reference, Structure
 from app.schemas.anatomy import ReferenceOut
 from app.schemas.learning import (
@@ -18,7 +20,7 @@ from app.schemas.learning import (
     Progress,
     QuestionOut,
 )
-from app.services import anatomy_service
+from app.services import anatomy_service, i18n_service
 
 
 def _latest_results(db: Session, user_id: uuid.UUID) -> dict[str, bool]:
@@ -51,20 +53,32 @@ def _references(db: Session, ids: list[str]) -> list[ReferenceOut]:
     return [ReferenceOut.model_validate(refs[rid]) for rid in ids if rid in refs]
 
 
-def list_modules(db: Session, user_id: uuid.UUID) -> list[ModuleSummary]:
+def _module_source(m: LearningModule) -> dict:
+    """The translatable shape of a module (what content/i18n/<locale>/modules.json mirrors)."""
+    return {"title": m.title, "tagline": m.tagline, **m.body}
+
+
+def list_modules(
+    db: Session, user_id: uuid.UUID, locale: str = DEFAULT_LOCALE
+) -> list[ModuleSummary]:
     systems = {s.id: s for s in anatomy_service.list_systems(db)}
     results = _latest_results(db, user_id)
     by_module: dict[str, list[str]] = {}
     for qid, mid in db.execute(select(QuizQuestion.id, QuizQuestion.module_id)):
         by_module.setdefault(mid, []).append(qid)
     out = []
-    for m in db.scalars(select(LearningModule).order_by(LearningModule.display_order)):
+    mods = list(db.scalars(select(LearningModule).order_by(LearningModule.display_order)))
+    tr = i18n_service.translations(db, "module", [m.id for m in mods], locale)
+    for m in mods:
         s = systems.get(m.id)
+        src = _module_source(m)
+        local = overlay(src, tr.get(m.id))
         out.append(
             ModuleSummary(
                 id=m.id,
-                title=m.title,
-                tagline=m.tagline,
+                title=local["title"],
+                tagline=local["tagline"],
+                translation=translation_state(locale, src, tr.get(m.id)),
                 latin_name=m.body.get("latin_name"),
                 display_order=m.display_order,
                 structure_count=s.structure_count if s else 0,
@@ -75,15 +89,24 @@ def list_modules(db: Session, user_id: uuid.UUID) -> list[ModuleSummary]:
     return out
 
 
-def get_module(db: Session, module_id: str, user_id: uuid.UUID) -> ModuleDetail:
+def get_module(
+    db: Session, module_id: str, user_id: uuid.UUID, locale: str = DEFAULT_LOCALE
+) -> ModuleDetail:
     m = db.get(LearningModule, module_id)
     if m is None:
         raise not_found("Learning module", module_id)
-    body = ModuleBody.model_validate(m.body)
+    src = _module_source(m)
+    module_tr = i18n_service.translations(db, "module", [m.id], locale).get(m.id)
+    local = overlay(src, module_tr)
+    body = ModuleBody.model_validate(
+        {k: v for k, v in local.items() if k not in ("title", "tagline")}
+    )
     organ_ids = [o.structure_id for o in body.organs if o.structure_id]
     names = dict(
         db.execute(select(Structure.id, Structure.name).where(Structure.id.in_(organ_ids))).all()
     )
+    for sid, payload in i18n_service.translations(db, "structure", organ_ids, locale).items():
+        names[sid] = overlay({"name": names.get(sid, sid)}, payload)["name"]
     questions = list(
         db.scalars(
             select(QuizQuestion)
@@ -101,10 +124,16 @@ def get_module(db: Session, module_id: str, user_id: uuid.UUID) -> ModuleDetail:
         found = {b for sid in q.answer for b in bodies.get(sid, [])}  # type: ignore[union-attr]
         return [b for b in ("male", "female") if b in found]
 
+    q_tr = i18n_service.translations(db, "question", [q.id for q in questions], locale)
+
+    def q_local(q: QuizQuestion) -> dict:
+        return overlay({"stem": q.stem, "options": q.options or []}, q_tr.get(q.id))
+
     return ModuleDetail(
         id=m.id,
-        title=m.title,
-        tagline=m.tagline,
+        title=local["title"],
+        tagline=local["tagline"],
+        translation=translation_state(locale, src, module_tr),
         latin_name=body.latin_name,
         objectives=body.objectives,
         overview=body.overview,
@@ -128,8 +157,8 @@ def get_module(db: Session, module_id: str, user_id: uuid.UUID) -> ModuleDetail:
                 id=q.id,
                 kind=q.kind,
                 level=q.level,
-                stem=q.stem,
-                options=q.options,
+                stem=q_local(q)["stem"],
+                options=q_local(q)["options"] if q.options is not None else None,
                 last_correct=results.get(q.id),
                 body_models=question_bodies(q),
             )
@@ -141,7 +170,9 @@ def get_module(db: Session, module_id: str, user_id: uuid.UUID) -> ModuleDetail:
     )
 
 
-def answer_question(db: Session, question_id: str, response: str, user_id: uuid.UUID) -> AnswerOut:
+def answer_question(
+    db: Session, question_id: str, response: str, user_id: uuid.UUID, locale: str = DEFAULT_LOCALE
+) -> AnswerOut:
     q = db.get(QuizQuestion, question_id)
     if q is None:
         raise not_found("Question", question_id)
@@ -166,6 +197,8 @@ def answer_question(db: Session, question_id: str, response: str, user_id: uuid.
         names = dict(
             db.execute(select(Structure.id, Structure.name).where(Structure.id.in_(targets))).all()
         )
+        for sid, payload in i18n_service.translations(db, "structure", targets, locale).items():
+            names[sid] = overlay({"name": names.get(sid, sid)}, payload)["name"]
         accepted = [{"id": sid, "name": names.get(sid, sid)} for sid in q.answer]  # type: ignore[union-attr]
         correct_option = None
     db.add(QuizAttempt(user_id=user_id, question_id=q.id, response=response, correct=correct))
@@ -174,14 +207,22 @@ def answer_question(db: Session, question_id: str, response: str, user_id: uuid.
         correct=correct,
         correct_option=correct_option,
         accepted=accepted,
-        explanation=q.explanation,
+        explanation=overlay(
+            {"explanation": q.explanation},
+            i18n_service.translations(db, "question", [q.id], locale).get(q.id),
+        )["explanation"],
         references=_references(db, q.reference_ids),
     )
 
 
-def glossary(db: Session) -> list[GlossaryEntry]:
+def glossary(db: Session, locale: str = DEFAULT_LOCALE) -> list[GlossaryEntry]:
     out = []
-    for m in db.scalars(select(LearningModule).order_by(LearningModule.display_order)):
-        for t in ModuleBody.model_validate(m.body).key_terms:
-            out.append(GlossaryEntry(**t.model_dump(), module_id=m.id, module_title=m.title))
+    mods = list(db.scalars(select(LearningModule).order_by(LearningModule.display_order)))
+    tr = i18n_service.translations(db, "module", [m.id for m in mods], locale)
+    for m in mods:
+        local = overlay(_module_source(m), tr.get(m.id))
+        for t in ModuleBody.model_validate(
+            {k: v for k, v in local.items() if k not in ("title", "tagline")}
+        ).key_terms:
+            out.append(GlossaryEntry(**t.model_dump(), module_id=m.id, module_title=local["title"]))
     return sorted(out, key=lambda e: e.term.casefold())

@@ -1,25 +1,45 @@
 import { cn } from "@/lib/utils";
 
+/** MEDVERSE mark: a heart with a heartbeat trace, on a teal tile. */
+export function LogoMark({ className, animated = false }: { className?: string; animated?: boolean }) {
+  return (
+    <svg viewBox="0 0 32 32" aria-hidden className={cn("size-8 shrink-0", className)}>
+      <defs>
+        <linearGradient id="mv-tile" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0" stopColor="oklch(0.62 0.11 180)" />
+          <stop offset="1" stopColor="oklch(0.46 0.09 210)" />
+        </linearGradient>
+      </defs>
+      <rect width="32" height="32" rx="9" fill="url(#mv-tile)" />
+      <path
+        d="M16 25.5s-8.5-5-8.5-11.2A4.6 4.6 0 0 1 16 11.6a4.6 4.6 0 0 1 8.5 2.7c0 6.2-8.5 11.2-8.5 11.2Z"
+        fill="white"
+        opacity="0.95"
+      />
+      <path
+        d="M4 17.5h7l1.6-3.2 2.4 6.4 2.2-8.4 1.9 5.2H28"
+        fill="none"
+        stroke="oklch(0.5 0.1 195)"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={animated ? "mv-trace" : undefined}
+        style={animated ? ({ "--trace-length": 40 } as React.CSSProperties) : undefined}
+      />
+    </svg>
+  );
+}
+
 export function Logo({ className, compact = false }: { className?: string; compact?: boolean }) {
   return (
-    <span className={cn("inline-flex items-center gap-2 font-semibold tracking-tight", className)}>
-      <svg viewBox="0 0 32 32" aria-hidden className="size-7 shrink-0">
-        <defs>
-          <linearGradient id="mv-g" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stopColor="oklch(0.82 0.12 195)" />
-            <stop offset="1" stopColor="oklch(0.6 0.14 230)" />
-          </linearGradient>
-        </defs>
-        <rect x="1" y="1" width="30" height="30" rx="8" fill="url(#mv-g)" opacity="0.18" />
-        <path
-          d="M16 6c-2.4 0-4 1.8-4 4 0 1.5.8 2.7 2 3.4V26h4V13.4c1.2-.7 2-1.9 2-3.4 0-2.2-1.6-4-4-4Z M8 15h5 M19 15h5 M10 21h3 M19 21h3"
-          fill="none"
-          stroke="url(#mv-g)"
-          strokeWidth="2"
-          strokeLinecap="round"
-        />
-      </svg>
-      {!compact && <span className="text-[15px]">MEDVERSE</span>}
+    <span className={cn("inline-flex items-center gap-2.5 font-bold tracking-tight", className)}>
+      <LogoMark />
+      {!compact && (
+        <span className="grid leading-none">
+          <span className="text-[15px]">MEDVERSE</span>
+          <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-primary">Africa</span>
+        </span>
+      )}
     </span>
   );
 }

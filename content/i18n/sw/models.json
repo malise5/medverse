@@ -1,0 +1,146 @@
+{
+  "_comment": "Kiswahili text of the simulation models (backend/app/simulation/models): names, summaries, parameter and output labels, 3D animation notes, phase plots and the disclaimer. Technical documentation (equations, solver, assumptions, limitations, validation) stays in English for now. Mathematical symbols and units are not translated. DRAFT: pending review by Swahili-speaking health professionals.",
+  "status": "draft",
+  "items": {
+    "cv.cardiac_cycle": {
+      "name": "Mzunguko wa moyo (ventrikali ya elastansi + Windkessel)",
+      "summary": "Ventrikali ya kushoto inayosinyaa, inayoelezwa kwa elastansi inayobadilika kulingana na muda, hujaa kupitia valvu ya mitrali na kusukuma damu kupitia valvu ya aota kuingia Windkessel ya vipengele vitatu.",
+      "purpose": "Kuonyesha hatua za mzunguko wa moyo (kujaa, kusinyaa bila kubadilika ujazo, kusukuma damu, kutulia bila kubadilika ujazo) na jinsi nguvu ya kusinyaa, mzigo wa kabla (preload) na mzigo wa baada (afterload) zinavyobadilisha kiasi kwa mpigo, sehemu ya kusukumwa na shinikizo la ateri.",
+      "disclaimer": "Modeli rahisi ya kielimu. Haijathibitishwa kwa, na haipaswi kutumika kwa, kufanya maamuzi ya kliniki au kutabiri matokeo ya mgonjwa mmoja mmoja.",
+      "parameters": {
+        "heart_rate": { "label": "Mapigo ya moyo", "description": "Mizunguko ya moyo kwa dakika." },
+        "e_max": { "label": "Nguvu ya kusinyaa (E_max)", "description": "Elastansi ya juu kabisa (mwisho wa sistoli) ya ventrikali ya kushoto." },
+        "e_min": { "label": "Ugumu wa diastoli (E_min)", "description": "Elastansi ya ventrikali iliyotulia; thamani kubwa humaanisha ventrikali ngumu zaidi." },
+        "t_max": { "label": "Muda hadi elastansi ya juu", "description": "Muda wa kusinyaa hadi elastansi ya juu kabisa." },
+        "v0": { "label": "Ujazo usio na shinikizo (V₀)", "description": "Ujazo wakati shinikizo ni sifuri." },
+        "la_pressure": { "label": "Shinikizo la atiria ya kushoto (preload)", "description": "Shinikizo la kujaza kabla ya valvu ya mitrali." },
+        "mitral_resistance": { "label": "Ukinzani wa valvu ya mitrali", "description": "Ukinzani wa mtiririko wa mbele kupitia valvu ya mitrali iliyo wazi." },
+        "aortic_valve_resistance": { "label": "Ukinzani wa valvu ya aota", "description": "Ukinzani wa mtiririko wa mbele kupitia valvu ya aota iliyo wazi." },
+        "peripheral_resistance": { "label": "Ukinzani wa jumla wa pembeni", "description": "Ukinzani wa ateriole na kapilari za mwili." },
+        "arterial_compliance": { "label": "Unyumbufu wa jumla wa ateri", "description": "Ujazo unaohifadhiwa kwa kila ongezeko la shinikizo katika ateri kubwa." },
+        "characteristic_impedance": { "label": "Impedansi ya tabia ya aota", "description": "Huhusisha shinikizo na mtiririko katika sehemu ya mwanzo ya aota." },
+        "beats": { "label": "Mapigo yaliyoigwa", "description": "Mizunguko ya moyo iliyokokotolewa." }
+      },
+      "outputs": {
+        "lv_pressure": { "label": "Shinikizo la ventrikali ya kushoto" },
+        "aortic_pressure": { "label": "Shinikizo la aota" },
+        "lv_volume": { "label": "Ujazo wa ventrikali ya kushoto" },
+        "aortic_flow": { "label": "Mtiririko kupitia valvu ya aota" },
+        "mitral_flow": { "label": "Mtiririko kupitia valvu ya mitrali" },
+        "end_diastolic_volume": { "label": "Ujazo wa mwisho wa diastoli", "description": "V_lv ya juu kabisa." },
+        "end_systolic_volume": { "label": "Ujazo wa mwisho wa sistoli", "description": "V_lv ya chini kabisa." },
+        "stroke_volume": { "label": "Kiasi kwa mpigo" },
+        "ejection_fraction": { "label": "Sehemu ya kusukumwa" },
+        "systolic_pressure": { "label": "Shinikizo la sistoli", "description": "P_ao ya juu kabisa." },
+        "diastolic_pressure": { "label": "Shinikizo la diastoli", "description": "P_ao ya chini kabisa." },
+        "mean_arterial_pressure": { "label": "Wastani wa shinikizo la ateri", "description": "Wastani wa P_ao." },
+        "peak_lv_pressure": { "label": "Shinikizo la juu la ventrikali ya kushoto", "description": "P_lv ya juu kabisa." },
+        "cardiac_output": { "label": "Kiasi cha damu kwa dakika" },
+        "steady_state_residual": { "label": "Mabaki ya hali tulivu", "description": "|V_lv(mwisho) − V_lv(mwanzo)| katika mpigo wa mwisho." }
+      },
+      "animations": [
+        { "description": "Modeli nzima ya moyo hukua na kusinyaa kulingana na ujazo wa ventrikali ya kushoto wa modeli (±5 %, umekuzwa ili uonekane). Mioyo halisi hubadilika umbo kwa njia isiyo sawa, na atiria hujaa wakati ventrikali zinatoa damu." },
+        { "description": "Ventrikali ya kushoto hubadilika kuwa nyekundu shinikizo lake linapopanda wakati wa kusinyaa." },
+        { "description": "Aota hung'aa kulingana na shinikizo la aota (yote kwa wakati mmoja: modeli haina usafiri wa wimbi la mpigo)." }
+      ],
+      "phase_plots": {
+        "pv_loop": {
+          "title": "Kitanzi cha shinikizo na ujazo",
+          "description": "Kila mpigo huchora kitanzi kimoja kinyume na mwelekeo wa saa: kujaa kando ya chini (valvu ya mitrali wazi), kusinyaa bila kubadilika ujazo juu upande wa kulia, kusukuma damu kando ya juu (valvu ya aota wazi) na kutulia bila kubadilika ujazo chini upande wa kushoto. Upana wa kitanzi ni kiasi kwa mpigo; eneo lililo ndani ni kazi inayofanywa kwenye damu kwa kila mpigo."
+        }
+      }
+    },
+    "resp.single_compartment": {
+      "name": "Mitambo ya kupumua (chumba kimoja)",
+      "summary": "Shinikizo la misuli ya kuvuta pumzi hujaza chumba kimoja chenye unyumbufu kupitia ukinzani; kutoa pumzi ni kurudi nyuma kwa unyumbufu bila nguvu ya misuli.",
+      "purpose": "Kuonyesha jinsi unyumbufu wa mfumo wa kupumua, ukinzani wa njia ya hewa na mtindo wa kupumua vinavyoamua kiasi cha pumzi, mtiririko wa hewa na shinikizo la alveoli, na kwa nini ukinzani mkubwa au kutoa pumzi kwa muda mfupi kunaweza kunasa hewa.",
+      "disclaimer": "Modeli rahisi ya kielimu. Haijathibitishwa kwa, na haipaswi kutumika kwa, kufanya maamuzi ya kliniki au kutabiri matokeo ya mgonjwa mmoja mmoja.",
+      "parameters": {
+        "resp_rate": { "label": "Kasi ya kupumua", "description": "Pumzi kwa dakika." },
+        "insp_fraction": { "label": "Sehemu ya kuvuta pumzi", "description": "Muda wa kuvuta pumzi kama sehemu ya mzunguko wa kupumua." },
+        "muscle_pressure": { "label": "Shinikizo la juu la misuli", "description": "Shinikizo la juu kabisa linalotengenezwa na misuli ya kuvuta pumzi." },
+        "compliance": { "label": "Unyumbufu wa mfumo wa kupumua", "description": "Mabadiliko ya ujazo kwa kila kipimo cha shinikizo kwa mapafu na ukuta wa kifua pamoja." },
+        "resistance": { "label": "Ukinzani wa njia ya hewa", "description": "Ukinzani wa jumla wa mtiririko wa hewa." },
+        "frc": { "label": "Ujazo wa mabaki wa kikazi (FRC)", "description": "Ujazo wa mapafu mwishoni mwa kutoa pumzi kwa utulivu (kiwango cha kuanzia tu)." },
+        "breaths": { "label": "Pumzi zilizoigwa", "description": "Idadi ya pumzi zilizoendeshwa." }
+      },
+      "outputs": {
+        "lung_volume": { "label": "Ujazo wa mapafu" },
+        "airflow": { "label": "Mtiririko wa hewa", "description": "dV/dt; chanya kuingia mapafuni." },
+        "muscle_pressure": { "label": "Shinikizo la misuli", "description": "P_mus(t) iliyowekwa." },
+        "alveolar_pressure": { "label": "Shinikizo la alveoli", "description": "Ikilinganishwa na angahewa." },
+        "tidal_volume": { "label": "Kiasi cha pumzi (tidal volume)", "description": "Mabadiliko ya ujazo, pumzi ya mwisho." },
+        "minute_ventilation": { "label": "Hewa kwa dakika", "description": "Kiasi cha pumzi × kasi." },
+        "peak_inspiratory_flow": { "label": "Mtiririko wa juu wa kuvuta pumzi", "description": "Mtiririko wa juu kabisa." },
+        "peak_expiratory_flow": { "label": "Mtiririko wa juu wa kutoa pumzi", "description": "Mtiririko wa juu kabisa wa kutoka." },
+        "time_constant": { "label": "Kipimo cha muda (R·C)", "description": "Kipimo cha muda wa kujitoa hewa bila nguvu ya misuli." },
+        "trapped_volume": { "label": "Ujazo uliokwama mwisho wa kutoa pumzi", "description": "Ujazo juu ya FRC unaobaki mwishoni mwa kutoa pumzi (kunaswa kwa hewa)." }
+      },
+      "animations": [
+        { "description": "Kila pafu hukuzwa kuzunguka katikati yake ujazo unapobadilika (±5 % wakati wa kupumzika, takriban badiliko la ukubwa la kipeo cha tatu kwa pumzi ya L 0.5). Mapafu halisi hutanuka kwa njia isiyo sawa, hasa kuelekea chini." },
+        { "description": "Trakea hung'aa kulingana na ukubwa wa mtiririko wa hewa, kuingia au kutoka." }
+      ]
+    },
+    "neuro.hodgkin_huxley": {
+      "name": "Msukumo wa neva (Hodgkin–Huxley)",
+      "summary": "Upitishaji wa sodiamu na potasiamu unaotegemea volteji hubadilisha kichocheo kifupi kuwa msukumo wa neva wa yote-au-hakuna katika kipande cha utando wa aksoni.",
+      "purpose": "Kuonyesha kizingiti, msukumo wa yote-au-hakuna, kazi za uamshaji wa sodiamu (m), uzimaji wa sodiamu (h) na uamshaji wa potasiamu (n), na kipindi cha kutoitikia.",
+      "disclaimer": "Modeli rahisi ya kielimu. Haijathibitishwa kwa, na haipaswi kutumika kwa, kufanya maamuzi ya kliniki au kutabiri matokeo ya mgonjwa mmoja mmoja.",
+      "parameters": {
+        "stim_amplitude": { "label": "Mkondo wa kichocheo", "description": "Ukubwa wa kila mpigo wa kichocheo wa mstatili." },
+        "stim_width": { "label": "Upana wa mpigo", "description": "Muda wa kila mpigo." },
+        "stim_interval": { "label": "Muda kati ya mipigo", "description": "Muda kati ya mianzo ya mipigo inayofuatana." },
+        "duration": { "label": "Muda", "description": "Muda ulioigwa." },
+        "g_na": { "label": "Upitishaji wa juu wa sodiamu", "description": "Thamani ndogo huiga kuzibwa kwa sehemu kwa njia za sodiamu." },
+        "g_k": { "label": "Upitishaji wa juu wa potasiamu", "description": "Thamani ndogo huiga kuzibwa kwa sehemu kwa njia za potasiamu." }
+      },
+      "outputs": {
+        "membrane_potential": { "label": "Volteji ya utando" },
+        "stimulus": { "label": "Mkondo wa kichocheo" },
+        "m_gate": { "label": "Uamshaji wa Na⁺ (m)", "description": "Uwezekano, 0–1." },
+        "h_gate": { "label": "Uzimaji wa Na⁺ (h)", "description": "Uwezekano, 0–1." },
+        "n_gate": { "label": "Uamshaji wa K⁺ (n)", "description": "Uwezekano, 0–1." },
+        "spike_count": { "label": "Misukumo", "description": "Mara volteji inapovuka 0 mV kwenda juu." },
+        "peak_potential": { "label": "Volteji ya juu", "description": "V ya juu kabisa." },
+        "resting_potential": { "label": "Volteji ya kupumzika", "description": "V wakati t = 0." },
+        "first_spike_latency": { "label": "Muda hadi msukumo wa kwanza", "description": "Muda kutoka mpigo wa kwanza hadi kuvuka 0 mV kwa mara ya kwanza; −1 kama hakuna." }
+      },
+      "animations": [
+        { "description": "Ubongo na kamba ya uti wa mgongo humulika utando wa modeli unapofyatua. Hii inaonyesha wakati wa msukumo tu; si picha ya shughuli halisi ya ubongo." }
+      ]
+    },
+    "cv.windkessel3": {
+      "name": "Windkessel ya ateri za mwili (vipengele 3)",
+      "summary": "Modeli ya vigezo vilivyokusanywa inayohusisha usukumaji wa ventrikali ya kushoto na shinikizo la aota kupitia ukinzani wa pembeni, unyumbufu wa ateri na impedansi ya tabia ya aota.",
+      "purpose": "Kufundisha jinsi kiasi kwa mpigo, mapigo ya moyo, ukinzani wa pembeni na unyumbufu wa ateri vinavyoamua shinikizo la sistoli, diastoli, wastani na shinikizo la mpigo.",
+      "disclaimer": "Modeli rahisi ya kielimu. Haijathibitishwa kwa, na haipaswi kutumika kwa, kufanya maamuzi ya kliniki au kutabiri matokeo ya mgonjwa mmoja mmoja.",
+      "parameters": {
+        "heart_rate": { "label": "Mapigo ya moyo", "description": "Mizunguko ya moyo kwa dakika." },
+        "stroke_volume": { "label": "Kiasi kwa mpigo", "description": "Ujazo unaosukumwa kwenye aota kwa kila mpigo." },
+        "ejection_time": { "label": "Muda wa kusukuma damu", "description": "Muda wa ventrikali kusukuma damu katika kila mpigo." },
+        "peripheral_resistance": { "label": "Ukinzani wa jumla wa pembeni", "description": "Ukinzani wa ateriole na kapilari za mwili." },
+        "arterial_compliance": { "label": "Unyumbufu wa jumla wa ateri", "description": "Ujazo unaohifadhiwa kwa kila ongezeko la shinikizo katika ateri kubwa." },
+        "characteristic_impedance": { "label": "Impedansi ya tabia ya aota", "description": "Huhusisha shinikizo na mtiririko katika sehemu ya mwanzo ya aota." },
+        "outflow_pressure": { "label": "Shinikizo la mwisho (la kutoka)", "description": "Shinikizo mwishoni mwa ukinzani wa pembeni." },
+        "initial_pressure": { "label": "Shinikizo la awali la ateri", "description": "Thamani ya kuanzia ya shinikizo la unyumbufu." },
+        "beats": { "label": "Mapigo yaliyoigwa", "description": "Idadi ya mizunguko ya moyo iliyokokotolewa kabla ya kuripoti." }
+      },
+      "outputs": {
+        "aortic_pressure": { "label": "Shinikizo la aota", "description": "Shinikizo la mwanzo wa aota P(t)." },
+        "aortic_inflow": { "label": "Usukumaji wa ventrikali", "description": "Mtiririko wa kuingia Q(t) uliowekwa." },
+        "peripheral_outflow": { "label": "Mtiririko wa kutoka pembeni", "description": "Mtiririko kupitia ukinzani wa pembeni (P꜀ − P_out)/R." },
+        "systolic_pressure": { "label": "Shinikizo la sistoli", "description": "Ya juu kabisa katika mpigo wa mwisho." },
+        "diastolic_pressure": { "label": "Shinikizo la diastoli", "description": "Ya chini kabisa katika mpigo wa mwisho." },
+        "pulse_pressure": { "label": "Shinikizo la mpigo", "description": "Sistoli − diastoli." },
+        "mean_arterial_pressure": { "label": "Wastani wa shinikizo la ateri", "description": "Wastani wa muda katika mpigo wa mwisho." },
+        "cardiac_output": { "label": "Kiasi cha damu kwa dakika" },
+        "ejected_volume": { "label": "Ujazo uliosukumwa (kihesabu)", "description": "Jumla ya Q katika mpigo wa mwisho; inapaswa kulingana na kiasi kwa mpigo." },
+        "time_constant": { "label": "Kipimo cha muda cha diastoli (R·C)", "description": "Muda wa tabia wa kushuka kwa shinikizo la diastoli." },
+        "steady_state_residual": { "label": "Mabaki ya hali tulivu", "description": "|P꜀(mwisho) − P꜀(mwanzo)| ya mpigo wa mwisho; thamani ndogo inamaanisha hali tulivu ya mzunguko." }
+      },
+      "animations": [
+        { "description": "Aota hung'aa shinikizo la aota la modeli linapopanda. Mshipa wote hubadilika kwa wakati mmoja kwa sababu modeli hii ya vigezo vilivyokusanywa haina usafiri wa wimbi la mpigo." }
+      ]
+    }
+  }
+}

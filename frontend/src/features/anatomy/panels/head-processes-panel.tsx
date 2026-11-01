@@ -3,8 +3,10 @@
 import { Activity, Brain, Droplets, Sprout, Square } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { type Pathway, PATHWAYS } from "@/features/biolab/pathways";
-import { PROCESSES, type ProcessId } from "@/features/biolab/processes";
+import { usePathways, useProcesses } from "@/features/biolab/localized";
+import type { Pathway } from "@/features/biolab/pathways";
+import type { ProcessId } from "@/features/biolab/processes";
+import { useT } from "@/lib/i18n/client";
 import type { AnatomicalSystem } from "@/lib/api/types";
 import { cn } from "@/lib/utils";
 
@@ -28,6 +30,9 @@ export function HeadProcessesPanel({
   const region = useWorkspace((s) => s.region);
   const vesselsPreset = region === "neck" ? NECK_PRESETS.find((p) => p.id === "neck-vessels")! : HEAD_PRESETS.find((p) => p.id === "vessels")!;
   const ws = useWorkspace.getState();
+  const { t } = useT();
+  const processes = useProcesses();
+  const allPathways = usePathways();
 
   const start = (id: ProcessId) => {
     ws.select(null); // a selection's overlay and part labels would hide the animation
@@ -56,22 +61,22 @@ export function HeadProcessesPanel({
     else onFocus(pw.view?.focus ?? [BRAIN]); // frames the structures the pathway runs through
     ws.select(null); // keep the pathway's own highlighting unobstructed
   };
-  const pathways = PATHWAYS.filter((pw) => pw.region === region);
+  const pathways = allPathways.filter((pw) => pw.region === region);
 
   return (
     <section aria-labelledby="head-processes-h" className="grid gap-2">
       <div className="flex items-center justify-between">
         <h3 id="head-processes-h" className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-          Living processes
+          {t("explorer.processes.title")}
         </h3>
         {active && (
           <Button size="xs" variant="ghost" onClick={() => (ws.setActiveProcess(null), ws.setHighlighted([]))}>
-            <Square /> Stop
+            <Square /> {t("explorer.processes.stop")}
           </Button>
         )}
       </div>
       <div className="grid gap-1.5">
-        {PROCESSES.filter((p) => p.id !== "pathways").map((p) => {
+        {processes.filter((p) => p.id !== "pathways").map((p) => {
           const Icon = ICONS[p.id];
           return (
             <button
@@ -94,7 +99,7 @@ export function HeadProcessesPanel({
         })}
         <div className={cn("grid gap-1 rounded-md border px-2 py-1.5", active === "pathways" && "border-primary/60 bg-primary/10")}>
           <span className="flex items-center gap-2 text-sm font-medium">
-            <Brain className="size-4 text-primary" aria-hidden /> {region === "neck" ? "Neck functions step by step" : "Brain pathways at work"}
+            <Brain className="size-4 text-primary" aria-hidden /> {t(region === "neck" ? "explorer.processes.neckSteps" : "explorer.processes.brainPathways")}
           </span>
           <div className="flex flex-wrap gap-1">
             {pathways.map((pw) => (
@@ -103,6 +108,7 @@ export function HeadProcessesPanel({
                 size="xs"
                 variant={active === "pathways" && pathwayId === pw.id ? "default" : "secondary"}
                 onClick={() => startPathway(pw)}
+                className="h-auto min-h-6 max-w-full whitespace-normal py-0.5 text-left"
               >
                 {pw.title}
               </Button>

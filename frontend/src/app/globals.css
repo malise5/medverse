@@ -28,6 +28,8 @@
   --color-border: var(--border);
   --color-destructive: var(--destructive);
   --color-warning: var(--warning);
+  --color-success: var(--success);
+  --color-coral: var(--coral);
   --color-accent-foreground: var(--accent-foreground);
   --color-accent: var(--accent);
   --color-muted-foreground: var(--muted-foreground);
@@ -50,74 +52,82 @@
 }
 
 :root {
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.145 0 0);
+  /* MEDVERSE clinical light theme: soft mint-white surfaces, medical teal, coral for the
+     heart accent. Colours are design tokens; components never hard-code them. */
+  --background: oklch(0.982 0.007 185);
+  --foreground: oklch(0.25 0.035 235);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.145 0 0);
+  --card-foreground: oklch(0.25 0.035 235);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: oklch(0.205 0 0);
-  --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
-  --secondary-foreground: oklch(0.205 0 0);
-  --muted: oklch(0.97 0 0);
-  --muted-foreground: oklch(0.556 0 0);
-  --accent: oklch(0.97 0 0);
-  --accent-foreground: oklch(0.205 0 0);
-  --destructive: oklch(0.577 0.245 27.325);
-  --warning: oklch(0.7 0.16 70);
-  --border: oklch(0.922 0 0);
-  --input: oklch(0.922 0 0);
-  --ring: oklch(0.708 0 0);
-  --chart-1: oklch(0.87 0 0);
-  --chart-2: oklch(0.556 0 0);
-  --chart-3: oklch(0.439 0 0);
-  --chart-4: oklch(0.371 0 0);
-  --chart-5: oklch(0.269 0 0);
-  --radius: 0.625rem;
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --popover-foreground: oklch(0.25 0.035 235);
+  --primary: oklch(0.55 0.105 185);
+  --primary-foreground: oklch(0.99 0.005 185);
+  --secondary: oklch(0.95 0.025 185);
+  --secondary-foreground: oklch(0.36 0.07 190);
+  --muted: oklch(0.96 0.01 200);
+  --muted-foreground: oklch(0.5 0.028 230);
+  --accent: oklch(0.94 0.03 185);
+  --accent-foreground: oklch(0.32 0.07 190);
+  --destructive: oklch(0.58 0.2 25);
+  --warning: oklch(0.66 0.15 65);
+  --success: oklch(0.6 0.13 155);
+  --coral: oklch(0.66 0.17 25);
+  --border: oklch(0.91 0.014 200);
+  --input: oklch(0.89 0.016 200);
+  --ring: oklch(0.55 0.105 185 / 45%);
+  --chart-1: oklch(0.55 0.105 185);
+  --chart-2: oklch(0.66 0.17 25);
+  --chart-3: oklch(0.6 0.13 155);
+  --chart-4: oklch(0.72 0.15 75);
+  --chart-5: oklch(0.55 0.15 290);
+  --radius: 0.75rem;
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.3 0.035 235);
+  --sidebar-primary: oklch(0.55 0.105 185);
+  --sidebar-primary-foreground: oklch(0.99 0.005 185);
+  --sidebar-accent: oklch(0.95 0.03 185);
+  --sidebar-accent-foreground: oklch(0.34 0.08 190);
+  --sidebar-border: oklch(0.92 0.012 200);
+  --sidebar-ring: oklch(0.55 0.105 185 / 45%);
+  --hero: linear-gradient(135deg, oklch(0.5 0.1 190), oklch(0.42 0.08 215));
 }
 
 .dark {
-  --background: oklch(0.16 0.012 250);
-  --foreground: oklch(0.96 0.005 250);
-  --card: oklch(0.2 0.014 250);
-  --card-foreground: oklch(0.96 0.005 250);
-  --popover: oklch(0.21 0.014 250);
-  --popover-foreground: oklch(0.96 0.005 250);
-  --primary: oklch(0.78 0.12 195);
-  --primary-foreground: oklch(0.18 0.02 220);
-  --secondary: oklch(0.26 0.015 250);
-  --secondary-foreground: oklch(0.96 0.005 250);
-  --muted: oklch(0.25 0.012 250);
-  --muted-foreground: oklch(0.7 0.015 250);
-  --accent: oklch(0.28 0.02 230);
-  --accent-foreground: oklch(0.96 0.005 250);
-  --destructive: oklch(0.704 0.191 22.216);
+  --background: oklch(0.17 0.02 225);
+  --foreground: oklch(0.95 0.008 200);
+  --card: oklch(0.21 0.022 222);
+  --card-foreground: oklch(0.95 0.008 200);
+  --popover: oklch(0.22 0.022 222);
+  --popover-foreground: oklch(0.95 0.008 200);
+  --primary: oklch(0.76 0.11 182);
+  --primary-foreground: oklch(0.2 0.03 210);
+  --secondary: oklch(0.27 0.03 210);
+  --secondary-foreground: oklch(0.92 0.02 190);
+  --muted: oklch(0.25 0.02 220);
+  --muted-foreground: oklch(0.72 0.02 210);
+  --accent: oklch(0.29 0.035 200);
+  --accent-foreground: oklch(0.95 0.01 190);
+  --destructive: oklch(0.7 0.19 22);
   --warning: oklch(0.82 0.15 80);
-  --border: oklch(1 0 0 / 9%);
-  --input: oklch(1 0 0 / 14%);
-  --ring: oklch(0.78 0.12 195 / 60%);
-  --chart-1: oklch(0.78 0.12 195);
-  --chart-2: oklch(0.7 0.17 25);
-  --chart-3: oklch(0.75 0.14 145);
+  --success: oklch(0.75 0.14 155);
+  --coral: oklch(0.74 0.15 25);
+  --border: oklch(1 0 0 / 10%);
+  --input: oklch(1 0 0 / 15%);
+  --ring: oklch(0.76 0.11 182 / 55%);
+  --chart-1: oklch(0.76 0.11 182);
+  --chart-2: oklch(0.74 0.15 25);
+  --chart-3: oklch(0.75 0.14 155);
   --chart-4: oklch(0.82 0.15 80);
-  --chart-5: oklch(0.65 0.15 290);
-  --sidebar: oklch(0.18 0.013 250);
-  --sidebar-foreground: oklch(0.96 0.005 250);
-  --sidebar-primary: oklch(0.78 0.12 195);
-  --sidebar-primary-foreground: oklch(0.18 0.02 220);
-  --sidebar-accent: oklch(0.25 0.015 250);
-  --sidebar-accent-foreground: oklch(0.96 0.005 250);
-  --sidebar-border: oklch(1 0 0 / 8%);
-  --sidebar-ring: oklch(0.78 0.12 195 / 60%);
+  --chart-5: oklch(0.68 0.15 290);
+  --sidebar: oklch(0.19 0.02 224);
+  --sidebar-foreground: oklch(0.93 0.01 200);
+  --sidebar-primary: oklch(0.76 0.11 182);
+  --sidebar-primary-foreground: oklch(0.2 0.03 210);
+  --sidebar-accent: oklch(0.27 0.035 200);
+  --sidebar-accent-foreground: oklch(0.95 0.01 190);
+  --sidebar-border: oklch(1 0 0 / 9%);
+  --sidebar-ring: oklch(0.76 0.11 182 / 55%);
+  --hero: linear-gradient(135deg, oklch(0.36 0.07 195), oklch(0.28 0.05 220));
 }
 
 @layer base {
@@ -126,6 +136,11 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  h1,
+  h2,
+  h3 {
+    letter-spacing: -0.015em;
   }
   html {
     @apply font-sans;
@@ -138,4 +153,18 @@
     animation-duration: 0.01ms !important;
     transition-duration: 0.01ms !important;
   }
+}
+
+/* Heartbeat trace used in the brand mark and hero (drawn once, then still). */
+@keyframes mv-trace {
+  from {
+    stroke-dashoffset: var(--trace-length, 400);
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.mv-trace {
+  stroke-dasharray: var(--trace-length, 400);
+  animation: mv-trace 2.4s ease-out both;
 }

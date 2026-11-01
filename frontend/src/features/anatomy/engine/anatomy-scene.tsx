@@ -3,7 +3,7 @@
 /* eslint-disable react-hooks/immutability -- three.js renderer, raycaster and scene-graph
    objects are mutable by design and live outside React state (standard R3F practice). */
 
-import { CameraControls, Html, useGLTF } from "@react-three/drei";
+import { CameraControls, useGLTF } from "@react-three/drei";
 import { useFrame, useThree, type ThreeEvent } from "@react-three/fiber";
 import { Suspense, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
@@ -29,13 +29,13 @@ import {
   meshVisibility,
   spotlightVisibility,
   useWorkspace,
-  type PartView,
   type Playback,
   type ViewPreset,
 } from "../store";
 import { BloodFlow, PathwayAnimator } from "./head-processes";
 import { MaterialCache, type MeshState } from "./materials";
 import { MENINGES_OPACITY, meshColor } from "./palette";
+import { LabelProjector, labelAnchors, useLabelStore } from "./part-labels";
 import { type Region, regionFloor, regionView as regionViewFor } from "./regions";
 
 /** Scene bounds (metres) of the BodyParts3D model after pipeline normalisation. */
@@ -427,23 +427,32 @@ export function AnatomyScene({
   });
 
   // Part labels: anchored at each part's centre; recomputed when parts change or more
-  // bundles load (event-driven, so the registry ref is never read during render).
-  const [labels, setLabels] = useState<(PartView & { at: Vector3 })[]>([]);
+  // bundles load (event-driven, so the registry ref is never read during render). They are
+  // drawn as DOM over the canvas (see part-labels.tsx), not as drei <Html> roots.
   const refreshLabels = useCallback(() => {
     const { parts, showParts } = useWorkspace.getState();
-    setLabels(
-      (showParts ? parts : [])
-        .map((p) => {
-          const box = new Box3();
-          for (const id of p.meshIds) {
-            const r = registry.current.get(id);
-            if (r) box.union(new Box3().setFromObject(r.mesh));
-          }
-          return box.isEmpty() ? null : { ...p, at: box.getCenter(new Vector3()) };
-        })
-        .filter((p) => p !== null),
-    );
-  }, []);
+    labelAnchors.clear();
+    const shown = (showParts ? parts : []).filter((p) => {
+      const box = new Box3();
+      for (const id of p.meshIds) {
+        const r = registry.current.get(id);
+        if (r) box.union(new Box3().setFromObject(r.mesh));
+      }
+      if (box.isEmpty()) return false;
+      labelAnchors.set(p.id, box.getCenter(new Vector3()));
+      return true;
+    });
+    useLabelStore.getState().setLabels(shown.map((p) => ({ id: p.id, name: p.name, color: p.color })));
+    invalidate();
+  }, [invalidate]);
+  // The viewer may unmount (module lab pane): leave no labels behind.
+  useEffect(
+    () => () => {
+      labelAnchors.clear();
+      useLabelStore.getState().setLabels([]);
+    },
+    [],
+  );
   useEffect(
     () =>
       useWorkspace.subscribe((state, prev) => {
@@ -634,14 +643,7 @@ export function AnatomyScene({
             </Suspense>
           ))}
       </group>
-      {labels.map((p) => (
-        <Html key={p.id} position={p.at} center zIndexRange={[20, 0]} style={{ pointerEvents: "none" }}>
-          <div className="flex items-center gap-1 whitespace-nowrap rounded-full border bg-background/85 px-2 py-0.5 text-[11px] shadow backdrop-blur">
-            <span className="size-2 rounded-full" style={{ background: p.color }} />
-            {p.name}
-          </div>
-        </Html>
-      ))}
+      <LabelProjector />
       {activeProcess === "blood" && (
         <BloodFlow
           getMeshes={getMeshes}

@@ -1,7 +1,7 @@
 "use client";
 
 import { CheckCircle2, ChevronLeft, ChevronRight, Crosshair, Loader2, XCircle } from "lucide-react";
-import Link from "next/link";
+import { Link, useT } from "@/lib/i18n/client";
 import { useMemo, useState } from "react";
 
 import { Badge } from "@/components/ui/badge";
@@ -11,7 +11,7 @@ import type { AnswerResult, LearningLevel, ModuleDetail, QuizQuestion } from "@/
 import { cn } from "@/lib/utils";
 
 import { ProgressBar } from "./learning-hub";
-import { levelLabel, questionsForLevel } from "./levels";
+import { questionsForLevel, useLevelText } from "./levels";
 
 interface Attempt {
   choice: number;
@@ -35,8 +35,9 @@ function StatusDot({ q, current, attempt }: { q: QuizQuestion; current: boolean;
 }
 
 function McqQuestion({ q, attempt, onAnswer, pending }: { q: QuizQuestion; attempt?: Attempt; onAnswer: (i: number) => void; pending: boolean }) {
+  const { t } = useT();
   return (
-    <div role="radiogroup" aria-label="Answer options" className="grid gap-2">
+    <div role="radiogroup" aria-label={t("quiz.answerOptions")} className="grid gap-2">
       {q.options!.map((opt, i) => {
         const chosen = attempt?.choice === i;
         const isRight = attempt?.result.correct_option === i;
@@ -58,8 +59,8 @@ function McqQuestion({ q, attempt, onAnswer, pending }: { q: QuizQuestion; attem
               {String.fromCharCode(65 + i)}
             </span>
             <span className="flex-1">{opt}</span>
-            {attempt && isRight && <CheckCircle2 className="size-4 shrink-0 text-emerald-500" aria-label="Correct answer" />}
-            {attempt && chosen && !isRight && <XCircle className="size-4 shrink-0 text-destructive" aria-label="Your answer" />}
+            {attempt && isRight && <CheckCircle2 className="size-4 shrink-0 text-emerald-500" aria-label={t("quiz.correctAnswer")} />}
+            {attempt && chosen && !isRight && <XCircle className="size-4 shrink-0 text-destructive" aria-label={t("quiz.yourAnswer")} />}
           </button>
         );
       })}
@@ -67,8 +68,22 @@ function McqQuestion({ q, attempt, onAnswer, pending }: { q: QuizQuestion; attem
   );
 }
 
-export function Quiz({ module, level }: { module: ModuleDetail; level: LearningLevel }) {
+export function Quiz({
+  module,
+  level,
+  onFindIn3D,
+  activeQuestion = null,
+}: {
+  module: ModuleDetail;
+  level: LearningLevel;
+  /** Open a "find it in 3D" question beside the module (lab pane) instead of leaving it. */
+  onFindIn3D?: (q: QuizQuestion) => void;
+  /** Question currently open in the 3D panel. */
+  activeQuestion?: string | null;
+}) {
   const [allLevels, setAllLevels] = useState(false);
+  const { t, tp } = useT();
+  const levelText = useLevelText();
   const questions = useMemo(
     () => (allLevels ? module.questions : questionsForLevel(module.questions, level)),
     [module.questions, level, allLevels],
@@ -94,31 +109,31 @@ export function Quiz({ module, level }: { module: ModuleDetail; level: LearningL
       <header className="flex flex-wrap items-center justify-between gap-3">
         <div className="grid gap-1">
           <h2 id="quiz-h" className="text-lg font-semibold">
-            Check your understanding
+            {t("quiz.checkTitle")}
           </h2>
           <p className="text-xs text-muted-foreground">
-            {allLevels ? "All levels" : `Up to ${levelLabel(level)} level`} · {questions.length} questions · answers are
-            checked and saved to your progress
+            {allLevels ? t("quiz.allLevels") : t("quiz.upToLevel", { level: levelText.label(level) })} ·{" "}
+            {tp("quiz.questionsCount", questions.length)} · {t("quiz.savedNote")}
           </p>
         </div>
         <label className="flex items-center gap-2 text-xs text-muted-foreground">
           <input type="checkbox" checked={allLevels} onChange={(e) => setAllLevels(e.target.checked)} className="accent-primary" />
-          Include harder questions
+          {t("quiz.includeHarder")}
         </label>
       </header>
       <ProgressBar answered={p.answered} correct={p.correct} total={p.questions} />
 
       {!q ? (
-        <p className="text-sm text-muted-foreground">No questions at this level yet.</p>
+        <p className="text-sm text-muted-foreground">{t("quiz.noQuestions")}</p>
       ) : (
         <>
-          <nav aria-label="Questions" className="flex flex-wrap items-center gap-1.5">
+          <nav aria-label={t("quiz.questionsNav")} className="flex flex-wrap items-center gap-1.5">
             {questions.map((x, n) => (
               <button
                 key={x.id}
                 type="button"
                 onClick={() => setIdx(n)}
-                aria-label={`Question ${n + 1}`}
+                aria-label={t("quiz.questionN", { n: n + 1 })}
                 aria-current={n === i ? "step" : undefined}
                 className="grid size-6 place-items-center rounded-full hover:bg-muted"
               >
@@ -130,19 +145,19 @@ export function Quiz({ module, level }: { module: ModuleDetail; level: LearningL
           <article className="grid gap-3" aria-live="polite">
             <div className="flex flex-wrap items-center gap-2">
               <span className="text-xs font-medium text-muted-foreground">
-                Question {i + 1} of {questions.length}
+                {t("quiz.questionOf", { n: i + 1, total: questions.length })}
               </span>
               <Badge variant="outline" className="text-[10px]">
-                {levelLabel(q.level)}
+                {levelText.label(q.level)}
               </Badge>
               {q.kind === "identify" && (
                 <Badge variant="outline" className="text-[10px]">
-                  3D identification
+                  {t("quiz.identification")}
                 </Badge>
               )}
               {q.last_correct !== null && !attempt && (
                 <span className="text-[11px] text-muted-foreground">
-                  Last time: {q.last_correct ? "correct" : "incorrect"}
+                  {t("quiz.lastTime", { result: t(q.last_correct ? "quiz.lastCorrect" : "quiz.lastIncorrect") })}
                 </span>
               )}
             </div>
@@ -153,22 +168,37 @@ export function Quiz({ module, level }: { module: ModuleDetail; level: LearningL
             ) : (
               <div className="grid gap-2 rounded-lg border border-dashed p-3">
                 <p className="text-sm text-muted-foreground">
-                  Answer this one in the 3D explorer: find the structure, select it and check your answer. You will come
-                  back here afterwards.
+                  {t("quiz.in3dBody")}
                 </p>
-                <Button size="sm" className="justify-self-start" asChild>
-                  <Link
-                    href={`/anatomy?quiz=${encodeURIComponent(q.id)}&module=${encodeURIComponent(module.id)}${
-                      q.body_models.length === 1 ? `&model=${q.body_models[0]}` : ""
-                    }`}
+                {onFindIn3D ? (
+                  <Button
+                    size="sm"
+                    className="justify-self-start"
+                    variant={activeQuestion === q.id ? "secondary" : "default"}
+                    onClick={() => onFindIn3D(q)}
                   >
-                    <Crosshair /> Find it in 3D{q.body_models.length === 1 ? ` (${q.body_models[0]} body)` : ""}
-                  </Link>
-                </Button>
+                    <Crosshair />
+                    {activeQuestion === q.id
+                      ? t("quiz.answerInPanel")
+                      : q.body_models.length === 1
+                        ? t("quiz.findIn3dBody", { body: t(q.body_models[0] === "male" ? "common.maleBody" : "common.femaleBody") })
+                        : t("quiz.findIn3d")}
+                  </Button>
+                ) : (
+                  <Button size="sm" className="justify-self-start" asChild>
+                    <Link
+                      href={`/anatomy?quiz=${encodeURIComponent(q.id)}&module=${encodeURIComponent(module.id)}${
+                        q.body_models.length === 1 ? `&model=${q.body_models[0]}` : ""
+                      }`}
+                    >
+                      <Crosshair /> Find it in 3D{q.body_models.length === 1 ? ` (${q.body_models[0]} body)` : ""}
+                    </Link>
+                  </Button>
+                )}
               </div>
             )}
 
-            {answer.isPending && <Loader2 className="size-4 animate-spin text-muted-foreground" aria-label="Checking" />}
+            {answer.isPending && <Loader2 className="size-4 animate-spin text-muted-foreground" aria-label={t("quiz.checking")} />}
             {answer.error && !attempt && (
               <p role="alert" className="text-xs text-destructive">
                 {answer.error.message}
@@ -176,10 +206,10 @@ export function Quiz({ module, level }: { module: ModuleDetail; level: LearningL
             )}
             {attempt && (
               <div className={cn("grid gap-1.5 rounded-lg p-3 text-sm", attempt.result.correct ? "bg-emerald-500/10" : "bg-destructive/10")}>
-                <p className="font-medium">{attempt.result.correct ? "Correct." : "Not quite."}</p>
+                <p className="font-medium">{attempt.result.correct ? t("quiz.correct") : t("quiz.notQuite")}</p>
                 <p className="text-foreground/90">{attempt.result.explanation}</p>
                 <p className="text-[11px] text-muted-foreground">
-                  Source: {attempt.result.references.map((r) => r.citation).join(" ")}
+                  {t("quiz.source", { refs: attempt.result.references.map((r) => r.citation).join(" ") })}
                 </p>
               </div>
             )}
@@ -187,7 +217,7 @@ export function Quiz({ module, level }: { module: ModuleDetail; level: LearningL
 
           <footer className="flex items-center justify-between gap-2">
             <Button size="sm" variant="ghost" disabled={i === 0} onClick={() => setIdx(i - 1)}>
-              <ChevronLeft /> Previous
+              <ChevronLeft /> {t("quiz.previous")}
             </Button>
             {attempt && !attempt.result.correct && q.kind === "mcq" && (
               <Button
@@ -201,11 +231,11 @@ export function Quiz({ module, level }: { module: ModuleDetail; level: LearningL
                   })
                 }
               >
-                Try again
+                {t("quiz.tryAgain")}
               </Button>
             )}
             <Button size="sm" variant={attempt ? "default" : "secondary"} disabled={i >= questions.length - 1} onClick={() => setIdx(i + 1)}>
-              Next <ChevronRight />
+              {t("quiz.next")} <ChevronRight />
             </Button>
           </footer>
         </>

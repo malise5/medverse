@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useId, useMemo, useRef, useState } from "react";
+import { useT } from "@/lib/i18n/client";
 
 /**
  * Single-axis line chart (one measure per chart; compare measures with stacked small
@@ -63,6 +64,7 @@ export function TimeSeriesChart({
   compact?: boolean;
 }) {
   const id = useId();
+  const { t: tr } = useT();
   const svgRef = useRef<SVGSVGElement>(null);
   const playheadRef = useRef<SVGLineElement>(null);
   const H = compact ? 120 : FULL_H;
@@ -131,7 +133,7 @@ export function TimeSeriesChart({
           {title} <span className="font-normal text-muted-foreground">({unit})</span>
         </figcaption>
         {series.length > 1 && (
-          <ul className="flex flex-wrap gap-3 text-xs text-muted-foreground" aria-label="Legend">
+          <ul className="flex flex-wrap gap-3 text-xs text-muted-foreground" aria-label={tr("labs.chart.legend")}>
             {series.map((s, i) => (
               <li key={s.id} className="flex items-center gap-1.5">
                 <svg width="18" height="6" aria-hidden>
@@ -150,7 +152,7 @@ export function TimeSeriesChart({
           viewBox={`0 0 ${W} ${H}`}
           className="w-full touch-none select-none"
           role="img"
-          aria-label={`${title} over time. Use the data table for exact values.`}
+          aria-label={tr("labs.chart.aria", { title })}
           onPointerMove={onMove}
           onPointerLeave={() => setHoverIdx(null)}
         >
@@ -168,7 +170,7 @@ export function TimeSeriesChart({
             </text>
           ))}
           <text x={W - M.right} y={H - 2} textAnchor="end" className="fill-muted-foreground text-[10px]">
-            time ({timeUnit})
+            {tr("labs.chart.time", { unit: timeUnit })}
           </text>
           {clock && (
             <line ref={playheadRef} y1={M.top} y2={H - M.bottom} stroke="currentColor" strokeWidth="1.5"
@@ -205,12 +207,12 @@ export function TimeSeriesChart({
         )}
       </div>
       <button type="button" onClick={() => setShowTable((v) => !v)} className="justify-self-start text-xs text-primary hover:underline">
-        {showTable ? "Hide" : "Show"} data table
+        {showTable ? tr("labs.chart.hideTable") : tr("labs.chart.showTable")}
       </button>
       {showTable && (
         <div className="max-h-48 overflow-auto rounded border">
           <table className="w-full text-xs tabular-nums">
-            <caption className="sr-only">{title}, every tenth sample</caption>
+            <caption className="sr-only">{tr("labs.chart.caption", { title })}</caption>
             <thead className="sticky top-0 bg-card">
               <tr>
                 <th className="px-2 py-1 text-left">t ({timeUnit})</th>

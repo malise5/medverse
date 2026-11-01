@@ -32,6 +32,12 @@ export function buildUrl(path: string, query?: Query): string {
   return `${API_BASE}${path}${qs ? `?${qs}` : ""}`;
 }
 
+/** Interface language sent with every request (Accept-Language); set by the providers. */
+let apiLocale = "en";
+export function setApiLocale(locale: string) {
+  apiLocale = locale;
+}
+
 export async function api<T>(
   path: string,
   init: Omit<RequestInit, "body"> & { query?: Query; json?: unknown } = {},
@@ -42,6 +48,7 @@ export async function api<T>(
     ...rest,
     headers: {
       Accept: "application/json",
+      "Accept-Language": apiLocale,
       ...(json !== undefined ? { "Content-Type": "application/json" } : {}),
       ...headers,
     },

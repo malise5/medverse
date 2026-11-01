@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowRight, BookA, Box, Layers3 } from "lucide-react";
-import Link from "next/link";
+import { Link, useT } from "@/lib/i18n/client";
 import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
@@ -14,21 +14,23 @@ import type { ModuleSummary } from "@/lib/api/types";
 import { cn } from "@/lib/utils";
 
 import { LevelSwitch } from "./level-switch";
-import { LEVELS, useLearningLevel } from "./levels";
+import { SystemIcon } from "./system-icon";
+import { useLearningLevel, useLevelText } from "./levels";
 
-const PRESETS: { label: string; systems: string[] }[] = [
-  { label: "Skeleton", systems: ["skeletal"] },
-  { label: "Skeleton and muscles", systems: ["skeletal", "muscular"] },
-  { label: "Heart, vessels and lungs", systems: ["cardiovascular", "respiratory"] },
-  { label: "Organs of the trunk", systems: ["digestive", "urinary", "respiratory", "cardiovascular"] },
-];
+const PRESETS = [
+  { label: "skeleton", systems: ["skeletal"] },
+  { label: "skeletonMuscles", systems: ["skeletal", "muscular"] },
+  { label: "heartLungs", systems: ["cardiovascular", "respiratory"] },
+  { label: "trunkOrgans", systems: ["digestive", "urinary", "respiratory", "cardiovascular"] },
+] as const;
 
 export function ProgressBar({ answered, correct, total, className }: { answered: number; correct: number; total: number; className?: string }) {
+  const { t } = useT();
   const pct = (n: number) => (total ? (100 * n) / total : 0);
   return (
     <div
       role="img"
-      aria-label={`${correct} of ${total} questions correct, ${answered} answered`}
+      aria-label={t("learn.progressAria", { correct, total, answered })}
       className={cn("flex h-1.5 overflow-hidden rounded-full bg-muted", className)}
     >
       <div className="bg-primary" style={{ width: `${pct(correct)}%` }} />
@@ -38,14 +40,15 @@ export function ProgressBar({ answered, correct, total, className }: { answered:
 }
 
 function ModuleCard({ m }: { m: ModuleSummary }) {
+  const { t } = useT();
   const p = m.progress;
   return (
     <Link
       href={`/learn/${m.id}`}
-      className="group grid gap-3 rounded-xl border bg-card p-4 transition-colors hover:border-primary/50 focus-visible:outline-2 focus-visible:outline-primary"
+      className="group grid gap-3 rounded-2xl border bg-card p-5 shadow-xs transition-all hover:-translate-y-0.5 hover:border-primary/40 hover:shadow-md focus-visible:outline-2 focus-visible:outline-primary"
     >
       <div className="flex items-start gap-3">
-        <span aria-hidden className="mt-1 size-3 shrink-0 rounded-sm" style={{ background: SYSTEM_COLORS[m.id] }} />
+        <SystemIcon system={m.id} />
         <div className="min-w-0 flex-1">
           <h3 className="font-semibold leading-tight group-hover:text-primary">{m.title}</h3>
           {m.latin_name && <p className="text-xs italic text-muted-foreground">{m.latin_name}</p>}
@@ -56,10 +59,11 @@ function ModuleCard({ m }: { m: ModuleSummary }) {
       <div className="mt-auto grid gap-1.5">
         <ProgressBar answered={p.answered} correct={p.correct} total={p.questions} />
         <p className="flex justify-between text-[11px] text-muted-foreground tabular-nums">
+          <span>{t("learn.quizProgress", { correct: p.correct, total: p.questions })}</span>
           <span>
-            Quiz: {p.correct}/{p.questions} correct
+            {m.translation === "partial" && <span className="mr-2 text-primary/80">{t("learn.partlyTranslated")}</span>}
+            {m.mesh_count ? t("learn.structuresIn3d", { count: m.structure_count }) : t("learn.describedOnly")}
           </span>
-          <span>{m.mesh_count ? `${m.structure_count} structures in 3D` : "Described only"}</span>
         </p>
       </div>
     </Link>
@@ -67,6 +71,7 @@ function ModuleCard({ m }: { m: ModuleSummary }) {
 }
 
 function BodyBuilder({ modules }: { modules: ModuleSummary[] }) {
+  const { t, tp } = useT();
   const [chosen, setChosen] = useState<string[]>(["skeletal"]);
   const toggle = (id: string) => setChosen((c) => (c.includes(id) ? c.filter((x) => x !== id) : [...c, id]));
   const href = `/anatomy?systems=${encodeURIComponent(chosen.join(","))}`;
@@ -74,14 +79,14 @@ function BodyBuilder({ modules }: { modules: ModuleSummary[] }) {
     <Card>
       <CardHeader className="gap-1">
         <CardTitle className="flex items-center gap-2 text-base">
-          <Layers3 className="size-4 text-primary" aria-hidden /> Build the body, one system at a time
+          <Layers3 className="size-4 text-primary" aria-hidden /> {t("learn.builderTitle")}
         </CardTitle>
         <p className="text-sm text-muted-foreground">
-          Choose the systems to show, then open them together in the 3D explorer to see how they fit and overlap.
+          {t("learn.builderIntro")}
         </p>
       </CardHeader>
       <CardContent className="grid gap-3">
-        <div className="flex flex-wrap gap-1.5" role="group" aria-label="Systems to show">
+        <div className="flex flex-wrap gap-1.5" role="group" aria-label={t("learn.systemsToShow")}>
           {modules.map((m) => {
             const on = chosen.includes(m.id);
             return (
@@ -103,20 +108,20 @@ function BodyBuilder({ modules }: { modules: ModuleSummary[] }) {
           })}
         </div>
         <div className="flex flex-wrap items-center gap-2">
-          <span className="text-xs text-muted-foreground">Presets:</span>
+          <span className="text-xs text-muted-foreground">{t("learn.presets")}</span>
           {PRESETS.map((p) => (
-            <Button key={p.label} size="xs" variant="ghost" onClick={() => setChosen(p.systems)}>
-              {p.label}
+            <Button key={p.label} size="xs" variant="ghost" onClick={() => setChosen([...p.systems])}>
+              {t(`learn.presetNames.${p.label}`)}
             </Button>
           ))}
         </div>
         <Button className="justify-self-start" disabled={!chosen.length} asChild={chosen.length > 0}>
           {chosen.length ? (
             <Link href={href}>
-              <Box /> View {chosen.length} system{chosen.length > 1 ? "s" : ""} in 3D
+              <Box /> {tp("learn.viewSystems", chosen.length)}
             </Link>
           ) : (
-            <span>Choose at least one system</span>
+            <span>{t("learn.chooseOne")}</span>
           )}
         </Button>
       </CardContent>
@@ -125,6 +130,8 @@ function BodyBuilder({ modules }: { modules: ModuleSummary[] }) {
 }
 
 export function LearningHub() {
+  const { t } = useT();
+  const levelText = useLevelText();
   const modules = useLearningModules();
   const [level, setLevel] = useLearningLevel();
   const totals = (modules.data ?? []).reduce(
@@ -136,37 +143,33 @@ export function LearningHub() {
     <div className="mx-auto grid max-w-7xl gap-6 p-4 md:p-6">
       <header className="grid gap-3 md:grid-cols-[1fr_auto] md:items-end">
         <div className="grid gap-1">
-          <h1 className="text-2xl font-semibold">Body systems</h1>
-          <p className="max-w-3xl text-sm text-muted-foreground">
-            Study the human body system by system. Every module is written at three levels, uses the international
-            anatomical terminology (Terminologia Anatomica 2) with Latin names, gives measurements in SI units, links
-            each organ to the 3D model and ends with a quiz.
-          </p>
+          <h1 className="text-2xl font-semibold">{t("learn.title")}</h1>
+          <p className="max-w-3xl text-sm text-muted-foreground">{t("learn.intro")}</p>
         </div>
         <div className="grid gap-1 justify-self-start md:justify-self-end">
-          <span className="text-xs text-muted-foreground">Your level: {LEVELS.find((l) => l.id === level)?.hint}</span>
+          <span className="text-xs text-muted-foreground">{t("learn.yourLevel", { hint: levelText.hint(level) })}</span>
           <LevelSwitch value={level} onChange={setLevel} />
         </div>
       </header>
 
-      {modules.isError && <p role="alert" className="text-sm text-destructive">Could not load the learning modules.</p>}
+      {modules.isError && <p role="alert" className="text-sm text-destructive">{t("learn.loadError")}</p>}
 
       <div className="grid gap-4 lg:grid-cols-[1fr_20rem]">
         {modules.data ? <BodyBuilder modules={modules.data} /> : <Skeleton className="h-48" />}
         <Card>
           <CardHeader>
-            <CardTitle className="text-base">Your progress</CardTitle>
+            <CardTitle className="text-base">{t("learn.yourProgress")}</CardTitle>
           </CardHeader>
           <CardContent className="grid gap-3">
             <p className="text-3xl font-semibold tabular-nums">
               {totals.c}
-              <span className="text-base font-normal text-muted-foreground"> / {totals.q} correct</span>
+              <span className="text-base font-normal text-muted-foreground"> {t("learn.correctOf", { total: totals.q })}</span>
             </p>
             <ProgressBar answered={totals.a} correct={totals.c} total={totals.q} />
-            <p className="text-xs text-muted-foreground">{totals.a} questions attempted. Your latest answer to each question counts.</p>
+            <p className="text-xs text-muted-foreground">{t("learn.attempted", { count: totals.a })}</p>
             <Button variant="secondary" size="sm" className="justify-self-start" asChild>
               <Link href="/learn/glossary">
-                <BookA /> Glossary of terms
+                <BookA /> {t("learn.glossaryButton")}
               </Link>
             </Button>
           </CardContent>
@@ -175,7 +178,7 @@ export function LearningHub() {
 
       <section aria-labelledby="modules-h" className="grid gap-3">
         <h2 id="modules-h" className="text-lg font-semibold">
-          Modules
+          {t("learn.modules")}
         </h2>
         <div className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3">
           {modules.data
@@ -184,7 +187,7 @@ export function LearningHub() {
         </div>
       </section>
 
-      <EducationalDisclaimer text="Learning content is written from cited standard references and is a draft pending review by credentialed anatomists. It is for education only." />
+      <EducationalDisclaimer text={t("learn.disclaimer")} />
     </div>
   );
 }

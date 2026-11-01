@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowLeft, Search } from "lucide-react";
-import Link from "next/link";
+import { Link, useT } from "@/lib/i18n/client";
 import { useMemo, useState } from "react";
 
 import { Input } from "@/components/ui/input";
@@ -26,6 +26,7 @@ export function filterGlossary(entries: GlossaryEntry[], query: string, moduleId
 
 export function Glossary() {
   const g = useGlossary();
+  const { t, tp } = useT();
   const [query, setQuery] = useState("");
   const [moduleId, setModuleId] = useState("");
   const modules = useMemo(
@@ -45,14 +46,11 @@ export function Glossary() {
   return (
     <div className="mx-auto grid max-w-5xl gap-5 p-4 md:p-6">
       <Link href="/learn" className="flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground">
-        <ArrowLeft className="size-3.5" /> Body systems
+        <ArrowLeft className="size-3.5" /> {t("module.back")}
       </Link>
       <header className="grid gap-1">
-        <h1 className="text-2xl font-semibold">Glossary</h1>
-        <p className="max-w-3xl text-sm text-muted-foreground">
-          Key anatomical terms from every module, with the Terminologia Anatomica (Latin) term and the Greek or Latin
-          word roots. Knowing the roots makes new terms easier to understand, whatever your first language.
-        </p>
+        <h1 className="text-2xl font-semibold">{t("glossary.title")}</h1>
+        <p className="max-w-3xl text-sm text-muted-foreground">{t("glossary.intro")}</p>
       </header>
 
       <div className="flex flex-col gap-2 sm:flex-row">
@@ -62,19 +60,19 @@ export function Glossary() {
             type="search"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search terms, Latin names or definitions"
-            aria-label="Search the glossary"
+            placeholder={t("glossary.search")}
+            aria-label={t("glossary.searchAria")}
             className="pl-8"
           />
         </div>
         <select
-          aria-label="Filter by body system"
+          aria-label={t("glossary.filter")}
           value={moduleId}
           onChange={(e) => setModuleId(e.target.value)}
           className="h-8 rounded-md border border-input bg-input/30 px-2 text-sm"
         >
           <option value="" className="bg-popover">
-            All body systems
+            {t("glossary.allSystems")}
           </option>
           {modules.map(([id, title]) => (
             <option key={id} value={id} className="bg-popover">
@@ -88,15 +86,15 @@ export function Glossary() {
         <Skeleton className="h-96" />
       ) : g.isError ? (
         <p role="alert" className="text-sm text-destructive">
-          Could not load the glossary.
+          {t("glossary.loadError")}
         </p>
       ) : (
         <>
           <p className="text-xs text-muted-foreground" aria-live="polite">
-            {count} term{count === 1 ? "" : "s"}
+            {tp("glossary.terms", count)}
           </p>
           {groups.map(([letter, list]) => (
-            <section key={letter} aria-label={`Terms starting with ${letter}`} className="grid gap-2">
+            <section key={letter} aria-label={t("glossary.startingWith", { letter })} className="grid gap-2">
               <h2 className="sticky top-0 z-[1] bg-background/90 py-1 text-sm font-semibold text-primary backdrop-blur">{letter}</h2>
               <dl className="grid gap-2 md:grid-cols-2">
                 {list.map((e) => (
@@ -118,7 +116,7 @@ export function Glossary() {
               </dl>
             </section>
           ))}
-          {count === 0 && <p className="text-sm text-muted-foreground">No terms match your search.</p>}
+          {count === 0 && <p className="text-sm text-muted-foreground">{t("glossary.noMatch")}</p>}
         </>
       )}
     </div>

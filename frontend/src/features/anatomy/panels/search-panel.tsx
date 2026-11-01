@@ -6,6 +6,7 @@ import { useDeferredValue, useState } from "react";
 import { Input } from "@/components/ui/input";
 import { useSearch } from "@/lib/api/queries";
 import type { AnatomicalSystem } from "@/lib/api/types";
+import { useT } from "@/lib/i18n/client";
 import { cn } from "@/lib/utils";
 
 import { SYSTEM_COLORS } from "../engine/palette";
@@ -42,6 +43,7 @@ export function SearchPanel({
   onSelectSystem?: (systemId: string) => void;
 }) {
   const [q, setQ] = useState("");
+  const { t } = useT();
   const deferred = useDeferredValue(q);
   const results = useSearch(deferred);
   const hits = deferred.trim().length >= 2 ? (results.data ?? []) : [];
@@ -53,8 +55,8 @@ export function SearchPanel({
         <Search className="absolute left-2.5 top-1/2 size-4 -translate-y-1/2 text-muted-foreground" />
         <Input
           role="searchbox"
-          aria-label="Search anatomical structures"
-          placeholder="Search structures, synonyms, Latin…"
+          aria-label={t("explorer.search.aria")}
+          placeholder={t("explorer.search.placeholder")}
           value={q}
           onChange={(e) => setQ(e.target.value)}
           className="pl-8 pr-8"
@@ -62,7 +64,7 @@ export function SearchPanel({
         {q && (
           <button
             type="button"
-            aria-label="Clear search"
+            aria-label={t("explorer.search.clear")}
             onClick={() => setQ("")}
             className="absolute right-2 top-1/2 -translate-y-1/2 text-muted-foreground hover:text-foreground"
           >
@@ -70,12 +72,12 @@ export function SearchPanel({
           </button>
         )}
       </div>
-      {results.isError && <p className="text-xs text-destructive">Search failed. Try again.</p>}
+      {results.isError && <p className="text-xs text-destructive">{t("explorer.search.failed")}</p>}
       {deferred.trim().length >= 2 && !results.isFetching && hits.length === 0 && !systemHits.length && (
-        <p className="px-1 text-xs text-muted-foreground">No structures match “{deferred}”.</p>
+        <p className="px-1 text-xs text-muted-foreground">{t("explorer.search.noMatch", { q: deferred })}</p>
       )}
       {systemHits.length > 0 && (
-        <ul className="grid gap-0.5" aria-label="Matching body systems">
+        <ul className="grid gap-0.5" aria-label={t("explorer.search.systems")}>
           {systemHits.map((sys) => (
             <li key={sys.id}>
               <button
@@ -85,13 +87,13 @@ export function SearchPanel({
               >
                 <span aria-hidden className="size-2.5 shrink-0 rounded-sm" style={{ background: SYSTEM_COLORS[sys.id] }} />
                 <span className="flex-1 truncate">{sys.name}</span>
-                <span className="text-[10px] text-muted-foreground">whole system · {sys.structure_count}</span>
+                <span className="text-[10px] text-muted-foreground">{t("explorer.search.wholeSystem", { count: sys.structure_count })}</span>
               </button>
             </li>
           ))}
         </ul>
       )}
-      <ul className={cn("grid gap-0.5", results.isFetching && "opacity-70")} aria-label="Search results">
+      <ul className={cn("grid gap-0.5", results.isFetching && "opacity-70")} aria-label={t("explorer.search.results")}>
         {hits.map((h) => (
           <li key={h.id}>
             <button
@@ -108,13 +110,13 @@ export function SearchPanel({
                 <span className="block truncate">{h.name}</span>
                 {h.matched_text.toLowerCase() !== h.name.toLowerCase() && (
                   <span className="block truncate text-xs text-muted-foreground">
-                    matched “{h.matched_text}”
+                    {t("explorer.search.matched", { text: h.matched_text })}
                   </span>
                 )}
               </span>
               {!h.has_geometry && (
-                <span className="text-[10px] text-muted-foreground" title="No 3D mesh available">
-                  no mesh
+                <span className="text-[10px] text-muted-foreground" title={t("explorer.search.noMeshTitle")}>
+                  {t("explorer.search.noMesh")}
                 </span>
               )}
             </button>

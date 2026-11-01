@@ -4,6 +4,7 @@ import { useEffect } from "react";
 
 import { useWorkspace } from "@/features/anatomy/store";
 import type { AudienceLevel, LearningLevel } from "@/lib/api/types";
+import { useT } from "@/lib/i18n/client";
 
 /** The three study levels of the learning modules, in order of depth. */
 export const LEVELS: { id: LearningLevel; label: string; hint: string }[] = [
@@ -14,6 +15,15 @@ export const LEVELS: { id: LearningLevel; label: string; hint: string }[] = [
 
 export function levelLabel(level: string): string {
   return LEVELS.find((l) => l.id === level)?.label ?? level;
+}
+
+/** Level names and hints in the interface language. */
+export function useLevelText() {
+  const { t } = useT();
+  return {
+    label: (level: LearningLevel) => t(`levels.${level}.label`),
+    hint: (level: LearningLevel) => t(`levels.${level}.hint`),
+  };
 }
 
 /** Workspace content levels deeper than "clinical" read the clinical module text. */

@@ -126,6 +126,9 @@ class ModuleSummary(BaseModel):
     id: str
     title: str
     tagline: str
+    # Translation of this module into the requested language: "source" (English),
+    # "complete", "partial" (the rest is shown in English) or "missing".
+    translation: str = "source"
     latin_name: str | None
     display_order: int
     structure_count: int
@@ -157,6 +160,7 @@ class ModuleDetail(BaseModel):
     id: str
     title: str
     tagline: str
+    translation: str = "source"  # see ModuleSummary.translation
     latin_name: str | None
     objectives: list[str]
     overview: LevelText

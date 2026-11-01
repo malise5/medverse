@@ -1,6 +1,7 @@
 "use client";
 
 import type { AnatomicalSystem } from "@/lib/api/types";
+import { type MessageKey, useT } from "@/lib/i18n/client";
 import { cn } from "@/lib/utils";
 
 import { useWorkspace } from "../store";
@@ -122,15 +123,13 @@ export function applyHeadPreset(
 
 /** Grid of layer presets for a study region, with an optional note under it. */
 export function LayerPresets({
-  id,
-  title,
+  region,
   presets,
   systems,
   onFocus,
   children,
 }: {
-  id: string;
-  title: string;
+  region: "head" | "neck";
   presets: HeadPreset[];
   systems: AnatomicalSystem[];
   /** Frames the first of the given structures that exists in the body on screen. */
@@ -139,12 +138,19 @@ export function LayerPresets({
 }) {
   const active = useWorkspace((s) => s.headPreset);
   const setActive = useWorkspace((s) => s.setHeadPreset);
+  const { t } = useT();
+  const id = `${region}-layers`;
+  const text = (p: HeadPreset, field: "label" | "hint") => {
+    const key = `explorer.layers.presets.${region}.${p.id}.${field}`;
+    const v = t(key as MessageKey);
+    return v === key ? p[field] : v;
+  };
   return (
     <section aria-labelledby={`${id}-h`} className="grid gap-2">
       <h3 id={`${id}-h`} className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-        {title}
+        {t(region === "head" ? "explorer.layers.headTitle" : "explorer.layers.neckTitle")}
       </h3>
-      <div className="grid grid-cols-2 gap-1.5">
+      <div className="grid grid-cols-[repeat(2,minmax(0,1fr))] gap-1.5">
         {presets.map((p) => (
           <button
             key={p.id}
@@ -155,19 +161,18 @@ export function LayerPresets({
               setActive(p.id);
             }}
             className={cn(
-              "grid rounded-md border px-2 py-1.5 text-left transition-colors",
+              "grid min-w-0 rounded-md border px-2 py-1.5 text-left transition-colors [overflow-wrap:anywhere]",
               active === p.id ? "border-primary/60 bg-primary/10" : "hover:bg-accent/50",
             )}
           >
-            <span className="text-sm font-medium">{p.label}</span>
-            <span className="text-[11px] leading-tight text-muted-foreground">{p.hint}</span>
+            <span className="text-sm font-medium">{text(p, "label")}</span>
+            <span className="text-[11px] leading-tight text-muted-foreground">{text(p, "hint")}</span>
           </button>
         ))}
       </div>
       {children}
       <p className="text-[11px] text-muted-foreground">
-        Fine-tune below: each system can be hidden or faded, and Section plane (bottom bar) cuts the region
-        in any anatomical plane.
+        {t("explorer.layers.fineTune")}
       </p>
     </section>
   );
@@ -176,14 +181,14 @@ export function LayerPresets({
 /** Note shown on the female body: which parts are female-donor and which are fitted. */
 export function FittedNotice({ children }: { children: React.ReactNode }) {
   const bodyModel = useWorkspace((s) => s.bodyModel);
+  const { t } = useT();
   if (bodyModel !== "female") return null;
   return (
     <p className="rounded-md border border-dashed p-2 text-[11px] text-muted-foreground">
       {children}{" "}
       <button type="button" className="text-primary hover:underline" onClick={() => useWorkspace.getState().setBodyModel("male")}>
-        Switch to the male body
-      </button>{" "}
-      to compare.
+        {t("explorer.layers.compareMale")}
+      </button>
     </p>
   );
 }
@@ -195,14 +200,10 @@ export function HeadLayers({
   systems: AnatomicalSystem[];
   onFocus: (structureIds: string[]) => void;
 }) {
+  const { t } = useT();
   return (
-    <LayerPresets id="head-layers" title="Head layers" presets={HEAD_PRESETS} systems={systems} onFocus={onFocus}>
-      <FittedNotice>
-        The brain, eyes, mouth, teeth, salivary glands, larynx, tonsils and skin of this head come from a
-        female donor (Human Reference Atlas, Visible Human Female). The skull, ossicles, muscles, cranial
-        nerves, head vessels and lymph nodes are Z-Anatomy models of a male body fitted to this head (CC
-        BY-SA 4.0), and the meninges are schematic: an approximation, not female anatomy.
-      </FittedNotice>
+    <LayerPresets region="head" presets={HEAD_PRESETS} systems={systems} onFocus={onFocus}>
+      <FittedNotice>{t("explorer.layers.headFitted")}</FittedNotice>
     </LayerPresets>
   );
 }

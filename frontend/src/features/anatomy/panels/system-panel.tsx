@@ -6,6 +6,7 @@ import { useMemo } from "react";
 import { Button } from "@/components/ui/button";
 import { useCirculation, useModels } from "@/lib/api/queries";
 import type { AnatomicalSystem, StructureIndex } from "@/lib/api/types";
+import { useT } from "@/lib/i18n/client";
 
 import { SYSTEM_COLORS } from "../engine/palette";
 import { useWorkspace } from "../store";
@@ -32,6 +33,7 @@ export function SystemPanel({
   const playback = useWorkspace((s) => s.playback);
   const ws = useWorkspace.getState();
   const models = useModels();
+  const { t } = useT();
   const isCirculatory = systemId === "cardiovascular";
   const routesAvailable = useWorkspace((s) => s.bodyModel === "male");
   const circ = useCirculation(isCirculatory ? HEART : null, showCirculation && routesAvailable);
@@ -54,10 +56,10 @@ export function SystemPanel({
           <div className="min-w-0 flex-1">
             <h2 className="text-lg font-semibold leading-tight">{system.name}</h2>
             <p className="text-xs text-muted-foreground">
-              Whole system · {system.structure_count} structures · {system.mesh_count} 3D meshes
+              {t("explorer.system.summary", { structures: system.structure_count, meshes: system.mesh_count })}
             </p>
           </div>
-          <Button size="icon-sm" variant="ghost" aria-label="Close system view" onClick={() => ws.setSystemFocus(null)}>
+          <Button size="icon-sm" variant="ghost" aria-label={t("explorer.system.close")} onClick={() => ws.setSystemFocus(null)}>
             <X />
           </Button>
         </div>
@@ -73,17 +75,25 @@ export function SystemPanel({
             className="justify-self-start"
             onClick={() => onSelect(model.linked_structure_ids[0])}
           >
-            <Play /> {playback?.modelId === model.id ? "Open controls on" : "Simulate on"} the{" "}
-            {model.domain === "respiratory" ? "lungs" : model.domain === "nervous" ? "brain" : "heart"}
+            <Play />{" "}
+            {t(playback?.modelId === model.id ? "explorer.system.openControlsOn" : "explorer.system.simulateOn", {
+              organ: t(
+                model.domain === "respiratory"
+                  ? "explorer.system.organs.lungs"
+                  : model.domain === "nervous"
+                    ? "explorer.system.organs.brain"
+                    : "explorer.system.organs.heart",
+              ),
+            })}
           </Button>
         </section>
       )}
 
       {isCirculatory && routesAvailable && (
         <section className="grid gap-2">
-          <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Blood vessels</h4>
-          <Toggle id="sys-vessels" label="Show vessel routes from the heart" checked={showCirculation} onChange={ws.setShowCirculation} />
-          <Toggle id="sys-flow" label="Animate blood flow" checked={flow} onChange={ws.setFlowAnimation} disabled={!showCirculation} />
+          <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("explorer.system.vessels")}</h4>
+          <Toggle id="sys-vessels" label={t("explorer.system.showRoutes")} checked={showCirculation} onChange={ws.setShowCirculation} />
+          <Toggle id="sys-flow" label={t("explorer.bodyMap.flow")} checked={flow} onChange={ws.setFlowAnimation} disabled={!showCirculation} />
           {showCirculation &&
             (circ.isLoading ? (
               <Loader2 className="size-4 animate-spin text-muted-foreground" />
@@ -95,7 +105,7 @@ export function SystemPanel({
 
       <section className="grid gap-1.5">
         <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-          Main groups ({roots.length})
+          {t("explorer.system.mainGroups", { count: roots.length })}
         </h4>
         <div className="flex max-h-72 flex-wrap overflow-auto">
           {roots.map((r) => (

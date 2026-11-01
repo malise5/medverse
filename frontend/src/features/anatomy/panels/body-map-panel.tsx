@@ -6,6 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { useCirculation } from "@/lib/api/queries";
+import { useT } from "@/lib/i18n/client";
 import type { Circulation, StructureRef } from "@/lib/api/types";
 
 import { meshColor } from "../engine/palette";
@@ -72,47 +73,36 @@ export function CirculationSummary({ c, onSelect }: { c: Circulation; onSelect: 
   const nVein = Object.keys(c.veins).length;
   const artery = meshColor("cardiovascular", "artery");
   const vein = meshColor("cardiovascular", "vein");
+  const { t } = useT();
 
   if (c.mode === "none") {
     return (
-      <p className="text-sm text-muted-foreground">
-        No blood vessels in the 3D model touch this structure, so no route can be shown. Its blood
-        supply may still be described under Anatomy when curated content exists.
-      </p>
+      <p className="text-sm text-muted-foreground">{t("explorer.bodyMap.none")}</p>
     );
   }
   return (
     <div className="grid gap-3">
       <p className="text-sm">
-        {c.mode === "whole_circulation" ? (
-          <>
-            The heart pumps blood out through <b>{nArt}</b> artery segments (red), and{" "}
-            <b>{nVein}</b> vein segments (blue) bring it back. Arteries carry blood away from the
-            heart; veins return it.
-          </>
-        ) : (
-          <>
-            Blood reaches this structure from the heart through an arterial route of <b>{nArt}</b>{" "}
-            segments (red) and returns through a venous route of <b>{nVein}</b> segments (blue).
-          </>
-        )}
+        {t(c.mode === "whole_circulation" ? "explorer.bodyMap.whole" : "explorer.bodyMap.route", {
+          arteries: nArt,
+          veins: nVein,
+        })}
       </p>
       <VesselList
-        title={c.mode === "whole_circulation" ? "Arteries leaving the heart" : "Arteries touching it"}
+        title={t(c.mode === "whole_circulation" ? "explorer.bodyMap.arteriesLeaving" : "explorer.bodyMap.arteriesTouching")}
         color={artery}
         items={c.contact_arteries}
         onSelect={onSelect}
       />
       <VesselList
-        title={c.mode === "whole_circulation" ? "Veins entering the heart" : "Veins touching it"}
+        title={t(c.mode === "whole_circulation" ? "explorer.bodyMap.veinsEntering" : "explorer.bodyMap.veinsTouching")}
         color={vein}
         items={c.contact_veins}
         onSelect={onSelect}
       />
       {c.unrouted_vessels > 0 && (
         <p className="text-xs text-muted-foreground">
-          {c.unrouted_vessels} touching vessel segment(s) could not be traced back to the heart
-          (gaps in the 3D meshes).
+          {t("explorer.bodyMap.unrouted", { count: c.unrouted_vessels })}
         </p>
       )}
       <Button
@@ -121,16 +111,15 @@ export function CirculationSummary({ c, onSelect }: { c: Circulation; onSelect: 
         className="justify-self-start"
         onClick={() => requestFocus([...c.organ_mesh_ids, ...Object.keys(c.arteries), ...Object.keys(c.veins)])}
       >
-        <ZoomOut /> Zoom out to the whole route
+        <ZoomOut /> {t("explorer.bodyMap.zoomOut")}
       </Button>
       <p className="text-xs text-muted-foreground">
-        The moving brightness shows the direction of blood flow (away from the heart in arteries,
-        back in veins), not its real speed.
+        {t("explorer.bodyMap.flowNote")}
       </p>
       <p className="flex gap-1.5 rounded-md border border-dashed p-2 text-[11px] text-muted-foreground">
         <Info className="mt-0.5 size-3.5 shrink-0" />
         <span>
-          <Badge variant="outline" className="mr-1 text-[10px]">Inferred from 3D geometry</Badge>
+          <Badge variant="outline" className="mr-1 text-[10px]">{t("explorer.bodyMap.inferred")}</Badge>
           {c.method}
         </span>
       </p>
@@ -148,18 +137,19 @@ export function BodyMapPanel({ structureId, onSelect }: { structureId: string; o
   // Routes are inferred from the male body's mesh contact graph (see 3d-asset-pipeline.md).
   const routesAvailable = useWorkspace((s) => s.bodyModel === "male");
   const circ = useCirculation(structureId, showCirculation && routesAvailable);
+  const { t, tp } = useT();
 
   return (
     <div className="grid gap-4">
       <section className="grid gap-2">
-        <Toggle id="bm-spot" label="Spotlight (fade the rest of the body)" checked={spotlight} onChange={ws.setSpotlight} />
-        <Toggle id="bm-parts" label="Colour and label parts" checked={showParts} onChange={ws.setShowParts} />
-        <Toggle id="bm-vessels" label="Show blood vessel routes" checked={showCirculation} onChange={ws.setShowCirculation} />
-        <Toggle id="bm-flow" label="Animate blood flow" checked={flow} onChange={ws.setFlowAnimation} disabled={!showCirculation} />
+        <Toggle id="bm-spot" label={t("explorer.bodyMap.spotlight")} checked={spotlight} onChange={ws.setSpotlight} />
+        <Toggle id="bm-parts" label={t("explorer.bodyMap.parts")} checked={showParts} onChange={ws.setShowParts} />
+        <Toggle id="bm-vessels" label={t("explorer.bodyMap.vessels")} checked={showCirculation} onChange={ws.setShowCirculation} />
+        <Toggle id="bm-flow" label={t("explorer.bodyMap.flow")} checked={flow} onChange={ws.setFlowAnimation} disabled={!showCirculation} />
       </section>
 
       <section className="grid gap-1.5">
-        <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Parts</h4>
+        <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("explorer.bodyMap.partsTitle")}</h4>
         {parts.length ? (
           <ul className="grid gap-0.5">
             {parts.map((p) => (
@@ -171,34 +161,31 @@ export function BodyMapPanel({ structureId, onSelect }: { structureId: string; o
                 >
                   <span className="size-2.5 shrink-0 rounded-sm" style={{ background: p.color }} aria-hidden />
                   <span className="flex-1 truncate first-letter:uppercase">{p.name}</span>
-                  <span className="text-[10px] text-muted-foreground">{p.meshIds.length} mesh{p.meshIds.length === 1 ? "" : "es"}</span>
+                  <span className="text-[10px] text-muted-foreground">{tp("explorer.bodyMap.meshes", p.meshIds.length)}</span>
                 </button>
               </li>
             ))}
           </ul>
         ) : (
-          <p className="text-sm text-muted-foreground">This structure has no separately modelled parts.</p>
+          <p className="text-sm text-muted-foreground">{t("explorer.bodyMap.noParts")}</p>
         )}
       </section>
 
       <section className="grid gap-1.5">
-        <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Blood vessels</h4>
+        <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("explorer.bodyMap.vesselsTitle")}</h4>
         {!routesAvailable ? (
-          <p className="text-sm text-muted-foreground">
-            Vessel routes are inferred from the male body&apos;s 3D vessel contacts and are not yet available
-            for the female body. Its named arteries and veins can still be selected in the cardiovascular layer.
-          </p>
+          <p className="text-sm text-muted-foreground">{t("explorer.bodyMap.femaleRoutes")}</p>
         ) : !showCirculation ? (
-          <p className="text-sm text-muted-foreground">Turn on “Show blood vessel routes” to trace them.</p>
+          <p className="text-sm text-muted-foreground">{t("explorer.bodyMap.turnOnRoutes")}</p>
         ) : circ.isLoading ? (
           <Loader2 className="size-4 animate-spin text-muted-foreground" />
         ) : circ.data ? (
           <CirculationSummary c={circ.data} onSelect={onSelect} />
         ) : (
-          <p className="text-sm text-destructive">Could not load vessel routes.</p>
+          <p className="text-sm text-destructive">{t("explorer.bodyMap.routesError")}</p>
         )}
         {routesAvailable && showCirculation && !spotlight && (
-          <p className="text-xs text-muted-foreground">Turn on Spotlight to see the route clearly.</p>
+          <p className="text-xs text-muted-foreground">{t("explorer.bodyMap.spotlightHint")}</p>
         )}
       </section>
     </div>

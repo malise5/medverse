@@ -1,5 +1,6 @@
 "use client";
 
+import { Info, X } from "lucide-react";
 import dynamic from "next/dynamic";
 import { useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -8,6 +9,7 @@ import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useCirculation, useLearningModule, useModels, useStructure } from "@/lib/api/queries";
+import { useT } from "@/lib/i18n/client";
 
 import { ProcessStage } from "@/features/biolab/process-stage";
 
@@ -26,13 +28,32 @@ import { useWorkspace } from "./store";
 import { useAnatomyData } from "./use-anatomy-data";
 
 const HEART = "FMA:7088";
+
+/** Close button for the overlay panels of the embedded workspace. */
+function PanelClose({ label, onClick }: { label: string; onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      aria-label={label}
+      onClick={onClick}
+      className="absolute right-2 top-2 z-10 grid size-7 place-items-center rounded-md text-muted-foreground hover:bg-accent hover:text-foreground"
+    >
+      <X className="size-4" />
+    </button>
+  );
+}
 /** Validated dark-surface categorical palette (fixed order, never cycled). */
 const PART_COLORS = ["#3987e5", "#d95926", "#199e70", "#c98500", "#d55181", "#008300", "#9085e9", "#e66767"];
+
+function EngineLoading() {
+  const { t } = useT();
+  return <div className="grid h-full place-items-center text-sm text-muted-foreground">{t("explorer.starting")}</div>;
+}
 
 // WebGL only exists in the browser.
 const AnatomyCanvas = dynamic(() => import("./engine/anatomy-canvas"), {
   ssr: false,
-  loading: () => <div className="grid h-full place-items-center text-sm text-muted-foreground">Starting 3D engine…</div>,
+  loading: () => <EngineLoading />,
 });
 
 function useIsDesktop() {
@@ -47,16 +68,23 @@ function useIsDesktop() {
   return desktop;
 }
 
-export function AnatomyWorkspace() {
+/**
+ * The 3D anatomy explorer. `embedded` runs it inside another page (a learning module's
+ * lab pane): the explorer and information panels become overlays inside the viewer so
+ * the 3D view keeps the room, and the explorer starts closed.
+ */
+export function AnatomyWorkspace({ embedded = false }: { embedded?: boolean } = {}) {
   const data = useAnatomyData();
+  const { t } = useT();
   const selectedId = useWorkspace((s) => s.selectedId);
   const multi = useWorkspace((s) => s.multiSelection);
   const audience = useWorkspace((s) => s.audience);
   const select = useWorkspace((s) => s.select);
   const detail = useStructure(selectedId, audience);
   const desktop = useIsDesktop();
-  const [leftOpen, setLeftOpen] = useState(true);
-  const [rightOpen, setRightOpen] = useState(true);
+  const [leftOpen, setLeftOpen] = useState(!embedded);
+  // Embedded: the information panel opens on request (it would cover a narrow viewer).
+  const [rightOpen, setRightOpen] = useState(!embedded);
 
   // Selection may be a compound structure (e.g. "heart"); its meshes come from the API.
   // Until the detail loads, fall back to meshes owned directly by the structure.
@@ -76,9 +104,9 @@ export function AnatomyWorkspace() {
   const selectAndFocus = useCallback(
     (id: string) => {
       select(id);
-      if (!desktop) setRightOpen(true);
+      if (!desktop && !embedded) setRightOpen(true);
     },
-    [select, desktop],
+    [select, desktop, embedded],
   );
 
   // All meshes of a structure, including its parts (for playback bindings).
@@ -298,10 +326,10 @@ export function AnatomyWorkspace() {
       else if (!model) ws.stopPlayback();
       if (!desktop) {
         setLeftOpen(false);
-        setRightOpen(true);
+        if (!embedded) setRightOpen(true);
       }
     },
-    [select, data.systems, manifest, models.data, play, desktop],
+    [select, data.systems, manifest, models.data, play, desktop, embedded],
   );
 
   // /anatomy?system=<id> opens a whole system in spotlight (links from learning modules).
@@ -328,9 +356,9 @@ export function AnatomyWorkspace() {
   const left = (
     <Tabs defaultValue="search" className="flex h-full flex-col">
       <TabsList className="mx-3 mt-3 w-[calc(100%-1.5rem)]">
-        <TabsTrigger value="search">Search</TabsTrigger>
-        <TabsTrigger value="layers">Layers</TabsTrigger>
-        <TabsTrigger value="hierarchy">Hierarchy</TabsTrigger>
+        <TabsTrigger value="search">{t("explorer.tabs.search")}</TabsTrigger>
+        <TabsTrigger value="layers">{t("explorer.tabs.layers")}</TabsTrigger>
+        <TabsTrigger value="hierarchy">{t("explorer.tabs.hierarchy")}</TabsTrigger>
       </TabsList>
       <div className="min-h-0 flex-1 overflow-y-auto p-3">
         <TabsContent value="search">
@@ -366,31 +394,46 @@ export function AnatomyWorkspace() {
 
   return (
     <div className="flex h-full min-h-0 flex-col">
-      <TopToolbar onToggleLeft={() => setLeftOpen((o) => !o)} onToggleRight={() => setRightOpen((o) => !o)} />
+      <TopToolbar
+        compact={embedded}
+        onToggleLeft={() => setLeftOpen((o) => !o)}
+        onToggleRight={() => setRightOpen((o) => !o)}
+      />
       <div className="relative flex min-h-0 flex-1">
         {/* Cell-scale labs take over the whole workspace; closing returns to the head. */}
         {(activeProcess === "signalling" || activeProcess === "growth") && (
           <ProcessStage id={activeProcess} onClose={() => useWorkspace.getState().setActiveProcess(null)} />
         )}
-        {desktop ? (
-          <aside className={cn("w-72 shrink-0 border-r bg-card/40", !leftOpen && "hidden")} aria-label="Explorer">
+        {desktop && !embedded ? (
+          <aside className={cn("w-72 shrink-0 border-r bg-card/40", !leftOpen && "hidden")} aria-label={t("explorer.explorer")}>
             {left}
           </aside>
+        ) : desktop && embedded ? (
+          leftOpen && (
+            <aside
+              aria-label={t("explorer.explorer")}
+              className="absolute inset-y-0 left-0 z-20 w-72 max-w-[85%] border-r bg-background/95 pt-8 shadow-xl backdrop-blur"
+            >
+              <PanelClose label={t("explorer.closeExplorer")} onClick={() => setLeftOpen(false)} />
+              {left}
+            </aside>
+          )
         ) : (
           <Sheet open={leftOpen} onOpenChange={setLeftOpen}>
             <SheetContent side="left" className="w-[85vw] max-w-sm p-0">
-              <SheetTitle className="sr-only">Explorer</SheetTitle>
+              <SheetTitle className="sr-only">{t("explorer.explorer")}</SheetTitle>
               {left}
             </SheetContent>
           </Sheet>
         )}
-        <section className="relative min-w-0 flex-1" aria-label="3D viewer">
+        <section className="relative min-w-0 flex-1" aria-label={t("explorer.viewer")}>
           {data.error ? (
             <p role="alert" className="p-6 text-sm text-destructive">
-              Could not load anatomy data: {data.error.message}
+              {t("explorer.loadError", { error: data.error.message })}
             </p>
           ) : data.manifest && data.systems.length ? (
             <AnatomyCanvas
+              compactCredits={embedded}
               manifest={data.manifest}
               systems={data.systems}
               names={data.names}
@@ -403,16 +446,43 @@ export function AnatomyWorkspace() {
             <Skeleton className="m-4 h-[calc(100%-2rem)]" />
           )}
           <IdentifyQuizBanner onShow={selectFromList} />
+          {embedded && !rightOpen && !quizHidesNames && (selectedId || systemFocus) && (
+            <button
+              type="button"
+              onClick={() => setRightOpen(true)}
+              className="absolute bottom-3 left-3 z-10 flex max-w-[70%] items-center gap-2 rounded-full border bg-background/90 px-3 py-1.5 text-xs font-medium shadow-lg backdrop-blur transition-colors hover:border-primary/60"
+            >
+              <Info className="size-3.5 shrink-0 text-primary" aria-hidden />
+              <span className="block truncate first-letter:uppercase">
+                {selectedId
+                  ? (detail.data?.id === selectedId ? detail.data.name : data.names.get(selectedId)) ?? t("explorer.structureFallback")
+                  : (data.systems.find((x) => x.id === systemFocus)?.name ?? t("explorer.systemFallback"))}
+              </span>
+              <span className="shrink-0 text-muted-foreground">· {t("explorer.details")}</span>
+            </button>
+          )}
           <ProcessHud />
         </section>
-        {desktop ? (
-          <aside className={cn("w-[22rem] shrink-0 border-l bg-card/40", !rightOpen && "hidden")} aria-label="Structure information">
+        {desktop && !embedded ? (
+          <aside className={cn("w-[22rem] shrink-0 border-l bg-card/40", !rightOpen && "hidden")} aria-label={t("explorer.structureInfo")}>
             {right}
           </aside>
+        ) : desktop && embedded ? (
+          rightOpen &&
+          !quizHidesNames &&
+          (!!selectedId || !!systemFocus) && (
+            <aside
+              aria-label={t("explorer.structureInfo")}
+              className="absolute inset-y-0 right-0 z-20 w-80 max-w-[85%] border-l bg-background/95 pt-8 shadow-xl backdrop-blur"
+            >
+              <PanelClose label={t("explorer.closeInfo")} onClick={() => setRightOpen(false)} />
+              {right}
+            </aside>
+          )
         ) : (
           <Sheet open={rightOpen && !quizHidesNames && (!!selectedId || !!systemFocus)} onOpenChange={setRightOpen}>
             <SheetContent side="bottom" className="h-[70dvh] p-0">
-              <SheetTitle className="sr-only">Structure information</SheetTitle>
+              <SheetTitle className="sr-only">{t("explorer.structureInfo")}</SheetTitle>
               {right}
             </SheetContent>
           </Sheet>
