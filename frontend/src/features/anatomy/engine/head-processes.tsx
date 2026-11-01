@@ -18,6 +18,7 @@ import { PATHWAYS, STEP_SECONDS } from "@/features/biolab/pathways";
 
 import { useWorkspace } from "../store";
 import { along, centerline, cumulativeLengths, orientFrom, type P3 } from "./centerline";
+import { type Region, regionFloor } from "./regions";
 import type { RegisteredMesh } from "./anatomy-scene";
 
 const ARTERIAL = new Color("#ff2b2b");
@@ -106,14 +107,12 @@ function buildVessels(all: RegisteredMesh[], box: Box3, floor: number | null): V
 export function BloodFlow({
   getMeshes,
   getSceneBox,
-  headSpan,
   region,
   version,
 }: {
   getMeshes: () => RegisteredMesh[];
   getSceneBox: () => Box3;
-  headSpan: number;
-  region: "body" | "head";
+  region: Region;
   version: string;
 }) {
   const inst = useRef<InstancedMesh>(null);
@@ -121,7 +120,7 @@ export function BloodFlow({
   const data = useRef<{ vessels: Vessel[]; cells: Cell[] }>({ vessels: [], cells: [] });
   useEffect(() => {
     const box = getSceneBox();
-    const floor = region === "head" && !box.isEmpty() ? box.max.y - headSpan : null;
+    const floor = regionFloor(region, box);
     const vessels = buildVessels(getMeshes(), box, floor);
     const cells = placeCells(vessels);
     data.current = { vessels, cells };
@@ -131,7 +130,7 @@ export function BloodFlow({
       cells.forEach((c, i) => m.setColorAt(i, vessels[c.vi].arterial ? ARTERIAL : VENOUS));
       if (m.instanceColor) m.instanceColor.needsUpdate = true;
     }
-  }, [getMeshes, getSceneBox, headSpan, region, version]);
+  }, [getMeshes, getSceneBox, region, version]);
 
   const tools = useMemo(
     () => ({

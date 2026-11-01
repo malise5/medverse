@@ -144,6 +144,35 @@ def test_schematic_meninges_in_both_bodies(auth_client):
             assert _mesh_ids(auth_client, model, sid), (sid, model)
 
 
+# --- Neck (Z-Anatomy supplement, neck fit for the female body) -----------------------
+
+
+def test_female_neck_fit_is_reported_and_tight():
+    report = json.loads((ZA / "pipeline_report.json").read_text())
+    neck = report["female_neck_fit"]
+    discs = [v["median_mm"] for k, v in neck["anchors"].items() if k.startswith("disc")]
+    assert len(discs) == 6 and max(discs) < 7
+    assert "hyoid" in neck["blend"]
+
+
+def test_neck_structures_in_both_bodies(auth_client):
+    for sid, model, prefix in (
+        ("FMA:13346", "male", "ZAM-"),  # right sternohyoid (missing from BodyParts3D build)
+        ("FMA:65216", "male", "ZAM-"),  # superior trunk of brachial plexus
+        ("FMA:6259", "male", "ZAM-"),  # right sympathetic trunk
+        ("FMA:4762", "male", "ZAM-"),  # left internal jugular vein
+        ("FMA:12525", "female", "ZAF-"),  # seventh cervical vertebra
+        ("FMA:9603", "female", "ZAF-"),  # thyroid gland
+        ("FMA:13408", "female", "ZAF-"),  # right sternocleidomastoid
+    ):
+        ids = _mesh_ids(auth_client, model, sid)
+        assert ids and all(i.startswith(prefix) for i in ids), (sid, model)
+    # the male right internal jugular vein stays BodyParts3D (no duplicate added)
+    assert not any(i.startswith("ZA") for i in _mesh_ids(auth_client, "male", "FMA:4754"))
+    d = auth_client.get("/api/v1/anatomy/structures/FMA:13408").json()
+    assert d["latin_name"] == "Musculus sternocleidomastoideus" and d["content"]
+
+
 def test_manifest_lists_only_bundles_that_exist_on_disk(auth_client):
     root = BACKEND_DIR.parent / "frontend/public"
     for model in ("male", "female"):

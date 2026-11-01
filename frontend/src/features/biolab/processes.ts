@@ -36,7 +36,7 @@ export const PROCESSES: ProcessMeta[] = [
   },
   {
     id: "blood",
-    title: "Blood flow in the head",
+    title: "Blood flow in the head and neck",
     summary: "Red cells stream through the arteries and veins of the head and brain.",
     kind: "scene",
     breadcrumb: ["Head", "Blood vessels"],
@@ -45,11 +45,11 @@ export const PROCESSES: ProcessMeta[] = [
   },
   {
     id: "pathways",
-    title: "Brain pathways at work",
-    summary: "Follow seeing, hearing, moving and touch through the real structures involved.",
+    title: "Pathways at work",
+    summary: "Follow seeing, hearing, moving, touch, swallowing, breathing and the baroreflex through the real structures involved.",
     kind: "scene",
-    breadcrumb: ["Head", "Brain"],
+    breadcrumb: ["Head and neck"],
     basis:
-      "Each pathway lights the structures involved in their anatomical order, with an impulse travelling between them. Routes between structures are drawn schematically (straight arcs), and timing is slowed and not to scale.",
+      "Each pathway lights the structures involved in their anatomical order, with an impulse travelling between them; the notes give typical durations and rates from standard texts. Routes between structures are drawn schematically (straight arcs), and timing is slowed and not to scale.",
   },
 ];

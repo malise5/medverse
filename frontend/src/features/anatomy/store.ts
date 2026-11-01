@@ -74,7 +74,8 @@ export interface IdentifyQuiz {
 }
 
 /** "head" clips the body just below the neck and frames the head (head study mode). */
-export type Region = "body" | "head";
+export type { Region } from "./engine/regions";
+import type { Region } from "./engine/regions";
 
 export interface WorkspaceState {
   /** Which body is shown. Structure IDs are shared by both; mesh IDs are not. */
@@ -274,7 +275,11 @@ export const useWorkspace = create<WorkspaceState>()((set) => ({
   setProcessPlaying: (processPlaying) => set({ processPlaying }),
   setProcessSpeed: (processSpeed) => set({ processSpeed }),
   setRegion: (region) =>
-    set((s) => (s.region === region ? {} : { region, viewCommand: { preset: "anterior", nonce: ++nonce } })),
+    set((s) =>
+      s.region === region
+        ? {}
+        : { region, headPreset: null, viewCommand: { preset: "anterior", nonce: ++nonce } },
+    ),
   requestView: (preset) => set({ viewCommand: { preset, nonce: ++nonce } }),
   requestFocus: (meshIds) => set({ focusCommand: { meshIds, nonce: ++nonce } }),
   reset: () =>

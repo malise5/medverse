@@ -10,6 +10,7 @@ import type { AnatomicalSystem } from "@/lib/api/types";
 import { SYSTEM_COLORS } from "../engine/palette";
 import { useWorkspace } from "../store";
 import { HeadLayers } from "./head-layers";
+import { NeckLayers } from "./neck-layers";
 import { HeadProcessesPanel } from "./head-processes-panel";
 
 const LAYER_STOPS = [
@@ -94,7 +95,8 @@ export function LayersPanel({
   return (
     <div className="grid gap-5">
       {region === "head" && <HeadLayers systems={systems} onFocus={onFocus} />}
-      {region === "head" && <HeadProcessesPanel systems={systems} onFocus={onFocus} />}
+      {region === "neck" && <NeckLayers systems={systems} onFocus={onFocus} />}
+      {region !== "body" && <HeadProcessesPanel systems={systems} onFocus={onFocus} />}
       <DissectionControl systems={systems} />
       <section aria-labelledby="systems-h" className="grid gap-1">
         <h3 id="systems-h" className="mb-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">

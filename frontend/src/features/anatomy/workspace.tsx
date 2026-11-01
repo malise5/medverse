@@ -228,10 +228,11 @@ export function AnatomyWorkspace() {
     if (modelParam === "male" || modelParam === "female") useWorkspace.getState().setBodyModel(modelParam);
   }, [modelParam]);
 
-  // Head study mode: /anatomy?region=head
+  // Region study modes: /anatomy?region=head | neck
   const regionParam = params.get("region");
   useEffect(() => {
-    if (regionParam === "head" || regionParam === "body") useWorkspace.getState().setRegion(regionParam);
+    if (regionParam === "head" || regionParam === "neck" || regionParam === "body")
+      useWorkspace.getState().setRegion(regionParam);
   }, [regionParam]);
 
   // Layer builder: /anatomy?systems=skeletal,muscular shows only the listed systems.

@@ -205,7 +205,7 @@ backend/.venv/bin/python pipeline/bodyparts3d/build.py --source SRC \
    `frontend/public/assets/anatomy/bp3d-4.0/LICENSE-3D-Slicer-Part-B.txt`, and affected
    bundles list both licences.
 
-### Z-Anatomy head supplement (both bodies, `pipeline/zanatomy/`)
+### Z-Anatomy head and neck supplement (both bodies, `pipeline/zanatomy/`)
 
 [Z-Anatomy](https://www.z-anatomy.com) (CC BY-SA 4.0; itself derived from BodyParts3D,
 CC BY-SA 2.1 Japan, with Brainder brain models) fills the remaining head gaps. Its files
@@ -274,14 +274,42 @@ inner ear right 4.08 / 11.49 mm, left (mirrored) 4.07 / 10.99 mm; Z-Anatomy see 
 | Nose, mouth, pharynx | septum, conchae, tongue, palate, salivary glands and ducts, pharynx regions, nasal mucosa (ZA), larynx | mouth, teeth, tongue, palate, salivary glands, larynx, tonsils (female donor); parotid duct, pharynx regions, nasal mucosa (ZA) | — |
 | Glands, lymph | pituitary (with adeno/neurohypophysis, ZA), pineal, thyroid, parathyroids (ZA), head lymph nodes (ZA) | pineal, thymus (female donor); parathyroids, head lymph nodes (ZA) | buccal and orbital fat pads (no open source) |
 
-### Head study mode (UI)
+### Head and neck study modes (UI)
 
-The Body/Head switch (or `/anatomy?region=head`) adds a horizontal clipping plane 0.40 m
-below the vertex (head plus upper neck: hyoid, larynx, thyroid), hides meshes entirely
-below it, frames the camera on the head, scales the section plane to the head and
-offers head layer presets (external, see-through skin, muscles, skull, vessels, brain,
-meninges, nerves, eye and orbit, ear, mouth and teeth, glands). Picking ignores clipped
-geometry.
+The Body/Head/Neck switch (or `/anatomy?region=head|neck`) adds a horizontal clipping
+plane below the region (head 0.40 m below the vertex: head plus upper neck; neck 0.48 m:
+down to the clavicles and lung apices, with the head kept as context; see
+`frontend/src/features/anatomy/engine/regions.ts`), hides meshes entirely below it,
+frames the camera on the region, scales the section plane to it and offers layer
+presets. Head: external, see-through skin, muscles, skull, vessels, brain, meninges,
+nerves, eye and orbit, ear, mouth and teeth, glands. Neck: external, see-through skin,
+muscles, larynx and hyoid, cervical spine, vessels, nerves, viscera, lymph nodes.
+Picking ignores clipped geometry. The processes panel offers region pathways (head:
+seeing, hearing, moving, touch; neck: swallowing, baroreceptor reflex, breathing in,
+speaking), each lighting the real structures in order with referenced notes.
+
+## Neck
+
+The neck uses the same sources as the head: BodyParts3D (male), HRA Visible Human
+Female, and the Z-Anatomy supplement for what either lacks.
+
+**Female neck fit.** A second bounded affine transform is fitted from the cervical
+intervertebral discs C2–T1 and the thyroid and cricoid cartilages (median residuals
+2.4–5.6 mm, thyroid cartilage 8.6 mm; `female_neck_fit` in
+`content/generated/zanatomy/pipeline_report.json`). Female meshes use the head fit above
+the male hyoid and the neck fit below it, blended linearly over ±20 mm, so structures
+crossing the jaw line (sternocleidomastoid, jugular veins) stay continuous. Long
+structures (trachea, carotid, manubrium) are not used as anchors: the two bodies' meshes
+cover different lengths of them.
+
+| Group | Male body | Female body | Still missing |
+|---|---|---|---|
+| Skeleton | C1–C7, discs, hyoid, laryngeal cartilages, clavicles, manubrium, first ribs; ligamentum nuchae, thyrohyoid and cricothyroid ligaments (ZA) | C3–C7 (ZA), C1–C2 (ZA), discs, laryngeal cartilages (female donor), ligaments (ZA) | female clavicles, ribs (chest phase) |
+| Muscles | platysma, sternocleidomastoid, trapezius, suprahyoid, scalenes, levator scapulae, prevertebral, splenius, semispinalis; infrahyoid (sternohyoid, omohyoid, sternothyroid, thyrohyoid), scalenus posterior, longus colli, deep cervical back muscles (ZA) | the same set (ZA), descending trapezius (ZA) | — |
+| Vessels | carotid, vertebral, subclavian systems with thyrocervical and costocervical trunks, brachiocephalic trunk, jugular veins; left IJV, left subclavian vein, anterior jugular veins, brachiocephalic veins, dorsal scapular artery (ZA where missing) | aortic arch, brachiocephalic trunk, left carotid and subclavian (female donor); right carotid and subclavian, thyrocervical and costocervical branches, jugular, subclavian and brachiocephalic veins (ZA) | — |
+| Nerves | vagus, accessory, hypoglossal, glossopharyngeal; brachial plexus trunks, dorsal scapular, suprascapular, subclavian nerves, sympathetic trunk (ZA); spinal dura (ZA, shown like the meninges) | cranial nerves (ZA), brachial plexus trunks and branches (ZA), cervical spinal cord (female donor) | cervical plexus, phrenic and recurrent laryngeal nerves as separate meshes (no open source); female sympathetic trunk and spinal dura (whole-length meshes, until the trunk is fitted) |
+| Viscera | pharynx regions, larynx, trachea, oesophagus, thyroid, parathyroids | larynx, trachea (female donor), thyroid, parathyroids, pharynx regions (ZA) | female oesophagus (chest phase) |
+| Lymph | superficial and deep cervical, supraclavicular, pretracheal, paratracheal nodes (ZA) | the same (ZA) | — |
 
 ## Rendering
 

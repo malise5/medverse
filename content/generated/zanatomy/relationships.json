@@ -10,6 +10,76 @@
   "object": "FMA:13110"
  },
  {
+  "subject": "FMA:13319",
+  "predicate": "part_of",
+  "object": "FMA:13318"
+ },
+ {
+  "subject": "FMA:13320",
+  "predicate": "part_of",
+  "object": "FMA:13318"
+ },
+ {
+  "subject": "FMA:13346",
+  "predicate": "part_of",
+  "object": "FMA:13341"
+ },
+ {
+  "subject": "FMA:13347",
+  "predicate": "part_of",
+  "object": "FMA:13341"
+ },
+ {
+  "subject": "FMA:13348",
+  "predicate": "part_of",
+  "object": "FMA:13342"
+ },
+ {
+  "subject": "FMA:13349",
+  "predicate": "part_of",
+  "object": "FMA:13342"
+ },
+ {
+  "subject": "FMA:13350",
+  "predicate": "part_of",
+  "object": "FMA:13343"
+ },
+ {
+  "subject": "FMA:13351",
+  "predicate": "part_of",
+  "object": "FMA:13343"
+ },
+ {
+  "subject": "FMA:13352",
+  "predicate": "part_of",
+  "object": "FMA:13344"
+ },
+ {
+  "subject": "FMA:13353",
+  "predicate": "part_of",
+  "object": "FMA:13344"
+ },
+ {
+  "subject": "FMA:13371",
+  "predicate": "part_of",
+  "object": "FMA:13370"
+ },
+ {
+  "subject": "FMA:13372",
+  "predicate": "part_of",
+  "object": "FMA:13370"
+ },
+ {
+  "subject": "FMA:13388",
+  "predicate": "part_of",
+  "object": "FMA:13387"
+ },
+ {
+  "subject": "FMA:13389",
+  "predicate": "part_of",
+  "object": "FMA:13387"
+ },
+ {
   "subject": "FMA:223415",
   "predicate": "part_of",
   "object": "FMA:54510"
@@ -90,6 +160,61 @@
   "object": "FMA:71731"
  },
  {
+  "subject": "FMA:224478",
+  "predicate": "part_of",
+  "object": "FMA:71733"
+ },
+ {
+  "subject": "FMA:224480",
+  "predicate": "part_of",
+  "object": "FMA:71733"
+ },
+ {
+  "subject": "FMA:224494",
+  "predicate": "part_of",
+  "object": "FMA:71735"
+ },
+ {
+  "subject": "FMA:224496",
+  "predicate": "part_of",
+  "object": "FMA:71735"
+ },
+ {
+  "subject": "FMA:22726",
+  "predicate": "part_of",
+  "object": "FMA:22681"
+ },
+ {
+  "subject": "FMA:22727",
+  "predicate": "part_of",
+  "object": "FMA:22681"
+ },
+ {
+  "subject": "FMA:22744",
+  "predicate": "part_of",
+  "object": "FMA:22704"
+ },
+ {
+  "subject": "FMA:22757",
+  "predicate": "part_of",
+  "object": "FMA:22711"
+ },
+ {
+  "subject": "FMA:22758",
+  "predicate": "part_of",
+  "object": "FMA:22711"
+ },
+ {
+  "subject": "FMA:22874",
+  "predicate": "part_of",
+  "object": "FMA:22829"
+ },
+ {
+  "subject": "FMA:22875",
+  "predicate": "part_of",
+  "object": "FMA:22829"
+ },
+ {
   "subject": "FMA:231507",
   "predicate": "part_of",
   "object": "FMA:228925"
@@ -108,6 +233,16 @@
   "subject": "FMA:232200",
   "predicate": "part_of",
   "object": "FMA:232196"
+ },
+ {
+  "subject": "FMA:232270",
+  "predicate": "part_of",
+  "object": "FMA:71729"
+ },
+ {
+  "subject": "FMA:232272",
+  "predicate": "part_of",
+  "object": "FMA:71729"
  },
  {
   "subject": "FMA:232511",
@@ -138,6 +273,16 @@
   "subject": "FMA:232668",
   "predicate": "part_of",
   "object": "FMA:61227"
+ },
+ {
+  "subject": "FMA:232719",
+  "predicate": "part_of",
+  "object": "FMA:14192"
+ },
+ {
+  "subject": "FMA:232721",
+  "predicate": "part_of",
+  "object": "FMA:14192"
  },
  {
   "subject": "FMA:3945",
@@ -980,6 +1125,26 @@
   "object": "FMA:54624"
  },
  {
+  "subject": "FMA:55140",
+  "predicate": "part_of",
+  "object": "FMA:55139"
+ },
+ {
+  "subject": "FMA:55141",
+  "predicate": "part_of",
+  "object": "FMA:55139"
+ },
+ {
+  "subject": "FMA:55377",
+  "predicate": "part_of",
+  "object": "FMA:55260"
+ },
+ {
+  "subject": "FMA:55378",
+  "predicate": "part_of",
+  "object": "FMA:55260"
+ },
+ {
   "subject": "FMA:55560",
   "predicate": "part_of",
   "object": "FMA:55558"
@@ -1098,6 +1263,46 @@
   "subject": "FMA:6220",
   "predicate": "part_of",
   "object": "FMA:5731"
+ },
+ {
+  "subject": "FMA:6259",
+  "predicate": "part_of",
+  "object": "FMA:6258"
+ },
+ {
+  "subject": "FMA:6260",
+  "predicate": "part_of",
+  "object": "FMA:6258"
+ },
+ {
+  "subject": "FMA:65283",
+  "predicate": "part_of",
+  "object": "FMA:65279"
+ },
+ {
+  "subject": "FMA:65284",
+  "predicate": "part_of",
+  "object": "FMA:65279"
+ },
+ {
+  "subject": "FMA:65285",
+  "predicate": "part_of",
+  "object": "FMA:65280"
+ },
+ {
+  "subject": "FMA:65286",
+  "predicate": "part_of",
+  "object": "FMA:65280"
+ },
+ {
+  "subject": "FMA:66083",
+  "predicate": "part_of",
+  "object": "FMA:37025"
+ },
+ {
+  "subject": "FMA:66084",
+  "predicate": "part_of",
+  "object": "FMA:37025"
  },
  {
   "subject": "FMA:73491",

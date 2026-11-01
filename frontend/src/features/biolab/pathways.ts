@@ -15,12 +15,24 @@ export interface Pathway {
   id: string;
   title: string;
   summary: string;
+  /** Study region whose processes panel offers the pathway. */
+  region: "head" | "neck";
+  /** Layers shown while it plays (default: brain and cranial nerves, faint skull). */
+  view?: {
+    systems: string[];
+    opacity?: Record<string, number>;
+    /** Structures to frame; ignored when a camera direction is given. */
+    focus?: string[];
+    /** View the region from this side instead (e.g. "left" for the pharynx in profile). */
+    camera?: "anterior" | "left" | "right";
+  };
   steps: PathwayStep[];
 }
 
 export const PATHWAYS: Pathway[] = [
   {
     id: "vision",
+    region: "head",
     title: "Seeing",
     summary: "Light on the right retina reaches the visual cortex.",
     steps: [
@@ -34,6 +46,7 @@ export const PATHWAYS: Pathway[] = [
   },
   {
     id: "hearing",
+    region: "head",
     title: "Hearing",
     summary: "Sound vibrations in the inner ear reach the auditory cortex.",
     steps: [
@@ -48,6 +61,7 @@ export const PATHWAYS: Pathway[] = [
   },
   {
     id: "movement",
+    region: "head",
     title: "Moving the right hand",
     summary: "A command from the left motor cortex descends to the spinal cord.",
     steps: [
@@ -60,6 +74,7 @@ export const PATHWAYS: Pathway[] = [
   },
   {
     id: "touch",
+    region: "head",
     title: "Feeling touch on the right hand",
     summary: "Fine touch ascends to the left somatosensory cortex.",
     steps: [
@@ -67,6 +82,81 @@ export const PATHWAYS: Pathway[] = [
       { label: "Medulla oblongata (dorsal column nuclei)", structures: ["FMA:62004"], note: "They synapse in the gracile and cuneate nuclei; the next fibres cross as the medial lemniscus." },
       { label: "Thalamus (ventral posterolateral nucleus)", structures: ["FMA:258716", "FMA:258714"], note: "The medial lemniscus relays in the thalamus." },
       { label: "Parietal lobe (primary somatosensory cortex)", structures: ["FMA:72974", "FMA:72973"], note: "The postcentral gyrus localises and identifies the touch." },
+    ],
+  },
+  // ------------------------------------------------------------------ neck
+  {
+    id: "swallowing",
+    region: "neck",
+    title: "Swallowing",
+    summary: "A bolus passes from the mouth through the pharynx into the oesophagus.",
+    view: {
+      systems: ["digestive", "muscular", "respiratory", "skeletal"],
+      opacity: { skeletal: 0.2, muscular: 0.3, digestive: 0.8 },
+      camera: "left",
+    },
+    steps: [
+      { label: "Oral phase: tongue", structures: ["FMA:54640"], note: "Voluntary: the tongue presses the bolus up and back against the hard palate into the oropharynx." },
+      { label: "Soft palate rises", structures: ["FMA:55021", "FMA:55022"], note: "The soft palate and uvula elevate and seal off the nasopharynx so food cannot enter the nose. From here swallowing is a reflex coordinated by the brainstem (CN V, IX, X, XII)." },
+      { label: "Hyoid and larynx elevate", structures: ["FMA:52749", "FMA:55099", "FMA:46321"], note: "Suprahyoid muscles pull the hyoid and larynx up and forward; the epiglottis tilts over the laryngeal inlet and the vocal folds close, protecting the airway." },
+      { label: "Pharyngeal constrictors", structures: ["FMA:46631", "FMA:46633", "FMA:46635", "FMA:46636"], note: "The superior, middle and inferior constrictors contract in sequence, squeezing the bolus downward; the pharyngeal phase lasts about one second." },
+      { label: "Upper oesophageal sphincter opens", structures: ["FMA:54880", "FMA:46635"], note: "The cricopharyngeal part of the inferior constrictor relaxes and the bolus enters the oesophagus." },
+      { label: "Oesophageal peristalsis", structures: ["FMA:7131"], note: "A peristaltic wave (about 2–4 cm/s) carries the bolus to the stomach in roughly 8–10 seconds." },
+    ],
+  },
+  {
+    id: "baroreflex",
+    region: "neck",
+    title: "Baroreceptor reflex",
+    summary: "A rise in blood pressure is sensed in the carotid sinus and slows the heart.",
+    view: {
+      systems: ["cardiovascular", "nervous", "skeletal"],
+      opacity: { skeletal: 0.15, cardiovascular: 0.7 },
+      focus: ["FMA:3941"],
+    },
+    steps: [
+      { label: "Carotid sinus stretches", structures: ["FMA:3949", "FMA:3941"], note: "Baroreceptors in the wall of the carotid sinus, at the start of the internal carotid artery, fire faster as arterial pressure stretches the wall." },
+      { label: "Glossopharyngeal nerve", structures: ["FMA:50892", "FMA:50894"], note: "Impulses travel in the carotid sinus branch of CN IX to the brainstem (aortic arch receptors use the vagus)." },
+      { label: "Nucleus of the solitary tract", structures: ["FMA:256691", "FMA:62004"], note: "The medullary cardiovascular centre integrates the signal: parasympathetic output rises and sympathetic output falls." },
+      { label: "Vagus nerve", structures: ["FMA:6219", "FMA:6220"], note: "Vagal fibres descend in the carotid sheath to the cardiac plexus." },
+      { label: "Heart slows", structures: ["FMA:7088"], note: "Heart rate and contractility fall and vessels dilate, bringing blood pressure back toward its set point within a few heartbeats." },
+    ],
+  },
+  {
+    id: "airflow",
+    region: "neck",
+    title: "Breathing in",
+    summary: "Inhaled air passes the nose, pharynx and larynx into the trachea.",
+    view: {
+      systems: ["respiratory", "skeletal"],
+      opacity: { skeletal: 0.2 },
+      camera: "left",
+    },
+    steps: [
+      { label: "Nasal cavity", structures: ["FMA:59684"], note: "Air is warmed, moistened and filtered by the vascular, mucus-covered nasal mucosa." },
+      { label: "Nasopharynx", structures: ["FMA:54878"], note: "Air passes behind the soft palate; the pharyngotympanic tubes open here." },
+      { label: "Oropharynx and laryngopharynx", structures: ["FMA:54879", "FMA:54880"], note: "Air and food share this passage; the airway continues forward into the larynx." },
+      { label: "Larynx", structures: ["FMA:55099", "FMA:9615"], note: "The posterior crico-arytenoid muscles abduct the vocal folds, widening the glottis during inspiration." },
+      { label: "Trachea", structures: ["FMA:7394"], note: "C-shaped cartilage rings keep the trachea open as air flows down to the main bronchi." },
+      { label: "Main bronchi", structures: ["FMA:7395", "FMA:7396"], note: "The trachea divides at the carina (about the level of T4–T5) into the right and left main bronchi." },
+    ],
+  },
+  {
+    id: "voice",
+    region: "neck",
+    title: "Speaking",
+    summary: "Air from the lungs sets the vocal folds vibrating; the throat and mouth shape the sound.",
+    view: {
+      systems: ["respiratory", "muscular", "skeletal", "nervous"],
+      opacity: { skeletal: 0.3, muscular: 0.35 },
+      camera: "left",
+    },
+    steps: [
+      { label: "Air from the lungs", structures: ["FMA:7394"], note: "Exhaled air builds pressure below the closed glottis." },
+      { label: "Vocal folds close", structures: ["FMA:46580", "FMA:46589"], note: "The lateral crico-arytenoid and arytenoid muscles adduct the vocal folds (innervation: recurrent laryngeal branch of the vagus)." },
+      { label: "Pitch: cricothyroid", structures: ["FMA:46609"], note: "Cricothyroid tilts the thyroid cartilage forward, lengthening and tensing the folds to raise pitch (external branch of the superior laryngeal nerve)." },
+      { label: "Vocal folds vibrate", structures: ["FMA:55245", "FMA:46592"], note: "Air pressure blows the folds apart and elastic recoil closes them again, typically about 100–250 times per second in speech." },
+      { label: "Articulation", structures: ["FMA:54640", "FMA:55021"], note: "The pharynx, soft palate, tongue and lips filter and shape the sound into vowels and consonants." },
     ],
   },
 ];

@@ -32,6 +32,190 @@
   "identity_source": "z-anatomy"
  },
  {
+  "id": "FMA:13318",
+  "name": "anterior jugular vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13319",
+  "name": "right anterior jugular vein",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13320",
+  "name": "left anterior jugular vein",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13341",
+  "name": "sternohyoid",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13342",
+  "name": "omohyoid",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13343",
+  "name": "sternothyroid",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13344",
+  "name": "thyrohyoid",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13346",
+  "name": "right sternohyoid",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13347",
+  "name": "left sternohyoid",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13348",
+  "name": "right omohyoid",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13349",
+  "name": "left omohyoid",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13350",
+  "name": "right sternothyroid",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13351",
+  "name": "left sternothyroid",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13352",
+  "name": "right thyrohyoid",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13353",
+  "name": "left thyrohyoid",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13370",
+  "name": "longus colli",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13371",
+  "name": "right longus colli",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13372",
+  "name": "left longus colli",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13387",
+  "name": "scalenus posterior",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13388",
+  "name": "right scalenus posterior",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13389",
+  "name": "left scalenus posterior",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13427",
+  "name": "ligamentum nuchae",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:14192",
+  "name": "supraclavicular lymph node",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
   "id": "FMA:14326",
   "name": "lingual vein",
   "system_id": "cardiovascular",
@@ -168,6 +352,126 @@
   "identity_source": "z-anatomy"
  },
  {
+  "id": "FMA:224478",
+  "name": "set of right superficial lateral cervical lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:224480",
+  "name": "set of left superficial lateral cervical lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:224494",
+  "name": "set of right inferior deep lateral cervical lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:224496",
+  "name": "set of left inferior deep lateral cervical lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:22681",
+  "name": "splenius cervicis",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:22704",
+  "name": "iliocostalis cervicis",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:22711",
+  "name": "longissimus cervicis",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:22726",
+  "name": "right splenius cervicis",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:22727",
+  "name": "left splenius cervicis",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:22744",
+  "name": "right iliocostalis cervicis",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:22757",
+  "name": "right longissimus cervicis",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:22758",
+  "name": "left longissimus cervicis",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:22829",
+  "name": "semispinalis cervicis",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:22874",
+  "name": "right semispinalis cervicis",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:22875",
+  "name": "left semispinalis cervicis",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
   "id": "FMA:228925",
   "name": "set of anterior auricular lymph nodes",
   "system_id": "lymphatic",
@@ -210,6 +514,22 @@
  {
   "id": "FMA:232200",
   "name": "set of left buccinator lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:232270",
+  "name": "set of right pretracheal lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:232272",
+  "name": "set of left pretracheal lymph nodes",
   "system_id": "lymphatic",
   "laterality": "unspecified",
   "is_compound": false,
@@ -272,6 +592,22 @@
   "identity_source": "z-anatomy"
  },
  {
+  "id": "FMA:232719",
+  "name": "left supraclavicular lymph node",
+  "system_id": "lymphatic",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:232721",
+  "name": "right supraclavicular lymph node",
+  "system_id": "lymphatic",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
   "id": "FMA:256691",
   "name": "nucleus of solitary tract",
   "system_id": "nervous",
@@ -285,6 +621,22 @@
   "system_id": "special_senses",
   "laterality": "unspecified",
   "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:32557",
+  "name": "descending part of trapezius",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:37025",
+  "name": "suprascapular nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
   "identity_source": "z-anatomy"
  },
  {
@@ -754,6 +1106,14 @@
  {
   "id": "FMA:4762",
   "name": "left internal jugular vein",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:4763",
+  "name": "left subclavian vein",
   "system_id": "cardiovascular",
   "laterality": "left",
   "is_compound": false,
@@ -2488,6 +2848,70 @@
   "identity_source": "z-anatomy"
  },
  {
+  "id": "FMA:55138",
+  "name": "median thyrohyoid ligament",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55139",
+  "name": "lateral thyrohyoid ligament",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55140",
+  "name": "right lateral thyrohyoid ligament",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55141",
+  "name": "left lateral thyrohyoid ligament",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55237",
+  "name": "median cricothyroid ligament",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55260",
+  "name": "cricopharyngeal ligament",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55377",
+  "name": "right cricopharyngeal ligament",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55378",
+  "name": "left cricopharyngeal ligament",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
   "id": "FMA:55558",
   "name": "superior parathyroid gland",
   "system_id": "endocrine",
@@ -2848,6 +3272,118 @@
   "identity_source": "z-anatomy"
  },
  {
+  "id": "FMA:6258",
+  "name": "sympathetic trunk",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:6259",
+  "name": "right sympathetic trunk",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:6260",
+  "name": "left sympathetic trunk",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:65216",
+  "name": "superior trunk of brachial nerve plexus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:65217",
+  "name": "inferior trunk of brachial nerve plexus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:65218",
+  "name": "middle trunk of brachial nerve plexus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:65279",
+  "name": "dorsal scapular nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:65280",
+  "name": "subclavian nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:65283",
+  "name": "right dorsal scapular nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:65284",
+  "name": "left dorsal scapular nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:65285",
+  "name": "right subclavian nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:65286",
+  "name": "left subclavian nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:66083",
+  "name": "right suprascapular nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:66084",
+  "name": "left suprascapular nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
   "id": "FMA:6720",
   "name": "spinal accessory nerve",
   "system_id": "nervous",
@@ -2875,6 +3411,14 @@
   "id": "FMA:70850",
   "name": "set of maxillary veins",
   "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:71237",
+  "name": "spinal dura mater",
+  "system_id": "nervous",
   "laterality": "unspecified",
   "is_compound": false,
   "identity_source": "z-anatomy"
@@ -2936,8 +3480,48 @@
   "identity_source": "z-anatomy"
  },
  {
+  "id": "FMA:71724",
+  "name": "set of superficial anterior cervical lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:71729",
+  "name": "set of pretracheal lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:71730",
+  "name": "set of paratracheal lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
   "id": "FMA:71731",
   "name": "set of retropharyngeal lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:71733",
+  "name": "set of superficial lateral cervical lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:71735",
+  "name": "set of inferior deep lateral cervical lymph nodes",
   "system_id": "lymphatic",
   "laterality": "unspecified",
   "is_compound": true,

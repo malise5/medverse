@@ -6588,6 +6588,838 @@
           ]
         }
       ]
+    },
+    {
+      "ids": [
+        "FMA:13408",
+        "FMA:13409"
+      ],
+      "latin_name": "Musculus sternocleidomastoideus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The sternocleidomastoid is the large strap muscle on each side of the neck. It turns and tilts the head.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It arises by a sternal head from the manubrium and a clavicular head from the medial third of the clavicle and inserts on the mastoid process and the lateral superior nuchal line. It divides each side of the neck into the anterior and posterior triangles.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Acting alone it tilts the head to its own side and rotates the face to the opposite side; both together flex the neck and, with the head fixed, help raise the thorax in forced inspiration. Innervation: accessory nerve (CN XI), with proprioceptive fibres from C2–C3.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "relations",
+          "audience": "undergraduate",
+          "body": "The carotid sheath (common carotid artery, internal jugular vein, vagus nerve) lies deep to its anterior border; the external jugular vein crosses its surface.",
+          "references": [
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Congenital muscular torticollis (shortening of the muscle in infants) tilts the head toward and turns the face away from the affected side.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:45739",
+        "FMA:45740"
+      ],
+      "latin_name": "Platysma",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The platysma is a thin sheet of muscle just under the skin of the neck. It tenses the neck skin and pulls the corners of the mouth down.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It lies in the superficial fascia from the upper chest and shoulder to the lower border of the mandible and the skin of the lower face; facial nerve (cervical branch).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Surgeons close it as a separate layer in neck incisions to reduce scarring; it is paralysed in lower facial nerve lesions.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:13346",
+        "FMA:13347",
+        "FMA:13341"
+      ],
+      "latin_name": "Musculus sternohyoideus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The sternohyoid is a thin strap muscle at the front of the neck that pulls the hyoid bone down after swallowing.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "From the back of the manubrium and medial clavicle to the body of the hyoid bone; one of the four infrahyoid ('strap') muscles. Innervation: ansa cervicalis (C1–C3).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:13348",
+        "FMA:13349",
+        "FMA:13342"
+      ],
+      "latin_name": "Musculus omohyoideus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The omohyoid is a long thin muscle with two bellies that runs from the shoulder blade to the hyoid bone.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Its inferior belly arises from the upper border of the scapula, its intermediate tendon is held to the clavicle by a fascial sling over the internal jugular vein, and its superior belly inserts on the hyoid bone; ansa cervicalis.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Depresses and steadies the hyoid; it subdivides the anterior and posterior triangles of the neck, a landmark in neck surgery.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:13350",
+        "FMA:13351",
+        "FMA:13343"
+      ],
+      "latin_name": "Musculus sternothyroideus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The sternothyroid lies under the sternohyoid and pulls the larynx down.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "From the back of the manubrium to the oblique line of the thyroid cartilage, lying directly on the thyroid gland; ansa cervicalis.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:13352",
+        "FMA:13353",
+        "FMA:13344"
+      ],
+      "latin_name": "Musculus thyrohyoideus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The thyrohyoid links the thyroid cartilage to the hyoid bone. It can lower the hyoid or raise the larynx.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "From the oblique line of the thyroid cartilage to the greater horn and body of the hyoid; supplied by C1 fibres travelling with the hypoglossal nerve.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:13392",
+        "FMA:13393"
+      ],
+      "latin_name": "Musculus scalenus anterior",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The anterior scalene is a deep neck muscle that helps lift the first rib when you breathe in hard.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "From the anterior tubercles of the transverse processes of C3–C6 to the scalene tubercle of the first rib; anterior rami of C4–C6.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "relations",
+          "audience": "undergraduate",
+          "body": "A key landmark: the phrenic nerve descends on its front, the subclavian vein passes in front of it and the subclavian artery and brachial plexus trunks pass behind it, between the anterior and middle scalenes.",
+          "references": [
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Narrowing of the space between the scalenes and the first rib can compress the brachial plexus or subclavian artery (thoracic outlet syndrome).",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:13390",
+        "FMA:13391"
+      ],
+      "latin_name": "Musculus scalenus medius",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The middle scalene is the largest scalene muscle; it lifts the first rib and bends the neck to the side.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "From the posterior tubercles of the transverse processes of C2–C7 to the first rib behind the subclavian groove; anterior rami of the cervical nerves.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:13388",
+        "FMA:13389",
+        "FMA:13387"
+      ],
+      "latin_name": "Musculus scalenus posterior",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The posterior scalene is the smallest scalene; it lifts the second rib.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "From the posterior tubercles of C4–C6 to the outer surface of the second rib; anterior rami of C6–C8.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:32540",
+        "FMA:32541"
+      ],
+      "latin_name": "Musculus levator scapulae",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The levator scapulae runs from the neck to the shoulder blade and lifts it, as in shrugging.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "From the transverse processes of C1–C4 to the medial border of the scapula above the spine; dorsal scapular nerve (C5) and C3–C4.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:13371",
+        "FMA:13372",
+        "FMA:13370"
+      ],
+      "latin_name": "Musculus longus colli",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The longus colli lies on the front of the cervical vertebrae and bends the neck forward.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Against the anterior surfaces of the vertebral bodies from the atlas to T3, deep to the prevertebral fascia; anterior rami of C2–C6.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "It is often strained in whiplash (hyperextension) injuries.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:55099",
+      "latin_name": "Cartilago thyroidea",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The thyroid cartilage is the largest cartilage of the larynx; its front forms the 'Adam's apple'.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Two laminae meet anteriorly at the laryngeal prominence (more prominent after puberty in males); superior and inferior horns articulate with the hyoid via the thyrohyoid membrane and with the cricoid at the cricothyroid joints. It lies at about the level of C4–C5.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Protects the larynx and anchors the vocal ligaments at its inner angle; tilting it on the cricoid (cricothyroid muscle) changes vocal pitch.",
+          "references": [
+            "grays42"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:9615",
+      "latin_name": "Cartilago cricoidea",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The cricoid cartilage is a complete ring at the bottom of the larynx, just above the trachea.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Signet-ring shaped, with a narrow anterior arch and a tall posterior lamina carrying the arytenoid cartilages; at the level of C6, where the pharynx becomes the oesophagus and the larynx the trachea.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Emergency access to the airway is made through the cricothyroid membrane between the thyroid and cricoid cartilages (cricothyrotomy).",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:4724",
+        "FMA:4762"
+      ],
+      "latin_name": "Vena jugularis interna",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The internal jugular veins are the large veins in the neck that carry blood from the brain and face back to the heart.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Each begins at the jugular foramen as the continuation of the sigmoid sinus, descends in the carotid sheath lateral to the carotid arteries and joins the subclavian vein behind the sternoclavicular joint to form the brachiocephalic vein.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "The right internal jugular vein is a common site for central venous catheters; the jugular venous pulse reflects right atrial pressure.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:13110",
+        "FMA:13111",
+        "FMA:13112"
+      ],
+      "latin_name": "Vena jugularis externa",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The external jugular vein runs down the side of the neck just under the skin; it can be seen when you strain.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Formed near the angle of the mandible by the posterior auricular vein and posterior division of the retromandibular vein, it crosses the sternocleidomastoid obliquely and drains into the subclavian vein.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Distension of the external jugular vein with the patient sitting at 45° suggests raised central venous pressure (for example in heart failure).",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:3953",
+        "FMA:4694"
+      ],
+      "latin_name": "Arteria subclavia",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The subclavian arteries carry blood to the arms and also give branches to the brain, neck and chest wall.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The right arises from the brachiocephalic trunk, the left from the arch of the aorta. Each arches over the cervical pleura, passes behind the anterior scalene and becomes the axillary artery at the outer border of the first rib. Branches: vertebral, internal thoracic, thyrocervical and costocervical trunks.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Narrowing of the subclavian artery before the vertebral branch can reverse flow in the vertebral artery when the arm exercises (subclavian steal), causing dizziness.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:3992",
+        "FMA:4084"
+      ],
+      "latin_name": "Truncus thyrocervicalis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The thyrocervical trunk is a short artery from the subclavian that supplies the thyroid gland and the root of the neck.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It arises from the first part of the subclavian artery and divides into the inferior thyroid, suprascapular and transverse cervical arteries (patterns vary).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:10697",
+        "FMA:10680"
+      ],
+      "latin_name": "Arteria thyroidea inferior",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The inferior thyroid arteries supply the lower part of the thyroid gland and the parathyroid glands.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Each ascends from the thyrocervical trunk, arches medially behind the carotid sheath and reaches the back of the thyroid lobe.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "The recurrent laryngeal nerve runs close to its branches; surgeons identify both during thyroidectomy to avoid hoarseness.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:4751",
+        "FMA:4761"
+      ],
+      "latin_name": "Vena brachiocephalica",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The brachiocephalic veins collect blood from the head, neck and arms and join to form the superior vena cava.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Each forms behind the sternoclavicular joint from the internal jugular and subclavian veins; the longer left vein crosses behind the manubrium to join the right one at the lower border of the right first costal cartilage. The thoracic duct and right lymphatic duct drain at the venous angles.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:65216",
+        "FMA:65218",
+        "FMA:65217"
+      ],
+      "latin_name": "Truncus plexus brachialis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The brachial plexus is the network of nerves that supplies the arm. In the neck its roots join into three trunks.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The anterior rami of C5–C6 form the superior trunk, C7 the middle trunk and C8–T1 the inferior trunk; they pass between the anterior and middle scalenes, cross the posterior triangle above the clavicle and divide into anterior and posterior divisions behind it.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Excessive widening of the head–shoulder angle (for example at birth or in a motorcycle fall) injures the superior trunk (Erb palsy: arm adducted and medially rotated); forced abduction of the arm injures the inferior trunk (Klumpke palsy: weak hand muscles).",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:6259",
+        "FMA:6260",
+        "FMA:6258"
+      ],
+      "latin_name": "Truncus sympathicus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The sympathetic trunks are two chains of nerve ganglia beside the spine that carry 'fight or flight' signals to the body.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "In the neck each trunk lies behind the carotid sheath on the prevertebral muscles, with superior, middle and inferior (often fused with the first thoracic as the cervicothoracic, or stellate) cervical ganglia; it continues down the whole vertebral column.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Cervical ganglia supply the head (pupil dilation, sweating, vessel tone), the neck and the upper limbs, and send cardiac nerves to the heart.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Interruption of the cervical sympathetic pathway causes Horner syndrome: drooping eyelid (ptosis), small pupil (miosis) and loss of sweating on that side of the face.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:12519",
+      "latin_name": "Atlas",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The atlas is the first neck vertebra. It carries the skull and lets you nod.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "A ring of anterior and posterior arches with lateral masses but no body; its superior facets articulate with the occipital condyles (atlanto-occipital joints, nodding) and its inferior facets with the axis.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "A burst fracture of the ring (Jefferson fracture) follows heavy axial loading of the head, as in diving into shallow water.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:12520",
+      "latin_name": "Axis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The axis is the second neck vertebra. Its peg (the dens) lets the head turn from side to side.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Its dens projects upward into the anterior arch of the atlas, held by the transverse ligament; the atlanto-axial joints provide about half of the rotation of the neck.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Fractures of the dens are common in falls in older people; rupture of the transverse ligament can let the dens compress the spinal cord.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:12525",
+      "latin_name": "Vertebra prominens (C7)",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The seventh neck vertebra has the long spinous process you can feel at the base of the back of the neck.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Its long, non-bifid spinous process is the first easily palpable one (vertebra prominens); its transverse foramina usually transmit only small accessory vertebral veins.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:13427",
+      "latin_name": "Ligamentum nuchae",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The nuchal ligament is a strong band in the back of the neck that helps hold the head up.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "A midline fibroelastic septum from the external occipital protuberance and crest to the spinous processes of the cervical vertebrae, continuous with the supraspinous ligament; trapezius and other muscles attach to it.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:71733",
+        "FMA:71735",
+        "FMA:14192",
+        "FMA:232719",
+        "FMA:232721"
+      ],
+      "latin_name": "Nodi lymphoidei cervicales",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The neck contains chains of lymph nodes that filter lymph from the head and neck. They swell during throat infections.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Superficial lateral cervical nodes lie along the external jugular vein; deep cervical nodes (including the jugulodigastric and jugulo-omohyoid nodes) lie along the internal jugular vein and receive all lymph from the head and neck; supraclavicular nodes lie above the clavicle.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "An enlarged left supraclavicular node (Virchow node) can be the first sign of an abdominal cancer, because the thoracic duct ends nearby.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
     }
   ]
 }

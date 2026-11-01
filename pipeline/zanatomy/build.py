@@ -1,4 +1,4 @@
-"""Z-Anatomy head supplement -> extra head structures for the male and female bodies.
+"""Z-Anatomy head and neck supplement -> extra structures for the male and female bodies.
 
 Usage:
     blender --background --factory-startup --python pipeline/zanatomy/blender_export.py \
@@ -28,9 +28,10 @@ Male: Z-Anatomy is built on the same BodyParts3D body, so a similarity registrat
 its skull onto the built male skull places every mesh (residuals are reported).
 
 Female: Z-Anatomy has no female anatomy. For the female body the same meshes are fitted
-to the HRA female head: a bounded affine transform is estimated from structures both
-bodies have (brain, scleras, upper and lower teeth, thyroid cartilage) and applied to
-the male-derived meshes. They are an
+to the HRA female head and neck: bounded affine transforms are estimated from structures
+both bodies have - head: brain, scleras, upper and lower teeth, thyroid cartilage; neck:
+cervical intervertebral discs, thyroid and cricoid cartilages - and blended linearly
+across the hyoid level, then applied to the male-derived meshes. They are an
 approximation of female anatomy, labelled as such in the bundle metadata and in the
 app; only structure kinds the female model lacks are added (skull, muscles, cranial
 nerves, venous sinuses ...), never ones it has.
@@ -150,6 +151,23 @@ FEMALE_ANCHORS = [
     ("lower teeth", LOWER_TEETH, ["FMA:55635"]),
     ("thyroid cartilage", ["FMA:55099"], ["FMA:55099"]),
 ]
+
+# Neck: a second fit from structures both bodies have below the head; female meshes
+# blend from the head fit (above the hyoid) to the neck fit (below it).
+NECK_ANCHORS = [
+    ("disc C2-C3", ["FMA:25058"], ["FMA:25058"]),
+    ("disc C3-C4", ["FMA:13896"], ["FMA:13896"]),
+    ("disc C4-C5", ["FMA:13897"], ["FMA:13897"]),
+    ("disc C5-C6", ["FMA:13898"], ["FMA:13898"]),
+    ("disc C6-C7", ["FMA:13899"], ["FMA:13899"]),
+    ("disc C7-T1", ["FMA:13900"], ["FMA:13900"]),
+    ("thyroid cartilage", ["FMA:55099"], ["FMA:55099"]),
+    ("cricoid cartilage", ["FMA:9615"], ["FMA:9615"]),
+]
+# Long structures (trachea, carotid, manubrium) are not used: the two bodies' meshes
+# cover different lengths of them, which pulls a surface fit off.
+HYOID = "FMA:52749"
+BLEND_HALF_WIDTH_M = 0.02  # head -> neck transition, +/- 20 mm around the hyoid
 
 
 def dequantize(src: Path, dst: Path) -> None:
@@ -352,12 +370,38 @@ def main() -> int:
             .round(4)
             .tolist(),
         }
-        head_m = fit.copy()
+        ids = sorted({i for _, m, f in NECK_ANCHORS for i in m + f} | {HYOID})
+        mpts = body_points(male_content, assets_root, tmp, ids)
+        fpts = body_points(female_content, assets_root, tmp, ids)
+        npairs, nlabels = [], []
+        for label, mids, fids in NECK_ANCHORS:
+            a = [mpts[i] for i in mids if i in mpts]
+            b = [fpts[i] for i in fids if i in fpts]
+            if a and b:
+                npairs.append((np.vstack(a) * 1000, np.vstack(b) * 1000))
+                nlabels.append(label)
+        if len(npairs) < 4:
+            raise SystemExit(f"too few neck anchors found: {nlabels}")
+        neck_fit = fit_parts(npairs)
+        hyoid_y = float(mpts[HYOID][:, 1].mean())
+        report["female_neck_fit"] = {
+            "anchors": residuals(npairs, neck_fit, nlabels),
+            "linear_singular_values": np.linalg.svd(neck_fit[:3, :3], compute_uv=False)
+            .round(4)
+            .tolist(),
+            "blend": f"head fit above, neck fit below the male hyoid (y = {hyoid_y:.3f} m), "
+            f"linear over +/- {BLEND_HALF_WIDTH_M * 1000:.0f} mm",
+        }
+        head_m, neck_m = fit.copy(), neck_fit.copy()
         head_m[:3, 3] /= 1000
+        neck_m[:3, 3] /= 1000
 
         def male_to_female(p: np.ndarray) -> np.ndarray:
-            """Male scene (m) -> female scene with the head fit."""
-            return p @ head_m[:3, :3].T + head_m[:3, 3]
+            """Male scene (m) -> female scene: blend of the head and neck fits by height."""
+            w = np.clip((p[:, 1] - hyoid_y) / (2 * BLEND_HALF_WIDTH_M) + 0.5, 0.0, 1.0)[:, None]
+            ph = p @ head_m[:3, :3].T + head_m[:3, 3]
+            pn = p @ neck_m[:3, :3].T + neck_m[:3, 3]
+            return w * ph + (1 - w) * pn
 
         # Male BodyParts3D meshes the female lacks (external ear, laryngeal muscles ...),
         # fitted the same way; they keep their CC BY 4.0 licence.

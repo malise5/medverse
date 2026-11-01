@@ -8,8 +8,8 @@
   "license": "CC BY 4.0",
   "attribution": "BodyParts3D, (c) The Database Center for Life Science licensed under CC Attribution 4.0 International; meshes fitted by MEDVERSE; fitted to the HRA Visible Human Female head from a male-derived model (approximation, not female anatomy)",
   "version": "1.0",
-  "sha256": "10e6c4bd09c6c1ec3748fe85c75bf027fd4b07e36f6a4fc5ed8d321c9922aee4",
-  "byte_size": 433272,
+  "sha256": "ce942fc34ab037f662654b68b3e5a72ac3aab3e3d0a779ae9fa216abc9f1ced7",
+  "byte_size": 434016,
   "mesh_count": 17,
   "is_placeholder": false
  },
@@ -22,8 +22,8 @@
   "license": "CC BY 4.0",
   "attribution": "BodyParts3D, (c) The Database Center for Life Science licensed under CC Attribution 4.0 International; meshes fitted by MEDVERSE; fitted to the HRA Visible Human Female head from a male-derived model (approximation, not female anatomy)",
   "version": "1.0",
-  "sha256": "e87f09a7e4a9f7bfcf91cd7dadde065ce3973865d01fc6a370ba8b7ab0615948",
-  "byte_size": 44432,
+  "sha256": "ae743a260ac7eafba949d0d5f29108457cf791c9328ec8d355dd32ee1f9e2de2",
+  "byte_size": 44008,
   "mesh_count": 4,
   "is_placeholder": false
  },
@@ -50,9 +50,9 @@
   "license": "CC BY-SA 4.0",
   "attribution": "Z-Anatomy - The open source atlas of anatomy (z-anatomy.com), CC BY-SA 4.0; derived from BodyParts3D, The Database Center for Life Science, CC BY-SA 2.1 Japan; brain models from Brainder. Meshes registered and modified by MEDVERSE; fitted to the HRA Visible Human Female head from a male-derived model (approximation, not female anatomy)",
   "version": "1.0",
-  "sha256": "440a67e73e46aeb424247d866c5608bcd2b090d2a52c92971f8717a36497a0fc",
-  "byte_size": 402672,
-  "mesh_count": 122,
+  "sha256": "60f0d176b001d8ca7cff7e5b324a8b9b505b69d185d62ef0f62018da2dfad5cb",
+  "byte_size": 447584,
+  "mesh_count": 144,
   "is_placeholder": false
  },
  {
@@ -64,8 +64,8 @@
   "license": "CC BY-SA 4.0",
   "attribution": "Z-Anatomy - The open source atlas of anatomy (z-anatomy.com), CC BY-SA 4.0; derived from BodyParts3D, The Database Center for Life Science, CC BY-SA 2.1 Japan; brain models from Brainder. Meshes registered and modified by MEDVERSE; fitted to the HRA Visible Human Female head from a male-derived model (approximation, not female anatomy)",
   "version": "1.0",
-  "sha256": "e1668814e2d02ab987d630f04e6cff0e690fff86d28c36cf8b2ac6065da9ef9a",
-  "byte_size": 16996,
+  "sha256": "4132d26ce1ca96fac0b094cc50f9620b287a265be8a6d8d6a806daf375f765d7",
+  "byte_size": 17144,
   "mesh_count": 6,
   "is_placeholder": false
  },
@@ -78,9 +78,9 @@
   "license": "CC BY-SA 4.0",
   "attribution": "Z-Anatomy - The open source atlas of anatomy (z-anatomy.com), CC BY-SA 4.0; derived from BodyParts3D, The Database Center for Life Science, CC BY-SA 2.1 Japan; brain models from Brainder. Meshes registered and modified by MEDVERSE; fitted to the HRA Visible Human Female head from a male-derived model (approximation, not female anatomy)",
   "version": "1.0",
-  "sha256": "55449047a4153ff08bfc37d2f1d9c8541f06c32986cc9ca0f265a1033f16442e",
-  "byte_size": 6596,
-  "mesh_count": 4,
+  "sha256": "a9885681be7a1553adaffe87e2c17b43f205b67d18509e1e670e2f6a6c906b61",
+  "byte_size": 10816,
+  "mesh_count": 5,
   "is_placeholder": false
  },
  {
@@ -92,9 +92,9 @@
   "license": "CC BY-SA 4.0",
   "attribution": "Z-Anatomy - The open source atlas of anatomy (z-anatomy.com), CC BY-SA 4.0; derived from BodyParts3D, The Database Center for Life Science, CC BY-SA 2.1 Japan; brain models from Brainder. Meshes registered and modified by MEDVERSE; fitted to the HRA Visible Human Female head from a male-derived model (approximation, not female anatomy)",
   "version": "1.0",
-  "sha256": "9a73f8e0886a1c8311e1fd226ce76de5ae8cd5fe650c617ade58270a1d78bbcd",
-  "byte_size": 61460,
-  "mesh_count": 26,
+  "sha256": "5dedf0243609a6c8105d1b60d38c403cb4f1689d6ef0023e309879e5c49ba857",
+  "byte_size": 91300,
+  "mesh_count": 36,
   "is_placeholder": false
  },
  {
@@ -106,9 +106,9 @@
   "license": "CC BY-SA 4.0",
   "attribution": "Z-Anatomy - The open source atlas of anatomy (z-anatomy.com), CC BY-SA 4.0; derived from BodyParts3D, The Database Center for Life Science, CC BY-SA 2.1 Japan; brain models from Brainder. Meshes registered and modified by MEDVERSE; fitted to the HRA Visible Human Female head from a male-derived model (approximation, not female anatomy)",
   "version": "1.0",
-  "sha256": "0309b90906515ae0a7c7276463fd654601ff09585f503d8979d42285c2a420f9",
-  "byte_size": 478320,
-  "mesh_count": 112,
+  "sha256": "7e55660e5380b5dd9c85f24ed0754747c83f2f95e8f074e436ecc14d29599adc",
+  "byte_size": 596828,
+  "mesh_count": 142,
   "is_placeholder": false
  },
  {
@@ -120,9 +120,9 @@
   "license": "CC BY-SA 4.0",
   "attribution": "Z-Anatomy - The open source atlas of anatomy (z-anatomy.com), CC BY-SA 4.0; derived from BodyParts3D, The Database Center for Life Science, CC BY-SA 2.1 Japan; brain models from Brainder. Meshes registered and modified by MEDVERSE; fitted to the HRA Visible Human Female head from a male-derived model (approximation, not female anatomy)",
   "version": "1.0",
-  "sha256": "6da1197a5bab706e705a06765a00b1da1275457c50df1537d66de6180a30b932",
-  "byte_size": 492296,
-  "mesh_count": 53,
+  "sha256": "8f8d95b5e51beabaf5c1742bfc0a53b154802da28dde96bc6dff5b26f98c9250",
+  "byte_size": 526196,
+  "mesh_count": 65,
   "is_placeholder": false
  },
  {
@@ -134,9 +134,9 @@
   "license": "CC BY-SA 4.0",
   "attribution": "Z-Anatomy - The open source atlas of anatomy (z-anatomy.com), CC BY-SA 4.0; derived from BodyParts3D, The Database Center for Life Science, CC BY-SA 2.1 Japan; brain models from Brainder. Meshes registered and modified by MEDVERSE; fitted to the HRA Visible Human Female head from a male-derived model (approximation, not female anatomy)",
   "version": "1.0",
-  "sha256": "4bca5773abade2d81ae8e605176097715de543967e49192a5f56982c49e96423",
-  "byte_size": 54536,
-  "mesh_count": 15,
+  "sha256": "284567c110a8961655f0d9f5e8edf59d9370a9dce0e5c3be3d2d145177f1e16e",
+  "byte_size": 76432,
+  "mesh_count": 21,
   "is_placeholder": false
  },
  {
@@ -148,9 +148,9 @@
   "license": "CC BY-SA 4.0",
   "attribution": "Z-Anatomy - The open source atlas of anatomy (z-anatomy.com), CC BY-SA 4.0; derived from BodyParts3D, The Database Center for Life Science, CC BY-SA 2.1 Japan; brain models from Brainder. Meshes registered and modified by MEDVERSE; fitted to the HRA Visible Human Female head from a male-derived model (approximation, not female anatomy)",
   "version": "1.0",
-  "sha256": "089ba82ebc18ebb05b167f7198f494fe6ad1d3e4b346600647f13a61935a56af",
-  "byte_size": 193340,
-  "mesh_count": 33,
+  "sha256": "c830b916c48ed6f4e6214996deee6d3b8fc7905da47496667d3f8bf7578b007b",
+  "byte_size": 219884,
+  "mesh_count": 39,
   "is_placeholder": false
  },
  {
@@ -176,9 +176,9 @@
   "license": "CC BY-SA 4.0",
   "attribution": "Z-Anatomy - The open source atlas of anatomy (z-anatomy.com), CC BY-SA 4.0; derived from BodyParts3D, The Database Center for Life Science, CC BY-SA 2.1 Japan; brain models from Brainder. Meshes registered and modified by MEDVERSE",
   "version": "1.0",
-  "sha256": "8e9e7b75005e9922ccc0e137539441a616c106315335cad109a5bc432782095e",
-  "byte_size": 465172,
-  "mesh_count": 104,
+  "sha256": "2d5604bcbded566ce88842c8a4726000273085656d05f49cef177bf9289a2332",
+  "byte_size": 472572,
+  "mesh_count": 108,
   "is_placeholder": false
  },
  {
@@ -218,9 +218,9 @@
   "license": "CC BY-SA 4.0",
   "attribution": "Z-Anatomy - The open source atlas of anatomy (z-anatomy.com), CC BY-SA 4.0; derived from BodyParts3D, The Database Center for Life Science, CC BY-SA 2.1 Japan; brain models from Brainder. Meshes registered and modified by MEDVERSE",
   "version": "1.0",
-  "sha256": "0859cea61f3a0225fecd7b2b4f155f7c930ae3b4e9ebb5703afc0b4e94ec1dcf",
-  "byte_size": 60376,
-  "mesh_count": 26,
+  "sha256": "5c1c6515e353b656c19178971b2f260b15ee6ac022a673cbe0427a9a071bbfe8",
+  "byte_size": 89704,
+  "mesh_count": 36,
   "is_placeholder": false
  },
  {
@@ -232,9 +232,9 @@
   "license": "CC BY-SA 4.0",
   "attribution": "Z-Anatomy - The open source atlas of anatomy (z-anatomy.com), CC BY-SA 4.0; derived from BodyParts3D, The Database Center for Life Science, CC BY-SA 2.1 Japan; brain models from Brainder. Meshes registered and modified by MEDVERSE",
   "version": "1.0",
-  "sha256": "edc47ecf86e3c55d924ea6cf275c7dbca30b9d217df2b9e7ee3e18481a00258f",
-  "byte_size": 241580,
-  "mesh_count": 58,
+  "sha256": "4e2d2f5a6c4dc415c89e741a0cb70c3938559288ade14391485d4bbf1567d373",
+  "byte_size": 314724,
+  "mesh_count": 78,
   "is_placeholder": false
  },
  {
@@ -246,9 +246,9 @@
   "license": "CC BY-SA 4.0",
   "attribution": "Z-Anatomy - The open source atlas of anatomy (z-anatomy.com), CC BY-SA 4.0; derived from BodyParts3D, The Database Center for Life Science, CC BY-SA 2.1 Japan; brain models from Brainder. Meshes registered and modified by MEDVERSE",
   "version": "1.0",
-  "sha256": "6414fce7fdc08489481fa7f78822488aa49e5ef8d5ac8c8d4e998e10c2a2c786",
-  "byte_size": 555480,
-  "mesh_count": 77,
+  "sha256": "f2c67cbb0bed5acda106ea1252430863442608ae216497d6d9ab05397262d07f",
+  "byte_size": 669732,
+  "mesh_count": 92,
   "is_placeholder": false
  },
  {
@@ -260,9 +260,9 @@
   "license": "CC BY-SA 4.0",
   "attribution": "Z-Anatomy - The open source atlas of anatomy (z-anatomy.com), CC BY-SA 4.0; derived from BodyParts3D, The Database Center for Life Science, CC BY-SA 2.1 Japan; brain models from Brainder. Meshes registered and modified by MEDVERSE",
   "version": "1.0",
-  "sha256": "f3ca4dbd262a7ac7c2cacf0e002d01d2f84d387d34f804fcd207c923c8012ac9",
-  "byte_size": 46052,
-  "mesh_count": 10,
+  "sha256": "1768c0ba54984b440a000b791dd04573ce50093042a059d02d350475275b5ae5",
+  "byte_size": 68116,
+  "mesh_count": 16,
   "is_placeholder": false
  },
  {
@@ -274,9 +274,9 @@
   "license": "CC BY-SA 4.0",
   "attribution": "Z-Anatomy - The open source atlas of anatomy (z-anatomy.com), CC BY-SA 4.0; derived from BodyParts3D, The Database Center for Life Science, CC BY-SA 2.1 Japan; brain models from Brainder. Meshes registered and modified by MEDVERSE",
   "version": "1.0",
-  "sha256": "c4ceddfbea98ae52fc94f1f17c9fa243590030727d8a002f9382d542e69ccad0",
-  "byte_size": 15580,
-  "mesh_count": 8,
+  "sha256": "3d1b0e3d3ff080437e40c5401eb224218c759339efc4b1b2f9fc85878d55f194",
+  "byte_size": 17124,
+  "mesh_count": 9,
   "is_placeholder": false
  },
  {

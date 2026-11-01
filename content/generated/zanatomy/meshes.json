@@ -154,6 +154,13 @@
   "render_group": null
  },
  {
+  "id": "ZAF-0104f9a85c60",
+  "bundle_id": "zanatomy-female-cardiovascular",
+  "structure_id": "FMA:10682",
+  "triangle_count": 388,
+  "render_group": "artery"
+ },
+ {
   "id": "ZAF-0263ea9e42ad",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:49792",
@@ -166,6 +173,13 @@
   "structure_id": "FMA:51291",
   "triangle_count": 211,
   "render_group": "vein"
+ },
+ {
+  "id": "ZAF-03e927afc11b",
+  "bundle_id": "zanatomy-female-cardiovascular",
+  "structure_id": "FMA:4057",
+  "triangle_count": 1061,
+  "render_group": "artery"
  },
  {
   "id": "ZAF-04ed6beda75b",
@@ -189,10 +203,17 @@
   "render_group": "artery"
  },
  {
+  "id": "ZAF-08d1ceadef49",
+  "bundle_id": "zanatomy-female-cardiovascular",
+  "structure_id": "FMA:10698",
+  "triangle_count": 388,
+  "render_group": "artery"
+ },
+ {
   "id": "ZAF-09891a7474ea",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:4060",
-  "triangle_count": 211,
+  "triangle_count": 212,
   "render_group": "artery"
  },
  {
@@ -238,6 +259,13 @@
   "render_group": "vein"
  },
  {
+  "id": "ZAF-17a8db2c6e38",
+  "bundle_id": "zanatomy-female-cardiovascular",
+  "structure_id": "FMA:10699",
+  "triangle_count": 388,
+  "render_group": "artery"
+ },
+ {
   "id": "ZAF-18e50fa3e1df",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:50026",
@@ -255,7 +283,7 @@
   "id": "ZAF-1b1d5b886c26",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:49499",
-  "triangle_count": 682,
+  "triangle_count": 714,
   "render_group": "artery"
  },
  {
@@ -308,6 +336,13 @@
   "render_group": "artery"
  },
  {
+  "id": "ZAF-33afb06cce9b",
+  "bundle_id": "zanatomy-female-cardiovascular",
+  "structure_id": "FMA:4755",
+  "triangle_count": 211,
+  "render_group": "vein"
+ },
+ {
   "id": "ZAF-34459c1bff40",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:52565",
@@ -346,7 +381,7 @@
   "id": "ZAF-3fcd806e5018",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:13111",
-  "triangle_count": 247,
+  "triangle_count": 246,
   "render_group": "vein"
  },
  {
@@ -360,7 +395,7 @@
   "id": "ZAF-445eaad3c9ff",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:4756",
-  "triangle_count": 424,
+  "triangle_count": 423,
   "render_group": "vein"
  },
  {
@@ -371,10 +406,17 @@
   "render_group": "artery"
  },
  {
+  "id": "ZAF-47bb0e81789a",
+  "bundle_id": "zanatomy-female-cardiovascular",
+  "structure_id": "FMA:3953",
+  "triangle_count": 252,
+  "render_group": "artery"
+ },
+ {
   "id": "ZAF-4a34f39b02af",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:49569",
-  "triangle_count": 283,
+  "triangle_count": 282,
   "render_group": "artery"
  },
  {
@@ -392,10 +434,31 @@
   "render_group": "artery"
  },
  {
+  "id": "ZAF-5138d2051377",
+  "bundle_id": "zanatomy-female-cardiovascular",
+  "structure_id": "FMA:4084",
+  "triangle_count": 80,
+  "render_group": "artery"
+ },
+ {
   "id": "ZAF-5232ab583764",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:49498",
-  "triangle_count": 683,
+  "triangle_count": 693,
+  "render_group": "artery"
+ },
+ {
+  "id": "ZAF-52ee277b1b25",
+  "bundle_id": "zanatomy-female-cardiovascular",
+  "structure_id": "FMA:10660",
+  "triangle_count": 388,
+  "render_group": "artery"
+ },
+ {
+  "id": "ZAF-5401efa30786",
+  "bundle_id": "zanatomy-female-cardiovascular",
+  "structure_id": "FMA:4086",
+  "triangle_count": 34,
   "render_group": "artery"
  },
  {
@@ -453,6 +516,13 @@
   "structure_id": "FMA:49799",
   "triangle_count": 246,
   "render_group": "artery"
+ },
+ {
+  "id": "ZAF-5e9843b268f3",
+  "bundle_id": "zanatomy-female-cardiovascular",
+  "structure_id": "FMA:13319",
+  "triangle_count": 212,
+  "render_group": "vein"
  },
  {
   "id": "ZAF-5f4e778ff1b8",
@@ -518,6 +588,13 @@
   "render_group": "artery"
  },
  {
+  "id": "ZAF-6c1ee20de8f8",
+  "bundle_id": "zanatomy-female-cardiovascular",
+  "structure_id": "FMA:10681",
+  "triangle_count": 388,
+  "render_group": "artery"
+ },
+ {
   "id": "ZAF-6ee2498ea324",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:49990",
@@ -553,6 +630,13 @@
   "render_group": "vein"
  },
  {
+  "id": "ZAF-7bad9da6b127",
+  "bundle_id": "zanatomy-female-cardiovascular",
+  "structure_id": "FMA:3992",
+  "triangle_count": 83,
+  "render_group": "artery"
+ },
+ {
   "id": "ZAF-7bd1653c1a96",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:49991",
@@ -574,6 +658,13 @@
   "render_group": "artery"
  },
  {
+  "id": "ZAF-7d5163488f74",
+  "bundle_id": "zanatomy-female-cardiovascular",
+  "structure_id": "FMA:3941",
+  "triangle_count": 131,
+  "render_group": "artery"
+ },
+ {
   "id": "ZAF-7dd394bc1d73",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:50769",
@@ -581,18 +672,39 @@
   "render_group": "vein"
  },
  {
+  "id": "ZAF-80becc9e4458",
+  "bundle_id": "zanatomy-female-cardiovascular",
+  "structure_id": "FMA:4763",
+  "triangle_count": 159,
+  "render_group": "vein"
+ },
+ {
   "id": "ZAF-84d6f5c8141c",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:4764",
-  "triangle_count": 424,
+  "triangle_count": 423,
+  "render_group": "vein"
+ },
+ {
+  "id": "ZAF-85aeeb11d646",
+  "bundle_id": "zanatomy-female-cardiovascular",
+  "structure_id": "FMA:4751",
+  "triangle_count": 180,
   "render_group": "vein"
  },
  {
   "id": "ZAF-876caaa5f782",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:49568",
-  "triangle_count": 283,
+  "triangle_count": 282,
   "render_group": "artery"
+ },
+ {
+  "id": "ZAF-8869fa8ceebf",
+  "bundle_id": "zanatomy-female-cardiovascular",
+  "structure_id": "FMA:13320",
+  "triangle_count": 212,
+  "render_group": "vein"
  },
  {
   "id": "ZAF-89348c68645f",
@@ -655,6 +767,13 @@
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:49756",
   "triangle_count": 177,
+  "render_group": "artery"
+ },
+ {
+  "id": "ZAF-99630b209021",
+  "bundle_id": "zanatomy-female-cardiovascular",
+  "structure_id": "FMA:10680",
+  "triangle_count": 176,
   "render_group": "artery"
  },
  {
@@ -735,6 +854,13 @@
   "render_group": "artery"
  },
  {
+  "id": "ZAF-a81f44a3bb9f",
+  "bundle_id": "zanatomy-female-cardiovascular",
+  "structure_id": "FMA:10697",
+  "triangle_count": 176,
+  "render_group": "artery"
+ },
+ {
   "id": "ZAF-a90226cc6da2",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:4762",
@@ -749,6 +875,13 @@
   "render_group": "artery"
  },
  {
+  "id": "ZAF-ab99446eead1",
+  "bundle_id": "zanatomy-female-cardiovascular",
+  "structure_id": "FMA:4134",
+  "triangle_count": 389,
+  "render_group": "artery"
+ },
+ {
   "id": "ZAF-ade328a0bffd",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:49747",
@@ -759,7 +892,7 @@
   "id": "ZAF-aea5302e2f7b",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:4062",
-  "triangle_count": 353,
+  "triangle_count": 354,
   "render_group": "artery"
  },
  {
@@ -775,6 +908,13 @@
   "structure_id": "FMA:50546",
   "triangle_count": 566,
   "render_group": "artery"
+ },
+ {
+  "id": "ZAF-b3a5c8af0fd7",
+  "bundle_id": "zanatomy-female-cardiovascular",
+  "structure_id": "FMA:4761",
+  "triangle_count": 264,
+  "render_group": "vein"
  },
  {
   "id": "ZAF-b576f18a85a0",
@@ -801,7 +941,7 @@
   "id": "ZAF-bacbcd1768ab",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:49550",
-  "triangle_count": 317,
+  "triangle_count": 318,
   "render_group": "artery"
  },
  {
@@ -822,14 +962,14 @@
   "id": "ZAF-c1d8ff29690f",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:49563",
-  "triangle_count": 530,
+  "triangle_count": 531,
   "render_group": "artery"
  },
  {
   "id": "ZAF-c210383193b9",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:4754",
-  "triangle_count": 424,
+  "triangle_count": 423,
   "render_group": "vein"
  },
  {
@@ -875,6 +1015,13 @@
   "render_group": "artery"
  },
  {
+  "id": "ZAF-d3b956ee43b1",
+  "bundle_id": "zanatomy-female-cardiovascular",
+  "structure_id": "FMA:10552",
+  "triangle_count": 1061,
+  "render_group": "artery"
+ },
+ {
   "id": "ZAF-d88e6b62aa37",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:49768",
@@ -886,6 +1033,13 @@
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:49585",
   "triangle_count": 1452,
+  "render_group": "artery"
+ },
+ {
+  "id": "ZAF-de038c69c04b",
+  "bundle_id": "zanatomy-female-cardiovascular",
+  "structure_id": "FMA:5039",
+  "triangle_count": 34,
   "render_group": "artery"
  },
  {
@@ -906,7 +1060,7 @@
   "id": "ZAF-e17912a87292",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:49551",
-  "triangle_count": 317,
+  "triangle_count": 318,
   "render_group": "artery"
  },
  {
@@ -955,14 +1109,14 @@
   "id": "ZAF-eeb63740ef66",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:13112",
-  "triangle_count": 246,
+  "triangle_count": 247,
   "render_group": "vein"
  },
  {
   "id": "ZAF-f24d1d668182",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:50926",
-  "triangle_count": 282,
+  "triangle_count": 283,
   "render_group": "vein"
  },
  {
@@ -990,7 +1144,7 @@
   "id": "ZAF-f8fc19aefeaa",
   "bundle_id": "zanatomy-female-cardiovascular",
   "structure_id": "FMA:50877",
-  "triangle_count": 424,
+  "triangle_count": 423,
   "render_group": "vein"
  },
  {
@@ -1025,7 +1179,7 @@
   "id": "ZAF-6b23b9e1f321",
   "bundle_id": "zanatomy-female-digestive",
   "structure_id": "FMA:54879",
-  "triangle_count": 822,
+  "triangle_count": 850,
   "render_group": null
  },
  {
@@ -1047,6 +1201,13 @@
   "bundle_id": "zanatomy-female-digestive",
   "structure_id": "FMA:59866",
   "triangle_count": 345,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-46ae9fe9b721",
+  "bundle_id": "zanatomy-female-endocrine",
+  "structure_id": "FMA:9603",
+  "triangle_count": 828,
   "render_group": null
  },
  {
@@ -1120,6 +1281,34 @@
   "render_group": null
  },
  {
+  "id": "ZAF-2960a3880305",
+  "bundle_id": "zanatomy-female-lymphatic",
+  "structure_id": "FMA:224496",
+  "triangle_count": 592,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-2ad9106137d9",
+  "bundle_id": "zanatomy-female-lymphatic",
+  "structure_id": "FMA:232270",
+  "triangle_count": 432,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-2f93e1255239",
+  "bundle_id": "zanatomy-female-lymphatic",
+  "structure_id": "FMA:232272",
+  "triangle_count": 432,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-353321e011d8",
+  "bundle_id": "zanatomy-female-lymphatic",
+  "structure_id": "FMA:71730",
+  "triangle_count": 860,
+  "render_group": null
+ },
+ {
   "id": "ZAF-3c3529363f22",
   "bundle_id": "zanatomy-female-lymphatic",
   "structure_id": "FMA:224444",
@@ -1134,10 +1323,17 @@
   "render_group": null
  },
  {
+  "id": "ZAF-4839b236ed2d",
+  "bundle_id": "zanatomy-female-lymphatic",
+  "structure_id": "FMA:71724",
+  "triangle_count": 864,
+  "render_group": null
+ },
+ {
   "id": "ZAF-4f5cb9dc450e",
   "bundle_id": "zanatomy-female-lymphatic",
   "structure_id": "FMA:71720",
-  "triangle_count": 534,
+  "triangle_count": 576,
   "render_group": null
  },
  {
@@ -1152,6 +1348,13 @@
   "bundle_id": "zanatomy-female-lymphatic",
   "structure_id": "FMA:224424",
   "triangle_count": 312,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-751664b966d0",
+  "bundle_id": "zanatomy-female-lymphatic",
+  "structure_id": "FMA:224478",
+  "triangle_count": 370,
   "render_group": null
  },
  {
@@ -1172,7 +1375,7 @@
   "id": "ZAF-76c827571ea9",
   "bundle_id": "zanatomy-female-lymphatic",
   "structure_id": "FMA:232668",
-  "triangle_count": 428,
+  "triangle_count": 384,
   "render_group": null
  },
  {
@@ -1183,10 +1386,17 @@
   "render_group": null
  },
  {
+  "id": "ZAF-804f25dc1a95",
+  "bundle_id": "zanatomy-female-lymphatic",
+  "structure_id": "FMA:232719",
+  "triangle_count": 576,
+  "render_group": null
+ },
+ {
   "id": "ZAF-87d3ab25c559",
   "bundle_id": "zanatomy-female-lymphatic",
   "structure_id": "FMA:71720",
-  "triangle_count": 566,
+  "triangle_count": 576,
   "render_group": null
  },
  {
@@ -1211,6 +1421,13 @@
   "render_group": null
  },
  {
+  "id": "ZAF-ab1936d1262d",
+  "bundle_id": "zanatomy-female-lymphatic",
+  "structure_id": "FMA:232721",
+  "triangle_count": 576,
+  "render_group": null
+ },
+ {
   "id": "ZAF-b09fb110e1af",
   "bundle_id": "zanatomy-female-lymphatic",
   "structure_id": "FMA:224430",
@@ -1225,6 +1442,13 @@
   "render_group": null
  },
  {
+  "id": "ZAF-b26fe160f61d",
+  "bundle_id": "zanatomy-female-lymphatic",
+  "structure_id": "FMA:224480",
+  "triangle_count": 358,
+  "render_group": null
+ },
+ {
   "id": "ZAF-b8a387f50da2",
   "bundle_id": "zanatomy-female-lymphatic",
   "structure_id": "FMA:224422",
@@ -1235,7 +1459,14 @@
   "id": "ZAF-c88c17788bb0",
   "bundle_id": "zanatomy-female-lymphatic",
   "structure_id": "FMA:232664",
-  "triangle_count": 430,
+  "triangle_count": 368,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-cc6f5a40e4a5",
+  "bundle_id": "zanatomy-female-lymphatic",
+  "structure_id": "FMA:224494",
+  "triangle_count": 576,
   "render_group": null
  },
  {
@@ -1274,38 +1505,52 @@
   "render_group": null
  },
  {
+  "id": "ZAF-03f47fb3332c",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:22744",
+  "triangle_count": 614,
+  "render_group": null
+ },
+ {
   "id": "ZAF-07cbc3a0bfbf",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46302",
-  "triangle_count": 282,
+  "triangle_count": 280,
   "render_group": null
  },
  {
   "id": "ZAF-0a0290534ddb",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:32531",
-  "triangle_count": 446,
+  "triangle_count": 500,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-0c59c66186ba",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:13353",
+  "triangle_count": 418,
   "render_group": null
  },
  {
   "id": "ZAF-0ce227e07de8",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:32530",
-  "triangle_count": 442,
+  "triangle_count": 504,
   "render_group": null
  },
  {
   "id": "ZAF-0e1b5f38eb76",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:45826",
-  "triangle_count": 292,
+  "triangle_count": 238,
   "render_group": null
  },
  {
   "id": "ZAF-0e4c7df4e92a",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46610",
-  "triangle_count": 1146,
+  "triangle_count": 860,
   "render_group": null
  },
  {
@@ -1319,7 +1564,28 @@
   "id": "ZAF-0f31a6dd8bd1",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46818",
-  "triangle_count": 686,
+  "triangle_count": 478,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-13011657a1a8",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:32557",
+  "triangle_count": 2024,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-13c849522018",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:13388",
+  "triangle_count": 692,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-1a811e9bfe87",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:13390",
+  "triangle_count": 620,
   "render_group": null
  },
  {
@@ -1333,7 +1599,7 @@
   "id": "ZAF-1f9826b82664",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46609",
-  "triangle_count": 802,
+  "triangle_count": 804,
   "render_group": null
  },
  {
@@ -1347,7 +1613,7 @@
   "id": "ZAF-26dadbb4ea56",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46841",
-  "triangle_count": 1120,
+  "triangle_count": 858,
   "render_group": null
  },
  {
@@ -1382,7 +1648,7 @@
   "id": "ZAF-2c4456ca78fd",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46634",
-  "triangle_count": 966,
+  "triangle_count": 884,
   "render_group": null
  },
  {
@@ -1403,7 +1669,7 @@
   "id": "ZAF-3233df0e3295",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46827",
-  "triangle_count": 166,
+  "triangle_count": 160,
   "render_group": null
  },
  {
@@ -1411,6 +1677,13 @@
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:49007",
   "triangle_count": 3076,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-32d4117d7b0c",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:13389",
+  "triangle_count": 708,
   "render_group": null
  },
  {
@@ -1424,28 +1697,28 @@
   "id": "ZAF-37cdf9fcbed4",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:45827",
-  "triangle_count": 296,
+  "triangle_count": 240,
   "render_group": null
  },
  {
   "id": "ZAF-387d3a4159fe",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46633",
-  "triangle_count": 1002,
+  "triangle_count": 884,
   "render_group": null
  },
  {
   "id": "ZAF-395e500ac444",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:22728",
-  "triangle_count": 1574,
+  "triangle_count": 1578,
   "render_group": null
  },
  {
   "id": "ZAF-3b14a13848dc",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46327",
-  "triangle_count": 402,
+  "triangle_count": 394,
   "render_group": null
  },
  {
@@ -1459,14 +1732,28 @@
   "id": "ZAF-3e14d317baa5",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:49000",
-  "triangle_count": 656,
+  "triangle_count": 604,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-3ed1612384ae",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:22757",
+  "triangle_count": 546,
   "render_group": null
  },
  {
   "id": "ZAF-40867bb14a43",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:49013",
-  "triangle_count": 324,
+  "triangle_count": 320,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-42273cbd038a",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:13351",
+  "triangle_count": 326,
   "render_group": null
  },
  {
@@ -1477,10 +1764,17 @@
   "render_group": null
  },
  {
+  "id": "ZAF-44cdb8193668",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:13347",
+  "triangle_count": 418,
+  "render_group": null
+ },
+ {
   "id": "ZAF-44db40538f26",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46321",
-  "triangle_count": 874,
+  "triangle_count": 816,
   "render_group": null
  },
  {
@@ -1494,7 +1788,7 @@
   "id": "ZAF-4f1d6b06162d",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46309",
-  "triangle_count": 594,
+  "triangle_count": 592,
   "render_group": null
  },
  {
@@ -1515,7 +1809,7 @@
   "id": "ZAF-514de112ab32",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46303",
-  "triangle_count": 420,
+  "triangle_count": 382,
   "render_group": null
  },
  {
@@ -1529,14 +1823,14 @@
   "id": "ZAF-5570a2b83635",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46303",
-  "triangle_count": 460,
+  "triangle_count": 382,
   "render_group": null
  },
  {
   "id": "ZAF-55850a7eb56d",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46835",
-  "triangle_count": 664,
+  "triangle_count": 570,
   "render_group": null
  },
  {
@@ -1544,6 +1838,27 @@
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46803",
   "triangle_count": 154,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-564a9a54f910",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:32541",
+  "triangle_count": 924,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-58a66d9161f1",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:13393",
+  "triangle_count": 414,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-5ab2e0ebff44",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:45740",
+  "triangle_count": 1964,
   "render_group": null
  },
  {
@@ -1568,6 +1883,20 @@
   "render_group": null
  },
  {
+  "id": "ZAF-690d7ebf1641",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:13352",
+  "triangle_count": 440,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-6c5b54bd2b00",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:13391",
+  "triangle_count": 616,
+  "render_group": null
+ },
+ {
   "id": "ZAF-6f9e0ce40b72",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:49065",
@@ -1585,14 +1914,14 @@
   "id": "ZAF-79db709a7c75",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:49003",
-  "triangle_count": 460,
+  "triangle_count": 396,
   "render_group": null
  },
  {
   "id": "ZAF-7a55751342bc",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:76861",
-  "triangle_count": 165,
+  "triangle_count": 159,
   "render_group": null
  },
  {
@@ -1606,7 +1935,7 @@
   "id": "ZAF-832bc981c2ec",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:22729",
-  "triangle_count": 1574,
+  "triangle_count": 1578,
   "render_group": null
  },
  {
@@ -1614,6 +1943,13 @@
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46807",
   "triangle_count": 472,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-867447ae22a0",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:13349",
+  "triangle_count": 810,
   "render_group": null
  },
  {
@@ -1627,7 +1963,7 @@
   "id": "ZAF-8b90cde07940",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46836",
-  "triangle_count": 674,
+  "triangle_count": 596,
   "render_group": null
  },
  {
@@ -1641,7 +1977,7 @@
   "id": "ZAF-90f77a4db7df",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46326",
-  "triangle_count": 406,
+  "triangle_count": 402,
   "render_group": null
  },
  {
@@ -1656,6 +1992,13 @@
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:49052",
   "triangle_count": 524,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-921c576a6646",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:22727",
+  "triangle_count": 1286,
   "render_group": null
  },
  {
@@ -1676,14 +2019,14 @@
   "id": "ZAF-95136e0e36f5",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:32536",
-  "triangle_count": 412,
+  "triangle_count": 392,
   "render_group": null
  },
  {
   "id": "ZAF-972850e56926",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46830",
-  "triangle_count": 386,
+  "triangle_count": 290,
   "render_group": null
  },
  {
@@ -1701,10 +2044,17 @@
   "render_group": null
  },
  {
+  "id": "ZAF-9c7f0b230a91",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:22874",
+  "triangle_count": 772,
+  "render_group": null
+ },
+ {
   "id": "ZAF-9e42b8c8712d",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:49000",
-  "triangle_count": 668,
+  "triangle_count": 606,
   "render_group": null
  },
  {
@@ -1712,6 +2062,20 @@
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46768",
   "triangle_count": 6034,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-a14125cfefbc",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:13348",
+  "triangle_count": 810,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-a7a550bc4012",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:22704",
+  "triangle_count": 614,
   "render_group": null
  },
  {
@@ -1732,7 +2096,7 @@
   "id": "ZAF-affdc01d80d2",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46829",
-  "triangle_count": 390,
+  "triangle_count": 282,
   "render_group": null
  },
  {
@@ -1760,14 +2124,14 @@
   "id": "ZAF-b7aaf6119fc5",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46840",
-  "triangle_count": 440,
+  "triangle_count": 398,
   "render_group": null
  },
  {
   "id": "ZAF-b8ac64337f3d",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:76861",
-  "triangle_count": 170,
+  "triangle_count": 153,
   "render_group": null
  },
  {
@@ -1775,6 +2139,20 @@
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46806",
   "triangle_count": 466,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-b939e6fc83e1",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:22758",
+  "triangle_count": 546,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-bf00319370c6",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:22875",
+  "triangle_count": 774,
   "render_group": null
  },
  {
@@ -1802,28 +2180,35 @@
   "id": "ZAF-c4d1c62f972e",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:13409",
-  "triangle_count": 1478,
+  "triangle_count": 1484,
   "render_group": null
  },
  {
   "id": "ZAF-c54d03442e34",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46610",
-  "triangle_count": 1188,
+  "triangle_count": 898,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-c70ffef38a1b",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:32557",
+  "triangle_count": 2024,
   "render_group": null
  },
  {
   "id": "ZAF-c716dac7df46",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46609",
-  "triangle_count": 796,
+  "triangle_count": 846,
   "render_group": null
  },
  {
   "id": "ZAF-c9634377f6fc",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:32537",
-  "triangle_count": 368,
+  "triangle_count": 344,
   "render_group": null
  },
  {
@@ -1851,7 +2236,14 @@
   "id": "ZAF-ceb7dc2c185c",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46302",
-  "triangle_count": 296,
+  "triangle_count": 280,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-d3faa7022b42",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:13371",
+  "triangle_count": 1806,
   "render_group": null
  },
  {
@@ -1876,6 +2268,13 @@
   "render_group": null
  },
  {
+  "id": "ZAF-d9581dc799eb",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:45739",
+  "triangle_count": 1964,
+  "render_group": null
+ },
+ {
   "id": "ZAF-da3a47949192",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:49065",
@@ -1886,7 +2285,7 @@
   "id": "ZAF-dc9dad3bf855",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46841",
-  "triangle_count": 1110,
+  "triangle_count": 864,
   "render_group": null
  },
  {
@@ -1907,7 +2306,14 @@
   "id": "ZAF-dd2dcddb882d",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46839",
-  "triangle_count": 434,
+  "triangle_count": 402,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-de6ae1b7337d",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:13350",
+  "triangle_count": 326,
   "render_group": null
  },
  {
@@ -1928,14 +2334,14 @@
   "id": "ZAF-e56a2e65f6fc",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46817",
-  "triangle_count": 620,
+  "triangle_count": 476,
   "render_group": null
  },
  {
   "id": "ZAF-e6276cf16adf",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46813",
-  "triangle_count": 428,
+  "triangle_count": 404,
   "render_group": null
  },
  {
@@ -1943,6 +2349,20 @@
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:49008",
   "triangle_count": 3076,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-e70c5cc757cb",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:13392",
+  "triangle_count": 414,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-e840880afefb",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:13372",
+  "triangle_count": 1800,
   "render_group": null
  },
  {
@@ -1956,7 +2376,7 @@
   "id": "ZAF-eea615bb6871",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46826",
-  "triangle_count": 166,
+  "triangle_count": 160,
   "render_group": null
  },
  {
@@ -1974,10 +2394,24 @@
   "render_group": null
  },
  {
+  "id": "ZAF-f1bc2e8a0ed4",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:32540",
+  "triangle_count": 924,
+  "render_group": null
+ },
+ {
   "id": "ZAF-f39f19174240",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46671",
   "triangle_count": 4584,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-f54921782271",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:22726",
+  "triangle_count": 1286,
   "render_group": null
  },
  {
@@ -1998,14 +2432,14 @@
   "id": "ZAF-fa35943ddcfb",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:49003",
-  "triangle_count": 466,
+  "triangle_count": 422,
   "render_group": null
  },
  {
   "id": "ZAF-fcb3b5153bb3",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46812",
-  "triangle_count": 412,
+  "triangle_count": 382,
   "render_group": null
  },
  {
@@ -2016,17 +2450,24 @@
   "render_group": null
  },
  {
+  "id": "ZAF-fe62df9cd0cf",
+  "bundle_id": "zanatomy-female-muscular",
+  "structure_id": "FMA:13346",
+  "triangle_count": 416,
+  "render_group": null
+ },
+ {
   "id": "ZAF-fe7eae16ee94",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:13408",
-  "triangle_count": 1484,
+  "triangle_count": 1476,
   "render_group": null
  },
  {
   "id": "ZAF-ff4ce2454cc0",
   "bundle_id": "zanatomy-female-muscular",
   "structure_id": "FMA:46322",
-  "triangle_count": 864,
+  "triangle_count": 814,
   "render_group": null
  },
  {
@@ -2093,6 +2534,13 @@
   "render_group": null
  },
  {
+  "id": "ZAF-286b1770197c",
+  "bundle_id": "zanatomy-female-nervous",
+  "structure_id": "FMA:65216",
+  "triangle_count": 204,
+  "render_group": null
+ },
+ {
   "id": "ZAF-290cc7850cb3",
   "bundle_id": "zanatomy-female-nervous",
   "structure_id": "FMA:50879",
@@ -2149,6 +2597,13 @@
   "render_group": null
  },
  {
+  "id": "ZAF-3b1324c288ec",
+  "bundle_id": "zanatomy-female-nervous",
+  "structure_id": "FMA:65218",
+  "triangle_count": 136,
+  "render_group": null
+ },
+ {
   "id": "ZAF-3c28b9893036",
   "bundle_id": "zanatomy-female-nervous",
   "structure_id": "FMA:83966",
@@ -2174,6 +2629,13 @@
   "bundle_id": "zanatomy-female-nervous",
   "structure_id": "FMA:83967",
   "triangle_count": 4376,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-473ff806335c",
+  "bundle_id": "zanatomy-female-nervous",
+  "structure_id": "FMA:65285",
+  "triangle_count": 259,
   "render_group": null
  },
  {
@@ -2233,6 +2695,20 @@
   "render_group": null
  },
  {
+  "id": "ZAF-719251cd6f58",
+  "bundle_id": "zanatomy-female-nervous",
+  "structure_id": "FMA:65284",
+  "triangle_count": 776,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-7491820cc077",
+  "bundle_id": "zanatomy-female-nervous",
+  "structure_id": "FMA:65218",
+  "triangle_count": 119,
+  "render_group": null
+ },
+ {
   "id": "ZAF-77e1180aaa1f",
   "bundle_id": "zanatomy-female-nervous",
   "structure_id": "FMA:50897",
@@ -2240,10 +2716,24 @@
   "render_group": null
  },
  {
+  "id": "ZAF-797da324f7fe",
+  "bundle_id": "zanatomy-female-nervous",
+  "structure_id": "FMA:65217",
+  "triangle_count": 172,
+  "render_group": null
+ },
+ {
   "id": "ZAF-805bd7e84a9d",
   "bundle_id": "zanatomy-female-nervous",
   "structure_id": "FMA:53219",
   "triangle_count": 782,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-835394bc1099",
+  "bundle_id": "zanatomy-female-nervous",
+  "structure_id": "FMA:66083",
+  "triangle_count": 1468,
   "render_group": null
  },
  {
@@ -2265,6 +2755,20 @@
   "bundle_id": "zanatomy-female-nervous",
   "structure_id": "FMA:52726",
   "triangle_count": 2362,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-92eda675ab20",
+  "bundle_id": "zanatomy-female-nervous",
+  "structure_id": "FMA:65286",
+  "triangle_count": 259,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-956f95278528",
+  "bundle_id": "zanatomy-female-nervous",
+  "structure_id": "FMA:65216",
+  "triangle_count": 206,
   "render_group": null
  },
  {
@@ -2366,6 +2870,20 @@
   "render_group": null
  },
  {
+  "id": "ZAF-d6a58a68d49d",
+  "bundle_id": "zanatomy-female-nervous",
+  "structure_id": "FMA:65283",
+  "triangle_count": 777,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-da0820d0dc7e",
+  "bundle_id": "zanatomy-female-nervous",
+  "structure_id": "FMA:65217",
+  "triangle_count": 178,
+  "render_group": null
+ },
+ {
   "id": "ZAF-e41acb71ec80",
   "bundle_id": "zanatomy-female-nervous",
   "structure_id": "FMA:52729",
@@ -2415,6 +2933,20 @@
   "render_group": null
  },
  {
+  "id": "ZAF-fee061bb2633",
+  "bundle_id": "zanatomy-female-nervous",
+  "structure_id": "FMA:66084",
+  "triangle_count": 1467,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-1405edd7b8eb",
+  "bundle_id": "zanatomy-female-respiratory",
+  "structure_id": "FMA:55378",
+  "triangle_count": 934,
+  "render_group": null
+ },
+ {
   "id": "ZAF-2397b7bbb5a1",
   "bundle_id": "zanatomy-female-respiratory",
   "structure_id": "FMA:57472",
@@ -2422,10 +2954,24 @@
   "render_group": null
  },
  {
+  "id": "ZAF-3c79e3f12652",
+  "bundle_id": "zanatomy-female-respiratory",
+  "structure_id": "FMA:55141",
+  "triangle_count": 428,
+  "render_group": null
+ },
+ {
   "id": "ZAF-43672d739ef9",
   "bundle_id": "zanatomy-female-respiratory",
   "structure_id": "FMA:57469",
   "triangle_count": 560,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-45233ade880d",
+  "bundle_id": "zanatomy-female-respiratory",
+  "structure_id": "FMA:55237",
+  "triangle_count": 601,
   "render_group": null
  },
  {
@@ -2447,6 +2993,13 @@
   "bundle_id": "zanatomy-female-respiratory",
   "structure_id": "FMA:59684",
   "triangle_count": 2938,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-74b5ba10a2f4",
+  "bundle_id": "zanatomy-female-respiratory",
+  "structure_id": "FMA:55140",
+  "triangle_count": 424,
   "render_group": null
  },
  {
@@ -2499,10 +3052,24 @@
   "render_group": null
  },
  {
+  "id": "ZAF-e315c621380f",
+  "bundle_id": "zanatomy-female-respiratory",
+  "structure_id": "FMA:55377",
+  "triangle_count": 934,
+  "render_group": null
+ },
+ {
   "id": "ZAF-e3ec21b207a4",
   "bundle_id": "zanatomy-female-respiratory",
   "structure_id": "FMA:57473",
   "triangle_count": 862,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-e6258bdc0cf9",
+  "bundle_id": "zanatomy-female-respiratory",
+  "structure_id": "FMA:55138",
+  "triangle_count": 830,
   "render_group": null
  },
  {
@@ -2544,7 +3111,7 @@
   "id": "ZAF-18bec6c302cb",
   "bundle_id": "zanatomy-female-skeletal",
   "structure_id": "FMA:12520",
-  "triangle_count": 1364,
+  "triangle_count": 1330,
   "render_group": null
  },
  {
@@ -2552,6 +3119,13 @@
   "bundle_id": "zanatomy-female-skeletal",
   "structure_id": "FMA:53656",
   "triangle_count": 934,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-23569b4a04aa",
+  "bundle_id": "zanatomy-female-skeletal",
+  "structure_id": "FMA:13427",
+  "triangle_count": 194,
   "render_group": null
  },
  {
@@ -2632,6 +3206,13 @@
   "render_group": null
  },
  {
+  "id": "ZAF-78070e971214",
+  "bundle_id": "zanatomy-female-skeletal",
+  "structure_id": "FMA:12523",
+  "triangle_count": 1154,
+  "render_group": null
+ },
+ {
   "id": "ZAF-7b674b3ccb4e",
   "bundle_id": "zanatomy-female-skeletal",
   "structure_id": "FMA:52748",
@@ -2709,6 +3290,13 @@
   "render_group": null
  },
  {
+  "id": "ZAF-cc8bd2321101",
+  "bundle_id": "zanatomy-female-skeletal",
+  "structure_id": "FMA:12525",
+  "triangle_count": 978,
+  "render_group": null
+ },
+ {
   "id": "ZAF-ccb359c1cf49",
   "bundle_id": "zanatomy-female-skeletal",
   "structure_id": "FMA:52892",
@@ -2737,6 +3325,20 @@
   "render_group": null
  },
  {
+  "id": "ZAF-d8547fba78c2",
+  "bundle_id": "zanatomy-female-skeletal",
+  "structure_id": "FMA:12524",
+  "triangle_count": 1032,
+  "render_group": null
+ },
+ {
+  "id": "ZAF-df49c2e10ad3",
+  "bundle_id": "zanatomy-female-skeletal",
+  "structure_id": "FMA:12521",
+  "triangle_count": 1040,
+  "render_group": null
+ },
+ {
   "id": "ZAF-e17c89319dae",
   "bundle_id": "zanatomy-female-skeletal",
   "structure_id": "FMA:52740",
@@ -2744,10 +3346,17 @@
   "render_group": null
  },
  {
+  "id": "ZAF-f11cf17e01ed",
+  "bundle_id": "zanatomy-female-skeletal",
+  "structure_id": "FMA:12522",
+  "triangle_count": 986,
+  "render_group": null
+ },
+ {
   "id": "ZAF-f641e56224db",
   "bundle_id": "zanatomy-female-skeletal",
   "structure_id": "FMA:52749",
-  "triangle_count": 600,
+  "triangle_count": 664,
   "render_group": null
  },
  {
@@ -3185,6 +3794,13 @@
   "render_group": "artery"
  },
  {
+  "id": "ZAM-5e9843b268f3",
+  "bundle_id": "zanatomy-male-cardiovascular",
+  "structure_id": "FMA:13319",
+  "triangle_count": 212,
+  "render_group": "vein"
+ },
+ {
   "id": "ZAM-5f4e778ff1b8",
   "bundle_id": "zanatomy-male-cardiovascular",
   "structure_id": "FMA:51290",
@@ -3304,6 +3920,13 @@
   "render_group": "vein"
  },
  {
+  "id": "ZAM-80becc9e4458",
+  "bundle_id": "zanatomy-male-cardiovascular",
+  "structure_id": "FMA:4763",
+  "triangle_count": 153,
+  "render_group": "vein"
+ },
+ {
   "id": "ZAM-84d6f5c8141c",
   "bundle_id": "zanatomy-male-cardiovascular",
   "structure_id": "FMA:4764",
@@ -3316,6 +3939,13 @@
   "structure_id": "FMA:49568",
   "triangle_count": 283,
   "render_group": "artery"
+ },
+ {
+  "id": "ZAM-8869fa8ceebf",
+  "bundle_id": "zanatomy-male-cardiovascular",
+  "structure_id": "FMA:13320",
+  "triangle_count": 212,
+  "render_group": "vein"
  },
  {
   "id": "ZAM-901906207f31",
@@ -3435,6 +4065,13 @@
   "structure_id": "FMA:49987",
   "triangle_count": 460,
   "render_group": "artery"
+ },
+ {
+  "id": "ZAM-a90226cc6da2",
+  "bundle_id": "zanatomy-male-cardiovascular",
+  "structure_id": "FMA:4762",
+  "triangle_count": 424,
+  "render_group": "vein"
  },
  {
   "id": "ZAM-ade328a0bffd",
@@ -3787,6 +4424,34 @@
   "render_group": null
  },
  {
+  "id": "ZAM-2960a3880305",
+  "bundle_id": "zanatomy-male-lymphatic",
+  "structure_id": "FMA:224496",
+  "triangle_count": 582,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-2ad9106137d9",
+  "bundle_id": "zanatomy-male-lymphatic",
+  "structure_id": "FMA:232270",
+  "triangle_count": 430,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-2f93e1255239",
+  "bundle_id": "zanatomy-male-lymphatic",
+  "structure_id": "FMA:232272",
+  "triangle_count": 430,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-353321e011d8",
+  "bundle_id": "zanatomy-male-lymphatic",
+  "structure_id": "FMA:71730",
+  "triangle_count": 854,
+  "render_group": null
+ },
+ {
   "id": "ZAM-3c3529363f22",
   "bundle_id": "zanatomy-male-lymphatic",
   "structure_id": "FMA:224444",
@@ -3798,6 +4463,13 @@
   "bundle_id": "zanatomy-male-lymphatic",
   "structure_id": "FMA:232513",
   "triangle_count": 168,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-4839b236ed2d",
+  "bundle_id": "zanatomy-male-lymphatic",
+  "structure_id": "FMA:71724",
+  "triangle_count": 862,
   "render_group": null
  },
  {
@@ -3819,6 +4491,13 @@
   "bundle_id": "zanatomy-male-lymphatic",
   "structure_id": "FMA:224424",
   "triangle_count": 290,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-751664b966d0",
+  "bundle_id": "zanatomy-male-lymphatic",
+  "structure_id": "FMA:224478",
+  "triangle_count": 302,
   "render_group": null
  },
  {
@@ -3850,6 +4529,13 @@
   "render_group": null
  },
  {
+  "id": "ZAM-804f25dc1a95",
+  "bundle_id": "zanatomy-male-lymphatic",
+  "structure_id": "FMA:232719",
+  "triangle_count": 576,
+  "render_group": null
+ },
+ {
   "id": "ZAM-87d3ab25c559",
   "bundle_id": "zanatomy-male-lymphatic",
   "structure_id": "FMA:71720",
@@ -3878,6 +4564,13 @@
   "render_group": null
  },
  {
+  "id": "ZAM-ab1936d1262d",
+  "bundle_id": "zanatomy-male-lymphatic",
+  "structure_id": "FMA:232721",
+  "triangle_count": 576,
+  "render_group": null
+ },
+ {
   "id": "ZAM-b09fb110e1af",
   "bundle_id": "zanatomy-male-lymphatic",
   "structure_id": "FMA:224430",
@@ -3892,6 +4585,13 @@
   "render_group": null
  },
  {
+  "id": "ZAM-b26fe160f61d",
+  "bundle_id": "zanatomy-male-lymphatic",
+  "structure_id": "FMA:224480",
+  "triangle_count": 302,
+  "render_group": null
+ },
+ {
   "id": "ZAM-b8a387f50da2",
   "bundle_id": "zanatomy-male-lymphatic",
   "structure_id": "FMA:224422",
@@ -3903,6 +4603,13 @@
   "bundle_id": "zanatomy-male-lymphatic",
   "structure_id": "FMA:232664",
   "triangle_count": 430,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-cc6f5a40e4a5",
+  "bundle_id": "zanatomy-male-lymphatic",
+  "structure_id": "FMA:224494",
+  "triangle_count": 578,
   "render_group": null
  },
  {
@@ -3941,10 +4648,24 @@
   "render_group": null
  },
  {
+  "id": "ZAM-03f47fb3332c",
+  "bundle_id": "zanatomy-male-muscular",
+  "structure_id": "FMA:22744",
+  "triangle_count": 614,
+  "render_group": null
+ },
+ {
   "id": "ZAM-07cbc3a0bfbf",
   "bundle_id": "zanatomy-male-muscular",
   "structure_id": "FMA:46302",
   "triangle_count": 256,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-0c59c66186ba",
+  "bundle_id": "zanatomy-male-muscular",
+  "structure_id": "FMA:13353",
+  "triangle_count": 450,
   "render_group": null
  },
  {
@@ -3959,6 +4680,13 @@
   "bundle_id": "zanatomy-male-muscular",
   "structure_id": "FMA:46818",
   "triangle_count": 684,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-13c849522018",
+  "bundle_id": "zanatomy-male-muscular",
+  "structure_id": "FMA:13388",
+  "triangle_count": 576,
   "render_group": null
  },
  {
@@ -4011,6 +4739,13 @@
   "render_group": null
  },
  {
+  "id": "ZAM-32d4117d7b0c",
+  "bundle_id": "zanatomy-male-muscular",
+  "structure_id": "FMA:13389",
+  "triangle_count": 578,
+  "render_group": null
+ },
+ {
   "id": "ZAM-357f31df93f0",
   "bundle_id": "zanatomy-male-muscular",
   "structure_id": "FMA:55606",
@@ -4025,6 +4760,13 @@
   "render_group": null
  },
  {
+  "id": "ZAM-3ed1612384ae",
+  "bundle_id": "zanatomy-male-muscular",
+  "structure_id": "FMA:22757",
+  "triangle_count": 546,
+  "render_group": null
+ },
+ {
   "id": "ZAM-40867bb14a43",
   "bundle_id": "zanatomy-male-muscular",
   "structure_id": "FMA:49013",
@@ -4032,10 +4774,24 @@
   "render_group": null
  },
  {
+  "id": "ZAM-42273cbd038a",
+  "bundle_id": "zanatomy-male-muscular",
+  "structure_id": "FMA:13351",
+  "triangle_count": 326,
+  "render_group": null
+ },
+ {
   "id": "ZAM-4488937e8a8f",
   "bundle_id": "zanatomy-male-muscular",
   "structure_id": "FMA:46763",
   "triangle_count": 3582,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-44cdb8193668",
+  "bundle_id": "zanatomy-male-muscular",
+  "structure_id": "FMA:13347",
+  "triangle_count": 416,
   "render_group": null
  },
  {
@@ -4095,6 +4851,13 @@
   "render_group": null
  },
  {
+  "id": "ZAM-690d7ebf1641",
+  "bundle_id": "zanatomy-male-muscular",
+  "structure_id": "FMA:13352",
+  "triangle_count": 450,
+  "render_group": null
+ },
+ {
   "id": "ZAM-7a55751342bc",
   "bundle_id": "zanatomy-male-muscular",
   "structure_id": "FMA:76861",
@@ -4113,6 +4876,13 @@
   "bundle_id": "zanatomy-male-muscular",
   "structure_id": "FMA:46807",
   "triangle_count": 470,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-867447ae22a0",
+  "bundle_id": "zanatomy-male-muscular",
+  "structure_id": "FMA:13349",
+  "triangle_count": 810,
   "render_group": null
  },
  {
@@ -4137,6 +4907,13 @@
   "render_group": null
  },
  {
+  "id": "ZAM-921c576a6646",
+  "bundle_id": "zanatomy-male-muscular",
+  "structure_id": "FMA:22727",
+  "triangle_count": 1288,
+  "render_group": null
+ },
+ {
   "id": "ZAM-932ac59365e6",
   "bundle_id": "zanatomy-male-muscular",
   "structure_id": "FMA:46784",
@@ -4158,10 +4935,31 @@
   "render_group": null
  },
  {
+  "id": "ZAM-9c7f0b230a91",
+  "bundle_id": "zanatomy-male-muscular",
+  "structure_id": "FMA:22874",
+  "triangle_count": 772,
+  "render_group": null
+ },
+ {
   "id": "ZAM-9f75e24a63b3",
   "bundle_id": "zanatomy-male-muscular",
   "structure_id": "FMA:46768",
   "triangle_count": 6030,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-a14125cfefbc",
+  "bundle_id": "zanatomy-male-muscular",
+  "structure_id": "FMA:13348",
+  "triangle_count": 810,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-a7a550bc4012",
+  "bundle_id": "zanatomy-male-muscular",
+  "structure_id": "FMA:22704",
+  "triangle_count": 614,
   "render_group": null
  },
  {
@@ -4221,6 +5019,20 @@
   "render_group": null
  },
  {
+  "id": "ZAM-b939e6fc83e1",
+  "bundle_id": "zanatomy-male-muscular",
+  "structure_id": "FMA:22758",
+  "triangle_count": 546,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-bf00319370c6",
+  "bundle_id": "zanatomy-male-muscular",
+  "structure_id": "FMA:22875",
+  "triangle_count": 768,
+  "render_group": null
+ },
+ {
   "id": "ZAM-bf476df79ada",
   "bundle_id": "zanatomy-male-muscular",
   "structure_id": "FMA:46784",
@@ -4256,6 +5068,13 @@
   "render_group": null
  },
  {
+  "id": "ZAM-d3faa7022b42",
+  "bundle_id": "zanatomy-male-muscular",
+  "structure_id": "FMA:13371",
+  "triangle_count": 1846,
+  "render_group": null
+ },
+ {
   "id": "ZAM-d443085488ed",
   "bundle_id": "zanatomy-male-muscular",
   "structure_id": "FMA:76864",
@@ -4284,10 +5103,24 @@
   "render_group": null
  },
  {
+  "id": "ZAM-de6ae1b7337d",
+  "bundle_id": "zanatomy-male-muscular",
+  "structure_id": "FMA:13350",
+  "triangle_count": 326,
+  "render_group": null
+ },
+ {
   "id": "ZAM-e56a2e65f6fc",
   "bundle_id": "zanatomy-male-muscular",
   "structure_id": "FMA:46817",
   "triangle_count": 684,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-e840880afefb",
+  "bundle_id": "zanatomy-male-muscular",
+  "structure_id": "FMA:13372",
+  "triangle_count": 1858,
   "render_group": null
  },
  {
@@ -4312,6 +5145,13 @@
   "render_group": null
  },
  {
+  "id": "ZAM-f54921782271",
+  "bundle_id": "zanatomy-male-muscular",
+  "structure_id": "FMA:22726",
+  "triangle_count": 1288,
+  "render_group": null
+ },
+ {
   "id": "ZAM-f5e74cd104eb",
   "bundle_id": "zanatomy-male-muscular",
   "structure_id": "FMA:49021",
@@ -4323,6 +5163,13 @@
   "bundle_id": "zanatomy-male-muscular",
   "structure_id": "FMA:55609",
   "triangle_count": 272,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-fe62df9cd0cf",
+  "bundle_id": "zanatomy-male-muscular",
+  "structure_id": "FMA:13346",
+  "triangle_count": 418,
   "render_group": null
  },
  {
@@ -4351,6 +5198,13 @@
   "bundle_id": "zanatomy-male-nervous",
   "structure_id": "FMA:53061",
   "triangle_count": 264,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-072c13357d7a",
+  "bundle_id": "zanatomy-male-nervous",
+  "structure_id": "FMA:6259",
+  "triangle_count": 7602,
   "render_group": null
  },
  {
@@ -4389,6 +5243,13 @@
   "render_group": null
  },
  {
+  "id": "ZAM-1e7b44522ea4",
+  "bundle_id": "zanatomy-male-nervous",
+  "structure_id": "FMA:71237",
+  "triangle_count": 10483,
+  "render_group": "dura"
+ },
+ {
   "id": "ZAM-224308748dc6",
   "bundle_id": "zanatomy-male-nervous",
   "structure_id": "FMA:50901",
@@ -4414,6 +5275,13 @@
   "bundle_id": "zanatomy-male-nervous",
   "structure_id": "FMA:50888",
   "triangle_count": 8192,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-286b1770197c",
+  "bundle_id": "zanatomy-male-nervous",
+  "structure_id": "FMA:65216",
+  "triangle_count": 194,
   "render_group": null
  },
  {
@@ -4463,6 +5331,13 @@
   "bundle_id": "zanatomy-male-nervous",
   "structure_id": "FMA:53061",
   "triangle_count": 264,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-3b1324c288ec",
+  "bundle_id": "zanatomy-male-nervous",
+  "structure_id": "FMA:65218",
+  "triangle_count": 98,
   "render_group": null
  },
  {
@@ -4522,6 +5397,13 @@
   "render_group": null
  },
  {
+  "id": "ZAM-473ff806335c",
+  "bundle_id": "zanatomy-male-nervous",
+  "structure_id": "FMA:65285",
+  "triangle_count": 258,
+  "render_group": null
+ },
+ {
   "id": "ZAM-4f1e3d863ec6",
   "bundle_id": "zanatomy-male-nervous",
   "structure_id": "FMA:50899",
@@ -4547,6 +5429,13 @@
   "bundle_id": "zanatomy-male-nervous",
   "structure_id": "FMA:52611",
   "triangle_count": 824,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-61e6f18fc098",
+  "bundle_id": "zanatomy-male-nervous",
+  "structure_id": "FMA:6260",
+  "triangle_count": 7603,
   "render_group": null
  },
  {
@@ -4592,10 +5481,31 @@
   "render_group": null
  },
  {
+  "id": "ZAM-719251cd6f58",
+  "bundle_id": "zanatomy-male-nervous",
+  "structure_id": "FMA:65284",
+  "triangle_count": 777,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-7491820cc077",
+  "bundle_id": "zanatomy-male-nervous",
+  "structure_id": "FMA:65218",
+  "triangle_count": 105,
+  "render_group": null
+ },
+ {
   "id": "ZAM-77e1180aaa1f",
   "bundle_id": "zanatomy-male-nervous",
   "structure_id": "FMA:50897",
   "triangle_count": 4614,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-797da324f7fe",
+  "bundle_id": "zanatomy-male-nervous",
+  "structure_id": "FMA:65217",
+  "triangle_count": 172,
   "render_group": null
  },
  {
@@ -4617,6 +5527,13 @@
   "bundle_id": "zanatomy-male-nervous",
   "structure_id": "FMA:53219",
   "triangle_count": 782,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-835394bc1099",
+  "bundle_id": "zanatomy-male-nervous",
+  "structure_id": "FMA:66083",
+  "triangle_count": 1467,
   "render_group": null
  },
  {
@@ -4645,6 +5562,20 @@
   "bundle_id": "zanatomy-male-nervous",
   "structure_id": "FMA:52726",
   "triangle_count": 2362,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-92eda675ab20",
+  "bundle_id": "zanatomy-male-nervous",
+  "structure_id": "FMA:65286",
+  "triangle_count": 259,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-956f95278528",
+  "bundle_id": "zanatomy-male-nervous",
+  "structure_id": "FMA:65216",
+  "triangle_count": 192,
   "render_group": null
  },
  {
@@ -4802,6 +5733,20 @@
   "render_group": null
  },
  {
+  "id": "ZAM-d6a58a68d49d",
+  "bundle_id": "zanatomy-male-nervous",
+  "structure_id": "FMA:65283",
+  "triangle_count": 777,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-da0820d0dc7e",
+  "bundle_id": "zanatomy-male-nervous",
+  "structure_id": "FMA:65217",
+  "triangle_count": 172,
+  "render_group": null
+ },
+ {
   "id": "ZAM-deccd7ca7032",
   "bundle_id": "zanatomy-male-nervous",
   "structure_id": "FMA:54585",
@@ -4872,6 +5817,20 @@
   "render_group": null
  },
  {
+  "id": "ZAM-fee061bb2633",
+  "bundle_id": "zanatomy-male-nervous",
+  "structure_id": "FMA:66084",
+  "triangle_count": 1468,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-1405edd7b8eb",
+  "bundle_id": "zanatomy-male-respiratory",
+  "structure_id": "FMA:55378",
+  "triangle_count": 932,
+  "render_group": null
+ },
+ {
   "id": "ZAM-2397b7bbb5a1",
   "bundle_id": "zanatomy-male-respiratory",
   "structure_id": "FMA:57472",
@@ -4879,10 +5838,24 @@
   "render_group": null
  },
  {
+  "id": "ZAM-3c79e3f12652",
+  "bundle_id": "zanatomy-male-respiratory",
+  "structure_id": "FMA:55141",
+  "triangle_count": 452,
+  "render_group": null
+ },
+ {
   "id": "ZAM-43672d739ef9",
   "bundle_id": "zanatomy-male-respiratory",
   "structure_id": "FMA:57469",
   "triangle_count": 578,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-45233ade880d",
+  "bundle_id": "zanatomy-male-respiratory",
+  "structure_id": "FMA:55237",
+  "triangle_count": 590,
   "render_group": null
  },
  {
@@ -4897,6 +5870,13 @@
   "bundle_id": "zanatomy-male-respiratory",
   "structure_id": "FMA:59684",
   "triangle_count": 2940,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-74b5ba10a2f4",
+  "bundle_id": "zanatomy-male-respiratory",
+  "structure_id": "FMA:55140",
+  "triangle_count": 452,
   "render_group": null
  },
  {
@@ -4928,6 +5908,13 @@
   "render_group": null
  },
  {
+  "id": "ZAM-e315c621380f",
+  "bundle_id": "zanatomy-male-respiratory",
+  "structure_id": "FMA:55377",
+  "triangle_count": 932,
+  "render_group": null
+ },
+ {
   "id": "ZAM-e3ec21b207a4",
   "bundle_id": "zanatomy-male-respiratory",
   "structure_id": "FMA:57473",
@@ -4935,10 +5922,24 @@
   "render_group": null
  },
  {
+  "id": "ZAM-e6258bdc0cf9",
+  "bundle_id": "zanatomy-male-respiratory",
+  "structure_id": "FMA:55138",
+  "triangle_count": 830,
+  "render_group": null
+ },
+ {
   "id": "ZAM-f14e9d77d596",
   "bundle_id": "zanatomy-male-respiratory",
   "structure_id": "FMA:57417",
   "triangle_count": 450,
+  "render_group": null
+ },
+ {
+  "id": "ZAM-23569b4a04aa",
+  "bundle_id": "zanatomy-male-skeletal",
+  "structure_id": "FMA:13427",
+  "triangle_count": 194,
   "render_group": null
  },
  {

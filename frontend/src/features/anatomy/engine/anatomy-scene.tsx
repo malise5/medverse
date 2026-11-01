@@ -36,6 +36,7 @@ import {
 import { BloodFlow, PathwayAnimator } from "./head-processes";
 import { MaterialCache, type MeshState } from "./materials";
 import { MENINGES_OPACITY, meshColor } from "./palette";
+import { type Region, regionFloor, regionView as regionViewFor } from "./regions";
 
 /** Scene bounds (metres) of the BodyParts3D model after pipeline normalisation. */
 const TARGET = new Vector3(0, 0.88, 0);
@@ -52,16 +53,9 @@ const VIEW_POSITIONS: Record<ViewPreset, [number, number, number]> = {
   oblique: [DIST * 0.7, 1.4, DIST * 0.7],
 };
 
-/** Head study mode: the region kept above the floor plane, measured down from the vertex.
- * 0.40 m keeps the whole head plus the upper neck (hyoid, larynx, thyroid gland). */
-export const HEAD_SPAN_M = 0.4;
-
-/** Camera target and distance for a region, from the loaded scene bounds. */
-export function regionView(region: "body" | "head", box: Box3): { target: Vector3; dist: number } {
-  if (region === "head" && !box.isEmpty()) {
-    return { target: new Vector3(0, box.max.y - 0.13, 0), dist: 0.85 };
-  }
-  return { target: TARGET.clone(), dist: DIST };
+/** Camera target and distance for a region (see regions.ts), from the scene bounds. */
+export function regionView(region: Region, box: Box3): { target: Vector3; dist: number } {
+  return regionViewFor(region, box, { target: TARGET, dist: DIST });
 }
 
 export interface RegisteredMesh {
@@ -212,10 +206,10 @@ export function AnatomyScene({
       .map(([, d]) => d);
     const removedGhost = ghostDepth(depths, s.dissectionDepth);
 
-    // Region: head study mode keeps everything above a floor plane below the neck.
+    // Region: head and neck study modes keep everything above a floor plane.
     clipPlanes.length = 0;
     const regionBox = sceneBox.current.clone();
-    const floor = s.region === "head" && !regionBox.isEmpty() ? regionBox.max.y - HEAD_SPAN_M : null;
+    const floor = regionFloor(s.region, regionBox);
     if (floor !== null) {
       regionBox.min.y = floor;
       headPlane.set(new Vector3(0, 1, 0), -floor);
@@ -533,13 +527,13 @@ export function AnatomyScene({
     tryFocus();
   }, [focusCommand, tryFocus]);
 
-  // Head mode frames the head from the scene bounds, which grow as bundles load: keep
-  // re-framing until every bundle is in (only while no other focus is pending).
+  // Region modes frame the region from the scene bounds, which grow as bundles load:
+  // keep re-framing until every bundle is in (only while no other focus is pending).
   const loadedBundles = useRef(new Set<string>());
   const frameRegion = useCallback(() => {
     const s = useWorkspace.getState();
-    if (s.region !== "head" || !controls.current || pendingFocus.current || s.selectedId) return;
-    const { target, dist } = regionView("head", sceneBox.current);
+    if (s.region === "body" || !controls.current || pendingFocus.current || s.selectedId) return;
+    const { target, dist } = regionView(s.region, sceneBox.current);
     void controls.current.setLookAt(target.x, target.y, target.z + dist, target.x, target.y, target.z, true);
   }, []);
 
@@ -652,7 +646,6 @@ export function AnatomyScene({
         <BloodFlow
           getMeshes={getMeshes}
           getSceneBox={getSceneBox}
-          headSpan={HEAD_SPAN_M}
           region={region}
           version={`${loadVersion}|${JSON.stringify(systemVisible)}`}
         />

@@ -20,6 +20,7 @@ import type { BodyModel } from "@/lib/api/types";
 import { cn } from "@/lib/utils";
 
 import { useWorkspace, type ClipAxis, type ViewPreset } from "../store";
+import { REGION_LABELS } from "../engine/regions";
 
 const VIEWS: [ViewPreset, string][] = [
   ["anterior", "Anterior"],
@@ -99,13 +100,13 @@ function BodyModelSwitch() {
   );
 }
 
-/** Whole body / head study mode. Head mode clips below the neck and frames the head. */
+/** Whole body / head / neck study mode: region modes clip below the region and frame it. */
 function RegionSwitch() {
   const region = useWorkspace((s) => s.region);
   const setRegion = useWorkspace((s) => s.setRegion);
   return (
     <div role="radiogroup" aria-label="Region" className="inline-flex shrink-0 rounded-md border bg-muted/40 p-0.5">
-      {(["body", "head"] as const).map((r) => (
+      {(["body", "head", "neck"] as const).map((r) => (
         <button
           key={r}
           type="button"
@@ -117,7 +118,7 @@ function RegionSwitch() {
             region === r ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground",
           )}
         >
-          {r === "body" ? "Body" : "Head"}
+          {REGION_LABELS[r]}
         </button>
       ))}
     </div>
