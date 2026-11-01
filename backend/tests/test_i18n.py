@@ -70,8 +70,28 @@ def test_every_module_has_swahili_title_and_beginner_overview(auth_client):
     mods = auth_client.get("/api/v1/learning/modules", headers={"Accept-Language": "sw"}).json()
     en = {m["id"]: m for m in auth_client.get("/api/v1/learning/modules").json()}
     for m in mods:
-        assert m["translation"] != "missing", m["id"]
+        assert m["translation"] == "complete", m["id"]
         assert m["title"] != en[m["id"]]["title"], m["id"]
+
+
+def test_quiz_questions_and_answers_are_in_swahili(auth_client):
+    sw_file = json.loads((CONTENT / "i18n" / "sw" / "questions.json").read_text())["items"]
+    src = json.loads((CONTENT / "learning" / "quizzes.json").read_text())["questions"]
+    for q in src:  # every question, options in the same order (answers are graded by number)
+        assert q["id"] in sw_file, q["id"]
+        assert len(sw_file[q["id"]].get("options") or []) == len(q.get("options") or []), q["id"]
+
+    sw = auth_client.get("/api/v1/learning/modules/skeletal", headers={"Accept-Language": "sw"})
+    qs = {q["id"]: q for q in sw.json()["questions"]}
+    assert qs["skel-01"]["stem"] == sw_file["skel-01"]["stem"]
+    assert qs["skel-01"]["options"] == sw_file["skel-01"]["options"]
+    r = auth_client.post(
+        "/api/v1/learning/questions/skel-id-01/answer",
+        json={"response": "FMA:7485"},
+        headers={"Accept-Language": "sw"},
+    ).json()
+    assert r["correct"] and r["accepted"] == [{"id": "FMA:7485", "name": "fupa la kidari"}]
+    assert r["explanation"] == sw_file["skel-id-01"]["explanation"]
 
 
 @pytest.fixture
@@ -91,3 +111,37 @@ def test_seed_reports_stale_ids_and_unknown_fields(db, content_copy):
     db.rollback()
     assert any("no_such_module: no such module" in p for p in report.problems)
     assert any("skeletal: unknown field tilte" in p for p in report.problems)
+
+
+def test_simulation_models_are_translated_with_ids_and_maths_unchanged(auth_client):
+    en = {m["id"]: m for m in auth_client.get("/api/v1/simulations/models").json()}
+    r = auth_client.get("/api/v1/simulations/models", headers={"Accept-Language": "sw"})
+    assert "Accept-Language" in r.headers["vary"]
+    for m in r.json():
+        e = en[m["id"]]
+        assert m["name"] != e["name"], m["id"]
+        assert [p["id"] for p in m["parameters"]] == [p["id"] for p in e["parameters"]]
+        assert all(
+            p["label"] != q["label"] for p, q in zip(m["parameters"], e["parameters"], strict=True)
+        )
+        assert m["equations"] == e["equations"]  # technical documentation stays in English
+        assert [p["default"] for p in m["parameters"]] == [p["default"] for p in e["parameters"]]
+    one = auth_client.get(
+        "/api/v1/simulations/models/cv.windkessel3", headers={"Accept-Language": "sw"}
+    )
+    assert one.json()["parameters"][0]["label"] == "Mapigo ya moyo"
+
+
+def test_pathology_conditions_are_translated(auth_client):
+    sw = {"Accept-Language": "sw"}
+    names = {
+        c["id"]: c["name"]
+        for c in auth_client.get("/api/v1/pathology/conditions", headers=sw).json()
+    }
+    assert names["arterial-stiffening"].startswith("Kukakamaa kwa ateri")
+    d = auth_client.get("/api/v1/pathology/conditions/arterial-stiffening", headers=sw).json()
+    assert d["mechanism"].startswith("Mabadiliko ya kimuundo")
+    assert d["scenarios"][0]["title"].startswith("Unyumbufu wa jumla")
+    assert d["scenarios"][0]["parameter_overrides"]  # numbers untouched
+    en = auth_client.get("/api/v1/pathology/conditions/raised-peripheral-resistance").json()
+    assert en["complications"] is None  # untranslated empty fields stay empty

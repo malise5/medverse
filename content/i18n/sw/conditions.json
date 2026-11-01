@@ -1,0 +1,49 @@
+{
+  "_comment": "Kiswahili text of the pathology conditions and their simulation scenarios (content/pathology/conditions.json). DRAFT: pending review by Swahili-speaking health professionals.",
+  "status": "draft",
+  "items": {
+    "arterial-stiffening": {
+      "name": "Kukakamaa kwa ateri (unyumbufu uliopungua wa ateri kubwa)",
+      "summary": "Kupotea kwa unyumbufu wa aota na ateri nyingine kubwa, mara nyingi kutokana na uzee, jambo linalopunguza uwezo wake wa kupunguza nguvu ya kila msukumo wa ventrikali.",
+      "mechanism": "Mabadiliko ya kimuundo katika ukuta wa ateri, ikiwemo kukatika kwa nyuzi za unyumbufu na kuongezeka kwa kolajeni, hupunguza uwezo wa kutanuka. Mabadiliko haya huambatana na uzee na huharakishwa katika hali kama shinikizo la damu la juu na kisukari.",
+      "anatomical_changes": "Kuta za aota na ateri nyingine kubwa zenye unyumbufu hupungua uwezo wa kutanuka.",
+      "physiological_consequences": "Kwa kiasi kilekile cha damu kwa mpigo, mfumo wa ateri uliokakamaa huhifadhi damu kidogo wakati wa kusukumwa. Kwa hiyo shinikizo la sistoli hupanda na la diastoli hushuka, na kupanua shinikizo la mpigo, huku wastani wa shinikizo la ateri ukiamuliwa hasa na kiasi cha damu kwa dakika na ukinzani wa pembeni. Ateri zilizokakamaa pia hupitisha wimbi la shinikizo kwa kasi zaidi, hivyo mawimbi yanayoakisiwa hurudi mapema na kuongeza zaidi shinikizo la sistoli; athari hii ya mawimbi haionyeshwi katika modeli ya Windkessel inayotumika hapa.",
+      "clinical_manifestations": "Mara nyingi haina dalili. Shinikizo la mpigo lililopanuka na shinikizo la juu la sistoli pekee ni dalili za kawaida kwa wazee.",
+      "complications": "Ukakamavu wa aota umeonyeshwa kutabiri matukio ya moyo na mishipa ya damu bila kutegemea vihatarishi vya kawaida katika jamii kadhaa. Shinikizo la sistoli lililopanda huongeza mzigo wa baada (afterload) wa ventrikali ya kushoto.",
+      "investigations": "Kasi ya wimbi la mpigo kati ya karotidi na femu inachukuliwa kuwa kipimo cha marejeo kisichovamia mwili cha ukakamavu wa aota. Kupima shinikizo la damu kwenye mkono kunaweza kuonyesha shinikizo la mpigo lililopanuka.",
+      "management_principles": "Matibabu hulenga hatari ya moyo na mishipa ya damu inayoambatana, hasa kudhibiti shinikizo la damu kulingana na miongozo ya sasa ya kliniki. MEDVERSE haitoi mapendekezo ya matibabu.",
+      "scenarios": {
+        "arterial-stiffening.compliance-50": {
+          "title": "Unyumbufu wa jumla wa ateri umepunguzwa kwa 50 %",
+          "description": "Hupunguza nusu unyumbufu wa jumla wa ateri ukilinganisha na thamani ya awali ya modeli huku mapigo ya moyo, kiasi kwa mpigo na ukinzani wa pembeni vikibaki vilevile.",
+          "assumptions": [
+            "Upunguzaji wa 50 % ni wa kielelezo na haujalinganishwa na kundi lolote la umri au mgonjwa.",
+            "Mapigo ya moyo, kiasi kwa mpigo na ukinzani wa pembeni vinabaki vilevile: hakuna urekebishaji wa ventrikali wala fidia ya reflexi inayoigwa.",
+            "Usafiri na uakisi wa mawimbi haviigwi, hivyo kurudi mapema kwa wimbi, ambako huongeza zaidi shinikizo la sistoli katika ateri zilizokakamaa, hakupo."
+          ]
+        }
+      }
+    },
+    "raised-peripheral-resistance": {
+      "name": "Ukinzani wa jumla wa pembeni ulioongezeka",
+      "summary": "Kuongezeka kwa ukinzani wa ateriole za mwili dhidi ya mtiririko wa damu, kiamuzi kikuu cha kihaemodinamiki cha wastani wa shinikizo la ateri.",
+      "mechanism": "Wastani wa shinikizo la ateri ni takriban zao la kiasi cha damu kwa dakika na ukinzani wa jumla wa pembeni. Kubanwa kwa mishipa ya ukinzani, kutokana na kuongezeka kwa msinyao wa mishipa au mabadiliko ya kimuundo ya ukuta wa mshipa, huongeza ukinzani na kwa hiyo huongeza wastani wa shinikizo la ateri ikiwa kiasi cha damu kwa dakika hakijabadilika.",
+      "anatomical_changes": "Kubanwa kwa ateri ndogo na ateriole. Mishipa hii ni midogo kuliko uwezo wa kuonyesha wa chanzo cha sasa cha modeli za 3D, hivyo mfumo wa ateri za mwili unaangaziwa kwa ujumla.",
+      "physiological_consequences": "Kiasi cha damu kwa dakika kikiwa thabiti, wastani wa shinikizo, la sistoli na la diastoli vyote hupanda. Katika modeli hii kipimo cha muda cha kushuka kwa diastoli (ukinzani mara unyumbufu) pia huongezeka.",
+      "clinical_manifestations": "Shinikizo la damu lililopanda. Ukinzani wa pembeni ulioongezeka ni sifa ya kawaida ya kihaemodinamiki ya shinikizo la damu la juu lililoimarika.",
+      "investigations": "Kupima shinikizo la damu. Ukinzani wa pembeni wenyewe haupimwi kwa kawaida na mara nyingi hukokotolewa kutoka shinikizo na kiasi cha damu kwa dakika.",
+      "management_principles": "Matibabu ya kliniki ya shinikizo la damu lililopanda hufuata miongozo ya sasa ya shinikizo la damu la juu. MEDVERSE haitoi mapendekezo ya matibabu.",
+      "scenarios": {
+        "raised-peripheral-resistance.tpr-140": {
+          "title": "Ukinzani wa jumla wa pembeni umeongezwa kwa 40 %",
+          "description": "Huongeza ukinzani wa jumla wa pembeni hadi 140 % ya thamani ya awali ya modeli huku mapigo ya moyo, kiasi kwa mpigo na unyumbufu vikibaki vilevile.",
+          "assumptions": [
+            "Ongezeko la 40 % ni la kielelezo na halijalinganishwa na kundi lolote la wagonjwa.",
+            "Kiasi cha damu kwa dakika kinabaki vilevile; mwilini, baroreflexi na mifumo ya figo vingeitikia.",
+            "Unyumbufu wa ateri unabaki vilevile, ingawa kiuhalisia hupungua shinikizo la kutanua linapokuwa juu zaidi."
+          ]
+        }
+      }
+    }
+  }
+}

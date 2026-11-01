@@ -26,7 +26,7 @@ export function filterGlossary(entries: GlossaryEntry[], query: string, moduleId
 
 export function Glossary() {
   const g = useGlossary();
-  const { t } = useT();
+  const { t, tp } = useT();
   const [query, setQuery] = useState("");
   const [moduleId, setModuleId] = useState("");
   const modules = useMemo(
@@ -86,12 +86,12 @@ export function Glossary() {
         <Skeleton className="h-96" />
       ) : g.isError ? (
         <p role="alert" className="text-sm text-destructive">
-          Could not load the glossary.
+          {t("glossary.loadError")}
         </p>
       ) : (
         <>
           <p className="text-xs text-muted-foreground" aria-live="polite">
-            {count} term{count === 1 ? "" : "s"}
+            {tp("glossary.terms", count)}
           </p>
           {groups.map(([letter, list]) => (
             <section key={letter} aria-label={t("glossary.startingWith", { letter })} className="grid gap-2">

@@ -35,4 +35,3 @@ export function regionView(
   return { target: new Vector3(0, box.max.y - f.below, 0), dist: f.dist };
 }
 
-export const REGION_LABELS: Record<Region, string> = { body: "Body", head: "Head", neck: "Neck" };

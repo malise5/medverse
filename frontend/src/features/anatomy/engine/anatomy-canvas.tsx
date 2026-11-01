@@ -5,6 +5,7 @@ import { Canvas } from "@react-three/fiber";
 import { Component, Suspense, useMemo, type ReactNode } from "react";
 
 import type { AnatomicalSystem, AssetManifest } from "@/lib/api/types";
+import { useT } from "@/lib/i18n/client";
 
 import { useWorkspace } from "../store";
 import { PlaybackBar } from "../function/playback-bar";
@@ -17,31 +18,32 @@ class WebGLBoundary extends Component<{ children: ReactNode }, { error: Error | 
     return { error };
   }
   render() {
-    if (this.state.error) {
-      return (
-        <div role="alert" className="grid h-full place-items-center p-6 text-center text-sm">
-          <div className="max-w-sm space-y-2">
-            <p className="font-medium">The 3D viewer could not start.</p>
-            <p className="text-muted-foreground">
-              Your browser or device may not support WebGL 2, or the anatomy assets failed to load.
-              Search, hierarchy and structure information remain available.
-            </p>
-            <p className="font-mono text-xs text-muted-foreground">{this.state.error.message}</p>
-          </div>
-        </div>
-      );
-    }
+    if (this.state.error) return <ViewerError message={this.state.error.message} />;
     return this.props.children;
   }
 }
 
+function ViewerError({ message }: { message: string }) {
+  const { t } = useT();
+  return (
+    <div role="alert" className="grid h-full place-items-center p-6 text-center text-sm">
+      <div className="max-w-sm space-y-2">
+        <p className="font-medium">{t("explorer.canvas.failedTitle")}</p>
+        <p className="text-muted-foreground">{t("explorer.canvas.failedBody")}</p>
+        <p className="font-mono text-xs text-muted-foreground">{message}</p>
+      </div>
+    </div>
+  );
+}
+
 function LoadingOverlay() {
   const { active, progress, loaded, total } = useProgress();
+  const { t } = useT();
   if (!active) return null;
   return (
     <div className="pointer-events-none absolute inset-x-0 top-3 flex justify-center">
       <div className="rounded-full border bg-background/80 px-3 py-1 text-xs backdrop-blur">
-        Loading anatomy assets… {Math.round(progress)}% ({loaded}/{total})
+        {t("explorer.canvas.loading", { progress: Math.round(progress), loaded, total })}
       </div>
     </div>
   );
@@ -97,6 +99,7 @@ export default function AnatomyCanvas({
     () => [...new Set(manifest.bundles.map((b) => `${b.attribution} (${b.license})`))].join(" · "),
     [manifest],
   );
+  const { t } = useT();
   return (
     <WebGLBoundary>
       <div id="anatomy-canvas" className="relative h-full w-full">
@@ -106,7 +109,7 @@ export default function AnatomyCanvas({
           gl={{ preserveDrawingBuffer: true, antialias: true }}
           camera={{ position: VIEW_POSITIONS.anterior, fov: 35, near: 0.01, far: 50 }}
           onCreated={({ camera }) => camera.lookAt(TARGET)}
-          aria-label="Interactive 3D anatomical model"
+          aria-label={t("explorer.canvas.aria")}
         >
           <color attach="background" args={["#0d1217"]} />
           <Suspense fallback={null}>
@@ -128,13 +131,13 @@ export default function AnatomyCanvas({
         {compactCredits ? (
           <details className="group absolute bottom-1.5 right-2 z-10 max-w-[85%] text-right text-[10px] leading-tight text-muted-foreground">
             <summary className="ml-auto w-fit cursor-pointer list-none rounded px-1.5 py-0.5 hover:text-foreground [&::-webkit-details-marker]:hidden">
-              3D data credits
+              {t("explorer.canvas.credits")}
             </summary>
-            <p className="mt-1 rounded-md border bg-background/95 p-2 text-left shadow-lg">3D data: {attribution}</p>
+            <p className="mt-1 rounded-md border bg-background/95 p-2 text-left shadow-lg">{t("explorer.canvas.data", { attribution })}</p>
           </details>
         ) : (
           <p className="pointer-events-none absolute bottom-1.5 right-2 max-w-[70%] text-right text-[10px] leading-tight text-muted-foreground/70">
-            3D data: {attribution}
+            {t("explorer.canvas.data", { attribution })}
           </p>
         )}
       </div>

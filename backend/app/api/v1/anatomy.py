@@ -128,9 +128,12 @@ def hierarchy_roots(db: DbSession, system: Annotated[str | None, Query(max_lengt
 def get_structure(
     structure_id: str,
     db: DbSession,
+    locale: Annotated[str, Depends(request_locale)],
+    response: Response,
     audience: AudienceLevel = AudienceLevel.UNDERGRADUATE,
 ):
-    return anatomy_service.structure_detail(db, structure_id, audience)
+    response.headers["Vary"] = "Accept-Language"  # system name is translated
+    return anatomy_service.structure_detail(db, structure_id, audience, locale)
 
 
 @router.get("/anatomy/structures/{structure_id}/circulation", response_model=CirculationOut)

@@ -54,7 +54,8 @@ describe("messages", () => {
   });
 
   it("Swahili is translated, not copied (except names and codes)", () => {
-    const allowedSame = new Set(["learn.correctOf"]); // purely numeric framing
+    // Numeric framing and dataset names (proper nouns) stay the same in every language.
+    const allowedSame = new Set(["learn.correctOf", "explorer.structure.sources.bodyparts3d-4.0"]);
     const copied = leaves(en)
       .filter(([k, v]) => !allowedSame.has(k) && v.length > 3 && /[a-z]{4}/.test(v))
       .filter(([k, v]) => leaves(sw).find(([sk]) => sk === k)?.[1] === v)

@@ -6,6 +6,7 @@ import type { ModelDefinition, PhasePlot } from "@/lib/api/types";
 
 import { arrowIndices, clipLine, nearestIndex, phaseDomain, pointAt, resolvePhasePlot, type PhaseRun } from "./phase-plot";
 import { fmt, niceTicks, SERIES_COLORS, type PlaybackClock } from "./time-series-chart";
+import { useT } from "@/lib/i18n/client";
 
 export interface PhaseCurve {
   id: string;
@@ -68,6 +69,7 @@ export function PhasePlotChart({
   compact?: boolean;
 }) {
   const id = useId();
+  const { t: tr } = useT();
   const svgRef = useRef<SVGSVGElement>(null);
   const dotRef = useRef<SVGCircleElement>(null);
   const [hover, setHover] = useState<{ curve: number; i: number } | null>(null);
@@ -151,7 +153,7 @@ export function PhasePlotChart({
         <figcaption id={`${id}-t`} className="text-sm font-medium">
           {title}
         </figcaption>
-        <ul className="flex flex-wrap gap-3 text-xs text-muted-foreground" aria-label="Legend">
+        <ul className="flex flex-wrap gap-3 text-xs text-muted-foreground" aria-label={tr("labs.chart.legend")}>
           {curves.length > 1 &&
             curves.map((c, i) => (
               <li key={c.id} className="flex items-center gap-1.5">
@@ -167,7 +169,7 @@ export function PhasePlotChart({
               <svg width="18" height="6" aria-hidden>
                 <line x1="0" y1="3" x2="18" y2="3" stroke="currentColor" strokeWidth="1" strokeDasharray="1 3" />
               </svg>
-              Reference lines (from parameters)
+              {tr("labs.chart.refLines")}
             </li>
           )}
         </ul>
@@ -179,7 +181,7 @@ export function PhasePlotChart({
           viewBox={`0 0 ${W} ${H}`}
           className="w-full touch-none select-none"
           role="img"
-          aria-label={`${y.label} against ${x.label}. Use the data table for exact values.`}
+          aria-label={tr("labs.chart.phaseAria", { x: x.label, y: y.label })}
           onPointerMove={onMove}
           onPointerLeave={() => setHover(null)}
         >
@@ -260,12 +262,12 @@ export function PhasePlotChart({
         )}
       </div>
       <button type="button" onClick={() => setShowTable((v) => !v)} className="justify-self-start text-xs text-primary hover:underline">
-        {showTable ? "Hide" : "Show"} data table
+        {showTable ? tr("labs.chart.hideTable") : tr("labs.chart.showTable")}
       </button>
       {showTable && (
         <div className="max-h-48 overflow-auto rounded border">
           <table className="w-full text-xs tabular-nums">
-            <caption className="sr-only">{title}, every tenth sample</caption>
+            <caption className="sr-only">{tr("labs.chart.caption", { title })}</caption>
             <thead className="sticky top-0 bg-card">
               <tr>
                 <th className="px-2 py-1 text-left">t ({timeUnit})</th>

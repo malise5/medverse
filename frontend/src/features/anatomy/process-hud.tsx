@@ -3,8 +3,8 @@
 import { Pause, Play, X } from "lucide-react";
 
 import { Button } from "@/components/ui/button";
-import { PATHWAYS } from "@/features/biolab/pathways";
-import { PROCESSES } from "@/features/biolab/processes";
+import { usePathways, useProcesses } from "@/features/biolab/localized";
+import { useT } from "@/lib/i18n/client";
 
 import { useWorkspace } from "./store";
 
@@ -18,9 +18,12 @@ export function ProcessHud() {
   const pathwayId = useWorkspace((s) => s.pathwayId);
   const step = useWorkspace((s) => s.pathwayStep);
   const ws = useWorkspace.getState();
-  const meta = PROCESSES.find((p) => p.id === active);
+  const { t } = useT();
+  const processes = useProcesses();
+  const pathways = usePathways();
+  const meta = processes.find((p) => p.id === active);
   if (!meta || meta.kind !== "scene") return null;
-  const pathway = active === "pathways" ? PATHWAYS.find((p) => p.id === pathwayId) : null;
+  const pathway = active === "pathways" ? pathways.find((p) => p.id === pathwayId) : null;
   const current = pathway?.steps[step];
 
   return (
@@ -34,11 +37,11 @@ export function ProcessHud() {
           <p className="min-w-0 flex-1 truncate text-sm font-medium">
             {pathway ? `${meta.title}: ${pathway.title}` : meta.title}
           </p>
-          <Button size="icon-sm" variant="secondary" aria-label={playing ? "Pause" : "Play"} onClick={() => ws.setProcessPlaying(!playing)}>
+          <Button size="icon-sm" variant="secondary" aria-label={playing ? t("explorer.hud.pause") : t("explorer.hud.play")} onClick={() => ws.setProcessPlaying(!playing)}>
             {playing ? <Pause /> : <Play />}
           </Button>
           <select
-            aria-label="Speed"
+            aria-label={t("explorer.hud.speed")}
             value={speed}
             onChange={(e) => ws.setProcessSpeed(Number(e.target.value))}
             className="h-7 rounded-md border border-input bg-input/30 px-1 text-xs"
@@ -49,13 +52,13 @@ export function ProcessHud() {
               </option>
             ))}
           </select>
-          <Button size="icon-sm" variant="ghost" aria-label="Stop" onClick={() => (ws.setActiveProcess(null), ws.setHighlighted([]))}>
+          <Button size="icon-sm" variant="ghost" aria-label={t("explorer.hud.stop")} onClick={() => (ws.setActiveProcess(null), ws.setHighlighted([]))}>
             <X />
           </Button>
         </header>
         {pathway && current ? (
           <div className="grid gap-1">
-            <ol className="flex gap-1" aria-label="Steps">
+            <ol className="flex gap-1" aria-label={t("explorer.hud.steps")}>
               {pathway.steps.map((s, i) => (
                 <li
                   key={s.label}
@@ -71,8 +74,8 @@ export function ProcessHud() {
           </div>
         ) : (
           <p className="text-xs text-muted-foreground">
-            <span className="text-[#ff2b2b]">●</span> oxygen-rich arterial blood · <span className="text-[#4b49c8]">●</span>{" "}
-            oxygen-poor venous blood. Cells are shown enlarged.
+            <span className="text-[#ff2b2b]">●</span> {t("explorer.hud.arterial")} · <span className="text-[#4b49c8]">●</span>{" "}
+            {t("explorer.hud.venous")}. {t("explorer.hud.enlarged")}
           </p>
         )}
         <p className="text-[10px] text-muted-foreground/80">{meta.basis}</p>

@@ -18,9 +18,16 @@ import {
 import { MetricsGrid } from "@/features/physiology/model-docs";
 import { TimeSeriesChart } from "@/features/physiology/time-series-chart";
 import { api } from "@/lib/api/client";
-import { useCondition, useConditions, useModels } from "@/lib/api/queries";
+import { useCondition, useConditions, useModels, useSystems } from "@/lib/api/queries";
 import type { ConditionDetail, RunResult, Scenario } from "@/lib/api/types";
+import { useT } from "@/lib/i18n/client";
 import { cn } from "@/lib/utils";
+
+/** A condition's category is a body-system id; show the system's (translated) name. */
+function useCategoryName(): (category: string) => string {
+  const systems = useSystems();
+  return (category) => systems.data?.find((s) => s.id === category)?.name ?? category;
+}
 
 function Field({ title, text }: { title: string; text: string | null }) {
   if (!text) return null;
@@ -34,6 +41,7 @@ function Field({ title, text }: { title: string; text: string | null }) {
 
 function ScenarioComparison({ scenario }: { scenario: Scenario }) {
   const models = useModels();
+  const { t } = useT();
   const model = models.data?.find((m) => m.id === scenario.model_id);
   // Two independent runs (reference and scenario); deterministic, so cache per scenario.
   const runQuery = (scenarioId: string | null) => ({
@@ -55,39 +63,39 @@ function ScenarioComparison({ scenario }: { scenario: Scenario }) {
     <Card>
       <CardHeader>
         <CardTitle className="flex flex-wrap items-center gap-2 text-sm">
-          <FlaskConical className="size-4 text-primary" /> Simulation: {scenario.title}
+          <FlaskConical className="size-4 text-primary" /> {t("labs.pathology.simulation", { title: scenario.title })}
           <EvidenceBadge evidence="C" />
         </CardTitle>
       </CardHeader>
       <CardContent className="grid gap-5">
         <p className="text-sm text-muted-foreground">
-          {scenario.description} Model: {model?.name ?? scenario.model_id}.
+          {scenario.description} {t("labs.pathology.model", { name: model?.name ?? scenario.model_id })}
         </p>
         {error && <p className="text-sm text-destructive">{error.message}</p>}
         {healthy && disease && model ? (
           <>
             <TimeSeriesChart
-              title="Aortic pressure: reference vs scenario"
+              title={t("labs.pathology.aorticTitle")}
               unit="mmHg"
               time={healthy.time}
               series={[
-                { id: "healthy", label: "Reference (model defaults)", values: healthy.series.aortic_pressure },
-                { id: "scenario", label: "Scenario", values: disease.series.aortic_pressure, dashed: true },
+                { id: "healthy", label: t("labs.pathology.referenceDefaults"), values: healthy.series.aortic_pressure },
+                { id: "scenario", label: t("labs.pathology.scenario"), values: disease.series.aortic_pressure, dashed: true },
               ]}
             />
             <MetricsGrid
               specs={model.metrics}
               primary={healthy}
               comparison={disease}
-              primaryLabel="Reference"
-              comparisonLabel="Scenario"
+              primaryLabel={t("labs.pathology.reference")}
+              comparisonLabel={t("labs.pathology.scenario")}
             />
           </>
         ) : (
           <Skeleton className="h-64" />
         )}
         <section className="grid gap-1.5">
-          <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Scenario assumptions</h4>
+          <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("labs.pathology.assumptions")}</h4>
           <ul className="grid list-disc gap-1 pl-4 text-sm">
             {scenario.assumptions.map((a) => (
               <li key={a}>{a}</li>
@@ -96,10 +104,10 @@ function ScenarioComparison({ scenario }: { scenario: Scenario }) {
         </section>
         <div className="flex flex-wrap gap-2">
           <Button asChild size="sm" variant="secondary">
-            <Link href={`/physiology?model=${encodeURIComponent(scenario.model_id)}`}>Explore the model</Link>
+            <Link href={`/physiology?model=${encodeURIComponent(scenario.model_id)}`}>{t("labs.pathology.explore")}</Link>
           </Button>
         </div>
-        <EducationalDisclaimer text="Illustrates the direction and approximate size of change under the stated assumptions. It does not predict the course of disease in any individual." />
+        <EducationalDisclaimer text={t("labs.pathology.disclaimer")} />
       </CardContent>
     </Card>
   );
@@ -112,12 +120,15 @@ function ConditionView({ c }: { c: ConditionDetail }) {
         c.affected_structures.map((a) => a.structure_id).join(","),
       )}`
     : null;
+  const { t } = useT();
+  const categoryName = useCategoryName();
+  const role = (r: string) => (r === "primary" || r === "secondary" ? t(`labs.pathology.roles.${r}`) : r);
   return (
     <div className="grid gap-4">
       <Card>
         <CardHeader className="grid gap-2">
           <div className="flex flex-wrap items-center gap-2">
-            <Badge variant="secondary" className="capitalize">{c.category}</Badge>
+            <Badge variant="secondary">{categoryName(c.category)}</Badge>
             <EvidenceBadge evidence={c.evidence_class} />
             <VerificationBadge status={c.verification_status} />
           </div>
@@ -126,7 +137,7 @@ function ConditionView({ c }: { c: ConditionDetail }) {
         </CardHeader>
         <CardContent className="grid gap-4">
           <section className="grid gap-2">
-            <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Affected structures</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("labs.pathology.affected")}</h4>
             <div className="flex flex-wrap gap-1.5">
               {c.affected_structures.map((a) => (
                 <Link
@@ -134,27 +145,27 @@ function ConditionView({ c }: { c: ConditionDetail }) {
                   href={`/anatomy?structure=${encodeURIComponent(a.structure_id)}`}
                   className="rounded-md border px-2 py-1 text-xs hover:bg-accent"
                 >
-                  {a.name} <span className="text-muted-foreground">· {a.role}</span>
+                  {a.name} <span className="text-muted-foreground">· {role(a.role)}</span>
                 </Link>
               ))}
             </div>
             {anatomyHref && (
               <Button asChild size="sm" className="justify-self-start">
                 <Link href={anatomyHref}>
-                  <Box /> Highlight affected anatomy in 3D
+                  <Box /> {t("labs.pathology.highlight")}
                 </Link>
               </Button>
             )}
           </section>
-          <Field title="Mechanism" text={c.mechanism} />
-          <Field title="Anatomical changes" text={c.anatomical_changes} />
-          <Field title="Physiological consequences" text={c.physiological_consequences} />
-          <Field title="Clinical manifestations" text={c.clinical_manifestations} />
-          <Field title="Complications" text={c.complications} />
-          <Field title="Investigations" text={c.investigations} />
-          <Field title="Management principles" text={c.management_principles} />
+          <Field title={t("labs.pathology.fields.mechanism")} text={c.mechanism} />
+          <Field title={t("labs.pathology.fields.anatomical_changes")} text={c.anatomical_changes} />
+          <Field title={t("labs.pathology.fields.physiological_consequences")} text={c.physiological_consequences} />
+          <Field title={t("labs.pathology.fields.clinical_manifestations")} text={c.clinical_manifestations} />
+          <Field title={t("labs.pathology.fields.complications")} text={c.complications} />
+          <Field title={t("labs.pathology.fields.investigations")} text={c.investigations} />
+          <Field title={t("labs.pathology.fields.management_principles")} text={c.management_principles} />
           <section className="grid gap-1.5">
-            <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">References</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("labs.pathology.references")}</h4>
             <ReferenceList references={c.references} />
           </section>
         </CardContent>
@@ -173,10 +184,12 @@ export function PathologyLab() {
   const lp = useLocalePath();
   const selected = params.get("condition") ?? list.data?.[0]?.id ?? null;
   const detail = useCondition(selected);
+  const { t, tp } = useT();
+  const categoryName = useCategoryName();
 
   return (
     <div className="grid gap-4 lg:grid-cols-[18rem_1fr]">
-      <nav aria-label="Conditions" className="grid h-fit gap-1">
+      <nav aria-label={t("labs.pathology.conditions")} className="grid h-fit gap-1">
         {list.isLoading && <Skeleton className="h-24" />}
         {list.data?.map((c) => (
           <button
@@ -190,17 +203,16 @@ export function PathologyLab() {
             )}
           >
             <span className="text-sm font-medium">{c.name}</span>
-            <span className="text-xs capitalize text-muted-foreground">{c.category}</span>
+            <span className="text-xs text-muted-foreground">{categoryName(c.category)}</span>
           </button>
         ))}
         <p className="mt-2 text-xs text-muted-foreground">
-          {list.data?.length ?? 0} educational models available. The full pathology catalogue
-          (trauma, respiratory, neurological and more) is planned for Phase 5.
+          {tp("labs.pathology.catalogue", list.data?.length ?? 0)}
         </p>
       </nav>
       <div className="min-w-0">
         {detail.isLoading && <Skeleton className="h-96" />}
-        {detail.isError && <p className="text-sm text-destructive">Could not load this condition.</p>}
+        {detail.isError && <p className="text-sm text-destructive">{t("labs.pathology.loadError")}</p>}
         {detail.data && <ConditionView c={detail.data} />}
       </div>
     </div>

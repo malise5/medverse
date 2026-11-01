@@ -1,6 +1,8 @@
 import time
+from dataclasses import asdict
+from typing import Annotated
 
-from fastapi import APIRouter, Depends, WebSocket, WebSocketDisconnect, status
+from fastapi import APIRouter, Depends, Response, WebSocket, WebSocketDisconnect, status
 from pydantic import ValidationError
 from sqlalchemy.orm import Session
 
@@ -9,13 +11,23 @@ from app.core.config import get_settings
 from app.core.errors import ApiError
 from app.core.rbac import Perm
 from app.db.session import SessionLocal
+from app.i18n import request_locale
 from app.models import ConditionScenario, SimulationRun
 from app.schemas.simulation import ModelDefinitionOut, RunRequest, RunResult
-from app.services import auth_service
+from app.services import auth_service, i18n_service
 from app.simulation.core import SimulationInputError
 from app.simulation.registry import get_model, list_models
 
 router = APIRouter(prefix="/simulations", tags=["simulations"])
+Lang = Annotated[str, Depends(request_locale)]
+
+
+def _localized(db: Session, definitions: list, locale: str) -> list[ModelDefinitionOut]:
+    tr = i18n_service.translations(db, "model", [d.id for d in definitions], locale)
+    return [
+        ModelDefinitionOut.model_validate(i18n_service.localize_model(asdict(d), tr.get(d.id)))
+        for d in definitions
+    ]
 
 
 @router.get(
@@ -23,8 +35,9 @@ router = APIRouter(prefix="/simulations", tags=["simulations"])
     response_model=list[ModelDefinitionOut],
     dependencies=[Depends(require(Perm.ANATOMY_READ))],
 )
-def models():
-    return [ModelDefinitionOut.from_definition(m.definition) for m in list_models()]
+def models(db: DbSession, locale: Lang, response: Response):
+    response.headers["Vary"] = "Accept-Language"  # names and labels are translated
+    return _localized(db, [m.definition for m in list_models()], locale)
 
 
 @router.get(
@@ -32,8 +45,9 @@ def models():
     response_model=ModelDefinitionOut,
     dependencies=[Depends(require(Perm.ANATOMY_READ))],
 )
-def model(model_id: str):
-    return ModelDefinitionOut.from_definition(get_model(model_id).definition)
+def model(model_id: str, db: DbSession, locale: Lang, response: Response):
+    response.headers["Vary"] = "Accept-Language"
+    return _localized(db, [get_model(model_id).definition], locale)[0]
 
 
 def _execute(db: Session, model_id: str, body: RunRequest, user_id) -> RunResult:

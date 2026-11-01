@@ -26,9 +26,15 @@ def upgrade() -> None:
         sa.Column("locale", sa.String(length=8), nullable=False),
         sa.Column("payload", sa.JSON(), nullable=False),
         sa.Column("status", sa.String(length=16), nullable=False),
-        sa.Column("created_at", sa.DateTime(timezone=True), server_default=sa.func.now(), nullable=False),
-        sa.Column("updated_at", sa.DateTime(timezone=True), server_default=sa.func.now(), nullable=False),
-        sa.PrimaryKeyConstraint("entity_type", "entity_id", "locale", name=op.f("pk_content_translations")),
+        sa.Column(
+            "created_at", sa.DateTime(timezone=True), server_default=sa.func.now(), nullable=False
+        ),
+        sa.Column(
+            "updated_at", sa.DateTime(timezone=True), server_default=sa.func.now(), nullable=False
+        ),
+        sa.PrimaryKeyConstraint(
+            "entity_type", "entity_id", "locale", name=op.f("pk_content_translations")
+        ),
     )
 
 

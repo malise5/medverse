@@ -12,8 +12,131 @@
         "Tafuta fuvu, uti wa mgongo, kifua cha mbavu, nyonga na mifupa mikuu ya mikono na miguu kwenye mfano wa 3D."
       ],
       "overview": {
-        "basic": "Kiunzi chako cha mifupa ni fremu ya mwili wako. Kimeundwa kwa mifupa, ambayo ni migumu lakini hai: ina mishipa ya damu na neva, na hujiponya baada ya kuvunjika. Mifupa hukushikilia wima, hulinda viungo laini (fuvu hulinda ubongo, mbavu hulinda moyo na mapafu), na hufanya kazi pamoja na misuli ili uweze kusogea. Ndani ya baadhi ya mifupa, uboho mwekundu laini hutengeneza chembe mpya za damu kila siku. Mifupa pia huhifadhi kalsiamu, ambayo mwili unaihitaji ili neva na misuli zifanye kazi."
-      }
+        "basic": "Kiunzi chako cha mifupa ni fremu ya mwili wako. Kimeundwa kwa mifupa, ambayo ni migumu lakini hai: ina mishipa ya damu na neva, na hujiponya baada ya kuvunjika. Mifupa hukushikilia wima, hulinda viungo laini (fuvu hulinda ubongo, mbavu hulinda moyo na mapafu), na hufanya kazi pamoja na misuli ili uweze kusogea. Ndani ya baadhi ya mifupa, uboho mwekundu laini hutengeneza chembe mpya za damu kila siku. Mifupa pia huhifadhi kalsiamu, ambayo mwili unaihitaji ili neva na misuli zifanye kazi.",
+        "undergraduate": "Kiunzi cha mtu mzima kwa kawaida kina mifupa 206 yenye majina, iliyopangwa katika kiunzi cha mhimili (fuvu, uti wa mgongo, mbavu na fupa la kidari) na kiunzi cha viungo (mishipi ya bega na ya nyonga pamoja na mikono na miguu). Mifupa hupangwa kwa umbo lake kuwa mirefu, mifupi, bapa, isiyo ya kawaida au sesamoid. Mfupa mrefu una kiwiliwili (diafisisi) cha mfupa mgumu unaozunguka uwazi wa uboho, na ncha (epifisisi) za mfupa wa sponji zilizofunikwa na gegedu ya kiungo. Mfupa hujengwa upya daima na osteoblasti, zinazotengeneza tumbo la mfupa, na osteoklasti, zinazouvunja. Viungo vya mifupa hupangwa kimuundo kuwa vya nyuzi, vya gegedu au vya sinovia; viungo vya sinovia vina uwazi wa kiungo, majimaji ya sinovia na kibonge, na huruhusu mwendo mpana zaidi.",
+        "clinical": "Nguvu ya mfupa hutegemea wingi wake na muundo wake mdogo; uvunjaji unapozidi ujenzi (kwa mfano baada ya kukoma hedhi au kwa matumizi ya muda mrefu ya glukokotikoidi) wingi wa mfupa hupungua na hatari ya kuvunjika huongezeka (osteoporosisi). Kupona kwa mfupa uliovunjika hupitia awamu za damu iliyoganda (haematoma), kalasi laini, kalasi ngumu na ujenzi upya, na kunahitaji damu ya kutosha na utulivu. Kuvunjika kwa shingo ya fupa la paja kunaweza kukatiza damu inayokwenda kwenye kichwa cha fupa la paja na kusababisha kifo cha mfupa (avascular necrosis). Alama za juu ya mwili kama ukingo wa nyonga (iliac crest), pembe ya fupa la kidari na mchakato wa kiunoni wa pingili ya saba ya shingo (vertebra prominens) hutumika kutafuta miundo ya ndani wakati wa uchunguzi na taratibu za kitabibu."
+      },
+      "functions": [
+        {
+          "title": "Kushikilia na kuupa mwili umbo",
+          "body": "Mifupa huunda fremu imara inayobeba uzito wa mwili na ambako misuli, kano na ligamenti hushikamana."
+        },
+        {
+          "title": "Ulinzi",
+          "body": "Fuvu huzunguka ubongo, uti wa mgongo huzunguka kamba ya uti wa mgongo, na kifua cha mbavu hukinga moyo na mapafu."
+        },
+        {
+          "title": "Mwendo",
+          "body": "Mifupa hufanya kazi kama nyenzo na viungo kama egemeo; misuli huvuta mifupa kusababisha mwendo."
+        },
+        {
+          "title": "Kuhifadhi madini",
+          "body": "Mfupa hushikilia takriban asilimia 99 ya kalsiamu ya mwili na sehemu kubwa ya fosfeti, ambazo hutolewa au kuhifadhiwa ili viwango vya damu vibaki thabiti."
+        },
+        {
+          "title": "Kutengeneza chembe za damu",
+          "body": "Uboho mwekundu hutengeneza chembe nyekundu za damu, chembe nyeupe za damu na chembe sahani (haematopoiesis)."
+        }
+      ],
+      "organs": [
+        {
+          "name": "Fuvu",
+          "role": "Huzunguka ubongo na viungo vya hisi maalum na huunda uso."
+        },
+        {
+          "name": "Uti wa mgongo",
+          "role": "Hushikilia kichwa na kiwiliwili na hulinda kamba ya uti wa mgongo."
+        },
+        {
+          "name": "Kifua cha mbavu",
+          "role": "Hulinda viungo vya kifuani na husogea wakati wa kupumua."
+        },
+        {
+          "name": "Fupa la kidari",
+          "role": "Mahali mbavu na mifupa ya mtulinga hushikamana mbele."
+        },
+        {
+          "name": "Fupa la mkono la juu la kulia (humerus)",
+          "role": "Mfupa wa mkono kati ya bega na kiwiko."
+        },
+        {
+          "name": "Fupa la nyonga la kulia",
+          "role": "Huunda mshipi wa nyonga pamoja na sakramu na hupeleka uzito kwenye mguu."
+        },
+        {
+          "name": "Fupa la paja la kulia",
+          "role": "Mfupa wa paja; mfupa mrefu na wenye nguvu kuliko yote."
+        },
+        {
+          "name": "Fupa la muundi la kulia (tibia)",
+          "role": "Mfupa mkuu unaobeba uzito wa mguu."
+        }
+      ],
+      "works_with": [
+        {
+          "body": "Misuli hushikamana na mifupa kupitia kano na kuisogeza kwenye viungo."
+        },
+        {
+          "body": "Uboho mwekundu hutoa chembe mpya za damu; mifupa hupata damu kupitia ateri za lishe."
+        },
+        {
+          "body": "Homoni ya paradundumio, kalsitonini na vitamini D hudhibiti kiasi cha kalsiamu ambacho mfupa huhifadhi au hutoa."
+        },
+        {
+          "body": "Fuvu na uti wa mgongo hulinda ubongo na kamba ya uti wa mgongo."
+        }
+      ],
+      "key_terms": [
+        {
+          "term": "Diafisisi",
+          "definition": "Kiwiliwili cha mfupa mrefu.",
+          "origin": "Kigiriki dia- 'kupitia' + physis 'ukuaji'"
+        },
+        {
+          "term": "Epifisisi",
+          "definition": "Ncha iliyopanuka ya mfupa mrefu; hutenganishwa na kiwiliwili kwa sahani ya ukuaji wakati wa utoto.",
+          "origin": "Kigiriki epi- 'juu ya' + physis 'ukuaji'"
+        },
+        {
+          "term": "Periosteamu",
+          "definition": "Utando wa nyuzi unaofunika uso wa nje wa mfupa isipokuwa kwenye nyuso za viungo.",
+          "origin": "Kigiriki peri- 'kuzunguka' + osteon 'mfupa'"
+        },
+        {
+          "term": "Osteoblasti",
+          "definition": "Chembe inayotengeneza tumbo jipya la mfupa.",
+          "origin": "Kigiriki osteon 'mfupa' + blastos 'chipukizi'"
+        },
+        {
+          "term": "Osteoklasti",
+          "definition": "Chembe kubwa inayovunja mfupa.",
+          "origin": "Kigiriki osteon 'mfupa' + klastos 'kilichovunjika'"
+        },
+        {
+          "term": "Kiungo cha sinovia",
+          "definition": "Kiungo kinachosogea kwa uhuru chenye uwazi uliojaa majimaji uliozungukwa na kibonge."
+        }
+      ],
+      "facts": [
+        {
+          "label": "Mifupa katika kiunzi cha mtu mzima",
+          "value": "takriban 206",
+          "note": "Idadi hutofautiana kati ya watu (mifupa ya ziada ya sesamoid au ya mishono) na ni kubwa zaidi wakati wa kuzaliwa, kabla baadhi ya mifupa haijaungana."
+        },
+        {
+          "label": "Kalsiamu ya mwili iliyohifadhiwa kwenye mfupa",
+          "value": "takriban asilimia 99"
+        },
+        {
+          "label": "Mfupa mrefu kuliko yote",
+          "value": "Fupa la paja",
+          "note": "Karibu robo ya urefu wa mtu."
+        }
+      ],
+      "clinical_notes": [
+        "Osteoporosisi: kupungua kwa wingi na nguvu ya mfupa, kukiwa na kuvunjika baada ya kuanguka kidogo (kifundo cha mkono, pingili za mgongo, nyonga).",
+        "Kuvunjika kwa sahani ya ukuaji kwa watoto kunaweza kuathiri ukuaji wa mfupa baadaye."
+      ]
     },
     "muscular": {
       "title": "Mfumo wa misuli",
@@ -25,8 +148,120 @@
         "Tambua kiwambo (diaframu) na misuli mikuu ya kiwiliwili kwenye mfano wa 3D."
       ],
       "overview": {
-        "basic": "Misuli husababisha kila mwendo unaofanya, kuanzia kutembea hadi kupepesa macho. Hufanya kazi kwa kujifupisha (kusinyaa) na kuvuta mifupa. Misuli inaweza kuvuta tu, haiwezi kusukuma, kwa hiyo hufanya kazi kwa jozi: mmoja hukunja kiungo na mwingine hukinyoosha. Kuna aina tatu za misuli. Misuli ya kiunzi husogeza mifupa yako na unaidhibiti wewe. Msuli wa moyo unapatikana kwenye moyo pekee. Misuli laini huzunguka viungo kama tumbo na mishipa ya damu na hufanya kazi yenyewe. Misuli inayofanya kazi pia hutoa joto, ambalo husaidia kuupa mwili wako joto."
-      }
+        "basic": "Misuli husababisha kila mwendo unaofanya, kuanzia kutembea hadi kupepesa macho. Hufanya kazi kwa kujifupisha (kusinyaa) na kuvuta mifupa. Misuli inaweza kuvuta tu, haiwezi kusukuma, kwa hiyo hufanya kazi kwa jozi: mmoja hukunja kiungo na mwingine hukinyoosha. Kuna aina tatu za misuli. Misuli ya kiunzi husogeza mifupa yako na unaidhibiti wewe. Msuli wa moyo unapatikana kwenye moyo pekee. Misuli laini huzunguka viungo kama tumbo na mishipa ya damu na hufanya kazi yenyewe. Misuli inayofanya kazi pia hutoa joto, ambalo husaidia kuupa mwili wako joto.",
+        "undergraduate": "Misuli ya kiunzi ina michirizi na hudhibitiwa kwa hiari; kila nyuzi ni chembe ndefu yenye viini vingi iliyojaa miofibrili zilizoundwa na sakomia zinazojirudia. Kusinyaa hufuata uunganisho wa msisimko na kusinyaa: niuroni ya mwendo hutoa asetilikolini kwenye kiungo cha neva na msuli, msukumo wa umeme wa nyuzi hutoa kalsiamu kutoka kwenye retikulamu ya sakoplazimu, na vichwa vya miosini hujishikiza na kuvuta nyuzi za aktini kwa kutumia ATP (utaratibu wa nyuzi zinazoteleza). Msuli kwa kawaida hutoka kwenye mshikamano ulio thabiti zaidi (chanzo) hadi kwenye mshikamano unaosogea zaidi (mwisho). Msuli unaohusika zaidi na mwendo fulani ni agonisti (msogezaji mkuu); antagonisti hupinga mwendo huo, na sinaji na viimarishaji husaidia. Msuli wa moyo una michirizi lakini haudhibitiwi kwa hiari, na chembe zake huunganishwa na diski za kuunganisha; msuli laini hauna michirizi na haudhibitiwi kwa hiari.",
+        "clinical": "Nguvu ya misuli hupimwa kliniki kwa kipimo cha Medical Research Council kuanzia 0 (hakuna kusinyaa) hadi 5 (nguvu ya kawaida). Mtindo wa udhaifu husaidia kujua mahali ugonjwa ulipo: udhaifu wa misuli ya karibu na kiwiliwili huashiria ugonjwa wa misuli (myopathy), udhaifu wa misuli ya mbali pamoja na kudhoofika huashiria ugonjwa wa neva za pembeni, na udhaifu pamoja na misuli kukakamaa na reflexes kali huashiria jeraha la niuroni ya juu ya mwendo. Rhabdomyolysis (kuvunjika kwa misuli baada ya kubanwa au juhudi kupita kiasi) hutoa myoglobini, ambayo inaweza kuharibu figo. Kiwambo ndio msuli mkuu wa kuvuta pumzi kwa utulivu na hupata neva kutoka neva ya frenik (sehemu za uti wa mgongo C3–C5), kwa hiyo jeraha la juu la kamba ya uti wa mgongo shingoni linaweza kusimamisha kupumua kwa kujitegemea."
+      },
+      "functions": [
+        {
+          "title": "Mwendo",
+          "body": "Misuli ya kiunzi husogeza mifupa kwenye viungo; misuli laini husogeza chakula, mkojo na damu kupitia viungo vyenye uwazi."
+        },
+        {
+          "title": "Mkao",
+          "body": "Kusinyaa kwa kiwango kidogo kwa mfululizo hushikilia mwili wima dhidi ya mvuto."
+        },
+        {
+          "title": "Kutoa joto",
+          "body": "Umetaboli wa misuli hutoa sehemu kubwa ya joto la mwili; kutetemeka huliongeza."
+        },
+        {
+          "title": "Kupumua",
+          "body": "Kiwambo na misuli kati ya mbavu hubadilisha ujazo wa uwazi wa kifua."
+        },
+        {
+          "title": "Ulinzi na udhibiti wa milango",
+          "body": "Misuli ya ukuta wa tumbo hulinda viungo vya tumboni; misuli-mlango (sphincters) hudhibiti njia za kutokea za mfumo wa chakula na wa mkojo."
+        }
+      ],
+      "organs": [
+        {
+          "name": "Kiwambo (diaframu)",
+          "role": "Msuli wenye umbo la kuba unaotenganisha kifua na tumbo; msuli mkuu wa kuvuta pumzi."
+        },
+        {
+          "name": "Msuli mkubwa wa kifua wa kulia (pectoralis major)",
+          "role": "Huvuta mkono kuelekea mwili na kuuzungusha kwa ndani."
+        },
+        {
+          "name": "Serratus anterior ya kulia",
+          "role": "Hushikilia blade ya bega dhidi ya ukuta wa kifua na kuizungusha mkono unapoinuliwa juu ya kichwa."
+        },
+        {
+          "name": "Msuli wa mshazari wa nje wa kulia (external oblique)",
+          "role": "Hukunja na kuzungusha kiwiliwili na kubana tumbo."
+        },
+        {
+          "name": "Psoas major ya kulia",
+          "role": "Msuli wenye nguvu wa kukunja nyonga."
+        },
+        {
+          "name": "Msuli wa moyo (miokadiamu)",
+          "role": "Msuli wa moyo; tazama mfumo wa moyo na mishipa ya damu."
+        }
+      ],
+      "works_with": [
+        {
+          "body": "Misuli huhitaji mifupa kama nyenzo; mifupa huhitaji misuli ili isogee."
+        },
+        {
+          "body": "Niuroni za mwendo huanzisha kila kusinyaa; vipokezi vya hisi ndani ya misuli huripoti urefu na mvutano."
+        },
+        {
+          "body": "Damu huleta oksijeni na glukosi kwenye msuli unaofanya kazi na huondoa kaboni dioksidi na joto."
+        },
+        {
+          "body": "Kiwambo na misuli kati ya mbavu huendesha upumuaji."
+        }
+      ],
+      "key_terms": [
+        {
+          "term": "Sakomia",
+          "definition": "Kitengo kinachojirudia cha kusinyaa katika miofibrili, kati ya diski mbili za Z.",
+          "origin": "Kigiriki sarx 'nyama' + meros 'sehemu'"
+        },
+        {
+          "term": "Chanzo (origin)",
+          "definition": "Mshikamano wa msuli ambao kwa kawaida hubaki imara wakati wa kusinyaa."
+        },
+        {
+          "term": "Mwisho (insertion)",
+          "definition": "Mshikamano wa msuli ambao kwa kawaida husogea wakati wa kusinyaa."
+        },
+        {
+          "term": "Agonisti (msogezaji mkuu)",
+          "definition": "Msuli unaohusika zaidi na mwendo fulani."
+        },
+        {
+          "term": "Antagonisti",
+          "definition": "Msuli unaopinga kitendo cha agonisti."
+        },
+        {
+          "term": "Kano",
+          "definition": "Kamba ya tishu unganishi nzito inayounganisha msuli na mfupa."
+        }
+      ],
+      "facts": [
+        {
+          "label": "Misuli ya kiunzi yenye majina",
+          "value": "zaidi ya 600"
+        },
+        {
+          "label": "Sehemu ya uzito wa mwili ambayo ni misuli ya kiunzi",
+          "value": "takriban asilimia 40",
+          "note": "Kwa mtu mzima wa kawaida; hutofautiana kwa umri, jinsia na mazoezi."
+        },
+        {
+          "label": "Aina za misuli",
+          "value": "3",
+          "note": "Ya kiunzi, ya moyo na laini."
+        }
+      ],
+      "clinical_notes": [
+        "Mkazo wa misuli (strain) ni kuchanika kwa nyuzi za msuli; kuteguka (sprain) ni jeraha la ligamenti.",
+        "Myasthenia gravis: kingamwili dhidi ya vipokezi vya asetilikolini husababisha udhaifu unaozidi kwa uchovu."
+      ],
+      "asset_note": "Mfano wa sasa wa 3D una misuli ya kiwiliwili na ya mshipi wa bega, kiwambo na misuli ya macho, lakini si misuli mingi ya mikono na miguu."
     },
     "cardiovascular": {
       "title": "Mfumo wa moyo na mishipa ya damu",
@@ -38,8 +273,134 @@
         "Eleza kiasi cha damu kinachosukumwa na moyo na shinikizo la damu, na utaje viwango vya kawaida wakati wa kupumzika kwa vipimo vya SI na vya kawaida."
       ],
       "overview": {
-        "basic": "Moyo wako ni pampu ya misuli yenye ukubwa wa ngumi yako. Hupiga takriban mara 60 hadi 100 kwa dakika ukiwa umepumzika na husukuma damu kupitia mirija inayoitwa mishipa ya damu. Ateri hubeba damu kutoka kwenye moyo, vena huirudisha, na kapilari ndogo sana huziunganisha. Kwenye kapilari, oksijeni na chakula hupita kutoka kwenye damu kwenda kwenye chembe za mwili, na uchafu hurudi. Upande wa kulia wa moyo hupeleka damu kwenye mapafu ichukue oksijeni; upande wa kushoto hupeleka damu hii yenye oksijeni nyingi kwa mwili wote."
-      }
+        "basic": "Moyo wako ni pampu ya misuli yenye ukubwa wa ngumi yako. Hupiga takriban mara 60 hadi 100 kwa dakika ukiwa umepumzika na husukuma damu kupitia mirija inayoitwa mishipa ya damu. Ateri hubeba damu kutoka kwenye moyo, vena huirudisha, na kapilari ndogo sana huziunganisha. Kwenye kapilari, oksijeni na chakula hupita kutoka kwenye damu kwenda kwenye chembe za mwili, na uchafu hurudi. Upande wa kulia wa moyo hupeleka damu kwenye mapafu ichukue oksijeni; upande wa kushoto hupeleka damu hii yenye oksijeni nyingi kwa mwili wote.",
+        "undergraduate": "Moyo una vyumba vinne: atria mbili zinazopokea damu na ventrikali mbili zinazoisukuma. Damu isiyo na oksijeni hurudi kupitia vena kava ya juu na ya chini hadi kwenye atriamu ya kulia, hupita vali ya trikuspidi kuingia ventrikali ya kulia, na husukumwa kupitia vali ya pulmonari kuingia shina la pulmonari (mzunguko wa mapafu). Damu yenye oksijeni hurudi kupitia vena za pulmonari hadi kwenye atriamu ya kushoto, hupita vali ya mitrali kuingia ventrikali ya kushoto, na husukumwa kupitia vali ya aota kuingia aota (mzunguko wa mwili mzima). Ateri zina kuta nene zenye unyumbufu na misuli; arterioli hudhibiti ukinzani na hivyo shinikizo la damu; kapilari zina kuta zenye unene wa chembe moja kwa ajili ya ubadilishanaji; vena zina kuta nyembamba, hubeba sehemu kubwa ya ujazo wa damu na zina vali. Kiasi cha damu kinachosukumwa na moyo kwa dakika (cardiac output) ni sawa na ujazo wa pigo (stroke volume) mara kasi ya mapigo ya moyo, takriban lita 5 kwa dakika kwa mtu mzima akiwa amepumzika.",
+        "clinical": "Shinikizo la damu huripotiwa kwa milimita za zebaki (mmHg) katika nchi nyingi; kPa 1 ni takriban mmHg 7.5, kwa hiyo 120/80 mmHg ni takriban 16.0/10.7 kPa. Atherosklerosisi hupunguza upana wa ateri; ateri ya moyo (coronary) inapoziba, sehemu ya misuli ya moyo inayolishwa nayo hukosa damu (ischaemia) na kufa (myocardial infarction, mshtuko wa moyo). Kwa kuwa ateri za moyo hujazwa hasa wakati wa diastoli, mapigo ya moyo ya haraka hupunguza muda wa misuli ya moyo kupata damu. Sauti za moyo hutokana na kufunga kwa vali: S1 kutoka vali za atrio-ventrikali (mitrali na trikuspidi) mwanzoni mwa sistoli, S2 kutoka vali za aota na pulmonari mwishoni mwa sistoli. Mapigo ya pembeni (radial, carotid, femoral, popliteal, dorsalis pedis) hupapaswa pale ateri zinapopita juu ya mfupa."
+      },
+      "functions": [
+        {
+          "title": "Usafirishaji",
+          "body": "Damu hubeba oksijeni, virutubisho, homoni na uchafu kati ya viungo."
+        },
+        {
+          "title": "Ubadilishanaji",
+          "body": "Kapilari huruhusu gesi, virutubisho na uchafu kupita kati ya damu na tishu."
+        },
+        {
+          "title": "Udhibiti wa joto",
+          "body": "Kubadilisha kiasi cha damu inayokwenda kwenye ngozi hutoa au huhifadhi joto la mwili."
+        },
+        {
+          "title": "Ulinzi",
+          "body": "Damu hubeba chembe nyeupe za damu na kingamwili, na viganda-damu huziba mishipa iliyoumia."
+        },
+        {
+          "title": "Udhibiti wa shinikizo na mtiririko",
+          "body": "Moyo na arterioli hurekebisha kiasi cha damu inayosukumwa na ukinzani ili kukidhi mahitaji ya kila kiungo."
+        }
+      ],
+      "organs": [
+        {
+          "name": "Moyo",
+          "role": "Pampu ya misuli yenye vyumba vinne."
+        },
+        {
+          "name": "Aota",
+          "role": "Ateri kuu inayobeba damu kutoka ventrikali ya kushoto kwenda mwilini."
+        },
+        {
+          "name": "Shina la pulmonari",
+          "role": "Hubeba damu kutoka ventrikali ya kulia kuelekea mapafu."
+        },
+        {
+          "name": "Vena kava ya juu",
+          "role": "Hurudisha damu kutoka kichwani, shingoni na mikononi hadi atriamu ya kulia."
+        },
+        {
+          "name": "Vena kava ya chini",
+          "role": "Hurudisha damu kutoka tumboni, nyongani na miguuni hadi atriamu ya kulia."
+        },
+        {
+          "name": "Ateri ya karotidi ya pamoja ya kulia",
+          "role": "Ateri kuu inayolisha upande wa kulia wa kichwa na shingo."
+        },
+        {
+          "name": "Ateri ya paja ya kulia",
+          "role": "Ateri kuu ya paja."
+        }
+      ],
+      "works_with": [
+        {
+          "body": "Mzunguko wa mapafu huleta damu kwenye alveoli kwa ajili ya ubadilishanaji wa gesi."
+        },
+        {
+          "body": "Figo huchuja damu na kudhibiti ujazo na shinikizo la damu."
+        },
+        {
+          "body": "Mishipa ya limfu hurudisha kwenye vena majimaji yanayovuja kutoka kwenye kapilari."
+        },
+        {
+          "body": "Neva za ototonomia hurekebisha kasi ya mapigo ya moyo, nguvu ya kusinyaa na upana wa mishipa."
+        },
+        {
+          "body": "Uboho mwekundu hutengeneza chembe za damu."
+        }
+      ],
+      "key_terms": [
+        {
+          "term": "Atriamu",
+          "definition": "Chumba cha moyo kinachopokea damu.",
+          "origin": "Kilatini 'ukumbi wa kuingilia'"
+        },
+        {
+          "term": "Ventrikali",
+          "definition": "Chumba cha moyo kinachosukuma damu.",
+          "origin": "Kilatini 'tumbo dogo'"
+        },
+        {
+          "term": "Sistoli",
+          "definition": "Awamu ya mzunguko wa moyo ambapo ventrikali husinyaa na kusukuma damu.",
+          "origin": "Kigiriki 'kusinyaa'"
+        },
+        {
+          "term": "Diastoli",
+          "definition": "Awamu ambapo ventrikali hulegea na kujaa damu.",
+          "origin": "Kigiriki 'kupanuka'"
+        },
+        {
+          "term": "Miokadiamu",
+          "definition": "Tabaka la kati la misuli la ukuta wa moyo.",
+          "origin": "Kigiriki mys 'msuli' + kardia 'moyo'"
+        },
+        {
+          "term": "Kapilari",
+          "definition": "Mshipa mdogo kabisa wa damu, ambapo ubadilishanaji na tishu hufanyika.",
+          "origin": "Kilatini capillus 'unywele'"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Mapigo ya moyo wakati wa kupumzika (mtu mzima)",
+          "value": "mapigo 60–100 kwa dakika"
+        },
+        {
+          "label": "Kiasi cha damu kinachosukumwa wakati wa kupumzika (mtu mzima)",
+          "value": "takriban lita 5 kwa dakika"
+        },
+        {
+          "label": "Ujazo wa damu (mtu mzima)",
+          "value": "takriban lita 5",
+          "note": "Karibu asilimia 7 ya uzito wa mwili."
+        },
+        {
+          "label": "Shinikizo la kawaida la damu wakati wa kupumzika",
+          "value": "takriban 120/80 mmHg (16.0/10.7 kPa)"
+        }
+      ],
+      "clinical_notes": [
+        "Shinikizo la juu la damu huongeza hatari ya kiharusi, moyo kushindwa kufanya kazi na ugonjwa wa figo.",
+        "Damu iliyoganda kwenye vena za kina za mguu (deep vein thrombosis) inaweza kusafiri hadi mapafuni (pulmonary embolism)."
+      ]
     },
     "nervous": {
       "title": "Mfumo wa neva",
@@ -51,8 +412,130 @@
         "Linganisha mgawanyiko wa somatiki na wa ototonomia (simpathetiki na parasimpathetiki)."
       ],
       "overview": {
-        "basic": "Mfumo wako wa neva hudhibiti na kuunganisha kila kitu ambacho mwili wako hufanya. Ubongo na uti wa mgongo ndio kituo cha udhibiti. Neva hutoka kwenye hivyo kwenda kila sehemu ya mwili, kama nyaya. Viungo vya hisi hutuma ujumbe kupitia neva kwenda kwenye ubongo ('jiko lina moto'), ubongo huamua cha kufanya, na hutuma ujumbe kurudi kwenye misuli ('sogeza mkono wako'). Ujumbe huu ni mawimbi madogo ya umeme yanayosafiri kwa kasi sana. Mfumo wa neva pia huendesha mambo usiyoyafikiria, kama mapigo ya moyo na usagaji wa chakula."
-      }
+        "basic": "Mfumo wako wa neva hudhibiti na kuunganisha kila kitu ambacho mwili wako hufanya. Ubongo na uti wa mgongo ndio kituo cha udhibiti. Neva hutoka kwenye hivyo kwenda kila sehemu ya mwili, kama nyaya. Viungo vya hisi hutuma ujumbe kupitia neva kwenda kwenye ubongo ('jiko lina moto'), ubongo huamua cha kufanya, na hutuma ujumbe kurudi kwenye misuli ('sogeza mkono wako'). Ujumbe huu ni mawimbi madogo ya umeme yanayosafiri kwa kasi sana. Mfumo wa neva pia huendesha mambo usiyoyafikiria, kama mapigo ya moyo na usagaji wa chakula.",
+        "undergraduate": "Mfumo mkuu wa neva (CNS) unajumuisha ubongo na kamba ya uti wa mgongo; mfumo wa neva wa pembeni (PNS) unajumuisha jozi 12 za neva za fuvu, jozi 31 za neva za uti wa mgongo na ganglia zake. Ubongo una serebramu (hemisfia mbili za ubongo, kila moja ikiwa na tundu la mbele, la utosi, la panja na la kisogo), diensefaloni (thalamasi na haipothalamasi), shina la ubongo (ubongo wa kati, pons na medula oblongata) na serebelamu. Niuroni husafirisha taarifa kama misukumo ya neva (action potentials) kupitia akzoni na kuzipitisha kwa chembe nyingine kwenye sinapsi, kwa kawaida kupitia visafirisha-neva vya kikemikali; chembe za glia huzisaidia, huzitenga (mielini) na kuzilinda. Kiutendaji, mgawanyiko wa somatiki hudhibiti misuli ya kiunzi na hisia za fahamu, na mgawanyiko wa ototonomia hudhibiti misuli laini, msuli wa moyo na tezi kupitia njia za simpathetiki ('pigana au kimbia') na parasimpathetiki ('pumzika na usage chakula').",
+        "clinical": "Uchunguzi wa neva hutambua mahali jeraha lilipo kwa kuunganisha matokeo: jeraha la niuroni ya juu ya mwendo husababisha udhaifu pamoja na misuli kukakamaa, reflexes kali na mwitikio wa plantar wa kunyoosha kidole gumba juu; jeraha la niuroni ya chini ya mwendo husababisha udhaifu pamoja na kudhoofika kwa misuli, ulegevu na kukosekana kwa reflexes. Kwa watu wazima kamba ya uti wa mgongo kwa kawaida huishia karibu na kiwango cha pingili L1–L2, kwa hiyo kutoboa kiuno (lumbar puncture) hufanywa chini ya hapo (kwa kawaida L3–L4 au L4–L5) kuchukua majimaji ya ubongo na uti wa mgongo bila kuumiza kamba. Kiharusi ni kupotea ghafla kwa kazi ya ubongo kutokana na kukosa damu (ischaemia) au kuvuja damu; dalili hutegemea eneo la ateri lililoathirika. Ubongo hupokea takriban asilimia 15 ya damu inayosukumwa na moyo wakati wa kupumzika na huathirika sana unapokosa oksijeni."
+      },
+      "functions": [
+        {
+          "title": "Hisia",
+          "body": "Vipokezi hutambua mabadiliko ndani na nje ya mwili na kutuma taarifa kwenye mfumo mkuu wa neva."
+        },
+        {
+          "title": "Kuunganisha taarifa",
+          "body": "Ubongo na kamba ya uti wa mgongo huchakata taarifa, huhifadhi kumbukumbu na kufanya maamuzi."
+        },
+        {
+          "title": "Udhibiti wa mwendo",
+          "body": "Niuroni za mwendo huamsha misuli na tezi."
+        },
+        {
+          "title": "Homeostasisi",
+          "body": "Haipothalamasi na mfumo wa neva wa ototonomia hudhibiti joto la mwili, mapigo ya moyo, shinikizo la damu na usagaji chakula."
+        },
+        {
+          "title": "Kazi za juu",
+          "body": "Lugha, kufikiri, hisia za moyoni na fahamu hutegemea gamba la ubongo na miunganisho yake."
+        }
+      ],
+      "organs": [
+        {
+          "name": "Ubongo",
+          "role": "Kituo cha udhibiti wa fikra, hisia, mwendo na udhibiti wa mwili."
+        },
+        {
+          "name": "Hemisfia ya kulia ya ubongo",
+          "role": "Hasa hudhibiti na kuhisi upande wa kushoto wa mwili."
+        },
+        {
+          "name": "Serebelamu (ubongo mdogo)",
+          "role": "Huratibu mwendo, usawa na mkao."
+        },
+        {
+          "name": "Shina la ubongo",
+          "role": "Huunganisha ubongo na kamba ya uti wa mgongo; hudhibiti kupumua, mapigo ya moyo na fahamu."
+        },
+        {
+          "name": "Haipothalamasi",
+          "role": "Hudhibiti joto la mwili, njaa, kiu na tezi ya pituitari."
+        },
+        {
+          "name": "Kamba ya uti wa mgongo",
+          "role": "Hubeba ishara kati ya ubongo na mwili na hudhibiti reflexes."
+        },
+        {
+          "name": "Neva za pembeni",
+          "role": "Hubeba ishara kati ya mfumo mkuu wa neva na sehemu nyingine za mwili."
+        }
+      ],
+      "works_with": [
+        {
+          "body": "Niuroni za mwendo huanzisha kusinyaa kwa misuli; vipokezi vya misuli hutoa taarifa kuhusu mkao wa viungo."
+        },
+        {
+          "body": "Haipothalamasi hudhibiti tezi ya pituitari, ikiunganisha neva na homoni."
+        },
+        {
+          "body": "Macho, masikio, pua na ulimi hutuma taarifa za hisia kwenye ubongo."
+        },
+        {
+          "body": "Neva za ototonomia hurekebisha mapigo ya moyo na upana wa mishipa ya damu; ubongo hutegemea damu inayofika bila kukatika."
+        },
+        {
+          "body": "Fuvu na uti wa mgongo hulinda ubongo na kamba ya uti wa mgongo."
+        }
+      ],
+      "key_terms": [
+        {
+          "term": "Niuroni",
+          "definition": "Chembe ya neva inayosafirisha ishara za umeme.",
+          "origin": "Kigiriki 'kano, neva'"
+        },
+        {
+          "term": "Sinapsi",
+          "definition": "Kiungo ambapo niuroni hupitisha ishara kwa chembe nyingine.",
+          "origin": "Kigiriki syn- 'pamoja' + haptein 'kufunga'"
+        },
+        {
+          "term": "Mielini",
+          "definition": "Ganda la mafuta linalozunguka akzoni nyingi na kuharakisha usafirishaji wa ishara."
+        },
+        {
+          "term": "Mada ya kijivu",
+          "definition": "Tishu ya mfumo mkuu wa neva yenye viwiliwili vingi vya niuroni."
+        },
+        {
+          "term": "Mada nyeupe",
+          "definition": "Tishu ya mfumo mkuu wa neva iliyoundwa hasa na akzoni zenye mielini."
+        },
+        {
+          "term": "Mfumo wa neva wa ototonomia",
+          "definition": "Mgawanyiko unaodhibiti kazi zisizo za hiari kupitia njia za simpathetiki na parasimpathetiki."
+        }
+      ],
+      "facts": [
+        {
+          "label": "Neva za fuvu",
+          "value": "jozi 12"
+        },
+        {
+          "label": "Neva za uti wa mgongo",
+          "value": "jozi 31"
+        },
+        {
+          "label": "Uzito wa ubongo wa mtu mzima",
+          "value": "takriban kg 1.2–1.4"
+        },
+        {
+          "label": "Sehemu ya damu inayosukumwa na moyo inayokwenda kwenye ubongo wakati wa kupumzika",
+          "value": "takriban asilimia 15"
+        }
+      ],
+      "clinical_notes": [
+        "Kiharusi: uso kulegea ghafla upande mmoja, mkono kudhoofika au shida ya kuongea kunahitaji tathmini ya dharura.",
+        "Ugonjwa wa neva za pembeni (kwa mfano katika kisukari) mara nyingi huanza kwa ganzi miguuni."
+      ],
+      "asset_note": "Mfano wa 3D una ubongo, kamba ya uti wa mgongo, utando wa ubongo, neva kumi na mbili za fuvu na neva za shingo, lakini bado si neva nyingi za pembeni za kiwiliwili, mikono na miguu."
     },
     "respiratory": {
       "title": "Mfumo wa upumuaji",
@@ -64,8 +547,120 @@
         "Linganisha pafu la kulia na la kushoto na ueleze kwa nini vitu vinavyovutwa mara nyingi huingia kwenye bronkasi kuu ya kulia."
       ],
       "overview": {
-        "basic": "Unavuta pumzi kuingiza oksijeni mwilini na kutoa pumzi kuondoa kaboni dioksidi, gesi ya taka. Hewa huingia kupitia pua au mdomo wako, hushuka kwenye koromeo la hewa (trakea) na kuingia kwenye mirija miwili, mmoja kwa kila pafu. Mirija hii hujigawa tena na tena, kama mti uliopinduliwa, na huishia kwenye mamilioni ya vifuko vidogo sana vya hewa vinavyoitwa alveoli. Kila kifuko cha hewa kimezungukwa na mishipa midogo ya damu. Oksijeni hupita kutoka kwenye hewa kwenda kwenye damu, na kaboni dioksidi hupita kutoka kwenye damu kwenda kwenye hewa, ambayo kisha unaitoa nje."
-      }
+        "basic": "Unavuta pumzi kuingiza oksijeni mwilini na kutoa pumzi kuondoa kaboni dioksidi, gesi ya taka. Hewa huingia kupitia pua au mdomo wako, hushuka kwenye koromeo la hewa (trakea) na kuingia kwenye mirija miwili, mmoja kwa kila pafu. Mirija hii hujigawa tena na tena, kama mti uliopinduliwa, na huishia kwenye mamilioni ya vifuko vidogo sana vya hewa vinavyoitwa alveoli. Kila kifuko cha hewa kimezungukwa na mishipa midogo ya damu. Oksijeni hupita kutoka kwenye hewa kwenda kwenye damu, na kaboni dioksidi hupita kutoka kwenye damu kwenda kwenye hewa, ambayo kisha unaitoa nje.",
+        "undergraduate": "Njia ya juu ya hewa (uwazi wa pua, koromeo, zoloto) hupasha joto, huongeza unyevu na huchuja hewa; njia ya chini huanzia kwenye zoloto na kuendelea kama trakea, ambayo hugawanyika kwenye karina kuwa bronkasi kuu ya kulia na ya kushoto. Bronkasi hujigawa kuwa bronkasi za matundu, za sehemu na ndogo zaidi, kisha bronkioli, bronkioli za mwisho na bronkioli za upumuaji zinazoishia kwenye mirija ya alveoli na alveoli. Pafu la kulia lina matundu matatu (la juu, la kati, la chini) na la kushoto lina mawili (la juu, la chini), pamoja na mkato wa moyo. Kuvuta pumzi ni kitendo cha nguvu: kiwambo husinyaa na kubapa na misuli ya nje kati ya mbavu huinua mbavu, ikipanua kifua ili shinikizo ndani ya mapafu lishuke chini ya shinikizo la angahewa. Kutoa pumzi kwa utulivu ni hasa kurudi nyuma kwa unyumbufu wa mapafu. Gesi hupita kupitia utando mwembamba wa alveoli na kapilari kwa msambao kufuata tofauti za shinikizo la gesi.",
+        "clinical": "Bronkasi kuu ya kulia ni pana zaidi, fupi zaidi na iliyo wima zaidi kuliko ya kushoto, kwa hiyo vitu vinavyovutwa na mrija wa kupumulia ulioingizwa kwa kina kupita kiasi mara nyingi huingia upande wa kulia. Shinikizo la gesi huripotiwa kwa kPa katika nchi nyingi na kwa mmHg katika nyingine (kPa 1 ni takriban mmHg 7.5); shinikizo la kawaida la oksijeni kwenye ateri kwa kijana mwenye afya anayepumua hewa ya kawaida ni takriban 10.5–13.5 kPa (80–100 mmHg). Magonjwa ya kuziba njia za hewa (pumu, ugonjwa sugu wa kuziba mapafu) hupunguza mtiririko wa hewa, kwa hiyo uwiano wa ujazo wa pumzi unaotolewa kwa nguvu katika sekunde 1 kwa uwezo wote wa pumzi (FEV1/FVC) hushuka; magonjwa ya kubana mapafu (fibrosisi ya mapafu) hupunguza ujazo wa mapafu huku uwiano ukibaki wa kawaida. Hewa kwenye uwazi wa pleura (pneumothorax) huruhusu pafu kusinyaa mbali na ukuta wa kifua."
+      },
+      "functions": [
+        {
+          "title": "Ubadilishanaji wa gesi",
+          "body": "Oksijeni huingia na kaboni dioksidi hutoka kwenye damu katika alveoli."
+        },
+        {
+          "title": "Upitishaji hewa",
+          "body": "Kupumua huingiza na kutoa hewa kwenye mapafu."
+        },
+        {
+          "title": "Uwiano wa asidi na besi",
+          "body": "Kubadilisha kasi ya kupumua hurekebisha kaboni dioksidi na hivyo pH ya damu."
+        },
+        {
+          "title": "Kutoa sauti",
+          "body": "Hewa inapopita nyuzi za sauti kwenye zoloto hutoa sauti."
+        },
+        {
+          "title": "Ulinzi",
+          "body": "Kamasi na silia hunasa na kuondoa chembe na vijidudu vinavyovutwa."
+        }
+      ],
+      "organs": [
+        {
+          "name": "Trakea (koromeo la hewa)",
+          "role": "Mrija wa hewa; huachwa wazi na pete za gegedu zenye umbo la C."
+        },
+        {
+          "name": "Bronkasi kuu ya kushoto",
+          "role": "Hubeba hewa hadi pafu la kushoto."
+        },
+        {
+          "name": "Pafu la kulia",
+          "role": "Matundu matatu; mahali pa ubadilishanaji wa gesi."
+        },
+        {
+          "name": "Pafu la kushoto",
+          "role": "Matundu mawili, pamoja na mkato wa moyo."
+        },
+        {
+          "name": "Kiwambo (diaframu)",
+          "role": "Msuli mkuu wa kupumua."
+        },
+        {
+          "name": "Zoloto",
+          "role": "Kisanduku cha sauti; hulinda njia ya hewa wakati wa kumeza."
+        }
+      ],
+      "works_with": [
+        {
+          "body": "Kapilari za mapafu hupitisha damu karibu na alveoli; chembe nyekundu za damu husafirisha oksijeni."
+        },
+        {
+          "body": "Kiwambo na misuli kati ya mbavu huendesha upitishaji hewa."
+        },
+        {
+          "body": "Shina la ubongo huweka mdundo wa kupumua na huitikia viwango vya kaboni dioksidi."
+        },
+        {
+          "body": "Mapafu na figo kwa pamoja hudumisha pH ya damu."
+        }
+      ],
+      "key_terms": [
+        {
+          "term": "Alveolasi",
+          "definition": "Kifuko kidogo sana cha hewa ambapo ubadilishanaji wa gesi hufanyika.",
+          "origin": "Kilatini 'uwazi mdogo'"
+        },
+        {
+          "term": "Bronkasi",
+          "definition": "Mojawapo ya njia kubwa za hewa zinazotoka kwenye trakea.",
+          "origin": "Kigiriki bronchos 'koromeo la hewa'"
+        },
+        {
+          "term": "Pleura",
+          "definition": "Utando unaofunika mapafu (wa viungo) na kufunika ukuta wa kifua kwa ndani (wa ukuta).",
+          "origin": "Kigiriki 'ubavu'"
+        },
+        {
+          "term": "Ujazo wa pumzi ya kawaida (tidal volume)",
+          "definition": "Ujazo wa hewa inayoingia au kutoka katika pumzi moja ya utulivu."
+        },
+        {
+          "term": "Sarfaktanti",
+          "definition": "Dutu inayopunguza mvutano wa uso ndani ya alveoli na kuzuia zisisinyae."
+        }
+      ],
+      "facts": [
+        {
+          "label": "Kasi ya kupumua wakati wa kupumzika (mtu mzima)",
+          "value": "pumzi 12–20 kwa dakika"
+        },
+        {
+          "label": "Ujazo wa pumzi ya kawaida (mtu mzima, akipumzika)",
+          "value": "takriban mL 500"
+        },
+        {
+          "label": "Idadi ya alveoli",
+          "value": "takriban milioni 300"
+        },
+        {
+          "label": "Eneo la utando wa upumuaji",
+          "value": "takriban m² 70"
+        }
+      ],
+      "clinical_notes": [
+        "Pumu: kubana kunakoweza kurudi kawaida kwa njia za hewa, pamoja na mlio wa kifua (wheeze) na kukosa pumzi.",
+        "Uvutaji wa sigara ndio chanzo kikuu kinachoweza kuzuilika cha ugonjwa sugu wa kuziba mapafu na saratani ya mapafu."
+      ],
+      "asset_note": "Mfano wa 3D una njia nzima ya hewa: utando wa pua, koromeo, zoloto, trakea, mti wa bronkasi na mapafu."
     },
     "digestive": {
       "title": "Mfumo wa usagaji chakula",
@@ -77,8 +672,135 @@
         "Eleza kazi za ini, kibofu cha nyongo na kongosho."
       ],
       "overview": {
-        "basic": "Mfumo wa usagaji chakula hubadilisha chakula kuwa vipande vidogo sana ambavyo mwili wako unaweza kutumia. Ni mrija mrefu unaoanzia mdomoni na kuishia kwenye njia ya haja kubwa. Meno hutafuna chakula, na mate huanza kukivunja. Chakula hushuka kupitia umio (koo la chakula) hadi tumboni, ambako asidi na kukorogwa hukigeuza kuwa uji mzito. Kwenye utumbo mwembamba, juisi kutoka kongosho na nyongo kutoka kwenye ini humaliza kukivunja, na virutubisho hupita kuingia kwenye damu. Utumbo mpana hurudisha maji, na kinachobaki hutoka mwilini kama kinyesi."
-      }
+        "basic": "Mfumo wa usagaji chakula hubadilisha chakula kuwa vipande vidogo sana ambavyo mwili wako unaweza kutumia. Ni mrija mrefu unaoanzia mdomoni na kuishia kwenye njia ya haja kubwa. Meno hutafuna chakula, na mate huanza kukivunja. Chakula hushuka kupitia umio (koo la chakula) hadi tumboni, ambako asidi na kukorogwa hukigeuza kuwa uji mzito. Kwenye utumbo mwembamba, juisi kutoka kongosho na nyongo kutoka kwenye ini humaliza kukivunja, na virutubisho hupita kuingia kwenye damu. Utumbo mpana hurudisha maji, na kinachobaki hutoka mwilini kama kinyesi.",
+        "undergraduate": "Njia ya chakula huanzia kwenye uwazi wa mdomo kupitia koromeo, umio, tumbo, utumbo mwembamba (duodenamu, jejunamu, ileamu) na utumbo mpana (sekamu pamoja na kidole tumbo, koloni, rektamu, mfereji wa haja kubwa). Ukuta wake una tabaka nne: utando wa ndani (mucosa), submukosa, tabaka la misuli la nje na serosa (au adventitia). Viungo saidizi ni meno, ulimi, tezi za mate, ini, kibofu cha nyongo na kongosho. Usagaji wa kimakanika (kutafuna, kukoroga, kugawanya) huongeza eneo la uso; usagaji wa kikemikali hutumia vimeng'enya kama amilesi ya mate, pepsini, lipesi ya kongosho, amilesi na proteasi, na chumvi za nyongo huyeyusha mafuta kuwa matone madogo. Peristalsisi husogeza chakula mbele. Ufyonzaji mwingi hufanyika kwenye utumbo mwembamba, ambao mikunjo yake ya duara, vilasi na mikrovilasi hutoa eneo kubwa sana; utumbo mpana hufyonza maji na elektroliti na huwa makazi ya bakteria wa utumbo.",
+        "clinical": "Damu ya vena kutoka kwenye utumbo hupita kwenye vena ya mlango wa ini (hepatic portal vein) hadi kwenye ini kabla ya kufika kwenye mzunguko wa mwili, ndiyo sababu dawa zinazomezwa hupitia umetaboli wa kwanza kwenye ini, na kwa nini shinikizo la juu kwenye vena ya mlango (kwa mfano katika sirosisi) hufungua njia mbadala za vena kama varisi za umio. Maumivu ya viungo vya utumbo huhisiwa mahali kulingana na asili yake ya kiinitete: utumbo wa mbele (hadi papila ya duodenamu) juu ya tumbo (epigastrium), utumbo wa kati (hadi theluthi mbili za koloni ya mlalo) kuzunguka kitovu, na utumbo wa nyuma juu ya kinena; kwa hiyo appendisaitisi ya mwanzo mara nyingi huanza kama maumivu kuzunguka kitovu kabla ya kuhamia sehemu ya chini ya kulia ya tumbo. Mawe ya nyongo yanaweza kuziba mrija wa kibofu cha nyongo (maumivu ya nyongo, kolesistisi) au mrija mkuu wa nyongo (homa ya manjano, kongosho kuvimba)."
+      },
+      "functions": [
+        {
+          "title": "Kuingiza chakula",
+          "body": "Kuweka chakula na kinywaji mdomoni."
+        },
+        {
+          "title": "Usagaji",
+          "body": "Kuvunja chakula kimakanika na kikemikali kuwa molekuli zinazoweza kufyonzwa."
+        },
+        {
+          "title": "Ufyonzaji",
+          "body": "Virutubisho, maji na elektroliti hupita kutoka utumboni kuingia kwenye damu na limfu."
+        },
+        {
+          "title": "Kutoa uchafu",
+          "body": "Mabaki yasiyosagwa huhifadhiwa na kutolewa kama kinyesi."
+        },
+        {
+          "title": "Umetaboli na uhifadhi",
+          "body": "Ini huchakata virutubisho vilivyofyonzwa, huhifadhi glaikojeni na vitamini, na huondoa sumu."
+        }
+      ],
+      "organs": [
+        {
+          "name": "Ulimi",
+          "role": "Husogeza chakula wakati wa kutafuna na kumeza; una vionjo."
+        },
+        {
+          "name": "Umio",
+          "role": "Mrija wa misuli unaobeba chakula kutoka koromeo hadi tumboni."
+        },
+        {
+          "name": "Tumbo",
+          "role": "Huhifadhi na kukoroga chakula na hutoa asidi na pepsini."
+        },
+        {
+          "name": "Duodenamu",
+          "role": "Sehemu ya kwanza ya utumbo mwembamba; hupokea nyongo na juisi ya kongosho."
+        },
+        {
+          "name": "Utumbo mwembamba",
+          "role": "Mahali kuu pa usagaji na ufyonzaji."
+        },
+        {
+          "name": "Utumbo mpana",
+          "role": "Hufyonza maji na kutengeneza kinyesi."
+        },
+        {
+          "name": "Ini",
+          "role": "Hutengeneza nyongo na kuchakata virutubisho vilivyofyonzwa."
+        },
+        {
+          "name": "Kibofu cha nyongo",
+          "role": "Huhifadhi na kukoleza nyongo."
+        },
+        {
+          "name": "Kongosho",
+          "role": "Hutoa vimeng'enya vya usagaji na homoni za insulini na glukagoni."
+        }
+      ],
+      "works_with": [
+        {
+          "body": "Virutubisho vilivyofyonzwa husafiri kwenye vena ya mlango wa ini hadi kwenye ini, kisha mwili wote."
+        },
+        {
+          "body": "Mafuta yaliyofyonzwa huingia kwenye kapilari za limfu (lacteals) ndani ya vilasi vya utumbo."
+        },
+        {
+          "body": "Visiwa vya kongosho hutoa insulini na glukagoni kudhibiti sukari kwenye damu."
+        },
+        {
+          "body": "Mfumo wa neva wa utumbo na neva za ototonomia hudhibiti mwendo na utoaji wa majimaji wa utumbo."
+        },
+        {
+          "body": "Misuli ya kiunzi hudhibiti kutafuna, mwanzo wa kumeza na msuli-mlango wa nje wa haja kubwa."
+        }
+      ],
+      "key_terms": [
+        {
+          "term": "Peristalsisi",
+          "definition": "Mawimbi ya kusinyaa kwa misuli yanayosukuma chakula kwenye utumbo.",
+          "origin": "Kigiriki peri- 'kuzunguka' + stalsis 'kusinyaa'"
+        },
+        {
+          "term": "Kaimu (chyme)",
+          "definition": "Mchanganyiko wa nusu-kioevu wa chakula na juisi ya tumbo unaotoka tumboni.",
+          "origin": "Kigiriki chymos 'juisi'"
+        },
+        {
+          "term": "Vilasi",
+          "definition": "Kichomozo chenye umbo la kidole cha utando wa utumbo mwembamba kinachoongeza eneo la uso.",
+          "origin": "Kilatini 'nywele nyingi'"
+        },
+        {
+          "term": "Nyongo",
+          "definition": "Majimaji yanayotengenezwa na ini yanayoyeyusha mafuta kuwa matone madogo."
+        },
+        {
+          "term": "Kimeng'enya",
+          "definition": "Protini inayoharakisha mmenyuko wa kikemikali, kama kuvunja molekuli za chakula."
+        },
+        {
+          "term": "Vena ya mlango wa ini",
+          "definition": "Vena inayobeba damu kutoka utumboni na wengu hadi kwenye ini."
+        }
+      ],
+      "facts": [
+        {
+          "label": "Uzito wa ini la mtu mzima",
+          "value": "takriban kg 1.5"
+        },
+        {
+          "label": "Asidi ya tumbo",
+          "value": "pH takriban 1–3"
+        },
+        {
+          "label": "Urefu wa utumbo mwembamba",
+          "value": "mita kadhaa",
+          "note": "Thamani zinazoripotiwa hutofautiana sana (takriban m 3–7) kwa sababu urefu hutegemea jinsi unavyopimwa."
+        }
+      ],
+      "clinical_notes": [
+        "Appendisaitisi: maumivu mara nyingi huanza kuzunguka kitovu na kuhamia sehemu ya chini ya kulia ya tumbo.",
+        "Homa ya ini (hepatitis) na sirosisi hupunguza uwezo wa ini kutengeneza protini na kuondoa sumu."
+      ]
     },
     "urinary": {
       "title": "Mfumo wa mkojo",
@@ -90,8 +812,121 @@
         "Linganisha urethra ya mwanamume na ya mwanamke na ueleze athari moja ya kliniki."
       ],
       "overview": {
-        "basic": "Figo zako mbili ni viungo vyenye umbo la haragwe vilivyo nyuma ya tumbo lako, kimoja kila upande wa uti wa mgongo. Husafisha damu yako: huondoa uchafu na maji ya ziada na kuyageuza kuwa mkojo. Mkojo hutiririka kupitia mirija miwili myembamba inayoitwa ureta hadi kwenye kibofu, mfuko unaonyumbuka unaouhifadhi. Unapokwenda chooni, mkojo hutoka kwenye kibofu kupitia mrija unaoitwa urethra. Figo pia hudumisha kiasi sahihi cha maji na chumvi mwilini mwako."
-      }
+        "basic": "Figo zako mbili ni viungo vyenye umbo la haragwe vilivyo nyuma ya tumbo lako, kimoja kila upande wa uti wa mgongo. Husafisha damu yako: huondoa uchafu na maji ya ziada na kuyageuza kuwa mkojo. Mkojo hutiririka kupitia mirija miwili myembamba inayoitwa ureta hadi kwenye kibofu, mfuko unaonyumbuka unaouhifadhi. Unapokwenda chooni, mkojo hutoka kwenye kibofu kupitia mrija unaoitwa urethra. Figo pia hudumisha kiasi sahihi cha maji na chumvi mwilini mwako.",
+        "undergraduate": "Kila figo ina takriban nefroni milioni moja. Damu huchujwa kwenye glomerulasi kuingia kibonge cha Bowman; kisha kichujio hupita kwenye neli iliyopinda ya karibu, kitanzi cha nefroni (kitanzi cha Henle), neli iliyopinda ya mbali na mrija wa kukusanya. Njiani, sehemu kubwa ya maji, glukosi, asidi amino na chumvi hufyonzwa tena, na baadhi ya vitu (kwa mfano ioni za hidrojeni na potasiamu na dawa nyingi) hutolewa kuingia kwenye neli. Mkojo uliokolea hutiririka kwenye pelvisi ya figo, ureta huubeba kwa peristalsisi hadi kwenye kibofu cha mkojo, na urethra huutoa nje ya mwili. Figo pia hutoa renini (udhibiti wa shinikizo la damu) na erithropoietini (utengenezaji wa chembe nyekundu za damu) na huamsha vitamini D.",
+        "clinical": "Kazi ya figo hukadiriwa kutoka kreatinini ya damu, inayoripotiwa kwa µmol/L katika nchi nyingi na kwa mg/dL katika nyingine (mg/dL 1 ni takriban µmol/L 88.4), kwa kawaida hubadilishwa kuwa kiwango kinachokadiriwa cha uchujaji wa glomerulasi (eGFR) kwa mL/dakika/1.73 m². GFR ya kawaida ni takriban mL 125 kwa dakika, sawa na takriban lita 180 za kichujio kwa siku. Mawe ya ureta kwa kawaida hukwama kwenye maeneo matatu membamba: kiungo cha pelvisi na ureta, mahali ureta inapovuka ukingo wa nyonga (mishipa ya iliac), na kiungo cha ureta na kibofu; maumivu husambaa kutoka kiunoni hadi kinenani. Urethra ya mwanamke ni fupi zaidi kuliko ya mwanamume, ndiyo sababu moja ya maambukizi ya njia ya mkojo kuwa ya kawaida zaidi kwa wanawake. Kuongezeka kwa ukubwa wa tezi dume kunaweza kubana sehemu ya urethra iliyo ndani ya tezi hiyo na kuzuia mtiririko wa mkojo kwa wanaume wazee."
+      },
+      "functions": [
+        {
+          "title": "Kutoa uchafu",
+          "body": "Huondoa urea, kreatinini, ioni za ziada na dawa nyingi kutoka kwenye damu."
+        },
+        {
+          "title": "Uwiano wa maji na chumvi",
+          "body": "Hurekebisha kiasi cha maji, sodiamu na potasiamu kinachobaki au kutoka."
+        },
+        {
+          "title": "Udhibiti wa shinikizo la damu",
+          "body": "Hudhibiti ujazo wa damu na hutoa renini."
+        },
+        {
+          "title": "Uwiano wa asidi na besi",
+          "body": "Hutoa ioni za hidrojeni na hufyonza tena bikaboneti."
+        },
+        {
+          "title": "Utengenezaji wa homoni",
+          "body": "Hutoa erithropoietini na huamsha vitamini D."
+        }
+      ],
+      "organs": [
+        {
+          "name": "Figo ya kulia",
+          "role": "Huchuja damu na kutengeneza mkojo; kwa kawaida iko chini kidogo kuliko ya kushoto kwa sababu ya ini."
+        },
+        {
+          "name": "Figo ya kushoto",
+          "role": "Huchuja damu na kutengeneza mkojo."
+        },
+        {
+          "name": "Ureta ya kulia",
+          "role": "Hubeba mkojo kutoka figo hadi kibofu."
+        },
+        {
+          "name": "Kibofu cha mkojo",
+          "role": "Huhifadhi mkojo."
+        },
+        {
+          "name": "Urethra",
+          "role": "Hubeba mkojo nje ya mwili."
+        }
+      ],
+      "works_with": [
+        {
+          "body": "Figo hupokea takriban sehemu moja ya tano ya damu inayosukumwa na moyo na hudhibiti ujazo wa damu."
+        },
+        {
+          "body": "Homoni ya kuzuia mkojo (ADH) na aldosteroni huelekeza figo kiasi cha maji na chumvi cha kubakiza."
+        },
+        {
+          "body": "Mapafu na figo kwa pamoja hudhibiti pH ya damu."
+        },
+        {
+          "body": "Kwa wanaume, urethra hutumiwa na njia ya mkojo na ya uzazi."
+        },
+        {
+          "body": "Vitamini D iliyoamshwa na figo husaidia kufyonza kalsiamu kwa ajili ya mifupa."
+        }
+      ],
+      "key_terms": [
+        {
+          "term": "Nefroni",
+          "definition": "Kitengo kidogo sana cha kazi cha figo.",
+          "origin": "Kigiriki nephros 'figo'"
+        },
+        {
+          "term": "Glomerulasi",
+          "definition": "Kishada cha kapilari ambapo damu huchujwa.",
+          "origin": "Kilatini 'mpira mdogo wa uzi'"
+        },
+        {
+          "term": "-a figo (renal)",
+          "definition": "Inayohusiana na figo.",
+          "origin": "Kilatini ren 'figo'"
+        },
+        {
+          "term": "Kukojoa (micturition)",
+          "definition": "Kitendo cha kutoa mkojo.",
+          "origin": "Kilatini micturire 'kukojoa'"
+        },
+        {
+          "term": "Kichujio (filtrate)",
+          "definition": "Majimaji yaliyochujwa kutoka kwenye damu kuingia nefroni kabla hayajawa mkojo."
+        }
+      ],
+      "facts": [
+        {
+          "label": "Nefroni kwa kila figo",
+          "value": "takriban milioni 1",
+          "note": "Hutofautiana sana kati ya watu."
+        },
+        {
+          "label": "Uchujaji wa glomerulasi (mtu mzima)",
+          "value": "takriban mL 125 kwa dakika (takriban lita 180 kwa siku)"
+        },
+        {
+          "label": "Mkojo unaotolewa (mtu mzima)",
+          "value": "takriban lita 1–2 kwa siku",
+          "note": "Hutegemea maji yanayonywewa na yanayopotea."
+        },
+        {
+          "label": "Sehemu ya damu inayosukumwa na moyo inayokwenda kwenye figo",
+          "value": "takriban asilimia 20–25"
+        }
+      ],
+      "clinical_notes": [
+        "Jeraha la ghafla la figo linaweza kufuata upungufu mkubwa wa maji mwilini, sepsis au baadhi ya dawa.",
+        "Mawe ya figo husababisha maumivu makali ya kuja na kwenda yanayosambaa kutoka kiunoni hadi kinenani."
+      ]
     },
     "reproductive": {
       "title": "Mfumo wa uzazi",
@@ -103,8 +938,115 @@
         "Eleza uhusiano wa kianatomia kati ya tezi dume (prostate) na urethra."
       ],
       "overview": {
-        "basic": "Mfumo wa uzazi huwawezesha watu kupata watoto. Viungo vyake hutengeneza chembe maalum zinazoitwa gameti: mbegu za kiume kwa wanaume na mayai (ova) kwa wanawake. Mbegu ya kiume inapoungana na yai, maisha mapya yanaweza kuanza. Viungo vya uzazi pia hutengeneza homoni za jinsia, kama testosteroni na estrojeni, zinazosababisha mabadiliko ya mwili wakati wa kubalehe. Kwa wanawake, mfuko wa uzazi hulinda na kulisha mtoto anayekua wakati wa ujauzito."
-      }
+        "basic": "Mfumo wa uzazi huwawezesha watu kupata watoto. Viungo vyake hutengeneza chembe maalum zinazoitwa gameti: mbegu za kiume kwa wanaume na mayai (ova) kwa wanawake. Mbegu ya kiume inapoungana na yai, maisha mapya yanaweza kuanza. Viungo vya uzazi pia hutengeneza homoni za jinsia, kama testosteroni na estrojeni, zinazosababisha mabadiliko ya mwili wakati wa kubalehe. Kwa wanawake, mfuko wa uzazi hulinda na kulisha mtoto anayekua wakati wa ujauzito.",
+        "undergraduate": "Kwa wanaume, korodani hutengeneza mbegu za kiume (ndani ya neli za seminiferasi) na testosteroni (chembe za Leydig). Mbegu hukomaa kwenye epididimisi na kusafiri kupitia mrija wa mbegu (ductus deferens) na mrija wa kumwaga hadi kwenye urethra; tezi za shahawa, tezi dume (prostate) na tezi za bulbo-urethra huongeza majimaji ya shahawa. Kwa wanawake, ovari hutengeneza mayai na homoni za estrojeni na projesteroni; yai lililotolewa huingia kwenye mrija wa uzazi, mahali ambapo urutubishaji kwa kawaida hufanyika, na kiinitete hujipandikiza kwenye utando wa ndani (endometriamu) wa mfuko wa uzazi. Mfuko wa uzazi hufunguka kupitia shingo ya uzazi (seviksi) kuingia ukeni. Homoni inayoachilia gonadotropini kutoka kwenye haipothalamasi huchochea pituitari kutoa homoni ya kuchochea folikali (FSH) na homoni ya luteini (LH), zinazodhibiti kazi za ovari na za korodani.",
+        "clinical": "Tezi dume huzunguka sehemu ya kwanza ya urethra ya mwanamume, kwa hiyo kuongezeka kwa ukubwa wa tezi dume kusiko kwa saratani (benign prostatic hyperplasia) mara nyingi husababisha kusita kuanza kukojoa, mkojo dhaifu na kukojoa mara kwa mara; uso wake wa nyuma unaweza kupapaswa kwa uchunguzi wa kidole kwenye njia ya haja kubwa. Korodani hukua tumboni na kushuka kwenye pumbu kabla ya kuzaliwa; limfu yake husafiri hadi tezi za kando ya aota (za kiuno), tofauti na ngozi ya pumbu inayopeleka limfu kwenye tezi za kinena, tofauti muhimu katika saratani ya korodani. Mimba iliyotunga nje ya mfuko wa uzazi (ectopic pregnancy), mara nyingi kwenye mrija wa uzazi, ni dharura ya upasuaji. Uchunguzi wa shingo ya uzazi hutambua mabadiliko kabla ya saratani, mengi yakihusiana na maambukizi ya virusi vya papiloma ya binadamu (HPV)."
+      },
+      "functions": [
+        {
+          "title": "Kutengeneza gameti",
+          "body": "Korodani hutengeneza mbegu za kiume na ovari hutengeneza mayai kwa meiosisi."
+        },
+        {
+          "title": "Kutengeneza homoni",
+          "body": "Testosteroni, estrojeni na projesteroni huendesha ukuaji wa kijinsia na mizunguko ya uzazi."
+        },
+        {
+          "title": "Kusafirisha gameti",
+          "body": "Mirija hubeba mbegu za kiume na mayai hadi mahali pa urutubishaji."
+        },
+        {
+          "title": "Kusaidia ujauzito",
+          "body": "Mfuko wa uzazi huhifadhi kiinitete na kijusi kinachokua, na kondo la nyuma hubadilishana vitu na damu ya mama."
+        }
+      ],
+      "organs": [
+        {
+          "name": "Tezi dume (prostate)",
+          "role": "Tezi inayozunguka urethra ya mwanamume; huongeza majimaji ya shahawa."
+        },
+        {
+          "name": "Korodani",
+          "role": "Hutengeneza mbegu za kiume na testosteroni."
+        },
+        {
+          "name": "Mrija wa mbegu (ductus deferens)",
+          "role": "Hubeba mbegu kutoka epididimisi kuelekea urethra."
+        },
+        {
+          "name": "Ovari (ya kushoto inaonyeshwa)",
+          "role": "Hutengeneza mayai, estrojeni na projesteroni."
+        },
+        {
+          "name": "Mrija wa uzazi (wa kushoto unaonyeshwa)",
+          "role": "Hubeba yai; mahali ambapo urutubishaji kwa kawaida hufanyika."
+        },
+        {
+          "name": "Mfuko wa uzazi",
+          "role": "Kiungo cha misuli ambapo kiinitete hujipandikiza na kukua."
+        },
+        {
+          "name": "Titi (tezi ya maziwa)",
+          "role": "Lina tezi ya maziwa, inayotengeneza maziwa baada ya kujifungua. TA2 hupanga titi pamoja na ngozi; kwenye 3D linaonyeshwa pamoja na viungo vya uzazi vya mwanamke."
+        }
+      ],
+      "works_with": [
+        {
+          "body": "Homoni za haipothalamasi na pituitari hudhibiti tezi za uzazi, ambazo zenyewe ni tezi za endokrini."
+        },
+        {
+          "body": "Urethra ya mwanamume hubeba mkojo na shahawa."
+        },
+        {
+          "body": "Wakati wa ujauzito, ujazo wa damu na kiasi kinachosukumwa na moyo huongezeka ili kulisha kondo la nyuma."
+        },
+        {
+          "body": "Neva za ototonomia hudhibiti kusimama kwa uume, kumwaga shahawa na mtiririko wa damu kwenye mfuko wa uzazi."
+        }
+      ],
+      "key_terms": [
+        {
+          "term": "Gameti",
+          "definition": "Chembe ya uzazi (mbegu ya kiume au yai) yenye nusu ya idadi ya kawaida ya kromosomu.",
+          "origin": "Kigiriki gamete 'mke', gametes 'mume'"
+        },
+        {
+          "term": "Meiosisi",
+          "definition": "Mgawanyiko wa chembe unaopunguza idadi ya kromosomu kwa nusu ili kutengeneza gameti.",
+          "origin": "Kigiriki 'kupungua'"
+        },
+        {
+          "term": "Endometriamu",
+          "definition": "Utando wa ndani wa mfuko wa uzazi, unaotoka wakati wa hedhi.",
+          "origin": "Kigiriki endon 'ndani' + metra 'mfuko wa uzazi'"
+        },
+        {
+          "term": "Gonadi",
+          "definition": "Korodani au ovari.",
+          "origin": "Kigiriki gone 'mbegu'"
+        },
+        {
+          "term": "Urutubishaji",
+          "definition": "Kuungana kwa mbegu ya kiume na yai."
+        }
+      ],
+      "facts": [
+        {
+          "label": "Kromosomu katika gameti ya binadamu",
+          "value": "23",
+          "note": "Chembe nyingine za mwili kwa kawaida zina 46."
+        },
+        {
+          "label": "Mzunguko wa kawaida wa hedhi",
+          "value": "takriban siku 28",
+          "note": "Mizunguko ya takriban siku 21–35 ni ya kawaida."
+        }
+      ],
+      "clinical_notes": [
+        "Kuongezeka kwa ukubwa wa tezi dume kusiko kwa saratani ni kwa kawaida kwa wanaume wazee na kunaweza kuzuia mtiririko wa mkojo.",
+        "Magonjwa ya zinaa yanaweza kuharibu mirija ya uzazi na kupunguza uwezo wa kupata mimba."
+      ],
+      "asset_note": "Mwili wa mwanamume wa 3D (BodyParts3D) una tezi dume; mwili wa mwanamke wa 3D (Human Reference Atlas, Visible Human Female) una mfuko wa uzazi, mirija ya uzazi, ovari na matiti. Korodani, mrija wa mbegu na viungo vya nje vya uzazi bado havijaundwa kwa 3D."
     },
     "endocrine": {
       "title": "Mfumo wa endokrini (homoni)",
@@ -116,8 +1058,118 @@
         "Tafsiri viwango vya sukari kwenye damu kwa mmol/L na kwa mg/dL."
       ],
       "overview": {
-        "basic": "Mfumo wa endokrini hutuma jumbe za kikemikali zinazoitwa homoni. Tezi hutoa homoni kwenye damu, ambayo huzibeba kwenda mwili mzima. Kila homoni huathiri tu chembe zinazoweza 'kuisoma'. Homoni hufanya kazi polepole kuliko ishara za neva, lakini athari zake hudumu muda mrefu zaidi. Hudhibiti ukuaji, kasi ambayo mwili wako hutumia nishati, kiasi cha sukari kwenye damu yako, jinsi unavyokabiliana na msongo, na mabadiliko ya kubalehe. Tezi ndogo iliyo chini ya ubongo, pituitari, hudhibiti tezi nyingine nyingi."
-      }
+        "basic": "Mfumo wa endokrini hutuma jumbe za kikemikali zinazoitwa homoni. Tezi hutoa homoni kwenye damu, ambayo huzibeba kwenda mwili mzima. Kila homoni huathiri tu chembe zinazoweza 'kuisoma'. Homoni hufanya kazi polepole kuliko ishara za neva, lakini athari zake hudumu muda mrefu zaidi. Hudhibiti ukuaji, kasi ambayo mwili wako hutumia nishati, kiasi cha sukari kwenye damu yako, jinsi unavyokabiliana na msongo, na mabadiliko ya kubalehe. Tezi ndogo iliyo chini ya ubongo, pituitari, hudhibiti tezi nyingine nyingi.",
+        "undergraduate": "Tezi za endokrini hazina mirija na hutoa homoni moja kwa moja kwenye damu, tofauti na tezi za eksokrini, zinazotoa majimaji kupitia mirija. Tezi kuu ni haipothalamasi, tezi ya pituitari (haipofisisi), tezi ya paineal, tezi ya thairoidi, tezi za paradundumio, tezi za adrenali (suprarenal), visiwa vya kongosho na gonadi; viungo vingine vingi, kama moyo, figo, tumbo na tishu za mafuta, pia hutoa homoni. Haipothalamasi huunganisha mfumo wa neva na wa endokrini: hutoa homoni zinazodhibiti pituitari ya mbele na hutengeneza oksitosini na homoni ya kuzuia mkojo (ADH), zinazohifadhiwa na kutolewa na pituitari ya nyuma. Viwango vingi vya homoni hudhibitiwa kwa mrejesho hasi; kwa mfano, homoni za thairoidi huzuia kutolewa kwa homoni inayoachilia thairotropini na homoni ya kuchochea thairoidi (TSH).",
+        "clinical": "Sukari kwenye damu huripotiwa kwa mmol/L katika nchi nyingi na kwa mg/dL katika nyingine (mmol/L 1 ni takriban mg/dL 18); kiwango cha kawaida bila kula ni takriban 3.9–5.5 mmol/L (70–100 mg/dL). Kisukari (diabetes mellitus) ni sukari iliyopanda kwa muda mrefu kutokana na ukosefu wa insulini (aina ya 1) au mwili kutoitikia insulini pamoja na upungufu wa kiasi (aina ya 2). Pituitari hukaa kwenye shimo la haipofisisi la fupa la sphenoid chini kidogo ya mkutano wa neva za macho (optic chiasm), kwa hiyo uvimbe wa pituitari unaweza kubana nyuzi za retina zinazovuka na kusababisha upofu wa nusu za nje za maono (bitemporal hemianopia). Gamba la tezi ya adrenali hutoa kotisoli na aldosteroni na sehemu ya ndani hutoa adrenalini (epinefrini); kusimamisha ghafla matibabu ya muda mrefu ya glukokotikoidi kunaweza kusababisha upungufu wa homoni za adrenali."
+      },
+      "functions": [
+        {
+          "title": "Umetaboli",
+          "body": "Homoni za thairoidi huweka kasi ya umetaboli wa mwili."
+        },
+        {
+          "title": "Udhibiti wa sukari kwenye damu",
+          "body": "Insulini hupunguza na glukagoni huongeza sukari kwenye damu."
+        },
+        {
+          "title": "Ukuaji na maendeleo",
+          "body": "Homoni ya ukuaji, homoni za thairoidi na homoni za jinsia huendesha ukuaji na kubalehe."
+        },
+        {
+          "title": "Mwitikio wa msongo",
+          "body": "Kotisoli na adrenalini huandaa mwili kukabiliana na msongo."
+        },
+        {
+          "title": "Uwiano wa maji, chumvi na kalsiamu",
+          "body": "Homoni ya kuzuia mkojo, aldosteroni na homoni ya paradundumio hudhibiti majimaji na madini."
+        }
+      ],
+      "organs": [
+        {
+          "name": "Tezi ya pituitari",
+          "role": "Hudhibiti thairoidi, tezi za adrenali na gonadi; hutoa homoni ya ukuaji."
+        },
+        {
+          "name": "Haipothalamasi",
+          "role": "Huunganisha mfumo wa neva na pituitari."
+        },
+        {
+          "name": "Tezi ya paineal",
+          "role": "Hutoa melatonini, inayosaidia kudhibiti mzunguko wa kulala na kuamka."
+        },
+        {
+          "name": "Tezi ya adrenali ya kulia",
+          "role": "Hutoa kotisoli, aldosteroni na adrenalini."
+        },
+        {
+          "name": "Kongosho (visiwa)",
+          "role": "Visiwa hutoa insulini na glukagoni."
+        },
+        {
+          "name": "Tezi ya thairoidi",
+          "role": "Hutoa thairoksini (T4), traiiodothaironini (T3) na kalsitonini."
+        },
+        {
+          "name": "Tezi za paradundumio",
+          "role": "Hutoa homoni ya paradundumio, inayoongeza kalsiamu kwenye damu."
+        }
+      ],
+      "works_with": [
+        {
+          "body": "Haipothalamasi hudhibiti pituitari; adrenalini huongeza mwitikio wa simpathetiki."
+        },
+        {
+          "body": "Gonadotropini hudhibiti korodani na ovari, zinazotoa homoni za jinsia."
+        },
+        {
+          "body": "Homoni ya kuzuia mkojo na aldosteroni hufanya kazi kwenye figo."
+        },
+        {
+          "body": "Kongosho lina kazi za usagaji (eksokrini) na za homoni (endokrini)."
+        },
+        {
+          "body": "Homoni ya paradundumio na kalsitonini hudhibiti ubadilishanaji wa kalsiamu na mfupa."
+        }
+      ],
+      "key_terms": [
+        {
+          "term": "Homoni",
+          "definition": "Mjumbe wa kikemikali anayebebwa kwenye damu hadi chembe lengwa.",
+          "origin": "Kigiriki hormon 'kuanzisha mwendo'"
+        },
+        {
+          "term": "Endokrini",
+          "definition": "Inayotoa moja kwa moja kwenye damu badala ya kupitia mrija.",
+          "origin": "Kigiriki endon 'ndani' + krinein 'kutoa'"
+        },
+        {
+          "term": "Mrejesho hasi",
+          "definition": "Mzunguko wa udhibiti ambapo matokeo ya mfumo hupunguza utengenezaji wake wenyewe."
+        },
+        {
+          "term": "Chembe lengwa",
+          "definition": "Chembe yenye vipokezi vya homoni fulani."
+        },
+        {
+          "term": "Tezi ya suprarenal",
+          "definition": "Istilahi ya TA kwa tezi ya adrenali, iliyokaa juu ya kila figo."
+        }
+      ],
+      "facts": [
+        {
+          "label": "Sukari ya kawaida kwenye damu bila kula",
+          "value": "takriban 3.9–5.5 mmol/L (70–100 mg/dL)"
+        },
+        {
+          "label": "Ubadilishaji wa vipimo vya glukosi",
+          "value": "1 mmol/L ≈ 18 mg/dL"
+        }
+      ],
+      "clinical_notes": [
+        "Upungufu wa homoni za thairoidi husababisha uchovu, kuongezeka uzito na kuhisi baridi; kuzidi kwa homoni hizo husababisha kinyume chake.",
+        "Sukari ya chini kwenye damu (hypoglycaemia) ni dharura kwa watu wanaotibiwa kwa insulini."
+      ],
+      "asset_note": "Mfano wa 3D una tezi ya pituitari (pamoja na sehemu zake za mbele na nyuma), tezi za paineal, thairoidi, paradundumio na adrenali, pamoja na kongosho."
     },
     "lymphatic": {
       "title": "Mfumo wa limfu na kinga",
@@ -129,8 +1181,102 @@
         "Eleza kwa nini kuchunguza tezi za limfu ni sehemu ya kutathmini maambukizi na saratani."
       ],
       "overview": {
-        "basic": "Kila siku baadhi ya majimaji huvuja kutoka kwenye mishipa yako ya damu kuingia kwenye tishu. Mfumo wa limfu hukusanya majimaji haya, ambayo sasa huitwa limfu, na kuyarudisha kwenye damu. Njiani, limfu hupita kwenye tezi ndogo za limfu zenye umbo la haragwe ambazo hufanya kazi kama vichujio na kunasa vijidudu. Tezi za limfu, thymus, wengu na tonsili zimejaa chembe nyeupe za damu zinazopambana na maambukizi. Unapougua, tezi za shingoni au kwapani zinaweza kuvimba kwa sababu chembe hizi zina kazi nyingi."
-      }
+        "basic": "Kila siku baadhi ya majimaji huvuja kutoka kwenye mishipa yako ya damu kuingia kwenye tishu. Mfumo wa limfu hukusanya majimaji haya, ambayo sasa huitwa limfu, na kuyarudisha kwenye damu. Njiani, limfu hupita kwenye tezi ndogo za limfu zenye umbo la haragwe ambazo hufanya kazi kama vichujio na kunasa vijidudu. Tezi za limfu, thymus, wengu na tonsili zimejaa chembe nyeupe za damu zinazopambana na maambukizi. Unapougua, tezi za shingoni au kwapani zinaweza kuvimba kwa sababu chembe hizi zina kazi nyingi.",
+        "undergraduate": "Kapilari za limfu huanzia tishu zikiwa zimefungwa upande mmoja na hufyonza majimaji ya kati ya tishu, protini na, kwenye utumbo mwembamba, mafuta yaliyofyonzwa (kaili). Huungana kuunda mishipa ya kukusanya yenye vali, inayopita kwenye tezi za limfu na kumwaga kwenye mashina ya limfu; mrija wa kifua (thoracic duct) hurudisha limfu kutoka sehemu kubwa ya mwili hadi kwenye kiungo cha vena ya chini ya mtulinga ya kushoto na vena ya shingo ya ndani, na mrija wa limfu wa kulia humwaga robo ya juu ya kulia ya mwili. Viungo vya msingi vya limfu ni mahali ambapo limfosaiti hukua: uboho mwekundu (chembe B) na thymus (chembe T). Viungo vya pili vya limfu, kama tezi za limfu, wengu, tonsili na tishu za limfu za utando, ni mahali ambapo limfosaiti hukutana na antijeni. Kinga ya asili ni ya haraka na haichagui; kinga ya kujifunza ni mahususi na ina kumbukumbu.",
+        "clinical": "Uvimbe wa limfu (lymphoedema) ni uvimbe unaosababishwa na kuharibika kwa mtiririko wa limfu, kwa mfano baada ya kuondolewa kwa tezi za limfu za kwapa wakati wa upasuaji wa saratani ya titi. Saratani husambaa hadi tezi za limfu za eneo zinazopokea limfu kutoka kiungo ilipoanzia, kwa hiyo kujua njia za limfu huongoza uchunguzi na upasuaji (kwa mfano, kuchukua tezi ya limfu ya kwanza, sentinel node). Wengu uko chini ya mbavu ya 9 hadi ya 11 upande wa kushoto; kwa kawaida haupapasiki, na unapovimba hurefuka kuelekea sehemu ya chini ya kulia ya tumbo. Baada ya kuondolewa kwa wengu, wagonjwa wako katika hatari kubwa ya maambukizi makali ya bakteria wenye kapsuli na wanahitaji chanjo. Thymus ni kubwa kwa watoto na polepole hubadilishwa na mafuta baada ya kubalehe."
+      },
+      "functions": [
+        {
+          "title": "Kurudisha majimaji",
+          "body": "Hurudisha kwenye damu majimaji na protini zilizovuja kutoka kwenye tishu."
+        },
+        {
+          "title": "Ufyonzaji wa mafuta",
+          "body": "Hubeba mafuta ya chakula yaliyofyonzwa kutoka utumboni."
+        },
+        {
+          "title": "Ulinzi wa kinga",
+          "body": "Tezi za limfu huchuja limfu na kuonyesha antijeni kwa limfosaiti."
+        },
+        {
+          "title": "Ukuaji wa limfosaiti",
+          "body": "Uboho na thymus hutengeneza na kufunza limfosaiti."
+        }
+      ],
+      "organs": [
+        {
+          "name": "Thymus",
+          "role": "Mahali limfosaiti T hukomaa; ni kubwa zaidi wakati wa utoto."
+        },
+        {
+          "name": "Tezi ya limfu (mfano wa mesenteri)",
+          "role": "Huchuja limfu na huwa mahali pa mwitikio wa kinga."
+        },
+        {
+          "name": "Wengu",
+          "role": "Huchuja damu, huondoa chembe nyekundu za damu zilizozeeka na huanzisha mwitikio wa kinga."
+        },
+        {
+          "name": "Tonsili ya kaakaa (ya kulia inaonyeshwa)",
+          "role": "Tishu ya limfu inayolinda mlango wa njia ya hewa na ya chakula."
+        },
+        {
+          "name": "Mrija wa kifua (thoracic duct)",
+          "role": "Mshipa mkubwa zaidi wa limfu; humwaga kwenye pembe ya vena ya kushoto."
+        }
+      ],
+      "works_with": [
+        {
+          "body": "Limfu hurudi kwenye damu kwenye pembe za vena za shingo."
+        },
+        {
+          "body": "Lacteals ndani ya vilasi vya utumbo hufyonza mafuta."
+        },
+        {
+          "body": "Uboho mwekundu hutengeneza limfosaiti na chembe nyingine nyeupe za damu."
+        },
+        {
+          "body": "Ngozi ni kizuizi cha kwanza dhidi ya maambukizi, na ina chembe za kinga."
+        }
+      ],
+      "key_terms": [
+        {
+          "term": "Limfu",
+          "definition": "Majimaji yaliyo ndani ya mishipa ya limfu, yanayotokana na majimaji ya kati ya tishu.",
+          "origin": "Kilatini 'maji safi'"
+        },
+        {
+          "term": "Limfosaiti",
+          "definition": "Chembe nyeupe ya damu ya kinga ya kujifunza (chembe B, chembe T) au chembe asilia ya kuua (NK)."
+        },
+        {
+          "term": "Antijeni",
+          "definition": "Molekuli inayotambuliwa na mfumo wa kinga."
+        },
+        {
+          "term": "Kingamwili",
+          "definition": "Protini inayotengenezwa na chembe B (chembe za plasma) inayoshikamana na antijeni mahususi."
+        },
+        {
+          "term": "Uvimbe wa limfu (lymphoedema)",
+          "definition": "Uvimbe unaosababishwa na kuharibika kwa mtiririko wa limfu."
+        }
+      ],
+      "facts": [
+        {
+          "label": "Limfu inayorudishwa kwenye damu",
+          "value": "takriban lita 2–3 kwa siku"
+        },
+        {
+          "label": "Idadi ya tezi za limfu",
+          "value": "mamia kadhaa"
+        }
+      ],
+      "clinical_notes": [
+        "Tezi za limfu zilizovimba na zinazouma kwa kawaida huashiria maambukizi; tezi ngumu, zisizouma na zisizosogea zinahitaji uchunguzi wa saratani.",
+        "Watu wasio na wengu wanapaswa kupewa chanjo dhidi ya bakteria wenye kapsuli."
+      ],
+      "asset_note": "Mwili wa mwanamume una thymus; mwili wa mwanamke una thymus, wengu, tonsili za kaakaa na mfano wa tezi ya limfu ya mesenteri. Makundi ya tezi za limfu za kichwa na shingo yameundwa katika miili yote miwili; mishipa ya limfu na tezi nyingine za limfu bado hazijaundwa."
     },
     "integumentary": {
       "title": "Mfumo wa ngozi",
@@ -142,8 +1288,109 @@
         "Panga majeraha ya moto kwa kina chake."
       ],
       "overview": {
-        "basic": "Ngozi yako hufunika na kulinda mwili wako wote. Huzuia vijidudu kuingia na maji kutoka, na hukukinga dhidi ya mwanga hatari wa jua. Ngozi husaidia kudhibiti joto lako: unatoa jasho unapohisi joto, na jasho hukupoza linapokauka. Ngozi imejaa vihisi vidogo vinavyohisi mguso, mgandamizo, maumivu, joto na baridi. Nywele na kucha hukua kutoka kwenye ngozi. Kwenye mwanga wa jua, ngozi pia hutengeneza vitamini D, ambayo unaihitaji kwa mifupa imara."
-      }
+        "basic": "Ngozi yako hufunika na kulinda mwili wako wote. Huzuia vijidudu kuingia na maji kutoka, na hukukinga dhidi ya mwanga hatari wa jua. Ngozi husaidia kudhibiti joto lako: unatoa jasho unapohisi joto, na jasho hukupoza linapokauka. Ngozi imejaa vihisi vidogo vinavyohisi mguso, mgandamizo, maumivu, joto na baridi. Nywele na kucha hukua kutoka kwenye ngozi. Kwenye mwanga wa jua, ngozi pia hutengeneza vitamini D, ambayo unaihitaji kwa mifupa imara.",
+        "undergraduate": "Ngozi (cutis) ina tabaka mbili: epidermisi, epitheliamu ya tabaka nyingi zenye keratini isiyo na mishipa ya damu, na dermisi, tabaka la tishu unganishi lenye mishipa ya damu, neva, vinyweleo na tezi. Chini yake kuna tishu ya chini ya ngozi (haipodermisi; TA: tela subcutanea), hasa mafuta, inayotenga joto na kushikilia ngozi. Keratinosaiti za epidermisi hutengenezwa kwenye tabaka la msingi na kusogea nje, zikijaa keratini hadi zinapodondoka; melanosaiti hutengeneza rangi ya melanini, inayofyonza mionzi ya urujuanimno. Miundo saidizi ni pamoja na nywele, kucha, tezi za jasho za eccrine (udhibiti wa joto), tezi za jasho za apocrine (kwapa na kinena) na tezi za mafuta (sebasi), zinazotoa mafuta (sebum) kwenye vinyweleo.",
+        "clinical": "Kina cha jeraha la moto huelezwa kuwa cha juu (epidermisi pekee), cha unene wa sehemu (hadi ndani ya dermisi) na cha unene kamili (kupitia dermisi yote); majeraha ya unene kamili yanaweza kutouma kwa sababu ncha za neva zimeharibika. Eneo la jeraha la moto hukadiriwa kama asilimia ya eneo lote la mwili, kwa mfano kwa kanuni ya tisa kwa watu wazima au kwa kiganja cha mgonjwa (takriban asilimia 1). Rangi ya ngozi, joto, muda wa kurudi kwa damu kwenye kapilari na unyumbufu wa ngozi ni sehemu ya tathmini ya kliniki, ingawa dalili kama rangi ya bluu (sainosisi) na weupe zinaweza kuwa vigumu kuziona kwenye ngozi nyeusi na ni bora kuzichunguza kwenye midomo, ulimi, chini ya kucha na kiwambo cha jicho. Melanoma mbaya hutokana na melanosaiti; mabadiliko ya ukubwa, umbo au rangi ya fuko yanahitaji tathmini."
+      },
+      "functions": [
+        {
+          "title": "Ulinzi",
+          "body": "Kizuizi cha kimwili, kikemikali na kibiolojia dhidi ya vijidudu, kemikali na mwanga wa urujuanimno."
+        },
+        {
+          "title": "Udhibiti wa joto",
+          "body": "Kutoa jasho na mabadiliko ya mtiririko wa damu kwenye ngozi hutoa au huhifadhi joto."
+        },
+        {
+          "title": "Hisia",
+          "body": "Vipokezi hutambua mguso, mgandamizo, mtetemo, joto na maumivu."
+        },
+        {
+          "title": "Utengenezaji wa vitamini D",
+          "body": "Mwanga wa urujuanimno B hubadilisha dutu inayotokana na kolesteroli kwenye ngozi kuwa vitamini D3."
+        },
+        {
+          "title": "Kuzuia upotevu wa maji",
+          "body": "Keratini na mafuta katika epidermisi hupunguza upotevu wa maji."
+        }
+      ],
+      "organs": [
+        {
+          "name": "Ngozi",
+          "role": "Epidermisi na dermisi zinazofunika mwili."
+        },
+        {
+          "name": "Nywele",
+          "role": "Kutenga joto, ulinzi na hisia."
+        },
+        {
+          "name": "Kucha",
+          "role": "Hulinda ncha za vidole vya mikono na miguu na husaidia kushika vitu vidogo."
+        },
+        {
+          "name": "Tezi za jasho",
+          "role": "Hutoa jasho la kupoza mwili."
+        },
+        {
+          "name": "Tezi za mafuta (sebasi)",
+          "role": "Hutoa mafuta (sebum) yanayolainisha ngozi na nywele."
+        }
+      ],
+      "works_with": [
+        {
+          "body": "Vitamini D inayotengenezwa kwenye ngozi husaidia utumbo kufyonza kalsiamu kwa ajili ya mifupa."
+        },
+        {
+          "body": "Mishipa ya damu ya ngozi hupanuka au kubana kudhibiti upotevu wa joto."
+        },
+        {
+          "body": "Vipokezi vya hisia kwenye ngozi hutuma ishara za mguso, joto na maumivu kwenye ubongo."
+        },
+        {
+          "body": "Chembe za kinga kwenye ngozi huitikia vijidudu vinavyovuka kizuizi."
+        }
+      ],
+      "key_terms": [
+        {
+          "term": "Epidermisi",
+          "definition": "Tabaka la nje la ngozi la epitheliamu.",
+          "origin": "Kigiriki epi- 'juu ya' + derma 'ngozi'"
+        },
+        {
+          "term": "Dermisi",
+          "definition": "Tabaka la tishu unganishi la ngozi lililo chini ya epidermisi.",
+          "origin": "Kigiriki derma 'ngozi'"
+        },
+        {
+          "term": "Tishu ya chini ya ngozi",
+          "definition": "Tabaka la mafuta lililo chini ya ngozi, pia huitwa haipodermisi."
+        },
+        {
+          "term": "Keratini",
+          "definition": "Protini ngumu iliyo kwenye ngozi, nywele na kucha.",
+          "origin": "Kigiriki keras 'pembe'"
+        },
+        {
+          "term": "Melanini",
+          "definition": "Rangi inayotia ngozi na nywele rangi na kufyonza mwanga wa urujuanimno.",
+          "origin": "Kigiriki melas 'nyeusi'"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Eneo la uso wa ngozi (mtu mzima)",
+          "value": "takriban m² 1.5–2"
+        },
+        {
+          "label": "Eneo la kiganja, linalotumika kukadiria majeraha ya moto",
+          "value": "takriban asilimia 1 ya eneo la mwili"
+        }
+      ],
+      "clinical_notes": [
+        "Kuungua na jua na kupigwa mara kwa mara na mwanga wa urujuanimno huongeza hatari ya saratani ya ngozi.",
+        "Vidonda vya mgandamizo hutokea juu ya sehemu za mifupa kwa watu wasioweza kujisogeza."
+      ],
+      "asset_note": "Ngozi ni uso mmoja katika miili yote miwili. Matiti (sehemu ya ngozi katika TA2) yanaonyeshwa pamoja na viungo vya uzazi vya mwanamke kwenye 3D ili ngozi iweze kufichwa peke yake. Tabaka za ngozi na viambatisho vyake vimeelezwa hapa lakini havijaundwa kwa 3D."
     },
     "special_senses": {
       "title": "Hisi maalum",
@@ -155,8 +1402,116 @@
         "Eleza matatizo ya uoni yanayotokana na mwanga kutokukusanyika vizuri na jinsi lenzi zinavyoyarekebisha."
       ],
       "overview": {
-        "basic": "Hisi maalum hukueleza kuhusu ulimwengu unaokuzunguka. Macho yako hutambua mwanga ili uweze kuona. Masikio yako hutambua sauti na pia hukusaidia kudumisha usawa. Pua yako hutambua harufu, na vionjo vilivyo kwenye ulimi wako hutambua ladha. Kila kiungo cha hisi hubadilisha mwanga, sauti au kemikali kuwa ishara za neva zinazosafiri hadi kwenye ubongo wako, na ubongo huzielewa. Hisi mara nyingi hufanya kazi pamoja: sehemu kubwa ya kile tunachokiita 'ladha' kwa kweli hutokana na harufu."
-      }
+        "basic": "Hisi maalum hukueleza kuhusu ulimwengu unaokuzunguka. Macho yako hutambua mwanga ili uweze kuona. Masikio yako hutambua sauti na pia hukusaidia kudumisha usawa. Pua yako hutambua harufu, na vionjo vilivyo kwenye ulimi wako hutambua ladha. Kila kiungo cha hisi hubadilisha mwanga, sauti au kemikali kuwa ishara za neva zinazosafiri hadi kwenye ubongo wako, na ubongo huzielewa. Hisi mara nyingi hufanya kazi pamoja: sehemu kubwa ya kile tunachokiita 'ladha' kwa kweli hutokana na harufu.",
+        "undergraduate": "Mwanga hupita kupitia konea, majimaji ya mbele ya jicho, mboni (inayodhibitiwa na iris), lenzi na kiowevu cha vitreous hadi kwenye retina; konea hutoa sehemu kubwa ya uwezo wa jicho kupinda mwanga na lenzi hurekebisha mkazo wa kuona (accommodation). Vipokea-mwanga vya retina ni chembe fimbo (mwanga hafifu) na chembe koni (rangi na maelezo madogo, zikiwa nyingi kwenye fovea); ishara hutoka kupitia neva ya macho. Sikio lina sehemu ya nje (pembe ya sikio na mfereji wa sikio wa nje), sehemu ya kati (ngoma ya sikio na vifupa vya kusikia: nyundo, fuawe na kikuku) na sehemu ya ndani (koklea kwa kusikia; vestibuli na mifereji ya nusu duara kwa kudumisha usawa). Harufu hutambuliwa na vipokezi vilivyo kwenye paa la uwazi wa pua, na ladha na vionjo, hasa kwenye ulimi, vinavyotambua tamu, chumvi, chachu, uchungu na umami.",
+        "clinical": "Matatizo ya uoni yanayotokana na mwanga kutokukusanyika vizuri ni ya kawaida duniani kote: katika myopia (kuona karibu tu) mwanga hukusanyika mbele ya retina na hurekebishwa kwa lenzi ya mbonyeo (inayotawanya); katika hypermetropia (kuona mbali tu) hukusanyika nyuma ya retina na hurekebishwa kwa lenzi mbinuko (inayokusanya); presbyopia ni kupungua kwa uwezo wa kurekebisha mkazo wa kuona kutokana na umri. Mtoto wa jicho (cataract, lenzi kuwa na ukungu) ni chanzo kikuu cha upofu unaotibika duniani. Shinikizo la juu ndani ya jicho pamoja na uharibifu wa neva ya macho (glaucoma) husababisha kupotea polepole kwa uoni wa pembeni. Upotevu wa kusikia wa kupitisha sauti (sikio la nje au la kati) na wa kineva (koklea au neva ya koklea) hutofautishwa kitandani kwa majaribio ya uma wa kurekebisha sauti (Rinne na Weber)."
+      },
+      "functions": [
+        {
+          "title": "Kuona",
+          "body": "Macho huunda picha na kutambua rangi, mwendo na kina."
+        },
+        {
+          "title": "Kusikia",
+          "body": "Koklea hubadilisha mitetemo ya sauti kuwa ishara za neva."
+        },
+        {
+          "title": "Usawa",
+          "body": "Kifaa cha vestibuli hutambua mkao na mwendo wa kichwa."
+        },
+        {
+          "title": "Kunusa",
+          "body": "Vipokezi vya harufu hutambua kemikali zilizo hewani."
+        },
+        {
+          "title": "Kuonja",
+          "body": "Vionjo hutambua kemikali zilizoyeyuka kwenye chakula."
+        }
+      ],
+      "organs": [
+        {
+          "name": "Mboni ya jicho ya kulia",
+          "role": "Huunda picha kwenye retina."
+        },
+        {
+          "name": "Konea ya kulia",
+          "role": "Sehemu ya mbele ya jicho inayopitisha mwanga; hutoa sehemu kubwa ya uwezo wa kupinda mwanga."
+        },
+        {
+          "name": "Lenzi ya kulia",
+          "role": "Hubadilisha umbo ili kulenga vitu vilivyo umbali tofauti."
+        },
+        {
+          "name": "Tezi ya machozi ya kulia",
+          "role": "Hutengeneza machozi yanayolinda na kulainisha jicho."
+        },
+        {
+          "name": "Ulimi (vionjo)",
+          "role": "Una vionjo vingi zaidi."
+        },
+        {
+          "name": "Koklea",
+          "role": "Kiungo cha kusikia katika sikio la ndani."
+        }
+      ],
+      "works_with": [
+        {
+          "body": "Neva za fuvu hubeba ishara za hisia hadi kwenye ubongo, unaozitafsiri."
+        },
+        {
+          "body": "Misuli sita ya nje ya jicho husogeza kila jicho; misuli midogo ya sikio la kati hupunguza sauti kubwa."
+        },
+        {
+          "body": "Tundu la jicho la mfupa hulinda jicho; fupa la panja huhifadhi sikio la kati na la ndani."
+        },
+        {
+          "body": "Ladha na harufu huchochea mate na majimaji ya tumbo."
+        }
+      ],
+      "key_terms": [
+        {
+          "term": "Retina",
+          "definition": "Tabaka la ndani la jicho linalohisi mwanga."
+        },
+        {
+          "term": "Accommodation",
+          "definition": "Kubadilika kwa umbo la lenzi ili kulenga vitu vilivyo karibu au mbali."
+        },
+        {
+          "term": "Vifupa vya kusikia",
+          "definition": "Nyundo (malleus), fuawe (incus) na kikuku (stapes), vinavyopitisha mitetemo kuvuka sikio la kati."
+        },
+        {
+          "term": "Koklea",
+          "definition": "Kiungo cha kusikia chenye umbo la ond kilichojaa majimaji.",
+          "origin": "Kilatini 'gamba la konokono'"
+        },
+        {
+          "term": "Kunusa (olfaction)",
+          "definition": "Hisi ya kunusa.",
+          "origin": "Kilatini olfacere 'kunusa'"
+        }
+      ],
+      "facts": [
+        {
+          "label": "Kipenyo cha mboni ya jicho ya mtu mzima",
+          "value": "takriban mm 24"
+        },
+        {
+          "label": "Vipokea-mwanga kwa kila retina",
+          "value": "takriban chembe fimbo milioni 100–120 na chembe koni milioni 6"
+        },
+        {
+          "label": "Kiwango cha kusikia kwa binadamu",
+          "value": "takriban Hz 20 hadi kHz 20",
+          "note": "Kikomo cha juu hushuka kadiri umri unavyoongezeka."
+        }
+      ],
+      "clinical_notes": [
+        "Kupoteza ghafla uoni wa jicho moja bila maumivu ni dharura.",
+        "Kukaa kwa muda mrefu kwenye kelele kubwa husababisha upotevu wa kudumu wa kusikia wa kineva."
+      ],
+      "asset_note": "Mfano wa 3D una macho, kifaa cha machozi na misuli ya nje ya jicho, sikio la nje, vifupa vya sikio la kati na ngoma ya sikio, sikio la ndani na utando wa pua. Kianatomia, viungo vya hisi maalum ni sehemu ya mfumo wa neva; vimepangwa peke yake hapa kwa ajili ya kujifunza."
     }
   }
 }

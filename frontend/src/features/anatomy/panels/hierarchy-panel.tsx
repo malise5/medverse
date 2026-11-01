@@ -4,6 +4,7 @@ import { ChevronRight } from "lucide-react";
 import { useMemo, useState } from "react";
 
 import type { AnatomicalSystem, StructureIndex } from "@/lib/api/types";
+import { useT } from "@/lib/i18n/client";
 import { cn } from "@/lib/utils";
 
 import { useWorkspace } from "../store";
@@ -23,6 +24,7 @@ function TreeNode({
   onSelect: (id: string) => void;
 }) {
   const [open, setOpen] = useState(false);
+  const { t } = useT();
   const selected = useWorkspace((s) => s.selectedId === id);
   const kids = childMap.get(id) ?? [];
   return (
@@ -36,7 +38,7 @@ function TreeNode({
       >
         <button
           type="button"
-          aria-label={open ? "Collapse" : "Expand"}
+          aria-label={t(open ? "explorer.hierarchy.collapse" : "explorer.hierarchy.expand")}
           disabled={!kids.length}
           onClick={() => setOpen((o) => !o)}
           className="grid size-5 place-items-center text-muted-foreground disabled:invisible"
@@ -72,6 +74,7 @@ export function HierarchyPanel({
   childMap: Map<string, string[]>;
   onSelect: (id: string) => void;
 }) {
+  const { t } = useT();
   const withStructures = systems.filter((s) => s.structure_count > 0);
   const [systemId, setSystemId] = useState<string>("cardiovascular");
   const roots = useMemo(
@@ -84,7 +87,7 @@ export function HierarchyPanel({
   return (
     <div className="grid gap-2">
       <label className="grid gap-1 text-xs text-muted-foreground">
-        System
+        {t("explorer.hierarchy.system")}
         <select
           value={systemId}
           onChange={(e) => setSystemId(e.target.value)}
@@ -98,9 +101,9 @@ export function HierarchyPanel({
         </select>
       </label>
       <p className="text-[11px] text-muted-foreground">
-        PART-OF hierarchy from BodyParts3D / FMA. Expand to navigate; click to select.
+        {t("explorer.hierarchy.note")}
       </p>
-      <ul role="tree" aria-label="Anatomical hierarchy" className="grid">
+      <ul role="tree" aria-label={t("explorer.hierarchy.aria")} className="grid">
         {roots.map((r) => (
           <TreeNode key={r} id={r} depth={0} names={names} childMap={childMap} onSelect={onSelect} />
         ))}

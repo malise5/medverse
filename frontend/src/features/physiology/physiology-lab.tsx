@@ -2,7 +2,7 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { Box, RotateCcw } from "lucide-react";
-import { Link } from "@/lib/i18n/client";
+import { Link, useT } from "@/lib/i18n/client";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 
@@ -74,6 +74,7 @@ export function ModelRunner({
   const run = useRunSimulation();
   const debounced = useDebounced(params, 250);
   const refs = useReferences();
+  const { t } = useT();
 
   useEffect(() => {
     run.mutate(
@@ -85,12 +86,12 @@ export function ModelRunner({
 
   const phaseRuns = useMemo<PhaseRun[]>(() => {
     if (!result) return [];
-    const current = { id: "current", label: "current", parameters: result.parameters, series: result.series };
+    const current = { id: "current", label: t("labs.current"), parameters: result.parameters, series: result.series };
     return baseline
-      ? [{ id: "baseline", label: "baseline", parameters: baseline.parameters, series: baseline.series },
+      ? [{ id: "baseline", label: t("labs.baseline"), parameters: baseline.parameters, series: baseline.series },
          { ...current, dashed: true }]
       : [current];
-  }, [result, baseline]);
+  }, [result, baseline, t]);
 
   const changed = model.parameters.filter((p) => params[p.id] !== p.default);
   const groups = useMemo(() => chartGroups(model), [model]);
@@ -100,8 +101,8 @@ export function ModelRunner({
   const seriesFor = (g: ChartGroup, r: RunResult): ChartSeries[] =>
     baseline
       ? [
-          { id: "baseline", label: `${g.series[0].label}: baseline`, values: baseline.series[g.series[0].id] },
-          { id: "current", label: `${g.series[0].label}: current`, values: r.series[g.series[0].id], dashed: true },
+          { id: "baseline", label: t("labs.seriesBaseline", { label: g.series[0].label }), values: baseline.series[g.series[0].id] },
+          { id: "current", label: t("labs.seriesCurrent", { label: g.series[0].label }), values: r.series[g.series[0].id], dashed: true },
         ]
       : g.series.map((s) => ({ id: s.id, label: s.label, values: r.series[s.id] }));
 
@@ -112,9 +113,9 @@ export function ModelRunner({
     <div className="grid gap-4 @4xl:grid-cols-[20rem_1fr]">
       <Card className="h-fit">
         <CardHeader className="flex flex-row items-center justify-between">
-          <CardTitle className="text-sm">Parameters</CardTitle>
+          <CardTitle className="text-sm">{t("labs.parameters")}</CardTitle>
           <Button size="xs" variant="ghost" onClick={() => setParams(defaults)} disabled={!changed.length}>
-            <RotateCcw /> Defaults
+            <RotateCcw /> {t("labs.defaults")}
           </Button>
         </CardHeader>
         {/* Stacked above the output (narrow host): sliders flow in two columns. */}
@@ -154,18 +155,18 @@ export function ModelRunner({
       <div className="grid min-w-0 gap-4">
         <Card>
           <CardHeader className="flex flex-row flex-wrap items-center justify-between gap-2">
-            <CardTitle className="text-sm">Model output</CardTitle>
+            <CardTitle className="text-sm">{t("labs.modelOutput")}</CardTitle>
             <div className="flex gap-2">
               {baseline ? (
-                <Button size="sm" variant="ghost" onClick={() => setBaseline(null)}>Clear baseline</Button>
+                <Button size="sm" variant="ghost" onClick={() => setBaseline(null)}>{t("labs.clearBaseline")}</Button>
               ) : (
                 <Button size="sm" variant="secondary" disabled={!result} onClick={() => setBaseline(result)}>
-                  Pin as baseline
+                  {t("labs.pinBaseline")}
                 </Button>
               )}
               {link && onLinkedAnatomy && (
                 <Button size="sm" variant="ghost" onClick={() => onLinkedAnatomy(link)}>
-                  <Box /> {link.play ? "Watch it in 3D" : "Linked anatomy in 3D"}
+                  <Box /> {link.play ? t("labs.watch3d") : t("labs.linked3d")}
                 </Button>
               )}
               {link && !onLinkedAnatomy && (
@@ -173,7 +174,7 @@ export function ModelRunner({
                   <Link
                     href={`/anatomy?structure=${encodeURIComponent(link.structure)}&highlight=${encodeURIComponent(link.highlight.join(","))}${link.play ? `&play=${encodeURIComponent(link.play)}` : ""}`}
                   >
-                    <Box /> Linked anatomy in 3D
+                    <Box /> {t("labs.linked3d")}
                   </Link>
                 </Button>
               )}
@@ -204,8 +205,8 @@ export function ModelRunner({
                   specs={model.metrics}
                   primary={baseline ?? result}
                   comparison={baseline ? result : undefined}
-                  primaryLabel={baseline ? "Baseline" : "Value"}
-                  comparisonLabel="Current"
+                  primaryLabel={baseline ? t("labs.baseline") : t("labs.value")}
+                  comparisonLabel={t("labs.current")}
                 />
               </>
             )}
@@ -214,7 +215,7 @@ export function ModelRunner({
         </Card>
         <Card>
           <CardHeader>
-            <CardTitle className="text-sm">Model documentation</CardTitle>
+            <CardTitle className="text-sm">{t("labs.documentation")}</CardTitle>
           </CardHeader>
           <CardContent>
             <ModelDocs
@@ -233,9 +234,10 @@ export function PhysiologyLab() {
   const models = useModels();
   const params = useSearchParams();
   const requested = params.get("model");
+  const { t } = useT();
   if (models.isLoading) return <Skeleton className="h-96" />;
   if (models.isError || !models.data?.length) {
-    return <p className="text-sm text-destructive">Could not load simulation models.</p>;
+    return <p className="text-sm text-destructive">{t("labs.loadError")}</p>;
   }
   const initial = models.data.find((m) => m.id === requested)?.id ?? models.data[0].id;
   return (

@@ -272,8 +272,13 @@ def ancestor_ids(db: Session, structure_id: str, max_depth: int = 30) -> list[st
 
 
 def structure_detail(
-    db: Session, structure_id: str, audience: AudienceLevel = AudienceLevel.UNDERGRADUATE
+    db: Session,
+    structure_id: str,
+    audience: AudienceLevel = AudienceLevel.UNDERGRADUATE,
+    locale: str = DEFAULT_LOCALE,
 ) -> StructureDetail:
+    """Structure names stay in English/Latin (the language of instruction in anatomy);
+    the name of its body system follows the request locale."""
     s = get_structure(db, structure_id)
 
     rels = list(
@@ -349,7 +354,14 @@ def structure_detail(
         region=s.region,
         identity_source=s.identity_source,
         verification_status=s.verification_status,
-        system_name=s.system.name if s.system else None,
+        system_name=(
+            overlay(
+                {"name": s.system.name},
+                i18n_service.translations(db, "system", [s.system.id], locale).get(s.system.id),
+            )["name"]
+            if s.system
+            else None
+        ),
         synonyms=s.synonyms,
         xrefs=s.xrefs,
         parents=sorted(parents, key=lambda p: p.name),

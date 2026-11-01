@@ -12,6 +12,7 @@ import { ModelPhasePlot } from "@/features/physiology/phase-plot-chart";
 import { TimeSeriesChart } from "@/features/physiology/time-series-chart";
 import { useModels } from "@/lib/api/queries";
 import type { ModelDefinition, StructureDetail } from "@/lib/api/types";
+import { useT } from "@/lib/i18n/client";
 
 import { useWorkspace } from "../store";
 import { playbackClock, sampleAt } from "./animation";
@@ -51,6 +52,7 @@ function ActivePlayback({ model }: { model: ModelDefinition }) {
   const stop = useWorkspace((s) => s.stopPlayback);
   const { play, pending, error } = useFunctionPlayer();
   const [params, setParams] = useState(playback.parameters);
+  const { t } = useT();
 
   // Re-run (debounced) when a quick parameter changes; playback keeps its phase.
   const first = useRef(true);
@@ -76,13 +78,13 @@ function ActivePlayback({ model }: { model: ModelDefinition }) {
     <div className="grid gap-4">
       <div className="flex flex-wrap items-center gap-1.5">
         <Button size="sm" onClick={() => setPlaying(!playing)}>
-          {playing ? <Pause /> : <Play />} {playing ? "Pause" : "Play"}
+          {playing ? <Pause /> : <Play />} {playing ? t("explorer.function.pause") : t("explorer.function.play")}
         </Button>
         <Button size="sm" variant="secondary" onClick={stop}>
-          <Square /> Stop
+          <Square /> {t("explorer.function.stop")}
         </Button>
         <select
-          aria-label="Playback speed"
+          aria-label={t("explorer.function.speed")}
           value={speed}
           onChange={(e) => setSpeed(Number(e.target.value))}
           className="h-8 rounded-md border border-input bg-input/30 px-1.5 text-xs"
@@ -93,14 +95,14 @@ function ActivePlayback({ model }: { model: ModelDefinition }) {
             </option>
           ))}
         </select>
-        {pending && <Loader2 className="size-4 animate-spin text-muted-foreground" aria-label="Running model" />}
+        {pending && <Loader2 className="size-4 animate-spin text-muted-foreground" aria-label={t("explorer.function.running")} />}
       </div>
       <p className="text-xs text-muted-foreground">
         {Math.abs(slow - 1) < 0.01
-          ? "Playing in real time."
+          ? t("explorer.function.realTime")
           : slow > 1
-            ? `Slowed ${Math.round(slow)}× so you can follow it.`
-            : `Sped up ${(1 / slow).toFixed(1)}×.`}
+            ? t("explorer.function.slowed", { n: Math.round(slow) })
+            : t("explorer.function.spedUp", { n: (1 / slow).toFixed(1) })}
       </p>
 
       <dl className="grid grid-cols-2 gap-2">
@@ -134,7 +136,7 @@ function ActivePlayback({ model }: { model: ModelDefinition }) {
       ))}
 
       <section className="grid gap-3">
-        <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Try changing</h4>
+        <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("explorer.function.tryChanging")}</h4>
         {model.parameters.slice(0, QUICK_PARAMETERS).map((p) => (
           <div key={p.id} className="grid gap-1.5">
             <div className="flex items-baseline justify-between gap-2 text-sm">
@@ -164,7 +166,7 @@ function ActivePlayback({ model }: { model: ModelDefinition }) {
       </section>
 
       <section className="grid gap-1.5">
-        <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Results</h4>
+        <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("explorer.function.results")}</h4>
         <dl className="grid grid-cols-2 gap-x-3 gap-y-1 text-xs">
           {model.metrics.slice(0, 6).map((m) => (
             <div key={m.id} className="flex justify-between gap-2 border-b border-border/50 py-0.5">
@@ -190,6 +192,7 @@ function ModelCard({ model, primary }: { model: ModelDefinition; primary: boolea
   const active = playback?.modelId === model.id;
   const { play, pending, error } = useFunctionPlayer();
   const animated = model.animations.length > 0;
+  const { t } = useT();
 
   return (
     <section className="grid gap-3 rounded-lg border p-3">
@@ -205,7 +208,7 @@ function ModelCard({ model, primary }: { model: ModelDefinition; primary: boolea
         <ActivePlayback key={model.id} model={model} />
       ) : animated ? (
         <Button size="sm" variant={primary ? "default" : "secondary"} disabled={pending} onClick={() => void play(model.id)}>
-          {pending ? <Loader2 className="animate-spin" /> : <Play />} Simulate in 3D
+          {pending ? <Loader2 className="animate-spin" /> : <Play />} {t("explorer.function.simulate3d")}
         </Button>
       ) : null}
       {error && !active && (
@@ -216,7 +219,7 @@ function ModelCard({ model, primary }: { model: ModelDefinition; primary: boolea
 
       {animated && (
         <section className="grid gap-1">
-          <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">What the 3D view shows</h4>
+          <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("explorer.function.shows3d")}</h4>
           <ul className="grid list-disc gap-1 pl-4 text-xs text-muted-foreground">
             {model.animations.map((b) => (
               <li key={`${b.output}-${b.effect}`}>{b.description}</li>
@@ -227,7 +230,7 @@ function ModelCard({ model, primary }: { model: ModelDefinition; primary: boolea
 
       <Button size="sm" variant="ghost" className="justify-self-start" asChild>
         <Link href={`/physiology?model=${encodeURIComponent(model.id)}`}>
-          <ExternalLink /> Full model, equations and sources
+          <ExternalLink /> {t("explorer.function.fullModel")}
         </Link>
       </Button>
       {primary && <EducationalDisclaimer text={model.disclaimer} />}
@@ -237,6 +240,7 @@ function ModelCard({ model, primary }: { model: ModelDefinition; primary: boolea
 
 export function FunctionPanel({ d, onSelect }: { d: StructureDetail; onSelect: (id: string) => void }) {
   const models = useModels();
+  const { t } = useT();
   const linked = useMemo(
     () =>
       d.simulations
@@ -256,14 +260,11 @@ export function FunctionPanel({ d, onSelect }: { d: StructureDetail; onSelect: (
       <div className="grid gap-3 text-sm">
         <div className="grid gap-2 rounded-md border border-dashed p-3 text-muted-foreground">
           <Activity className="size-5 text-primary" />
-          <p>
-            No function simulation is available for this structure yet. Each one needs a documented,
-            tested model before it is shown, so none is invented here.
-          </p>
+          <p>{t("explorer.function.noSim")}</p>
         </div>
         {entryPoints.length > 0 && (
           <section className="grid gap-1.5">
-            <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Available now</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("explorer.function.availableNow")}</h4>
             {entryPoints.map((m) => (
               <button
                 key={m.id}

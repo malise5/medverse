@@ -1,7 +1,10 @@
 import { describe, expect, it } from "vitest";
 
 import { NECK_PRESETS } from "../anatomy/panels/neck-layers";
+import { localizePathways, localizeProcesses } from "./localized";
 import { PATHWAYS } from "./pathways";
+import { PROCESSES } from "./processes";
+import { PATHWAYS_SW } from "./text.sw";
 
 describe("pathways", () => {
   it("each pathway belongs to a region and names structures for every step", () => {
@@ -26,5 +29,16 @@ describe("pathways", () => {
     const ids = NECK_PRESETS.map((p) => p.id);
     expect(new Set(ids).size).toBe(ids.length);
     for (const p of NECK_PRESETS) expect(p.depth).toBeGreaterThanOrEqual(0);
+  });
+
+  it("has Kiswahili wording for every pathway step, keeping structures and order", () => {
+    for (const pw of PATHWAYS) expect(PATHWAYS_SW[pw.id]?.steps.length, pw.id).toBe(pw.steps.length);
+    const sw = localizePathways("sw");
+    sw.forEach((pw, i) => {
+      expect(pw.title).not.toBe(PATHWAYS[i].title);
+      pw.steps.forEach((st, j) => expect(st.structures).toEqual(PATHWAYS[i].steps[j].structures));
+    });
+    expect(localizePathways("en")).toBe(PATHWAYS);
+    localizeProcesses("sw").forEach((p, i) => expect(p.basis).not.toBe(PROCESSES[i].basis));
   });
 });

@@ -9,6 +9,7 @@ import { Sheet, SheetContent, SheetTitle } from "@/components/ui/sheet";
 import { Skeleton } from "@/components/ui/skeleton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useCirculation, useLearningModule, useModels, useStructure } from "@/lib/api/queries";
+import { useT } from "@/lib/i18n/client";
 
 import { ProcessStage } from "@/features/biolab/process-stage";
 
@@ -44,10 +45,15 @@ function PanelClose({ label, onClick }: { label: string; onClick: () => void }) 
 /** Validated dark-surface categorical palette (fixed order, never cycled). */
 const PART_COLORS = ["#3987e5", "#d95926", "#199e70", "#c98500", "#d55181", "#008300", "#9085e9", "#e66767"];
 
+function EngineLoading() {
+  const { t } = useT();
+  return <div className="grid h-full place-items-center text-sm text-muted-foreground">{t("explorer.starting")}</div>;
+}
+
 // WebGL only exists in the browser.
 const AnatomyCanvas = dynamic(() => import("./engine/anatomy-canvas"), {
   ssr: false,
-  loading: () => <div className="grid h-full place-items-center text-sm text-muted-foreground">Starting 3D engine…</div>,
+  loading: () => <EngineLoading />,
 });
 
 function useIsDesktop() {
@@ -69,6 +75,7 @@ function useIsDesktop() {
  */
 export function AnatomyWorkspace({ embedded = false }: { embedded?: boolean } = {}) {
   const data = useAnatomyData();
+  const { t } = useT();
   const selectedId = useWorkspace((s) => s.selectedId);
   const multi = useWorkspace((s) => s.multiSelection);
   const audience = useWorkspace((s) => s.audience);
@@ -349,9 +356,9 @@ export function AnatomyWorkspace({ embedded = false }: { embedded?: boolean } = 
   const left = (
     <Tabs defaultValue="search" className="flex h-full flex-col">
       <TabsList className="mx-3 mt-3 w-[calc(100%-1.5rem)]">
-        <TabsTrigger value="search">Search</TabsTrigger>
-        <TabsTrigger value="layers">Layers</TabsTrigger>
-        <TabsTrigger value="hierarchy">Hierarchy</TabsTrigger>
+        <TabsTrigger value="search">{t("explorer.tabs.search")}</TabsTrigger>
+        <TabsTrigger value="layers">{t("explorer.tabs.layers")}</TabsTrigger>
+        <TabsTrigger value="hierarchy">{t("explorer.tabs.hierarchy")}</TabsTrigger>
       </TabsList>
       <div className="min-h-0 flex-1 overflow-y-auto p-3">
         <TabsContent value="search">
@@ -398,31 +405,31 @@ export function AnatomyWorkspace({ embedded = false }: { embedded?: boolean } = 
           <ProcessStage id={activeProcess} onClose={() => useWorkspace.getState().setActiveProcess(null)} />
         )}
         {desktop && !embedded ? (
-          <aside className={cn("w-72 shrink-0 border-r bg-card/40", !leftOpen && "hidden")} aria-label="Explorer">
+          <aside className={cn("w-72 shrink-0 border-r bg-card/40", !leftOpen && "hidden")} aria-label={t("explorer.explorer")}>
             {left}
           </aside>
         ) : desktop && embedded ? (
           leftOpen && (
             <aside
-              aria-label="Explorer"
+              aria-label={t("explorer.explorer")}
               className="absolute inset-y-0 left-0 z-20 w-72 max-w-[85%] border-r bg-background/95 pt-8 shadow-xl backdrop-blur"
             >
-              <PanelClose label="Close explorer" onClick={() => setLeftOpen(false)} />
+              <PanelClose label={t("explorer.closeExplorer")} onClick={() => setLeftOpen(false)} />
               {left}
             </aside>
           )
         ) : (
           <Sheet open={leftOpen} onOpenChange={setLeftOpen}>
             <SheetContent side="left" className="w-[85vw] max-w-sm p-0">
-              <SheetTitle className="sr-only">Explorer</SheetTitle>
+              <SheetTitle className="sr-only">{t("explorer.explorer")}</SheetTitle>
               {left}
             </SheetContent>
           </Sheet>
         )}
-        <section className="relative min-w-0 flex-1" aria-label="3D viewer">
+        <section className="relative min-w-0 flex-1" aria-label={t("explorer.viewer")}>
           {data.error ? (
             <p role="alert" className="p-6 text-sm text-destructive">
-              Could not load anatomy data: {data.error.message}
+              {t("explorer.loadError", { error: data.error.message })}
             </p>
           ) : data.manifest && data.systems.length ? (
             <AnatomyCanvas
@@ -448,16 +455,16 @@ export function AnatomyWorkspace({ embedded = false }: { embedded?: boolean } = 
               <Info className="size-3.5 shrink-0 text-primary" aria-hidden />
               <span className="block truncate first-letter:uppercase">
                 {selectedId
-                  ? (detail.data?.id === selectedId ? detail.data.name : data.names.get(selectedId)) ?? "Structure"
-                  : (data.systems.find((x) => x.id === systemFocus)?.name ?? "System")}
+                  ? (detail.data?.id === selectedId ? detail.data.name : data.names.get(selectedId)) ?? t("explorer.structureFallback")
+                  : (data.systems.find((x) => x.id === systemFocus)?.name ?? t("explorer.systemFallback"))}
               </span>
-              <span className="shrink-0 text-muted-foreground">· Details</span>
+              <span className="shrink-0 text-muted-foreground">· {t("explorer.details")}</span>
             </button>
           )}
           <ProcessHud />
         </section>
         {desktop && !embedded ? (
-          <aside className={cn("w-[22rem] shrink-0 border-l bg-card/40", !rightOpen && "hidden")} aria-label="Structure information">
+          <aside className={cn("w-[22rem] shrink-0 border-l bg-card/40", !rightOpen && "hidden")} aria-label={t("explorer.structureInfo")}>
             {right}
           </aside>
         ) : desktop && embedded ? (
@@ -465,17 +472,17 @@ export function AnatomyWorkspace({ embedded = false }: { embedded?: boolean } = 
           !quizHidesNames &&
           (!!selectedId || !!systemFocus) && (
             <aside
-              aria-label="Structure information"
+              aria-label={t("explorer.structureInfo")}
               className="absolute inset-y-0 right-0 z-20 w-80 max-w-[85%] border-l bg-background/95 pt-8 shadow-xl backdrop-blur"
             >
-              <PanelClose label="Close information" onClick={() => setRightOpen(false)} />
+              <PanelClose label={t("explorer.closeInfo")} onClick={() => setRightOpen(false)} />
               {right}
             </aside>
           )
         ) : (
           <Sheet open={rightOpen && !quizHidesNames && (!!selectedId || !!systemFocus)} onOpenChange={setRightOpen}>
             <SheetContent side="bottom" className="h-[70dvh] p-0">
-              <SheetTitle className="sr-only">Structure information</SheetTitle>
+              <SheetTitle className="sr-only">{t("explorer.structureInfo")}</SheetTitle>
               {right}
             </SheetContent>
           </Sheet>

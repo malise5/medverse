@@ -1,6 +1,7 @@
 "use client";
 
 import type { AnatomicalSystem } from "@/lib/api/types";
+import { useT } from "@/lib/i18n/client";
 
 import { FittedNotice, type HeadPreset, LayerPresets } from "./head-layers";
 
@@ -92,14 +93,10 @@ export function NeckLayers({
   systems: AnatomicalSystem[];
   onFocus: (structureIds: string[]) => void;
 }) {
+  const { t } = useT();
   return (
-    <LayerPresets id="neck-layers" title="Neck layers" presets={NECK_PRESETS} systems={systems} onFocus={onFocus}>
-      <FittedNotice>
-        The larynx, trachea, cervical spinal cord, intervertebral discs and the left carotid and subclavian
-        arteries of this neck come from a female donor. The cervical vertebrae, neck muscles, thyroid gland,
-        most neck vessels, nerves and lymph nodes are Z-Anatomy models of a male body fitted to this neck (CC
-        BY-SA 4.0): an approximation, not female anatomy.
-      </FittedNotice>
+    <LayerPresets region="neck" presets={NECK_PRESETS} systems={systems} onFocus={onFocus}>
+      <FittedNotice>{t("explorer.layers.neckFitted")}</FittedNotice>
     </LayerPresets>
   );
 }

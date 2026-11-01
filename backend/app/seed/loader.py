@@ -9,7 +9,7 @@ nothing is silently dropped.
 import json
 import logging
 from collections.abc import Iterable
-from dataclasses import dataclass, field
+from dataclasses import asdict, dataclass, field
 from pathlib import Path
 
 from pydantic import ValidationError
@@ -48,6 +48,8 @@ from app.models.enums import (
     VerificationStatus,
 )
 from app.schemas.learning import ModuleIn, QuestionIn
+from app.services import i18n_service
+from app.simulation.registry import list_models
 
 log = logging.getLogger("medverse.seed")
 
@@ -686,6 +688,8 @@ TRANSLATION_FILES = {
     "modules.json": "module",
     "questions.json": "question",
     "structures.json": "structure",
+    "models.json": "model",
+    "conditions.json": "condition",
 }
 
 
@@ -734,6 +738,10 @@ def seed_translations(db: Session, content_dir: Path, report: SeedReport) -> Non
         "structure": {
             sid: {"name": name} for sid, name in db.execute(select(Structure.id, Structure.name))
         },
+        "model": {
+            m.definition.id: i18n_service.model_text(asdict(m.definition)) for m in list_models()
+        },
+        "condition": {c.id: i18n_service.condition_text(c) for c in db.scalars(select(Condition))},
     }
     rows: list[dict] = []
     base_dir = content_dir / "i18n"

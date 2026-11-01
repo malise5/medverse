@@ -1,6 +1,6 @@
 "use client";
 
-import { Link, useLocalePath, useT } from "@/lib/i18n/client";
+import { Link, type MessageKey, useLocalePath, useT } from "@/lib/i18n/client";
 import { useState, type FormEvent } from "react";
 import type { z } from "zod";
 
@@ -32,7 +32,7 @@ export function AuthForm({ mode }: { mode: Mode }) {
     const parsed = schema.safeParse(raw);
     if (!parsed.success) {
       const fieldErrors: Record<string, string> = {};
-      for (const issue of parsed.error.issues) fieldErrors[String(issue.path[0])] ??= issue.message;
+      for (const issue of parsed.error.issues) fieldErrors[String(issue.path[0])] ??= t(issue.message as MessageKey);
       setErrors(fieldErrors);
       return;
     }

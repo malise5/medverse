@@ -664,7 +664,7 @@
           "Stroke: sudden facial droop, arm weakness or speech difficulty needs emergency assessment.",
           "Peripheral neuropathy (for example in diabetes) often begins with numbness in the feet."
         ],
-        "asset_note": "The 3D model includes the brain and spinal cord but not the peripheral nerves."
+        "asset_note": "The 3D model includes the brain, spinal cord, meninges, the twelve cranial nerves and the nerves of the neck, but not yet most peripheral nerves of the trunk and limbs."
       }
     },
     {
@@ -819,7 +819,7 @@
           "Asthma: reversible narrowing of the airways with wheeze and breathlessness.",
           "Smoking is the main preventable cause of chronic obstructive pulmonary disease and lung cancer."
         ],
-        "asset_note": "The 3D model includes the trachea, bronchial tree and lungs; the nasal cavity and larynx are not yet modelled."
+        "asset_note": "The 3D model includes the whole airway: nasal mucosa, pharynx, larynx, trachea, bronchial tree and lungs."
       }
     },
     {
@@ -1453,7 +1453,7 @@
           "Hypothyroidism causes tiredness, weight gain and feeling cold; hyperthyroidism causes the opposite.",
           "Low blood glucose (hypoglycaemia) is an emergency in people treated with insulin."
         ],
-        "asset_note": "The 3D model includes the pituitary, pineal and suprarenal glands and the pancreas; the thyroid and parathyroid glands are not yet modelled."
+        "asset_note": "The 3D model includes the pituitary gland (with its anterior and posterior lobes), the pineal, thyroid, parathyroid and suprarenal glands and the pancreas."
       }
     },
     {
@@ -1586,7 +1586,7 @@
           "Tender, enlarged lymph nodes usually indicate infection; hard, painless, fixed nodes need investigation for cancer.",
           "People without a spleen should be vaccinated against encapsulated bacteria."
         ],
-        "asset_note": "The male body includes the thymus; the female body includes the thymus, spleen, palatine tonsils and an example mesenteric lymph node. Lymphatic vessels and most lymph nodes are not yet modelled."
+        "asset_note": "The male body includes the thymus; the female body includes the thymus, spleen, palatine tonsils and an example mesenteric lymph node. The lymph node groups of the head and neck are modelled in both bodies; lymphatic vessels and the other lymph nodes are not yet modelled."
       }
     },
     {
@@ -1879,7 +1879,7 @@
           "Sudden painless loss of vision in one eye is an emergency.",
           "Prolonged exposure to loud noise causes permanent sensorineural hearing loss."
         ],
-        "asset_note": "The 3D model includes the eyes, lacrimal apparatus and extra-ocular muscles; the ear and olfactory structures are not yet modelled. Anatomically, the special sense organs are part of the nervous system; they are grouped separately here for study."
+        "asset_note": "The 3D model includes the eyes, lacrimal apparatus and extra-ocular muscles, the external ear, the middle-ear ossicles and tympanic membrane, the inner ear and the nasal mucosa. Anatomically, the special sense organs are part of the nervous system; they are grouped separately here for study."
       }
     }
   ]

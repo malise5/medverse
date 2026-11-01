@@ -9,6 +9,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { EvidenceBadge, ReferenceList, VerificationBadge } from "@/features/governance/badges";
 import { useStructure } from "@/lib/api/queries";
+import { type MessageKey, useT } from "@/lib/i18n/client";
 import type { AudienceLevel, Relation, StructureDetail, StructureSummary } from "@/lib/api/types";
 
 import { SYSTEM_COLORS } from "../engine/palette";
@@ -16,35 +17,7 @@ import { FunctionPanel } from "../function/function-panel";
 import { BodyMapPanel } from "./body-map-panel";
 import { useWorkspace } from "../store";
 
-const SECTION_LABELS: Record<string, string> = {
-  overview: "Overview",
-  gross_anatomy: "Gross anatomy",
-  surface_anatomy: "Surface anatomy",
-  microscopic_anatomy: "Microscopic anatomy",
-  histology: "Histology",
-  physiology: "Physiology",
-  blood_supply: "Blood supply",
-  venous_drainage: "Venous drainage",
-  innervation: "Innervation",
-  lymphatic_drainage: "Lymphatic drainage",
-  relations: "Relations",
-  embryology: "Embryology",
-  variations: "Variations",
-  clinical_anatomy: "Clinical anatomy",
-  pathology: "Pathology",
-  injuries: "Injuries",
-  investigations: "Investigations",
-  management_principles: "Management principles",
-  clinical_correlations: "Clinical correlations",
-};
-
-const AUDIENCES: [AudienceLevel, string][] = [
-  ["basic", "Beginner"],
-  ["undergraduate", "Intermediate (undergraduate)"],
-  ["clinical", "Advanced (clinical)"],
-  ["postgraduate", "Postgraduate"],
-  ["specialist", "Specialist"],
-];
+const AUDIENCES: AudienceLevel[] = ["basic", "undergraduate", "clinical", "postgraduate", "specialist"];
 
 function StructureLink({ s, onSelect }: { s: StructureSummary; onSelect: (id: string) => void }) {
   return (
@@ -90,28 +63,18 @@ function RelationGroup({
 }
 
 function Overview({ d }: { d: StructureDetail }) {
+  const { t } = useT();
+  // Unknown keys come back unchanged, so an unlisted section or source shows its raw id.
+  const tk = (key: string) => t(key as MessageKey);
   if (!d.content.length) {
     return (
       <div className="grid gap-2 rounded-md border border-dashed p-3 text-sm text-muted-foreground">
         <p>
-          No curated educational content for this structure yet. Its identity, hierarchy and 3D
-          geometry come from{" "}
-          {d.identity_source === "bodyparts3d-4.0"
-            ? "BodyParts3D 4.0 (FMA)"
-            : d.identity_source === "hra-vhf"
-              ? "the Human Reference Atlas (Visible Human Female)"
-              : d.identity_source === "bodyparts3d-4.0-isa"
-                ? "BodyParts3D 4.0 (IS-A set, FMA)"
-                : d.identity_source === "spl-atlas"
-                  ? "the SPL Head and Neck / Inner Ear atlases (Brigham and Women's Hospital), registered to the BodyParts3D skull"
-                  : d.identity_source === "medverse-derived"
-                    ? "a schematic surface MEDVERSE derived from this body's brain (no open dataset segments the cranial meninges); it shows where the layer lies, not its exact shape"
-                    : d.identity_source === "z-anatomy"
-                      ? "Z-Anatomy (CC BY-SA 4.0), registered to the BodyParts3D skull; on the female body these meshes are fitted from a male-derived model"
-                      : d.identity_source}
-          .
+          {t("explorer.structure.noContent", {
+            source: tk(`explorer.structure.sources.${d.identity_source}`).replace(/^explorer\.structure\.sources\./, ""),
+          })}
         </p>
-        <p className="text-xs">Content is added through the expert-reviewed authoring workflow.</p>
+        <p className="text-xs">{t("explorer.structure.workflow")}</p>
       </div>
     );
   }
@@ -121,11 +84,11 @@ function Overview({ d }: { d: StructureDetail }) {
       {d.content.map((c) => (
         <section key={c.section} className="grid gap-1.5">
           <div className="flex flex-wrap items-center gap-1.5">
-            <h4 className="text-sm font-semibold">{SECTION_LABELS[c.section] ?? c.section}</h4>
+            <h4 className="text-sm font-semibold">{tk(`explorer.structure.sections.${c.section}`).replace(/^explorer\.structure\.sections\./, "")}</h4>
             <VerificationBadge status={c.verification_status} />
             {c.audience !== useWorkspace.getState().audience && (
               <Badge variant="outline" className="text-[10px] text-muted-foreground">
-                shown at {c.audience} level
+                {t("explorer.structure.shownAtLevel", { level: t(`explorer.structure.audiences.${c.audience}`) })}
               </Badge>
             )}
           </div>
@@ -147,13 +110,14 @@ function Overview({ d }: { d: StructureDetail }) {
 function OtherBodyNotice() {
   const bodyModel = useWorkspace((s) => s.bodyModel);
   const other = bodyModel === "male" ? "female" : "male";
+  const { t } = useT();
   return (
     <div className="flex flex-wrap items-center gap-2 rounded-md border border-dashed p-2 text-xs text-muted-foreground">
       <span className="flex-1">
-        Not present in the {bodyModel} body model; it is modelled in the {other} body.
+        {bodyModel === "male" ? t("explorer.structure.notInMale") : t("explorer.structure.notInFemale")}
       </span>
       <Button size="xs" variant="secondary" onClick={() => useWorkspace.getState().setBodyModel(other)}>
-        Show in the {other} body
+        {other === "male" ? t("explorer.structure.showInMale") : t("explorer.structure.showInFemale")}
       </Button>
     </div>
   );
@@ -173,16 +137,17 @@ export function StructurePanel({
   const multi = useWorkspace((s) => s.multiSelection);
   const spotlight = useWorkspace((s) => s.spotlight);
   const q = useStructure(structureId, audience);
+  const { t } = useT();
 
   if (!structureId) {
     return (
       <div className="grid gap-3 p-4 text-sm text-muted-foreground">
         <MousePointerClick className="size-6 text-primary" />
-        <p className="font-medium text-foreground">No structure selected</p>
-        <p>Click a structure in the 3D view, or use search or the hierarchy.</p>
+        <p className="font-medium text-foreground">{t("explorer.structure.noneSelected")}</p>
+        <p>{t("explorer.structure.noneSelectedHint")}</p>
         <ul className="list-inside list-disc text-xs">
-          <li>Shift/Ctrl-click to add structures to a comparison selection</li>
-          <li>Drag to rotate · right-drag to pan · scroll to zoom</li>
+          <li>{t("explorer.structure.tipCompare")}</li>
+          <li>{t("explorer.structure.tipNavigate")}</li>
         </ul>
       </div>
     );
@@ -197,7 +162,7 @@ export function StructurePanel({
     );
   }
   if (q.isError || !q.data) {
-    return <p className="p-4 text-sm text-destructive">Could not load this structure.</p>;
+    return <p className="p-4 text-sm text-destructive">{t("explorer.structure.loadError")}</p>;
   }
   const d = q.data;
   const ws = useWorkspace.getState();
@@ -224,27 +189,27 @@ export function StructurePanel({
           </Badge>
           {d.system_name && <Badge variant="outline" className="text-[10px]">{d.system_name}</Badge>}
           {d.laterality !== "unspecified" && (
-            <Badge variant="outline" className="text-[10px] capitalize">{d.laterality}</Badge>
+            <Badge variant="outline" className="text-[10px]">{t(`explorer.structure.laterality.${d.laterality}`)}</Badge>
           )}
           <VerificationBadge status={d.verification_status} />
         </div>
         {!meshIds.length && d.mesh_ids.length > 0 && <OtherBodyNotice />}
         {meshIds.some((m) => m.startsWith("ZAF-") || m.startsWith("FIT-")) && (
           <p className="rounded-md border border-dashed p-2 text-[11px] text-muted-foreground">
-            3D model on this body:{" "}
-            {meshIds.some((m) => m.startsWith("ZAF-")) ? "Z-Anatomy (CC BY-SA 4.0)" : "BodyParts3D (CC BY 4.0)"}, made
-            from a male body and fitted to this female head. Its shape is an approximation, not female anatomy.
+            {t("explorer.structure.fitted", {
+              source: meshIds.some((m) => m.startsWith("ZAF-")) ? "Z-Anatomy (CC BY-SA 4.0)" : "BodyParts3D (CC BY 4.0)",
+            })}
           </p>
         )}
         {meshIds.some((m) => m.startsWith("ZAM-")) && (
-          <p className="text-[11px] text-muted-foreground">3D model: Z-Anatomy (CC BY-SA 4.0), registered to this body.</p>
+          <p className="text-[11px] text-muted-foreground">{t("explorer.structure.zAnatomy")}</p>
         )}
         <div className="flex flex-wrap gap-1.5">
           <Button size="sm" variant="secondary" disabled={!meshIds.length} onClick={() => ws.requestFocus(meshIds)}>
-            <Crosshair /> Focus
+            <Crosshair /> {t("explorer.structure.focus")}
           </Button>
           <Button size="sm" variant="secondary" disabled={!meshIds.length} onClick={() => ws.isolateMeshes(meshIds)}>
-            <Focus /> Isolate
+            <Focus /> {t("explorer.structure.isolate")}
           </Button>
           <Button
             size="sm"
@@ -252,34 +217,34 @@ export function StructurePanel({
             aria-pressed={spotlight}
             disabled={!meshIds.length}
             onClick={() => ws.setSpotlight(!spotlight)}
-            title="Fade everything except this structure"
+            title={t("explorer.structure.spotlightTitle")}
           >
-            <Lightbulb /> Spotlight
+            <Lightbulb /> {t("explorer.structure.spotlight")}
           </Button>
           <Button size="sm" variant="secondary" disabled={!meshIds.length} onClick={() => ws.hideMeshes(meshIds)}>
-            <EyeOff /> Hide
+            <EyeOff /> {t("explorer.structure.hide")}
           </Button>
         </div>
         {!d.has_geometry && (
-          <p className="text-xs text-muted-foreground">No 3D mesh exists for this structure in the current asset set.</p>
+          <p className="text-xs text-muted-foreground">{t("explorer.structure.noMesh")}</p>
         )}
         {multi.length > 0 && (
           <p className="text-xs text-muted-foreground">
-            +{multi.length} more in comparison selection (purple).
+            {t("explorer.structure.moreInComparison", { count: multi.length })}
           </p>
         )}
       </header>
 
       <label className="flex items-center justify-between gap-2 text-xs text-muted-foreground">
-        Content level
+        {t("explorer.structure.contentLevel")}
         <select
           value={audience}
           onChange={(e) => setAudience(e.target.value as AudienceLevel)}
           className="h-7 rounded-md border border-input bg-input/30 px-1.5 text-xs text-foreground"
         >
-          {AUDIENCES.map(([v, l]) => (
+          {AUDIENCES.map((v) => (
             <option key={v} value={v} className="bg-popover">
-              {l}
+              {t(`explorer.structure.audiences.${v}`)}
             </option>
           ))}
         </select>
@@ -287,12 +252,12 @@ export function StructurePanel({
 
       <Tabs key={d.id} defaultValue={d.simulations.length ? "function" : "bodymap"}>
         <TabsList className="h-auto w-full flex-wrap">
-          <TabsTrigger value="function">Function</TabsTrigger>
-          <TabsTrigger value="bodymap">Body map</TabsTrigger>
-          <TabsTrigger value="overview">Anatomy</TabsTrigger>
-          <TabsTrigger value="relations">Relations</TabsTrigger>
-          <TabsTrigger value="clinical">Clinical</TabsTrigger>
-          <TabsTrigger value="sources">Sources</TabsTrigger>
+          <TabsTrigger value="function">{t("explorer.structure.tabs.function")}</TabsTrigger>
+          <TabsTrigger value="bodymap">{t("explorer.structure.tabs.bodymap")}</TabsTrigger>
+          <TabsTrigger value="overview">{t("explorer.structure.tabs.anatomy")}</TabsTrigger>
+          <TabsTrigger value="relations">{t("explorer.structure.tabs.relations")}</TabsTrigger>
+          <TabsTrigger value="clinical">{t("explorer.structure.tabs.clinical")}</TabsTrigger>
+          <TabsTrigger value="sources">{t("explorer.structure.tabs.sources")}</TabsTrigger>
         </TabsList>
 
         <TabsContent value="function" className="pt-3">
@@ -310,35 +275,35 @@ export function StructurePanel({
         <TabsContent value="relations" className="grid gap-4 pt-3">
           {d.parents.length > 0 && (
             <section className="grid gap-1">
-              <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Part of</h4>
+              <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("explorer.structure.partOf")}</h4>
               <div className="flex flex-wrap">{d.parents.map((p) => <StructureLink key={p.id} s={p} onSelect={onSelect} />)}</div>
             </section>
           )}
           {d.children.length > 0 && (
             <section className="grid gap-1">
               <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-                Parts ({d.children.length})
+                {t("explorer.structure.parts", { count: d.children.length })}
               </h4>
               <div className="flex max-h-48 flex-wrap overflow-auto">
                 {d.children.map((c) => <StructureLink key={c.id} s={c} onSelect={onSelect} />)}
               </div>
             </section>
           )}
-          <RelationGroup title="Anatomical relationships" items={structural} onSelect={onSelect} />
-          <RelationGroup title="Functional associations" items={functional} onSelect={onSelect} />
+          <RelationGroup title={t("explorer.structure.structural")} items={structural} onSelect={onSelect} />
+          <RelationGroup title={t("explorer.structure.functional")} items={functional} onSelect={onSelect} />
           {!d.parents.length && !d.children.length && !d.relations.length && (
-            <p className="text-sm text-muted-foreground">No relationships recorded yet.</p>
+            <p className="text-sm text-muted-foreground">{t("explorer.structure.noRelations")}</p>
           )}
           {d.relations.some((r) => r.verification_status === "draft") && (
             <p className="text-[11px] text-muted-foreground">
-              Curated (non-hierarchical) relationships are drafts pending expert review.
+              {t("explorer.structure.relationsDraft")}
             </p>
           )}
         </TabsContent>
 
         <TabsContent value="clinical" className="grid gap-4 pt-3">
           <section className="grid gap-2">
-            <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Pathology</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("explorer.structure.pathology")}</h4>
             {d.conditions.length ? (
               d.conditions.map((c) => (
                 <Link
@@ -352,11 +317,11 @@ export function StructurePanel({
                 </Link>
               ))
             ) : (
-              <p className="text-sm text-muted-foreground">No pathology models linked yet.</p>
+              <p className="text-sm text-muted-foreground">{t("explorer.structure.noPathology")}</p>
             )}
           </section>
           <section className="grid gap-2">
-            <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">Simulations</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("explorer.structure.simulations")}</h4>
             {d.simulations.length ? (
               d.simulations.map((s) => (
                 <Link
@@ -370,7 +335,7 @@ export function StructurePanel({
                 </Link>
               ))
             ) : (
-              <p className="text-sm text-muted-foreground">No compatible simulations yet.</p>
+              <p className="text-sm text-muted-foreground">{t("explorer.structure.noSimulations")}</p>
             )}
           </section>
         </TabsContent>
@@ -378,7 +343,7 @@ export function StructurePanel({
         <TabsContent value="sources" className="grid gap-4 pt-3">
           <section className="grid gap-1 text-xs text-muted-foreground">
             <p>
-              <span className="text-foreground">Identity source:</span> {d.identity_source}
+              <span className="text-foreground">{t("explorer.structure.identitySource")}</span> {d.identity_source}
             </p>
             {d.xrefs.map((x) => (
               <p key={x.source}>
@@ -388,16 +353,16 @@ export function StructurePanel({
             ))}
             {d.synonyms.length > 0 && (
               <p>
-                <span className="text-foreground">Synonyms:</span>{" "}
+                <span className="text-foreground">{t("explorer.structure.synonyms")}</span>{" "}
                 {d.synonyms.map((s) => `${s.synonym} (${s.kind})`).join("; ")}
               </p>
             )}
             <p>
-              <span className="text-foreground">Meshes:</span> {d.mesh_ids.length}
+              <span className="text-foreground">{t("explorer.structure.meshes")}</span> {d.mesh_ids.length}
             </p>
           </section>
           <section className="grid gap-2">
-            <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">References</h4>
+            <h4 className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("explorer.structure.references")}</h4>
             <ReferenceList references={d.references} />
           </section>
         </TabsContent>
