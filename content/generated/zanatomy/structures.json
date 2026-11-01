@@ -1,0 +1,3770 @@
+[
+ {
+  "id": "FMA:10420",
+  "name": "parotid duct",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13110",
+  "name": "external jugular vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13111",
+  "name": "right external jugular vein",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13112",
+  "name": "left external jugular vein",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13318",
+  "name": "anterior jugular vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13319",
+  "name": "right anterior jugular vein",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13320",
+  "name": "left anterior jugular vein",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13341",
+  "name": "sternohyoid",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13342",
+  "name": "omohyoid",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13343",
+  "name": "sternothyroid",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13344",
+  "name": "thyrohyoid",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13346",
+  "name": "right sternohyoid",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13347",
+  "name": "left sternohyoid",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13348",
+  "name": "right omohyoid",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13349",
+  "name": "left omohyoid",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13350",
+  "name": "right sternothyroid",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13351",
+  "name": "left sternothyroid",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13352",
+  "name": "right thyrohyoid",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13353",
+  "name": "left thyrohyoid",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13370",
+  "name": "longus colli",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13371",
+  "name": "right longus colli",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13372",
+  "name": "left longus colli",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13387",
+  "name": "scalenus posterior",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13388",
+  "name": "right scalenus posterior",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13389",
+  "name": "left scalenus posterior",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:13427",
+  "name": "ligamentum nuchae",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:14192",
+  "name": "supraclavicular lymph node",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:14326",
+  "name": "lingual vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:223415",
+  "name": "right oculomotor nuclear complex",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:223416",
+  "name": "left oculomotor nuclear complex",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:224422",
+  "name": "set of right occipital lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:224424",
+  "name": "set of left occipital lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:224426",
+  "name": "set of right mastoid lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:224428",
+  "name": "set of left mastoid lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:224430",
+  "name": "set of right superficial parotid lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:224432",
+  "name": "set of left superficial parotid lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:224434",
+  "name": "set of right deep parotid lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:224436",
+  "name": "set of left deep parotid lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:224442",
+  "name": "set of right infra-auricular lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:224444",
+  "name": "set of left infra-auricular lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:224450",
+  "name": "set of right submandibular lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:224452",
+  "name": "set of left submandibular lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:224474",
+  "name": "set of right retropharyngeal lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:224476",
+  "name": "set of left retropharyngeal lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:224478",
+  "name": "set of right superficial lateral cervical lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:224480",
+  "name": "set of left superficial lateral cervical lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:224494",
+  "name": "set of right inferior deep lateral cervical lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:224496",
+  "name": "set of left inferior deep lateral cervical lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:22681",
+  "name": "splenius cervicis",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:22704",
+  "name": "iliocostalis cervicis",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:22711",
+  "name": "longissimus cervicis",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:22726",
+  "name": "right splenius cervicis",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:22727",
+  "name": "left splenius cervicis",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:22744",
+  "name": "right iliocostalis cervicis",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:22757",
+  "name": "right longissimus cervicis",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:22758",
+  "name": "left longissimus cervicis",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:22829",
+  "name": "semispinalis cervicis",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:22874",
+  "name": "right semispinalis cervicis",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:22875",
+  "name": "left semispinalis cervicis",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:228925",
+  "name": "set of anterior auricular lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:231507",
+  "name": "set of right anterior auricular lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:231509",
+  "name": "set of left anterior auricular lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:232196",
+  "name": "set of buccinator lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:232198",
+  "name": "set of right buccinator lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:232200",
+  "name": "set of left buccinator lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:232270",
+  "name": "set of right pretracheal lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:232272",
+  "name": "set of left pretracheal lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:232509",
+  "name": "set of jugulodigastric lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:232511",
+  "name": "set of right jugulodigastric lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:232513",
+  "name": "set of left jugulodigastric lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:232654",
+  "name": "right nasolabial lymph node",
+  "system_id": "lymphatic",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:232656",
+  "name": "left nasolabial lymph node",
+  "system_id": "lymphatic",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:232664",
+  "name": "right mandibular lymph node",
+  "system_id": "lymphatic",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:232668",
+  "name": "left mandibular lymph node",
+  "system_id": "lymphatic",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:232719",
+  "name": "left supraclavicular lymph node",
+  "system_id": "lymphatic",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:232721",
+  "name": "right supraclavicular lymph node",
+  "system_id": "lymphatic",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:256691",
+  "name": "nucleus of solitary tract",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:322153",
+  "name": "suspensory ligament of eyeball",
+  "system_id": "special_senses",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:32557",
+  "name": "descending part of trapezius",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:37025",
+  "name": "suprascapular nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:3945",
+  "name": "right external carotid artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:4060",
+  "name": "left external carotid artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46302",
+  "name": "anterior belly of digastric",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46303",
+  "name": "posterior belly of digastric",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46609",
+  "name": "straight part of cricothyroid",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46610",
+  "name": "oblique part of cricothyroid",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46753",
+  "name": "temporoparietalis",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46757",
+  "name": "frontalis",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46758",
+  "name": "occipitalis",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46759",
+  "name": "right frontalis",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46760",
+  "name": "left frontalis",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46761",
+  "name": "right occipitalis",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46762",
+  "name": "left occipitalis",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46763",
+  "name": "right temporoparietalis",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46764",
+  "name": "left temporoparietalis",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46768",
+  "name": "aponeurosis of epicranius",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46769",
+  "name": "procerus",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46770",
+  "name": "nasalis",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46777",
+  "name": "depressor septi nasi",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46781",
+  "name": "orbital part of orbicularis oculi",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46784",
+  "name": "palpebral part of orbicularis oculi",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46787",
+  "name": "olfactory nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46794",
+  "name": "corrugator supercilii",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46796",
+  "name": "right corrugator supercilii",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46797",
+  "name": "left corrugator supercilii",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46802",
+  "name": "levator labii superioris alaeque nasi",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46803",
+  "name": "right levator labii superioris alaeque nasi",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46804",
+  "name": "left levator labii superioris alaeque nasi",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46805",
+  "name": "levator labii superioris",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46806",
+  "name": "right levator labii superioris",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46807",
+  "name": "left levator labii superioris",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46811",
+  "name": "zygomaticus minor",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46812",
+  "name": "right zygomaticus major",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46813",
+  "name": "left zygomaticus major",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46814",
+  "name": "right zygomaticus minor",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46815",
+  "name": "left zygomaticus minor",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46816",
+  "name": "depressor labii inferioris",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46817",
+  "name": "right depressor labii inferioris",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46818",
+  "name": "left depressor labii inferioris",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46822",
+  "name": "levator anguli oris",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46823",
+  "name": "right levator anguli oris",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46824",
+  "name": "left levator anguli oris",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46825",
+  "name": "mentalis",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46826",
+  "name": "right mentalis",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46827",
+  "name": "left mentalis",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46828",
+  "name": "depressor anguli oris",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46829",
+  "name": "right depressor anguli oris",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46830",
+  "name": "left depressor anguli oris",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46834",
+  "name": "buccinator",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46835",
+  "name": "right buccinator",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46836",
+  "name": "left buccinator",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46838",
+  "name": "risorius",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46839",
+  "name": "right risorius",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46840",
+  "name": "left risorius",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:46841",
+  "name": "orbicularis oris",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:4724",
+  "name": "internal jugular vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:4727",
+  "name": "vertebral vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:4756",
+  "name": "right vertebral vein",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:4762",
+  "name": "left internal jugular vein",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:4763",
+  "name": "left subclavian vein",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:4764",
+  "name": "left vertebral vein",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49000",
+  "name": "superficial part of masseter",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49003",
+  "name": "deep part of masseter",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49007",
+  "name": "right temporalis",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49008",
+  "name": "left temporalis",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49011",
+  "name": "medial pterygoid",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49012",
+  "name": "right medial pterygoid",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49013",
+  "name": "left medial pterygoid",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49020",
+  "name": "upper head of lateral pterygoid",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49021",
+  "name": "lower head of lateral pterygoid",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49065",
+  "name": "trochlea of superior oblique",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49497",
+  "name": "ascending pharyngeal artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49498",
+  "name": "right ascending pharyngeal artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49499",
+  "name": "left ascending pharyngeal artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49549",
+  "name": "facial artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49550",
+  "name": "right facial artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49551",
+  "name": "left facial artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49561",
+  "name": "submental artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49562",
+  "name": "right submental artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49563",
+  "name": "left submental artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49567",
+  "name": "inferior labial artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49568",
+  "name": "right inferior labial artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49569",
+  "name": "left inferior labial artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49570",
+  "name": "superior labial artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49571",
+  "name": "right superior labial artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49572",
+  "name": "left superior labial artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49583",
+  "name": "angular artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49584",
+  "name": "right angular artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49585",
+  "name": "left angular artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49586",
+  "name": "occipital artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49587",
+  "name": "right occipital artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49588",
+  "name": "left occipital artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49650",
+  "name": "superficial temporal artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49651",
+  "name": "right superficial temporal artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49652",
+  "name": "left superficial temporal artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49657",
+  "name": "transverse facial artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49658",
+  "name": "right transverse facial artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49659",
+  "name": "left transverse facial artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49669",
+  "name": "frontal branch of superficial temporal artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49675",
+  "name": "maxillary artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49676",
+  "name": "right maxillary artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49677",
+  "name": "left maxillary artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49695",
+  "name": "inferior alveolar artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49696",
+  "name": "right inferior alveolar artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49697",
+  "name": "left inferior alveolar artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49711",
+  "name": "middle meningeal artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49712",
+  "name": "right middle meningeal artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49713",
+  "name": "left middle meningeal artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49715",
+  "name": "accessory branch of middle meningeal artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49745",
+  "name": "anterior deep temporal artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49746",
+  "name": "posterior deep temporal artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49747",
+  "name": "right anterior deep temporal artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49748",
+  "name": "left anterior deep temporal artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49749",
+  "name": "right posterior deep temporal artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49750",
+  "name": "left posterior deep temporal artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49754",
+  "name": "buccal artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49755",
+  "name": "right buccal artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49756",
+  "name": "left buccal artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49757",
+  "name": "posterior superior alveolar artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49758",
+  "name": "right posterior superior alveolar artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49759",
+  "name": "left posterior superior alveolar artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49767",
+  "name": "infra-orbital artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49768",
+  "name": "right infra-orbital artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49769",
+  "name": "left infra-orbital artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49791",
+  "name": "descending palatine artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49792",
+  "name": "right descending palatine artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49793",
+  "name": "left descending palatine artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49795",
+  "name": "greater palatine artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49798",
+  "name": "right greater palatine artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49799",
+  "name": "left greater palatine artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49808",
+  "name": "posterior lateral nasal artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49810",
+  "name": "right posterior lateral nasal artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49811",
+  "name": "left posterior lateral nasal artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49879",
+  "name": "central retinal artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49927",
+  "name": "lacrimal artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49928",
+  "name": "right lacrimal artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49929",
+  "name": "left lacrimal artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49973",
+  "name": "supra-orbital artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49974",
+  "name": "right supra-orbital artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49975",
+  "name": "left supra-orbital artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49986",
+  "name": "anterior ethmoidal artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49987",
+  "name": "right anterior ethmoidal artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49988",
+  "name": "left anterior ethmoidal artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49989",
+  "name": "posterior ethmoidal artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49990",
+  "name": "right posterior ethmoidal artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:49991",
+  "name": "left posterior ethmoidal artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50025",
+  "name": "supratrochlear artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50026",
+  "name": "right supratrochlear artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50027",
+  "name": "left supratrochlear artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50079",
+  "name": "middle cerebral artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50083",
+  "name": "left middle cerebral artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50545",
+  "name": "right anterior inferior cerebellar artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50546",
+  "name": "left anterior inferior cerebellar artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50763",
+  "name": "transverse sinus",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50764",
+  "name": "right transverse sinus",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50765",
+  "name": "left transverse sinus",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50767",
+  "name": "superior sagittal sinus",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50768",
+  "name": "inferior sagittal sinus",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50769",
+  "name": "straight sinus",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50770",
+  "name": "inferior petrosal sinus",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50771",
+  "name": "superior petrosal sinus",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50772",
+  "name": "cavernous sinus",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50774",
+  "name": "anterior intercavernous sinus",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50775",
+  "name": "posterior intercavernous sinus",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50781",
+  "name": "occipital sinus",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50782",
+  "name": "sigmoid sinus",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50802",
+  "name": "occipital vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50851",
+  "name": "posterior auricular vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50852",
+  "name": "right posterior auricular vein",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50853",
+  "name": "left posterior auricular vein",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50864",
+  "name": "oculomotor nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50866",
+  "name": "trigeminal nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50867",
+  "name": "abducens nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50869",
+  "name": "vestibulocochlear nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50870",
+  "name": "glossopharyngeal nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50871",
+  "name": "hypoglossal nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50874",
+  "name": "facial vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50876",
+  "name": "right facial vein",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50877",
+  "name": "left facial vein",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50879",
+  "name": "right oculomotor nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50880",
+  "name": "left oculomotor nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50884",
+  "name": "right trigeminal nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50885",
+  "name": "left trigeminal nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50886",
+  "name": "right abducens nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50887",
+  "name": "left abducens nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50888",
+  "name": "right facial nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50889",
+  "name": "left facial nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50890",
+  "name": "right vestibulocochlear nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50891",
+  "name": "left vestibulocochlear nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50892",
+  "name": "right glossopharyngeal nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50893",
+  "name": "angular vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50894",
+  "name": "left glossopharyngeal nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50895",
+  "name": "right angular vein",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50896",
+  "name": "left angular vein",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50897",
+  "name": "right spinal accessory nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50899",
+  "name": "left spinal accessory nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50901",
+  "name": "right hypoglossal nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50903",
+  "name": "left hypoglossal nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50925",
+  "name": "submental vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50926",
+  "name": "right submental vein",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50927",
+  "name": "left submental vein",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50928",
+  "name": "retromandibular vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50929",
+  "name": "right retromandibular vein",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:50930",
+  "name": "left retromandibular vein",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:51246",
+  "name": "superior ophthalmic vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:51247",
+  "name": "inferior ophthalmic vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:51289",
+  "name": "right superior petrosal sinus",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:51290",
+  "name": "left superior petrosal sinus",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:51291",
+  "name": "right inferior petrosal sinus",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:51292",
+  "name": "left inferior petrosal sinus",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:51293",
+  "name": "right sigmoid sinus",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:51294",
+  "name": "left sigmoid sinus",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:51402",
+  "name": "right cavernous sinus",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:51403",
+  "name": "left cavernous sinus",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:51489",
+  "name": "right occipital vein",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:51490",
+  "name": "left occipital vein",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:52538",
+  "name": "superior labial vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:52539",
+  "name": "right superior labial vein",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:52540",
+  "name": "left superior labial vein",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:52565",
+  "name": "right lingual vein",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:52566",
+  "name": "left lingual vein",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:52592",
+  "name": "right olfactory nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:52593",
+  "name": "left olfactory nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:52611",
+  "name": "sensory root of trigeminal nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:52612",
+  "name": "motor root of trigeminal nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:52724",
+  "name": "maxillary nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:52725",
+  "name": "right maxillary nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:52726",
+  "name": "left maxillary nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:52728",
+  "name": "middle meningeal nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:52729",
+  "name": "right middle meningeal nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:52730",
+  "name": "left middle meningeal nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:53059",
+  "name": "anterior trunk of mandibular nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:53061",
+  "name": "posterior trunk of mandibular nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:53066",
+  "name": "buccal nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:53067",
+  "name": "right buccal nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:53068",
+  "name": "left buccal nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:53218",
+  "name": "lingual nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:53219",
+  "name": "right lingual nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:53220",
+  "name": "left lingual nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:53228",
+  "name": "chorda tympani",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:53229",
+  "name": "right chorda tympani",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:53230",
+  "name": "left chorda tympani",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:53243",
+  "name": "inferior alveolar nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:53244",
+  "name": "right inferior alveolar nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:53245",
+  "name": "left inferior alveolar nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:53247",
+  "name": "mylohyoid nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:53248",
+  "name": "right mylohyoid nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:53249",
+  "name": "left mylohyoid nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:53250",
+  "name": "mental nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:53251",
+  "name": "right mental nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:53252",
+  "name": "left mental nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54504",
+  "name": "abducens nucleus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54505",
+  "name": "hypoglossal nerve nucleus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54506",
+  "name": "right abducens nucleus",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54507",
+  "name": "left abducens nucleus",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54508",
+  "name": "right hypoglossal nerve nucleus",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54509",
+  "name": "left hypoglossal nerve nucleus",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54510",
+  "name": "oculomotor nuclear complex",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54518",
+  "name": "trochlear nucleus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54519",
+  "name": "right trochlear nucleus",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54520",
+  "name": "left trochlear nucleus",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54582",
+  "name": "motor nucleus of facial nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54585",
+  "name": "dorsal nucleus of vagus nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54588",
+  "name": "nucleus ambiguus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54589",
+  "name": "right nucleus ambiguus",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54590",
+  "name": "left nucleus ambiguus",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54621",
+  "name": "anterior cochlear nucleus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54622",
+  "name": "right anterior cochlear nucleus",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54623",
+  "name": "left anterior cochlear nucleus",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54624",
+  "name": "posterior cochlear nucleus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54625",
+  "name": "right posterior cochlear nucleus",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54626",
+  "name": "left posterior cochlear nucleus",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54683",
+  "name": "sphenoidal sinus",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54878",
+  "name": "nasopharynx",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54879",
+  "name": "oropharynx",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:54880",
+  "name": "laryngopharynx",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55138",
+  "name": "median thyrohyoid ligament",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55139",
+  "name": "lateral thyrohyoid ligament",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55140",
+  "name": "right lateral thyrohyoid ligament",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55141",
+  "name": "left lateral thyrohyoid ligament",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55237",
+  "name": "median cricothyroid ligament",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55260",
+  "name": "cricopharyngeal ligament",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55377",
+  "name": "right cricopharyngeal ligament",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55378",
+  "name": "left cricopharyngeal ligament",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55558",
+  "name": "superior parathyroid gland",
+  "system_id": "endocrine",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55559",
+  "name": "inferior parathyroid gland",
+  "system_id": "endocrine",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55560",
+  "name": "right superior parathyroid gland",
+  "system_id": "endocrine",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55561",
+  "name": "left superior parathyroid gland",
+  "system_id": "endocrine",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55562",
+  "name": "right inferior parathyroid gland",
+  "system_id": "endocrine",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55563",
+  "name": "left inferior parathyroid gland",
+  "system_id": "endocrine",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55606",
+  "name": "right nasalis",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55607",
+  "name": "left nasalis",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55608",
+  "name": "right depressor septi nasi",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55609",
+  "name": "left depressor septi nasi",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55610",
+  "name": "right procerus",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:55611",
+  "name": "left procerus",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:56427",
+  "name": "right tympanic membrane",
+  "system_id": "special_senses",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:56428",
+  "name": "left tympanic membrane",
+  "system_id": "special_senses",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:57050",
+  "name": "articular capsule of temporomandibular joint",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:57059",
+  "name": "articular disk of temporomandibular joint",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:57071",
+  "name": "lateral ligament of temporomandibular joint",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:57083",
+  "name": "stylomandibular ligament",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:57084",
+  "name": "right stylomandibular ligament",
+  "system_id": "skeletal",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:57086",
+  "name": "left stylomandibular ligament",
+  "system_id": "skeletal",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:5731",
+  "name": "vagus nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:57417",
+  "name": "frontal sinus",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:57468",
+  "name": "right anterior ethmoidal cell",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:57469",
+  "name": "left anterior ethmoidal cell",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:57470",
+  "name": "right middle ethmoidal cell",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:57471",
+  "name": "left middle ethmoidal cell",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:57472",
+  "name": "right posterior ethmoidal cell",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:57473",
+  "name": "left posterior ethmoidal cell",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:59087",
+  "name": "tarsal plate of upper eyelid",
+  "system_id": "special_senses",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:59088",
+  "name": "tarsal plate of lower eyelid",
+  "system_id": "special_senses",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:59684",
+  "name": "mucosa of nose",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:59823",
+  "name": "accessory parotid gland",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:59825",
+  "name": "right accessory parotid gland",
+  "system_id": "digestive",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:59826",
+  "name": "left accessory parotid gland",
+  "system_id": "digestive",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:59866",
+  "name": "right parotid duct",
+  "system_id": "digestive",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:59867",
+  "name": "left parotid duct",
+  "system_id": "digestive",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:60054",
+  "name": "right pharyngotympanic tube",
+  "system_id": "special_senses",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:60055",
+  "name": "left pharyngotympanic tube",
+  "system_id": "special_senses",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:60201",
+  "name": "cochlea",
+  "system_id": "special_senses",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:60202",
+  "name": "right cochlea",
+  "system_id": "special_senses",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:60203",
+  "name": "left cochlea",
+  "system_id": "special_senses",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:61225",
+  "name": "nasolabial lymph node",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:61227",
+  "name": "mandibular lymph node",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:6219",
+  "name": "right vagus nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:6220",
+  "name": "left vagus nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:6258",
+  "name": "sympathetic trunk",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:6259",
+  "name": "right sympathetic trunk",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:6260",
+  "name": "left sympathetic trunk",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:65216",
+  "name": "superior trunk of brachial nerve plexus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:65217",
+  "name": "inferior trunk of brachial nerve plexus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:65218",
+  "name": "middle trunk of brachial nerve plexus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:65279",
+  "name": "dorsal scapular nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:65280",
+  "name": "subclavian nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:65283",
+  "name": "right dorsal scapular nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:65284",
+  "name": "left dorsal scapular nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:65285",
+  "name": "right subclavian nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:65286",
+  "name": "left subclavian nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:66083",
+  "name": "right suprascapular nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:66084",
+  "name": "left suprascapular nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:6720",
+  "name": "spinal accessory nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:70848",
+  "name": "set of inferior labial veins",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:70849",
+  "name": "set of superficial temporal veins",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:70850",
+  "name": "set of maxillary veins",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:71237",
+  "name": "spinal dura mater",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:71711",
+  "name": "set of occipital lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:71712",
+  "name": "set of mastoid lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:71713",
+  "name": "set of superficial parotid lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:71714",
+  "name": "set of deep parotid lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:71716",
+  "name": "set of infra-auricular lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:71720",
+  "name": "set of submental lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:71721",
+  "name": "set of submandibular lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:71724",
+  "name": "set of superficial anterior cervical lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:71729",
+  "name": "set of pretracheal lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:71730",
+  "name": "set of paratracheal lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:71731",
+  "name": "set of retropharyngeal lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:71733",
+  "name": "set of superficial lateral cervical lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:71735",
+  "name": "set of inferior deep lateral cervical lymph nodes",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:72239",
+  "name": "vestibular nuclear complex",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:72482",
+  "name": "superior salivatory nucleus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:72495",
+  "name": "superior cerebellar peduncle",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:72601",
+  "name": "inferior salivatory nucleus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:73491",
+  "name": "right red nucleus",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:73492",
+  "name": "left red nucleus",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:73594",
+  "name": "right superior salivatory nucleus",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:73595",
+  "name": "left superior salivatory nucleus",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:73614",
+  "name": "right superior cerebellar peduncle",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:73615",
+  "name": "left superior cerebellar peduncle",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:73710",
+  "name": "right vestibular nuclear complex",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:73711",
+  "name": "left vestibular nuclear complex",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:73801",
+  "name": "right inferior salivatory nucleus",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:73802",
+  "name": "left inferior salivatory nucleus",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:74048",
+  "name": "right stapes",
+  "system_id": "special_senses",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:74049",
+  "name": "left stapes",
+  "system_id": "special_senses",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:74050",
+  "name": "right incus",
+  "system_id": "special_senses",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:74051",
+  "name": "left incus",
+  "system_id": "special_senses",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:74052",
+  "name": "right malleus",
+  "system_id": "special_senses",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:74053",
+  "name": "left malleus",
+  "system_id": "special_senses",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:74627",
+  "name": "adenohypophysis",
+  "system_id": "endocrine",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:74628",
+  "name": "neurohypophysis",
+  "system_id": "endocrine",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:76861",
+  "name": "masseteric fascia",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:76864",
+  "name": "superficial layer of temporal fascia",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:83965",
+  "name": "nucleus of accessory nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:83966",
+  "name": "tentorium cerebelli",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:83967",
+  "name": "falx cerebri",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:85528",
+  "name": "artery of pterygoid canal",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:86266",
+  "name": "submandibular duct",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "z-anatomy"
+ },
+ {
+  "id": "FMA:9705",
+  "name": "pharyngotympanic tube",
+  "system_id": "special_senses",
+  "laterality": "unspecified",
+  "is_compound": true,
+  "identity_source": "z-anatomy"
+ }
+]

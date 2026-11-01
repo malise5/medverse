@@ -1,0 +1,115 @@
+{
+ "source": "Z-Anatomy - The open source atlas of anatomy (z-anatomy.com), CC BY-SA 4.0; derived from BodyParts3D, The Database Center for Life Science, CC BY-SA 2.1 Japan; brain models from Brainder. Meshes registered and modified by MEDVERSE",
+ "male_registration": {
+  "scale": 1.0269,
+  "median_mm": 1.23,
+  "p90_mm": 5.03
+ },
+ "female_fit": {
+  "anchors": {
+   "brain": {
+    "median_mm": 3.95,
+    "p90_mm": 9.39
+   },
+   "left sclera": {
+    "median_mm": 3.68,
+    "p90_mm": 7.02
+   },
+   "right sclera": {
+    "median_mm": 3.65,
+    "p90_mm": 7.28
+   },
+   "upper teeth": {
+    "median_mm": 5.76,
+    "p90_mm": 8.85
+   },
+   "lower teeth": {
+    "median_mm": 3.16,
+    "p90_mm": 7.75
+   },
+   "thyroid cartilage": {
+    "median_mm": 4.09,
+    "p90_mm": 8.8
+   }
+  },
+  "linear_singular_values": [
+   1.1325,
+   1.0868,
+   0.8932
+  ]
+ },
+ "female_neck_fit": {
+  "anchors": {
+   "disc C2-C3": {
+    "median_mm": 2.52,
+    "p90_mm": 3.78
+   },
+   "disc C3-C4": {
+    "median_mm": 2.69,
+    "p90_mm": 4.19
+   },
+   "disc C4-C5": {
+    "median_mm": 3.41,
+    "p90_mm": 5.59
+   },
+   "disc C5-C6": {
+    "median_mm": 5.59,
+    "p90_mm": 8.59
+   },
+   "disc C6-C7": {
+    "median_mm": 2.4,
+    "p90_mm": 6.96
+   },
+   "disc C7-T1": {
+    "median_mm": 3.55,
+    "p90_mm": 7.24
+   },
+   "thyroid cartilage": {
+    "median_mm": 8.56,
+    "p90_mm": 13.52
+   },
+   "cricoid cartilage": {
+    "median_mm": 3.97,
+    "p90_mm": 6.98
+   }
+  },
+  "linear_singular_values": [
+   1.2491,
+   1.0322,
+   0.9159
+  ],
+  "blend": "head fit above, neck fit below the male hyoid (y = 1.511 m), linear over +/- 20 mm"
+ },
+ "selected_entries": 287,
+ "new_structures": 471,
+ "meshes": {
+  "male": 357,
+  "female": 482,
+  "female_fitted_bodyparts3d": 22
+ },
+ "triangles_source": 2611359,
+ "triangles": 939845,
+ "per_bundle": {
+  "fitted-female-fitted-bp3d-muscular": 17,
+  "fitted-female-fitted-bp3d-respiratory": 4,
+  "fitted-female-fitted-bp3d-special_senses": 1,
+  "zanatomy-female-cardiovascular": 144,
+  "zanatomy-female-digestive": 6,
+  "zanatomy-female-endocrine": 5,
+  "zanatomy-female-lymphatic": 36,
+  "zanatomy-female-muscular": 142,
+  "zanatomy-female-nervous": 65,
+  "zanatomy-female-respiratory": 21,
+  "zanatomy-female-skeletal": 39,
+  "zanatomy-female-special_senses": 24,
+  "zanatomy-male-cardiovascular": 108,
+  "zanatomy-male-digestive": 8,
+  "zanatomy-male-endocrine": 6,
+  "zanatomy-male-lymphatic": 36,
+  "zanatomy-male-muscular": 78,
+  "zanatomy-male-nervous": 92,
+  "zanatomy-male-respiratory": 16,
+  "zanatomy-male-skeletal": 9,
+  "zanatomy-male-special_senses": 4
+ }
+}

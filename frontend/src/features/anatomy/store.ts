@@ -1,6 +1,6 @@
 import { create } from "zustand";
 
-import type { AudienceLevel } from "@/lib/api/types";
+import type { AnimationBinding, AudienceLevel, BodyModel } from "@/lib/api/types";
 
 export type ViewPreset =
   | "anterior"
@@ -27,12 +27,69 @@ export interface Hover {
   y: number;
 }
 
+/** A model run being played back on the 3D anatomy ("function" mode). */
+export interface Playback {
+  modelId: string;
+  modelName: string;
+  time: number[];
+  series: Record<string, number[]>;
+  bindings: AnimationBinding[];
+  /** Model time units per real second at speed 1. */
+  rate: number;
+  timeUnit: "s" | "ms";
+  parameters: Record<string, number>;
+  metrics: Record<string, number>;
+  warnings: string[];
+}
+
+/** A direct part of the shown structure, coloured and labelled in 3D. */
+export interface PartView {
+  id: string;
+  name: string;
+  color: string;
+  meshIds: string[];
+}
+
+/** Inferred vessel routes; values are hops from the heart along the route. */
+export interface CirculationView {
+  structureId: string;
+  mode: "whole_circulation" | "organ_route";
+  arteries: Map<string, number>;
+  veins: Map<string, number>;
+  maxArteryHop: number;
+  maxVeinHop: number;
+}
+
 /**
  * View state of the anatomy workspace. Holds identifiers only: anatomical facts come
  * from the API, geometry from asset bundles. Visibility is tracked per mesh because a
  * mesh is the smallest renderable unit; structure-level actions expand to mesh IDs.
  */
+export interface IdentifyQuiz {
+  questionId: string;
+  moduleId: string;
+  stem: string;
+  /** Set once the learner has checked an answer; names stay hidden until then. */
+  answered: boolean;
+}
+
+/** "head" clips the body just below the neck and frames the head (head study mode). */
+export type { Region } from "./engine/regions";
+import type { Region } from "./engine/regions";
+
 export interface WorkspaceState {
+  /** Which body is shown. Structure IDs are shared by both; mesh IDs are not. */
+  bodyModel: BodyModel;
+  region: Region;
+  /** Last head layer preset applied (head study mode); null when edited freely. */
+  headPreset: string | null;
+  /** Biological process running (see features/biolab/processes.ts). */
+  activeProcess: "signalling" | "growth" | "blood" | "pathways" | null;
+  /** Pathway shown by the "pathways" process and the step currently lit. */
+  pathwayId: string | null;
+  pathwayStep: number;
+  processPlaying: boolean;
+  processSpeed: number;
   selectedId: string | null;
   /** Additional structures selected with Shift/Ctrl for comparison. */
   multiSelection: string[];
@@ -52,11 +109,37 @@ export interface WorkspaceState {
   xraySelection: boolean;
   clip: ClipState;
   audience: AudienceLevel;
+  /** Fade everything except the selection (and structures driven by playback). */
+  spotlight: boolean;
+  playback: Playback | null;
+  playing: boolean;
+  speed: number;
+  /** Start function playback automatically when a structure is chosen from search. */
+  autoPlay: boolean;
+  /** Body map: colour/label the shown structure's parts and show its vessel routes. */
+  showParts: boolean;
+  showCirculation: boolean;
+  flowAnimation: boolean;
+  parts: PartView[];
+  circulation: CirculationView | null;
+  /** A whole body system shown in spotlight (chosen from search). */
+  systemFocus: string | null;
+  /** "Find it in 3D" quiz question in progress (from the learning modules). */
+  quiz: IdentifyQuiz | null;
 
   /** Monotonic command channels consumed by the 3D engine. */
   viewCommand: { preset: ViewPreset; nonce: number } | null;
   focusCommand: { meshIds: string[]; nonce: number } | null;
 
+  /** Switch body; keeps the selected structure, clears mesh-level state. */
+  setBodyModel: (model: BodyModel) => void;
+  setRegion: (region: Region) => void;
+  setHeadPreset: (id: string | null) => void;
+  setActiveProcess: (id: WorkspaceState["activeProcess"]) => void;
+  setPathway: (id: string | null) => void;
+  setPathwayStep: (step: number) => void;
+  setProcessPlaying: (on: boolean) => void;
+  setProcessSpeed: (speed: number) => void;
   select: (id: string | null, opts?: { additive?: boolean }) => void;
   setHover: (hover: Hover | null) => void;
   setHighlighted: (meshIds: Iterable<string>) => void;
@@ -70,6 +153,19 @@ export interface WorkspaceState {
   setXraySelection: (on: boolean) => void;
   setClip: (clip: Partial<ClipState>) => void;
   setAudience: (audience: AudienceLevel) => void;
+  setSpotlight: (on: boolean) => void;
+  startPlayback: (playback: Playback) => void;
+  stopPlayback: () => void;
+  setPlaying: (playing: boolean) => void;
+  setSpeed: (speed: number) => void;
+  setAutoPlay: (on: boolean) => void;
+  setShowParts: (on: boolean) => void;
+  setShowCirculation: (on: boolean) => void;
+  setFlowAnimation: (on: boolean) => void;
+  setParts: (parts: PartView[]) => void;
+  setCirculation: (circulation: CirculationView | null) => void;
+  setSystemFocus: (systemId: string | null) => void;
+  setQuiz: (quiz: IdentifyQuiz | null) => void;
   requestView: (preset: ViewPreset) => void;
   requestFocus: (meshIds: string[]) => void;
   reset: () => void;
@@ -78,6 +174,14 @@ export interface WorkspaceState {
 export const DEFAULT_DISSECTION_DEPTH = 10; // skin removed (ghosted), muscles exposed
 
 const initial = () => ({
+  bodyModel: "male" as BodyModel,
+  region: "body" as Region,
+  headPreset: null as string | null,
+  activeProcess: null as WorkspaceState["activeProcess"],
+  pathwayId: null as string | null,
+  pathwayStep: 0,
+  processPlaying: true,
+  processSpeed: 1,
   selectedId: null,
   multiSelection: [] as string[],
   highlightedMeshes: new Set<string>(),
@@ -91,6 +195,18 @@ const initial = () => ({
   xraySelection: true,
   clip: { axis: "none" as ClipAxis, position: 0.5, flip: false },
   audience: "undergraduate" as AudienceLevel,
+  spotlight: false,
+  playback: null as Playback | null,
+  playing: false,
+  speed: 1,
+  autoPlay: true,
+  showParts: true,
+  showCirculation: true,
+  flowAnimation: true,
+  parts: [] as PartView[],
+  circulation: null as CirculationView | null,
+  systemFocus: null as string | null,
+  quiz: null as IdentifyQuiz | null,
   viewCommand: null,
   focusCommand: null,
 });
@@ -102,7 +218,7 @@ export const useWorkspace = create<WorkspaceState>()((set) => ({
 
   select: (id, opts) =>
     set((s) => {
-      if (!opts?.additive || !id) return { selectedId: id, multiSelection: [] };
+      if (!opts?.additive || !id) return { selectedId: id, multiSelection: [], systemFocus: id ? null : s.systemFocus };
       if (s.selectedId === null) return { selectedId: id };
       const others = new Set(s.multiSelection);
       if (id === s.selectedId) return {};
@@ -125,9 +241,55 @@ export const useWorkspace = create<WorkspaceState>()((set) => ({
   setXraySelection: (xraySelection) => set({ xraySelection }),
   setClip: (clip) => set((s) => ({ clip: { ...s.clip, ...clip } })),
   setAudience: (audience) => set({ audience }),
+  setSpotlight: (spotlight) => set({ spotlight }),
+  startPlayback: (playback) => set({ playback, playing: true }),
+  stopPlayback: () => set({ playback: null, playing: false }),
+  setPlaying: (playing) => set({ playing }),
+  setSpeed: (speed) => set({ speed }),
+  setAutoPlay: (autoPlay) => set({ autoPlay }),
+  setShowParts: (showParts) => set({ showParts }),
+  setShowCirculation: (showCirculation) => set({ showCirculation }),
+  setFlowAnimation: (flowAnimation) => set({ flowAnimation }),
+  setParts: (parts) => set({ parts }),
+  setCirculation: (circulation) => set({ circulation }),
+  setSystemFocus: (systemFocus) => set({ systemFocus }),
+  setBodyModel: (bodyModel) =>
+    set((s) =>
+      s.bodyModel === bodyModel
+        ? {}
+        : {
+            bodyModel,
+            hiddenMeshes: new Set<string>(),
+            isolatedMeshes: null,
+            highlightedMeshes: new Set<string>(),
+            hover: null,
+            parts: [],
+            circulation: null,
+          },
+    ),
+  setQuiz: (quiz) => set({ quiz }),
+  setHeadPreset: (headPreset) => set({ headPreset }),
+  setActiveProcess: (activeProcess) => set({ activeProcess, processPlaying: true, pathwayStep: 0 }),
+  setPathway: (pathwayId) => set({ pathwayId, pathwayStep: 0 }),
+  setPathwayStep: (pathwayStep) => set({ pathwayStep }),
+  setProcessPlaying: (processPlaying) => set({ processPlaying }),
+  setProcessSpeed: (processSpeed) => set({ processSpeed }),
+  setRegion: (region) =>
+    set((s) =>
+      s.region === region
+        ? {}
+        : { region, headPreset: null, viewCommand: { preset: "anterior", nonce: ++nonce } },
+    ),
   requestView: (preset) => set({ viewCommand: { preset, nonce: ++nonce } }),
   requestFocus: (meshIds) => set({ focusCommand: { meshIds, nonce: ++nonce } }),
-  reset: () => set({ ...initial(), viewCommand: { preset: "anterior", nonce: ++nonce } }),
+  reset: () =>
+    set((s) => ({
+      ...initial(),
+      bodyModel: s.bodyModel,
+      region: s.region,
+      autoPlay: s.autoPlay,
+      viewCommand: { preset: "anterior", nonce: ++nonce },
+    })),
 }));
 
 /** Pure visibility rule shared by the renderer and tests. */
@@ -159,4 +321,28 @@ export function meshVisibility(
 export function ghostDepth(depths: number[], dissectionDepth: number): number | null {
   const removed = depths.filter((d) => d < dissectionDepth);
   return removed.length ? Math.max(...removed) : null;
+}
+
+/**
+ * Spotlight rule: with a selection and spotlight on, visible meshes outside the focus set
+ * are drawn as faint context ghosts. Returns the visibility unchanged otherwise.
+ */
+export function spotlightVisibility(
+  vis: MeshVisibility,
+  meshId: string,
+  focus: Set<string> | null,
+): MeshVisibility {
+  if (!focus || vis !== "visible") return vis;
+  return focus.has(meshId) ? "visible" : "ghost";
+}
+
+/**
+ * Flow-wave level (0..1) for a vessel `hop` contacts from the heart. The wave leaves the
+ * heart along arteries and returns to it along veins; `phase` advances in hops.
+ */
+export function flowLevel(hop: number, maxHop: number, phase: number, towardHeart: boolean, width = 4): number {
+  const period = maxHop + width * 2;
+  const x = towardHeart ? maxHop - hop : hop;
+  const d = (((phase - x) % period) + period) % period;
+  return d < width ? 1 - d / width : 0;
 }

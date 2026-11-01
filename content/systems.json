@@ -127,7 +127,7 @@
       "priority": 7,
       "display_order": 80,
       "dissection_depth": 60,
-      "description": "Male and female reproductive organs. The current asset source models an adult male only.",
+      "description": "Male and female reproductive organs. The male body (BodyParts3D) includes the prostate; the female body (Human Reference Atlas) includes the uterus, uterine tubes, ovaries and breasts.",
       "isa_fma": []
     },
     {
@@ -170,7 +170,7 @@
       "priority": 50,
       "display_order": 110,
       "dissection_depth": 50,
-      "description": "Lymphatic vessels, lymph nodes and lymphoid organs. The current asset source provides the thymus only.",
+      "description": "Lymphatic vessels, lymph nodes and lymphoid organs. The male body includes the thymus; the female body includes the thymus, spleen, palatine tonsils and an example lymph node.",
       "isa_fma": [
         "FMA71193"
       ]
@@ -209,5 +209,25 @@
       "description": "Body regions and compound structures that span several systems (e.g. trunk, upper limb). Selecting one highlights all its constituent parts.",
       "isa_fma": []
     }
-  ]
+  ],
+  "structure_system_overrides": {
+    "_comment": "Reviewed corrections to the automatic classification. The BodyParts3D compound vote assigns a structure to the system of >=75 % of its meshes; for the left lung, its lobes and segments and the right main bronchus most meshes are the pulmonary vessels running through them, so they were classified as cardiovascular. They are respiratory structures (FMA, TA2).",
+    "respiratory": [
+      "FMA:7310",
+      "FMA:7370",
+      "FMA:7371",
+      "FMA:7372",
+      "FMA:7373",
+      "FMA:7374",
+      "FMA:7375",
+      "FMA:7376",
+      "FMA:7377",
+      "FMA:7378",
+      "FMA:7379",
+      "FMA:7380",
+      "FMA:7385",
+      "FMA:7386",
+      "FMA:7395"
+    ]
+  }
 }

@@ -6,7 +6,7 @@
 |---|---|---|
 | A | Anatomically validated | none yet (requires expert review) |
 | B | Evidence-supported educational explanation | curated content sections, pathology narratives |
-| C | Simplified educational simulation | `cv.windkessel3` and its pathology scenarios |
+| C | Simplified educational simulation | `cv.windkessel3`, `cv.cardiac_cycle`, `resp.single_compartment`, `neuro.hodgkin_huxley`, pathology scenarios |
 | D | Experimental / unvalidated | none |
 
 ## Verification status lifecycle
@@ -40,9 +40,43 @@ The UI shows the status on every content section, relationship set and condition
 | Structures (BodyParts3D/FMA) | 1,368 | source_imported |
 | PART-OF relationships | 1,367 | source_imported |
 | Curated relationships | 18 | draft |
-| Curated content sections | 17 (heart, LV, aorta, femoral arteries, femur, lungs, liver) | draft |
+| Curated structures with content | 95 (73 entries; paired organs share one text) across all 12 systems, incl. female-only structures | draft |
+| Curated content sections | basic (beginner) overview for every curated structure, plus undergraduate sections (gross anatomy, blood supply, innervation, physiology, clinical anatomy) | draft |
+| Body-system learning modules | 12 (`content/learning/modules.json`) | draft, class B |
+| Quiz questions | 84 (59 multiple choice, 25 "find it in 3D", each tagged with the bodies it can be answered in) | draft |
 | Pathology conditions | 2 (arterial stiffening; raised peripheral resistance) | draft, class B text + class C scenarios |
-| References | 8 | citation metadata needs librarian check |
+| References | 14 | citation metadata needs librarian check |
+
+## 3D sources and classification corrections
+
+- Male body: BodyParts3D 4.0 (CC BY 4.0). Female body: Human Reference Atlas 3D reference
+  organs, Visible Human Female (CC BY 4.0, verified per organ by the pipeline; organ DOIs
+  in `content/generated/hra-female/pipeline_report.json`). Female-source structures are
+  `source_imported` with `identity_source = hra-vhf`.
+- `content/systems.json → structure_system_overrides` holds reviewed corrections to the
+  automatic system classification (currently: the left lung, its lobes and segments and
+  the right main bronchus were classed cardiovascular because most of their BodyParts3D
+  meshes are pulmonary vessels; they are respiratory).
+
+## Learning modules and quizzes
+
+- Text is original, written from the cited textbooks; no text, images or assets are copied from
+  other educational platforms. External platforms (for example LabXchange's "Interactive Human
+  Body") informed only the *structure* of the hub: one module per organ system, systems shown
+  one at a time or combined.
+- **Terminology:** English Terminologia Anatomica 2 term first, Latin in `latin`; common and
+  regional variants are named in the text and loaded as search synonyms (e.g. oesophagus /
+  esophagus, suprarenal / adrenal gland, faeces / feces).
+- **Units:** SI throughout; where clinical practice differs between countries the conventional
+  unit is given alongside (mmHg with kPa, glucose mmol/L with mg/dL, creatinine µmol/L with
+  mg/dL). A test rejects imperial units and mmHg without kPa.
+- **Levels:** every module overview exists at basic, undergraduate and clinical level; each is
+  self-contained. Quiz items are tagged with a level and learners see items up to their level.
+- **Validation:** the seed loader validates modules and questions with Pydantic models
+  (`app/schemas/learning.py`) and reports unknown structures, systems or references as
+  integrity problems. Identify answers must be structures with 3D geometry.
+- **Honesty about assets:** organs missing from the 3D source (thyroid, spleen, gonads,
+  lymph nodes, ...) are listed with `structure_id: null` and shown as "Not in the 3D model yet".
 
 ## Required before any public release
 

@@ -1,0 +1,2690 @@
+[
+ {
+  "id": "FMA:0329299",
+  "name": "inferior pancreaticoduodenal vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:10455",
+  "name": "intervertebral disk of thoracic vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:10456",
+  "name": "nucleus pulposus of intervertebral disk of thoracic vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:10459",
+  "name": "nucleus pulposus of intervertebral disk of first thoracic vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:10468",
+  "name": "head of pancreas",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:12154",
+  "name": "papillary muscle of heart",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:12795",
+  "name": "mesenteric lymph node",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:12846",
+  "name": "cardiac vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:13143",
+  "name": "cartilage of right main bronchus",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:13144",
+  "name": "cartilage of left main bronchus",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:13364",
+  "name": "quadrate lobe of liver",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:13497",
+  "name": "nucleus pulposus of intervertebral disk of second thoracic vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:13509",
+  "name": "intervertebral disk of twelfth thoracic vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:13510",
+  "name": "nucleus pulposus of intervertebral disk of third thoracic vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:13511",
+  "name": "nucleus pulposus of intervertebral disk of fourth thoracic vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:13512",
+  "name": "nucleus pulposus of intervertebral disk of fifth thoracic vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:13513",
+  "name": "nucleus pulposus of intervertebral disk of sixth thoracic vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:13514",
+  "name": "nucleus pulposus of intervertebral disk of seventh thoracic vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:13515",
+  "name": "nucleus pulposus of intervertebral disk of eighth thoracic vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:13516",
+  "name": "nucleus pulposus of intervertebral disk of ninth thoracic vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:13517",
+  "name": "nucleus pulposus of intervertebral disk of tenth thoracic vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:13518",
+  "name": "nucleus pulposus of intervertebral disk of eleventh thoracic vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:13519",
+  "name": "nucleus pulposus of intervertebral disk of twelfth thoracic vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:13554",
+  "name": "nucleus pulposus of intervertebral disk of cervical vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:13894",
+  "name": "intervertebral disk of sixth lumbar vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:13905",
+  "name": "posterior ventricular branch of circumflex coronary artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14079",
+  "name": "round ligament of liver",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14080",
+  "name": "ligamentum venosum",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14331",
+  "name": "splenic vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14332",
+  "name": "superior mesenteric vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14334",
+  "name": "renal vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14335",
+  "name": "right renal vein",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14336",
+  "name": "left renal vein",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14340",
+  "name": "middle hepatic vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14480",
+  "name": "bare area of liver",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14484",
+  "name": "colic impression of liver",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14485",
+  "name": "duodenal impression of liver",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14486",
+  "name": "esophageal impression of liver",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14487",
+  "name": "gastric impression of liver",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14488",
+  "name": "renal impression of liver",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14489",
+  "name": "suprarenal impression of liver",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14500",
+  "name": "liver left medial lobe",
+  "system_id": "digestive",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14501",
+  "name": "liver left lateral lobe",
+  "system_id": "digestive",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14517",
+  "name": "neck of pancreas",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14518",
+  "name": "body of pancreas",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14519",
+  "name": "tail of pancreas",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14548",
+  "name": "sigmoid colon",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14550",
+  "name": "hepatic flexure of colon",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14551",
+  "name": "splenic flexure of colon",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14650",
+  "name": "omentum",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14835",
+  "name": "cystic artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14927",
+  "name": "duodenal ampulla",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14928",
+  "name": "descending part of duodenum",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14929",
+  "name": "horizontal part of duodenum",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:14930",
+  "name": "ascending part of duodenum",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15046",
+  "name": "epiploic appendage of transverse colon",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15077",
+  "name": "sphincter of hepatopancreatic ampulla",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15394",
+  "name": "left colic vein",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15395",
+  "name": "sigmoid vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15403",
+  "name": "cystic vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15406",
+  "name": "middle colic vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15407",
+  "name": "right colic vein",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15408",
+  "name": "ileocolic vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15575",
+  "name": "renal pelvis",
+  "system_id": "urinary",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15581",
+  "name": "cortex of kidney",
+  "system_id": "urinary",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15610",
+  "name": "hilum of kidney",
+  "system_id": "urinary",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15613",
+  "name": "major calyx",
+  "system_id": "urinary",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15614",
+  "name": "minor calyx",
+  "system_id": "urinary",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15622",
+  "name": "renal papilla",
+  "system_id": "urinary",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15729",
+  "name": "diaphragmatic surface of liver",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15758",
+  "name": "porta hepatis",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15813",
+  "name": "capsule of the liver",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15821",
+  "name": "triangular ligament of liver",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15822",
+  "name": "coronary ligament of liver",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15823",
+  "name": "falciform ligament",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15828",
+  "name": "diaphragmatic surface of spleen",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15837",
+  "name": "gastric surface of spleen",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15838",
+  "name": "colic surface of spleen",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15839",
+  "name": "renal surface of spleen",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15841",
+  "name": "hilum of spleen",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15857",
+  "name": "uncinate process of pancreas",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15908",
+  "name": "fundus of urinary bladder",
+  "system_id": "urinary",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15910",
+  "name": "trigone of urinary bladder",
+  "system_id": "urinary",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15939",
+  "name": "right ureteral orifice",
+  "system_id": "urinary",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15940",
+  "name": "left ureteral orifice",
+  "system_id": "urinary",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:15973",
+  "name": "ileocecal valve",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:16062",
+  "name": "nucleus pulposus of intervertebral disk of lumbar vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:16063",
+  "name": "nucleus pulposus of intervertebral disk of first lumbar vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:16064",
+  "name": "nucleus pulposus of intervertebral disk of second lumbar vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:16065",
+  "name": "nucleus pulposus of intervertebral disk of third lumbar vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:16066",
+  "name": "nucleus pulposus of intervertebral disk of fourth lumbar vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:16067",
+  "name": "nucleus pulposus of intervertebral disk of fifth lumbar vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:16521",
+  "name": "hepatoduodenal ligament",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:16589",
+  "name": "ilium",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:16592",
+  "name": "ischium",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:16595",
+  "name": "pubis",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:17558",
+  "name": "uterus",
+  "system_id": "reproductive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:17561",
+  "name": "fundus of uterus",
+  "system_id": "reproductive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:17633",
+  "name": "renal column",
+  "system_id": "urinary",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:17739",
+  "name": "body of uterus",
+  "system_id": "reproductive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:17740",
+  "name": "uterine cervix",
+  "system_id": "reproductive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:17747",
+  "name": "internal cervical os",
+  "system_id": "reproductive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:17752",
+  "name": "lower uterine segment",
+  "system_id": "reproductive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:18483",
+  "name": "right uterine tube",
+  "system_id": "reproductive",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:18484",
+  "name": "left uterine tube",
+  "system_id": "reproductive",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:18489",
+  "name": "infundibulum of right uterine tube",
+  "system_id": "reproductive",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:18490",
+  "name": "infundibulum of left uterine tube",
+  "system_id": "reproductive",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:18491",
+  "name": "ampulla of right uterine tube",
+  "system_id": "reproductive",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:18492",
+  "name": "ampulla of left uterine tube",
+  "system_id": "reproductive",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:18493",
+  "name": "isthmus of right uterine tube",
+  "system_id": "reproductive",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:18494",
+  "name": "isthmus of left uterine tube",
+  "system_id": "reproductive",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:18497",
+  "name": "fimbria of right uterine tube",
+  "system_id": "reproductive",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:18498",
+  "name": "fimbria of left uterine tube",
+  "system_id": "reproductive",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:18830",
+  "name": "right uterine artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:18831",
+  "name": "left uterine artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:18884",
+  "name": "internal iliac vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:18893",
+  "name": "middle rectal vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:18894",
+  "name": "right middle rectal vein",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:18895",
+  "name": "left middle rectal vein",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:18897",
+  "name": "right uterine vein",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:18898",
+  "name": "left uterine vein",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:18917",
+  "name": "internal pudendal vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:20229",
+  "name": "coccyx",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:21242",
+  "name": "inferior rectal vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:223074",
+  "name": "palpebral conjunctiva of right lower eyelid",
+  "system_id": "special_senses",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:223075",
+  "name": "palpebral conjunctiva of left lower eyelid",
+  "system_id": "special_senses",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:223076",
+  "name": "palpebral conjunctiva of right upper eyelid",
+  "system_id": "special_senses",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:223078",
+  "name": "palpebral conjunctiva of left upper eyelid",
+  "system_id": "special_senses",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:223677",
+  "name": "right female areola",
+  "system_id": "reproductive",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:223679",
+  "name": "left female areola",
+  "system_id": "reproductive",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:223693",
+  "name": "right nipple",
+  "system_id": "reproductive",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:223695",
+  "name": "left nipple",
+  "system_id": "reproductive",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:224876",
+  "name": "anterior wall of uterus",
+  "system_id": "reproductive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:224878",
+  "name": "posterior wall of uterus",
+  "system_id": "reproductive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:24018",
+  "name": "compact bone tissue",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:24019",
+  "name": "trabecular bone tissue",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:24926",
+  "name": "nucleus pulposus of intervertebral disk of axis",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:24927",
+  "name": "nucleus pulposus of intervertebral disk of third cervical vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:24928",
+  "name": "nucleus pulposus of intervertebral disk of fourth cervical vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:24929",
+  "name": "nucleus pulposus of intervertebral disk of fifth cervical vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:24930",
+  "name": "nucleus pulposus of intervertebral disk of sixth cervical vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:24931",
+  "name": "nucleus pulposus of intervertebral disk of seventh cervical vertebra",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:256625",
+  "name": "first sacral spinal cord segment",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:256627",
+  "name": "second sacral spinal cord segment",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:256629",
+  "name": "third sacral spinal cord segment",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:256631",
+  "name": "fourth sacral spinal cord segment",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:258870",
+  "name": "renal pyramid",
+  "system_id": "urinary",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:261236",
+  "name": "humor of right vitreous body",
+  "system_id": "special_senses",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:261238",
+  "name": "humor of left vitreous body",
+  "system_id": "special_senses",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:273129",
+  "name": "inferior occipital gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:273508",
+  "name": "anterior segment of paracentral lobule",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:284558",
+  "name": "kidney calyx",
+  "system_id": "urinary",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:322904",
+  "name": "left posterior descending branch of circumflex branch of left coronary artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:32860",
+  "name": "lateral condyle of right femur",
+  "system_id": "skeletal",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:32861",
+  "name": "lateral condyle of left femur",
+  "system_id": "skeletal",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:32862",
+  "name": "medial condyle of right femur",
+  "system_id": "skeletal",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:32863",
+  "name": "medial condyle of left femur",
+  "system_id": "skeletal",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:33189",
+  "name": "articular cartilage of distal epiphysis of right femur",
+  "system_id": "skeletal",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:33190",
+  "name": "articular cartilage of distal epiphysis of left femur",
+  "system_id": "skeletal",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:3902",
+  "name": "left marginal artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:43746",
+  "name": "patellar surface of right femur",
+  "system_id": "skeletal",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:43747",
+  "name": "patellar surface of left femur",
+  "system_id": "skeletal",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:43749",
+  "name": "intercondylar fossa of right femur",
+  "system_id": "skeletal",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:43750",
+  "name": "intercondylar fossa of left femur",
+  "system_id": "skeletal",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:4715",
+  "name": "oblique vein of left atrium",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:49152",
+  "name": "right ciliary muscle",
+  "system_id": "special_senses",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:49153",
+  "name": "left ciliary muscle",
+  "system_id": "special_senses",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:49868",
+  "name": "ophthalmic artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:49880",
+  "name": "right central retinal artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:49881",
+  "name": "left central retinal artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:49957",
+  "name": "right long posterior ciliary artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:49958",
+  "name": "left long posterior ciliary artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:51248",
+  "name": "right superior ophthalmic vein",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:51249",
+  "name": "left superior ophthalmic vein",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:51250",
+  "name": "right inferior ophthalmic vein",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:51251",
+  "name": "left inferior ophthalmic vein",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:51874",
+  "name": "right scleral venous sinus",
+  "system_id": "special_senses",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:51875",
+  "name": "left scleral venous sinus",
+  "system_id": "special_senses",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:51884",
+  "name": "right central retinal vein",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:51885",
+  "name": "left central retinal vein",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:54549",
+  "name": "secondary palate",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:54645",
+  "name": "posterior part of tongue",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:54646",
+  "name": "superior surface of tongue",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:54648",
+  "name": "inferior surface of tongue",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:54821",
+  "name": "fungiform papilla",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:54822",
+  "name": "vallate papilla",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:54973",
+  "name": "right palatine tonsil",
+  "system_id": "lymphatic",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:54974",
+  "name": "left palatine tonsil",
+  "system_id": "lymphatic",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:55023",
+  "name": "hard palate",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:55099",
+  "name": "thyroid cartilage",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:55108",
+  "name": "laryngeal cartilage",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:55109",
+  "name": "arytenoid cartilage",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:55110",
+  "name": "corniculate cartilage",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:55112",
+  "name": "epiglottic cartilage",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:55113",
+  "name": "right arytenoid cartilage",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:55114",
+  "name": "left arytenoid cartilage",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:55115",
+  "name": "right corniculate cartilage",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:55116",
+  "name": "left corniculate cartilage",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:55634",
+  "name": "upper teeth",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:55635",
+  "name": "lower teeth",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:57987",
+  "name": "right mammary gland",
+  "system_id": "reproductive",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:57991",
+  "name": "left mammary gland",
+  "system_id": "reproductive",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:58088",
+  "name": "lactiferous sinus",
+  "system_id": "reproductive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:58091",
+  "name": "areolar tubercle",
+  "system_id": "reproductive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:58253",
+  "name": "right pupil",
+  "system_id": "special_senses",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:58254",
+  "name": "left pupil",
+  "system_id": "special_senses",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:58296",
+  "name": "right ciliary body",
+  "system_id": "special_senses",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:58297",
+  "name": "left ciliary body",
+  "system_id": "special_senses",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:58302",
+  "name": "right retina",
+  "system_id": "special_senses",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:58303",
+  "name": "left retina",
+  "system_id": "special_senses",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:58343",
+  "name": "right corneoscleral junction",
+  "system_id": "special_senses",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:58344",
+  "name": "left corneoscleral junction",
+  "system_id": "special_senses",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:58601",
+  "name": "right ora serrata",
+  "system_id": "special_senses",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:58602",
+  "name": "left ora serrata",
+  "system_id": "special_senses",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:58635",
+  "name": "right optic disc",
+  "system_id": "special_senses",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:58636",
+  "name": "left optic disc",
+  "system_id": "special_senses",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:58638",
+  "name": "right macula lutea",
+  "system_id": "special_senses",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:58639",
+  "name": "left macula lutea",
+  "system_id": "special_senses",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:58661",
+  "name": "right fovea centralis",
+  "system_id": "special_senses",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:58663",
+  "name": "left fovea centralis",
+  "system_id": "special_senses",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:58820",
+  "name": "aqueous humor of right eyeball",
+  "system_id": "special_senses",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:58821",
+  "name": "aqueous humor of left eyeball",
+  "system_id": "special_senses",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:59028",
+  "name": "right bulbar conjunctiva",
+  "system_id": "special_senses",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:59029",
+  "name": "left bulbar conjunctiva",
+  "system_id": "special_senses",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:59415",
+  "name": "tooth row",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:59784",
+  "name": "mucosa of soft palate",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:59785",
+  "name": "buccal mucosa",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:59790",
+  "name": "parotid gland",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:59791",
+  "name": "sublingual gland",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:59797",
+  "name": "right parotid gland",
+  "system_id": "digestive",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:59798",
+  "name": "left parotid gland",
+  "system_id": "digestive",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:59804",
+  "name": "right sublingual gland",
+  "system_id": "digestive",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:59805",
+  "name": "left sublingual gland",
+  "system_id": "digestive",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:59820",
+  "name": "frenulum of lip",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:59821",
+  "name": "frenulum of upper lip",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:59822",
+  "name": "frenulum of lower lip",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:61857",
+  "name": "superior frontal gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:61859",
+  "name": "middle frontal gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:61890",
+  "name": "subcallosal area",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:61893",
+  "name": "gyrus rectus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:61894",
+  "name": "primary motor cortex",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:61896",
+  "name": "postcentral gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:61900",
+  "name": "precuneus cortex",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:61901",
+  "name": "superior occipital gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:61903",
+  "name": "cuneus cortex",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:61904",
+  "name": "lingual gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:61905",
+  "name": "superior temporal gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:61906",
+  "name": "middle temporal gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:61907",
+  "name": "inferior temporal gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:61916",
+  "name": "anterior cingulate gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:61924",
+  "name": "posterior cingulate gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:61941",
+  "name": "optic radiation",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:61961",
+  "name": "anterior commissure",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:61980",
+  "name": "triangular part of inferior frontal gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:61981",
+  "name": "opercular part of inferior frontal gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:62045",
+  "name": "optic chiasma",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:62046",
+  "name": "optic tract",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:62102",
+  "name": "main lactiferous duct",
+  "system_id": "reproductive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:62394",
+  "name": "cerebral peduncle",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:62403",
+  "name": "superior colliculus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:62404",
+  "name": "inferior colliculus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:62407",
+  "name": "red nucleus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:62418",
+  "name": "lateral orbital gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:62419",
+  "name": "medial orbital gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:62421",
+  "name": "first thoracic spinal cord segment",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:62422",
+  "name": "second thoracic spinal cord segment",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:62502",
+  "name": "isthmus of cingulate gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:62659",
+  "name": "cartilage of lobar bronchus",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:62662",
+  "name": "cartilage of segmental bronchus",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:63815",
+  "name": "lymph vasculature",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:64019",
+  "name": "articular disk of knee joint",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:66254",
+  "name": "medulla of lymph node",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:66610",
+  "name": "kidney capsule",
+  "system_id": "urinary",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:67947",
+  "name": "substantia nigra",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:67966",
+  "name": "posterior parahippocampal gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:67990",
+  "name": "urinary bladder neck smooth muscle",
+  "system_id": "urinary",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71033",
+  "name": "occipital fusiform gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71039",
+  "name": "anterior parahippocampal gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71108",
+  "name": "pontine tegmentum",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71169",
+  "name": "third thoracic spinal cord segment",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71170",
+  "name": "fourth thoracic spinal cord segment",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71171",
+  "name": "fifth thoracic spinal cord segment",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71172",
+  "name": "sixth thoracic spinal cord segment",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71173",
+  "name": "seventh thoracic spinal cord segment",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71174",
+  "name": "eighth thoracic spinal cord segment",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71175",
+  "name": "ninth thoracic spinal cord segment",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71176",
+  "name": "tenth thoracic spinal cord segment",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71177",
+  "name": "eleventh thoracic spinal cord segment",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71178",
+  "name": "twelfth thoracic spinal cord segment",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71179",
+  "name": "C1 segment of cervical spinal cord",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71180",
+  "name": "C2 segment of cervical spinal cord",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71181",
+  "name": "C3 segment of cervical spinal cord",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71182",
+  "name": "C4 segment of cervical spinal cord",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71183",
+  "name": "C5 segment of cervical spinal cord",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71184",
+  "name": "C6 segment of cervical spinal cord",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71185",
+  "name": "C7 segment of cervical spinal cord",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71186",
+  "name": "C8 segment of cervical spinal cord",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71187",
+  "name": "first lumbar spinal cord segment",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71188",
+  "name": "second lumbar spinal cord segment",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71189",
+  "name": "third lumbar spinal cord segment",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71190",
+  "name": "fourth lumbar spinal cord segment",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:71191",
+  "name": "fifth lumbar spinal cord segment",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7133",
+  "name": "interventricular septum",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7196",
+  "name": "spleen",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7213",
+  "name": "right ovary",
+  "system_id": "reproductive",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7214",
+  "name": "left ovary",
+  "system_id": "reproductive",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:72512",
+  "name": "pontine nuclear group",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7267",
+  "name": "posteromedial head of posterior papillary muscle of left ventricle",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:72828",
+  "name": "right putamen",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:72829",
+  "name": "left putamen",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:73118",
+  "name": "suspensory ligament of right breast",
+  "system_id": "reproductive",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:73119",
+  "name": "suspensory ligament of left breast",
+  "system_id": "reproductive",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:73165",
+  "name": "interlobar adipose tissue of right mammary gland",
+  "system_id": "reproductive",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:73166",
+  "name": "interlobar adipose tissue of left mammary gland",
+  "system_id": "reproductive",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7397",
+  "name": "right superior lobar bronchus",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7398",
+  "name": "right apical segmental bronchus",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7399",
+  "name": "right posterior segmental bronchus",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7400",
+  "name": "right anterior segmental bronchus",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7401",
+  "name": "middle lobar bronchus",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7402",
+  "name": "lateral segmental bronchus",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7403",
+  "name": "medial segmental bronchus",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:74038",
+  "name": "hippocampal formation",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7404",
+  "name": "right inferior lobar bronchus",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7407",
+  "name": "segmental bronchus",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7409",
+  "name": "bronchus",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7416",
+  "name": "right superior segmental bronchus",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7417",
+  "name": "right medial basal segmental bronchus",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7418",
+  "name": "right anterior basal segmental bronchus",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7419",
+  "name": "right lateral basal segmental bronchus",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7420",
+  "name": "right posterior basal segmental bronchus",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7423",
+  "name": "lobar bronchus of left lung upper lobe",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7426",
+  "name": "left apical segmental bronchus",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7427",
+  "name": "left posterior segmental bronchus",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7428",
+  "name": "left anterior segmental bronchus",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:74285",
+  "name": "outer cortex of kidney",
+  "system_id": "urinary",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7430",
+  "name": "superior lingular bronchus",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7431",
+  "name": "inferior lingular bronchus",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7432",
+  "name": "lobar bronchus of left lung lower lobe",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7434",
+  "name": "trachea cartilage",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7456",
+  "name": "right lung hilus",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:74604",
+  "name": "capsule of lymph node",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7465",
+  "name": "carina of trachea",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:74743",
+  "name": "blood vasculature of eye",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:74886",
+  "name": "frontal operculum",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:74889",
+  "name": "parietal operculum",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:74890",
+  "name": "temporal pole",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:74892",
+  "name": "occipital pole",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7504",
+  "name": "left superior segmental bronchus",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7505",
+  "name": "left medial basal segmental bronchus",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7506",
+  "name": "left anterior basal segmental bronchus",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7507",
+  "name": "left lateral basal segmental bronchus",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:7508",
+  "name": "left posterior basal segmental bronchus",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:76551",
+  "name": "ciliary processes",
+  "system_id": "special_senses",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:76767",
+  "name": "anterior cardiac vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:76836",
+  "name": "external cervical os",
+  "system_id": "reproductive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:76928",
+  "name": "cerebellar vermis",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:77049",
+  "name": "abdominal ostium of uterine tube",
+  "system_id": "reproductive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:77168",
+  "name": "median sacral vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:77624",
+  "name": "olfactory bulb",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:77628",
+  "name": "anterior olfactory nucleus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:77660",
+  "name": "eye trabecular meshwork",
+  "system_id": "special_senses",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:80183",
+  "name": "intermediate orbital gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:8636",
+  "name": "anterior descending branch of left pulmonary artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:86464",
+  "name": "corpus callosum",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:86592",
+  "name": "mouth floor",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:9615",
+  "name": "cricoid cartilage",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "FMA:9751",
+  "name": "left lung hilus",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "UBERON:0000052",
+  "name": "fornix of brain",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "UBERON:0000362",
+  "name": "renal medulla",
+  "system_id": "urinary",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "UBERON:0003404",
+  "name": "lobar bronchus of right lung",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false
+ },
+ {
+  "id": "UBERON:0003405",
+  "name": "lobar bronchus of left lung",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false
+ },
+ {
+  "id": "UBERON:0004537",
+  "name": "blood vasculature",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "UBERON:0004725",
+  "name": "piriform cortex",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "UBERON:0010396",
+  "name": "afferent lymphatic vessel",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "UBERON:0010397",
+  "name": "efferent lymphatic vessel",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "UBERON:0010417",
+  "name": "lymph node T cell domain",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "UBERON:0010748",
+  "name": "lymph node follicle",
+  "system_id": "lymphatic",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "UBERON:0011191",
+  "name": "ophthalmic vein",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "UBERON:0018140",
+  "name": "mammary lobe",
+  "system_id": "reproductive",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "UBERON:0022268",
+  "name": "planum temporale",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "UBERON:0023861",
+  "name": "planum polare",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "UBERON:0035548",
+  "name": "ileocolic artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "UBERON:2001553",
+  "name": "manubrium",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ },
+ {
+  "id": "UBERON:7500033",
+  "name": "distal-most point of medial condyle of femur",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false
+ }
+]

@@ -78,5 +78,65 @@
     "pmid": null,
     "url": null,
     "license_note": null
+  },
+  {
+    "id": "suga1973elastance",
+    "kind": "journal_article",
+    "citation": "Suga H, Sagawa K, Shoukas AA. Load independence of the instantaneous pressure-volume ratio of the canine left ventricle and effects of epinephrine and heart rate on the ratio. Circ Res. 1973;32(3):314-322.",
+    "year": 1973,
+    "doi": "10.1161/01.RES.32.3.314",
+    "pmid": null,
+    "url": null,
+    "license_note": null
+  },
+  {
+    "id": "stergiopulos1996determinants",
+    "kind": "journal_article",
+    "citation": "Stergiopulos N, Meister JJ, Westerhof N. Determinants of stroke volume and systolic and diastolic aortic pressure. Am J Physiol. 1996;270(6 Pt 2):H2050-H2059.",
+    "year": 1996,
+    "doi": "10.1152/ajpheart.1996.270.6.H2050",
+    "pmid": null,
+    "url": null,
+    "license_note": null
+  },
+  {
+    "id": "bates2009lungmechanics",
+    "kind": "book",
+    "citation": "Bates JHT. Lung Mechanics: An Inverse Modeling Approach. Cambridge University Press; 2009.",
+    "year": 2009,
+    "doi": null,
+    "pmid": null,
+    "url": null,
+    "license_note": null
+  },
+  {
+    "id": "hodgkin1952quantitative",
+    "kind": "journal_article",
+    "citation": "Hodgkin AL, Huxley AF. A quantitative description of membrane current and its application to conduction and excitation in nerve. J Physiol. 1952;117(4):500-544.",
+    "year": 1952,
+    "doi": "10.1113/jphysiol.1952.sp004764",
+    "pmid": null,
+    "url": null,
+    "license_note": null
+  },
+  {
+    "id": "openstax_ap2e",
+    "kind": "book",
+    "citation": "Betts JG, Young KA, Wise JA, et al. Anatomy and Physiology 2e. Houston (TX): OpenStax, Rice University; 2022.",
+    "year": 2022,
+    "doi": null,
+    "pmid": null,
+    "url": "https://openstax.org/details/books/anatomy-and-physiology-2e",
+    "license_note": "Openly licensed (CC BY 4.0); cited as a freely accessible reference, no text reproduced."
+  },
+  {
+    "id": "hra2021",
+    "kind": "dataset",
+    "citation": "Börner K, Teichmann SA, Quardokus EM, et al. Anatomical structures, cell types and biomarkers of the Human Reference Atlas. Nat Cell Biol. 2021;23(11):1117-1128. 3D Reference Object Library (Visible Human Female organs) of the HuBMAP Human Reference Atlas.",
+    "year": 2021,
+    "doi": "10.1038/s41556-021-00788-6",
+    "pmid": null,
+    "url": "https://humanatlas.io/3d-reference-library",
+    "license_note": "3D reference organs licensed CC BY 4.0; organ-level DOIs in content/generated/hra-female/pipeline_report.json"
   }
 ]

@@ -1,0 +1,2656 @@
+{
+ "FMA:10420": [
+  "ZAF-6ddad6d4821f",
+  "ZAF-f49a4eef0410",
+  "ZAM-6ddad6d4821f",
+  "ZAM-f49a4eef0410"
+ ],
+ "FMA:10552": [
+  "ZAF-d3b956ee43b1"
+ ],
+ "FMA:10635": [
+  "ZAF-09891a7474ea",
+  "ZAF-89348c68645f"
+ ],
+ "FMA:10660": [
+  "ZAF-52ee277b1b25"
+ ],
+ "FMA:10680": [
+  "ZAF-99630b209021"
+ ],
+ "FMA:10681": [
+  "ZAF-6c1ee20de8f8"
+ ],
+ "FMA:10682": [
+  "ZAF-0104f9a85c60"
+ ],
+ "FMA:10697": [
+  "ZAF-a81f44a3bb9f"
+ ],
+ "FMA:10698": [
+  "ZAF-08d1ceadef49"
+ ],
+ "FMA:10699": [
+  "ZAF-17a8db2c6e38"
+ ],
+ "FMA:12519": [
+  "ZAF-cdb707480238"
+ ],
+ "FMA:12520": [
+  "ZAF-18bec6c302cb"
+ ],
+ "FMA:12521": [
+  "ZAF-df49c2e10ad3"
+ ],
+ "FMA:12522": [
+  "ZAF-f11cf17e01ed"
+ ],
+ "FMA:12523": [
+  "ZAF-78070e971214"
+ ],
+ "FMA:12524": [
+  "ZAF-d8547fba78c2"
+ ],
+ "FMA:12525": [
+  "ZAF-cc8bd2321101"
+ ],
+ "FMA:13110": [
+  "ZAF-3fcd806e5018",
+  "ZAF-eeb63740ef66",
+  "ZAM-3fcd806e5018",
+  "ZAM-eeb63740ef66"
+ ],
+ "FMA:13111": [
+  "ZAF-3fcd806e5018",
+  "ZAM-3fcd806e5018"
+ ],
+ "FMA:13112": [
+  "ZAF-eeb63740ef66",
+  "ZAM-eeb63740ef66"
+ ],
+ "FMA:13318": [
+  "ZAF-5e9843b268f3",
+  "ZAF-8869fa8ceebf",
+  "ZAM-5e9843b268f3",
+  "ZAM-8869fa8ceebf"
+ ],
+ "FMA:13319": [
+  "ZAF-5e9843b268f3",
+  "ZAM-5e9843b268f3"
+ ],
+ "FMA:13320": [
+  "ZAF-8869fa8ceebf",
+  "ZAM-8869fa8ceebf"
+ ],
+ "FMA:13341": [
+  "ZAF-44cdb8193668",
+  "ZAF-fe62df9cd0cf",
+  "ZAM-44cdb8193668",
+  "ZAM-fe62df9cd0cf"
+ ],
+ "FMA:13342": [
+  "ZAF-867447ae22a0",
+  "ZAF-a14125cfefbc",
+  "ZAM-867447ae22a0",
+  "ZAM-a14125cfefbc"
+ ],
+ "FMA:13343": [
+  "ZAF-42273cbd038a",
+  "ZAF-de6ae1b7337d",
+  "ZAM-42273cbd038a",
+  "ZAM-de6ae1b7337d"
+ ],
+ "FMA:13344": [
+  "ZAF-0c59c66186ba",
+  "ZAF-690d7ebf1641",
+  "ZAM-0c59c66186ba",
+  "ZAM-690d7ebf1641"
+ ],
+ "FMA:13346": [
+  "ZAF-fe62df9cd0cf",
+  "ZAM-fe62df9cd0cf"
+ ],
+ "FMA:13347": [
+  "ZAF-44cdb8193668",
+  "ZAM-44cdb8193668"
+ ],
+ "FMA:13348": [
+  "ZAF-a14125cfefbc",
+  "ZAM-a14125cfefbc"
+ ],
+ "FMA:13349": [
+  "ZAF-867447ae22a0",
+  "ZAM-867447ae22a0"
+ ],
+ "FMA:13350": [
+  "ZAF-de6ae1b7337d",
+  "ZAM-de6ae1b7337d"
+ ],
+ "FMA:13351": [
+  "ZAF-42273cbd038a",
+  "ZAM-42273cbd038a"
+ ],
+ "FMA:13352": [
+  "ZAF-690d7ebf1641",
+  "ZAM-690d7ebf1641"
+ ],
+ "FMA:13353": [
+  "ZAF-0c59c66186ba",
+  "ZAM-0c59c66186ba"
+ ],
+ "FMA:13370": [
+  "ZAF-d3faa7022b42",
+  "ZAF-e840880afefb",
+  "ZAM-d3faa7022b42",
+  "ZAM-e840880afefb"
+ ],
+ "FMA:13371": [
+  "ZAF-d3faa7022b42",
+  "ZAM-d3faa7022b42"
+ ],
+ "FMA:13372": [
+  "ZAF-e840880afefb",
+  "ZAM-e840880afefb"
+ ],
+ "FMA:13387": [
+  "ZAF-13c849522018",
+  "ZAF-32d4117d7b0c",
+  "ZAM-13c849522018",
+  "ZAM-32d4117d7b0c"
+ ],
+ "FMA:13388": [
+  "ZAF-13c849522018",
+  "ZAM-13c849522018"
+ ],
+ "FMA:13389": [
+  "ZAF-32d4117d7b0c",
+  "ZAM-32d4117d7b0c"
+ ],
+ "FMA:13390": [
+  "ZAF-1a811e9bfe87"
+ ],
+ "FMA:13391": [
+  "ZAF-6c5b54bd2b00"
+ ],
+ "FMA:13392": [
+  "ZAF-e70c5cc757cb"
+ ],
+ "FMA:13393": [
+  "ZAF-58a66d9161f1"
+ ],
+ "FMA:13408": [
+  "ZAF-fe7eae16ee94"
+ ],
+ "FMA:13409": [
+  "ZAF-c4d1c62f972e"
+ ],
+ "FMA:13427": [
+  "ZAF-23569b4a04aa",
+  "ZAM-23569b4a04aa"
+ ],
+ "FMA:14192": [
+  "ZAF-804f25dc1a95",
+  "ZAF-ab1936d1262d",
+  "ZAM-804f25dc1a95",
+  "ZAM-ab1936d1262d"
+ ],
+ "FMA:14326": [
+  "ZAF-34459c1bff40",
+  "ZAF-91a1ef53799d",
+  "ZAM-34459c1bff40",
+  "ZAM-91a1ef53799d"
+ ],
+ "FMA:223415": [
+  "ZAM-d34f7adee788"
+ ],
+ "FMA:223416": [
+  "ZAM-70dd5e1a78c4"
+ ],
+ "FMA:224422": [
+  "ZAF-b8a387f50da2",
+  "ZAM-b8a387f50da2"
+ ],
+ "FMA:224424": [
+  "ZAF-5dfe996f5fb6",
+  "ZAM-5dfe996f5fb6"
+ ],
+ "FMA:224426": [
+  "ZAF-d9c9574419b5",
+  "ZAM-d9c9574419b5"
+ ],
+ "FMA:224428": [
+  "ZAF-551d75deb883",
+  "ZAM-551d75deb883"
+ ],
+ "FMA:224430": [
+  "ZAF-b09fb110e1af",
+  "ZAM-b09fb110e1af"
+ ],
+ "FMA:224432": [
+  "ZAF-d0c02bd06fbb",
+  "ZAM-d0c02bd06fbb"
+ ],
+ "FMA:224434": [
+  "ZAF-a6b39cab1ceb",
+  "ZAM-a6b39cab1ceb"
+ ],
+ "FMA:224436": [
+  "ZAF-0287a04acac1",
+  "ZAM-0287a04acac1"
+ ],
+ "FMA:224442": [
+  "ZAF-268714fc72c6",
+  "ZAM-268714fc72c6"
+ ],
+ "FMA:224444": [
+  "ZAF-3c3529363f22",
+  "ZAM-3c3529363f22"
+ ],
+ "FMA:224450": [
+  "ZAF-76962e78e328",
+  "ZAM-76962e78e328"
+ ],
+ "FMA:224452": [
+  "ZAF-f1bc38e3b8eb",
+  "ZAM-f1bc38e3b8eb"
+ ],
+ "FMA:224474": [
+  "ZAF-13a9d0e48643",
+  "ZAM-13a9d0e48643"
+ ],
+ "FMA:224476": [
+  "ZAF-0f1de6cd5b48",
+  "ZAM-0f1de6cd5b48"
+ ],
+ "FMA:224478": [
+  "ZAF-751664b966d0",
+  "ZAM-751664b966d0"
+ ],
+ "FMA:224480": [
+  "ZAF-b26fe160f61d",
+  "ZAM-b26fe160f61d"
+ ],
+ "FMA:224494": [
+  "ZAF-cc6f5a40e4a5",
+  "ZAM-cc6f5a40e4a5"
+ ],
+ "FMA:224496": [
+  "ZAF-2960a3880305",
+  "ZAM-2960a3880305"
+ ],
+ "FMA:22681": [
+  "ZAF-921c576a6646",
+  "ZAF-f54921782271",
+  "ZAM-921c576a6646",
+  "ZAM-f54921782271"
+ ],
+ "FMA:22704": [
+  "ZAF-03f47fb3332c",
+  "ZAF-a7a550bc4012",
+  "ZAM-03f47fb3332c",
+  "ZAM-a7a550bc4012"
+ ],
+ "FMA:22711": [
+  "ZAF-3ed1612384ae",
+  "ZAF-b939e6fc83e1",
+  "ZAM-3ed1612384ae",
+  "ZAM-b939e6fc83e1"
+ ],
+ "FMA:22726": [
+  "ZAF-f54921782271",
+  "ZAM-f54921782271"
+ ],
+ "FMA:22727": [
+  "ZAF-921c576a6646",
+  "ZAM-921c576a6646"
+ ],
+ "FMA:22728": [
+  "ZAF-395e500ac444"
+ ],
+ "FMA:22729": [
+  "ZAF-832bc981c2ec"
+ ],
+ "FMA:22744": [
+  "ZAF-03f47fb3332c",
+  "ZAM-03f47fb3332c"
+ ],
+ "FMA:22757": [
+  "ZAF-3ed1612384ae",
+  "ZAM-3ed1612384ae"
+ ],
+ "FMA:22758": [
+  "ZAF-b939e6fc83e1",
+  "ZAM-b939e6fc83e1"
+ ],
+ "FMA:22829": [
+  "ZAF-9c7f0b230a91",
+  "ZAF-bf00319370c6",
+  "ZAM-9c7f0b230a91",
+  "ZAM-bf00319370c6"
+ ],
+ "FMA:22874": [
+  "ZAF-9c7f0b230a91",
+  "ZAM-9c7f0b230a91"
+ ],
+ "FMA:22875": [
+  "ZAF-bf00319370c6",
+  "ZAM-bf00319370c6"
+ ],
+ "FMA:228925": [
+  "ZAF-24d32b3b7209",
+  "ZAF-8a048fa38dbb",
+  "ZAM-24d32b3b7209",
+  "ZAM-8a048fa38dbb"
+ ],
+ "FMA:231507": [
+  "ZAF-24d32b3b7209",
+  "ZAM-24d32b3b7209"
+ ],
+ "FMA:231509": [
+  "ZAF-8a048fa38dbb",
+  "ZAM-8a048fa38dbb"
+ ],
+ "FMA:232196": [
+  "ZAF-04ff0ccbd8f6",
+  "ZAF-b0d989089f95",
+  "ZAM-04ff0ccbd8f6",
+  "ZAM-b0d989089f95"
+ ],
+ "FMA:232198": [
+  "ZAF-04ff0ccbd8f6",
+  "ZAM-04ff0ccbd8f6"
+ ],
+ "FMA:232200": [
+  "ZAF-b0d989089f95",
+  "ZAM-b0d989089f95"
+ ],
+ "FMA:232270": [
+  "ZAF-2ad9106137d9",
+  "ZAM-2ad9106137d9"
+ ],
+ "FMA:232272": [
+  "ZAF-2f93e1255239",
+  "ZAM-2f93e1255239"
+ ],
+ "FMA:232509": [
+  "ZAF-3eb5a8141eb0",
+  "ZAF-7d7823dc2f6c",
+  "ZAM-3eb5a8141eb0",
+  "ZAM-7d7823dc2f6c"
+ ],
+ "FMA:232511": [
+  "ZAF-7d7823dc2f6c",
+  "ZAM-7d7823dc2f6c"
+ ],
+ "FMA:232513": [
+  "ZAF-3eb5a8141eb0",
+  "ZAM-3eb5a8141eb0"
+ ],
+ "FMA:232654": [
+  "ZAF-7566a976a5c7",
+  "ZAM-7566a976a5c7"
+ ],
+ "FMA:232656": [
+  "ZAF-9fa057627dcf",
+  "ZAM-9fa057627dcf"
+ ],
+ "FMA:232664": [
+  "ZAF-c88c17788bb0",
+  "ZAM-c88c17788bb0"
+ ],
+ "FMA:232668": [
+  "ZAF-76c827571ea9",
+  "ZAM-76c827571ea9"
+ ],
+ "FMA:232719": [
+  "ZAF-804f25dc1a95",
+  "ZAM-804f25dc1a95"
+ ],
+ "FMA:232721": [
+  "ZAF-ab1936d1262d",
+  "ZAM-ab1936d1262d"
+ ],
+ "FMA:256691": [
+  "ZAM-1a4c6bcc7efe",
+  "ZAM-e66ceb8c057d"
+ ],
+ "FMA:322153": [
+  "ZAM-c575aef46fc9",
+  "ZAM-ebe4237f9c36"
+ ],
+ "FMA:32530": [
+  "ZAF-0ce227e07de8"
+ ],
+ "FMA:32531": [
+  "ZAF-0a0290534ddb"
+ ],
+ "FMA:32532": [
+  "ZAF-24396a218860"
+ ],
+ "FMA:32533": [
+  "ZAF-70ca578b57e6"
+ ],
+ "FMA:32534": [
+  "ZAF-270bdc041ea3"
+ ],
+ "FMA:32535": [
+  "ZAF-a8b42aab7f49"
+ ],
+ "FMA:32536": [
+  "ZAF-95136e0e36f5"
+ ],
+ "FMA:32537": [
+  "ZAF-c9634377f6fc"
+ ],
+ "FMA:32540": [
+  "ZAF-f1bc2e8a0ed4"
+ ],
+ "FMA:32541": [
+  "ZAF-564a9a54f910"
+ ],
+ "FMA:32557": [
+  "ZAF-13011657a1a8",
+  "ZAF-c70ffef38a1b"
+ ],
+ "FMA:37025": [
+  "ZAF-835394bc1099",
+  "ZAF-fee061bb2633",
+  "ZAM-835394bc1099",
+  "ZAM-fee061bb2633"
+ ],
+ "FMA:3941": [
+  "ZAF-7d5163488f74"
+ ],
+ "FMA:3945": [
+  "ZAF-89348c68645f"
+ ],
+ "FMA:3949": [
+  "ZAF-63adb133fa7e"
+ ],
+ "FMA:3953": [
+  "ZAF-47bb0e81789a"
+ ],
+ "FMA:3958": [
+  "ZAF-205ee805b31e"
+ ],
+ "FMA:3992": [
+  "ZAF-7bad9da6b127"
+ ],
+ "FMA:4057": [
+  "ZAF-03e927afc11b"
+ ],
+ "FMA:4060": [
+  "ZAF-09891a7474ea"
+ ],
+ "FMA:4062": [
+  "ZAF-aea5302e2f7b"
+ ],
+ "FMA:4066": [
+  "ZAF-671bedfb021c"
+ ],
+ "FMA:4084": [
+  "ZAF-5138d2051377"
+ ],
+ "FMA:4086": [
+  "ZAF-5401efa30786"
+ ],
+ "FMA:4134": [
+  "ZAF-ab99446eead1"
+ ],
+ "FMA:45739": [
+  "ZAF-d9581dc799eb"
+ ],
+ "FMA:45740": [
+  "ZAF-5ab2e0ebff44"
+ ],
+ "FMA:45826": [
+  "ZAF-0e1b5f38eb76"
+ ],
+ "FMA:45827": [
+  "ZAF-37cdf9fcbed4"
+ ],
+ "FMA:46302": [
+  "ZAF-07cbc3a0bfbf",
+  "ZAF-ceb7dc2c185c",
+  "ZAM-07cbc3a0bfbf",
+  "ZAM-ceb7dc2c185c"
+ ],
+ "FMA:46303": [
+  "ZAF-514de112ab32",
+  "ZAF-5570a2b83635",
+  "ZAM-514de112ab32",
+  "ZAM-5570a2b83635"
+ ],
+ "FMA:46309": [
+  "ZAF-4f1d6b06162d"
+ ],
+ "FMA:46310": [
+  "ZAF-2a413c5d7012"
+ ],
+ "FMA:46321": [
+  "ZAF-44db40538f26"
+ ],
+ "FMA:46322": [
+  "ZAF-ff4ce2454cc0"
+ ],
+ "FMA:46326": [
+  "ZAF-90f77a4db7df"
+ ],
+ "FMA:46327": [
+  "ZAF-3b14a13848dc"
+ ],
+ "FMA:46577": [
+  "FIT-FJ2800"
+ ],
+ "FMA:46578": [
+  "FIT-FJ2782"
+ ],
+ "FMA:46580": [
+  "FIT-FJ2796"
+ ],
+ "FMA:46581": [
+  "FIT-FJ2778"
+ ],
+ "FMA:46582": [
+  "FIT-FJ2809"
+ ],
+ "FMA:46584": [
+  "FIT-FJ2798"
+ ],
+ "FMA:46585": [
+  "FIT-FJ2780"
+ ],
+ "FMA:46589": [
+  "FIT-FJ2802",
+  "FIT-FJ2803"
+ ],
+ "FMA:46590": [
+  "FIT-FJ2784",
+  "FIT-FJ2785"
+ ],
+ "FMA:46592": [
+  "FIT-FJ2806"
+ ],
+ "FMA:46593": [
+  "FIT-FJ2788"
+ ],
+ "FMA:46604": [
+  "FIT-FJ2791"
+ ],
+ "FMA:46605": [
+  "FIT-FJ2774"
+ ],
+ "FMA:46609": [
+  "ZAF-1f9826b82664",
+  "ZAF-c716dac7df46",
+  "ZAM-1f9826b82664",
+  "ZAM-c716dac7df46"
+ ],
+ "FMA:46610": [
+  "ZAF-0e4c7df4e92a",
+  "ZAF-c54d03442e34",
+  "ZAM-0e4c7df4e92a",
+  "ZAM-c54d03442e34"
+ ],
+ "FMA:46631": [
+  "ZAF-dcd320e9fc8b"
+ ],
+ "FMA:46632": [
+  "ZAF-8b341b3fe3e7"
+ ],
+ "FMA:46633": [
+  "ZAF-387d3a4159fe"
+ ],
+ "FMA:46634": [
+  "ZAF-2c4456ca78fd"
+ ],
+ "FMA:46667": [
+  "ZAF-5c5748273720"
+ ],
+ "FMA:46668": [
+  "ZAF-c01e0b0e7bfa"
+ ],
+ "FMA:46671": [
+  "ZAF-f39f19174240"
+ ],
+ "FMA:46672": [
+  "ZAF-c22e1eebd256"
+ ],
+ "FMA:46753": [
+  "ZAF-4488937e8a8f",
+  "ZAF-7addd21f2815",
+  "ZAM-4488937e8a8f",
+  "ZAM-7addd21f2815"
+ ],
+ "FMA:46757": [
+  "ZAF-b6434ebec39a",
+  "ZAF-cb101a3382a5",
+  "ZAM-b6434ebec39a",
+  "ZAM-cb101a3382a5"
+ ],
+ "FMA:46758": [
+  "ZAF-2f1b29f7d792",
+  "ZAF-9bb389d82d9b",
+  "ZAM-2f1b29f7d792",
+  "ZAM-9bb389d82d9b"
+ ],
+ "FMA:46759": [
+  "ZAF-b6434ebec39a",
+  "ZAM-b6434ebec39a"
+ ],
+ "FMA:46760": [
+  "ZAF-cb101a3382a5",
+  "ZAM-cb101a3382a5"
+ ],
+ "FMA:46761": [
+  "ZAF-2f1b29f7d792",
+  "ZAM-2f1b29f7d792"
+ ],
+ "FMA:46762": [
+  "ZAF-9bb389d82d9b",
+  "ZAM-9bb389d82d9b"
+ ],
+ "FMA:46763": [
+  "ZAF-4488937e8a8f",
+  "ZAM-4488937e8a8f"
+ ],
+ "FMA:46764": [
+  "ZAF-7addd21f2815",
+  "ZAM-7addd21f2815"
+ ],
+ "FMA:46768": [
+  "ZAF-9f75e24a63b3",
+  "ZAF-ab6dcdd636a7",
+  "ZAM-9f75e24a63b3",
+  "ZAM-ab6dcdd636a7"
+ ],
+ "FMA:46769": [
+  "ZAF-67a6c81b2221",
+  "ZAF-b1264647fb65",
+  "ZAM-67a6c81b2221",
+  "ZAM-b1264647fb65"
+ ],
+ "FMA:46770": [
+  "ZAF-357f31df93f0",
+  "ZAF-3bc81aa7f223",
+  "ZAM-357f31df93f0",
+  "ZAM-3bc81aa7f223"
+ ],
+ "FMA:46777": [
+  "ZAF-ee7362816bb0",
+  "ZAF-fe5e3dfdd657",
+  "ZAM-ee7362816bb0",
+  "ZAM-fe5e3dfdd657"
+ ],
+ "FMA:46781": [
+  "ZAF-5059b07e5577",
+  "ZAF-b62e39a8957b",
+  "ZAM-5059b07e5577",
+  "ZAM-b62e39a8957b"
+ ],
+ "FMA:46784": [
+  "ZAF-932ac59365e6",
+  "ZAF-bf476df79ada",
+  "ZAM-932ac59365e6",
+  "ZAM-bf476df79ada"
+ ],
+ "FMA:46787": [
+  "ZAF-9e4e91711290",
+  "ZAF-baf00bc7f6a9",
+  "ZAM-9e4e91711290",
+  "ZAM-baf00bc7f6a9"
+ ],
+ "FMA:46794": [
+  "ZAF-02f7e1c68380",
+  "ZAF-29f446811df2",
+  "ZAM-02f7e1c68380",
+  "ZAM-29f446811df2"
+ ],
+ "FMA:46796": [
+  "ZAF-02f7e1c68380",
+  "ZAM-02f7e1c68380"
+ ],
+ "FMA:46797": [
+  "ZAF-29f446811df2",
+  "ZAM-29f446811df2"
+ ],
+ "FMA:46802": [
+  "ZAF-1c6846b1c8df",
+  "ZAF-562f97429f9e",
+  "ZAM-1c6846b1c8df",
+  "ZAM-562f97429f9e"
+ ],
+ "FMA:46803": [
+  "ZAF-562f97429f9e",
+  "ZAM-562f97429f9e"
+ ],
+ "FMA:46804": [
+  "ZAF-1c6846b1c8df",
+  "ZAM-1c6846b1c8df"
+ ],
+ "FMA:46805": [
+  "ZAF-853d4a2133b5",
+  "ZAF-b90b7e3ab922",
+  "ZAM-853d4a2133b5",
+  "ZAM-b90b7e3ab922"
+ ],
+ "FMA:46806": [
+  "ZAF-b90b7e3ab922",
+  "ZAM-b90b7e3ab922"
+ ],
+ "FMA:46807": [
+  "ZAF-853d4a2133b5",
+  "ZAM-853d4a2133b5"
+ ],
+ "FMA:46810": [
+  "ZAF-e6276cf16adf",
+  "ZAF-fcb3b5153bb3"
+ ],
+ "FMA:46811": [
+  "ZAF-f1566e295e7b",
+  "ZAF-ffe0042f76ea",
+  "ZAM-f1566e295e7b",
+  "ZAM-ffe0042f76ea"
+ ],
+ "FMA:46812": [
+  "ZAF-fcb3b5153bb3"
+ ],
+ "FMA:46813": [
+  "ZAF-e6276cf16adf"
+ ],
+ "FMA:46814": [
+  "ZAF-f1566e295e7b",
+  "ZAM-f1566e295e7b"
+ ],
+ "FMA:46815": [
+  "ZAF-ffe0042f76ea",
+  "ZAM-ffe0042f76ea"
+ ],
+ "FMA:46816": [
+  "ZAF-0f31a6dd8bd1",
+  "ZAF-e56a2e65f6fc",
+  "ZAM-0f31a6dd8bd1",
+  "ZAM-e56a2e65f6fc"
+ ],
+ "FMA:46817": [
+  "ZAF-e56a2e65f6fc",
+  "ZAM-e56a2e65f6fc"
+ ],
+ "FMA:46818": [
+  "ZAF-0f31a6dd8bd1",
+  "ZAM-0f31a6dd8bd1"
+ ],
+ "FMA:46822": [
+  "ZAF-008031a8f547",
+  "ZAF-910c844a7247",
+  "ZAM-008031a8f547",
+  "ZAM-910c844a7247"
+ ],
+ "FMA:46823": [
+  "ZAF-910c844a7247",
+  "ZAM-910c844a7247"
+ ],
+ "FMA:46824": [
+  "ZAF-008031a8f547",
+  "ZAM-008031a8f547"
+ ],
+ "FMA:46825": [
+  "ZAF-3233df0e3295",
+  "ZAF-eea615bb6871",
+  "ZAM-3233df0e3295",
+  "ZAM-eea615bb6871"
+ ],
+ "FMA:46826": [
+  "ZAF-eea615bb6871",
+  "ZAM-eea615bb6871"
+ ],
+ "FMA:46827": [
+  "ZAF-3233df0e3295",
+  "ZAM-3233df0e3295"
+ ],
+ "FMA:46828": [
+  "ZAF-972850e56926",
+  "ZAF-affdc01d80d2",
+  "ZAM-972850e56926",
+  "ZAM-affdc01d80d2"
+ ],
+ "FMA:46829": [
+  "ZAF-affdc01d80d2",
+  "ZAM-affdc01d80d2"
+ ],
+ "FMA:46830": [
+  "ZAF-972850e56926",
+  "ZAM-972850e56926"
+ ],
+ "FMA:46834": [
+  "ZAF-55850a7eb56d",
+  "ZAF-8b90cde07940",
+  "ZAM-55850a7eb56d",
+  "ZAM-8b90cde07940"
+ ],
+ "FMA:46835": [
+  "ZAF-55850a7eb56d",
+  "ZAM-55850a7eb56d"
+ ],
+ "FMA:46836": [
+  "ZAF-8b90cde07940",
+  "ZAM-8b90cde07940"
+ ],
+ "FMA:46838": [
+  "ZAF-b7aaf6119fc5",
+  "ZAF-dd2dcddb882d",
+  "ZAM-b7aaf6119fc5",
+  "ZAM-dd2dcddb882d"
+ ],
+ "FMA:46839": [
+  "ZAF-dd2dcddb882d",
+  "ZAM-dd2dcddb882d"
+ ],
+ "FMA:46840": [
+  "ZAF-b7aaf6119fc5",
+  "ZAM-b7aaf6119fc5"
+ ],
+ "FMA:46841": [
+  "ZAF-26dadbb4ea56",
+  "ZAF-dc9dad3bf855",
+  "ZAM-26dadbb4ea56",
+  "ZAM-dc9dad3bf855"
+ ],
+ "FMA:4724": [
+  "ZAF-a90226cc6da2",
+  "ZAM-a90226cc6da2"
+ ],
+ "FMA:4727": [
+  "ZAF-445eaad3c9ff",
+  "ZAF-84d6f5c8141c",
+  "ZAM-445eaad3c9ff",
+  "ZAM-84d6f5c8141c"
+ ],
+ "FMA:4751": [
+  "ZAF-85aeeb11d646"
+ ],
+ "FMA:4754": [
+  "ZAF-c210383193b9"
+ ],
+ "FMA:4755": [
+  "ZAF-33afb06cce9b"
+ ],
+ "FMA:4756": [
+  "ZAF-445eaad3c9ff",
+  "ZAM-445eaad3c9ff"
+ ],
+ "FMA:4761": [
+  "ZAF-b3a5c8af0fd7"
+ ],
+ "FMA:4762": [
+  "ZAF-a90226cc6da2",
+  "ZAM-a90226cc6da2"
+ ],
+ "FMA:4763": [
+  "ZAF-80becc9e4458",
+  "ZAM-80becc9e4458"
+ ],
+ "FMA:4764": [
+  "ZAF-84d6f5c8141c",
+  "ZAM-84d6f5c8141c"
+ ],
+ "FMA:49000": [
+  "ZAF-3e14d317baa5",
+  "ZAF-9e42b8c8712d"
+ ],
+ "FMA:49003": [
+  "ZAF-79db709a7c75",
+  "ZAF-fa35943ddcfb"
+ ],
+ "FMA:49006": [
+  "ZAF-327e930cb383",
+  "ZAF-e6f8463f0322"
+ ],
+ "FMA:49007": [
+  "ZAF-327e930cb383"
+ ],
+ "FMA:49008": [
+  "ZAF-e6f8463f0322"
+ ],
+ "FMA:49011": [
+  "ZAF-2f7ede96a5bd",
+  "ZAF-40867bb14a43",
+  "ZAM-2f7ede96a5bd",
+  "ZAM-40867bb14a43"
+ ],
+ "FMA:49012": [
+  "ZAF-2f7ede96a5bd",
+  "ZAM-2f7ede96a5bd"
+ ],
+ "FMA:49013": [
+  "ZAF-40867bb14a43",
+  "ZAM-40867bb14a43"
+ ],
+ "FMA:49020": [
+  "ZAF-8ffe0ad266e4",
+  "ZAF-d5c6b4bfc8a2",
+  "ZAM-8ffe0ad266e4",
+  "ZAM-d5c6b4bfc8a2"
+ ],
+ "FMA:49021": [
+  "ZAF-488260eb1c6e",
+  "ZAF-f5e74cd104eb",
+  "ZAM-488260eb1c6e",
+  "ZAM-f5e74cd104eb"
+ ],
+ "FMA:49044": [
+  "ZAF-cc8a2b7afd89"
+ ],
+ "FMA:49045": [
+  "ZAF-9a0be5196a6a"
+ ],
+ "FMA:49046": [
+  "ZAF-c98a28bb3adb"
+ ],
+ "FMA:49047": [
+  "ZAF-92eb10a4a698"
+ ],
+ "FMA:49048": [
+  "ZAF-5e4fb2363fd7"
+ ],
+ "FMA:49049": [
+  "ZAF-f187019c1351"
+ ],
+ "FMA:49050": [
+  "ZAF-df70550ea646"
+ ],
+ "FMA:49051": [
+  "ZAF-e088b570eb8a"
+ ],
+ "FMA:49052": [
+  "ZAF-9137fd02c27d"
+ ],
+ "FMA:49053": [
+  "ZAF-2c3bb14f241f"
+ ],
+ "FMA:49054": [
+  "ZAF-0ef80b22f06d"
+ ],
+ "FMA:49055": [
+  "ZAF-d47ff11d82a0"
+ ],
+ "FMA:49056": [
+  "ZAF-ff5fdc86d82d"
+ ],
+ "FMA:49057": [
+  "ZAF-dd0f9affaab3"
+ ],
+ "FMA:49065": [
+  "ZAF-6f9e0ce40b72",
+  "ZAF-da3a47949192"
+ ],
+ "FMA:49072": [
+  "ZAF-522fe7f396ac"
+ ],
+ "FMA:49073": [
+  "ZAF-f74bb962978c"
+ ],
+ "FMA:49497": [
+  "ZAF-1b1d5b886c26",
+  "ZAF-5232ab583764",
+  "ZAM-1b1d5b886c26",
+  "ZAM-5232ab583764"
+ ],
+ "FMA:49498": [
+  "ZAF-5232ab583764",
+  "ZAM-5232ab583764"
+ ],
+ "FMA:49499": [
+  "ZAF-1b1d5b886c26",
+  "ZAM-1b1d5b886c26"
+ ],
+ "FMA:49549": [
+  "ZAF-bacbcd1768ab",
+  "ZAF-e17912a87292",
+  "ZAM-bacbcd1768ab",
+  "ZAM-e17912a87292"
+ ],
+ "FMA:49550": [
+  "ZAF-bacbcd1768ab",
+  "ZAM-bacbcd1768ab"
+ ],
+ "FMA:49551": [
+  "ZAF-e17912a87292",
+  "ZAM-e17912a87292"
+ ],
+ "FMA:49561": [
+  "ZAF-c1d8ff29690f",
+  "ZAF-cf1d5f13f3e5",
+  "ZAM-c1d8ff29690f",
+  "ZAM-cf1d5f13f3e5"
+ ],
+ "FMA:49562": [
+  "ZAF-cf1d5f13f3e5",
+  "ZAM-cf1d5f13f3e5"
+ ],
+ "FMA:49563": [
+  "ZAF-c1d8ff29690f",
+  "ZAM-c1d8ff29690f"
+ ],
+ "FMA:49567": [
+  "ZAF-4a34f39b02af",
+  "ZAF-876caaa5f782",
+  "ZAM-4a34f39b02af",
+  "ZAM-876caaa5f782"
+ ],
+ "FMA:49568": [
+  "ZAF-876caaa5f782",
+  "ZAM-876caaa5f782"
+ ],
+ "FMA:49569": [
+  "ZAF-4a34f39b02af",
+  "ZAM-4a34f39b02af"
+ ],
+ "FMA:49570": [
+  "ZAF-57fa4fd7047d",
+  "ZAF-7cf6859b97b4",
+  "ZAM-57fa4fd7047d",
+  "ZAM-7cf6859b97b4"
+ ],
+ "FMA:49571": [
+  "ZAF-57fa4fd7047d",
+  "ZAM-57fa4fd7047d"
+ ],
+ "FMA:49572": [
+  "ZAF-7cf6859b97b4",
+  "ZAM-7cf6859b97b4"
+ ],
+ "FMA:49583": [
+  "ZAF-a3181f905e55",
+  "ZAF-dc597ca23709",
+  "ZAM-a3181f905e55",
+  "ZAM-dc597ca23709"
+ ],
+ "FMA:49584": [
+  "ZAF-a3181f905e55",
+  "ZAM-a3181f905e55"
+ ],
+ "FMA:49585": [
+  "ZAF-dc597ca23709",
+  "ZAM-dc597ca23709"
+ ],
+ "FMA:49586": [
+  "ZAF-54d0d36d0335",
+  "ZAF-e0cc503dc5e1",
+  "ZAM-54d0d36d0335",
+  "ZAM-e0cc503dc5e1"
+ ],
+ "FMA:49587": [
+  "ZAF-54d0d36d0335",
+  "ZAM-54d0d36d0335"
+ ],
+ "FMA:49588": [
+  "ZAF-e0cc503dc5e1",
+  "ZAM-e0cc503dc5e1"
+ ],
+ "FMA:49650": [
+  "ZAF-0f7f00f39e4d",
+  "ZAF-eb067efa14ca",
+  "ZAM-0f7f00f39e4d",
+  "ZAM-eb067efa14ca"
+ ],
+ "FMA:49651": [
+  "ZAF-0f7f00f39e4d",
+  "ZAM-0f7f00f39e4d"
+ ],
+ "FMA:49652": [
+  "ZAF-eb067efa14ca",
+  "ZAM-eb067efa14ca"
+ ],
+ "FMA:49657": [
+  "ZAF-62df56569e0f",
+  "ZAF-f66f5718a4fe",
+  "ZAM-62df56569e0f",
+  "ZAM-f66f5718a4fe"
+ ],
+ "FMA:49658": [
+  "ZAF-f66f5718a4fe",
+  "ZAM-f66f5718a4fe"
+ ],
+ "FMA:49659": [
+  "ZAF-62df56569e0f",
+  "ZAM-62df56569e0f"
+ ],
+ "FMA:49669": [
+  "ZAF-64d796c199b6",
+  "ZAF-b0543874d42b",
+  "ZAM-64d796c199b6",
+  "ZAM-b0543874d42b"
+ ],
+ "FMA:49675": [
+  "ZAF-5a75827826e1",
+  "ZAF-d376a539c696",
+  "ZAM-5a75827826e1",
+  "ZAM-d376a539c696"
+ ],
+ "FMA:49676": [
+  "ZAF-5a75827826e1",
+  "ZAM-5a75827826e1"
+ ],
+ "FMA:49677": [
+  "ZAF-d376a539c696",
+  "ZAM-d376a539c696"
+ ],
+ "FMA:49695": [
+  "ZAF-066d5ee161dc",
+  "ZAF-0ab251f3d474",
+  "ZAM-066d5ee161dc",
+  "ZAM-0ab251f3d474"
+ ],
+ "FMA:49696": [
+  "ZAF-0ab251f3d474",
+  "ZAM-0ab251f3d474"
+ ],
+ "FMA:49697": [
+  "ZAF-066d5ee161dc",
+  "ZAM-066d5ee161dc"
+ ],
+ "FMA:49711": [
+  "ZAF-55b757de30ab",
+  "ZAF-e4d3f6896293",
+  "ZAM-55b757de30ab",
+  "ZAM-e4d3f6896293"
+ ],
+ "FMA:49712": [
+  "ZAF-e4d3f6896293",
+  "ZAM-e4d3f6896293"
+ ],
+ "FMA:49713": [
+  "ZAF-55b757de30ab",
+  "ZAM-55b757de30ab"
+ ],
+ "FMA:49715": [
+  "ZAF-37d0afbf505a",
+  "ZAF-dead4e934b96",
+  "ZAM-37d0afbf505a",
+  "ZAM-dead4e934b96"
+ ],
+ "FMA:49745": [
+  "ZAF-9f5dcce645bf",
+  "ZAF-ade328a0bffd",
+  "ZAM-9f5dcce645bf",
+  "ZAM-ade328a0bffd"
+ ],
+ "FMA:49746": [
+  "ZAF-2ceb2df444c3",
+  "ZAF-4e3ac7b3c84f",
+  "ZAM-2ceb2df444c3",
+  "ZAM-4e3ac7b3c84f"
+ ],
+ "FMA:49747": [
+  "ZAF-ade328a0bffd",
+  "ZAM-ade328a0bffd"
+ ],
+ "FMA:49748": [
+  "ZAF-9f5dcce645bf",
+  "ZAM-9f5dcce645bf"
+ ],
+ "FMA:49749": [
+  "ZAF-2ceb2df444c3",
+  "ZAM-2ceb2df444c3"
+ ],
+ "FMA:49750": [
+  "ZAF-4e3ac7b3c84f",
+  "ZAM-4e3ac7b3c84f"
+ ],
+ "FMA:49754": [
+  "ZAF-97cfaa788d21",
+  "ZAF-c579fee6cf76",
+  "ZAM-97cfaa788d21",
+  "ZAM-c579fee6cf76"
+ ],
+ "FMA:49755": [
+  "ZAF-c579fee6cf76",
+  "ZAM-c579fee6cf76"
+ ],
+ "FMA:49756": [
+  "ZAF-97cfaa788d21",
+  "ZAM-97cfaa788d21"
+ ],
+ "FMA:49757": [
+  "ZAF-15666b77351f",
+  "ZAF-69f2bdba655e",
+  "ZAM-15666b77351f",
+  "ZAM-69f2bdba655e"
+ ],
+ "FMA:49758": [
+  "ZAF-15666b77351f",
+  "ZAM-15666b77351f"
+ ],
+ "FMA:49759": [
+  "ZAF-69f2bdba655e",
+  "ZAM-69f2bdba655e"
+ ],
+ "FMA:49767": [
+  "ZAF-3815211cda71",
+  "ZAF-d88e6b62aa37",
+  "ZAM-3815211cda71",
+  "ZAM-d88e6b62aa37"
+ ],
+ "FMA:49768": [
+  "ZAF-d88e6b62aa37",
+  "ZAM-d88e6b62aa37"
+ ],
+ "FMA:49769": [
+  "ZAF-3815211cda71",
+  "ZAM-3815211cda71"
+ ],
+ "FMA:49791": [
+  "ZAF-0263ea9e42ad",
+  "ZAF-6a050afd0174",
+  "ZAM-0263ea9e42ad",
+  "ZAM-6a050afd0174"
+ ],
+ "FMA:49792": [
+  "ZAF-0263ea9e42ad",
+  "ZAM-0263ea9e42ad"
+ ],
+ "FMA:49793": [
+  "ZAF-6a050afd0174",
+  "ZAM-6a050afd0174"
+ ],
+ "FMA:49795": [
+  "ZAF-5dd57b1c6124",
+  "ZAF-ebd7ae01a66d",
+  "ZAM-5dd57b1c6124",
+  "ZAM-ebd7ae01a66d"
+ ],
+ "FMA:49798": [
+  "ZAF-ebd7ae01a66d",
+  "ZAM-ebd7ae01a66d"
+ ],
+ "FMA:49799": [
+  "ZAF-5dd57b1c6124",
+  "ZAM-5dd57b1c6124"
+ ],
+ "FMA:49808": [
+  "ZAF-0be6aa26d46b",
+  "ZAF-901906207f31",
+  "ZAM-0be6aa26d46b",
+  "ZAM-901906207f31"
+ ],
+ "FMA:49810": [
+  "ZAF-901906207f31",
+  "ZAM-901906207f31"
+ ],
+ "FMA:49811": [
+  "ZAF-0be6aa26d46b",
+  "ZAM-0be6aa26d46b"
+ ],
+ "FMA:49879": [
+  "ZAM-535fb76e4fab",
+  "ZAM-79e3a1805f0e"
+ ],
+ "FMA:49880": [
+  "ZAM-535fb76e4fab"
+ ],
+ "FMA:49881": [
+  "ZAM-79e3a1805f0e"
+ ],
+ "FMA:49927": [
+  "ZAF-97223dac8a4c",
+  "ZAF-9fa52d70f62c",
+  "ZAM-97223dac8a4c",
+  "ZAM-9fa52d70f62c"
+ ],
+ "FMA:49928": [
+  "ZAF-9fa52d70f62c",
+  "ZAM-9fa52d70f62c"
+ ],
+ "FMA:49929": [
+  "ZAF-97223dac8a4c",
+  "ZAM-97223dac8a4c"
+ ],
+ "FMA:49973": [
+  "ZAF-4181792914bb",
+  "ZAF-6360d09f1f78",
+  "ZAM-4181792914bb",
+  "ZAM-6360d09f1f78"
+ ],
+ "FMA:49974": [
+  "ZAF-6360d09f1f78",
+  "ZAM-6360d09f1f78"
+ ],
+ "FMA:49975": [
+  "ZAF-4181792914bb",
+  "ZAM-4181792914bb"
+ ],
+ "FMA:49986": [
+  "ZAF-a701330e2e9c",
+  "ZAF-f83196299c6b",
+  "ZAM-a701330e2e9c",
+  "ZAM-f83196299c6b"
+ ],
+ "FMA:49987": [
+  "ZAF-a701330e2e9c",
+  "ZAM-a701330e2e9c"
+ ],
+ "FMA:49988": [
+  "ZAF-f83196299c6b",
+  "ZAM-f83196299c6b"
+ ],
+ "FMA:49989": [
+  "ZAF-6ee2498ea324",
+  "ZAF-7bd1653c1a96",
+  "ZAM-6ee2498ea324",
+  "ZAM-7bd1653c1a96"
+ ],
+ "FMA:49990": [
+  "ZAF-6ee2498ea324",
+  "ZAM-6ee2498ea324"
+ ],
+ "FMA:49991": [
+  "ZAF-7bd1653c1a96",
+  "ZAM-7bd1653c1a96"
+ ],
+ "FMA:50025": [
+  "ZAF-18e50fa3e1df",
+  "ZAF-bad4677213e4",
+  "ZAM-18e50fa3e1df",
+  "ZAM-bad4677213e4"
+ ],
+ "FMA:50026": [
+  "ZAF-18e50fa3e1df",
+  "ZAM-18e50fa3e1df"
+ ],
+ "FMA:50027": [
+  "ZAF-bad4677213e4",
+  "ZAM-bad4677213e4"
+ ],
+ "FMA:50029": [
+  "ZAF-a542802966a3"
+ ],
+ "FMA:50030": [
+  "ZAF-a249ac2c8083"
+ ],
+ "FMA:50079": [
+  "ZAF-fb6ea264c000"
+ ],
+ "FMA:50082": [
+  "ZAF-b576f18a85a0"
+ ],
+ "FMA:50083": [
+  "ZAF-fb6ea264c000"
+ ],
+ "FMA:50085": [
+  "ZAF-e558e4891ecd"
+ ],
+ "FMA:50086": [
+  "ZAF-953737529201"
+ ],
+ "FMA:50169": [
+  "ZAF-655a52c62c32"
+ ],
+ "FMA:5039": [
+  "ZAF-de038c69c04b"
+ ],
+ "FMA:50519": [
+  "ZAF-aa02f72d0513"
+ ],
+ "FMA:50520": [
+  "ZAF-34b48f53320b"
+ ],
+ "FMA:50542": [
+  "ZAF-05808e3f02d8"
+ ],
+ "FMA:50544": [
+  "ZAF-319c94ed6bb9",
+  "ZAF-b14232ddca10"
+ ],
+ "FMA:50545": [
+  "ZAF-319c94ed6bb9"
+ ],
+ "FMA:50546": [
+  "ZAF-b14232ddca10"
+ ],
+ "FMA:50574": [
+  "ZAF-4bff92158a9b"
+ ],
+ "FMA:50575": [
+  "ZAF-c54f76434cd5"
+ ],
+ "FMA:50584": [
+  "ZAF-f5c5e117fcbb"
+ ],
+ "FMA:50585": [
+  "ZAF-559cd743bd0c"
+ ],
+ "FMA:50763": [
+  "ZAF-2c26f4f429f9",
+  "ZAF-7c41a8275f52",
+  "ZAM-2c26f4f429f9",
+  "ZAM-7c41a8275f52"
+ ],
+ "FMA:50764": [
+  "ZAF-2c26f4f429f9",
+  "ZAM-2c26f4f429f9"
+ ],
+ "FMA:50765": [
+  "ZAF-7c41a8275f52",
+  "ZAM-7c41a8275f52"
+ ],
+ "FMA:50767": [
+  "ZAF-a65dfaedc5cd",
+  "ZAM-a65dfaedc5cd"
+ ],
+ "FMA:50768": [
+  "ZAF-a0bd233b1748",
+  "ZAM-a0bd233b1748"
+ ],
+ "FMA:50769": [
+  "ZAF-7dd394bc1d73",
+  "ZAM-7dd394bc1d73"
+ ],
+ "FMA:50770": [
+  "ZAF-03bed5acea68",
+  "ZAF-939bce9c4310",
+  "ZAM-03bed5acea68",
+  "ZAM-939bce9c4310"
+ ],
+ "FMA:50771": [
+  "ZAF-5f4e778ff1b8",
+  "ZAF-a3dc78d3470d",
+  "ZAM-5f4e778ff1b8",
+  "ZAM-a3dc78d3470d"
+ ],
+ "FMA:50772": [
+  "ZAF-c0f1f4ec2242",
+  "ZAF-e4e05ac9b4e1",
+  "ZAM-c0f1f4ec2242",
+  "ZAM-e4e05ac9b4e1"
+ ],
+ "FMA:50774": [
+  "ZAF-7073ce0d3c0f",
+  "ZAM-7073ce0d3c0f"
+ ],
+ "FMA:50775": [
+  "ZAF-30fe7e330e21",
+  "ZAM-30fe7e330e21"
+ ],
+ "FMA:50781": [
+  "ZAF-9d8166b76421",
+  "ZAM-9d8166b76421"
+ ],
+ "FMA:50782": [
+  "ZAF-b62de2e287bf",
+  "ZAF-c441be1649f8",
+  "ZAM-b62de2e287bf",
+  "ZAM-c441be1649f8"
+ ],
+ "FMA:50802": [
+  "ZAF-34a375d31938",
+  "ZAF-6ee7e83ee9c4",
+  "ZAM-34a375d31938",
+  "ZAM-6ee7e83ee9c4"
+ ],
+ "FMA:50851": [
+  "ZAF-09ac14296773",
+  "ZAF-fc26362a16ad",
+  "ZAM-09ac14296773",
+  "ZAM-fc26362a16ad"
+ ],
+ "FMA:50852": [
+  "ZAF-fc26362a16ad",
+  "ZAM-fc26362a16ad"
+ ],
+ "FMA:50853": [
+  "ZAF-09ac14296773",
+  "ZAM-09ac14296773"
+ ],
+ "FMA:50864": [
+  "ZAF-290cc7850cb3",
+  "ZAF-98979100178e",
+  "ZAM-290cc7850cb3",
+  "ZAM-98979100178e"
+ ],
+ "FMA:50866": [
+  "ZAF-bd593939c017",
+  "ZAF-f25c5a4d55ca",
+  "ZAM-bd593939c017",
+  "ZAM-f25c5a4d55ca"
+ ],
+ "FMA:50867": [
+  "ZAF-897ea754dbea",
+  "ZAF-f79712effcff",
+  "ZAM-897ea754dbea",
+  "ZAM-f79712effcff"
+ ],
+ "FMA:50868": [
+  "ZAF-285d276d5a2d",
+  "ZAF-3663aad29ddc",
+  "ZAM-285d276d5a2d",
+  "ZAM-3663aad29ddc"
+ ],
+ "FMA:50869": [
+  "ZAF-39329b79f46c",
+  "ZAF-d46362859eee"
+ ],
+ "FMA:50870": [
+  "ZAF-24199ee65ed3",
+  "ZAF-cdcd8dfbf87a",
+  "ZAM-24199ee65ed3",
+  "ZAM-cdcd8dfbf87a"
+ ],
+ "FMA:50871": [
+  "ZAF-224308748dc6",
+  "ZAF-6a84d5245495",
+  "ZAM-224308748dc6",
+  "ZAM-6a84d5245495"
+ ],
+ "FMA:50874": [
+  "ZAF-b699754e923d",
+  "ZAF-f8fc19aefeaa",
+  "ZAM-b699754e923d",
+  "ZAM-f8fc19aefeaa"
+ ],
+ "FMA:50875": [
+  "ZAF-c78fcc2cc482"
+ ],
+ "FMA:50876": [
+  "ZAF-b699754e923d",
+  "ZAM-b699754e923d"
+ ],
+ "FMA:50877": [
+  "ZAF-f8fc19aefeaa",
+  "ZAM-f8fc19aefeaa"
+ ],
+ "FMA:50878": [
+  "ZAF-f29d2405e9e9"
+ ],
+ "FMA:50879": [
+  "ZAF-290cc7850cb3",
+  "ZAM-290cc7850cb3"
+ ],
+ "FMA:50880": [
+  "ZAF-98979100178e",
+  "ZAM-98979100178e"
+ ],
+ "FMA:50881": [
+  "ZAF-f1ea6af05310"
+ ],
+ "FMA:50882": [
+  "ZAF-159842933828"
+ ],
+ "FMA:50884": [
+  "ZAF-bd593939c017",
+  "ZAM-bd593939c017"
+ ],
+ "FMA:50885": [
+  "ZAF-f25c5a4d55ca",
+  "ZAM-f25c5a4d55ca"
+ ],
+ "FMA:50886": [
+  "ZAF-897ea754dbea",
+  "ZAM-897ea754dbea"
+ ],
+ "FMA:50887": [
+  "ZAF-f79712effcff",
+  "ZAM-f79712effcff"
+ ],
+ "FMA:50888": [
+  "ZAF-285d276d5a2d",
+  "ZAM-285d276d5a2d"
+ ],
+ "FMA:50889": [
+  "ZAF-3663aad29ddc",
+  "ZAM-3663aad29ddc"
+ ],
+ "FMA:50890": [
+  "ZAF-39329b79f46c"
+ ],
+ "FMA:50891": [
+  "ZAF-d46362859eee"
+ ],
+ "FMA:50892": [
+  "ZAF-24199ee65ed3",
+  "ZAM-24199ee65ed3"
+ ],
+ "FMA:50893": [
+  "ZAF-78476e0dacdd",
+  "ZAF-d3449ee1dcdf",
+  "ZAM-78476e0dacdd",
+  "ZAM-d3449ee1dcdf"
+ ],
+ "FMA:50894": [
+  "ZAF-cdcd8dfbf87a",
+  "ZAM-cdcd8dfbf87a"
+ ],
+ "FMA:50895": [
+  "ZAF-78476e0dacdd",
+  "ZAM-78476e0dacdd"
+ ],
+ "FMA:50896": [
+  "ZAF-d3449ee1dcdf",
+  "ZAM-d3449ee1dcdf"
+ ],
+ "FMA:50897": [
+  "ZAF-77e1180aaa1f",
+  "ZAM-77e1180aaa1f"
+ ],
+ "FMA:50899": [
+  "ZAF-4f1e3d863ec6",
+  "ZAM-4f1e3d863ec6"
+ ],
+ "FMA:50901": [
+  "ZAF-224308748dc6",
+  "ZAM-224308748dc6"
+ ],
+ "FMA:50903": [
+  "ZAF-6a84d5245495",
+  "ZAM-6a84d5245495"
+ ],
+ "FMA:50925": [
+  "ZAF-e19e8aa483c1",
+  "ZAF-f24d1d668182",
+  "ZAM-e19e8aa483c1",
+  "ZAM-f24d1d668182"
+ ],
+ "FMA:50926": [
+  "ZAF-f24d1d668182",
+  "ZAM-f24d1d668182"
+ ],
+ "FMA:50927": [
+  "ZAF-e19e8aa483c1",
+  "ZAM-e19e8aa483c1"
+ ],
+ "FMA:50928": [
+  "ZAF-04ed6beda75b",
+  "ZAF-96bf5ae2e17a",
+  "ZAM-04ed6beda75b",
+  "ZAM-96bf5ae2e17a"
+ ],
+ "FMA:50929": [
+  "ZAF-96bf5ae2e17a",
+  "ZAM-96bf5ae2e17a"
+ ],
+ "FMA:50930": [
+  "ZAF-04ed6beda75b",
+  "ZAM-04ed6beda75b"
+ ],
+ "FMA:51246": [
+  "ZAM-5d77cbadd483",
+  "ZAM-93c3f588b5ad"
+ ],
+ "FMA:51247": [
+  "ZAM-6e521139712f",
+  "ZAM-f5572b90169b"
+ ],
+ "FMA:51248": [
+  "ZAM-93c3f588b5ad"
+ ],
+ "FMA:51249": [
+  "ZAM-5d77cbadd483"
+ ],
+ "FMA:51250": [
+  "ZAM-6e521139712f"
+ ],
+ "FMA:51251": [
+  "ZAM-f5572b90169b"
+ ],
+ "FMA:51289": [
+  "ZAF-a3dc78d3470d",
+  "ZAM-a3dc78d3470d"
+ ],
+ "FMA:51290": [
+  "ZAF-5f4e778ff1b8",
+  "ZAM-5f4e778ff1b8"
+ ],
+ "FMA:51291": [
+  "ZAF-03bed5acea68",
+  "ZAM-03bed5acea68"
+ ],
+ "FMA:51292": [
+  "ZAF-939bce9c4310",
+  "ZAM-939bce9c4310"
+ ],
+ "FMA:51293": [
+  "ZAF-b62de2e287bf",
+  "ZAM-b62de2e287bf"
+ ],
+ "FMA:51294": [
+  "ZAF-c441be1649f8",
+  "ZAM-c441be1649f8"
+ ],
+ "FMA:51402": [
+  "ZAF-e4e05ac9b4e1",
+  "ZAM-e4e05ac9b4e1"
+ ],
+ "FMA:51403": [
+  "ZAF-c0f1f4ec2242",
+  "ZAM-c0f1f4ec2242"
+ ],
+ "FMA:51489": [
+  "ZAF-6ee7e83ee9c4",
+  "ZAM-6ee7e83ee9c4"
+ ],
+ "FMA:51490": [
+  "ZAF-34a375d31938",
+  "ZAM-34a375d31938"
+ ],
+ "FMA:52538": [
+  "ZAF-169ca021e578",
+  "ZAF-542680395a74",
+  "ZAM-169ca021e578",
+  "ZAM-542680395a74"
+ ],
+ "FMA:52539": [
+  "ZAF-169ca021e578",
+  "ZAM-169ca021e578"
+ ],
+ "FMA:52540": [
+  "ZAF-542680395a74",
+  "ZAM-542680395a74"
+ ],
+ "FMA:52565": [
+  "ZAF-34459c1bff40",
+  "ZAM-34459c1bff40"
+ ],
+ "FMA:52566": [
+  "ZAF-91a1ef53799d",
+  "ZAM-91a1ef53799d"
+ ],
+ "FMA:52592": [
+  "ZAF-baf00bc7f6a9",
+  "ZAM-baf00bc7f6a9"
+ ],
+ "FMA:52593": [
+  "ZAF-9e4e91711290",
+  "ZAM-9e4e91711290"
+ ],
+ "FMA:52611": [
+  "ZAF-1466c401eb94",
+  "ZAF-543fd2159797",
+  "ZAM-1466c401eb94",
+  "ZAM-543fd2159797"
+ ],
+ "FMA:52612": [
+  "ZAF-3eca0265c57b",
+  "ZAF-a5c16b2461fc",
+  "ZAM-3eca0265c57b",
+  "ZAM-a5c16b2461fc"
+ ],
+ "FMA:52622": [
+  "ZAF-bbed84460b17"
+ ],
+ "FMA:52623": [
+  "ZAF-3e258c85c1f1"
+ ],
+ "FMA:52724": [
+  "ZAF-913c534deb19",
+  "ZAF-bd867d087d64",
+  "ZAM-913c534deb19",
+  "ZAM-bd867d087d64"
+ ],
+ "FMA:52725": [
+  "ZAF-bd867d087d64",
+  "ZAM-bd867d087d64"
+ ],
+ "FMA:52726": [
+  "ZAF-913c534deb19",
+  "ZAM-913c534deb19"
+ ],
+ "FMA:52728": [
+  "ZAF-0351758b1f49",
+  "ZAF-e41acb71ec80",
+  "ZAM-0351758b1f49",
+  "ZAM-e41acb71ec80"
+ ],
+ "FMA:52729": [
+  "ZAF-e41acb71ec80",
+  "ZAM-e41acb71ec80"
+ ],
+ "FMA:52730": [
+  "ZAF-0351758b1f49",
+  "ZAM-0351758b1f49"
+ ],
+ "FMA:52734": [
+  "ZAF-702c8eb69904"
+ ],
+ "FMA:52735": [
+  "ZAF-5bca3caebede"
+ ],
+ "FMA:52736": [
+  "ZAF-9bb01fe36dac"
+ ],
+ "FMA:52738": [
+  "ZAF-d28d5e333b3d"
+ ],
+ "FMA:52739": [
+  "ZAF-0c26a58bf8cb"
+ ],
+ "FMA:52740": [
+  "ZAF-e17c89319dae"
+ ],
+ "FMA:52748": [
+  "ZAF-7b674b3ccb4e"
+ ],
+ "FMA:52749": [
+  "ZAF-f641e56224db"
+ ],
+ "FMA:52751": [
+  "ZAF-e3ada0098be1",
+  "ZAF-e5cf8b686370"
+ ],
+ "FMA:52752": [
+  "ZAF-5193384422db",
+  "ZAF-b3684ce2f3ba"
+ ],
+ "FMA:52753": [
+  "ZAF-8b10b875e610",
+  "ZAF-98db24e196e7"
+ ],
+ "FMA:52781": [
+  "FIT-FJ2811"
+ ],
+ "FMA:52788": [
+  "ZAF-90b763a95c28"
+ ],
+ "FMA:52789": [
+  "ZAF-6a031e52cc4e"
+ ],
+ "FMA:52892": [
+  "ZAF-ccb359c1cf49"
+ ],
+ "FMA:52893": [
+  "ZAF-985d88f1ef73"
+ ],
+ "FMA:53059": [
+  "ZAF-52ba7b87549b",
+  "ZAF-6b5b634cdea0",
+  "ZAM-52ba7b87549b",
+  "ZAM-6b5b634cdea0"
+ ],
+ "FMA:53061": [
+  "ZAF-03f34668da5b",
+  "ZAF-3aa00027ed20",
+  "ZAM-03f34668da5b",
+  "ZAM-3aa00027ed20"
+ ],
+ "FMA:53066": [
+  "ZAF-347865a18950",
+  "ZAF-8cc7c0ad95a2",
+  "ZAM-347865a18950",
+  "ZAM-8cc7c0ad95a2"
+ ],
+ "FMA:53067": [
+  "ZAF-347865a18950",
+  "ZAM-347865a18950"
+ ],
+ "FMA:53068": [
+  "ZAF-8cc7c0ad95a2",
+  "ZAM-8cc7c0ad95a2"
+ ],
+ "FMA:53218": [
+  "ZAF-805bd7e84a9d",
+  "ZAF-996fe7c3e838",
+  "ZAM-805bd7e84a9d",
+  "ZAM-996fe7c3e838"
+ ],
+ "FMA:53219": [
+  "ZAF-805bd7e84a9d",
+  "ZAM-805bd7e84a9d"
+ ],
+ "FMA:53220": [
+  "ZAF-996fe7c3e838",
+  "ZAM-996fe7c3e838"
+ ],
+ "FMA:53228": [
+  "ZAF-6be7b3f69afc",
+  "ZAF-9c12847f0fc3",
+  "ZAM-6be7b3f69afc",
+  "ZAM-9c12847f0fc3"
+ ],
+ "FMA:53229": [
+  "ZAF-9c12847f0fc3",
+  "ZAM-9c12847f0fc3"
+ ],
+ "FMA:53230": [
+  "ZAF-6be7b3f69afc",
+  "ZAM-6be7b3f69afc"
+ ],
+ "FMA:53243": [
+  "ZAF-2c8e8b3789bb",
+  "ZAF-36104d7f028d",
+  "ZAM-2c8e8b3789bb",
+  "ZAM-36104d7f028d"
+ ],
+ "FMA:53244": [
+  "ZAF-2c8e8b3789bb",
+  "ZAM-2c8e8b3789bb"
+ ],
+ "FMA:53245": [
+  "ZAF-36104d7f028d",
+  "ZAM-36104d7f028d"
+ ],
+ "FMA:53247": [
+  "ZAF-6917cd2c2eb0",
+  "ZAF-98a56fbc5167",
+  "ZAM-6917cd2c2eb0",
+  "ZAM-98a56fbc5167"
+ ],
+ "FMA:53248": [
+  "ZAF-98a56fbc5167",
+  "ZAM-98a56fbc5167"
+ ],
+ "FMA:53249": [
+  "ZAF-6917cd2c2eb0",
+  "ZAM-6917cd2c2eb0"
+ ],
+ "FMA:53250": [
+  "ZAF-2a7efcffff41",
+  "ZAF-fe3300479e5e",
+  "ZAM-2a7efcffff41",
+  "ZAM-fe3300479e5e"
+ ],
+ "FMA:53251": [
+  "ZAF-2a7efcffff41",
+  "ZAM-2a7efcffff41"
+ ],
+ "FMA:53252": [
+  "ZAF-fe3300479e5e",
+  "ZAM-fe3300479e5e"
+ ],
+ "FMA:53645": [
+  "ZAF-3422bec81726"
+ ],
+ "FMA:53646": [
+  "ZAF-625901c06776"
+ ],
+ "FMA:53647": [
+  "ZAF-a3dfb8122eae"
+ ],
+ "FMA:53648": [
+  "ZAF-a1afdf55b131"
+ ],
+ "FMA:53649": [
+  "ZAF-11acfbfb24f7"
+ ],
+ "FMA:53650": [
+  "ZAF-9c68c2367b91"
+ ],
+ "FMA:53655": [
+  "ZAF-129618d97734"
+ ],
+ "FMA:53656": [
+  "ZAF-19c7148f2d9c"
+ ],
+ "FMA:54504": [
+  "ZAM-26349108a64a",
+  "ZAM-a9fba11849e1"
+ ],
+ "FMA:54505": [
+  "ZAM-03e411b757ba",
+  "ZAM-a81903d0c111"
+ ],
+ "FMA:54506": [
+  "ZAM-26349108a64a"
+ ],
+ "FMA:54507": [
+  "ZAM-a9fba11849e1"
+ ],
+ "FMA:54508": [
+  "ZAM-03e411b757ba"
+ ],
+ "FMA:54509": [
+  "ZAM-a81903d0c111"
+ ],
+ "FMA:54510": [
+  "ZAM-70dd5e1a78c4",
+  "ZAM-d34f7adee788"
+ ],
+ "FMA:54518": [
+  "ZAM-135485b21cde",
+  "ZAM-3cace47a7714"
+ ],
+ "FMA:54519": [
+  "ZAM-3cace47a7714"
+ ],
+ "FMA:54520": [
+  "ZAM-135485b21cde"
+ ],
+ "FMA:54582": [
+  "ZAM-3c46acccab2f",
+  "ZAM-3cc406c47879"
+ ],
+ "FMA:54585": [
+  "ZAM-deccd7ca7032",
+  "ZAM-e6653025c10b"
+ ],
+ "FMA:54588": [
+  "ZAM-7c8ba165a4b2",
+  "ZAM-e960337e5fcd"
+ ],
+ "FMA:54589": [
+  "ZAM-7c8ba165a4b2"
+ ],
+ "FMA:54590": [
+  "ZAM-e960337e5fcd"
+ ],
+ "FMA:54621": [
+  "ZAM-5026940fe09d",
+  "ZAM-9580352b4485"
+ ],
+ "FMA:54622": [
+  "ZAM-9580352b4485"
+ ],
+ "FMA:54623": [
+  "ZAM-5026940fe09d"
+ ],
+ "FMA:54624": [
+  "ZAM-3ff8e95531b3",
+  "ZAM-8b57fb8c08f3"
+ ],
+ "FMA:54625": [
+  "ZAM-3ff8e95531b3"
+ ],
+ "FMA:54626": [
+  "ZAM-8b57fb8c08f3"
+ ],
+ "FMA:54683": [
+  "ZAF-4c2db3ea84cb",
+  "ZAM-4c2db3ea84cb"
+ ],
+ "FMA:54737": [
+  "ZAF-80c39c103ba9"
+ ],
+ "FMA:54738": [
+  "ZAF-8f716d1a4b1c"
+ ],
+ "FMA:54878": [
+  "ZAF-e1ac3c6a8aef",
+  "ZAM-e1ac3c6a8aef"
+ ],
+ "FMA:54879": [
+  "ZAF-6b23b9e1f321",
+  "ZAM-6b23b9e1f321"
+ ],
+ "FMA:54880": [
+  "ZAF-0033ce15aa2f",
+  "ZAM-0033ce15aa2f"
+ ],
+ "FMA:54921": [
+  "FIT-FJ2771"
+ ],
+ "FMA:55138": [
+  "ZAF-e6258bdc0cf9",
+  "ZAM-e6258bdc0cf9"
+ ],
+ "FMA:55139": [
+  "ZAF-3c79e3f12652",
+  "ZAF-74b5ba10a2f4",
+  "ZAM-3c79e3f12652",
+  "ZAM-74b5ba10a2f4"
+ ],
+ "FMA:55140": [
+  "ZAF-74b5ba10a2f4",
+  "ZAM-74b5ba10a2f4"
+ ],
+ "FMA:55141": [
+  "ZAF-3c79e3f12652",
+  "ZAM-3c79e3f12652"
+ ],
+ "FMA:55230": [
+  "FIT-FJ2807"
+ ],
+ "FMA:55237": [
+  "ZAF-45233ade880d",
+  "ZAM-45233ade880d"
+ ],
+ "FMA:55245": [
+  "FIT-FJ2805"
+ ],
+ "FMA:55246": [
+  "FIT-FJ2787"
+ ],
+ "FMA:55260": [
+  "ZAF-1405edd7b8eb",
+  "ZAF-e315c621380f",
+  "ZAM-1405edd7b8eb",
+  "ZAM-e315c621380f"
+ ],
+ "FMA:55377": [
+  "ZAF-e315c621380f",
+  "ZAM-e315c621380f"
+ ],
+ "FMA:55378": [
+  "ZAF-1405edd7b8eb",
+  "ZAM-1405edd7b8eb"
+ ],
+ "FMA:55558": [
+  "ZAF-aae9bd88c76b",
+  "ZAF-ef1bbe848335",
+  "ZAM-aae9bd88c76b",
+  "ZAM-ef1bbe848335"
+ ],
+ "FMA:55559": [
+  "ZAF-7fc13dea26fe",
+  "ZAF-926e577fa80d",
+  "ZAM-7fc13dea26fe",
+  "ZAM-926e577fa80d"
+ ],
+ "FMA:55560": [
+  "ZAF-ef1bbe848335",
+  "ZAM-ef1bbe848335"
+ ],
+ "FMA:55561": [
+  "ZAF-aae9bd88c76b",
+  "ZAM-aae9bd88c76b"
+ ],
+ "FMA:55562": [
+  "ZAF-926e577fa80d",
+  "ZAM-926e577fa80d"
+ ],
+ "FMA:55563": [
+  "ZAF-7fc13dea26fe",
+  "ZAM-7fc13dea26fe"
+ ],
+ "FMA:55606": [
+  "ZAF-357f31df93f0",
+  "ZAM-357f31df93f0"
+ ],
+ "FMA:55607": [
+  "ZAF-3bc81aa7f223",
+  "ZAM-3bc81aa7f223"
+ ],
+ "FMA:55608": [
+  "ZAF-ee7362816bb0",
+  "ZAM-ee7362816bb0"
+ ],
+ "FMA:55609": [
+  "ZAF-fe5e3dfdd657",
+  "ZAM-fe5e3dfdd657"
+ ],
+ "FMA:55610": [
+  "ZAF-67a6c81b2221",
+  "ZAM-67a6c81b2221"
+ ],
+ "FMA:55611": [
+  "ZAF-b1264647fb65",
+  "ZAM-b1264647fb65"
+ ],
+ "FMA:56427": [
+  "ZAF-62bd4f1e41f0"
+ ],
+ "FMA:56428": [
+  "ZAF-692797372fca"
+ ],
+ "FMA:57050": [
+  "ZAF-493db39376b2",
+  "ZAF-4b7720b4079e",
+  "ZAM-493db39376b2",
+  "ZAM-4b7720b4079e"
+ ],
+ "FMA:57059": [
+  "ZAF-9179ddf4eea3",
+  "ZAF-afd8787521b9",
+  "ZAM-9179ddf4eea3",
+  "ZAM-afd8787521b9"
+ ],
+ "FMA:57071": [
+  "ZAF-4b0d03b5ab5b",
+  "ZAF-4e4ddcd91a80",
+  "ZAM-4b0d03b5ab5b",
+  "ZAM-4e4ddcd91a80"
+ ],
+ "FMA:57083": [
+  "ZAF-3bacf1decb1a",
+  "ZAF-65a1239ed8bb",
+  "ZAM-3bacf1decb1a",
+  "ZAM-65a1239ed8bb"
+ ],
+ "FMA:57084": [
+  "ZAF-65a1239ed8bb",
+  "ZAM-65a1239ed8bb"
+ ],
+ "FMA:57086": [
+  "ZAF-3bacf1decb1a",
+  "ZAM-3bacf1decb1a"
+ ],
+ "FMA:5731": [
+  "ZAF-6df9aeaeb0de",
+  "ZAF-f558d274e3d1",
+  "ZAM-6df9aeaeb0de",
+  "ZAM-f558d274e3d1"
+ ],
+ "FMA:57417": [
+  "ZAF-f14e9d77d596",
+  "ZAM-f14e9d77d596"
+ ],
+ "FMA:57468": [
+  "ZAF-bb203bd91760",
+  "ZAM-bb203bd91760"
+ ],
+ "FMA:57469": [
+  "ZAF-43672d739ef9",
+  "ZAM-43672d739ef9"
+ ],
+ "FMA:57470": [
+  "ZAF-933605857bb1",
+  "ZAM-933605857bb1"
+ ],
+ "FMA:57471": [
+  "ZAF-8c13088014f3",
+  "ZAM-8c13088014f3"
+ ],
+ "FMA:57472": [
+  "ZAF-2397b7bbb5a1",
+  "ZAM-2397b7bbb5a1"
+ ],
+ "FMA:57473": [
+  "ZAF-e3ec21b207a4",
+  "ZAM-e3ec21b207a4"
+ ],
+ "FMA:59087": [
+  "ZAF-ea000632c84b",
+  "ZAF-fa5a2ef1092f"
+ ],
+ "FMA:59088": [
+  "ZAF-765cd2e0479f",
+  "ZAF-fe89cdb1e135"
+ ],
+ "FMA:59102": [
+  "ZAF-4fdbd5bff4fa"
+ ],
+ "FMA:59103": [
+  "ZAF-00ea6f8d7a3a"
+ ],
+ "FMA:59503": [
+  "ZAF-a0cd53c20c72"
+ ],
+ "FMA:59505": [
+  "ZAF-84a29c22d442"
+ ],
+ "FMA:59506": [
+  "ZAF-6a2e832f293c"
+ ],
+ "FMA:59512": [
+  "ZAF-ba6c0e2b23ee"
+ ],
+ "FMA:59513": [
+  "ZAF-eea0edcc84b0"
+ ],
+ "FMA:59545": [
+  "ZAF-2a9891a5c51d"
+ ],
+ "FMA:59546": [
+  "ZAF-e8608c5c357c"
+ ],
+ "FMA:59555": [
+  "ZAF-3ab2a1e64941"
+ ],
+ "FMA:59556": [
+  "ZAF-519da58ef7e9"
+ ],
+ "FMA:59582": [
+  "ZAF-8f9e9515e55d"
+ ],
+ "FMA:59583": [
+  "ZAF-a1e04390b779"
+ ],
+ "FMA:59684": [
+  "ZAF-6a2ea473ab42",
+  "ZAM-6a2ea473ab42"
+ ],
+ "FMA:59823": [
+  "ZAF-02f57c471556",
+  "ZAF-dc604217f422",
+  "ZAM-02f57c471556",
+  "ZAM-dc604217f422"
+ ],
+ "FMA:59825": [
+  "ZAF-02f57c471556",
+  "ZAM-02f57c471556"
+ ],
+ "FMA:59826": [
+  "ZAF-dc604217f422",
+  "ZAM-dc604217f422"
+ ],
+ "FMA:59866": [
+  "ZAF-f49a4eef0410",
+  "ZAM-f49a4eef0410"
+ ],
+ "FMA:59867": [
+  "ZAF-6ddad6d4821f",
+  "ZAM-6ddad6d4821f"
+ ],
+ "FMA:60054": [
+  "ZAF-ec8143934f20",
+  "ZAM-ec8143934f20"
+ ],
+ "FMA:60055": [
+  "ZAF-c8b22f1b3e2c",
+  "ZAM-c8b22f1b3e2c"
+ ],
+ "FMA:60201": [
+  "ZAF-6ab332b03331",
+  "ZAF-d021e69a9cb1"
+ ],
+ "FMA:60202": [
+  "ZAF-d021e69a9cb1"
+ ],
+ "FMA:60203": [
+  "ZAF-6ab332b03331"
+ ],
+ "FMA:61225": [
+  "ZAF-7566a976a5c7",
+  "ZAF-9fa057627dcf",
+  "ZAM-7566a976a5c7",
+  "ZAM-9fa057627dcf"
+ ],
+ "FMA:61227": [
+  "ZAF-76c827571ea9",
+  "ZAF-c88c17788bb0",
+  "ZAM-76c827571ea9",
+  "ZAM-c88c17788bb0"
+ ],
+ "FMA:6219": [
+  "ZAF-6df9aeaeb0de",
+  "ZAM-6df9aeaeb0de"
+ ],
+ "FMA:6220": [
+  "ZAF-f558d274e3d1",
+  "ZAM-f558d274e3d1"
+ ],
+ "FMA:62407": [
+  "ZAM-c09f67e31a03",
+  "ZAM-d42531974308"
+ ],
+ "FMA:6258": [
+  "ZAM-072c13357d7a",
+  "ZAM-61e6f18fc098"
+ ],
+ "FMA:6259": [
+  "ZAM-072c13357d7a"
+ ],
+ "FMA:6260": [
+  "ZAM-61e6f18fc098"
+ ],
+ "FMA:65216": [
+  "ZAF-286b1770197c",
+  "ZAF-956f95278528",
+  "ZAM-286b1770197c",
+  "ZAM-956f95278528"
+ ],
+ "FMA:65217": [
+  "ZAF-797da324f7fe",
+  "ZAF-da0820d0dc7e",
+  "ZAM-797da324f7fe",
+  "ZAM-da0820d0dc7e"
+ ],
+ "FMA:65218": [
+  "ZAF-3b1324c288ec",
+  "ZAF-7491820cc077",
+  "ZAM-3b1324c288ec",
+  "ZAM-7491820cc077"
+ ],
+ "FMA:65279": [
+  "ZAF-719251cd6f58",
+  "ZAF-d6a58a68d49d",
+  "ZAM-719251cd6f58",
+  "ZAM-d6a58a68d49d"
+ ],
+ "FMA:65280": [
+  "ZAF-473ff806335c",
+  "ZAF-92eda675ab20",
+  "ZAM-473ff806335c",
+  "ZAM-92eda675ab20"
+ ],
+ "FMA:65283": [
+  "ZAF-d6a58a68d49d",
+  "ZAM-d6a58a68d49d"
+ ],
+ "FMA:65284": [
+  "ZAF-719251cd6f58",
+  "ZAM-719251cd6f58"
+ ],
+ "FMA:65285": [
+  "ZAF-473ff806335c",
+  "ZAM-473ff806335c"
+ ],
+ "FMA:65286": [
+  "ZAF-92eda675ab20",
+  "ZAM-92eda675ab20"
+ ],
+ "FMA:66083": [
+  "ZAF-835394bc1099",
+  "ZAM-835394bc1099"
+ ],
+ "FMA:66084": [
+  "ZAF-fee061bb2633",
+  "ZAM-fee061bb2633"
+ ],
+ "FMA:6720": [
+  "ZAF-4f1e3d863ec6",
+  "ZAF-77e1180aaa1f",
+  "ZAM-4f1e3d863ec6",
+  "ZAM-77e1180aaa1f"
+ ],
+ "FMA:70848": [
+  "ZAF-1ae184d2e6bf",
+  "ZAF-2e449a2cba94",
+  "ZAM-1ae184d2e6bf",
+  "ZAM-2e449a2cba94"
+ ],
+ "FMA:70849": [
+  "ZAF-1e7cb034d5f6",
+  "ZAF-a241ab0a4d19",
+  "ZAM-1e7cb034d5f6",
+  "ZAM-a241ab0a4d19"
+ ],
+ "FMA:70850": [
+  "ZAF-78fe2f3a0dad",
+  "ZAF-92137db394ce",
+  "ZAM-78fe2f3a0dad",
+  "ZAM-92137db394ce"
+ ],
+ "FMA:71237": [
+  "ZAM-1e7b44522ea4"
+ ],
+ "FMA:71711": [
+  "ZAF-5dfe996f5fb6",
+  "ZAF-b8a387f50da2",
+  "ZAM-5dfe996f5fb6",
+  "ZAM-b8a387f50da2"
+ ],
+ "FMA:71712": [
+  "ZAF-551d75deb883",
+  "ZAF-d9c9574419b5",
+  "ZAM-551d75deb883",
+  "ZAM-d9c9574419b5"
+ ],
+ "FMA:71713": [
+  "ZAF-b09fb110e1af",
+  "ZAF-d0c02bd06fbb",
+  "ZAM-b09fb110e1af",
+  "ZAM-d0c02bd06fbb"
+ ],
+ "FMA:71714": [
+  "ZAF-0287a04acac1",
+  "ZAF-a6b39cab1ceb",
+  "ZAM-0287a04acac1",
+  "ZAM-a6b39cab1ceb"
+ ],
+ "FMA:71716": [
+  "ZAF-268714fc72c6",
+  "ZAF-3c3529363f22",
+  "ZAM-268714fc72c6",
+  "ZAM-3c3529363f22"
+ ],
+ "FMA:71720": [
+  "ZAF-4f5cb9dc450e",
+  "ZAF-87d3ab25c559",
+  "ZAM-4f5cb9dc450e",
+  "ZAM-87d3ab25c559"
+ ],
+ "FMA:71721": [
+  "ZAF-76962e78e328",
+  "ZAF-f1bc38e3b8eb",
+  "ZAM-76962e78e328",
+  "ZAM-f1bc38e3b8eb"
+ ],
+ "FMA:71724": [
+  "ZAF-4839b236ed2d",
+  "ZAM-4839b236ed2d"
+ ],
+ "FMA:71729": [
+  "ZAF-2ad9106137d9",
+  "ZAF-2f93e1255239",
+  "ZAM-2ad9106137d9",
+  "ZAM-2f93e1255239"
+ ],
+ "FMA:71730": [
+  "ZAF-353321e011d8",
+  "ZAM-353321e011d8"
+ ],
+ "FMA:71731": [
+  "ZAF-0f1de6cd5b48",
+  "ZAF-13a9d0e48643",
+  "ZAM-0f1de6cd5b48",
+  "ZAM-13a9d0e48643"
+ ],
+ "FMA:71733": [
+  "ZAF-751664b966d0",
+  "ZAF-b26fe160f61d",
+  "ZAM-751664b966d0",
+  "ZAM-b26fe160f61d"
+ ],
+ "FMA:71735": [
+  "ZAF-2960a3880305",
+  "ZAF-cc6f5a40e4a5",
+  "ZAM-2960a3880305",
+  "ZAM-cc6f5a40e4a5"
+ ],
+ "FMA:72239": [
+  "ZAM-11541eeabf46",
+  "ZAM-e376e804acf6"
+ ],
+ "FMA:72309": [
+  "FIT-FJ2764"
+ ],
+ "FMA:72311": [
+  "FIT-FJ2763"
+ ],
+ "FMA:72482": [
+  "ZAM-a463986ccc8d",
+  "ZAM-b7094a221c62"
+ ],
+ "FMA:72495": [
+  "ZAM-083b7e103f1c",
+  "ZAM-7ba8f807eba6"
+ ],
+ "FMA:72601": [
+  "ZAM-9da27343ea09",
+  "ZAM-c73638e52acb"
+ ],
+ "FMA:73491": [
+  "ZAM-d42531974308"
+ ],
+ "FMA:73492": [
+  "ZAM-c09f67e31a03"
+ ],
+ "FMA:73594": [
+  "ZAM-a463986ccc8d"
+ ],
+ "FMA:73595": [
+  "ZAM-b7094a221c62"
+ ],
+ "FMA:73614": [
+  "ZAM-083b7e103f1c"
+ ],
+ "FMA:73615": [
+  "ZAM-7ba8f807eba6"
+ ],
+ "FMA:73710": [
+  "ZAM-e376e804acf6"
+ ],
+ "FMA:73711": [
+  "ZAM-11541eeabf46"
+ ],
+ "FMA:73801": [
+  "ZAM-c73638e52acb"
+ ],
+ "FMA:73802": [
+  "ZAM-9da27343ea09"
+ ],
+ "FMA:74048": [
+  "ZAF-e3ada0098be1"
+ ],
+ "FMA:74049": [
+  "ZAF-e5cf8b686370"
+ ],
+ "FMA:74050": [
+  "ZAF-5193384422db"
+ ],
+ "FMA:74051": [
+  "ZAF-b3684ce2f3ba"
+ ],
+ "FMA:74052": [
+  "ZAF-8b10b875e610"
+ ],
+ "FMA:74053": [
+  "ZAF-98db24e196e7"
+ ],
+ "FMA:74627": [
+  "ZAM-bc1ffdb1d3b3"
+ ],
+ "FMA:74628": [
+  "ZAM-bdfcdbede465"
+ ],
+ "FMA:76861": [
+  "ZAF-7a55751342bc",
+  "ZAF-b8ac64337f3d",
+  "ZAM-7a55751342bc",
+  "ZAM-b8ac64337f3d"
+ ],
+ "FMA:76864": [
+  "ZAF-512164f3ec8c",
+  "ZAF-d443085488ed",
+  "ZAM-512164f3ec8c",
+  "ZAM-d443085488ed"
+ ],
+ "FMA:83965": [
+  "ZAM-4041b891bb64",
+  "ZAM-af6fd502644e"
+ ],
+ "FMA:83966": [
+  "ZAF-3c28b9893036",
+  "ZAF-ac2632d3e57b",
+  "ZAM-3c28b9893036",
+  "ZAM-ac2632d3e57b"
+ ],
+ "FMA:83967": [
+  "ZAF-414aeabd1b0a",
+  "ZAM-414aeabd1b0a"
+ ],
+ "FMA:85528": [
+  "ZAF-44ec932f71eb",
+  "ZAF-5888db4fad96",
+  "ZAM-44ec932f71eb",
+  "ZAM-5888db4fad96"
+ ],
+ "FMA:86266": [
+  "ZAM-2f25d8a3fbd1",
+  "ZAM-a6ca71d8ffc4"
+ ],
+ "FMA:9595": [
+  "ZAF-62bd4f1e41f0",
+  "ZAF-692797372fca"
+ ],
+ "FMA:9603": [
+  "ZAF-46ae9fe9b721"
+ ],
+ "FMA:9705": [
+  "ZAF-c8b22f1b3e2c",
+  "ZAF-ec8143934f20",
+  "ZAM-c8b22f1b3e2c",
+  "ZAM-ec8143934f20"
+ ],
+ "FMA:9710": [
+  "ZAF-d3e3e30bfd20"
+ ]
+}

@@ -32,6 +32,8 @@ export const MODULES: ModuleDef[] = [
     description: "Documented, parameterised physiological models computed by the simulation engine." },
   { id: "pathology", label: "Pathology Lab", href: "/pathology", icon: HeartPulse, status: "live",
     description: "Compare healthy and pathological states using educational models." },
+  { id: "library", label: "Body Systems", href: "/learn", icon: BookOpen, status: "live",
+    description: "Study the body system by system at three levels, with 3D links, key terms and quizzes." },
   { id: "histology", label: "Histology Lab", href: "#", icon: Microscope, status: "planned", phase: "Phase 6",
     description: "Virtual microscopy from organ to subcellular level." },
   { id: "imaging", label: "Medical Imaging", href: "#", icon: ScanLine, status: "planned", phase: "Phase 6",
@@ -40,8 +42,6 @@ export const MODULES: ModuleDef[] = [
     description: "Simulated virtual patients with decision feedback." },
   { id: "assistant", label: "AI Assistant", href: "#", icon: Bot, status: "planned", phase: "Phase 7",
     description: "Context-aware, cited educational assistant." },
-  { id: "library", label: "Learning Library", href: "#", icon: BookOpen, status: "planned", phase: "Phase 8",
-    description: "Courses, pathways, flashcards and spaced repetition." },
   { id: "assessments", label: "Assessments", href: "#", icon: ClipboardCheck, status: "planned", phase: "Phase 8",
     description: "Quizzes, mock examinations and 3D identification tests." },
 ];

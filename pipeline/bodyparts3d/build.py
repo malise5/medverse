@@ -71,7 +71,8 @@ def load_isa_parents(src: Path) -> dict[str, set[str]]:
             isa[c].add(p)
     else:
         print(
-            "warning: IS-A relations not found; classification uses PART-OF only", file=sys.stderr
+            "warning: IS-A relations not found; classification uses PART-OF only",
+            file=sys.stderr,
         )
     return isa
 
@@ -178,7 +179,11 @@ def parse_obj(path: Path) -> tuple[np.ndarray, np.ndarray, str | None]:
                 idx = [i - 1 if i > 0 else len(verts) + i for i in idx]
                 for k in range(1, len(idx) - 1):
                     faces.append([idx[0], idx[k], idx[k + 1]])
-    return np.asarray(verts, dtype=np.float64), np.asarray(faces, dtype=np.uint32), concept
+    return (
+        np.asarray(verts, dtype=np.float64),
+        np.asarray(faces, dtype=np.uint32),
+        concept,
+    )
 
 
 def read_header_concept(path: Path) -> str | None:
@@ -189,11 +194,57 @@ def read_header_concept(path: Path) -> str | None:
     return None
 
 
+def taubin_smooth(
+    v: np.ndarray,
+    f: np.ndarray,
+    iterations: int,
+    lam: float = 0.5,
+    mu: float = -0.53,
+    max_shift: float = 2.0,
+) -> np.ndarray:
+    """Taubin lambda|mu smoothing: removes the faceting left by 99 % decimation without
+    the shrinkage of plain Laplacian smoothing. Boundary vertices (open rims) are pinned
+    so that openings keep their size and neighbouring meshes stay in contact."""
+    if iterations <= 0 or len(f) == 0:
+        return v
+    edges = np.concatenate([f[:, [0, 1]], f[:, [1, 2]], f[:, [2, 0]]])
+    key = np.sort(edges, axis=1)
+    _, inverse, counts = np.unique(key, axis=0, return_inverse=True, return_counts=True)
+    boundary = np.zeros(len(v), dtype=bool)
+    open_edges = key[counts[inverse.ravel()] == 1]
+    boundary[open_edges.ravel()] = True
+    src = np.concatenate([edges[:, 0], edges[:, 1]])
+    dst = np.concatenate([edges[:, 1], edges[:, 0]])
+    degree = np.bincount(src, minlength=len(v)).astype(np.float64)
+    degree[degree == 0] = 1
+    out = v.astype(np.float64).copy()
+    movable = ~boundary[:, None]
+    for _ in range(iterations):
+        for factor in (lam, mu):
+            nbr = np.zeros_like(out)
+            np.add.at(nbr, src, out[dst])
+            delta = nbr / degree[:, None] - out
+            out = out + factor * delta * movable
+    # Never move a vertex further than max_shift (mm) or 1.5 % of the mesh's extent, so
+    # thin structures keep their shape; the aim is to remove facets, not to remodel.
+    cap = min(max_shift, 0.015 * float(np.linalg.norm(v.max(0) - v.min(0))))
+    shift = out - v
+    norm = np.linalg.norm(shift, axis=1, keepdims=True)
+    scale = np.minimum(1.0, cap / np.maximum(norm, 1e-12))
+    return v + shift * scale
+
+
 def to_scene(v: np.ndarray) -> np.ndarray:
     return np.stack([v[:, 0], v[:, 2], -v[:, 1]], axis=1) * 0.001
 
 
-def write_glb(path: Path, meshes: list[dict]) -> None:
+def write_glb(
+    path: Path,
+    meshes: list[dict],
+    *,
+    generator: str = "medverse-pipeline/bodyparts3d",
+    copyright: str | None = None,
+) -> None:
     """Minimal glTF 2.0 binary writer: one node + mesh per element, no materials.
 
     Normals are omitted (computed on the client) to halve payload size.
@@ -209,7 +260,12 @@ def write_glb(path: Path, meshes: list[dict]) -> None:
             bin_chunks.append(b"\x00" * pad)
             offset += pad
         buffer_views.append(
-            {"buffer": 0, "byteOffset": offset, "byteLength": len(data), "target": target}
+            {
+                "buffer": 0,
+                "byteOffset": offset,
+                "byteLength": len(data),
+                "target": target,
+            }
         )
         bin_chunks.append(data)
         offset += len(data)
@@ -243,7 +299,10 @@ def write_glb(path: Path, meshes: list[dict]) -> None:
         )
         ia = len(accessors) - 1
         gl_meshes.append(
-            {"name": m["id"], "primitives": [{"attributes": {"POSITION": pa}, "indices": ia}]}
+            {
+                "name": m["id"],
+                "primitives": [{"attributes": {"POSITION": pa}, "indices": ia}],
+            }
         )
         extras = {"structureId": m["structure_id"]}
         if m.get("group"):
@@ -255,8 +314,8 @@ def write_glb(path: Path, meshes: list[dict]) -> None:
     gltf = {
         "asset": {
             "version": "2.0",
-            "generator": "medverse-pipeline/bodyparts3d",
-            "copyright": ATTRIBUTION,
+            "generator": generator,
+            "copyright": copyright or ATTRIBUTION,
         },
         "scene": 0,
         "scenes": [{"nodes": list(range(len(nodes)))}],
@@ -300,12 +359,29 @@ def main() -> int:
         description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter
     )
     ap.add_argument("--source", type=Path, required=True)
-    ap.add_argument("--out-content", type=Path, default=REPO / "content/generated/bodyparts3d")
     ap.add_argument(
-        "--out-assets", type=Path, default=REPO / "frontend/public/assets/anatomy/bp3d-4.0"
+        "--smooth-iterations",
+        type=int,
+        default=3,
+        help="Taubin smoothing passes per mesh (0 disables); see taubin_smooth()",
     )
     ap.add_argument(
-        "--no-compress", action="store_true", help="skip meshopt compression (needs npx)"
+        "--isa-source",
+        type=Path,
+        help="unzipped isa_BP3D_4.0_obj_99 directory: adds IS-A-only head elements",
+    )
+    ap.add_argument("--spl-head-neck", type=Path, help="SPL Head and Neck atlas zip")
+    ap.add_argument("--spl-inner-ear", type=Path, help="SPL Inner Ear atlas zip")
+    ap.add_argument("--out-content", type=Path, default=REPO / "content/generated/bodyparts3d")
+    ap.add_argument(
+        "--out-assets",
+        type=Path,
+        default=REPO / "frontend/public/assets/anatomy/bp3d-4.0",
+    )
+    ap.add_argument(
+        "--no-compress",
+        action="store_true",
+        help="skip meshopt compression (needs npx)",
     )
     args = ap.parse_args()
 
@@ -319,7 +395,10 @@ def main() -> int:
     obj_files = {p.stem: p for p in args.source.rglob("*.obj")}
     missing_obj = sorted(set(owners) - set(obj_files))
     if missing_obj:
-        print(f"warning: {len(missing_obj)} element files listed but not found", file=sys.stderr)
+        print(
+            f"warning: {len(missing_obj)} element files listed but not found",
+            file=sys.stderr,
+        )
 
     # Each OBJ header names its element's concept authoritatively; the tree-derived
     # owner is the cross-check and the fallback when a header is absent.
@@ -387,17 +466,116 @@ def main() -> int:
         if c in names and p in names
     ]
 
+    # Head supplements (IS-A elements, SPL atlases): see supplements.py.
+    extra_geometry: dict[str, tuple[np.ndarray, np.ndarray, bool]] = {}
+    supplement_report: dict = {}
+    extra_attribution: dict[str, str] = {}
+    if args.isa_source or args.spl_head_neck:
+        from supplements import (
+            SKULL_BONES,
+            SPL_ATTRIBUTION,
+            head_floor_mm,
+            isa_head_elements,
+            spl_head_elements,
+            system_by_name,
+        )
+
+        by_name = {n: c for c, n in names.items()}
+        bone_vertices = {
+            b: np.vstack(
+                [
+                    parse_obj(obj_files[fj])[0]
+                    for fj in sorted(elements[by_name[b]])
+                    if fj in obj_files
+                ]
+            )
+            for b in SKULL_BONES
+        }
+        extras: list[dict] = []
+        if args.isa_source:
+            isa_els, skipped = isa_head_elements(
+                args.source, args.isa_source, names, head_floor_mm(bone_vertices), parse_obj
+            )
+            extras += isa_els
+            supplement_report["isa_head_elements"] = {"added": len(isa_els), "skipped": skipped}
+        if args.spl_head_neck and args.spl_inner_ear:
+            spl_els, reg_report = spl_head_elements(
+                args.spl_head_neck, args.spl_inner_ear, bone_vertices
+            )
+            extras += spl_els
+            supplement_report["spl_registration"] = reg_report
+            supplement_report["spl_meshes"] = len(spl_els)
+        structure_ids = {s["id"] for s in structures}
+        elements_before = set(names)
+        for e in extras:
+            cid, fj = e["concept"], e["element"]
+            if cid not in names:
+                names[cid] = e["name"]
+            if curie(cid) not in structure_ids:
+                system_of[cid] = e.get("system") or classify(
+                    cid, systems, parents, memo, isa_parents, isa_memo
+                )
+                if system_of[cid] == "unclassified":
+                    system_of[cid] = system_by_name(names[cid]) or "unclassified"
+                structures.append(
+                    {
+                        "id": curie(cid),
+                        "name": names[cid],
+                        "system_id": system_of[cid],
+                        "laterality": laterality(names[cid]),
+                        "is_compound": False,
+                        # where the geometry comes from (the identity is the FMA term)
+                        "identity_source": "bodyparts3d-4.0-isa"
+                        if e["source"] == "isa"
+                        else "spl-atlas",
+                    }
+                )
+                structure_ids.add(curie(cid))
+                if e.get("parent") and e["parent"] != cid:
+                    parents.setdefault(cid, set()).add(e["parent"])
+                    relationships.append(
+                        {
+                            "subject": curie(cid),
+                            "predicate": "part_of",
+                            "object": curie(e["parent"]),
+                        }
+                    )
+            owners[fj] = cid
+            for c in {cid} | ancestors(cid, parents, memo):
+                elements.setdefault(c, set()).add(fj)
+            extra_geometry[fj] = (e["vertices"], e["faces"], e["source"] == "isa")
+            if e["source"].startswith("spl"):
+                extra_attribution[fj] = SPL_ATTRIBUTION
+        # A name-inferred parent may be an IS-A concept without geometry (never added as
+        # a structure): drop those links rather than point at missing structures.
+        for c, ps in list(parents.items()):
+            missing = {q for q in ps if curie(q) not in structure_ids}
+            if missing and curie(c) in structure_ids and c not in elements_before:
+                parents[c] = ps - missing
+        relationships = [
+            r
+            for r in relationships
+            if r["subject"] in structure_ids and r["object"] in structure_ids
+        ]
+        memo.clear()
+
     # Geometry: load and transform every element.
     raw: dict[str, tuple[np.ndarray, np.ndarray]] = {}
     lo, hi = np.full(3, np.inf), np.full(3, -np.inf)
     for fj in sorted(owners):
+        if fj in extra_geometry:
+            v, f, smooth = extra_geometry[fj]
+            v = to_scene(taubin_smooth(v, f, args.smooth_iterations) if smooth else v)
+            raw[fj] = (v, f)
+            lo, hi = np.minimum(lo, v.min(0)), np.maximum(hi, v.max(0))
+            continue
         if fj not in obj_files:
             continue
         v, f, _ = parse_obj(obj_files[fj])
         if len(v) == 0 or len(f) == 0:
             print(f"warning: {fj} is empty; skipped", file=sys.stderr)
             continue
-        v = to_scene(v)
+        v = to_scene(taubin_smooth(v, f, args.smooth_iterations))
         raw[fj] = (v, f)
         lo, hi = np.minimum(lo, v.min(0)), np.maximum(hi, v.max(0))
     shift = np.array([-(lo[0] + hi[0]) / 2, -lo[1], -(lo[2] + hi[2]) / 2])
@@ -440,8 +618,18 @@ def main() -> int:
                     f"BodyParts3D {DATASET_VERSION} (PART-OF tree, 99% polygon reduction"
                     + (")" if args.no_compress else ", meshopt-compressed)")
                 ),
-                "license": LICENSE,
-                "attribution": ATTRIBUTION,
+                "license": LICENSE
+                + (
+                    "; 3D Slicer License Part B"
+                    if any(m["id"] in extra_attribution for m in items)
+                    else ""
+                ),
+                "attribution": ATTRIBUTION
+                + (
+                    "; " + next(iter(extra_attribution.values()))
+                    if any(m["id"] in extra_attribution for m in items)
+                    else ""
+                ),
                 "version": DATASET_VERSION,
                 "sha256": hashlib.sha256(data).hexdigest(),
                 "byte_size": len(data),
@@ -488,17 +676,26 @@ def main() -> int:
             "max": (hi + shift).round(4).tolist(),
         },
         "per_system": {
-            sys_id: {"meshes": len(items), "triangles": int(sum(len(m["indices"]) for m in items))}
+            sys_id: {
+                "meshes": len(items),
+                "triangles": int(sum(len(m["indices"]) for m in items)),
+            }
             for sys_id, items in sorted(by_system.items())
         },
         "structures_per_system": {
             s: sum(1 for x in structures if x["system_id"] == s)
             for s in sorted(set(system_of.values()))
         },
+        # IS-A elements and registered SPL atlas meshes added for the head (supplements.py)
+        "supplements": supplement_report,
+        "atlas_derived_meshes": sorted(extra_attribution),
     }
     dump("pipeline_report.json", report)
     print(
-        json.dumps({k: (len(v) if isinstance(v, list) else v) for k, v in report.items()}, indent=1)
+        json.dumps(
+            {k: (len(v) if isinstance(v, list) else v) for k, v in report.items()},
+            indent=1,
+        )
     )
     return 0
 

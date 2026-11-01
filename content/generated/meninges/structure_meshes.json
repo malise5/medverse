@@ -1,0 +1,14 @@
+{
+ "FMA:71236": [
+  "MEN-M-dura",
+  "MEN-F-dura"
+ ],
+ "FMA:83981": [
+  "MEN-M-arachnoid",
+  "MEN-F-arachnoid"
+ ],
+ "FMA:78443": [
+  "MEN-M-pia",
+  "MEN-F-pia"
+ ]
+}

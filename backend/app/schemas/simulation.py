@@ -1,5 +1,6 @@
 import uuid
 from dataclasses import asdict
+from typing import Literal
 
 from pydantic import BaseModel, Field
 
@@ -25,6 +26,34 @@ class OutputSpecOut(BaseModel):
     description: str
 
 
+class AnimationBindingOut(BaseModel):
+    output: str
+    structure_ids: list[str]
+    effect: Literal["scale", "tint", "glow"]
+    amplitude: float
+    description: str
+    color: str | None
+    normalise: Literal["range", "magnitude"]
+
+
+class ReferenceLineOut(BaseModel):
+    label: str
+    slope_parameter: str
+    x_intercept_parameter: str
+    description: str
+
+
+class PhasePlotOut(BaseModel):
+    id: str
+    title: str
+    x: str
+    y: str
+    description: str
+    lines: list[ReferenceLineOut]
+    x_min: float | None
+    y_min: float | None
+
+
 class ModelDefinitionOut(BaseModel):
     id: str
     version: str
@@ -45,6 +74,10 @@ class ModelDefinitionOut(BaseModel):
     metrics: list[OutputSpecOut]
     linked_structure_ids: list[str]
     visual_mappings: dict[str, list[str]]
+    animations: list[AnimationBindingOut]
+    time_unit: Literal["s", "ms"]
+    playback_rate: float
+    phase_plots: list[PhasePlotOut]
     disclaimer: str
 
     @classmethod

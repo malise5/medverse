@@ -5,15 +5,47 @@ import { useDeferredValue, useState } from "react";
 
 import { Input } from "@/components/ui/input";
 import { useSearch } from "@/lib/api/queries";
+import type { AnatomicalSystem } from "@/lib/api/types";
 import { cn } from "@/lib/utils";
 
 import { SYSTEM_COLORS } from "../engine/palette";
 
-export function SearchPanel({ onSelect }: { onSelect: (id: string) => void }) {
+/** Everyday words for whole systems (UI search aliases, not anatomical synonyms). */
+const SYSTEM_ALIASES: Record<string, string[]> = {
+  cardiovascular: ["circulatory", "circulation", "blood vessels", "heart and vessels"],
+  skeletal: ["skeleton", "bones"],
+  muscular: ["muscles"],
+  nervous: ["nerves", "neural"],
+  respiratory: ["breathing", "airways"],
+  digestive: ["gut", "gastrointestinal"],
+  urinary: ["renal", "kidneys and bladder"],
+  integumentary: ["skin"],
+};
+
+export function matchSystems(systems: AnatomicalSystem[], query: string): AnatomicalSystem[] {
+  const q = query.trim().toLowerCase();
+  if (q.length < 3) return [];
+  return systems.filter((sys) => {
+    if (!sys.mesh_count) return false;
+    const terms = [sys.name.toLowerCase(), sys.id, ...(SYSTEM_ALIASES[sys.id] ?? [])];
+    return terms.some((t) => t.includes(q) || (q.includes(t) && t.length >= 4));
+  });
+}
+
+export function SearchPanel({
+  onSelect,
+  systems = [],
+  onSelectSystem,
+}: {
+  onSelect: (id: string) => void;
+  systems?: AnatomicalSystem[];
+  onSelectSystem?: (systemId: string) => void;
+}) {
   const [q, setQ] = useState("");
   const deferred = useDeferredValue(q);
   const results = useSearch(deferred);
   const hits = deferred.trim().length >= 2 ? (results.data ?? []) : [];
+  const systemHits = onSelectSystem ? matchSystems(systems, deferred) : [];
 
   return (
     <div className="grid gap-2">
@@ -39,8 +71,25 @@ export function SearchPanel({ onSelect }: { onSelect: (id: string) => void }) {
         )}
       </div>
       {results.isError && <p className="text-xs text-destructive">Search failed. Try again.</p>}
-      {deferred.trim().length >= 2 && !results.isFetching && hits.length === 0 && (
+      {deferred.trim().length >= 2 && !results.isFetching && hits.length === 0 && !systemHits.length && (
         <p className="px-1 text-xs text-muted-foreground">No structures match “{deferred}”.</p>
+      )}
+      {systemHits.length > 0 && (
+        <ul className="grid gap-0.5" aria-label="Matching body systems">
+          {systemHits.map((sys) => (
+            <li key={sys.id}>
+              <button
+                type="button"
+                onClick={() => onSelectSystem?.(sys.id)}
+                className="flex w-full items-center gap-2 rounded-md border border-primary/30 bg-primary/5 px-2 py-1.5 text-left text-sm hover:bg-primary/10"
+              >
+                <span aria-hidden className="size-2.5 shrink-0 rounded-sm" style={{ background: SYSTEM_COLORS[sys.id] }} />
+                <span className="flex-1 truncate">{sys.name}</span>
+                <span className="text-[10px] text-muted-foreground">whole system · {sys.structure_count}</span>
+              </button>
+            </li>
+          ))}
+        </ul>
       )}
       <ul className={cn("grid gap-0.5", results.isFetching && "opacity-70")} aria-label="Search results">
         {hits.map((h) => (

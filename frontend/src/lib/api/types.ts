@@ -117,9 +117,24 @@ export interface AssetBundle {
   byte_size: number;
   mesh_count: number;
   is_placeholder: boolean;
+  body_model: BodyModel;
+}
+
+/** The two complete 3D bodies; each comes from its own anatomical source. */
+export type BodyModel = "male" | "female";
+
+export interface BodyModelInfo {
+  id: BodyModel;
+  label: string;
+  description: string;
+  sources: string[];
+  license: string;
+  mesh_count: number;
+  systems: { system_id: string; mesh_count: number }[];
 }
 
 export interface AssetManifest {
+  body_model: BodyModel;
   bundles: AssetBundle[];
   meshes: Record<string, [bundleId: string, structureId: string]>;
 }
@@ -142,6 +157,38 @@ export interface OutputSpec {
   description: string;
 }
 
+/** How one output series drives the 3D view (presentation only; see backend core.py). */
+export interface AnimationBinding {
+  output: string;
+  structure_ids: string[];
+  effect: "scale" | "tint" | "glow";
+  amplitude: number;
+  description: string;
+  color: string | null;
+  /** "range": min→0, max→1; "magnitude": |v| / max|v| (signed quantities). */
+  normalise: "range" | "magnitude";
+}
+
+/** y = slope · (x − x_intercept); both name model parameters. */
+export interface ReferenceLine {
+  label: string;
+  slope_parameter: string;
+  x_intercept_parameter: string;
+  description: string;
+}
+
+/** One output series plotted against another (e.g. a pressure–volume loop). */
+export interface PhasePlot {
+  id: string;
+  title: string;
+  x: string;
+  y: string;
+  description: string;
+  lines: ReferenceLine[];
+  x_min: number | null;
+  y_min: number | null;
+}
+
 export interface ModelDefinition {
   id: string;
   version: string;
@@ -162,6 +209,11 @@ export interface ModelDefinition {
   metrics: OutputSpec[];
   linked_structure_ids: string[];
   visual_mappings: Record<string, string[]>;
+  animations: AnimationBinding[];
+  time_unit: "s" | "ms";
+  /** Model time units per real second during 3D playback. */
+  playback_rate: number;
+  phase_plots: PhasePlot[];
   disclaimer: string;
 }
 
@@ -207,4 +259,113 @@ export interface ConditionDetail extends ConditionSummary {
   affected_structures: { structure_id: string; name: string; role: string }[];
   scenarios: Scenario[];
   references: Reference[];
+}
+
+export interface StructureRef {
+  id: string;
+  name: string;
+}
+
+/** Inferred vessel routes (geometric contact of meshes, not curated anatomy). */
+export interface Circulation {
+  structure_id: string;
+  mode: "whole_circulation" | "organ_route" | "none";
+  organ_mesh_ids: string[];
+  /** mesh ID -> hops from the heart along the route */
+  arteries: Record<string, number>;
+  veins: Record<string, number>;
+  contact_arteries: StructureRef[];
+  contact_veins: StructureRef[];
+  unrouted_vessels: number;
+  method: string;
+}
+
+// --- Learning (body-system modules and quizzes) --------------------------------------
+
+export type LearningLevel = "basic" | "undergraduate" | "clinical";
+
+export interface Progress {
+  questions: number;
+  answered: number;
+  correct: number;
+}
+
+export interface ModuleSummary {
+  id: string;
+  title: string;
+  tagline: string;
+  latin_name: string | null;
+  display_order: number;
+  structure_count: number;
+  mesh_count: number;
+  progress: Progress;
+}
+
+export interface LevelText {
+  basic: string;
+  undergraduate: string;
+  clinical: string;
+}
+
+export interface ModuleOrgan {
+  name: string;
+  latin: string | null;
+  structure_id: string | null;
+  role: string;
+  in_3d: boolean;
+  structure_name: string | null;
+  /** Bodies whose 3D model contains this organ. */
+  body_models: BodyModel[];
+}
+
+export interface KeyTerm {
+  term: string;
+  latin: string | null;
+  origin: string | null;
+  definition: string;
+}
+
+export interface QuizQuestion {
+  id: string;
+  kind: "mcq" | "identify";
+  level: LearningLevel;
+  stem: string;
+  options: string[] | null;
+  /** Result of the learner's most recent attempt, or null if not attempted. */
+  last_correct: boolean | null;
+  /** Identify questions: bodies in which the answer can be selected. */
+  body_models: BodyModel[];
+}
+
+export interface ModuleDetail {
+  id: string;
+  title: string;
+  tagline: string;
+  latin_name: string | null;
+  objectives: string[];
+  overview: LevelText;
+  functions: { title: string; body: string }[];
+  organs: ModuleOrgan[];
+  works_with: { system: string; body: string }[];
+  key_terms: KeyTerm[];
+  facts: { label: string; value: string; note: string | null }[];
+  clinical_notes: string[];
+  asset_note: string | null;
+  questions: QuizQuestion[];
+  references: Reference[];
+  verification_status: VerificationStatus;
+  progress: Progress;
+}
+
+export interface AnswerResult {
+  correct: boolean;
+  correct_option: number | null;
+  accepted: { id: string; name: string }[];
+  explanation: string;
+  references: Reference[];
+}
+
+export interface GlossaryEntry extends KeyTerm {
+  module_id: string;
+  module_title: string;
 }

@@ -11,6 +11,7 @@ from sqlalchemy import (
     JSON,
     BigInteger,
     DateTime,
+    Float,
     ForeignKey,
     Index,
     Integer,
@@ -211,6 +212,8 @@ class AssetBundle(Base):
     byte_size: Mapped[int] = mapped_column(BigInteger)
     mesh_count: Mapped[int] = mapped_column(Integer)
     is_placeholder: Mapped[bool] = mapped_column(default=False)
+    # Which body the bundle belongs to ("male" or "female"); each has its own source.
+    body_model: Mapped[str] = mapped_column(String(16), default="male", index=True)
 
 
 class Mesh(Base):
@@ -226,6 +229,26 @@ class Mesh(Base):
         ForeignKey("structures.id", ondelete="CASCADE"), index=True
     )
     triangle_count: Mapped[int] = mapped_column(Integer)
+    # Vessel class from the FMA lineage (artery / vein / heart) for cardiovascular meshes.
+    render_group: Mapped[str | None] = mapped_column(String(16), default=None)
+
+
+class MeshContact(Base):
+    """Geometric proximity between two meshes (pipeline-derived, mm; mesh_a < mesh_b).
+
+    Proximity is not curated anatomy: it is used to infer likely vessel routes and must be
+    presented as an inference.
+    """
+
+    __tablename__ = "mesh_contacts"
+
+    mesh_a: Mapped[str] = mapped_column(
+        ForeignKey("meshes.id", ondelete="CASCADE"), primary_key=True
+    )
+    mesh_b: Mapped[str] = mapped_column(
+        ForeignKey("meshes.id", ondelete="CASCADE"), primary_key=True, index=True
+    )
+    distance_mm: Mapped[float] = mapped_column(Float)
 
 
 class StructureMesh(Base):

@@ -1,0 +1,1886 @@
+{
+  "_comment": "Body-system learning modules. Original text written in-house from the cited references (no text or images copied from any other platform). Terminology follows Terminologia Anatomica 2 (English TA term first, Latin in `latin`, common or regional variants named in the text). Units are SI; a conventional unit is added where clinical practice differs between countries. Every module is a DRAFT until reviewed by a credentialed anatomist. `overview` is written at three self-contained levels: basic (no prior study), undergraduate, clinical.",
+  "author": "MEDVERSE content team (draft)",
+  "modules": [
+    {
+      "id": "skeletal",
+      "title": "Skeletal system",
+      "tagline": "The living framework that supports the body, protects organs, stores minerals and makes blood cells.",
+      "display_order": 10,
+      "references": [
+        "openstax_ap2e",
+        "grays42",
+        "moore8",
+        "fipat2019ta2"
+      ],
+      "body": {
+        "latin_name": "Systema skeletale",
+        "objectives": [
+          "Name the two divisions of the skeleton and give examples of bones in each.",
+          "Describe five functions of bone beyond support.",
+          "Classify bones by shape and joints by structure and movement.",
+          "Locate the skull, vertebral column, rib cage, pelvis and the major limb bones on the 3D model."
+        ],
+        "overview": {
+          "basic": "Your skeleton is the frame of your body. It is made of bones, which are hard but alive: they have blood vessels and nerves, and they repair themselves after a break. Bones hold you up, protect soft organs (the skull protects the brain, the ribs protect the heart and lungs), and work with muscles so that you can move. Inside some bones, soft red marrow makes new blood cells every day. Bones also store calcium, which the body needs for nerves and muscles to work.",
+          "undergraduate": "The adult skeleton usually has 206 named bones, arranged in an axial skeleton (skull, vertebral column, ribs and sternum) and an appendicular skeleton (pectoral and pelvic girdles and the limbs). Bones are classified by shape as long, short, flat, irregular or sesamoid. A long bone has a shaft (diaphysis) of compact bone around a medullary cavity, and ends (epiphyses) of spongy bone covered by articular cartilage. Bone is continuously remodelled by osteoblasts, which form matrix, and osteoclasts, which resorb it. Joints are classified structurally as fibrous, cartilaginous or synovial; synovial joints have a joint cavity, synovial fluid and a capsule, and allow the widest movement.",
+          "clinical": "Bone strength depends on mass and microarchitecture; when resorption exceeds formation (for example after the menopause or with long-term glucocorticoid use) bone mass falls and fracture risk rises (osteoporosis). Fracture healing passes through haematoma, soft callus, hard callus and remodelling phases, and needs a blood supply and stability. Fractures of the femoral neck can interrupt the blood supply to the femoral head and cause avascular necrosis. Surface landmarks such as the iliac crest, the sternal angle and the spinous process of the seventh cervical vertebra (vertebra prominens) are used to locate deeper structures during examination and procedures."
+        },
+        "functions": [
+          {
+            "title": "Support and shape",
+            "body": "Bones form a rigid frame that carries body weight and gives attachment to muscles, tendons and ligaments."
+          },
+          {
+            "title": "Protection",
+            "body": "The skull encloses the brain, the vertebral column surrounds the spinal cord, and the rib cage shields the heart and lungs."
+          },
+          {
+            "title": "Movement",
+            "body": "Bones act as levers and joints as pivots; muscles pull on bones to produce movement."
+          },
+          {
+            "title": "Mineral storage",
+            "body": "Bone holds about 99 % of the body's calcium and much of its phosphate, released or stored to keep blood levels stable."
+          },
+          {
+            "title": "Blood cell formation",
+            "body": "Red bone marrow produces red blood cells, white blood cells and platelets (haematopoiesis)."
+          }
+        ],
+        "organs": [
+          {
+            "name": "Skull",
+            "latin": "Cranium",
+            "structure_id": "FMA:46565",
+            "role": "Encloses the brain and special sense organs and forms the face."
+          },
+          {
+            "name": "Vertebral column",
+            "latin": "Columna vertebralis",
+            "structure_id": "FMA:13478",
+            "role": "Supports the head and trunk and protects the spinal cord."
+          },
+          {
+            "name": "Rib cage",
+            "latin": "Cavea thoracis",
+            "structure_id": "FMA:7480",
+            "role": "Protects thoracic organs and moves during breathing."
+          },
+          {
+            "name": "Sternum",
+            "latin": "Sternum",
+            "structure_id": "FMA:7485",
+            "role": "Anterior attachment for the ribs and clavicles."
+          },
+          {
+            "name": "Right humerus",
+            "latin": "Humerus",
+            "structure_id": "FMA:23130",
+            "role": "Bone of the arm between shoulder and elbow."
+          },
+          {
+            "name": "Right hip bone",
+            "latin": "Os coxae",
+            "structure_id": "FMA:16586",
+            "role": "Forms the pelvic girdle with the sacrum and transmits weight to the lower limb."
+          },
+          {
+            "name": "Right femur",
+            "latin": "Femur",
+            "structure_id": "FMA:24474",
+            "role": "Thigh bone; the longest and strongest bone."
+          },
+          {
+            "name": "Right tibia",
+            "latin": "Tibia",
+            "structure_id": "FMA:24477",
+            "role": "Main weight-bearing bone of the leg."
+          }
+        ],
+        "works_with": [
+          {
+            "system": "muscular",
+            "body": "Muscles attach to bones through tendons and move them at joints."
+          },
+          {
+            "system": "cardiovascular",
+            "body": "Red marrow supplies new blood cells; bones receive blood through nutrient arteries."
+          },
+          {
+            "system": "endocrine",
+            "body": "Parathyroid hormone, calcitonin and vitamin D regulate how much calcium bone stores or releases."
+          },
+          {
+            "system": "nervous",
+            "body": "The skull and vertebral column protect the brain and spinal cord."
+          }
+        ],
+        "key_terms": [
+          {
+            "term": "Diaphysis",
+            "latin": "Diaphysis",
+            "origin": "Greek dia- 'through' + physis 'growth'",
+            "definition": "The shaft of a long bone."
+          },
+          {
+            "term": "Epiphysis",
+            "latin": "Epiphysis",
+            "origin": "Greek epi- 'upon' + physis 'growth'",
+            "definition": "The expanded end of a long bone; separated from the shaft by a growth plate during childhood."
+          },
+          {
+            "term": "Periosteum",
+            "latin": "Periosteum",
+            "origin": "Greek peri- 'around' + osteon 'bone'",
+            "definition": "The fibrous membrane covering the outer surface of bone except at joint surfaces."
+          },
+          {
+            "term": "Osteoblast",
+            "origin": "Greek osteon 'bone' + blastos 'germ'",
+            "definition": "A cell that forms new bone matrix."
+          },
+          {
+            "term": "Osteoclast",
+            "origin": "Greek osteon 'bone' + klastos 'broken'",
+            "definition": "A large cell that resorbs (breaks down) bone."
+          },
+          {
+            "term": "Synovial joint",
+            "latin": "Articulatio synovialis",
+            "definition": "A freely movable joint with a fluid-filled cavity enclosed by a capsule."
+          }
+        ],
+        "facts": [
+          {
+            "label": "Bones in the adult skeleton",
+            "value": "about 206",
+            "note": "The number varies between people (extra sesamoid or sutural bones) and is higher at birth, before some bones fuse."
+          },
+          {
+            "label": "Body calcium stored in bone",
+            "value": "about 99 %"
+          },
+          {
+            "label": "Longest bone",
+            "value": "Femur",
+            "note": "Roughly a quarter of a person's height."
+          }
+        ],
+        "clinical_notes": [
+          "Osteoporosis: reduced bone mass and strength, with fractures after minor falls (wrist, vertebrae, hip).",
+          "Growth-plate (physeal) fractures in children can affect later bone growth."
+        ]
+      }
+    },
+    {
+      "id": "muscular",
+      "title": "Muscular system",
+      "tagline": "Muscles convert chemical energy into force: they move the skeleton, hold posture and produce heat.",
+      "display_order": 20,
+      "references": [
+        "openstax_ap2e",
+        "grays42",
+        "moore8",
+        "guyton14"
+      ],
+      "body": {
+        "latin_name": "Systema musculare",
+        "objectives": [
+          "Compare skeletal, cardiac and smooth muscle by structure, control and location.",
+          "Explain how a muscle produces movement at a joint, using the terms origin, insertion, agonist and antagonist.",
+          "Describe the main steps of skeletal muscle contraction.",
+          "Identify the diaphragm and major muscles of the trunk on the 3D model."
+        ],
+        "overview": {
+          "basic": "Muscles make every movement you make, from walking to blinking. They work by getting shorter (contracting) and pulling on bones. Muscles can only pull, never push, so they work in pairs: one bends a joint and another straightens it. There are three kinds of muscle. Skeletal muscle moves your bones and you control it. Cardiac muscle is found only in the heart. Smooth muscle lines organs such as the stomach and blood vessels and works automatically. Working muscles also make heat, which helps keep your body warm.",
+          "undergraduate": "Skeletal muscle is striated and under voluntary control; each fibre is a long multinucleated cell packed with myofibrils made of repeating sarcomeres. Contraction follows excitation-contraction coupling: a motor neuron releases acetylcholine at the neuromuscular junction, the fibre's action potential releases calcium from the sarcoplasmic reticulum, and myosin heads cycle on actin filaments using ATP (the sliding filament mechanism). A muscle usually runs from a more fixed attachment (origin) to a more mobile one (insertion). The muscle mainly responsible for a movement is the agonist (prime mover); the antagonist opposes it, and synergists and fixators assist. Cardiac muscle is striated but involuntary, with cells joined by intercalated discs; smooth muscle is non-striated and involuntary.",
+          "clinical": "Muscle strength is graded clinically on the Medical Research Council scale from 0 (no contraction) to 5 (normal power). Weakness patterns help localise disease: proximal weakness suggests myopathy, distal weakness with wasting suggests peripheral neuropathy, and weakness with increased tone and brisk reflexes suggests an upper motor neuron lesion. Rhabdomyolysis (muscle breakdown after crush injury or extreme exertion) releases myoglobin, which can injure the kidneys. The diaphragm is the main muscle of quiet inspiration and is innervated by the phrenic nerve (spinal segments C3–C5), so high cervical spinal cord injury can stop independent breathing."
+        },
+        "functions": [
+          {
+            "title": "Movement",
+            "body": "Skeletal muscles move bones at joints; smooth muscle moves food, urine and blood through hollow organs."
+          },
+          {
+            "title": "Posture",
+            "body": "Continuous low-level contraction keeps the body upright against gravity."
+          },
+          {
+            "title": "Heat production",
+            "body": "Muscle metabolism generates much of the body's heat; shivering increases it."
+          },
+          {
+            "title": "Breathing",
+            "body": "The diaphragm and intercostal muscles change the volume of the thoracic cavity."
+          },
+          {
+            "title": "Protection and control of openings",
+            "body": "Abdominal wall muscles protect abdominal organs; sphincters control the exits of the digestive and urinary tracts."
+          }
+        ],
+        "organs": [
+          {
+            "name": "Diaphragm",
+            "latin": "Diaphragma",
+            "structure_id": "FMA:13295",
+            "role": "Dome-shaped muscle separating thorax and abdomen; main muscle of inspiration."
+          },
+          {
+            "name": "Right pectoralis major",
+            "latin": "Musculus pectoralis major",
+            "structure_id": "FMA:13373",
+            "role": "Adducts and medially rotates the arm."
+          },
+          {
+            "name": "Right serratus anterior",
+            "latin": "Musculus serratus anterior",
+            "structure_id": "FMA:13398",
+            "role": "Holds the scapula against the chest wall and rotates it when the arm is raised overhead."
+          },
+          {
+            "name": "Right external oblique",
+            "latin": "Musculus obliquus externus abdominis",
+            "structure_id": "FMA:13336",
+            "role": "Flexes and rotates the trunk and compresses the abdomen."
+          },
+          {
+            "name": "Right psoas major",
+            "latin": "Musculus psoas major",
+            "structure_id": "FMA:22342",
+            "role": "Powerful flexor of the hip."
+          },
+          {
+            "name": "Heart muscle (myocardium)",
+            "latin": "Myocardium",
+            "structure_id": null,
+            "role": "Cardiac muscle; see the cardiovascular system."
+          }
+        ],
+        "works_with": [
+          {
+            "system": "skeletal",
+            "body": "Muscles need bones as levers; bones need muscles to move."
+          },
+          {
+            "system": "nervous",
+            "body": "Motor neurons trigger each contraction; sensory receptors in muscles report length and tension."
+          },
+          {
+            "system": "cardiovascular",
+            "body": "Blood brings oxygen and glucose to working muscle and removes carbon dioxide and heat."
+          },
+          {
+            "system": "respiratory",
+            "body": "The diaphragm and intercostal muscles power breathing."
+          }
+        ],
+        "key_terms": [
+          {
+            "term": "Sarcomere",
+            "origin": "Greek sarx 'flesh' + meros 'part'",
+            "definition": "The repeating contractile unit of a myofibril, between two Z discs."
+          },
+          {
+            "term": "Origin",
+            "definition": "The attachment of a muscle that usually stays fixed during contraction."
+          },
+          {
+            "term": "Insertion",
+            "definition": "The attachment of a muscle that usually moves during contraction."
+          },
+          {
+            "term": "Agonist (prime mover)",
+            "definition": "The muscle mainly responsible for a particular movement."
+          },
+          {
+            "term": "Antagonist",
+            "definition": "A muscle that opposes the action of the agonist."
+          },
+          {
+            "term": "Tendon",
+            "latin": "Tendo",
+            "definition": "A cord of dense connective tissue joining muscle to bone."
+          }
+        ],
+        "facts": [
+          {
+            "label": "Named skeletal muscles",
+            "value": "more than 600"
+          },
+          {
+            "label": "Share of body mass that is skeletal muscle",
+            "value": "about 40 %",
+            "note": "In a typical adult; varies with age, sex and training."
+          },
+          {
+            "label": "Muscle types",
+            "value": "3",
+            "note": "Skeletal, cardiac and smooth."
+          }
+        ],
+        "clinical_notes": [
+          "Strains are tears of muscle fibres; sprains are injuries to ligaments.",
+          "Myasthenia gravis: antibodies against acetylcholine receptors cause fatigable weakness."
+        ],
+        "asset_note": "The current 3D model includes the trunk and shoulder-girdle muscles, the diaphragm and the eye muscles, but not most limb muscles."
+      }
+    },
+    {
+      "id": "cardiovascular",
+      "title": "Cardiovascular system",
+      "tagline": "A pump and a closed network of vessels that delivers oxygen and nutrients to every cell.",
+      "display_order": 30,
+      "references": [
+        "openstax_ap2e",
+        "grays42",
+        "moore8",
+        "guyton14"
+      ],
+      "body": {
+        "latin_name": "Systema cardiovasculare",
+        "objectives": [
+          "Trace a drop of blood through the heart, lungs and body, naming chambers, valves and great vessels.",
+          "Distinguish the pulmonary and systemic circulations.",
+          "Compare the structure and function of arteries, capillaries and veins.",
+          "Explain cardiac output and blood pressure and state typical resting values in SI and conventional units."
+        ],
+        "overview": {
+          "basic": "Your heart is a muscular pump about the size of your fist. It beats around 60 to 100 times a minute at rest and pushes blood through tubes called blood vessels. Arteries carry blood away from the heart, veins bring it back, and tiny capillaries connect them. In the capillaries, oxygen and food pass from the blood into the body's cells, and waste passes back. The right side of the heart sends blood to the lungs to pick up oxygen; the left side sends this oxygen-rich blood to the rest of the body.",
+          "undergraduate": "The heart has four chambers: two atria that receive blood and two ventricles that pump it. Deoxygenated blood returns through the superior and inferior venae cavae to the right atrium, passes the tricuspid valve into the right ventricle, and is ejected through the pulmonary valve into the pulmonary trunk (pulmonary circulation). Oxygenated blood returns through the pulmonary veins to the left atrium, passes the mitral valve into the left ventricle, and is ejected through the aortic valve into the aorta (systemic circulation). Arteries have thick elastic and muscular walls; arterioles control resistance and therefore blood pressure; capillaries have walls one cell thick for exchange; veins are thin-walled, hold most of the blood volume and contain valves. Cardiac output equals stroke volume multiplied by heart rate, about 5 L/min at rest in an adult.",
+          "clinical": "Blood pressure is reported in millimetres of mercury (mmHg) in most countries; 1 kPa is about 7.5 mmHg, so 120/80 mmHg is about 16.0/10.7 kPa. Atherosclerosis narrows arteries; when a coronary artery is blocked, the myocardium it supplies becomes ischaemic (myocardial infarction). Because the coronary arteries fill mainly during diastole, a fast heart rate shortens coronary perfusion time. Heart sounds come from valve closure: S1 from the atrioventricular (mitral and tricuspid) valves at the start of systole, S2 from the aortic and pulmonary valves at the end of systole. Peripheral pulses (radial, carotid, femoral, popliteal, dorsalis pedis) are palpated where arteries cross bone."
+        },
+        "functions": [
+          {
+            "title": "Transport",
+            "body": "Blood carries oxygen, nutrients, hormones and waste products between organs."
+          },
+          {
+            "title": "Exchange",
+            "body": "Capillaries allow gases, nutrients and wastes to move between blood and tissues."
+          },
+          {
+            "title": "Temperature regulation",
+            "body": "Changing blood flow to the skin releases or conserves body heat."
+          },
+          {
+            "title": "Protection",
+            "body": "Blood carries white blood cells and antibodies, and clotting factors seal damaged vessels."
+          },
+          {
+            "title": "Pressure and flow control",
+            "body": "The heart and arterioles adjust output and resistance to match each organ's needs."
+          }
+        ],
+        "organs": [
+          {
+            "name": "Heart",
+            "latin": "Cor",
+            "structure_id": "FMA:7088",
+            "role": "Four-chambered muscular pump."
+          },
+          {
+            "name": "Aorta",
+            "latin": "Aorta",
+            "structure_id": "FMA:3734",
+            "role": "Main artery carrying blood from the left ventricle to the body."
+          },
+          {
+            "name": "Pulmonary trunk",
+            "latin": "Truncus pulmonalis",
+            "structure_id": "FMA:8612",
+            "role": "Carries blood from the right ventricle towards the lungs."
+          },
+          {
+            "name": "Superior vena cava",
+            "latin": "Vena cava superior",
+            "structure_id": "FMA:4720",
+            "role": "Returns blood from the head, neck and upper limbs to the right atrium."
+          },
+          {
+            "name": "Inferior vena cava",
+            "latin": "Vena cava inferior",
+            "structure_id": "FMA:10951",
+            "role": "Returns blood from the abdomen, pelvis and lower limbs to the right atrium."
+          },
+          {
+            "name": "Right common carotid artery",
+            "latin": "Arteria carotis communis dextra",
+            "structure_id": "FMA:3941",
+            "role": "Main artery supplying the right side of the head and neck."
+          },
+          {
+            "name": "Right femoral artery",
+            "latin": "Arteria femoralis",
+            "structure_id": "FMA:70249",
+            "role": "Main artery of the thigh."
+          }
+        ],
+        "works_with": [
+          {
+            "system": "respiratory",
+            "body": "The pulmonary circulation brings blood to the alveoli for gas exchange."
+          },
+          {
+            "system": "urinary",
+            "body": "The kidneys filter blood and regulate blood volume and pressure."
+          },
+          {
+            "system": "lymphatic",
+            "body": "Lymphatic vessels return fluid that leaks from capillaries back to the veins."
+          },
+          {
+            "system": "nervous",
+            "body": "Autonomic nerves adjust heart rate, contractility and vessel diameter."
+          },
+          {
+            "system": "skeletal",
+            "body": "Red bone marrow produces blood cells."
+          }
+        ],
+        "key_terms": [
+          {
+            "term": "Atrium",
+            "latin": "Atrium",
+            "origin": "Latin 'entrance hall'",
+            "definition": "A receiving chamber of the heart."
+          },
+          {
+            "term": "Ventricle",
+            "latin": "Ventriculus",
+            "origin": "Latin 'little belly'",
+            "definition": "A pumping chamber of the heart."
+          },
+          {
+            "term": "Systole",
+            "origin": "Greek 'contraction'",
+            "definition": "The phase of the cardiac cycle when the ventricles contract and eject blood."
+          },
+          {
+            "term": "Diastole",
+            "origin": "Greek 'dilation'",
+            "definition": "The phase when the ventricles relax and fill."
+          },
+          {
+            "term": "Myocardium",
+            "latin": "Myocardium",
+            "origin": "Greek mys 'muscle' + kardia 'heart'",
+            "definition": "The muscular middle layer of the heart wall."
+          },
+          {
+            "term": "Capillary",
+            "latin": "Vas capillare",
+            "origin": "Latin capillus 'hair'",
+            "definition": "The smallest blood vessel, where exchange with tissues happens."
+          }
+        ],
+        "facts": [
+          {
+            "label": "Resting heart rate (adult)",
+            "value": "60–100 beats/min"
+          },
+          {
+            "label": "Resting cardiac output (adult)",
+            "value": "about 5 L/min"
+          },
+          {
+            "label": "Blood volume (adult)",
+            "value": "about 5 L",
+            "note": "Roughly 7 % of body mass."
+          },
+          {
+            "label": "Typical resting blood pressure",
+            "value": "about 120/80 mmHg (16.0/10.7 kPa)"
+          }
+        ],
+        "clinical_notes": [
+          "Hypertension raises the risk of stroke, heart failure and kidney disease.",
+          "Deep vein thrombosis in the leg can travel to the lungs (pulmonary embolism)."
+        ]
+      }
+    },
+    {
+      "id": "nervous",
+      "title": "Nervous system",
+      "tagline": "The body's fast communication network: it senses, decides and commands in milliseconds.",
+      "display_order": 40,
+      "references": [
+        "openstax_ap2e",
+        "grays42",
+        "moore8",
+        "guyton14"
+      ],
+      "body": {
+        "latin_name": "Systema nervosum",
+        "objectives": [
+          "Distinguish the central and peripheral nervous systems and their components.",
+          "Name the main parts of the brain and give one function of each.",
+          "Describe the structure of a neuron and how an action potential carries a signal.",
+          "Contrast the somatic and autonomic (sympathetic and parasympathetic) divisions."
+        ],
+        "overview": {
+          "basic": "Your nervous system controls and connects everything your body does. The brain and spinal cord form the control centre. Nerves run from them to every part of the body, like cables. Sense organs send messages along nerves to the brain ('the stove is hot'), the brain decides what to do, and it sends messages back to muscles ('move your hand'). These messages are tiny electrical signals that travel very fast. The nervous system also runs things you do not think about, such as your heartbeat and digestion.",
+          "undergraduate": "The central nervous system (CNS) comprises the brain and spinal cord; the peripheral nervous system (PNS) comprises 12 pairs of cranial nerves, 31 pairs of spinal nerves and their ganglia. The brain has the cerebrum (two cerebral hemispheres, each with frontal, parietal, temporal and occipital lobes), the diencephalon (thalamus and hypothalamus), the brainstem (midbrain, pons and medulla oblongata) and the cerebellum. Neurons transmit information as action potentials along axons and pass it to other cells at synapses, usually through chemical neurotransmitters; glial cells support, insulate (myelin) and protect them. Functionally, the somatic division controls skeletal muscle and conscious sensation, and the autonomic division controls smooth muscle, cardiac muscle and glands through sympathetic ('fight or flight') and parasympathetic ('rest and digest') pathways.",
+          "clinical": "Neurological examination localises a lesion by combining findings: an upper motor neuron lesion gives weakness with increased tone, brisk reflexes and an extensor plantar response; a lower motor neuron lesion gives weakness with wasting, reduced tone and absent reflexes. In adults the spinal cord usually ends at about the L1–L2 vertebral level, so lumbar puncture is performed below this (commonly L3–L4 or L4–L5) to sample cerebrospinal fluid without injuring the cord. Stroke is an acute loss of brain function due to ischaemia or haemorrhage; deficits depend on the arterial territory involved. The brain receives about 15 % of the resting cardiac output and is very sensitive to interruption of its oxygen supply."
+        },
+        "functions": [
+          {
+            "title": "Sensation",
+            "body": "Receptors detect changes inside and outside the body and send the information to the CNS."
+          },
+          {
+            "title": "Integration",
+            "body": "The brain and spinal cord process information, store memories and make decisions."
+          },
+          {
+            "title": "Motor control",
+            "body": "Motor neurons activate muscles and glands."
+          },
+          {
+            "title": "Homeostasis",
+            "body": "The hypothalamus and autonomic nervous system regulate temperature, heart rate, blood pressure and digestion."
+          },
+          {
+            "title": "Higher functions",
+            "body": "Language, reasoning, emotion and consciousness depend on the cerebral cortex and its connections."
+          }
+        ],
+        "organs": [
+          {
+            "name": "Brain",
+            "latin": "Encephalon",
+            "structure_id": "FMA:50801",
+            "role": "Control centre for thought, sensation, movement and regulation."
+          },
+          {
+            "name": "Right cerebral hemisphere",
+            "latin": "Hemispherium cerebri",
+            "structure_id": "FMA:67292",
+            "role": "Mainly controls and senses the left side of the body."
+          },
+          {
+            "name": "Cerebellum",
+            "latin": "Cerebellum",
+            "structure_id": "FMA:67944",
+            "role": "Coordinates movement, balance and posture."
+          },
+          {
+            "name": "Brainstem",
+            "latin": "Truncus encephali",
+            "structure_id": "FMA:79876",
+            "role": "Connects brain and spinal cord; controls breathing, heart rate and consciousness."
+          },
+          {
+            "name": "Hypothalamus",
+            "latin": "Hypothalamus",
+            "structure_id": "FMA:62008",
+            "role": "Regulates temperature, hunger, thirst and the pituitary gland."
+          },
+          {
+            "name": "Spinal cord",
+            "latin": "Medulla spinalis",
+            "structure_id": "FMA:7647",
+            "role": "Carries signals between brain and body and controls reflexes."
+          },
+          {
+            "name": "Peripheral nerves",
+            "latin": "Nervi",
+            "structure_id": null,
+            "role": "Carry signals between the CNS and the rest of the body."
+          }
+        ],
+        "works_with": [
+          {
+            "system": "muscular",
+            "body": "Motor neurons trigger muscle contraction; muscle receptors give feedback on position."
+          },
+          {
+            "system": "endocrine",
+            "body": "The hypothalamus controls the pituitary gland, linking nerves and hormones."
+          },
+          {
+            "system": "special_senses",
+            "body": "The eyes, ears, nose and tongue send sensory information to the brain."
+          },
+          {
+            "system": "cardiovascular",
+            "body": "Autonomic nerves adjust heart rate and blood vessel diameter; the brain depends on a constant blood supply."
+          },
+          {
+            "system": "skeletal",
+            "body": "The skull and vertebral column protect the brain and spinal cord."
+          }
+        ],
+        "key_terms": [
+          {
+            "term": "Neuron",
+            "origin": "Greek 'sinew, nerve'",
+            "definition": "A nerve cell that transmits electrical signals."
+          },
+          {
+            "term": "Synapse",
+            "origin": "Greek syn- 'together' + haptein 'to fasten'",
+            "definition": "The junction where a neuron passes a signal to another cell."
+          },
+          {
+            "term": "Myelin",
+            "definition": "A fatty sheath around many axons that speeds up conduction."
+          },
+          {
+            "term": "Grey matter",
+            "latin": "Substantia grisea",
+            "definition": "CNS tissue rich in neuron cell bodies."
+          },
+          {
+            "term": "White matter",
+            "latin": "Substantia alba",
+            "definition": "CNS tissue made mainly of myelinated axons."
+          },
+          {
+            "term": "Autonomic nervous system",
+            "latin": "Pars autonomica systematis nervosi",
+            "definition": "The division that controls involuntary functions through sympathetic and parasympathetic pathways."
+          }
+        ],
+        "facts": [
+          {
+            "label": "Cranial nerves",
+            "value": "12 pairs"
+          },
+          {
+            "label": "Spinal nerves",
+            "value": "31 pairs"
+          },
+          {
+            "label": "Adult brain mass",
+            "value": "about 1.2–1.4 kg"
+          },
+          {
+            "label": "Share of resting cardiac output to the brain",
+            "value": "about 15 %"
+          }
+        ],
+        "clinical_notes": [
+          "Stroke: sudden facial droop, arm weakness or speech difficulty needs emergency assessment.",
+          "Peripheral neuropathy (for example in diabetes) often begins with numbness in the feet."
+        ],
+        "asset_note": "The 3D model includes the brain and spinal cord but not the peripheral nerves."
+      }
+    },
+    {
+      "id": "respiratory",
+      "title": "Respiratory system",
+      "tagline": "Airways and lungs that bring in oxygen and remove carbon dioxide with every breath.",
+      "display_order": 50,
+      "references": [
+        "openstax_ap2e",
+        "grays42",
+        "moore8",
+        "guyton14"
+      ],
+      "body": {
+        "latin_name": "Systema respiratorium",
+        "objectives": [
+          "Trace the path of air from the nose to the alveoli.",
+          "Explain how the diaphragm and chest wall produce inspiration and expiration.",
+          "Describe gas exchange across the alveolar–capillary membrane.",
+          "Compare the right and left lungs and explain why inhaled objects more often enter the right main bronchus."
+        ],
+        "overview": {
+          "basic": "You breathe in to take oxygen into your body and breathe out to get rid of carbon dioxide, a waste gas. Air enters through your nose or mouth, goes down your windpipe (trachea) and into two tubes, one for each lung. These tubes branch again and again, like an upside-down tree, and end in millions of tiny air sacs called alveoli. Each air sac is wrapped in tiny blood vessels. Oxygen passes from the air into the blood, and carbon dioxide passes from the blood into the air, which you then breathe out.",
+          "undergraduate": "The upper respiratory tract (nasal cavity, pharynx, larynx) warms, humidifies and filters air; the lower tract begins at the larynx and continues as the trachea, which divides at the carina into the right and left main bronchi. Bronchi branch into lobar, segmental and smaller bronchi, then bronchioles, terminal bronchioles and respiratory bronchioles that end in alveolar ducts and alveoli. The right lung has three lobes (superior, middle, inferior) and the left has two (superior, inferior), with a cardiac notch for the heart. Inspiration is active: the diaphragm contracts and flattens and the external intercostals raise the ribs, enlarging the thorax so that intrapulmonary pressure falls below atmospheric pressure. Quiet expiration is mostly passive elastic recoil. Gas moves across the thin alveolar–capillary membrane by diffusion down partial-pressure gradients.",
+          "clinical": "The right main bronchus is wider, shorter and more vertical than the left, so aspirated objects and a too-deep endotracheal tube more often enter the right side. Partial pressures are reported in kPa in many countries and mmHg in others (1 kPa is about 7.5 mmHg); normal arterial oxygen tension in a healthy young adult breathing air is about 10.5–13.5 kPa (80–100 mmHg). Obstructive diseases (asthma, chronic obstructive pulmonary disease) reduce airflow, so the ratio of forced expiratory volume in 1 second to forced vital capacity (FEV1/FVC) falls; restrictive diseases (pulmonary fibrosis) reduce lung volumes with a preserved ratio. A pneumothorax (air in the pleural cavity) lets the lung collapse away from the chest wall."
+        },
+        "functions": [
+          {
+            "title": "Gas exchange",
+            "body": "Oxygen enters and carbon dioxide leaves the blood in the alveoli."
+          },
+          {
+            "title": "Ventilation",
+            "body": "Breathing moves air in and out of the lungs."
+          },
+          {
+            "title": "Acid–base balance",
+            "body": "Changing the rate of breathing adjusts carbon dioxide and therefore blood pH."
+          },
+          {
+            "title": "Voice production",
+            "body": "Air passing the vocal folds in the larynx produces sound."
+          },
+          {
+            "title": "Defence",
+            "body": "Mucus and cilia trap and remove inhaled particles and microbes."
+          }
+        ],
+        "organs": [
+          {
+            "name": "Trachea",
+            "latin": "Trachea",
+            "structure_id": "FMA:7394",
+            "role": "Windpipe; kept open by C-shaped cartilage rings."
+          },
+          {
+            "name": "Left main bronchus",
+            "latin": "Bronchus principalis sinister",
+            "structure_id": "FMA:7396",
+            "role": "Carries air to the left lung."
+          },
+          {
+            "name": "Right lung",
+            "latin": "Pulmo dexter",
+            "structure_id": "FMA:7309",
+            "role": "Three lobes; site of gas exchange."
+          },
+          {
+            "name": "Left lung",
+            "latin": "Pulmo sinister",
+            "structure_id": "FMA:7310",
+            "role": "Two lobes, with a notch for the heart."
+          },
+          {
+            "name": "Diaphragm",
+            "latin": "Diaphragma",
+            "structure_id": "FMA:13295",
+            "role": "Main muscle of breathing."
+          },
+          {
+            "name": "Larynx",
+            "latin": "Larynx",
+            "structure_id": null,
+            "role": "Voice box; protects the airway during swallowing."
+          }
+        ],
+        "works_with": [
+          {
+            "system": "cardiovascular",
+            "body": "Pulmonary capillaries carry blood past the alveoli; red blood cells transport oxygen."
+          },
+          {
+            "system": "muscular",
+            "body": "The diaphragm and intercostal muscles drive ventilation."
+          },
+          {
+            "system": "nervous",
+            "body": "The brainstem sets the rhythm of breathing and responds to carbon dioxide levels."
+          },
+          {
+            "system": "urinary",
+            "body": "Lungs and kidneys together keep blood pH stable."
+          }
+        ],
+        "key_terms": [
+          {
+            "term": "Alveolus",
+            "latin": "Alveolus pulmonis",
+            "origin": "Latin 'small cavity'",
+            "definition": "A tiny air sac where gas exchange happens."
+          },
+          {
+            "term": "Bronchus",
+            "latin": "Bronchus",
+            "origin": "Greek bronchos 'windpipe'",
+            "definition": "One of the large airways branching from the trachea."
+          },
+          {
+            "term": "Pleura",
+            "latin": "Pleura",
+            "origin": "Greek 'side, rib'",
+            "definition": "The serous membrane covering the lungs (visceral) and lining the thoracic wall (parietal)."
+          },
+          {
+            "term": "Tidal volume",
+            "definition": "The volume of air moved in or out in one quiet breath."
+          },
+          {
+            "term": "Surfactant",
+            "definition": "A substance that lowers surface tension in the alveoli and prevents their collapse."
+          }
+        ],
+        "facts": [
+          {
+            "label": "Resting breathing rate (adult)",
+            "value": "12–20 breaths/min"
+          },
+          {
+            "label": "Tidal volume (adult, at rest)",
+            "value": "about 500 mL"
+          },
+          {
+            "label": "Number of alveoli",
+            "value": "about 300 million"
+          },
+          {
+            "label": "Area of the respiratory membrane",
+            "value": "about 70 m²"
+          }
+        ],
+        "clinical_notes": [
+          "Asthma: reversible narrowing of the airways with wheeze and breathlessness.",
+          "Smoking is the main preventable cause of chronic obstructive pulmonary disease and lung cancer."
+        ],
+        "asset_note": "The 3D model includes the trachea, bronchial tree and lungs; the nasal cavity and larynx are not yet modelled."
+      }
+    },
+    {
+      "id": "digestive",
+      "title": "Digestive system",
+      "tagline": "A continuous tube and its glands that break food down, absorb nutrients and remove waste.",
+      "display_order": 60,
+      "references": [
+        "openstax_ap2e",
+        "grays42",
+        "moore8",
+        "guyton14"
+      ],
+      "body": {
+        "latin_name": "Systema digestorium",
+        "objectives": [
+          "List the organs of the alimentary canal in order and the accessory digestive organs.",
+          "Distinguish mechanical and chemical digestion and give examples of each.",
+          "Explain where most nutrients and water are absorbed.",
+          "Describe the roles of the liver, gallbladder and pancreas."
+        ],
+        "overview": {
+          "basic": "The digestive system turns food into tiny pieces your body can use. It is a long tube that starts at your mouth and ends at the anus. Teeth chew food, and saliva begins to break it down. Food goes down the oesophagus (food pipe) to the stomach, where acid and churning turn it into a thick liquid. In the small intestine, juices from the pancreas and bile from the liver finish breaking it down, and nutrients pass into the blood. The large intestine takes back water, and what is left leaves the body as faeces.",
+          "undergraduate": "The alimentary canal runs from the oral cavity through the pharynx, oesophagus (US spelling: esophagus), stomach, small intestine (duodenum, jejunum, ileum) and large intestine (caecum with the appendix, colon, rectum, anal canal). Its wall has four layers: mucosa, submucosa, muscularis externa and serosa (or adventitia). Accessory organs are the teeth, tongue, salivary glands, liver, gallbladder and pancreas. Mechanical digestion (chewing, churning, segmentation) increases surface area; chemical digestion uses enzymes such as salivary amylase, pepsin, pancreatic lipase, amylase and proteases, and bile salts emulsify fats. Peristalsis moves contents along. Most absorption occurs in the small intestine, whose circular folds, villi and microvilli give a very large surface area; the large intestine absorbs water and electrolytes and houses the gut microbiota.",
+          "clinical": "Venous blood from the gut drains through the hepatic portal vein to the liver before reaching the systemic circulation, which is why orally absorbed drugs undergo first-pass metabolism, and why portal hypertension (for example in cirrhosis) opens portosystemic anastomoses such as oesophageal varices. Pain from gut organs is referred according to embryological origin: foregut (to the duodenal papilla) to the epigastrium, midgut (to two-thirds along the transverse colon) to the periumbilical region, hindgut to the suprapubic region; early appendicitis therefore often begins as periumbilical pain before localising to the right iliac fossa. Gallstones can block the cystic duct (biliary colic, cholecystitis) or the common bile duct (jaundice, pancreatitis)."
+        },
+        "functions": [
+          {
+            "title": "Ingestion",
+            "body": "Taking food and drink into the mouth."
+          },
+          {
+            "title": "Digestion",
+            "body": "Mechanical and chemical breakdown of food into absorbable molecules."
+          },
+          {
+            "title": "Absorption",
+            "body": "Nutrients, water and electrolytes pass from the gut into blood and lymph."
+          },
+          {
+            "title": "Elimination",
+            "body": "Undigested material is stored and expelled as faeces (US spelling: feces)."
+          },
+          {
+            "title": "Metabolism and storage",
+            "body": "The liver processes absorbed nutrients, stores glycogen and vitamins, and detoxifies substances."
+          }
+        ],
+        "organs": [
+          {
+            "name": "Tongue",
+            "latin": "Lingua",
+            "structure_id": "FMA:54640",
+            "role": "Moves food during chewing and swallowing; carries taste buds."
+          },
+          {
+            "name": "Oesophagus (esophagus)",
+            "latin": "Oesophagus",
+            "structure_id": "FMA:7131",
+            "role": "Muscular tube carrying food from pharynx to stomach."
+          },
+          {
+            "name": "Stomach",
+            "latin": "Gaster",
+            "structure_id": "FMA:7148",
+            "role": "Stores and churns food and secretes acid and pepsin."
+          },
+          {
+            "name": "Duodenum",
+            "latin": "Duodenum",
+            "structure_id": "FMA:7206",
+            "role": "First part of the small intestine; receives bile and pancreatic juice."
+          },
+          {
+            "name": "Small intestine",
+            "latin": "Intestinum tenue",
+            "structure_id": "FMA:7200",
+            "role": "Main site of digestion and absorption."
+          },
+          {
+            "name": "Large intestine",
+            "latin": "Intestinum crassum",
+            "structure_id": "FMA:7201",
+            "role": "Absorbs water and forms faeces."
+          },
+          {
+            "name": "Liver",
+            "latin": "Hepar",
+            "structure_id": "FMA:7197",
+            "role": "Makes bile and processes absorbed nutrients."
+          },
+          {
+            "name": "Gallbladder",
+            "latin": "Vesica biliaris",
+            "structure_id": "FMA:7202",
+            "role": "Stores and concentrates bile."
+          },
+          {
+            "name": "Pancreas",
+            "latin": "Pancreas",
+            "structure_id": "FMA:7198",
+            "role": "Secretes digestive enzymes and the hormones insulin and glucagon."
+          }
+        ],
+        "works_with": [
+          {
+            "system": "cardiovascular",
+            "body": "Absorbed nutrients travel in the hepatic portal vein to the liver, then to the whole body."
+          },
+          {
+            "system": "lymphatic",
+            "body": "Absorbed fats enter lymphatic capillaries (lacteals) in the intestinal villi."
+          },
+          {
+            "system": "endocrine",
+            "body": "Pancreatic islets release insulin and glucagon to control blood glucose."
+          },
+          {
+            "system": "nervous",
+            "body": "The enteric nervous system and autonomic nerves control gut movement and secretion."
+          },
+          {
+            "system": "muscular",
+            "body": "Skeletal muscle controls chewing, the start of swallowing and the external anal sphincter."
+          }
+        ],
+        "key_terms": [
+          {
+            "term": "Peristalsis",
+            "origin": "Greek peri- 'around' + stalsis 'contraction'",
+            "definition": "Waves of muscle contraction that push contents along the gut."
+          },
+          {
+            "term": "Chyme",
+            "origin": "Greek chymos 'juice'",
+            "definition": "The semi-liquid mixture of food and gastric juice leaving the stomach."
+          },
+          {
+            "term": "Villus",
+            "latin": "Villus intestinalis",
+            "origin": "Latin 'shaggy hair'",
+            "definition": "A finger-like projection of the small-intestinal mucosa that increases surface area."
+          },
+          {
+            "term": "Bile",
+            "latin": "Bilis",
+            "definition": "Fluid made by the liver that emulsifies fats."
+          },
+          {
+            "term": "Enzyme",
+            "definition": "A protein that speeds up a chemical reaction, such as breaking food molecules apart."
+          },
+          {
+            "term": "Hepatic portal vein",
+            "latin": "Vena portae hepatis",
+            "definition": "The vein carrying blood from the gut and spleen to the liver."
+          }
+        ],
+        "facts": [
+          {
+            "label": "Adult liver mass",
+            "value": "about 1.5 kg"
+          },
+          {
+            "label": "Gastric acid",
+            "value": "pH about 1–3"
+          },
+          {
+            "label": "Small intestine length",
+            "value": "several metres",
+            "note": "Reported values range widely (about 3–7 m) because length depends on how it is measured."
+          }
+        ],
+        "clinical_notes": [
+          "Appendicitis: pain often starts around the umbilicus and moves to the right lower abdomen.",
+          "Hepatitis and cirrhosis impair the liver's ability to make proteins and clear toxins."
+        ]
+      }
+    },
+    {
+      "id": "urinary",
+      "title": "Urinary system",
+      "tagline": "Kidneys that clean the blood, balance water and salts, and the passages that store and remove urine.",
+      "display_order": 70,
+      "references": [
+        "openstax_ap2e",
+        "grays42",
+        "moore8",
+        "guyton14"
+      ],
+      "body": {
+        "latin_name": "Systema urinarium",
+        "objectives": [
+          "Name the organs of the urinary system and describe the path of urine.",
+          "Describe the nephron and the processes of filtration, reabsorption and secretion.",
+          "Explain how the kidneys help control blood pressure, blood pH and red blood cell production.",
+          "Compare the male and female urethra and explain one clinical consequence."
+        ],
+        "overview": {
+          "basic": "Your two kidneys are bean-shaped organs at the back of your abdomen, one on each side of the spine. They clean your blood: they remove waste and extra water and turn them into urine. Urine flows down two thin tubes called ureters into the bladder, a stretchy bag that stores it. When you go to the toilet, urine leaves the bladder through a tube called the urethra. The kidneys also keep the right amount of water and salt in your body.",
+          "undergraduate": "Each kidney contains about a million nephrons. Blood is filtered in the glomerulus into Bowman's (glomerular) capsule; the filtrate then passes through the proximal convoluted tubule, the nephron loop (loop of Henle), the distal convoluted tubule and the collecting duct. Along the way, most water, glucose, amino acids and salts are reabsorbed, and some substances (for example hydrogen and potassium ions and many drugs) are secreted into the tubule. The concentrated urine drains into the renal pelvis, the ureters carry it by peristalsis to the urinary bladder, and the urethra carries it out of the body. The kidneys also secrete renin (blood pressure regulation) and erythropoietin (red blood cell production) and activate vitamin D.",
+          "clinical": "Kidney function is estimated from serum creatinine, reported in µmol/L in most countries and mg/dL in some (1 mg/dL is about 88.4 µmol/L), usually converted to an estimated glomerular filtration rate (eGFR) in mL/min/1.73 m². A normal GFR is about 125 mL/min, equivalent to about 180 L of filtrate per day. Ureteric stones typically lodge at three narrowings: the pelviureteric junction, where the ureter crosses the pelvic brim (iliac vessels), and the vesicoureteric junction; pain radiates from loin to groin. The female urethra is much shorter than the male urethra, which is one reason urinary tract infections are more common in women. Prostate enlargement can compress the prostatic urethra and obstruct urine flow in older men."
+        },
+        "functions": [
+          {
+            "title": "Excretion",
+            "body": "Removes urea, creatinine, excess ions and many drugs from the blood."
+          },
+          {
+            "title": "Water and salt balance",
+            "body": "Adjusts how much water, sodium and potassium are kept or lost."
+          },
+          {
+            "title": "Blood pressure regulation",
+            "body": "Controls blood volume and releases renin."
+          },
+          {
+            "title": "Acid–base balance",
+            "body": "Excretes hydrogen ions and reabsorbs bicarbonate."
+          },
+          {
+            "title": "Hormone production",
+            "body": "Secretes erythropoietin and activates vitamin D."
+          }
+        ],
+        "organs": [
+          {
+            "name": "Right kidney",
+            "latin": "Ren dexter",
+            "structure_id": "FMA:7204",
+            "role": "Filters blood and makes urine; usually slightly lower than the left because of the liver."
+          },
+          {
+            "name": "Left kidney",
+            "latin": "Ren sinister",
+            "structure_id": "FMA:7205",
+            "role": "Filters blood and makes urine."
+          },
+          {
+            "name": "Right ureter",
+            "latin": "Ureter dexter",
+            "structure_id": "FMA:15571",
+            "role": "Carries urine from kidney to bladder."
+          },
+          {
+            "name": "Urinary bladder",
+            "latin": "Vesica urinaria",
+            "structure_id": "FMA:15900",
+            "role": "Stores urine."
+          },
+          {
+            "name": "Urethra",
+            "latin": "Urethra",
+            "structure_id": "FMA:19667",
+            "role": "Carries urine out of the body."
+          }
+        ],
+        "works_with": [
+          {
+            "system": "cardiovascular",
+            "body": "The kidneys receive about a fifth of the cardiac output and control blood volume."
+          },
+          {
+            "system": "endocrine",
+            "body": "Antidiuretic hormone and aldosterone tell the kidneys how much water and salt to keep."
+          },
+          {
+            "system": "respiratory",
+            "body": "Lungs and kidneys together regulate blood pH."
+          },
+          {
+            "system": "reproductive",
+            "body": "In males, the urethra is shared by the urinary and reproductive tracts."
+          },
+          {
+            "system": "skeletal",
+            "body": "Activated vitamin D from the kidneys helps absorb calcium for bone."
+          }
+        ],
+        "key_terms": [
+          {
+            "term": "Nephron",
+            "origin": "Greek nephros 'kidney'",
+            "definition": "The microscopic functional unit of the kidney."
+          },
+          {
+            "term": "Glomerulus",
+            "latin": "Glomerulus",
+            "origin": "Latin 'little ball of yarn'",
+            "definition": "A tuft of capillaries where blood is filtered."
+          },
+          {
+            "term": "Renal",
+            "origin": "Latin ren 'kidney'",
+            "definition": "Relating to the kidney."
+          },
+          {
+            "term": "Micturition",
+            "origin": "Latin micturire 'to urinate'",
+            "definition": "The act of passing urine."
+          },
+          {
+            "term": "Filtrate",
+            "definition": "Fluid filtered from the blood into the nephron before it becomes urine."
+          }
+        ],
+        "facts": [
+          {
+            "label": "Nephrons per kidney",
+            "value": "about 1 million",
+            "note": "Varies widely between individuals."
+          },
+          {
+            "label": "Glomerular filtration (adult)",
+            "value": "about 125 mL/min (about 180 L/day)"
+          },
+          {
+            "label": "Urine output (adult)",
+            "value": "about 1–2 L/day",
+            "note": "Depends on fluid intake and losses."
+          },
+          {
+            "label": "Share of cardiac output to the kidneys",
+            "value": "about 20–25 %"
+          }
+        ],
+        "clinical_notes": [
+          "Acute kidney injury can follow severe dehydration, sepsis or some medicines.",
+          "Kidney stones cause severe colicky pain radiating from the loin to the groin."
+        ]
+      }
+    },
+    {
+      "id": "reproductive",
+      "title": "Reproductive system",
+      "tagline": "Organs that produce gametes and sex hormones and, in females, support pregnancy.",
+      "display_order": 80,
+      "references": [
+        "openstax_ap2e",
+        "grays42",
+        "moore8",
+        "guyton14"
+      ],
+      "body": {
+        "latin_name": "Systemata genitalia",
+        "objectives": [
+          "Name the main organs of the male and female reproductive systems and their functions.",
+          "Describe the path of sperm from the testis to the urethra.",
+          "Outline the ovarian and uterine cycles and their hormonal control.",
+          "Explain the anatomical relationship between the prostate and the urethra."
+        ],
+        "overview": {
+          "basic": "The reproductive system allows people to have children. Its organs make special cells called gametes: sperm in males and eggs (ova) in females. When a sperm joins an egg, a new life can begin. The reproductive organs also make sex hormones, such as testosterone and oestrogen (US spelling: estrogen), which cause the body changes of puberty. In females, the uterus (womb) protects and nourishes a developing baby during pregnancy.",
+          "undergraduate": "In males, the testes produce sperm (in the seminiferous tubules) and testosterone (Leydig cells). Sperm mature in the epididymis and travel through the ductus deferens (vas deferens) and ejaculatory duct to the urethra; the seminal glands (seminal vesicles), prostate and bulbo-urethral glands add the fluid of semen. In females, the ovaries produce oocytes and the hormones oestrogen and progesterone; an ovulated oocyte enters the uterine tube, the usual site of fertilisation, and an embryo implants in the endometrium of the uterus. The uterus opens through the cervix into the vagina. Gonadotropin-releasing hormone from the hypothalamus drives the pituitary to release follicle-stimulating hormone and luteinising hormone, which control both ovarian and testicular function.",
+          "clinical": "The prostate surrounds the first part of the male urethra, so benign prostatic hyperplasia commonly causes urinary hesitancy, a weak stream and frequency; the posterior surface is palpable on digital rectal examination. The testes develop in the abdomen and descend into the scrotum before birth; their lymph drains to para-aortic (lumbar) nodes, unlike the scrotal skin, which drains to inguinal nodes, an important distinction in testicular cancer. Ectopic pregnancy, most often in the uterine tube, is a surgical emergency. Cervical screening detects precancerous change, much of which is linked to human papillomavirus infection."
+        },
+        "functions": [
+          {
+            "title": "Gamete production",
+            "body": "Testes produce sperm and ovaries produce oocytes by meiosis."
+          },
+          {
+            "title": "Hormone production",
+            "body": "Testosterone, oestrogen and progesterone drive sexual development and the reproductive cycles."
+          },
+          {
+            "title": "Transport of gametes",
+            "body": "Ducts and tubes carry sperm and oocytes to the site of fertilisation."
+          },
+          {
+            "title": "Support of pregnancy",
+            "body": "The uterus houses the developing embryo and fetus, and the placenta exchanges substances with the mother's blood."
+          }
+        ],
+        "organs": [
+          {
+            "name": "Prostate",
+            "latin": "Prostata",
+            "structure_id": "FMA:9600",
+            "role": "Gland surrounding the male urethra; adds fluid to semen."
+          },
+          {
+            "name": "Testis",
+            "latin": "Testis",
+            "structure_id": null,
+            "role": "Produces sperm and testosterone."
+          },
+          {
+            "name": "Ductus deferens",
+            "latin": "Ductus deferens",
+            "structure_id": null,
+            "role": "Carries sperm from the epididymis towards the urethra."
+          },
+          {
+            "name": "Ovary (left shown)",
+            "latin": "Ovarium",
+            "structure_id": "FMA:7214",
+            "role": "Produces oocytes, oestrogen and progesterone."
+          },
+          {
+            "name": "Uterine tube (left shown)",
+            "latin": "Tuba uterina",
+            "structure_id": "FMA:18484",
+            "role": "Carries the oocyte; usual site of fertilisation."
+          },
+          {
+            "name": "Uterus",
+            "latin": "Uterus",
+            "structure_id": "FMA:17558",
+            "role": "Muscular organ where the embryo implants and develops."
+          },
+          {
+            "name": "Breast (mammary gland)",
+            "latin": "Mamma",
+            "structure_id": "FMA:57991",
+            "role": "Contains the mammary gland, which produces milk after childbirth. TA2 classifies the breast with the integument; it is shown with the female reproductive organs in 3D."
+          }
+        ],
+        "works_with": [
+          {
+            "system": "endocrine",
+            "body": "Hypothalamic and pituitary hormones control the gonads, which are themselves endocrine glands."
+          },
+          {
+            "system": "urinary",
+            "body": "The male urethra carries both urine and semen."
+          },
+          {
+            "system": "cardiovascular",
+            "body": "During pregnancy, blood volume and cardiac output increase to supply the placenta."
+          },
+          {
+            "system": "nervous",
+            "body": "Autonomic nerves control erection, ejaculation and uterine blood flow."
+          }
+        ],
+        "key_terms": [
+          {
+            "term": "Gamete",
+            "origin": "Greek gamete 'wife', gametes 'husband'",
+            "definition": "A sex cell (sperm or oocyte) with half the usual number of chromosomes."
+          },
+          {
+            "term": "Meiosis",
+            "origin": "Greek 'lessening'",
+            "definition": "Cell division that halves the chromosome number to form gametes."
+          },
+          {
+            "term": "Endometrium",
+            "latin": "Endometrium",
+            "origin": "Greek endon 'within' + metra 'womb'",
+            "definition": "The inner lining of the uterus, shed during menstruation."
+          },
+          {
+            "term": "Gonad",
+            "origin": "Greek gone 'seed'",
+            "definition": "A testis or ovary."
+          },
+          {
+            "term": "Fertilisation",
+            "definition": "The fusion of a sperm and an oocyte (US spelling: fertilization)."
+          }
+        ],
+        "facts": [
+          {
+            "label": "Chromosomes in a human gamete",
+            "value": "23",
+            "note": "Other body cells usually have 46."
+          },
+          {
+            "label": "Typical menstrual cycle",
+            "value": "about 28 days",
+            "note": "Cycles of about 21–35 days are common."
+          }
+        ],
+        "clinical_notes": [
+          "Benign prostatic hyperplasia is common in older men and can obstruct urine flow.",
+          "Sexually transmitted infections can damage the uterine tubes and reduce fertility."
+        ],
+        "asset_note": "The 3D male body (BodyParts3D) includes the prostate; the 3D female body (Human Reference Atlas, Visible Human Female) includes the uterus, uterine tubes, ovaries and breasts. Testes, ductus deferens and external genitalia are not yet modelled in 3D."
+      }
+    },
+    {
+      "id": "endocrine",
+      "title": "Endocrine system",
+      "tagline": "Glands that release hormones into the blood to coordinate growth, metabolism and balance.",
+      "display_order": 90,
+      "references": [
+        "openstax_ap2e",
+        "grays42",
+        "moore8",
+        "guyton14"
+      ],
+      "body": {
+        "latin_name": "Systema endocrinum",
+        "objectives": [
+          "Define a hormone and distinguish endocrine from exocrine glands.",
+          "Name the major endocrine glands, their locations and a key hormone from each.",
+          "Explain negative feedback using the hypothalamus–pituitary–thyroid axis.",
+          "Interpret blood glucose values in both mmol/L and mg/dL."
+        ],
+        "overview": {
+          "basic": "The endocrine system sends chemical messages called hormones. Glands release hormones into the blood, which carries them all over the body. Each hormone acts only on cells that can 'read' it. Hormones work more slowly than nerve signals, but their effects last longer. They control growth, how fast your body uses energy, the amount of sugar in your blood, how you react to stress, and the changes of puberty. A small gland under the brain, the pituitary, controls many of the other glands.",
+          "undergraduate": "Endocrine glands are ductless and secrete hormones into the blood, unlike exocrine glands, which secrete through ducts. The main glands are the hypothalamus, pituitary gland (hypophysis), pineal gland, thyroid gland, parathyroid glands, suprarenal (adrenal) glands, pancreatic islets and the gonads; many other organs, such as the heart, kidneys, stomach and adipose tissue, also release hormones. The hypothalamus links the nervous and endocrine systems: it releases hormones that control the anterior pituitary and produces oxytocin and antidiuretic hormone, which are stored and released by the posterior pituitary. Most hormone levels are controlled by negative feedback; for example, thyroid hormones inhibit release of thyrotropin-releasing hormone and thyroid-stimulating hormone.",
+          "clinical": "Blood glucose is reported in mmol/L in most countries and mg/dL in others (1 mmol/L is about 18 mg/dL); a normal fasting value is about 3.9–5.5 mmol/L (70–100 mg/dL). Diabetes mellitus is a chronic raised blood glucose due to lack of insulin (type 1) or insulin resistance with relative deficiency (type 2). The pituitary sits in the hypophysial fossa of the sphenoid bone just below the optic chiasm, so a pituitary tumour can compress the crossing nasal retinal fibres and cause bitemporal hemianopia. The suprarenal cortex secretes cortisol and aldosterone and the medulla secretes adrenaline (epinephrine); sudden withdrawal of long-term glucocorticoid treatment can precipitate adrenal insufficiency."
+        },
+        "functions": [
+          {
+            "title": "Metabolism",
+            "body": "Thyroid hormones set the body's metabolic rate."
+          },
+          {
+            "title": "Blood glucose control",
+            "body": "Insulin lowers and glucagon raises blood glucose."
+          },
+          {
+            "title": "Growth and development",
+            "body": "Growth hormone, thyroid hormones and sex hormones drive growth and puberty."
+          },
+          {
+            "title": "Stress response",
+            "body": "Cortisol and adrenaline prepare the body to cope with stress."
+          },
+          {
+            "title": "Water, salt and calcium balance",
+            "body": "Antidiuretic hormone, aldosterone and parathyroid hormone regulate fluid and minerals."
+          }
+        ],
+        "organs": [
+          {
+            "name": "Pituitary gland",
+            "latin": "Hypophysis",
+            "structure_id": "FMA:13889",
+            "role": "Controls the thyroid, suprarenal glands and gonads; secretes growth hormone."
+          },
+          {
+            "name": "Hypothalamus",
+            "latin": "Hypothalamus",
+            "structure_id": "FMA:62008",
+            "role": "Links the nervous system to the pituitary."
+          },
+          {
+            "name": "Pineal gland",
+            "latin": "Glandula pinealis",
+            "structure_id": "FMA:62033",
+            "role": "Secretes melatonin, which helps regulate sleep–wake cycles."
+          },
+          {
+            "name": "Right suprarenal (adrenal) gland",
+            "latin": "Glandula suprarenalis",
+            "structure_id": "FMA:15629",
+            "role": "Secretes cortisol, aldosterone and adrenaline."
+          },
+          {
+            "name": "Pancreas (islets)",
+            "latin": "Insulae pancreaticae",
+            "structure_id": "FMA:7198",
+            "role": "Islets secrete insulin and glucagon."
+          },
+          {
+            "name": "Thyroid gland",
+            "latin": "Glandula thyroidea",
+            "structure_id": null,
+            "role": "Secretes thyroxine (T4), triiodothyronine (T3) and calcitonin."
+          },
+          {
+            "name": "Parathyroid glands",
+            "latin": "Glandulae parathyroideae",
+            "structure_id": null,
+            "role": "Secrete parathyroid hormone, which raises blood calcium."
+          }
+        ],
+        "works_with": [
+          {
+            "system": "nervous",
+            "body": "The hypothalamus controls the pituitary; adrenaline amplifies sympathetic responses."
+          },
+          {
+            "system": "reproductive",
+            "body": "Gonadotropins control the testes and ovaries, which secrete sex hormones."
+          },
+          {
+            "system": "urinary",
+            "body": "Antidiuretic hormone and aldosterone act on the kidneys."
+          },
+          {
+            "system": "digestive",
+            "body": "The pancreas has both digestive (exocrine) and hormonal (endocrine) roles."
+          },
+          {
+            "system": "skeletal",
+            "body": "Parathyroid hormone and calcitonin control calcium exchange with bone."
+          }
+        ],
+        "key_terms": [
+          {
+            "term": "Hormone",
+            "origin": "Greek hormon 'setting in motion'",
+            "definition": "A chemical messenger carried in the blood to target cells."
+          },
+          {
+            "term": "Endocrine",
+            "origin": "Greek endon 'within' + krinein 'to secrete'",
+            "definition": "Secreting into the blood rather than through a duct."
+          },
+          {
+            "term": "Negative feedback",
+            "definition": "A control loop in which the output of a system reduces its own production."
+          },
+          {
+            "term": "Target cell",
+            "definition": "A cell with receptors for a particular hormone."
+          },
+          {
+            "term": "Suprarenal gland",
+            "latin": "Glandula suprarenalis",
+            "definition": "The TA term for the adrenal gland, which sits on top of each kidney."
+          }
+        ],
+        "facts": [
+          {
+            "label": "Normal fasting blood glucose",
+            "value": "about 3.9–5.5 mmol/L (70–100 mg/dL)"
+          },
+          {
+            "label": "Unit conversion for glucose",
+            "value": "1 mmol/L ≈ 18 mg/dL"
+          }
+        ],
+        "clinical_notes": [
+          "Hypothyroidism causes tiredness, weight gain and feeling cold; hyperthyroidism causes the opposite.",
+          "Low blood glucose (hypoglycaemia) is an emergency in people treated with insulin."
+        ],
+        "asset_note": "The 3D model includes the pituitary, pineal and suprarenal glands and the pancreas; the thyroid and parathyroid glands are not yet modelled."
+      }
+    },
+    {
+      "id": "lymphatic",
+      "title": "Lymphatic and immune system",
+      "tagline": "Vessels that return tissue fluid to the blood and organs that train and house the immune defences.",
+      "display_order": 100,
+      "references": [
+        "openstax_ap2e",
+        "grays42",
+        "moore8",
+        "guyton14"
+      ],
+      "body": {
+        "latin_name": "Systema lymphoideum",
+        "objectives": [
+          "Describe how lymph forms and returns to the venous system.",
+          "Name the primary and secondary lymphoid organs and their roles.",
+          "Distinguish innate and adaptive immunity.",
+          "Explain why lymph node examination is part of assessing infection and cancer."
+        ],
+        "overview": {
+          "basic": "Every day some fluid leaks out of your blood vessels into your tissues. The lymphatic system collects this fluid, now called lymph, and returns it to the blood. On the way, lymph passes through small bean-shaped lymph nodes that act like filters and trap germs. Lymph nodes, the thymus, the spleen and the tonsils are full of white blood cells that fight infection. When you are ill, nodes in your neck or armpit may swell because these cells are busy.",
+          "undergraduate": "Lymphatic capillaries begin blind in the tissues and take up interstitial fluid, proteins and, in the small intestine, absorbed fats (chyle). They join to form collecting vessels with valves, which pass through lymph nodes and drain into lymphatic trunks; the thoracic duct returns lymph from most of the body to the junction of the left subclavian and internal jugular veins, and the right lymphatic duct drains the right upper quadrant. Primary lymphoid organs are where lymphocytes develop: red bone marrow (B cells) and thymus (T cells). Secondary lymphoid organs, such as lymph nodes, spleen, tonsils and mucosa-associated lymphoid tissue, are where lymphocytes meet antigens. Innate immunity is rapid and non-specific; adaptive immunity is specific and has memory.",
+          "clinical": "Lymphoedema (US spelling: lymphedema) is swelling caused by impaired lymph drainage, for example after removal of axillary lymph nodes during breast cancer surgery. Cancers spread to the regional lymph nodes that drain their organ of origin, so knowledge of drainage patterns guides examination and surgery (for example, sentinel lymph node biopsy). The spleen lies under the left 9th–11th ribs; it is not normally palpable, and when enlarged it extends towards the right iliac fossa. After removal of the spleen (splenectomy), patients are at increased risk of severe infection with encapsulated bacteria and need vaccination. The thymus is large in children and gradually replaced by fat after puberty."
+        },
+        "functions": [
+          {
+            "title": "Fluid return",
+            "body": "Returns leaked fluid and proteins from tissues to the blood."
+          },
+          {
+            "title": "Fat absorption",
+            "body": "Carries absorbed dietary fats from the intestine."
+          },
+          {
+            "title": "Immune surveillance",
+            "body": "Lymph nodes filter lymph and present antigens to lymphocytes."
+          },
+          {
+            "title": "Lymphocyte development",
+            "body": "Bone marrow and thymus produce and train lymphocytes."
+          }
+        ],
+        "organs": [
+          {
+            "name": "Thymus",
+            "latin": "Thymus",
+            "structure_id": "FMA:9607",
+            "role": "Where T lymphocytes mature; largest in childhood."
+          },
+          {
+            "name": "Lymph node (mesenteric example)",
+            "latin": "Nodi lymphoidei",
+            "structure_id": "FMA:12795",
+            "role": "Filter lymph and host immune responses."
+          },
+          {
+            "name": "Spleen",
+            "latin": "Splen",
+            "structure_id": "FMA:7196",
+            "role": "Filters blood, removes old red blood cells and mounts immune responses."
+          },
+          {
+            "name": "Palatine tonsil (right shown)",
+            "latin": "Tonsillae",
+            "structure_id": "FMA:54973",
+            "role": "Lymphoid tissue guarding the entrance to the airway and gut."
+          },
+          {
+            "name": "Thoracic duct",
+            "latin": "Ductus thoracicus",
+            "structure_id": null,
+            "role": "Largest lymphatic vessel; drains into the left venous angle."
+          }
+        ],
+        "works_with": [
+          {
+            "system": "cardiovascular",
+            "body": "Lymph returns to the blood at the venous angles of the neck."
+          },
+          {
+            "system": "digestive",
+            "body": "Lacteals in the intestinal villi absorb fats."
+          },
+          {
+            "system": "skeletal",
+            "body": "Red bone marrow produces lymphocytes and other white blood cells."
+          },
+          {
+            "system": "integumentary",
+            "body": "The skin is the first barrier against infection, and contains immune cells."
+          }
+        ],
+        "key_terms": [
+          {
+            "term": "Lymph",
+            "latin": "Lympha",
+            "origin": "Latin 'clear water'",
+            "definition": "Fluid in lymphatic vessels, derived from interstitial fluid."
+          },
+          {
+            "term": "Lymphocyte",
+            "definition": "A white blood cell of the adaptive immune system (B cell, T cell) or a natural killer cell."
+          },
+          {
+            "term": "Antigen",
+            "definition": "A molecule recognised by the immune system."
+          },
+          {
+            "term": "Antibody",
+            "definition": "A protein made by B cells (plasma cells) that binds a specific antigen."
+          },
+          {
+            "term": "Lymphoedema",
+            "definition": "Swelling caused by impaired lymph drainage (US spelling: lymphedema)."
+          }
+        ],
+        "facts": [
+          {
+            "label": "Lymph returned to the blood",
+            "value": "about 2–3 L/day"
+          },
+          {
+            "label": "Number of lymph nodes",
+            "value": "several hundred"
+          }
+        ],
+        "clinical_notes": [
+          "Tender, enlarged lymph nodes usually indicate infection; hard, painless, fixed nodes need investigation for cancer.",
+          "People without a spleen should be vaccinated against encapsulated bacteria."
+        ],
+        "asset_note": "The male body includes the thymus; the female body includes the thymus, spleen, palatine tonsils and an example mesenteric lymph node. Lymphatic vessels and most lymph nodes are not yet modelled."
+      }
+    },
+    {
+      "id": "integumentary",
+      "title": "Integumentary system",
+      "tagline": "Skin, hair and nails: the body's largest organ system and its first line of defence.",
+      "display_order": 110,
+      "references": [
+        "openstax_ap2e",
+        "grays42",
+        "moore8",
+        "guyton14"
+      ],
+      "body": {
+        "latin_name": "Integumentum commune",
+        "objectives": [
+          "Name the layers of the skin and the tissue beneath it.",
+          "List the functions of the skin, including its role in temperature regulation and vitamin D synthesis.",
+          "Describe the accessory structures: hair, nails, sweat and sebaceous glands.",
+          "Classify burns by depth."
+        ],
+        "overview": {
+          "basic": "Your skin covers and protects your whole body. It keeps germs out and water in, and it shields you from harmful sunlight. Skin helps control your temperature: you sweat when you are hot, and the sweat cools you as it dries. Skin is full of tiny sensors that feel touch, pressure, pain, heat and cold. Hair and nails grow from the skin. In sunlight, skin also makes vitamin D, which you need for strong bones.",
+          "undergraduate": "The skin (cutis) has two layers: the epidermis, a keratinised stratified squamous epithelium without blood vessels, and the dermis, a connective tissue layer containing blood vessels, nerves, hair follicles and glands. Beneath it lies the subcutaneous tissue (hypodermis; TA: tela subcutanea), mostly fat, which insulates and anchors the skin. Epidermal keratinocytes are produced in the basal layer and move outwards, filling with keratin until they are shed; melanocytes produce the pigment melanin, which absorbs ultraviolet radiation. Accessory structures include hair, nails, eccrine sweat glands (thermoregulation), apocrine sweat glands (axilla and groin) and sebaceous glands, which secrete sebum into hair follicles.",
+          "clinical": "Burn depth is described as superficial (epidermis only), partial thickness (into the dermis) and full thickness (through the dermis); full-thickness burns may be painless because nerve endings are destroyed. Burn area is estimated as a percentage of total body surface area, for example with the rule of nines in adults or the patient's palm (about 1 %). Skin colour, temperature, capillary refill time and turgor are part of clinical assessment, though signs such as cyanosis and pallor can be harder to see in darker skin and are best checked on the lips, tongue, nail beds and conjunctivae. Malignant melanoma arises from melanocytes; changes in the size, shape or colour of a mole need assessment."
+        },
+        "functions": [
+          {
+            "title": "Protection",
+            "body": "A physical, chemical and biological barrier against microbes, chemicals and ultraviolet light."
+          },
+          {
+            "title": "Temperature regulation",
+            "body": "Sweating and changes in skin blood flow release or conserve heat."
+          },
+          {
+            "title": "Sensation",
+            "body": "Receptors detect touch, pressure, vibration, temperature and pain."
+          },
+          {
+            "title": "Vitamin D synthesis",
+            "body": "Ultraviolet B light converts a cholesterol derivative in the skin into vitamin D3."
+          },
+          {
+            "title": "Water retention",
+            "body": "Keratin and lipids in the epidermis limit water loss."
+          }
+        ],
+        "organs": [
+          {
+            "name": "Skin",
+            "latin": "Cutis",
+            "structure_id": "FMA:7163",
+            "role": "Epidermis and dermis covering the body."
+          },
+          {
+            "name": "Hair",
+            "latin": "Pili",
+            "structure_id": null,
+            "role": "Insulation, protection and sensation."
+          },
+          {
+            "name": "Nails",
+            "latin": "Ungues",
+            "structure_id": null,
+            "role": "Protect the tips of fingers and toes and help with fine grip."
+          },
+          {
+            "name": "Sweat glands",
+            "latin": "Glandulae sudoriferae",
+            "structure_id": null,
+            "role": "Produce sweat for cooling."
+          },
+          {
+            "name": "Sebaceous glands",
+            "latin": "Glandulae sebaceae",
+            "structure_id": null,
+            "role": "Secrete oily sebum that softens skin and hair."
+          }
+        ],
+        "works_with": [
+          {
+            "system": "skeletal",
+            "body": "Vitamin D made in the skin helps the gut absorb calcium for bone."
+          },
+          {
+            "system": "cardiovascular",
+            "body": "Skin blood vessels widen or narrow to regulate heat loss."
+          },
+          {
+            "system": "nervous",
+            "body": "Sensory receptors in the skin send touch, temperature and pain signals to the brain."
+          },
+          {
+            "system": "lymphatic",
+            "body": "Immune cells in the skin respond to microbes that cross the barrier."
+          }
+        ],
+        "key_terms": [
+          {
+            "term": "Epidermis",
+            "latin": "Epidermis",
+            "origin": "Greek epi- 'upon' + derma 'skin'",
+            "definition": "The outer, epithelial layer of the skin."
+          },
+          {
+            "term": "Dermis",
+            "latin": "Dermis",
+            "origin": "Greek derma 'skin'",
+            "definition": "The connective tissue layer of the skin beneath the epidermis."
+          },
+          {
+            "term": "Subcutaneous tissue",
+            "latin": "Tela subcutanea",
+            "definition": "The fatty layer beneath the skin, also called the hypodermis."
+          },
+          {
+            "term": "Keratin",
+            "origin": "Greek keras 'horn'",
+            "definition": "A tough protein in skin, hair and nails."
+          },
+          {
+            "term": "Melanin",
+            "origin": "Greek melas 'black'",
+            "definition": "The pigment that colours skin and hair and absorbs ultraviolet light."
+          }
+        ],
+        "facts": [
+          {
+            "label": "Skin surface area (adult)",
+            "value": "about 1.5–2 m²"
+          },
+          {
+            "label": "Palm area, used to estimate burns",
+            "value": "about 1 % of body surface area"
+          }
+        ],
+        "clinical_notes": [
+          "Sunburn and repeated ultraviolet exposure increase the risk of skin cancer.",
+          "Pressure injuries develop over bony points in people who cannot move."
+        ],
+        "asset_note": "The skin is one surface in both bodies. The breasts (part of the integument in TA2) are shown with the female reproductive organs in 3D so that the skin can be hidden independently. Skin layers and appendages are described here but not modelled."
+      }
+    },
+    {
+      "id": "special_senses",
+      "title": "Special senses",
+      "tagline": "Vision, hearing, balance, smell and taste: specialised organs that send information to the brain.",
+      "display_order": 120,
+      "references": [
+        "openstax_ap2e",
+        "grays42",
+        "moore8",
+        "guyton14"
+      ],
+      "body": {
+        "latin_name": "Organa sensuum",
+        "objectives": [
+          "Name the five special senses and the organ responsible for each.",
+          "Trace light through the eye to the retina, naming each structure it passes.",
+          "Describe the three parts of the ear and their roles in hearing and balance.",
+          "Explain refractive errors and how lenses correct them."
+        ],
+        "overview": {
+          "basic": "Special senses tell you about the world around you. Your eyes detect light so you can see. Your ears detect sound and also help you keep your balance. Your nose detects smells, and taste buds on your tongue detect tastes. Each sense organ turns light, sound or chemicals into nerve signals that travel to your brain, and the brain makes sense of them. Senses often work together: much of what we call 'flavour' actually comes from smell.",
+          "undergraduate": "Light passes through the cornea, aqueous humour, pupil (controlled by the iris), lens and vitreous body to the retina; the cornea provides most of the eye's refractive power and the lens adjusts focus (accommodation). Retinal photoreceptors are rods (dim light) and cones (colour and fine detail, concentrated in the fovea); signals leave through the optic nerve. The ear has an external part (auricle and external acoustic meatus), a middle part (tympanic membrane and the auditory ossicles: malleus, incus and stapes) and an internal part (cochlea for hearing; vestibule and semicircular canals for balance). Smell (olfaction) is detected by receptors in the roof of the nasal cavity, and taste (gustation) by taste buds, mainly on the tongue, which detect sweet, salty, sour, bitter and umami.",
+          "clinical": "Refractive errors are common worldwide: in myopia (short-sightedness) light focuses in front of the retina and is corrected with a concave (diverging) lens; in hypermetropia (long-sightedness) it focuses behind and is corrected with a convex (converging) lens; presbyopia is age-related loss of accommodation. Cataract (opacity of the lens) is a leading cause of treatable blindness worldwide. Raised intraocular pressure with optic nerve damage (glaucoma) causes gradual peripheral field loss. Conductive hearing loss (external or middle ear) and sensorineural loss (cochlea or cochlear nerve) are distinguished at the bedside with tuning-fork tests (Rinne and Weber)."
+        },
+        "functions": [
+          {
+            "title": "Vision",
+            "body": "The eyes form images and detect colour, movement and depth."
+          },
+          {
+            "title": "Hearing",
+            "body": "The cochlea converts sound vibrations into nerve signals."
+          },
+          {
+            "title": "Balance",
+            "body": "The vestibular apparatus detects head position and movement."
+          },
+          {
+            "title": "Smell",
+            "body": "Olfactory receptors detect airborne chemicals."
+          },
+          {
+            "title": "Taste",
+            "body": "Taste buds detect dissolved chemicals in food."
+          }
+        ],
+        "organs": [
+          {
+            "name": "Right eyeball",
+            "latin": "Bulbus oculi",
+            "structure_id": "FMA:12514",
+            "role": "Forms images on the retina."
+          },
+          {
+            "name": "Right cornea",
+            "latin": "Cornea",
+            "structure_id": "FMA:58239",
+            "role": "Transparent front of the eye; provides most refractive power."
+          },
+          {
+            "name": "Right lens",
+            "latin": "Lens",
+            "structure_id": "FMA:58242",
+            "role": "Changes shape to focus at different distances."
+          },
+          {
+            "name": "Right lacrimal gland",
+            "latin": "Glandula lacrimalis",
+            "structure_id": "FMA:59102",
+            "role": "Produces tears that protect and lubricate the eye."
+          },
+          {
+            "name": "Tongue (taste buds)",
+            "latin": "Lingua",
+            "structure_id": "FMA:54640",
+            "role": "Carries most taste buds."
+          },
+          {
+            "name": "Cochlea",
+            "latin": "Cochlea",
+            "structure_id": null,
+            "role": "Organ of hearing in the inner ear."
+          }
+        ],
+        "works_with": [
+          {
+            "system": "nervous",
+            "body": "Cranial nerves carry sensory signals to the brain, which interprets them."
+          },
+          {
+            "system": "muscular",
+            "body": "Six extra-ocular muscles move each eye; tiny middle-ear muscles damp loud sounds."
+          },
+          {
+            "system": "skeletal",
+            "body": "The bony orbit protects the eye; the temporal bone houses the middle and inner ear."
+          },
+          {
+            "system": "digestive",
+            "body": "Taste and smell stimulate saliva and gastric secretion."
+          }
+        ],
+        "key_terms": [
+          {
+            "term": "Retina",
+            "latin": "Retina",
+            "definition": "The light-sensitive inner layer of the eye."
+          },
+          {
+            "term": "Accommodation",
+            "definition": "Change in lens shape to focus on near or distant objects."
+          },
+          {
+            "term": "Auditory ossicles",
+            "latin": "Ossicula auditus",
+            "definition": "The malleus, incus and stapes, which carry vibrations across the middle ear."
+          },
+          {
+            "term": "Cochlea",
+            "latin": "Cochlea",
+            "origin": "Latin 'snail shell'",
+            "definition": "The spiral, fluid-filled organ of hearing."
+          },
+          {
+            "term": "Olfaction",
+            "origin": "Latin olfacere 'to smell'",
+            "definition": "The sense of smell."
+          }
+        ],
+        "facts": [
+          {
+            "label": "Adult eyeball diameter",
+            "value": "about 24 mm"
+          },
+          {
+            "label": "Photoreceptors per retina",
+            "value": "about 100–120 million rods and 6 million cones"
+          },
+          {
+            "label": "Range of human hearing",
+            "value": "about 20 Hz to 20 kHz",
+            "note": "The upper limit falls with age."
+          }
+        ],
+        "clinical_notes": [
+          "Sudden painless loss of vision in one eye is an emergency.",
+          "Prolonged exposure to loud noise causes permanent sensorineural hearing loss."
+        ],
+        "asset_note": "The 3D model includes the eyes, lacrimal apparatus and extra-ocular muscles; the ear and olfactory structures are not yet modelled. Anatomically, the special sense organs are part of the nervous system; they are grouped separately here for study."
+      }
+    }
+  ]
+}

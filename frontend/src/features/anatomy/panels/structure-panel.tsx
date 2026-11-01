@@ -1,6 +1,6 @@
 "use client";
 
-import { Activity, Crosshair, EyeOff, Focus, HeartPulse, MousePointerClick } from "lucide-react";
+import { Activity, Crosshair, EyeOff, Focus, HeartPulse, Lightbulb, MousePointerClick } from "lucide-react";
 import Link from "next/link";
 
 import { Badge } from "@/components/ui/badge";
@@ -12,6 +12,8 @@ import { useStructure } from "@/lib/api/queries";
 import type { AudienceLevel, Relation, StructureDetail, StructureSummary } from "@/lib/api/types";
 
 import { SYSTEM_COLORS } from "../engine/palette";
+import { FunctionPanel } from "../function/function-panel";
+import { BodyMapPanel } from "./body-map-panel";
 import { useWorkspace } from "../store";
 
 const SECTION_LABELS: Record<string, string> = {
@@ -37,9 +39,9 @@ const SECTION_LABELS: Record<string, string> = {
 };
 
 const AUDIENCES: [AudienceLevel, string][] = [
-  ["basic", "Basic"],
-  ["undergraduate", "Undergraduate"],
-  ["clinical", "Clinical"],
+  ["basic", "Beginner"],
+  ["undergraduate", "Intermediate (undergraduate)"],
+  ["clinical", "Advanced (clinical)"],
   ["postgraduate", "Postgraduate"],
   ["specialist", "Specialist"],
 ];
@@ -93,7 +95,21 @@ function Overview({ d }: { d: StructureDetail }) {
       <div className="grid gap-2 rounded-md border border-dashed p-3 text-sm text-muted-foreground">
         <p>
           No curated educational content for this structure yet. Its identity, hierarchy and 3D
-          geometry come from {d.identity_source === "bodyparts3d-4.0" ? "BodyParts3D 4.0 (FMA)" : d.identity_source}.
+          geometry come from{" "}
+          {d.identity_source === "bodyparts3d-4.0"
+            ? "BodyParts3D 4.0 (FMA)"
+            : d.identity_source === "hra-vhf"
+              ? "the Human Reference Atlas (Visible Human Female)"
+              : d.identity_source === "bodyparts3d-4.0-isa"
+                ? "BodyParts3D 4.0 (IS-A set, FMA)"
+                : d.identity_source === "spl-atlas"
+                  ? "the SPL Head and Neck / Inner Ear atlases (Brigham and Women's Hospital), registered to the BodyParts3D skull"
+                  : d.identity_source === "medverse-derived"
+                    ? "a schematic surface MEDVERSE derived from this body's brain (no open dataset segments the cranial meninges); it shows where the layer lies, not its exact shape"
+                    : d.identity_source === "z-anatomy"
+                      ? "Z-Anatomy (CC BY-SA 4.0), registered to the BodyParts3D skull; on the female body these meshes are fitted from a male-derived model"
+                      : d.identity_source}
+          .
         </p>
         <p className="text-xs">Content is added through the expert-reviewed authoring workflow.</p>
       </div>
@@ -127,6 +143,22 @@ function Overview({ d }: { d: StructureDetail }) {
   );
 }
 
+/** The selected structure exists only in the other body (e.g. uterus, prostate). */
+function OtherBodyNotice() {
+  const bodyModel = useWorkspace((s) => s.bodyModel);
+  const other = bodyModel === "male" ? "female" : "male";
+  return (
+    <div className="flex flex-wrap items-center gap-2 rounded-md border border-dashed p-2 text-xs text-muted-foreground">
+      <span className="flex-1">
+        Not present in the {bodyModel} body model; it is modelled in the {other} body.
+      </span>
+      <Button size="xs" variant="secondary" onClick={() => useWorkspace.getState().setBodyModel(other)}>
+        Show in the {other} body
+      </Button>
+    </div>
+  );
+}
+
 export function StructurePanel({
   structureId,
   meshIds,
@@ -139,6 +171,7 @@ export function StructurePanel({
   const audience = useWorkspace((s) => s.audience);
   const setAudience = useWorkspace((s) => s.setAudience);
   const multi = useWorkspace((s) => s.multiSelection);
+  const spotlight = useWorkspace((s) => s.spotlight);
   const q = useStructure(structureId, audience);
 
   if (!structureId) {
@@ -195,12 +228,33 @@ export function StructurePanel({
           )}
           <VerificationBadge status={d.verification_status} />
         </div>
+        {!meshIds.length && d.mesh_ids.length > 0 && <OtherBodyNotice />}
+        {meshIds.some((m) => m.startsWith("ZAF-") || m.startsWith("FIT-")) && (
+          <p className="rounded-md border border-dashed p-2 text-[11px] text-muted-foreground">
+            3D model on this body:{" "}
+            {meshIds.some((m) => m.startsWith("ZAF-")) ? "Z-Anatomy (CC BY-SA 4.0)" : "BodyParts3D (CC BY 4.0)"}, made
+            from a male body and fitted to this female head. Its shape is an approximation, not female anatomy.
+          </p>
+        )}
+        {meshIds.some((m) => m.startsWith("ZAM-")) && (
+          <p className="text-[11px] text-muted-foreground">3D model: Z-Anatomy (CC BY-SA 4.0), registered to this body.</p>
+        )}
         <div className="flex flex-wrap gap-1.5">
           <Button size="sm" variant="secondary" disabled={!meshIds.length} onClick={() => ws.requestFocus(meshIds)}>
             <Crosshair /> Focus
           </Button>
           <Button size="sm" variant="secondary" disabled={!meshIds.length} onClick={() => ws.isolateMeshes(meshIds)}>
             <Focus /> Isolate
+          </Button>
+          <Button
+            size="sm"
+            variant={spotlight ? "default" : "secondary"}
+            aria-pressed={spotlight}
+            disabled={!meshIds.length}
+            onClick={() => ws.setSpotlight(!spotlight)}
+            title="Fade everything except this structure"
+          >
+            <Lightbulb /> Spotlight
           </Button>
           <Button size="sm" variant="secondary" disabled={!meshIds.length} onClick={() => ws.hideMeshes(meshIds)}>
             <EyeOff /> Hide
@@ -231,13 +285,23 @@ export function StructurePanel({
         </select>
       </label>
 
-      <Tabs defaultValue="overview">
-        <TabsList className="w-full">
+      <Tabs key={d.id} defaultValue={d.simulations.length ? "function" : "bodymap"}>
+        <TabsList className="h-auto w-full flex-wrap">
+          <TabsTrigger value="function">Function</TabsTrigger>
+          <TabsTrigger value="bodymap">Body map</TabsTrigger>
           <TabsTrigger value="overview">Anatomy</TabsTrigger>
           <TabsTrigger value="relations">Relations</TabsTrigger>
           <TabsTrigger value="clinical">Clinical</TabsTrigger>
           <TabsTrigger value="sources">Sources</TabsTrigger>
         </TabsList>
+
+        <TabsContent value="function" className="pt-3">
+          <FunctionPanel d={d} onSelect={onSelect} />
+        </TabsContent>
+
+        <TabsContent value="bodymap" className="pt-3">
+          <BodyMapPanel structureId={d.id} onSelect={onSelect} />
+        </TabsContent>
 
         <TabsContent value="overview" className="pt-3">
           <Overview d={d} />

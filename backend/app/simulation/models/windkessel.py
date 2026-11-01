@@ -16,6 +16,7 @@ import numpy as np
 
 from app.models.enums import EvidenceClass
 from app.simulation.core import (
+    AnimationBinding,
     ModelDefinition,
     OutputSpec,
     ParameterSpec,
@@ -213,6 +214,19 @@ DEFINITION = ModelDefinition(
         "aortic_pressure": ["FMA:3734", "FMA:3736", "FMA:3768"],
         "aortic_inflow": ["FMA:7101"],
     },
+    animations=[
+        AnimationBinding(
+            output="aortic_pressure",
+            structure_ids=["FMA:3734"],
+            effect="tint",
+            amplitude=0.85,
+            color="#ff4d3d",
+            description=(
+                "The aorta brightens as model aortic pressure rises. The whole vessel changes "
+                "at once because this lumped model has no pulse-wave travel."
+            ),
+        ),
+    ],
 )
 
 

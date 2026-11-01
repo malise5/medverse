@@ -6833,5 +6833,225 @@
   "subject": "FMA:9991",
   "predicate": "part_of",
   "object": "FMA:73103"
+ },
+ {
+  "subject": "FMA:49145",
+  "predicate": "part_of",
+  "object": "FMA:49055"
+ },
+ {
+  "subject": "FMA:49148",
+  "predicate": "part_of",
+  "object": "FMA:49057"
+ },
+ {
+  "subject": "FMA:49068",
+  "predicate": "part_of",
+  "object": "FMA:49053"
+ },
+ {
+  "subject": "FMA:58081",
+  "predicate": "part_of",
+  "object": "FMA:12514"
+ },
+ {
+  "subject": "FMA:49144",
+  "predicate": "part_of",
+  "object": "FMA:49054"
+ },
+ {
+  "subject": "FMA:49147",
+  "predicate": "part_of",
+  "object": "FMA:49056"
+ },
+ {
+  "subject": "FMA:49067",
+  "predicate": "part_of",
+  "object": "FMA:49052"
+ },
+ {
+  "subject": "FMA:50369",
+  "predicate": "part_of",
+  "object": "FMA:50082"
+ },
+ {
+  "subject": "FMA:50361",
+  "predicate": "part_of",
+  "object": "FMA:50359"
+ },
+ {
+  "subject": "FMA:50362",
+  "predicate": "part_of",
+  "object": "FMA:50360"
+ },
+ {
+  "subject": "FMA:50146",
+  "predicate": "part_of",
+  "object": "FMA:72906"
+ },
+ {
+  "subject": "FMA:50147",
+  "predicate": "part_of",
+  "object": "FMA:72907"
+ },
+ {
+  "subject": "FMA:50428",
+  "predicate": "part_of",
+  "object": "FMA:50085"
+ },
+ {
+  "subject": "FMA:50429",
+  "predicate": "part_of",
+  "object": "FMA:50086"
+ },
+ {
+  "subject": "FMA:50351",
+  "predicate": "part_of",
+  "object": "FMA:50347"
+ },
+ {
+  "subject": "FMA:50352",
+  "predicate": "part_of",
+  "object": "FMA:50348"
+ },
+ {
+  "subject": "FMA:50578",
+  "predicate": "part_of",
+  "object": "FMA:50574"
+ },
+ {
+  "subject": "FMA:50579",
+  "predicate": "part_of",
+  "object": "FMA:50575"
+ },
+ {
+  "subject": "FMA:50581",
+  "predicate": "part_of",
+  "object": "FMA:50574"
+ },
+ {
+  "subject": "FMA:50582",
+  "predicate": "part_of",
+  "object": "FMA:50575"
+ },
+ {
+  "subject": "FMA:50467",
+  "predicate": "part_of",
+  "object": "FMA:50082"
+ },
+ {
+  "subject": "FMA:50357",
+  "predicate": "part_of",
+  "object": "FMA:50347"
+ },
+ {
+  "subject": "FMA:50358",
+  "predicate": "part_of",
+  "object": "FMA:50348"
+ },
+ {
+  "subject": "FMA:50641",
+  "predicate": "part_of",
+  "object": "FMA:50584"
+ },
+ {
+  "subject": "FMA:50642",
+  "predicate": "part_of",
+  "object": "FMA:50585"
+ },
+ {
+  "subject": "FMA:50470",
+  "predicate": "part_of",
+  "object": "FMA:50082"
+ },
+ {
+  "subject": "FMA:76128",
+  "predicate": "part_of",
+  "object": "FMA:50082"
+ },
+ {
+  "subject": "FMA:50660",
+  "predicate": "part_of",
+  "object": "FMA:50584"
+ },
+ {
+  "subject": "FMA:50661",
+  "predicate": "part_of",
+  "object": "FMA:50585"
+ },
+ {
+  "subject": "FMA:50353",
+  "predicate": "part_of",
+  "object": "FMA:50347"
+ },
+ {
+  "subject": "FMA:50354",
+  "predicate": "part_of",
+  "object": "FMA:50348"
+ },
+ {
+  "subject": "FMA:50696",
+  "predicate": "part_of",
+  "object": "FMA:50574"
+ },
+ {
+  "subject": "FMA:50697",
+  "predicate": "part_of",
+  "object": "FMA:50575"
+ },
+ {
+  "subject": "FMA:50473",
+  "predicate": "part_of",
+  "object": "FMA:50082"
+ },
+ {
+  "subject": "FMA:73462",
+  "predicate": "part_of",
+  "object": "FMA:73423"
+ },
+ {
+  "subject": "FMA:73461",
+  "predicate": "part_of",
+  "object": "FMA:73422"
+ },
+ {
+  "subject": "FMA:61970",
+  "predicate": "part_of",
+  "object": "FMA:61992"
+ },
+ {
+  "subject": "FMA:72925",
+  "predicate": "part_of",
+  "object": "FMA:61992"
+ },
+ {
+  "subject": "FMA:73464",
+  "predicate": "part_of",
+  "object": "FMA:73435"
+ },
+ {
+  "subject": "FMA:62394",
+  "predicate": "part_of",
+  "object": "FMA:61993"
+ },
+ {
+  "subject": "FMA:72924",
+  "predicate": "part_of",
+  "object": "FMA:61992"
+ },
+ {
+  "subject": "FMA:73463",
+  "predicate": "part_of",
+  "object": "FMA:73434"
+ },
+ {
+  "subject": "FMA:61842",
+  "predicate": "part_of",
+  "object": "FMA:62000"
+ },
+ {
+  "subject": "FMA:54241",
+  "predicate": "part_of",
+  "object": "FMA:7154"
  }
 ]

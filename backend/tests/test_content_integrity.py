@@ -55,7 +55,12 @@ def test_every_bundle_file_exists_and_matches_checksum():
     from app.core.config import BACKEND_DIR
 
     public = BACKEND_DIR.parent / "frontend" / "public"
-    bundles = json.loads((CONTENT / "generated/bodyparts3d/bundles.json").read_text())
+    bundles = [
+        b
+        for source in ("bodyparts3d", "hra-female")
+        for b in json.loads((CONTENT / f"generated/{source}/bundles.json").read_text())
+    ]
+    assert {b.get("body_model", "male") for b in bundles} == {"male", "female"}
     for b in bundles:
         path = public / b["uri"].lstrip("/")
         assert path.exists(), path

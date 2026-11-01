@@ -52,7 +52,7 @@ API docs: http://localhost:8000/api/v1/docs
 ## Tests
 
 ```bash
-cd backend && .venv/bin/pytest && .venv/bin/ruff check app tests ../pipeline   # 57 tests (uses medverse_test DB)
+cd backend && .venv/bin/pytest && .venv/bin/ruff check app tests ../pipeline   # uses the medverse_test DB
 cd frontend && npm test && npm run lint && npm run typecheck && npm run build   # 15 tests
 ```
 
@@ -62,9 +62,9 @@ cd frontend && npm test && npm run lint && npm run typecheck && npm run build   
 |---|---|
 | `backend/` | FastAPI service: auth, knowledge graph, simulation engine, pathology |
 | `frontend/` | Next.js 16 app: shell, 3D anatomy engine, labs |
-| `pipeline/` | BodyParts3D → knowledge records + GLB bundles |
+| `pipeline/` | 3D bodies → knowledge records + GLB bundles: `bodyparts3d/` (male, BodyParts3D 4.0) and `hra/` (female, Human Reference Atlas Visible Human Female); see [3D assets](docs/3d-asset-pipeline.md) |
 | `content/` | Version-controlled references, systems, curated anatomy, pathology, generated data |
-| `docs/` | [Architecture](docs/architecture.md) · [Database](docs/database.md) · [Knowledge graph](docs/knowledge-graph.md) · [3D assets](docs/3d-asset-pipeline.md) · [Simulation](docs/simulation-engine.md) · [API](docs/api.md) · [Security](docs/security.md) · [Governance](docs/content-governance.md) · [Roadmap](docs/roadmap.md) |
+| `docs/` | [Architecture](docs/architecture.md) · [Database](docs/database.md) · [Knowledge graph](docs/knowledge-graph.md) · [3D assets](docs/3d-asset-pipeline.md) · [Simulation](docs/simulation-engine.md) · [API](docs/api.md) · [Security](docs/security.md) · [Deployment](docs/deployment.md) · [Governance](docs/content-governance.md) · [Roadmap](docs/roadmap.md) |
 
 ## Attribution
 

@@ -9574,5 +9574,2325 @@
   "system_id": "nervous",
   "laterality": "unspecified",
   "is_compound": true
+ },
+ {
+  "id": "FMA:55704",
+  "name": "left lower first secondary molar tooth",
+  "system_id": "digestive",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55693",
+  "name": "left lower first secondary premolar tooth",
+  "system_id": "digestive",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55703",
+  "name": "left lower second secondary molar tooth",
+  "system_id": "digestive",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55692",
+  "name": "left lower second secondary premolar tooth",
+  "system_id": "digestive",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:57143",
+  "name": "left lower central secondary incisor tooth",
+  "system_id": "digestive",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:57141",
+  "name": "left lower lateral secondary incisor tooth",
+  "system_id": "digestive",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55687",
+  "name": "left lower secondary canine tooth",
+  "system_id": "digestive",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55699",
+  "name": "left upper first secondary molar tooth",
+  "system_id": "digestive",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55690",
+  "name": "left upper first secondary premolar tooth",
+  "system_id": "digestive",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55700",
+  "name": "left upper second secondary molar tooth",
+  "system_id": "digestive",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55691",
+  "name": "left upper second secondary premolar tooth",
+  "system_id": "digestive",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55682",
+  "name": "left upper central secondary incisor tooth",
+  "system_id": "digestive",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55683",
+  "name": "left upper lateral secondary incisor tooth",
+  "system_id": "digestive",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55799",
+  "name": "left upper secondary canine tooth",
+  "system_id": "digestive",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55705",
+  "name": "right lower first secondary molar tooth",
+  "system_id": "digestive",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55694",
+  "name": "right lower first secondary premolar tooth",
+  "system_id": "digestive",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55706",
+  "name": "right lower second secondary molar tooth",
+  "system_id": "digestive",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55695",
+  "name": "right lower second secondary premolar tooth",
+  "system_id": "digestive",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:57142",
+  "name": "right lower central secondary incisor tooth",
+  "system_id": "digestive",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:57140",
+  "name": "right lower lateral secondary incisor tooth",
+  "system_id": "digestive",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55686",
+  "name": "right lower secondary canine tooth",
+  "system_id": "digestive",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55697",
+  "name": "right upper second secondary molar tooth",
+  "system_id": "digestive",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55698",
+  "name": "right upper first secondary molar tooth",
+  "system_id": "digestive",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55689",
+  "name": "right upper first secondary premolar tooth",
+  "system_id": "digestive",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55688",
+  "name": "right upper second secondary premolar tooth",
+  "system_id": "digestive",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55681",
+  "name": "right upper central secondary incisor tooth",
+  "system_id": "digestive",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55680",
+  "name": "right upper lateral secondary incisor tooth",
+  "system_id": "digestive",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55798",
+  "name": "right upper secondary canine tooth",
+  "system_id": "digestive",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52677",
+  "name": "left anterior ethmoidal nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:49145",
+  "name": "check ligament of left lateral rectus",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:58484",
+  "name": "left corona ciliaris",
+  "system_id": "special_senses",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:53550",
+  "name": "left ciliary ganglion",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52640",
+  "name": "left frontal nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:49073",
+  "name": "left common tendinous ring",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:49148",
+  "name": "check ligament of left medial rectus",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52577",
+  "name": "inferior branch of left oculomotor nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52699",
+  "name": "left infratrochlear nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52630",
+  "name": "left lacrimal nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52670",
+  "name": "left nasociliary nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52674",
+  "name": "communicating branch of left nasociliary nerve with left ciliary ganglion",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52623",
+  "name": "left ophthalmic nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50878",
+  "name": "left optic nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52716",
+  "name": "left posterior ethmoidal nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:58608",
+  "name": "optic part of left retina",
+  "system_id": "special_senses",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:82735",
+  "name": "left long ciliary nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:7037",
+  "name": "branch of ciliary ganglion",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52575",
+  "name": "superior branch of left oculomotor nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52657",
+  "name": "left supra-orbital nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52644",
+  "name": "left supratrochlear nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:49068",
+  "name": "trochlea of left superior oblique",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50882",
+  "name": "left trochlear nerve",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:58081",
+  "name": "anterior chamber of right eyeball",
+  "system_id": "special_senses",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52676",
+  "name": "right anterior ethmoidal nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:49144",
+  "name": "check ligament of right lateral rectus",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:49147",
+  "name": "check ligament of right medial rectus",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:58483",
+  "name": "right corona ciliaris",
+  "system_id": "special_senses",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:53549",
+  "name": "right ciliary ganglion",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52639",
+  "name": "right frontal nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:49072",
+  "name": "right common tendinous ring",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:54158",
+  "name": "tendon of levator palpebrae superioris",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52576",
+  "name": "inferior branch of right oculomotor nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52698",
+  "name": "right infratrochlear nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52629",
+  "name": "right lacrimal nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52669",
+  "name": "right nasociliary nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52673",
+  "name": "communicating branch of right nasociliary nerve with right ciliary ganglion",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52622",
+  "name": "right ophthalmic nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50875",
+  "name": "right optic nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52715",
+  "name": "right posterior ethmoidal nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:58607",
+  "name": "optic part of right retina",
+  "system_id": "special_senses",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:82734",
+  "name": "right long ciliary nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52574",
+  "name": "superior branch of right oculomotor nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52656",
+  "name": "right supra-orbital nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52643",
+  "name": "right supratrochlear nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:49067",
+  "name": "trochlea of right superior oblique",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50881",
+  "name": "right trochlear nerve",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:33586",
+  "name": "descending part of right trapezius",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:33587",
+  "name": "descending part of left trapezius",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:81752",
+  "name": "right cervical rotator",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:81753",
+  "name": "left cervical rotator",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:22754",
+  "name": "right longissimus capitis",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:22756",
+  "name": "left longissimus capitis",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:22876",
+  "name": "right semispinalis capitis",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:22877",
+  "name": "left semispinalis capitis",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:77179",
+  "name": "spinalis",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:22728",
+  "name": "right splenius capitis",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:22729",
+  "name": "left splenius capitis",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46293",
+  "name": "left digastric",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46292",
+  "name": "right digastric",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:45740",
+  "name": "left platysma",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46327",
+  "name": "left geniohyoid",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46310",
+  "name": "left longus capitis",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46322",
+  "name": "left mylohyoid",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:32537",
+  "name": "left obliquus capitis inferior",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:32535",
+  "name": "left obliquus capitis superior",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46314",
+  "name": "left rectus capitis anterior",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:32531",
+  "name": "left rectus capitis posterior major",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:32533",
+  "name": "left rectus capitis posterior minor",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46318",
+  "name": "left rectus capitis lateralis",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:13393",
+  "name": "left scalenus anterior",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:13391",
+  "name": "left scalenus medius",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:13409",
+  "name": "left sternocleidomastoid",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:45827",
+  "name": "left stylohyoid",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46326",
+  "name": "right geniohyoid",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:65410",
+  "name": "intermediate tendon",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46309",
+  "name": "right longus capitis",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46321",
+  "name": "right mylohyoid",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:32536",
+  "name": "right obliquus capitis inferior",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:32534",
+  "name": "right obliquus capitis superior",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:45739",
+  "name": "right platysma",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46313",
+  "name": "right rectus capitis anterior",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:32530",
+  "name": "right rectus capitis posterior major",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:32532",
+  "name": "right rectus capitis posterior minor",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46317",
+  "name": "right rectus capitis lateralis",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:13392",
+  "name": "right scalenus anterior",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:13390",
+  "name": "right scalenus medius",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:13408",
+  "name": "right sternocleidomastoid",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:45826",
+  "name": "right stylohyoid",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46280",
+  "name": "superior oblique part of longus colli",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46282",
+  "name": "vertical intermediate part of longus colli",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50533",
+  "name": "left anterior spinal artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50383",
+  "name": "right anterior temporal artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50384",
+  "name": "left anterior temporal artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50369",
+  "name": "insular part of right middle cerebral artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50370",
+  "name": "insular part of left middle cerebral artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50378",
+  "name": "anterolateral central branch of left middle cerebral artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:77439",
+  "name": "artery of central sulcus",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50483",
+  "name": "artery of right postcentral sulcus",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50484",
+  "name": "artery of left postcentral sulcus",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50486",
+  "name": "right anterior parietal artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50487",
+  "name": "left anterior parietal artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50480",
+  "name": "artery of right precentral sulcus",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50481",
+  "name": "artery of left precentral sulcus",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50361",
+  "name": "precuneal branch of right pericallosal artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50362",
+  "name": "precuneal branch of left pericallosal artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50476",
+  "name": "branch of right middle cerebral artery to right angular gyrus",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50477",
+  "name": "branch of left middle cerebral artery to left angular gyrus",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50146",
+  "name": "branch of right anterior choroidal artery to posterior limb of right internal capsule",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50147",
+  "name": "branch of left anterior choroidal artery to posterior limb of left internal capsule",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50347",
+  "name": "right callosomarginal artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50348",
+  "name": "left callosomarginal artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50428",
+  "name": "hypothalamic branch of right posterior communicating artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50429",
+  "name": "hypothalamic branch of left posterior communicating artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50351",
+  "name": "intermediomedial branch of right callosomarginal artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50352",
+  "name": "intermediomedial branch of left callosomarginal artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50578",
+  "name": "lateral branch of right superior cerebellar artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50579",
+  "name": "lateral branch of left superior cerebellar artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50443",
+  "name": "right lateral frontobasal artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50444",
+  "name": "left lateral frontobasal artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50581",
+  "name": "medial branch of right superior cerebellar artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50582",
+  "name": "medial branch of left superior cerebellar artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50343",
+  "name": "right medial frontobasal artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50344",
+  "name": "left medial frontobasal artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50367",
+  "name": "sphenoid part of left middle cerebral artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50467",
+  "name": "middle temporal branch of right middle cerebral artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50468",
+  "name": "middle temporal branch of left middle cerebral artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50357",
+  "name": "paracentral branch of right callosomarginal artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50358",
+  "name": "paracentral branch of left callosomarginal artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50359",
+  "name": "right pericallosal artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50360",
+  "name": "left pericallosal artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50380",
+  "name": "right polar temporal artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50381",
+  "name": "left polar temporal artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50641",
+  "name": "postcommunicating part of right posterior cerebral artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50642",
+  "name": "postcommunicating part of left posterior cerebral artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50489",
+  "name": "right posterior parietal artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50490",
+  "name": "left posterior parietal artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50470",
+  "name": "posterior temporal branch of right middle cerebral artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50471",
+  "name": "posterior temporal branch of left middle cerebral artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:76128",
+  "name": "trunk of inferior terminal branch of right middle cerebral artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:76129",
+  "name": "trunk of inferior terminal branch of left middle cerebral artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50660",
+  "name": "posteromedial central branch of right posterior cerebral artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50661",
+  "name": "posteromedial central branch of left posterior cerebral artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50353",
+  "name": "posteromedial branch of right callosomarginal artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50354",
+  "name": "posteromedial branch of left callosomarginal artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50445",
+  "name": "right prefrontal artery",
+  "system_id": "cardiovascular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50478",
+  "name": "left prefrontal artery",
+  "system_id": "cardiovascular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50696",
+  "name": "superior vermian branch of medial branch of right superior cerebellar artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50697",
+  "name": "superior vermian branch of medial branch of left superior cerebellar artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50473",
+  "name": "temporo-occipital branch of right middle cerebral artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:50474",
+  "name": "temporo-occipital branch of left middle cerebral artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:61961",
+  "name": "anterior commissure",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:73462",
+  "name": "brachium of left superior colliculus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:73461",
+  "name": "brachium of right superior colliculus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:61970",
+  "name": "commissure of fornix of forebrain",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:86464",
+  "name": "corpus callosum",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:72833",
+  "name": "left amygdala",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:72827",
+  "name": "left caudate nucleus",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:61934",
+  "name": "choroid plexus of cerebral hemisphere",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:72925",
+  "name": "left fornix of forebrain",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:72831",
+  "name": "left globus pallidus",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:73464",
+  "name": "brachium of left inferior colliculus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:61975",
+  "name": "lamina terminalis",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:73304",
+  "name": "left lateral geniculate body",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:74877",
+  "name": "mammillary body",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:62045",
+  "name": "optic chiasm",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:67936",
+  "name": "left optic tract",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:62394",
+  "name": "peduncle of midbrain",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:72829",
+  "name": "left putamen",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:73414",
+  "name": "left stria medullaris of thalamus",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:72940",
+  "name": "left stria terminalis",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:258716",
+  "name": "left thalamus",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:256194",
+  "name": "orbital gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:62072",
+  "name": "posterior commissure",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:72826",
+  "name": "right caudate nucleus",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:72924",
+  "name": "right fornix of forebrain",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:72830",
+  "name": "right globus pallidus",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:73463",
+  "name": "brachium of right inferior colliculus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:73303",
+  "name": "right lateral geniculate body",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:73309",
+  "name": "right medial geniculate body",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:73310",
+  "name": "left medial geniculate body",
+  "system_id": "nervous",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:62382",
+  "name": "right optic tract",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:72828",
+  "name": "right putamen",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:73413",
+  "name": "right stria medullaris of thalamus",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:61974",
+  "name": "stria terminalis",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:258714",
+  "name": "right thalamus",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:72832",
+  "name": "right amygdala",
+  "system_id": "nervous",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:61842",
+  "name": "septum of telencephalon",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:72801",
+  "name": "anterior part of left superior temporal gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:72800",
+  "name": "anterior part of right superior temporal gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:72805",
+  "name": "posterior part of left superior temporal gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:72804",
+  "name": "posterior part of right superior temporal gyrus",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:9615",
+  "name": "cricoid cartilage",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46702",
+  "name": "left genioglossus",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46704",
+  "name": "left hyoglossus",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46636",
+  "name": "left inferior pharyngeal constrictor",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46633",
+  "name": "right middle pharyngeal constrictor",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46672",
+  "name": "left palatopharyngeus",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55620",
+  "name": "left pterygomandibular raphe",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46670",
+  "name": "left salpingopharyngeus",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46668",
+  "name": "left stylopharyngeus",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46632",
+  "name": "left superior pharyngeal constrictor",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55077",
+  "name": "pharyngeal raphe",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46698",
+  "name": "right genioglossus",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46703",
+  "name": "right hyoglossus",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46635",
+  "name": "right inferior pharyngeal constrictor",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46634",
+  "name": "left middle pharyngeal constrictor",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46671",
+  "name": "right palatopharyngeus",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55619",
+  "name": "right pterygomandibular raphe",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46669",
+  "name": "right salpingopharyngeus",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46667",
+  "name": "right stylopharyngeus",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46631",
+  "name": "right superior pharyngeal constrictor",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:72311",
+  "name": "left stylohyoid ligament",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:72309",
+  "name": "right stylohyoid ligament",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:59805",
+  "name": "left sublingual gland",
+  "system_id": "digestive",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:59804",
+  "name": "right sublingual gland",
+  "system_id": "digestive",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:54921",
+  "name": "extrinsic ligament of larynx",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55118",
+  "name": "left cuneiform cartilage",
+  "system_id": "skeletal",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46605",
+  "name": "left aryepiglotticus",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55114",
+  "name": "left arytenoid cartilage",
+  "system_id": "skeletal",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55116",
+  "name": "left corniculate cartilage",
+  "system_id": "skeletal",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55252",
+  "name": "left conus elasticus",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46581",
+  "name": "left lateral crico-arytenoid",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46585",
+  "name": "left oblique arytenoid",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46578",
+  "name": "left posterior crico-arytenoid",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46590",
+  "name": "left thyro-arytenoid",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55246",
+  "name": "left vocal ligament",
+  "system_id": "respiratory",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46593",
+  "name": "left vocalis",
+  "system_id": "muscular",
+  "laterality": "left",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46604",
+  "name": "right aryepiglotticus",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55113",
+  "name": "right arytenoid cartilage",
+  "system_id": "skeletal",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55115",
+  "name": "right corniculate cartilage",
+  "system_id": "skeletal",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55251",
+  "name": "right conus elasticus",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55117",
+  "name": "right cuneiform cartilage",
+  "system_id": "skeletal",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46580",
+  "name": "right lateral crico-arytenoid",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46584",
+  "name": "right oblique arytenoid",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46577",
+  "name": "right posterior crico-arytenoid",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46589",
+  "name": "right thyro-arytenoid",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55245",
+  "name": "right vocal ligament",
+  "system_id": "respiratory",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46592",
+  "name": "right vocalis",
+  "system_id": "muscular",
+  "laterality": "right",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55230",
+  "name": "thyro-epiglottic ligament",
+  "system_id": "respiratory",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:55099",
+  "name": "thyroid cartilage",
+  "system_id": "skeletal",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:46582",
+  "name": "transverse arytenoid",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:52781",
+  "name": "external ear",
+  "system_id": "special_senses",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:54237",
+  "name": "eyebrow",
+  "system_id": "integumentary",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:54241",
+  "name": "hair of head",
+  "system_id": "integumentary",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "bodyparts3d-4.0-isa"
+ },
+ {
+  "id": "FMA:49006",
+  "name": "temporalis",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "spl-atlas"
+ },
+ {
+  "id": "FMA:48996",
+  "name": "masseter",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "spl-atlas"
+ },
+ {
+  "id": "FMA:46810",
+  "name": "zygomaticus major",
+  "system_id": "muscular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "spl-atlas"
+ },
+ {
+  "id": "FMA:59790",
+  "name": "parotid gland",
+  "system_id": "digestive",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "spl-atlas"
+ },
+ {
+  "id": "FMA:10635",
+  "name": "external carotid artery",
+  "system_id": "cardiovascular",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "spl-atlas"
+ },
+ {
+  "id": "FMA:9603",
+  "name": "thyroid gland",
+  "system_id": "endocrine",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "spl-atlas"
+ },
+ {
+  "id": "FMA:60179",
+  "name": "bony labyrinth",
+  "system_id": "special_senses",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "spl-atlas"
+ },
+ {
+  "id": "FMA:56932",
+  "name": "round window",
+  "system_id": "special_senses",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "spl-atlas"
+ },
+ {
+  "id": "FMA:52753",
+  "name": "malleus",
+  "system_id": "special_senses",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "spl-atlas"
+ },
+ {
+  "id": "FMA:52752",
+  "name": "incus",
+  "system_id": "special_senses",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "spl-atlas"
+ },
+ {
+  "id": "FMA:52751",
+  "name": "stapes",
+  "system_id": "special_senses",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "spl-atlas"
+ },
+ {
+  "id": "FMA:9595",
+  "name": "tympanic membrane",
+  "system_id": "special_senses",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "spl-atlas"
+ },
+ {
+  "id": "FMA:49028",
+  "name": "tensor tympani",
+  "system_id": "special_senses",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "spl-atlas"
+ },
+ {
+  "id": "FMA:49027",
+  "name": "stapedius",
+  "system_id": "special_senses",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "spl-atlas"
+ },
+ {
+  "id": "FMA:50868",
+  "name": "facial nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "spl-atlas"
+ },
+ {
+  "id": "FMA:53431",
+  "name": "cochlear nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "spl-atlas"
+ },
+ {
+  "id": "FMA:53401",
+  "name": "vestibular nerve",
+  "system_id": "nervous",
+  "laterality": "unspecified",
+  "is_compound": false,
+  "identity_source": "spl-atlas"
  }
 ]

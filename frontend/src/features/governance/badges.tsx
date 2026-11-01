@@ -90,6 +90,14 @@ export function ReferenceList({ references }: { references: Reference[] }) {
             </>
           )}
           {r.pmid && <> · PMID {r.pmid}</>}
+          {!r.doi && r.url && (
+            <>
+              {" "}
+              <a className="text-primary hover:underline" href={r.url} target="_blank" rel="noreferrer noopener">
+                {new URL(r.url).hostname}
+              </a>
+            </>
+          )}
         </li>
       ))}
     </ol>

@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import Literal
 
 from pydantic import BaseModel, ConfigDict
 
@@ -147,9 +148,47 @@ class BundleOut(ORM):
     byte_size: int
     mesh_count: int
     is_placeholder: bool
+    body_model: str
+
+
+class BodyModelSystem(BaseModel):
+    system_id: str
+    mesh_count: int
+
+
+class BodyModelOut(BaseModel):
+    """A complete 3D body (male or female) and what its source covers."""
+
+    id: str
+    label: str
+    description: str
+    sources: list[str]
+    license: str
+    mesh_count: int
+    systems: list[BodyModelSystem]
 
 
 class AssetManifest(BaseModel):
+    body_model: str
     bundles: list[BundleOut]
     # mesh id -> [bundle id, structure id]; compact because it covers every mesh.
     meshes: dict[str, tuple[str, str]]
+
+
+class StructureRef(BaseModel):
+    id: str
+    name: str
+
+
+class CirculationOut(BaseModel):
+    """Inferred vessel routes for a structure; mesh -> hops from the heart along the route."""
+
+    structure_id: str
+    mode: Literal["whole_circulation", "organ_route", "none"]
+    organ_mesh_ids: list[str] = []
+    arteries: dict[str, int] = {}
+    veins: dict[str, int] = {}
+    contact_arteries: list[StructureRef] = []
+    contact_veins: list[StructureRef] = []
+    unrouted_vessels: int = 0
+    method: str

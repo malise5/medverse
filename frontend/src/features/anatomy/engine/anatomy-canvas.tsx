@@ -7,6 +7,7 @@ import { Component, Suspense, useMemo, type ReactNode } from "react";
 import type { AnatomicalSystem, AssetManifest } from "@/lib/api/types";
 
 import { useWorkspace } from "../store";
+import { PlaybackBar } from "../function/playback-bar";
 import { AnatomyScene, TARGET, VIEW_POSITIONS } from "./anatomy-scene";
 
 class WebGLBoundary extends Component<{ children: ReactNode }, { error: Error | null }> {
@@ -47,7 +48,18 @@ function LoadingOverlay() {
 
 function HoverLabel({ names }: { names: Map<string, string> }) {
   const hover = useWorkspace((s) => s.hover);
+  // During a "find it in 3D" question, names would give the answer away.
+  const hideNames = useWorkspace((s) => !!s.quiz && !s.quiz.answered);
   if (!hover) return null;
+  if (hideNames)
+    return (
+      <div
+        className="pointer-events-none fixed z-50 rounded-md border bg-popover/95 px-2 py-1 text-xs shadow-lg"
+        style={{ left: hover.x + 14, top: hover.y + 14 }}
+      >
+        ?
+      </div>
+    );
   return (
     <div
       className="pointer-events-none fixed z-50 rounded-md border bg-popover/95 px-2 py-1 text-xs shadow-lg"
@@ -66,6 +78,7 @@ export default function AnatomyCanvas({
   selectedMeshIds,
   multiMeshIds,
   onPick,
+  resolveMeshes,
 }: {
   manifest: AssetManifest;
   systems: AnatomicalSystem[];
@@ -73,6 +86,7 @@ export default function AnatomyCanvas({
   selectedMeshIds: Set<string>;
   multiMeshIds: Set<string>;
   onPick: (structureId: string, additive: boolean) => void;
+  resolveMeshes: (structureId: string) => string[];
 }) {
   const bundles = useMemo(() => manifest.bundles.filter((b) => !b.is_placeholder), [manifest]);
   const attribution = useMemo(
@@ -93,15 +107,18 @@ export default function AnatomyCanvas({
           <color attach="background" args={["#0d1217"]} />
           <Suspense fallback={null}>
             <AnatomyScene
+              key={manifest.body_model}
               bundles={bundles}
               systems={systems}
               selectedMeshIds={selectedMeshIds}
               multiMeshIds={multiMeshIds}
               onPick={onPick}
+              resolveMeshes={resolveMeshes}
             />
           </Suspense>
         </Canvas>
         <LoadingOverlay />
+        <PlaybackBar />
         <HoverLabel names={names} />
         <p className="pointer-events-none absolute bottom-1.5 right-2 max-w-[70%] text-right text-[10px] leading-tight text-muted-foreground/70">
           3D data: {attribution}

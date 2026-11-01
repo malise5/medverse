@@ -4,11 +4,19 @@ import { useMemo } from "react";
 
 import { useAssetManifest, useStructureIndex, useSystems } from "@/lib/api/queries";
 
+import type { AnatomicalSystem } from "@/lib/api/types";
+
+import { useWorkspace } from "./store";
+
+/** Stable while loading: a fresh [] per render would re-trigger effects that depend on it. */
+const NO_SYSTEMS: AnatomicalSystem[] = [];
+
 /** Reference data the workspace needs, plus derived lookup tables. */
 export function useAnatomyData() {
-  const systems = useSystems();
+  const bodyModel = useWorkspace((s) => s.bodyModel);
+  const systems = useSystems(bodyModel);
   const index = useStructureIndex();
-  const manifest = useAssetManifest();
+  const manifest = useAssetManifest(bodyModel);
 
   const derived = useMemo(() => {
     const names = new Map<string, string>();
@@ -40,7 +48,8 @@ export function useAnatomyData() {
   }, [index.data, manifest.data]);
 
   return {
-    systems: systems.data ?? [],
+    bodyModel,
+    systems: systems.data ?? NO_SYSTEMS,
     manifest: manifest.data,
     index: index.data,
     ...derived,

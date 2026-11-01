@@ -1,9 +1,21 @@
-from sqlalchemy import Float, String, and_, case, cast, func, or_, select, union_all
+from sqlalchemy import (
+    Float,
+    String,
+    and_,
+    case,
+    cast,
+    func,
+    literal,
+    or_,
+    select,
+    union_all,
+)
 from sqlalchemy.orm import Session
 
 from app.core.errors import not_found
 from app.models import (
     AnatomicalSystem,
+    AssetBundle,
     Condition,
     ConditionStructure,
     Mesh,
@@ -53,17 +65,21 @@ def summaries(db: Session, structures: list[Structure]) -> list[StructureSummary
     ]
 
 
-def list_systems(db: Session) -> list[SystemOut]:
+def list_systems(db: Session, body_model: str | None = None) -> list[SystemOut]:
+    """Systems with structure counts; mesh counts for one body model, or all bodies."""
     counts = dict(
         db.execute(select(Structure.system_id, func.count()).group_by(Structure.system_id)).all()
     )
-    mesh_counts = dict(
-        db.execute(
-            select(Structure.system_id, func.count(Mesh.id))
-            .join(Mesh, Mesh.structure_id == Structure.id)
-            .group_by(Structure.system_id)
-        ).all()
+    mesh_q = (
+        select(Structure.system_id, func.count(Mesh.id))
+        .join(Mesh, Mesh.structure_id == Structure.id)
+        .group_by(Structure.system_id)
     )
+    if body_model:
+        mesh_q = mesh_q.join(AssetBundle, AssetBundle.id == Mesh.bundle_id).where(
+            AssetBundle.body_model == body_model
+        )
+    mesh_counts = dict(db.execute(mesh_q).all())
     systems = db.scalars(select(AnatomicalSystem).order_by(AnatomicalSystem.display_order))
     return [
         SystemOut.model_validate(s).model_copy(
@@ -225,6 +241,23 @@ def _pick_content(rows: list[StructureContent], audience: AudienceLevel) -> list
     return sorted(by_section.values(), key=lambda r: order[r.section])
 
 
+def ancestor_ids(db: Session, structure_id: str, max_depth: int = 30) -> list[str]:
+    """All structures this one is (transitively) part of."""
+    rel = StructureRelationship
+    base = (
+        select(rel.object_id.label("id"), literal(1).label("depth"))
+        .where(rel.subject_id == structure_id, rel.predicate == Predicate.PART_OF)
+        .cte("ancestors", recursive=True)
+    )
+    step = (
+        select(rel.object_id, base.c.depth + 1)
+        .join(base, rel.subject_id == base.c.id)
+        .where(rel.predicate == Predicate.PART_OF, base.c.depth < max_depth)
+    )
+    tree = base.union(step)
+    return list(db.scalars(select(tree.c.id).distinct()))
+
+
 def structure_detail(
     db: Session, structure_id: str, audience: AudienceLevel = AudienceLevel.UNDERGRADUATE
 ) -> StructureDetail:
@@ -317,7 +350,25 @@ def structure_detail(
         ],
         simulations=[
             SimulationLink(model_id=m.definition.id, name=m.definition.name)
-            for m in models_for_structure(s.id)
+            for m in models_for_structure(s.id, ancestor_ids(db, s.id))
         ],
         references=references,
     )
+
+
+def body_models_of(db: Session, structure_ids: list[str]) -> dict[str, list[str]]:
+    """Structure -> body models ("male", "female") that have at least one of its meshes."""
+    if not structure_ids:
+        return {}
+    rows = db.execute(
+        select(StructureMesh.structure_id, AssetBundle.body_model)
+        .join(Mesh, Mesh.id == StructureMesh.mesh_id)
+        .join(AssetBundle, AssetBundle.id == Mesh.bundle_id)
+        .where(StructureMesh.structure_id.in_(structure_ids))
+        .distinct()
+    )
+    out: dict[str, set[str]] = {}
+    for sid, model in rows:
+        out.setdefault(sid, set()).add(model)
+    order = {"male": 0, "female": 1}
+    return {sid: sorted(models, key=order.get) for sid, models in out.items()}

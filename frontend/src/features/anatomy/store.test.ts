@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it } from "vitest";
 
-import { ghostDepth, meshVisibility, useWorkspace } from "./store";
+import { flowLevel, ghostDepth, meshVisibility, useWorkspace } from "./store";
 
 const base = {
   systemVisible: {},
@@ -78,5 +78,38 @@ describe("workspace store", () => {
     const first = useWorkspace.getState().viewCommand!.nonce;
     s.requestView("posterior");
     expect(useWorkspace.getState().viewCommand!.nonce).toBeGreaterThan(first);
+  });
+});
+
+describe("flowLevel", () => {
+  it("peaks where the wave is and travels away from the heart in arteries", () => {
+    expect(flowLevel(3, 10, 3, false)).toBe(1);
+    expect(flowLevel(3, 10, 5, false)).toBeCloseTo(0.5);
+    expect(flowLevel(8, 10, 3, false)).toBe(0);
+  });
+  it("travels toward the heart in veins", () => {
+    // At phase 0 the vein wave starts at the far end (hop = maxHop).
+    expect(flowLevel(10, 10, 0, true)).toBe(1);
+    expect(flowLevel(0, 10, 0, true)).toBe(0);
+    expect(flowLevel(0, 10, 10, true)).toBe(1);
+  });
+});
+
+describe("body model switch", () => {
+  it("keeps the selected structure and clears mesh-level state", () => {
+    const ws = useWorkspace.getState();
+    ws.reset();
+    ws.select("FMA:7088");
+    ws.hideMeshes(["FJ1"]);
+    ws.isolateMeshes(["FJ2"]);
+    ws.setBodyModel("female");
+    const s = useWorkspace.getState();
+    expect(s.bodyModel).toBe("female");
+    expect(s.selectedId).toBe("FMA:7088");
+    expect(s.hiddenMeshes.size).toBe(0);
+    expect(s.isolatedMeshes).toBeNull();
+    s.reset();
+    expect(useWorkspace.getState().bodyModel).toBe("female"); // reset keeps the chosen body
+    useWorkspace.getState().setBodyModel("male");
   });
 });

@@ -1,9 +1,9 @@
 """Idempotent loader from the version-controlled `content/` directory into PostgreSQL.
 
 Load order matters (foreign keys): references -> systems -> structures -> graph ->
-content -> assets -> pathology -> RBAC. Every reference to an unknown structure or
-citation is collected and reported as a ContentIntegrityError; nothing is silently
-dropped.
+content -> assets -> pathology -> learning modules and quizzes -> RBAC. Every reference
+to an unknown structure or citation is collected and reported as a ContentIntegrityError;
+nothing is silently dropped.
 """
 
 import json
@@ -12,6 +12,7 @@ from collections.abc import Iterable
 from dataclasses import dataclass, field
 from pathlib import Path
 
+from pydantic import ValidationError
 from sqlalchemy import delete, select
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.orm import Session
@@ -23,8 +24,11 @@ from app.models import (
     Condition,
     ConditionScenario,
     ConditionStructure,
+    LearningModule,
     Mesh,
+    MeshContact,
     Permission,
+    QuizQuestion,
     Reference,
     Role,
     Structure,
@@ -35,15 +39,23 @@ from app.models import (
     StructureXref,
 )
 from app.models.enums import (
+    AudienceLevel,
     ContentSection,
     EvidenceClass,
     Predicate,
     VerificationStatus,
 )
+from app.schemas.learning import ModuleIn, QuestionIn
 
 log = logging.getLogger("medverse.seed")
 
 BP3D_SOURCE = "bodyparts3d-4.0"
+HRA_SOURCE = "hra-vhf"  # Human Reference Atlas 3D reference organs, Visible Human Female
+ZA_SOURCE = "z-anatomy"  # Z-Anatomy head supplement (CC BY-SA 4.0)
+# Supplement outputs used by both bodies; their bundles name their body model.
+# zanatomy: pipeline/zanatomy/build.py; meninges: pipeline/meninges/build.py
+SUPPLEMENT_DIRS = ("zanatomy", "meninges")
+HRA_REFERENCE = "hra2021"
 CURATED_SOURCE = "medverse-curated"
 CHUNK = 1000
 
@@ -145,6 +157,14 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
         ["id"],
     )
     system_ids = {s["id"] for s in systems}
+    overrides = {
+        sid: system
+        for system, ids in _read(content_dir / "systems.json")
+        .get("structure_system_overrides", {})
+        .items()
+        if not system.startswith("_")
+        for sid in ids
+    }
     report.counts["systems"] = len(systems)
 
     # Source-imported structures (BodyParts3D) --------------------------------
@@ -160,10 +180,10 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
             {
                 "id": s["id"],
                 "name": s["name"],
-                "system_id": s["system_id"],
+                "system_id": overrides.get(s["id"], s["system_id"]),
                 "laterality": s["laterality"],
                 "is_compound": s["is_compound"],
-                "identity_source": BP3D_SOURCE,
+                "identity_source": s.get("identity_source", BP3D_SOURCE),
                 "verification_status": VerificationStatus.SOURCE_IMPORTED.value,
             }
             for s in structures
@@ -186,6 +206,97 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
         ["structure_id", "source"],
     )
     report.counts["structures"] = len(structures)
+
+    # Female body (HRA): new structures only; shared ones keep their male-source record.
+    hra = content_dir / "generated" / "hra-female"
+    hra_structures = _read(hra / "structures.json") if (hra / "structures.json").exists() else []
+    # Upsert every female-source structure the male source does not define, so renamed
+    # or re-classified records from a newer female build replace older ones.
+    bp3d_ids = {s["id"] for s in structures}
+    hra_new = [s for s in hra_structures if s["id"] not in bp3d_ids]
+    for s in hra_new:
+        if s["system_id"] not in system_ids:
+            problems.append(f"female structure {s['id']}: unknown system {s['system_id']}")
+    _upsert(
+        db,
+        Structure,
+        [
+            {
+                "id": s["id"],
+                "name": s["name"],
+                "system_id": s["system_id"],
+                "laterality": s["laterality"],
+                "is_compound": s["is_compound"],
+                "identity_source": HRA_SOURCE,
+                "verification_status": VerificationStatus.SOURCE_IMPORTED.value,
+            }
+            for s in hra_new
+        ],
+        ["id"],
+    )
+    _upsert(
+        db,
+        StructureXref,
+        [
+            {
+                "structure_id": s["id"],
+                "source": s["id"].split(":", 1)[0],
+                "code": s["id"].split(":", 1)[1],
+                "license": "Identifier only (FMA CC BY 3.0 / Uberon CC BY 3.0)",
+            }
+            for s in hra_new
+        ],
+        ["structure_id", "source"],
+    )
+    report.counts["female_new_structures"] = len(hra_new)
+
+    # Supplements (Z-Anatomy head, derived meninges; both bodies): structures neither
+    # body source defines. See SUPPLEMENT_DIRS.
+    supplements = [content_dir / "generated" / d for d in SUPPLEMENT_DIRS]
+    za_structures = [
+        s
+        for d in supplements
+        if (d / "structures.json").exists()
+        for s in _read(d / "structures.json")
+    ]
+    hra_ids = {s["id"] for s in hra_structures}
+    za_new = [s for s in za_structures if s["id"] not in bp3d_ids and s["id"] not in hra_ids]
+    for s in za_new:
+        if s["system_id"] not in system_ids:
+            problems.append(f"Z-Anatomy structure {s['id']}: unknown system {s['system_id']}")
+    _upsert(
+        db,
+        Structure,
+        [
+            {
+                "id": s["id"],
+                "name": s["name"],
+                "system_id": overrides.get(s["id"], s["system_id"]),
+                "laterality": s["laterality"],
+                "is_compound": s["is_compound"],
+                "identity_source": s.get("identity_source", ZA_SOURCE),
+                "verification_status": VerificationStatus.SOURCE_IMPORTED.value,
+            }
+            for s in za_new
+        ],
+        ["id"],
+    )
+    _upsert(
+        db,
+        StructureXref,
+        [
+            {
+                "structure_id": s["id"],
+                "source": "FMA",
+                "code": s["id"].split(":", 1)[1],
+                "license": "Identifier only (FMA, CC BY 3.0)",
+            }
+            for s in za_new
+            if s["id"].startswith("FMA:")
+        ],
+        ["structure_id", "source"],
+    )
+    report.counts["supplement_new_structures"] = len(za_new)
     known = set(db.scalars(select(Structure.id)))
 
     # Graph: part_of from source + curated relations -------------------------
@@ -208,12 +319,69 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
             }
         )
 
+    bp3d_triples = {(r["subject_id"], r["object_id"]) for r in rel_rows}
+    for r in _read(hra / "relationships.json") if (hra / "relationships.json").exists() else []:
+        if r["subject"] not in known or r["object"] not in known:
+            problems.append(f"female relation {r}: unknown structure")
+            continue
+        if (r["subject"], r["object"]) in bp3d_triples:
+            continue
+        rel_rows.append(
+            {
+                "subject_id": r["subject"],
+                "predicate": Predicate.PART_OF.value,
+                "object_id": r["object"],
+                "relation_class": Predicate.PART_OF.relation_class.value,
+                "source": HRA_SOURCE,
+                "verification_status": VerificationStatus.SOURCE_IMPORTED.value,
+                "notes": None,
+                "reference_id": HRA_REFERENCE if HRA_REFERENCE in ref_ids else None,
+            }
+        )
+    seen_pairs = {(r["subject_id"], r["object_id"]) for r in rel_rows}
+    za_rels = [
+        r
+        for d in supplements
+        if (d / "relationships.json").exists()
+        for r in _read(d / "relationships.json")
+    ]
+    for r in za_rels:
+        if r["subject"] not in known or r["object"] not in known:
+            problems.append(f"Z-Anatomy relation {r}: unknown structure")
+            continue
+        if (r["subject"], r["object"]) in seen_pairs:
+            continue
+        rel_rows.append(
+            {
+                "subject_id": r["subject"],
+                "predicate": Predicate.PART_OF.value,
+                "object_id": r["object"],
+                "relation_class": Predicate.PART_OF.relation_class.value,
+                "source": ZA_SOURCE,
+                "verification_status": VerificationStatus.SOURCE_IMPORTED.value,
+                "notes": None,
+                "reference_id": None,
+            }
+        )
+
     curated = _read(content_dir / "anatomy" / "curated.json")
     author = curated.get("author")
     synonym_rows: list[dict] = []
     content_rows: list[dict] = []
-    for entry in curated["structures"]:
+    # An entry may name one structure ("id") or several that share the text ("ids"),
+    # e.g. the left and right member of a paired organ.
+    expanded = [
+        {**entry, "id": sid}
+        for entry in curated["structures"]
+        for sid in (entry["ids"] if "ids" in entry else [entry["id"]])
+    ]
+    seen_ids: set[str] = set()
+    for entry in expanded:
         sid = entry["id"]
+        if sid in seen_ids:
+            problems.append(f"curated entry {sid}: duplicated")
+            continue
+        seen_ids.add(sid)
         if sid not in known:
             problems.append(f"curated entry {sid}: structure does not exist")
             continue
@@ -266,7 +434,7 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
                 {
                     "structure_id": sid,
                     "section": ContentSection(c["section"]).value,
-                    "audience": c.get("audience", "undergraduate"),
+                    "audience": AudienceLevel(c.get("audience", "undergraduate")).value,
                     "body": c["body"],
                     "evidence_class": c.get(
                         "evidence_class", EvidenceClass.B_EVIDENCE_SUPPORTED.value
@@ -283,20 +451,31 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
     report.counts["relationships"] = len(rel_rows)
     report.counts["content_sections"] = len(content_rows)
 
-    # 3D assets ----------------------------------------------------------------
-    bundles = _read(gen / "bundles.json") if (gen / "bundles.json").exists() else []
+    # 3D assets: one generated directory per body model ------------------------
+    bundles, meshes, sm = [], [], {}
+    # Z-Anatomy bundles name their body model themselves (male and female).
+    for directory, body_model in (
+        (gen, "male"),
+        (hra, "female"),
+        *((d, "male") for d in supplements),
+    ):
+        for b in _read(directory / "bundles.json") if (directory / "bundles.json").exists() else []:
+            bundles.append({**b, "body_model": b.get("body_model", body_model)})
+        if (directory / "meshes.json").exists():
+            meshes.extend(_read(directory / "meshes.json"))
+        if (directory / "structure_meshes.json").exists():
+            for sid, mids in _read(directory / "structure_meshes.json").items():
+                sm.setdefault(sid, []).extend(mids)
     _upsert(db, AssetBundle, bundles, ["id"])
     bundle_ids = {b["id"] for b in bundles}
-    meshes = _read(gen / "meshes.json") if (gen / "meshes.json").exists() else []
     mesh_rows = []
     for m in meshes:
         if m["bundle_id"] not in bundle_ids or m["structure_id"] not in known:
             problems.append(f"mesh {m['id']}: unknown bundle or structure")
             continue
-        mesh_rows.append(m)
+        mesh_rows.append({"render_group": None, **m})
     _upsert(db, Mesh, mesh_rows, ["id"])
     mesh_ids = {m["id"] for m in mesh_rows}
-    sm = _read(gen / "structure_meshes.json") if (gen / "structure_meshes.json").exists() else {}
     db.execute(delete(StructureMesh))
     sm_rows = [
         {"structure_id": sid, "mesh_id": mid}
@@ -306,6 +485,22 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
         if mid in mesh_ids
     ]
     _upsert(db, StructureMesh, sm_rows, ["structure_id", "mesh_id"])
+
+    # Geometric contact graph (optional pipeline output; see pipeline/bodyparts3d/adjacency.py)
+    contacts_path = gen / "mesh_adjacency.json"
+    contact_rows = []
+    if contacts_path.exists():
+        for a, b, d in _read(contacts_path)["pairs"]:
+            if a in mesh_ids and b in mesh_ids and a != b:
+                lo, hi = sorted((a, b))
+                contact_rows.append({"mesh_a": lo, "mesh_b": hi, "distance_mm": float(d)})
+    db.execute(delete(MeshContact))
+    _upsert(db, MeshContact, contact_rows, ["mesh_a", "mesh_b"])
+    # Bundles and meshes no longer produced by any pipeline (renamed or removed outputs)
+    # would stay in the manifest and 404; remove them (meshes and links cascade).
+    db.execute(delete(Mesh).where(Mesh.id.not_in(mesh_ids)))
+    db.execute(delete(AssetBundle).where(AssetBundle.id.not_in(bundle_ids)))
+    report.counts["mesh_contacts"] = len(contact_rows)
     report.counts["bundles"] = len(bundles)
     report.counts["meshes"] = len(mesh_rows)
 
@@ -362,8 +557,124 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
         db.flush()
     report.counts["conditions"] = len(conditions)
 
+    seed_learning(db, content_dir, report, known=known, ref_ids=ref_ids, system_ids=system_ids)
     seed_rbac(db)
     return report
+
+
+def _validation_problems(where: str, exc: ValidationError) -> list[str]:
+    return [f"{where}: {'.'.join(map(str, e['loc']))}: {e['msg']}" for e in exc.errors()]
+
+
+def seed_learning(
+    db: Session,
+    content_dir: Path,
+    report: SeedReport,
+    *,
+    known: set[str],
+    ref_ids: set[str],
+    system_ids: set[str],
+) -> None:
+    """Body-system modules and quiz questions (content/learning)."""
+    problems = report.problems
+    base = content_dir / "learning"
+    if not (base / "modules.json").exists():
+        return
+    raw_modules = _read(base / "modules.json")
+    modules: list[ModuleIn] = []
+    for raw in raw_modules["modules"]:
+        try:
+            m = ModuleIn.model_validate(raw)
+        except ValidationError as exc:
+            problems.extend(_validation_problems(f"module {raw.get('id')}", exc))
+            continue
+        if m.id not in system_ids:
+            problems.append(f"module {m.id}: no anatomical system with this id")
+            continue
+        for r in m.references:
+            if r not in ref_ids:
+                problems.append(f"module {m.id}: unknown reference {r}")
+        for organ in m.body.organs:
+            if organ.structure_id and organ.structure_id not in known:
+                problems.append(f"module {m.id}: organ {organ.name}: unknown structure")
+        for link in m.body.works_with:
+            if link.system not in system_ids or link.system == m.id:
+                problems.append(f"module {m.id}: works_with {link.system}: invalid system")
+        modules.append(m)
+    module_ids = {m.id for m in modules}
+    if len(module_ids) != len(modules):
+        problems.append("learning modules: duplicate ids")
+
+    raw_questions = (
+        _read(base / "quizzes.json")["questions"] if (base / "quizzes.json").exists() else []
+    )
+    questions: list[QuestionIn] = []
+    for raw in raw_questions:
+        try:
+            q = QuestionIn.model_validate(raw)
+        except ValidationError as exc:
+            problems.extend(_validation_problems(f"question {raw.get('id')}", exc))
+            continue
+        if q.module not in module_ids:
+            problems.append(f"question {q.id}: unknown module {q.module}")
+            continue
+        for r in q.references:
+            if r not in ref_ids:
+                problems.append(f"question {q.id}: unknown reference {r}")
+        if q.kind == "identify":
+            for sid in q.answer:  # type: ignore[union-attr]
+                if sid not in known:
+                    problems.append(f"question {q.id}: unknown structure {sid}")
+        questions.append(q)
+    if len({q.id for q in questions}) != len(questions):
+        problems.append("quiz questions: duplicate ids")
+
+    author = raw_modules.get("author")
+    _upsert(
+        db,
+        LearningModule,
+        [
+            {
+                "id": m.id,
+                "title": m.title,
+                "tagline": m.tagline,
+                "display_order": m.display_order,
+                "body": m.body.model_dump(),
+                "reference_ids": m.references,
+                "evidence_class": EvidenceClass.B_EVIDENCE_SUPPORTED.value,
+                "verification_status": VerificationStatus.DRAFT.value,
+                "author": author,
+                "version": 1,
+            }
+            for m in modules
+        ],
+        ["id"],
+    )
+    order = {mid: 0 for mid in module_ids}
+    rows = []
+    for q in questions:
+        order[q.module] += 1
+        rows.append(
+            {
+                "id": q.id,
+                "module_id": q.module,
+                "kind": q.kind,
+                "level": q.level,
+                "stem": q.stem,
+                "options": q.options,
+                "answer": q.answer,
+                "explanation": q.explanation,
+                "reference_ids": q.references,
+                "display_order": order[q.module],
+                "verification_status": VerificationStatus.DRAFT.value,
+            }
+        )
+    _upsert(db, QuizQuestion, rows, ["id"])
+    # Questions removed from content are removed here (their attempts cascade).
+    db.execute(delete(QuizQuestion).where(QuizQuestion.id.not_in([q.id for q in questions])))
+    db.execute(delete(LearningModule).where(LearningModule.id.not_in(module_ids)))
+    report.counts["learning_modules"] = len(modules)
+    report.counts["quiz_questions"] = len(questions)
 
 
 def run_seed(db: Session, content_dir: Path, *, strict: bool = True) -> SeedReport:

@@ -72,6 +72,72 @@ arterial tree (no wave propagation or reflection, so central and peripheral pres
 identical); linear constant R and C; no baroreflex. Not CFD. See the model definition for
 the full lists shown in the UI.
 
+## Function playback in the 3D workspace
+
+Selecting a structure from search, the hierarchy or a link **shows** it (camera focus +
+spotlight: everything else fades to context) and, if a model is linked to the structure
+or to anything it is `part_of`, **plays its function** on the 3D model. The registry order
+decides the primary model (`models_for_structure(id, ancestor_ids)`).
+
+The model runs once on the server; the browser only replays its output. Each model
+declares `animations` (`AnimationBinding`: output, structure IDs, effect `scale` / `tint` /
+`glow`, amplitude, normalisation `range` / `magnitude`, and a plain-language description
+shown in the UI), plus `time_unit` and `playback_rate`. Effects are presentation only and
+never feed back into the model. Scaling a static mesh is a schematic cue, not a
+reconstruction of real tissue motion; every binding says so in its description.
+
+| Model | Linked structures | 3D effect |
+|---|---|---|
+| `cv.cardiac_cycle` | heart, LV, RV, LA, aorta (+ parts) | heart scales with LV volume (±5 %); LV tints with LV pressure; aorta tints with aortic pressure |
+| `resp.single_compartment` | right/left lung, trachea, diaphragm | each lung scales with lung volume (±5 %); trachea glows with airflow magnitude |
+| `neuro.hodgkin_huxley` | brain, spinal cord | glow marks spike timing (explicitly not brain activity); slowed ≈ 67× |
+| `cv.windkessel3` | aorta, heart, LV, … | aorta tints with aortic pressure |
+
+## Phase plots
+
+A model may declare `phase_plots` (`PhasePlot`: one output series `x` against another `y`,
+a description, optional axis minimums to keep the origin in view, and `ReferenceLine`s).
+A reference line is y = slope·(x − x_intercept), where slope and intercept **name model
+parameters**, so the line follows the current inputs. Only declare a line that is an
+exact property of the model equations. A test checks that the slope's unit is
+y-unit/x-unit and the intercept's unit is the x unit.
+
+The Physiology Lab draws every phase plot under the time series. With a pinned baseline it
+overlays both curves, and draws the current run's line only where its parameters differ.
+The 3D function panel shows a compact version with a dot that follows playback.
+
+`cv.cardiac_cycle` declares the left-ventricular **pressure–volume loop** with the ESPVR,
+P = E_max·(V − V₀), and the EDPVR, P = E_min·(V − V₀). Both are exact here because the
+elastance ventricle is linear in volume; real EDPVRs are curved, and the description says
+so. Tests check that every loop point lies between the two lines, that the end-systolic
+corner touches the ESPVR (within 3 %), and that the loop runs anticlockwise with stroke
+work between SV·diastolic pressure and SV·peak LV pressure.
+
+## Model card: `cv.cardiac_cycle` v1.0.0 (class C)
+
+Time-varying elastance left ventricle (Suga, Sagawa & Shoukas 1973) with the double-Hill
+normalised elastance and WK3 coupling of Stergiopulos, Meister & Westerhof (1996); ideal
+diode valves; constant left-atrial pressure. Defaults (illustrative): EDV ≈ 119 mL,
+ESV ≈ 49 mL, EF ≈ 58 %, ≈ 125/72 mmHg. Tests: valve flows non-negative and never
+simultaneous, mitral = aortic volume per beat = SV, MAP = (R + Z꜀)·mean flow,
+isovolumic phases exist, Frank–Starling / contractility / afterload directions, step
+convergence, PV loop bounded by EDPVR and ESPVR. No right heart, atrial kick or baroreflex.
+
+## Model card: `resp.single_compartment` v1.0.0 (class C)
+
+R·dV/dt + V/C = P_mus(t) (Bates 2009); half-sine inspiratory muscle pressure, passive
+expiration. Defaults give tidal volume ≈ 0.48 L at 12/min. Tests: expiratory decay
+constant = R·C, V_peak → C·P_max when R·C ≪ Tᵢ, linearity, zero net flow per breath,
+gas trapping with high resistance, step convergence. No airway collapse, no regional
+ventilation, no gas exchange or control of breathing.
+
+## Model card: `neuro.hodgkin_huxley` v1.0.0 (class C)
+
+Hodgkin & Huxley (1952) squid-axon kinetics in the modern −65 mV convention; single
+isopotential patch with a rectangular pulse train. Tests: rest stable at −65 mV,
+all-or-none threshold, peak +30 to +50 mV, refractoriness, gates within [0, 1], sodium
+block abolishes spikes, step convergence. No propagation, myelin or synapses.
+
 ## Planned models (Phase 4)
 
 Each must ship a model card, unit-tagged specs, analytic/benchmark tests and references
@@ -88,3 +154,21 @@ before it is exposed.
 | Membrane potential | Goldman–Hodgkin–Katz |
 
 Heavier models move to Celery workers with WebSocket progress.
+
+## Living processes in head study mode (`frontend/src/features/biolab`)
+
+Interactive processes started from the Layers tab in head mode. Each states its basis in
+the UI; none is presented as a prediction for a person.
+
+| Process | What is modelled | What is approximated |
+|---|---|---|
+| Neurons communicating | Leaky integrate-and-fire cells (rest −70 mV, threshold −55 mV, τm 10 ms, 2 ms refractory); conduction over a physical axon length at 20 m/s (myelinated, saltatory node-to-node) or 0.5 m/s (unmyelinated); 0.5 ms synaptic delay; exponentially decaying PSPs given as peak mV (one 9 mV EPSP is subthreshold, two summate and fire; an IPSP vetoes them); spike waveform taken from the server's Hodgkin–Huxley model | Cell geometry is schematic; background activity is Poisson drive standing in for unmodelled inputs; shown slowed ~200× |
+| Neurons growing and connecting | Stage sequence (outgrowth, axon specification, guidance, synapse formation, pruning) | Growth cones move with persistence + chemoattractant gradient + random exploration; synapse on contact; about a third pruned (latest formed first); months compressed into seconds |
+| Blood flow in the head | Cells move along centre lines of the actual vessel meshes (principal-axis slicing, `engine/centerline.ts`); arterial vs venous colouring from the vessel class | Direction inferred from geometry (arteries away from the heart, veins towards it); speed illustrative and slowed; cells drawn enlarged; no capillary beds |
+| Brain pathways | Vision, hearing, movement and touch light real structures of the 3D head in anatomical order, with notes from Gray's, Moore and Guyton | Routes between structures drawn as arcs; timing slowed, not to scale; deep nuclei (e.g. lateral geniculate) are shown by their parent structure (thalamus) |
+| Neck functions | Swallowing (oral, pharyngeal, oesophageal phases), baroreceptor reflex (carotid sinus → CN IX → nucleus of the solitary tract → vagus → heart), breathing in (nose to main bronchi) and speaking (vocal fold adduction, pitch, vibration, articulation) light the real neck structures in order; notes give typical durations and rates (pharyngeal phase ≈ 1 s, peristalsis 2–4 cm/s, vocal fold vibration ≈ 100–250 Hz) | A step sequence, not a biomechanical simulation: no bolus, airflow or vocal fold motion is modelled; timing is slowed |
+
+Tests: `signalling.test.ts` (rest, conduction time, subthreshold vs summating EPSPs,
+inhibition, 40× myelin speed-up, saltatory progress), `growth.test.ts` (determinism,
+one axon per cell, guidance towards targets, synapse formation and pruning),
+`centerline.test.ts` (axis, length and radius of a tube; orientation; interpolation).

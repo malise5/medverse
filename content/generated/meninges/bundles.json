@@ -1,0 +1,30 @@
+[
+ {
+  "id": "meninges-male-nervous",
+  "uri": "/assets/anatomy/meninges/male-nervous.glb",
+  "system_id": "nervous",
+  "body_model": "male",
+  "source_dataset": "Schematic cranial meninges derived from the brain surface (not a segmentation)",
+  "license": "CC BY 4.0",
+  "attribution": "Schematic meninges derived by MEDVERSE from the brain surface of BodyParts3D 4.0 (The Database Center for Life Science), licensed under CC Attribution 4.0 International",
+  "version": "1.0",
+  "sha256": "9313308b96594dc36be3d227df881799c9401404794da4b3ec152d22f7717384",
+  "byte_size": 487844,
+  "mesh_count": 3,
+  "is_placeholder": false
+ },
+ {
+  "id": "meninges-female-nervous",
+  "uri": "/assets/anatomy/meninges/female-nervous.glb",
+  "system_id": "nervous",
+  "body_model": "female",
+  "source_dataset": "Schematic cranial meninges derived from the brain surface (not a segmentation)",
+  "license": "CC BY 4.0",
+  "attribution": "Schematic meninges derived by MEDVERSE from the brain surface of Human Reference Atlas, Visible Human Female (HuBMAP), licensed under CC Attribution 4.0 International",
+  "version": "1.0",
+  "sha256": "097059f0b3a848469eb7ebd191683a28a3c38f7fd10bcc76bbcb2d38e91b6057",
+  "byte_size": 473816,
+  "mesh_count": 3,
+  "is_placeholder": false
+ }
+]

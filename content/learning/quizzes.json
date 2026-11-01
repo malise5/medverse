@@ -1,0 +1,1447 @@
+{
+ "_comment": "Quiz questions for the body-system modules. Original items written in-house. kind 'mcq': `answer` is the zero-based index of the correct option. kind 'identify': the learner selects a structure in the 3D workspace; `answer` lists accepted structure IDs, and selecting any part of an accepted structure also counts. Every item cites at least one reference and is a DRAFT until expert review.",
+ "questions": [
+  {
+   "id": "skel-01",
+   "module": "skeletal",
+   "kind": "mcq",
+   "level": "basic",
+   "stem": "Which of these is NOT a function of bones?",
+   "options": [
+    "Storing calcium",
+    "Making blood cells",
+    "Pumping blood around the body",
+    "Protecting the brain"
+   ],
+   "answer": 2,
+   "explanation": "Bones support, protect, store minerals and contain red marrow that makes blood cells. Pumping blood is the job of the heart.",
+   "references": [
+    "openstax_ap2e"
+   ]
+  },
+  {
+   "id": "skel-02",
+   "module": "skeletal",
+   "kind": "mcq",
+   "level": "basic",
+   "stem": "Which bone is the longest in the human body?",
+   "options": [
+    "Humerus",
+    "Femur",
+    "Tibia",
+    "Vertebral column"
+   ],
+   "answer": 1,
+   "explanation": "The femur (thigh bone) is the longest and strongest bone. The vertebral column is a chain of many bones, not one bone.",
+   "references": [
+    "grays42"
+   ]
+  },
+  {
+   "id": "skel-03",
+   "module": "skeletal",
+   "kind": "mcq",
+   "level": "undergraduate",
+   "stem": "Which bones belong to the axial skeleton?",
+   "options": [
+    "Skull, vertebral column, ribs and sternum",
+    "Clavicles, scapulae and hip bones",
+    "Humerus, radius and ulna",
+    "Femur, tibia and fibula"
+   ],
+   "answer": 0,
+   "explanation": "The axial skeleton forms the central axis: skull, vertebral column, ribs and sternum. The girdles and limbs form the appendicular skeleton.",
+   "references": [
+    "openstax_ap2e",
+    "moore8"
+   ]
+  },
+  {
+   "id": "skel-04",
+   "module": "skeletal",
+   "kind": "mcq",
+   "level": "undergraduate",
+   "stem": "Which cells resorb (break down) bone matrix?",
+   "options": [
+    "Osteoblasts",
+    "Osteocytes",
+    "Osteoclasts",
+    "Chondrocytes"
+   ],
+   "answer": 2,
+   "explanation": "Osteoclasts resorb bone; osteoblasts form it; osteocytes are mature bone cells in the matrix; chondrocytes are cartilage cells.",
+   "references": [
+    "openstax_ap2e"
+   ]
+  },
+  {
+   "id": "skel-05",
+   "module": "skeletal",
+   "kind": "mcq",
+   "level": "clinical",
+   "stem": "A displaced fracture of the femoral neck is most likely to threaten which of the following?",
+   "options": [
+    "The blood supply to the femoral head",
+    "The sciatic nerve at the knee",
+    "Growth of the tibia",
+    "The femoral artery in the adductor canal"
+   ],
+   "answer": 0,
+   "explanation": "Vessels to the femoral head run along the femoral neck, so displaced neck fractures can interrupt them and cause avascular necrosis of the head.",
+   "references": [
+    "moore8",
+    "grays42"
+   ]
+  },
+  {
+   "id": "skel-id-01",
+   "module": "skeletal",
+   "kind": "identify",
+   "level": "basic",
+   "stem": "Find the sternum (breastbone) on the 3D model.",
+   "answer": [
+    "FMA:7485"
+   ],
+   "explanation": "The sternum lies in the midline of the anterior chest wall; the ribs and clavicles attach to it.",
+   "references": [
+    "grays42"
+   ]
+  },
+  {
+   "id": "skel-id-02",
+   "module": "skeletal",
+   "kind": "identify",
+   "level": "undergraduate",
+   "stem": "Select a bone of the pelvic girdle.",
+   "answer": [
+    "FMA:16586",
+    "FMA:16587",
+    "FMA:16202"
+   ],
+   "explanation": "The pelvic girdle is formed by the two hip bones, which join the sacrum posteriorly at the sacro-iliac joints.",
+   "references": [
+    "moore8"
+   ]
+  },
+  {
+   "id": "musc-01",
+   "module": "muscular",
+   "kind": "mcq",
+   "level": "basic",
+   "stem": "Which type of muscle is found only in the heart?",
+   "options": [
+    "Skeletal muscle",
+    "Smooth muscle",
+    "Cardiac muscle",
+    "Voluntary muscle"
+   ],
+   "answer": 2,
+   "explanation": "Cardiac muscle is found only in the heart wall. It is striated like skeletal muscle but works involuntarily.",
+   "references": [
+    "openstax_ap2e"
+   ]
+  },
+  {
+   "id": "musc-02",
+   "module": "muscular",
+   "kind": "mcq",
+   "level": "basic",
+   "stem": "Why do skeletal muscles usually work in pairs?",
+   "options": [
+    "Because muscles can only pull, not push",
+    "Because each muscle needs a partner to receive blood",
+    "Because one muscle is always asleep",
+    "Because muscles push bones apart"
+   ],
+   "answer": 0,
+   "explanation": "A muscle can only shorten and pull. An opposing muscle (the antagonist) is needed to move the joint back.",
+   "references": [
+    "openstax_ap2e"
+   ]
+  },
+  {
+   "id": "musc-03",
+   "module": "muscular",
+   "kind": "mcq",
+   "level": "undergraduate",
+   "stem": "Which ion, released from the sarcoplasmic reticulum, triggers skeletal muscle contraction?",
+   "options": [
+    "Sodium",
+    "Potassium",
+    "Calcium",
+    "Chloride"
+   ],
+   "answer": 2,
+   "explanation": "Calcium binds troponin, moving tropomyosin off the binding sites on actin so myosin heads can attach and cycle.",
+   "references": [
+    "guyton14"
+   ]
+  },
+  {
+   "id": "musc-04",
+   "module": "muscular",
+   "kind": "mcq",
+   "level": "undergraduate",
+   "stem": "The more mobile attachment of a muscle, which moves when it contracts, is called the:",
+   "options": [
+    "Origin",
+    "Insertion",
+    "Belly",
+    "Fascia"
+   ],
+   "answer": 1,
+   "explanation": "The insertion usually moves towards the origin, which is the more fixed attachment.",
+   "references": [
+    "moore8"
+   ]
+  },
+  {
+   "id": "musc-05",
+   "module": "muscular",
+   "kind": "mcq",
+   "level": "clinical",
+   "stem": "A patient has weakness with wasting, reduced tone and absent reflexes in one limb. Where is the lesion most likely to be?",
+   "options": [
+    "Motor cortex",
+    "Internal capsule",
+    "Lower motor neuron (anterior horn cell or peripheral nerve)",
+    "Cerebellum"
+   ],
+   "answer": 2,
+   "explanation": "Wasting, low tone and absent reflexes are lower motor neuron signs. Upper motor neuron lesions give increased tone and brisk reflexes.",
+   "references": [
+    "moore8",
+    "guyton14"
+   ]
+  },
+  {
+   "id": "musc-id-01",
+   "module": "muscular",
+   "kind": "identify",
+   "level": "basic",
+   "stem": "Find the diaphragm, the main muscle of breathing.",
+   "answer": [
+    "FMA:13295"
+   ],
+   "explanation": "The diaphragm is a dome of muscle and tendon separating the thoracic and abdominal cavities.",
+   "references": [
+    "grays42"
+   ]
+  },
+  {
+   "id": "musc-id-02",
+   "module": "muscular",
+   "kind": "identify",
+   "level": "undergraduate",
+   "stem": "Select a pectoralis major muscle.",
+   "answer": [
+    "FMA:13373",
+    "FMA:13374"
+   ],
+   "explanation": "Pectoralis major is the large fan-shaped muscle of the anterior chest wall; it adducts and medially rotates the arm.",
+   "references": [
+    "moore8"
+   ]
+  },
+  {
+   "id": "cv-01",
+   "module": "cardiovascular",
+   "kind": "mcq",
+   "level": "basic",
+   "stem": "Which blood vessels carry blood AWAY from the heart?",
+   "options": [
+    "Veins",
+    "Arteries",
+    "Capillaries",
+    "Lymphatic vessels"
+   ],
+   "answer": 1,
+   "explanation": "Arteries carry blood away from the heart; veins carry it back. Capillaries connect the two.",
+   "references": [
+    "openstax_ap2e"
+   ]
+  },
+  {
+   "id": "cv-02",
+   "module": "cardiovascular",
+   "kind": "mcq",
+   "level": "basic",
+   "stem": "Which side of the heart pumps blood to the lungs?",
+   "options": [
+    "Left side",
+    "Right side",
+    "Both sides equally, to each lung",
+    "Neither: blood reaches the lungs by gravity"
+   ],
+   "answer": 1,
+   "explanation": "The right ventricle pumps deoxygenated blood into the pulmonary trunk and on to the lungs.",
+   "references": [
+    "openstax_ap2e",
+    "grays42"
+   ]
+  },
+  {
+   "id": "cv-03",
+   "module": "cardiovascular",
+   "kind": "mcq",
+   "level": "undergraduate",
+   "stem": "Blood leaving the left atrium passes through which valve?",
+   "options": [
+    "Tricuspid valve",
+    "Pulmonary valve",
+    "Mitral valve",
+    "Aortic valve"
+   ],
+   "answer": 2,
+   "explanation": "The mitral (left atrioventricular) valve lies between the left atrium and left ventricle.",
+   "references": [
+    "grays42",
+    "moore8"
+   ]
+  },
+  {
+   "id": "cv-04",
+   "module": "cardiovascular",
+   "kind": "mcq",
+   "level": "undergraduate",
+   "stem": "A person's stroke volume is 70 mL and heart rate 70 beats/min. What is the cardiac output?",
+   "options": [
+    "1.0 L/min",
+    "4.9 L/min",
+    "7.0 L/min",
+    "140 mL/min"
+   ],
+   "answer": 1,
+   "explanation": "Cardiac output = stroke volume × heart rate = 70 mL × 70 /min = 4,900 mL/min, about 4.9 L/min.",
+   "references": [
+    "guyton14"
+   ]
+  },
+  {
+   "id": "cv-05",
+   "module": "cardiovascular",
+   "kind": "mcq",
+   "level": "clinical",
+   "stem": "A blood pressure of 120/80 mmHg is approximately equal to:",
+   "options": [
+    "12/8 kPa",
+    "16/10.7 kPa",
+    "900/600 kPa",
+    "1.2/0.8 kPa"
+   ],
+   "answer": 1,
+   "explanation": "1 kPa ≈ 7.5 mmHg, so 120 mmHg ≈ 16.0 kPa and 80 mmHg ≈ 10.7 kPa.",
+   "references": [
+    "guyton14"
+   ]
+  },
+  {
+   "id": "cv-06",
+   "module": "cardiovascular",
+   "kind": "mcq",
+   "level": "clinical",
+   "stem": "Why does a fast heart rate reduce blood flow to the myocardium?",
+   "options": [
+    "Coronary arteries fill mainly in diastole, which shortens most at high heart rates",
+    "The aortic valve closes the coronary ostia during diastole",
+    "The coronary veins are compressed in diastole",
+    "Heart rate has no effect on coronary flow"
+   ],
+   "answer": 0,
+   "explanation": "Left coronary flow occurs mostly in diastole, when the myocardium relaxes. Diastole shortens more than systole as heart rate rises.",
+   "references": [
+    "guyton14"
+   ]
+  },
+  {
+   "id": "cv-id-01",
+   "module": "cardiovascular",
+   "kind": "identify",
+   "level": "basic",
+   "stem": "Find the heart on the 3D model.",
+   "answer": [
+    "FMA:7088"
+   ],
+   "explanation": "The heart lies in the middle mediastinum, behind the sternum and slightly to the left.",
+   "references": [
+    "grays42"
+   ]
+  },
+  {
+   "id": "cv-id-02",
+   "module": "cardiovascular",
+   "kind": "identify",
+   "level": "undergraduate",
+   "stem": "Select the vessel that returns blood from the lower body to the heart.",
+   "answer": [
+    "FMA:10951"
+   ],
+   "explanation": "The inferior vena cava drains the abdomen, pelvis and lower limbs into the right atrium.",
+   "references": [
+    "grays42",
+    "moore8"
+   ]
+  },
+  {
+   "id": "nerv-01",
+   "module": "nervous",
+   "kind": "mcq",
+   "level": "basic",
+   "stem": "Which two organs make up the central nervous system?",
+   "options": [
+    "Brain and spinal cord",
+    "Brain and heart",
+    "Spinal cord and nerves",
+    "Eyes and ears"
+   ],
+   "answer": 0,
+   "explanation": "The central nervous system is the brain and spinal cord. Nerves outside them form the peripheral nervous system.",
+   "references": [
+    "openstax_ap2e"
+   ]
+  },
+  {
+   "id": "nerv-02",
+   "module": "nervous",
+   "kind": "mcq",
+   "level": "basic",
+   "stem": "Which part of the brain mainly coordinates balance and smooth movement?",
+   "options": [
+    "Cerebrum",
+    "Cerebellum",
+    "Pituitary gland",
+    "Spinal cord"
+   ],
+   "answer": 1,
+   "explanation": "The cerebellum coordinates movement, posture and balance.",
+   "references": [
+    "openstax_ap2e",
+    "grays42"
+   ]
+  },
+  {
+   "id": "nerv-03",
+   "module": "nervous",
+   "kind": "mcq",
+   "level": "undergraduate",
+   "stem": "How many pairs of cranial nerves are there?",
+   "options": [
+    "8",
+    "12",
+    "31",
+    "33"
+   ],
+   "answer": 1,
+   "explanation": "There are 12 pairs of cranial nerves and 31 pairs of spinal nerves.",
+   "references": [
+    "grays42"
+   ]
+  },
+  {
+   "id": "nerv-04",
+   "module": "nervous",
+   "kind": "mcq",
+   "level": "undergraduate",
+   "stem": "Which division of the autonomic nervous system dominates during 'rest and digest'?",
+   "options": [
+    "Sympathetic",
+    "Parasympathetic",
+    "Somatic",
+    "Enteric only"
+   ],
+   "answer": 1,
+   "explanation": "The parasympathetic division slows the heart and promotes digestion; the sympathetic division prepares for 'fight or flight'.",
+   "references": [
+    "guyton14"
+   ]
+  },
+  {
+   "id": "nerv-05",
+   "module": "nervous",
+   "kind": "mcq",
+   "level": "clinical",
+   "stem": "Why is lumbar puncture usually performed at the L3–L4 or L4–L5 level in adults?",
+   "options": [
+    "The spinal cord usually ends at about L1–L2, so the needle enters below it",
+    "There is no cerebrospinal fluid above L3",
+    "The vertebrae are absent at these levels",
+    "The dura ends at L2"
+   ],
+   "answer": 0,
+   "explanation": "In adults the spinal cord usually ends at about L1–L2; below this the subarachnoid space contains nerve roots (cauda equina) and CSF, so the cord is avoided.",
+   "references": [
+    "moore8",
+    "grays42"
+   ]
+  },
+  {
+   "id": "nerv-id-01",
+   "module": "nervous",
+   "kind": "identify",
+   "level": "basic",
+   "stem": "Find the cerebellum.",
+   "answer": [
+    "FMA:67944"
+   ],
+   "explanation": "The cerebellum lies at the back of the head, below the occipital lobes and behind the brainstem.",
+   "references": [
+    "grays42"
+   ]
+  },
+  {
+   "id": "nerv-id-02",
+   "module": "nervous",
+   "kind": "identify",
+   "level": "undergraduate",
+   "stem": "Select the part of the CNS that continues from the brainstem down the vertebral canal.",
+   "answer": [
+    "FMA:7647"
+   ],
+   "explanation": "The spinal cord continues from the medulla oblongata at the foramen magnum.",
+   "references": [
+    "grays42"
+   ]
+  },
+  {
+   "id": "resp-01",
+   "module": "respiratory",
+   "kind": "mcq",
+   "level": "basic",
+   "stem": "Where in the lungs does oxygen pass into the blood?",
+   "options": [
+    "Trachea",
+    "Bronchi",
+    "Alveoli",
+    "Pleura"
+   ],
+   "answer": 2,
+   "explanation": "Gas exchange happens in the alveoli, tiny air sacs surrounded by capillaries.",
+   "references": [
+    "openstax_ap2e"
+   ]
+  },
+  {
+   "id": "resp-02",
+   "module": "respiratory",
+   "kind": "mcq",
+   "level": "basic",
+   "stem": "What happens to the diaphragm when you breathe in?",
+   "options": [
+    "It relaxes and rises",
+    "It contracts and flattens",
+    "It does not move",
+    "It pushes air out"
+   ],
+   "answer": 1,
+   "explanation": "The diaphragm contracts and flattens, enlarging the chest so air flows in.",
+   "references": [
+    "openstax_ap2e",
+    "guyton14"
+   ]
+  },
+  {
+   "id": "resp-03",
+   "module": "respiratory",
+   "kind": "mcq",
+   "level": "undergraduate",
+   "stem": "How many lobes does the left lung normally have?",
+   "options": [
+    "One",
+    "Two",
+    "Three",
+    "Four"
+   ],
+   "answer": 1,
+   "explanation": "The left lung has superior and inferior lobes; the right lung has three lobes.",
+   "references": [
+    "grays42",
+    "moore8"
+   ]
+  },
+  {
+   "id": "resp-04",
+   "module": "respiratory",
+   "kind": "mcq",
+   "level": "undergraduate",
+   "stem": "Quiet expiration at rest is mainly produced by:",
+   "options": [
+    "Contraction of the abdominal muscles",
+    "Elastic recoil of the lungs and chest wall",
+    "Contraction of the external intercostals",
+    "Contraction of the diaphragm"
+   ],
+   "answer": 1,
+   "explanation": "Quiet expiration is passive: the stretched lungs and chest wall recoil when the inspiratory muscles relax.",
+   "references": [
+    "guyton14"
+   ]
+  },
+  {
+   "id": "resp-05",
+   "module": "respiratory",
+   "kind": "mcq",
+   "level": "clinical",
+   "stem": "An inhaled peanut is most likely to lodge in which airway?",
+   "options": [
+    "Left main bronchus",
+    "Right main bronchus",
+    "Oesophagus",
+    "Left upper lobe bronchus"
+   ],
+   "answer": 1,
+   "explanation": "The right main bronchus is wider, shorter and more vertical than the left.",
+   "references": [
+    "moore8"
+   ]
+  },
+  {
+   "id": "resp-id-01",
+   "module": "respiratory",
+   "kind": "identify",
+   "level": "basic",
+   "stem": "Find the trachea (windpipe).",
+   "answer": [
+    "FMA:7394"
+   ],
+   "explanation": "The trachea runs from the larynx in the neck to its division into the main bronchi in the thorax.",
+   "references": [
+    "grays42"
+   ]
+  },
+  {
+   "id": "resp-id-02",
+   "module": "respiratory",
+   "kind": "identify",
+   "level": "undergraduate",
+   "stem": "Select the lung that has three lobes.",
+   "answer": [
+    "FMA:7309"
+   ],
+   "explanation": "The right lung has superior, middle and inferior lobes.",
+   "references": [
+    "grays42"
+   ]
+  },
+  {
+   "id": "dig-01",
+   "module": "digestive",
+   "kind": "mcq",
+   "level": "basic",
+   "stem": "Where are most nutrients absorbed into the blood?",
+   "options": [
+    "Stomach",
+    "Small intestine",
+    "Large intestine",
+    "Oesophagus"
+   ],
+   "answer": 1,
+   "explanation": "The small intestine has a huge surface area (folds, villi, microvilli) and absorbs most nutrients.",
+   "references": [
+    "openstax_ap2e"
+   ]
+  },
+  {
+   "id": "dig-02",
+   "module": "digestive",
+   "kind": "mcq",
+   "level": "basic",
+   "stem": "What is the main job of the large intestine?",
+   "options": [
+    "Digesting protein",
+    "Absorbing water and forming faeces",
+    "Making bile",
+    "Producing insulin"
+   ],
+   "answer": 1,
+   "explanation": "The large intestine absorbs water and electrolytes and forms faeces.",
+   "references": [
+    "openstax_ap2e"
+   ]
+  },
+  {
+   "id": "dig-03",
+   "module": "digestive",
+   "kind": "mcq",
+   "level": "undergraduate",
+   "stem": "Which organ produces bile?",
+   "options": [
+    "Gallbladder",
+    "Pancreas",
+    "Liver",
+    "Duodenum"
+   ],
+   "answer": 2,
+   "explanation": "The liver produces bile; the gallbladder stores and concentrates it.",
+   "references": [
+    "grays42",
+    "guyton14"
+   ]
+  },
+  {
+   "id": "dig-04",
+   "module": "digestive",
+   "kind": "mcq",
+   "level": "undergraduate",
+   "stem": "What is the correct order of the parts of the small intestine?",
+   "options": [
+    "Jejunum, ileum, duodenum",
+    "Duodenum, jejunum, ileum",
+    "Ileum, duodenum, jejunum",
+    "Duodenum, ileum, jejunum"
+   ],
+   "answer": 1,
+   "explanation": "Food passes from the stomach into the duodenum, then the jejunum, then the ileum.",
+   "references": [
+    "grays42"
+   ]
+  },
+  {
+   "id": "dig-05",
+   "module": "digestive",
+   "kind": "mcq",
+   "level": "clinical",
+   "stem": "Early appendicitis often causes pain around the umbilicus. Why?",
+   "options": [
+    "The appendix is a midgut derivative, and midgut visceral pain is referred to the periumbilical region",
+    "The appendix lies behind the umbilicus",
+    "The umbilical vein drains the appendix",
+    "The pain comes from the abdominal wall muscles"
+   ],
+   "answer": 0,
+   "explanation": "Visceral pain from midgut structures is referred to the periumbilical region; it moves to the right iliac fossa when the parietal peritoneum becomes inflamed.",
+   "references": [
+    "moore8"
+   ]
+  },
+  {
+   "id": "dig-06",
+   "module": "digestive",
+   "kind": "mcq",
+   "level": "clinical",
+   "stem": "Blood from the intestines reaches which organ before the general circulation?",
+   "options": [
+    "Kidneys",
+    "Spleen",
+    "Liver",
+    "Lungs"
+   ],
+   "answer": 2,
+   "explanation": "The hepatic portal vein carries blood from the gut to the liver first, which explains first-pass metabolism of oral drugs.",
+   "references": [
+    "grays42",
+    "guyton14"
+   ]
+  },
+  {
+   "id": "dig-id-01",
+   "module": "digestive",
+   "kind": "identify",
+   "level": "basic",
+   "stem": "Find the stomach.",
+   "answer": [
+    "FMA:7148"
+   ],
+   "explanation": "The stomach lies mainly in the upper left abdomen, below the diaphragm.",
+   "references": [
+    "grays42"
+   ]
+  },
+  {
+   "id": "dig-id-02",
+   "module": "digestive",
+   "kind": "identify",
+   "level": "undergraduate",
+   "stem": "Select the organ that stores and concentrates bile.",
+   "answer": [
+    "FMA:7202"
+   ],
+   "explanation": "The gallbladder lies on the inferior (visceral) surface of the liver.",
+   "references": [
+    "grays42"
+   ]
+  },
+  {
+   "id": "uri-01",
+   "module": "urinary",
+   "kind": "mcq",
+   "level": "basic",
+   "stem": "Which tube carries urine from each kidney to the bladder?",
+   "options": [
+    "Urethra",
+    "Ureter",
+    "Renal artery",
+    "Ductus deferens"
+   ],
+   "answer": 1,
+   "explanation": "Each ureter carries urine from a kidney to the urinary bladder. The urethra carries urine out of the body.",
+   "references": [
+    "openstax_ap2e"
+   ]
+  },
+  {
+   "id": "uri-02",
+   "module": "urinary",
+   "kind": "mcq",
+   "level": "undergraduate",
+   "stem": "Where in the nephron is blood first filtered?",
+   "options": [
+    "Collecting duct",
+    "Nephron loop (loop of Henle)",
+    "Glomerulus",
+    "Distal convoluted tubule"
+   ],
+   "answer": 2,
+   "explanation": "Filtration happens in the glomerulus into the glomerular (Bowman's) capsule.",
+   "references": [
+    "guyton14"
+   ]
+  },
+  {
+   "id": "uri-03",
+   "module": "urinary",
+   "kind": "mcq",
+   "level": "undergraduate",
+   "stem": "Which hormone produced by the kidneys stimulates red blood cell production?",
+   "options": [
+    "Renin",
+    "Erythropoietin",
+    "Aldosterone",
+    "Insulin"
+   ],
+   "answer": 1,
+   "explanation": "Erythropoietin from the kidneys stimulates the bone marrow to make red blood cells.",
+   "references": [
+    "guyton14"
+   ]
+  },
+  {
+   "id": "uri-04",
+   "module": "urinary",
+   "kind": "mcq",
+   "level": "clinical",
+   "stem": "A normal glomerular filtration rate of about 125 mL/min equals roughly how much filtrate per day?",
+   "options": [
+    "1.8 L",
+    "18 L",
+    "180 L",
+    "1,800 L"
+   ],
+   "answer": 2,
+   "explanation": "125 mL/min × 1,440 min/day ≈ 180,000 mL ≈ 180 L/day; almost all of it is reabsorbed.",
+   "references": [
+    "guyton14"
+   ]
+  },
+  {
+   "id": "uri-05",
+   "module": "urinary",
+   "kind": "mcq",
+   "level": "clinical",
+   "stem": "Which is NOT a usual site where a ureteric stone lodges?",
+   "options": [
+    "Pelviureteric junction",
+    "Where the ureter crosses the pelvic brim",
+    "Vesicoureteric junction",
+    "Renal cortex"
+   ],
+   "answer": 3,
+   "explanation": "Stones lodge at the three narrowings of the ureter; the renal cortex is not part of the ureter.",
+   "references": [
+    "moore8"
+   ]
+  },
+  {
+   "id": "uri-id-01",
+   "module": "urinary",
+   "kind": "identify",
+   "level": "basic",
+   "stem": "Find a kidney.",
+   "answer": [
+    "FMA:7204",
+    "FMA:7205"
+   ],
+   "explanation": "The kidneys lie on the posterior abdominal wall on either side of the vertebral column.",
+   "references": [
+    "grays42"
+   ]
+  },
+  {
+   "id": "uri-id-02",
+   "module": "urinary",
+   "kind": "identify",
+   "level": "basic",
+   "stem": "Select the organ that stores urine.",
+   "answer": [
+    "FMA:15900"
+   ],
+   "explanation": "The urinary bladder lies in the pelvis behind the pubic symphysis.",
+   "references": [
+    "grays42"
+   ]
+  },
+  {
+   "id": "rep-01",
+   "module": "reproductive",
+   "kind": "mcq",
+   "level": "basic",
+   "stem": "Which organs produce eggs (oocytes)?",
+   "options": [
+    "Testes",
+    "Ovaries",
+    "Uterus",
+    "Kidneys"
+   ],
+   "answer": 1,
+   "explanation": "The ovaries produce oocytes and the hormones oestrogen and progesterone.",
+   "references": [
+    "openstax_ap2e"
+   ]
+  },
+  {
+   "id": "rep-02",
+   "module": "reproductive",
+   "kind": "mcq",
+   "level": "undergraduate",
+   "stem": "Where does fertilisation usually take place?",
+   "options": [
+    "Uterus",
+    "Uterine tube",
+    "Ovary",
+    "Vagina"
+   ],
+   "answer": 1,
+   "explanation": "Fertilisation usually occurs in the ampulla of the uterine tube; the embryo then implants in the uterus.",
+   "references": [
+    "moore8"
+   ]
+  },
+  {
+   "id": "rep-03",
+   "module": "reproductive",
+   "kind": "mcq",
+   "level": "undergraduate",
+   "stem": "Which cells of the testis produce testosterone?",
+   "options": [
+    "Sertoli cells",
+    "Leydig (interstitial) cells",
+    "Spermatogonia",
+    "Granulosa cells"
+   ],
+   "answer": 1,
+   "explanation": "Leydig cells, between the seminiferous tubules, produce testosterone.",
+   "references": [
+    "guyton14"
+   ]
+  },
+  {
+   "id": "rep-04",
+   "module": "reproductive",
+   "kind": "mcq",
+   "level": "clinical",
+   "stem": "Why does benign prostatic hyperplasia cause difficulty passing urine?",
+   "options": [
+    "The prostate surrounds the first part of the urethra and can compress it",
+    "The prostate produces urine",
+    "The prostate blocks the ureters",
+    "The prostate weakens the bladder wall directly"
+   ],
+   "answer": 0,
+   "explanation": "The prostatic urethra runs through the gland, so enlargement can obstruct urine flow.",
+   "references": [
+    "moore8"
+   ]
+  },
+  {
+   "id": "rep-id-01",
+   "module": "reproductive",
+   "kind": "identify",
+   "level": "undergraduate",
+   "stem": "Find the prostate.",
+   "answer": [
+    "FMA:9600"
+   ],
+   "explanation": "The prostate lies below the bladder, surrounding the first part of the male urethra.",
+   "references": [
+    "grays42"
+   ]
+  },
+  {
+   "id": "rep-id-02",
+   "module": "reproductive",
+   "kind": "identify",
+   "level": "basic",
+   "stem": "Find the uterus in the female body.",
+   "answer": [
+    "FMA:17558"
+   ],
+   "explanation": "The uterus lies in the pelvis between the urinary bladder (in front) and the rectum (behind).",
+   "references": [
+    "grays42",
+    "moore8"
+   ]
+  },
+  {
+   "id": "rep-id-03",
+   "module": "reproductive",
+   "kind": "identify",
+   "level": "undergraduate",
+   "stem": "Select an ovary.",
+   "answer": [
+    "FMA:7213",
+    "FMA:7214"
+   ],
+   "explanation": "Each ovary lies on the lateral wall of the pelvis, close to the fimbriated end of the uterine tube.",
+   "references": [
+    "grays42",
+    "moore8"
+   ]
+  },
+  {
+   "id": "rep-id-04",
+   "module": "reproductive",
+   "kind": "identify",
+   "level": "basic",
+   "stem": "Select a breast (mammary gland).",
+   "answer": [
+    "FMA:57987",
+    "FMA:57991"
+   ],
+   "explanation": "The breasts lie on the anterior chest wall over the pectoralis major; in TA2 they are part of the integument.",
+   "references": [
+    "grays42",
+    "moore8",
+    "fipat2019ta2"
+   ]
+  },
+  {
+   "id": "endo-01",
+   "module": "endocrine",
+   "kind": "mcq",
+   "level": "basic",
+   "stem": "How do hormones travel to their target cells?",
+   "options": [
+    "Along nerves",
+    "In the blood",
+    "Through the air",
+    "Through ducts to the skin"
+   ],
+   "answer": 1,
+   "explanation": "Endocrine glands release hormones into the blood, which carries them throughout the body.",
+   "references": [
+    "openstax_ap2e"
+   ]
+  },
+  {
+   "id": "endo-02",
+   "module": "endocrine",
+   "kind": "mcq",
+   "level": "basic",
+   "stem": "Which hormone lowers blood glucose?",
+   "options": [
+    "Glucagon",
+    "Adrenaline",
+    "Insulin",
+    "Cortisol"
+   ],
+   "answer": 2,
+   "explanation": "Insulin from the pancreatic islets lowers blood glucose; glucagon, adrenaline and cortisol raise it.",
+   "references": [
+    "guyton14"
+   ]
+  },
+  {
+   "id": "endo-03",
+   "module": "endocrine",
+   "kind": "mcq",
+   "level": "undergraduate",
+   "stem": "Which structure directly controls the anterior pituitary?",
+   "options": [
+    "Thyroid gland",
+    "Hypothalamus",
+    "Cerebellum",
+    "Pineal gland"
+   ],
+   "answer": 1,
+   "explanation": "The hypothalamus releases hormones into the hypophysial portal vessels that control anterior pituitary secretion.",
+   "references": [
+    "guyton14"
+   ]
+  },
+  {
+   "id": "endo-04",
+   "module": "endocrine",
+   "kind": "mcq",
+   "level": "clinical",
+   "stem": "A fasting blood glucose of 5.0 mmol/L is approximately:",
+   "options": [
+    "50 mg/dL",
+    "90 mg/dL",
+    "180 mg/dL",
+    "500 mg/dL"
+   ],
+   "answer": 1,
+   "explanation": "1 mmol/L ≈ 18 mg/dL, so 5.0 mmol/L ≈ 90 mg/dL, within the normal fasting range.",
+   "references": [
+    "guyton14"
+   ]
+  },
+  {
+   "id": "endo-05",
+   "module": "endocrine",
+   "kind": "mcq",
+   "level": "clinical",
+   "stem": "A pituitary tumour growing upwards classically causes which visual field defect?",
+   "options": [
+    "Bitemporal hemianopia",
+    "Complete blindness in one eye",
+    "Homonymous hemianopia",
+    "Central scotoma in both eyes"
+   ],
+   "answer": 0,
+   "explanation": "It compresses the optic chiasm, where nasal retinal fibres (serving the temporal fields) cross.",
+   "references": [
+    "moore8",
+    "grays42"
+   ]
+  },
+  {
+   "id": "endo-id-01",
+   "module": "endocrine",
+   "kind": "identify",
+   "level": "undergraduate",
+   "stem": "Find a suprarenal (adrenal) gland.",
+   "answer": [
+    "FMA:15629",
+    "FMA:15630"
+   ],
+   "explanation": "The suprarenal glands sit on the superior poles of the kidneys.",
+   "references": [
+    "grays42"
+   ]
+  },
+  {
+   "id": "endo-id-02",
+   "module": "endocrine",
+   "kind": "identify",
+   "level": "undergraduate",
+   "stem": "Select the pituitary gland.",
+   "answer": [
+    "FMA:13889"
+   ],
+   "explanation": "The pituitary gland hangs below the hypothalamus in the hypophysial fossa of the sphenoid bone.",
+   "references": [
+    "grays42"
+   ]
+  },
+  {
+   "id": "lymph-01",
+   "module": "lymphatic",
+   "kind": "mcq",
+   "level": "basic",
+   "stem": "What is one main job of lymph nodes?",
+   "options": [
+    "Pumping blood",
+    "Filtering lymph and fighting infection",
+    "Making bile",
+    "Producing urine"
+   ],
+   "answer": 1,
+   "explanation": "Lymph nodes filter lymph; their lymphocytes respond to microbes and other antigens.",
+   "references": [
+    "openstax_ap2e"
+   ]
+  },
+  {
+   "id": "lymph-02",
+   "module": "lymphatic",
+   "kind": "mcq",
+   "level": "undergraduate",
+   "stem": "In which organ do T lymphocytes mature?",
+   "options": [
+    "Spleen",
+    "Thymus",
+    "Liver",
+    "Tonsil"
+   ],
+   "answer": 1,
+   "explanation": "T cells mature in the thymus ('T' for thymus); B cells mature in the bone marrow.",
+   "references": [
+    "guyton14"
+   ]
+  },
+  {
+   "id": "lymph-03",
+   "module": "lymphatic",
+   "kind": "mcq",
+   "level": "undergraduate",
+   "stem": "The thoracic duct empties into the venous system at the:",
+   "options": [
+    "Right atrium",
+    "Junction of the left subclavian and left internal jugular veins",
+    "Inferior vena cava at the kidneys",
+    "Hepatic portal vein"
+   ],
+   "answer": 1,
+   "explanation": "The thoracic duct drains into the left venous angle, where the left subclavian and internal jugular veins meet.",
+   "references": [
+    "grays42",
+    "moore8"
+   ]
+  },
+  {
+   "id": "lymph-04",
+   "module": "lymphatic",
+   "kind": "mcq",
+   "level": "clinical",
+   "stem": "Why are people who have had their spleen removed advised to be vaccinated?",
+   "options": [
+    "They are at greater risk of severe infection with encapsulated bacteria",
+    "They cannot produce red blood cells",
+    "They lose all their lymph nodes",
+    "Vaccines replace the spleen's filtering of bile"
+   ],
+   "answer": 0,
+   "explanation": "The spleen is important in clearing encapsulated bacteria such as pneumococcus; vaccination reduces the risk.",
+   "references": [
+    "moore8",
+    "guyton14"
+   ]
+  },
+  {
+   "id": "lymph-id-01",
+   "module": "lymphatic",
+   "kind": "identify",
+   "level": "undergraduate",
+   "stem": "Find the thymus.",
+   "answer": [
+    "FMA:9607"
+   ],
+   "explanation": "The thymus lies in the anterior mediastinum, behind the sternum.",
+   "references": [
+    "grays42"
+   ]
+  },
+  {
+   "id": "lymph-id-02",
+   "module": "lymphatic",
+   "kind": "identify",
+   "level": "undergraduate",
+   "stem": "Find the spleen.",
+   "answer": [
+    "FMA:7196"
+   ],
+   "explanation": "The spleen lies in the left upper abdomen under the 9th to 11th ribs, behind the stomach.",
+   "references": [
+    "grays42",
+    "moore8"
+   ]
+  },
+  {
+   "id": "integ-01",
+   "module": "integumentary",
+   "kind": "mcq",
+   "level": "basic",
+   "stem": "How does sweating help the body?",
+   "options": [
+    "It warms the skin",
+    "It cools the body as the sweat evaporates",
+    "It makes vitamin D",
+    "It stores fat"
+   ],
+   "answer": 1,
+   "explanation": "Evaporation of sweat removes heat from the skin surface.",
+   "references": [
+    "openstax_ap2e"
+   ]
+  },
+  {
+   "id": "integ-02",
+   "module": "integumentary",
+   "kind": "mcq",
+   "level": "basic",
+   "stem": "Which vitamin does skin make when exposed to sunlight?",
+   "options": [
+    "Vitamin A",
+    "Vitamin C",
+    "Vitamin D",
+    "Vitamin K"
+   ],
+   "answer": 2,
+   "explanation": "Ultraviolet B light converts a cholesterol derivative in the skin into vitamin D3.",
+   "references": [
+    "openstax_ap2e",
+    "guyton14"
+   ]
+  },
+  {
+   "id": "integ-03",
+   "module": "integumentary",
+   "kind": "mcq",
+   "level": "undergraduate",
+   "stem": "Which skin layer contains blood vessels, nerves and hair follicles?",
+   "options": [
+    "Epidermis",
+    "Dermis",
+    "Stratum corneum",
+    "Basal lamina"
+   ],
+   "answer": 1,
+   "explanation": "The epidermis has no blood vessels; vessels, nerves and follicles lie in the dermis.",
+   "references": [
+    "openstax_ap2e"
+   ]
+  },
+  {
+   "id": "integ-04",
+   "module": "integumentary",
+   "kind": "mcq",
+   "level": "clinical",
+   "stem": "Why may a full-thickness burn be painless?",
+   "options": [
+    "The nerve endings in the dermis are destroyed",
+    "Pain is always delayed by 24 hours",
+    "The epidermis is intact",
+    "Only fat is affected"
+   ],
+   "answer": 0,
+   "explanation": "A full-thickness burn destroys the dermis, including its sensory nerve endings.",
+   "references": [
+    "moore8"
+   ]
+  },
+  {
+   "id": "integ-id-01",
+   "module": "integumentary",
+   "kind": "identify",
+   "level": "basic",
+   "stem": "Select the skin.",
+   "answer": [
+    "FMA:7163"
+   ],
+   "explanation": "The skin covers the whole external surface of the body.",
+   "references": [
+    "grays42"
+   ]
+  },
+  {
+   "id": "sense-01",
+   "module": "special_senses",
+   "kind": "mcq",
+   "level": "basic",
+   "stem": "Which part of the eye is light-sensitive?",
+   "options": [
+    "Cornea",
+    "Lens",
+    "Retina",
+    "Iris"
+   ],
+   "answer": 2,
+   "explanation": "Photoreceptors (rods and cones) in the retina convert light into nerve signals.",
+   "references": [
+    "openstax_ap2e"
+   ]
+  },
+  {
+   "id": "sense-02",
+   "module": "special_senses",
+   "kind": "mcq",
+   "level": "basic",
+   "stem": "Besides hearing, the inner ear is also responsible for:",
+   "options": [
+    "Smell",
+    "Balance",
+    "Taste",
+    "Vision"
+   ],
+   "answer": 1,
+   "explanation": "The vestibule and semicircular canals of the inner ear detect head position and movement.",
+   "references": [
+    "openstax_ap2e"
+   ]
+  },
+  {
+   "id": "sense-03",
+   "module": "special_senses",
+   "kind": "mcq",
+   "level": "undergraduate",
+   "stem": "Which structure provides most of the eye's refractive (focusing) power?",
+   "options": [
+    "Lens",
+    "Cornea",
+    "Vitreous body",
+    "Retina"
+   ],
+   "answer": 1,
+   "explanation": "The cornea provides most of the refractive power; the lens adjusts focus for near and far objects.",
+   "references": [
+    "guyton14"
+   ]
+  },
+  {
+   "id": "sense-04",
+   "module": "special_senses",
+   "kind": "mcq",
+   "level": "undergraduate",
+   "stem": "Which is the correct order of the auditory ossicles from the tympanic membrane inwards?",
+   "options": [
+    "Stapes, incus, malleus",
+    "Malleus, incus, stapes",
+    "Incus, malleus, stapes",
+    "Malleus, stapes, incus"
+   ],
+   "answer": 1,
+   "explanation": "The malleus attaches to the tympanic membrane, the incus links it to the stapes, and the stapes sits in the oval window.",
+   "references": [
+    "grays42"
+   ]
+  },
+  {
+   "id": "sense-05",
+   "module": "special_senses",
+   "kind": "mcq",
+   "level": "clinical",
+   "stem": "Myopia (short-sightedness) is corrected with which type of lens?",
+   "options": [
+    "Convex (converging)",
+    "Concave (diverging)",
+    "Cylindrical only",
+    "No lens: it cannot be corrected"
+   ],
+   "answer": 1,
+   "explanation": "In myopia light focuses in front of the retina; a diverging lens moves the focus back onto the retina.",
+   "references": [
+    "guyton14"
+   ]
+  },
+  {
+   "id": "sense-id-01",
+   "module": "special_senses",
+   "kind": "identify",
+   "level": "basic",
+   "stem": "Find an eyeball.",
+   "answer": [
+    "FMA:12514",
+    "FMA:12515"
+   ],
+   "explanation": "Each eyeball sits in its bony orbit, protected by the eyelids.",
+   "references": [
+    "grays42"
+   ]
+  },
+  {
+   "id": "sense-id-02",
+   "module": "special_senses",
+   "kind": "identify",
+   "level": "undergraduate",
+   "stem": "Select the lens of either eye.",
+   "answer": [
+    "FMA:58242",
+    "FMA:58243"
+   ],
+   "explanation": "The lens lies behind the iris and is held by the suspensory ligament (zonular fibres).",
+   "references": [
+    "grays42"
+   ]
+  }
+ ]
+}

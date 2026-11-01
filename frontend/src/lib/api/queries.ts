@@ -5,11 +5,18 @@ import { keepPreviousData, useMutation, useQuery, useQueryClient } from "@tansta
 import { api, structurePath } from "./client";
 import type {
   AnatomicalSystem,
+  AnswerResult,
   AssetManifest,
   AudienceLevel,
+  BodyModel,
+  BodyModelInfo,
+  Circulation,
   ConditionDetail,
   ConditionSummary,
+  GlossaryEntry,
   ModelDefinition,
+  ModuleDetail,
+  ModuleSummary,
   RunResult,
   SearchHit,
   StructureDetail,
@@ -22,16 +29,21 @@ const REFERENCE_STALE = 5 * 60_000;
 
 export const qk = {
   me: ["auth", "me"] as const,
-  systems: ["anatomy", "systems"] as const,
+  systems: (model?: BodyModel) => ["anatomy", "systems", model ?? "all"] as const,
+  bodyModels: ["assets", "models"] as const,
   index: ["anatomy", "index"] as const,
-  manifest: ["assets", "manifest"] as const,
+  manifest: (model: BodyModel) => ["assets", "manifest", model] as const,
   structure: (id: string, audience: AudienceLevel) => ["anatomy", "structure", id, audience] as const,
   children: (id: string) => ["anatomy", "children", id] as const,
+  circulation: (id: string) => ["anatomy", "circulation", id] as const,
   roots: (system: string) => ["anatomy", "roots", system] as const,
   search: (q: string, system?: string) => ["anatomy", "search", q, system ?? ""] as const,
   models: ["simulations", "models"] as const,
   conditions: ["pathology", "conditions"] as const,
   condition: (id: string) => ["pathology", "condition", id] as const,
+  modules: ["learning", "modules"] as const,
+  module: (id: string) => ["learning", "module", id] as const,
+  glossary: ["learning", "glossary"] as const,
 };
 
 export function useMe() {
@@ -51,10 +63,19 @@ export function useLogout() {
   });
 }
 
-export function useSystems() {
+/** Systems with structure counts; mesh counts are for `model` when given. */
+export function useSystems(model?: BodyModel) {
   return useQuery({
-    queryKey: qk.systems,
-    queryFn: () => api<AnatomicalSystem[]>("/anatomy/systems"),
+    queryKey: qk.systems(model),
+    queryFn: () => api<AnatomicalSystem[]>("/anatomy/systems", { query: { model } }),
+    staleTime: REFERENCE_STALE,
+  });
+}
+
+export function useBodyModels() {
+  return useQuery({
+    queryKey: qk.bodyModels,
+    queryFn: () => api<BodyModelInfo[]>("/assets/models"),
     staleTime: REFERENCE_STALE,
   });
 }
@@ -67,10 +88,10 @@ export function useStructureIndex() {
   });
 }
 
-export function useAssetManifest() {
+export function useAssetManifest(model: BodyModel = "male") {
   return useQuery({
-    queryKey: qk.manifest,
-    queryFn: () => api<AssetManifest>("/assets/manifest"),
+    queryKey: qk.manifest(model),
+    queryFn: () => api<AssetManifest>("/assets/manifest", { query: { model } }),
     staleTime: REFERENCE_STALE,
   });
 }
@@ -80,6 +101,15 @@ export function useStructure(id: string | null, audience: AudienceLevel = "under
     queryKey: qk.structure(id ?? "", audience),
     queryFn: () => api<StructureDetail>(structurePath(id!), { query: { audience } }),
     enabled: !!id,
+    staleTime: REFERENCE_STALE,
+  });
+}
+
+export function useCirculation(id: string | null, enabled = true) {
+  return useQuery({
+    queryKey: qk.circulation(id ?? ""),
+    queryFn: () => api<Circulation>(`${structurePath(id!)}/circulation`),
+    enabled: !!id && enabled,
     staleTime: REFERENCE_STALE,
   });
 }
@@ -114,11 +144,20 @@ export function useSearch(q: string, system?: string) {
   });
 }
 
+export const modelsQuery = {
+  queryKey: qk.models,
+  queryFn: () => api<ModelDefinition[]>("/simulations/models"),
+  staleTime: REFERENCE_STALE,
+};
+
 export function useModels() {
-  return useQuery({
-    queryKey: qk.models,
-    queryFn: () => api<ModelDefinition[]>("/simulations/models"),
-    staleTime: REFERENCE_STALE,
+  return useQuery(modelsQuery);
+}
+
+export function runSimulation(modelId: string, parameters: Record<string, number> = {}, scenarioId: string | null = null) {
+  return api<RunResult>(`/simulations/models/${encodeURIComponent(modelId)}/run`, {
+    method: "POST",
+    json: { parameters, scenario_id: scenarioId },
   });
 }
 
@@ -128,11 +167,7 @@ export function useRunSimulation() {
       modelId: string;
       parameters?: Record<string, number>;
       scenarioId?: string | null;
-    }) =>
-      api<RunResult>(`/simulations/models/${encodeURIComponent(args.modelId)}/run`, {
-        method: "POST",
-        json: { parameters: args.parameters ?? {}, scenario_id: args.scenarioId ?? null },
-      }),
+    }) => runSimulation(args.modelId, args.parameters, args.scenarioId ?? null),
   });
 }
 
@@ -150,5 +185,43 @@ export function useCondition(id: string | null) {
     queryFn: () => api<ConditionDetail>(`/pathology/conditions/${encodeURIComponent(id!)}`),
     enabled: !!id,
     staleTime: REFERENCE_STALE,
+  });
+}
+
+// --- Learning --------------------------------------------------------------------------
+
+export function useLearningModules() {
+  return useQuery({
+    queryKey: qk.modules,
+    queryFn: () => api<ModuleSummary[]>("/learning/modules"),
+  });
+}
+
+export function useLearningModule(id: string | null) {
+  return useQuery({
+    queryKey: qk.module(id ?? ""),
+    queryFn: () => api<ModuleDetail>(`/learning/modules/${encodeURIComponent(id!)}`),
+    enabled: !!id,
+  });
+}
+
+export function useGlossary() {
+  return useQuery({
+    queryKey: qk.glossary,
+    queryFn: () => api<GlossaryEntry[]>("/learning/glossary"),
+    staleTime: REFERENCE_STALE,
+  });
+}
+
+/** Submit an answer; the server grades it and records progress for the signed-in learner. */
+export function useAnswerQuestion() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: ({ questionId, response }: { questionId: string; response: string }) =>
+      api<AnswerResult>(`/learning/questions/${encodeURIComponent(questionId)}/answer`, {
+        method: "POST",
+        json: { response },
+      }),
+    onSuccess: () => void qc.invalidateQueries({ queryKey: ["learning"] }),
   });
 }
