@@ -21,7 +21,9 @@ def test_models_endpoint_lists_both_bodies_with_coverage(auth_client):
     male = {s["system_id"]: s["mesh_count"] for s in models["male"]["systems"]}
     assert female["reproductive"] > 0 and male["reproductive"] > 0
     assert "muscular" in male and "muscular" not in female  # not in the female source
-    assert all(m["license"] == "CC BY 4.0" for m in models.values())
+    assert models["female"]["license"] == "CC BY 4.0"
+    # male: BodyParts3D (CC BY 4.0) plus registered SPL atlas meshes (3D Slicer License Part B)
+    assert "CC BY 4.0" in models["male"]["license"] and "3D Slicer" in models["male"]["license"]
     assert any("Human Reference Atlas" in s for s in models["female"]["sources"])
 
 

@@ -179,7 +179,7 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
                 "system_id": overrides.get(s["id"], s["system_id"]),
                 "laterality": s["laterality"],
                 "is_compound": s["is_compound"],
-                "identity_source": BP3D_SOURCE,
+                "identity_source": s.get("identity_source", BP3D_SOURCE),
                 "verification_status": VerificationStatus.SOURCE_IMPORTED.value,
             }
             for s in structures

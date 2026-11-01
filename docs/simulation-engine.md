@@ -154,3 +154,20 @@ before it is exposed.
 | Membrane potential | Goldman–Hodgkin–Katz |
 
 Heavier models move to Celery workers with WebSocket progress.
+
+## Living processes in head study mode (`frontend/src/features/biolab`)
+
+Interactive processes started from the Layers tab in head mode. Each states its basis in
+the UI; none is presented as a prediction for a person.
+
+| Process | What is modelled | What is approximated |
+|---|---|---|
+| Neurons communicating | Leaky integrate-and-fire cells (rest −70 mV, threshold −55 mV, τm 10 ms, 2 ms refractory); conduction over a physical axon length at 20 m/s (myelinated, saltatory node-to-node) or 0.5 m/s (unmyelinated); 0.5 ms synaptic delay; exponentially decaying PSPs given as peak mV (one 9 mV EPSP is subthreshold, two summate and fire; an IPSP vetoes them); spike waveform taken from the server's Hodgkin–Huxley model | Cell geometry is schematic; background activity is Poisson drive standing in for unmodelled inputs; shown slowed ~200× |
+| Neurons growing and connecting | Stage sequence (outgrowth, axon specification, guidance, synapse formation, pruning) | Growth cones move with persistence + chemoattractant gradient + random exploration; synapse on contact; about a third pruned (latest formed first); months compressed into seconds |
+| Blood flow in the head | Cells move along centre lines of the actual vessel meshes (principal-axis slicing, `engine/centerline.ts`); arterial vs venous colouring from the vessel class | Direction inferred from geometry (arteries away from the heart, veins towards it); speed illustrative and slowed; cells drawn enlarged; no capillary beds |
+| Brain pathways | Vision, hearing, movement and touch light real structures of the 3D head in anatomical order, with notes from Gray's, Moore and Guyton | Routes between structures drawn as arcs; timing slowed, not to scale; deep nuclei (e.g. lateral geniculate) are shown by their parent structure (thalamus) |
+
+Tests: `signalling.test.ts` (rest, conduction time, subthreshold vs summating EPSPs,
+inhibition, 40× myelin speed-up, saltatory progress), `growth.test.ts` (determinism,
+one axon per cell, guidance towards targets, synapse formation and pruning),
+`centerline.test.ts` (axis, length and radius of a tube; orientation; interpolation).

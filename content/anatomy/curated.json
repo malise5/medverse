@@ -2706,6 +2706,2922 @@
           ]
         }
       ]
+    },
+    {
+      "id": "FMA:52734",
+      "latin_name": "Os frontale",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The frontal bone forms the forehead and the roof of the eye sockets. It protects the front of the brain.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The frontal bone forms the forehead (squamous part), the superior margins and roofs of the orbits (orbital parts) and part of the anterior cranial fossa. It articulates with the parietal bones at the coronal suture and contains the frontal sinuses above the orbits.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "relations",
+          "audience": "undergraduate",
+          "body": "Its inner surface supports the frontal lobes of the brain; the supra-orbital notch or foramen transmits the supra-orbital nerve and vessels to the forehead.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "The frontal sinuses drain into the middle meatus of the nose; frontal sinusitis can cause pain and tenderness above the eyebrows.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:52788",
+        "FMA:52789"
+      ],
+      "latin_name": "Os parietale",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The two parietal bones form most of the top and sides of the skull, joined to each other along the midline.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Each parietal bone is a curved, quadrilateral plate forming the side and roof of the cranium. The two meet in the midline at the sagittal suture, the frontal bone at the coronal suture and the occipital bone at the lambdoid suture.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "relations",
+          "audience": "undergraduate",
+          "body": "Grooves on the inner surface carry branches of the middle meningeal vessels; the superior sagittal sinus runs along the sagittal suture on its inner aspect.",
+          "references": [
+            "grays42"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "At birth the bones are separated by fontanelles; the anterior fontanelle (between frontal and parietal bones) usually closes by about 18–24 months and is palpated to assess infants.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:52738",
+        "FMA:52739"
+      ],
+      "latin_name": "Os temporale",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "Each temporal bone forms part of the side and base of the skull and contains the hearing and balance organs of the ear.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The temporal bone has squamous, petromastoid (petrous and mastoid), tympanic and styloid parts. The petrous part houses the middle and internal ear; the external acoustic meatus opens on its lateral surface; its mandibular fossa forms the temporomandibular joint with the mandible.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "relations",
+          "audience": "undergraduate",
+          "body": "The internal carotid artery passes through the carotid canal in the petrous part; the facial nerve runs through the facial canal and leaves at the stylomastoid foramen; the internal jugular vein begins at the jugular foramen between the temporal and occipital bones.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Middle-ear infection can spread to the mastoid air cells (mastoiditis). Fractures of the petrous part can injure the facial and vestibulocochlear nerves and cause cerebrospinal fluid leakage from the ear.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:52735",
+      "latin_name": "Os occipitale",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The occipital bone forms the back and base of the skull. The spinal cord passes through a large opening in it to join the brain.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The occipital bone forms the posterior cranial fossa and part of the cranial base. It surrounds the foramen magnum and carries the occipital condyles, which articulate with the atlas (C1) at the atlanto-occipital joints.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "relations",
+          "audience": "undergraduate",
+          "body": "The medulla oblongata, vertebral arteries and spinal roots of the accessory nerve pass through the foramen magnum; the hypoglossal canal transmits the hypoglossal nerve. Grooves on its inner surface carry the transverse and sigmoid sinuses.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:52736",
+      "latin_name": "Os sphenoidale",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The sphenoid bone is a butterfly-shaped bone in the middle of the skull base. It links the bones of the cranium and the face.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The sphenoid has a central body (containing the sphenoidal sinuses), paired greater and lesser wings and pterygoid processes. Its upper surface forms the sella turcica, whose hypophysial fossa holds the pituitary gland.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "relations",
+          "audience": "undergraduate",
+          "body": "Foramina in the sphenoid transmit major nerves and vessels: the optic canal (optic nerve, ophthalmic artery), superior orbital fissure (oculomotor, trochlear, ophthalmic and abducent nerves), foramen rotundum (maxillary nerve), foramen ovale (mandibular nerve) and foramen spinosum (middle meningeal artery).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "The pituitary gland can be reached surgically through the sphenoidal sinus (transsphenoidal approach).",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:52740",
+      "latin_name": "Os ethmoidale",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The ethmoid bone is a light, spongy bone between the eye sockets. It forms part of the nose and the floor of the front of the skull.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The ethmoid lies in the midline between the orbits. Its horizontal cribriform plate forms part of the floor of the anterior cranial fossa; its perpendicular plate forms the upper bony nasal septum; its labyrinths contain the ethmoidal air cells and carry the superior and middle nasal conchae.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "relations",
+          "audience": "undergraduate",
+          "body": "Olfactory nerve fibres pass from the nasal mucosa through the cribriform plate to the olfactory bulbs; the thin orbital plate (lamina papyracea) separates the ethmoidal cells from the orbit.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "A fracture of the cribriform plate can cause loss of smell and cerebrospinal fluid rhinorrhoea; ethmoidal sinusitis can spread through the thin orbital plate into the orbit.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:53649",
+        "FMA:53650"
+      ],
+      "latin_name": "Maxilla",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The two maxillae form the upper jaw. They hold the upper teeth and form part of the eye sockets, nose and roof of the mouth.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Each maxilla has a body containing the maxillary sinus and frontal, zygomatic, palatine and alveolar processes. The palatine processes form the anterior three-quarters of the hard palate; the alveolar processes carry the upper teeth.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "relations",
+          "audience": "undergraduate",
+          "body": "The infra-orbital nerve (from the maxillary nerve) emerges on its anterior surface through the infra-orbital foramen; the roots of the upper molars lie close to the floor of the maxillary sinus.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Because the molar roots lie near the sinus floor, dental infection can spread to the maxillary sinus, and maxillary sinusitis can be felt as toothache.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:52892",
+        "FMA:52893"
+      ],
+      "latin_name": "Os zygomaticum",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The zygomatic bones are the cheekbones. They give the face its width and form the outer wall of each eye socket.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Each zygomatic bone forms the prominence of the cheek and parts of the lateral wall and floor of the orbit. Its temporal process joins the zygomatic process of the temporal bone to form the zygomatic arch.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "relations",
+          "audience": "undergraduate",
+          "body": "The masseter arises from the zygomatic arch; the temporalis passes deep to the arch to reach the mandible.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Fractures of the zygomatic arch or body are common in facial trauma and can restrict mouth opening or cause double vision if the orbital floor is involved.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:53647",
+        "FMA:53648"
+      ],
+      "latin_name": "Os nasale",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The two small nasal bones form the bridge of the nose.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The nasal bones meet in the midline and articulate with the frontal bone above and the frontal processes of the maxillae laterally; the cartilages of the external nose attach to their lower margins.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "They are the most commonly fractured facial bones.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:53645",
+        "FMA:53646"
+      ],
+      "latin_name": "Os lacrimale",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The lacrimal bones are the smallest facial bones, in the inner wall of each eye socket, where the tear duct begins.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Each lacrimal bone forms part of the medial wall of the orbit. With the maxilla it forms the fossa for the lacrimal sac, which continues into the nasolacrimal canal.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:53655",
+        "FMA:53656"
+      ],
+      "latin_name": "Os palatinum",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The palatine bones form the back part of the hard palate (roof of the mouth) and part of the nasal cavity.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Each L-shaped palatine bone has a horizontal plate, forming the posterior quarter of the hard palate, and a perpendicular plate in the lateral wall of the nasal cavity; it also reaches the floor of the orbit.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "relations",
+          "audience": "undergraduate",
+          "body": "The greater and lesser palatine foramina transmit nerves and vessels to the hard and soft palate.",
+          "references": [
+            "grays42"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:9710",
+      "latin_name": "Vomer",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The vomer is a thin, flat bone that forms the lower back part of the nasal septum, the wall dividing the nose into left and right halves.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The vomer forms the posterior-inferior part of the nasal septum, joining the perpendicular plate of the ethmoid above and the septal cartilage anteriorly.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Deviation of the nasal septum is common and can obstruct one side of the nasal airway.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:52749",
+      "latin_name": "Os hyoideum",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The hyoid bone is a U-shaped bone in the upper neck, below the jaw. It supports the tongue and is the only bone that does not touch another bone.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The hyoid lies at about the C3 vertebral level between the mandible and the thyroid cartilage. It has a body and greater and lesser horns, and is suspended by muscles and ligaments.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "It anchors the tongue and the suprahyoid and infrahyoid muscles, which raise and lower the larynx during swallowing and speech.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Fracture of the hyoid is uncommon and suggests strangulation in forensic practice.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:54737",
+        "FMA:54738"
+      ],
+      "latin_name": "Concha nasi inferior",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The inferior nasal conchae are curled bones on the side walls of the nose. They warm and moisten the air you breathe in.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Each inferior nasal concha is a separate bone attached to the lateral wall of the nasal cavity, below the middle concha of the ethmoid. The nasolacrimal duct opens into the inferior meatus beneath it.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "The conchae increase the mucosal surface, creating turbulent airflow that warms, humidifies and filters inspired air.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:72969",
+        "FMA:72970"
+      ],
+      "latin_name": "Lobus frontalis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The frontal lobe is the front part of each half of the brain. It controls movement, planning, decision-making, personality and, usually on the left, speech production.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The frontal lobe lies in the anterior cranial fossa, in front of the central sulcus and above the lateral sulcus. It contains the precentral gyrus (primary motor cortex) and the prefrontal cortex; in the dominant hemisphere the inferior frontal gyrus contains Broca's area.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Voluntary movement, planning and executive function, behaviour and, in the dominant hemisphere, the production of speech.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Damage to the precentral gyrus causes weakness of the opposite side of the body; dominant inferior frontal lesions cause expressive (Broca) aphasia; prefrontal damage can change personality and judgement.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:72973",
+        "FMA:72974"
+      ],
+      "latin_name": "Lobus parietalis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The parietal lobe, behind the frontal lobe, processes touch, pain, temperature and the position of the body, and helps judge space and distance.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The parietal lobe lies behind the central sulcus and above the lateral sulcus. Its postcentral gyrus is the primary somatosensory cortex.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Somatic sensation, spatial awareness and integration of sensory information.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Non-dominant parietal lesions can cause neglect of the opposite side of space; postcentral lesions cause sensory loss on the opposite side of the body.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:72971",
+        "FMA:72972"
+      ],
+      "latin_name": "Lobus temporalis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The temporal lobe, at the side of the brain above the ear, handles hearing, memory and, usually on the left, understanding language.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The temporal lobe lies below the lateral sulcus in the middle cranial fossa. The primary auditory cortex is on its superior surface; the hippocampus and amygdala lie in its medial part.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Hearing, memory formation (hippocampus), emotion (amygdala) and, in the dominant hemisphere, comprehension of language (Wernicke's area).",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Temporal lobe epilepsy is the most common focal epilepsy in adults; dominant posterior superior temporal lesions cause receptive (Wernicke) aphasia.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:72975",
+        "FMA:72976"
+      ],
+      "latin_name": "Lobus occipitalis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The occipital lobe, at the back of the brain, is where seeing happens: it turns signals from the eyes into images.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The occipital lobe lies at the posterior pole of each hemisphere, above the tentorium cerebelli. The primary visual cortex lines the calcarine sulcus on its medial surface.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Visual processing; each occipital lobe receives the opposite half of the visual field from both eyes.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "A lesion of one occipital lobe (for example a posterior cerebral artery stroke) causes loss of the opposite half of the visual field in both eyes (homonymous hemianopia).",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:61993",
+      "latin_name": "Mesencephalon",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The midbrain is the top part of the brainstem. It helps control eye movements and relays signals between the brain and the body.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The midbrain connects the pons with the diencephalon and passes through the tentorial notch. It contains the cerebral aqueduct, the tectum (superior and inferior colliculi) and the cerebral peduncles, and the nuclei of the oculomotor (III) and trochlear (IV) nerves.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Visual and auditory reflexes (colliculi), control of eye movements and pupils, and transmission of motor and sensory tracts.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Raised intracranial pressure can push the medial temporal lobe through the tentorial notch, compressing the midbrain and oculomotor nerve, with a dilated pupil on the same side.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:67943",
+      "latin_name": "Pons",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The pons is the bulging middle part of the brainstem. It connects the brain with the cerebellum and helps control breathing, chewing and facial movement.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The pons lies between the midbrain and the medulla, in front of the cerebellum, with the fourth ventricle behind it. It contains the nuclei of the trigeminal (V), abducent (VI), facial (VII) and part of the vestibulocochlear (VIII) nerves.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Relays signals from the cerebral cortex to the cerebellum and contributes to the control of breathing.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:62004",
+      "latin_name": "Medulla oblongata",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The medulla oblongata is the lowest part of the brainstem, just above the spinal cord. It controls vital functions such as breathing, heart rate and blood pressure.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The medulla extends from the pons to the foramen magnum, where it continues as the spinal cord. It contains the pyramids (corticospinal tracts) and their decussation, the olives, and the nuclei of the glossopharyngeal, vagus, accessory and hypoglossal nerves.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Cardiovascular and respiratory control centres, and reflexes such as swallowing, coughing and vomiting.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Herniation of the cerebellar tonsils through the foramen magnum compresses the medulla and can stop breathing.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:258714",
+        "FMA:258716"
+      ],
+      "latin_name": "Thalamus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The thalamus is an egg-shaped mass deep in the centre of the brain. It acts as a relay station, passing sensory signals to the right part of the cerebral cortex.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Each thalamus forms most of the lateral wall of the third ventricle, above the hypothalamus and medial to the internal capsule; the two are often joined by the interthalamic adhesion.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Relays and processes almost all sensory information (except smell) and motor signals from the cerebellum and basal ganglia to the cortex, and takes part in arousal and attention.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "A thalamic stroke can cause loss of sensation on the opposite side of the body, sometimes followed by severe central pain.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:86464",
+      "latin_name": "Corpus callosum",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The corpus callosum is a thick band of nerve fibres that joins the left and right halves of the brain so they can share information.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The corpus callosum is the largest commissure, a midline arch of white matter in the floor of the longitudinal fissure, forming the roof of the lateral ventricles. It has a rostrum, genu, body and splenium.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Connects corresponding areas of the two cerebral hemispheres.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Surgical division of the corpus callosum is occasionally used to treat severe epilepsy; it can produce 'disconnection' signs.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:78449",
+        "FMA:78450"
+      ],
+      "latin_name": "Ventriculus lateralis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The lateral ventricles are two fluid-filled spaces inside the brain, one in each half. They make cerebrospinal fluid, which cushions the brain.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Each lateral ventricle lies within a cerebral hemisphere and has a central part with anterior (frontal), posterior (occipital) and inferior (temporal) horns. Each connects with the third ventricle through an interventricular foramen.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Choroid plexus in the ventricles secretes cerebrospinal fluid, which flows through the ventricular system into the subarachnoid space.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Obstruction of cerebrospinal fluid flow enlarges the ventricles upstream of the block (hydrocephalus).",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:78454",
+      "latin_name": "Ventriculus tertius",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The third ventricle is a narrow, fluid-filled space in the middle of the brain, between the two halves of the thalamus.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The third ventricle is a midline slit in the diencephalon, bounded laterally by the thalami and hypothalamus. It receives cerebrospinal fluid from the lateral ventricles and drains through the cerebral aqueduct to the fourth ventricle.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:78467",
+      "latin_name": "Aqueductus mesencephali",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The cerebral aqueduct is a narrow channel in the midbrain that carries cerebrospinal fluid from the third to the fourth ventricle.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The cerebral aqueduct runs through the midbrain, between the tectum and the tegmentum.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Narrowing of the aqueduct (aqueductal stenosis) is a common cause of congenital hydrocephalus.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:78469",
+      "latin_name": "Ventriculus quartus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The fourth ventricle is a fluid-filled space between the brainstem and the cerebellum. Cerebrospinal fluid leaves it to surround the brain and spinal cord.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The fourth ventricle lies behind the pons and upper medulla and in front of the cerebellum. Cerebrospinal fluid passes from it into the subarachnoid space through a median aperture and two lateral apertures, and continues into the central canal of the spinal cord.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:50875",
+        "FMA:50878"
+      ],
+      "latin_name": "Nervus opticus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The optic nerve carries visual signals from the back of the eye to the brain.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The optic nerve (cranial nerve II) leaves the back of the eyeball, runs through the orbit within the cone of the extra-ocular muscles, passes through the optic canal with the ophthalmic artery and joins the opposite nerve at the optic chiasm. It is surrounded by meninges and cerebrospinal fluid.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Because it is surrounded by subarachnoid space, raised intracranial pressure swells the optic disc (papilloedema), which is visible with an ophthalmoscope.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:62045",
+      "latin_name": "Chiasma opticum",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The optic chiasm is where the two optic nerves meet and partly cross, under the brain just above the pituitary gland.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The optic chiasm lies above the sella turcica and the pituitary gland, in front of the infundibulum. Fibres from the nasal half of each retina cross to the opposite side; fibres from the temporal halves stay on the same side.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Compression from below by a pituitary tumour affects the crossing nasal fibres and causes loss of both temporal visual fields (bitemporal hemianopia).",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:50881",
+        "FMA:50882"
+      ],
+      "latin_name": "Nervus trochlearis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The trochlear nerve is a thin nerve that controls one eye muscle, the superior oblique, which helps you look down and inward.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The trochlear nerve (cranial nerve IV) is the only cranial nerve to emerge from the back of the brainstem. It curves around the midbrain, runs in the lateral wall of the cavernous sinus and enters the orbit through the superior orbital fissure to supply the superior oblique muscle.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Trochlear palsy causes vertical double vision, worse when looking down (for example reading or descending stairs); patients often tilt the head away from the affected side.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:52622",
+        "FMA:52623"
+      ],
+      "latin_name": "Nervus ophthalmicus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The ophthalmic nerve is the first branch of the trigeminal nerve. It carries feeling from the eye, forehead and scalp.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The ophthalmic nerve (CN V1) runs in the lateral wall of the cavernous sinus and divides into the lacrimal, frontal and nasociliary nerves, which enter the orbit through the superior orbital fissure.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Sensation from the cornea, upper eyelid, forehead, scalp and the side of the nose.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "The corneal (blink) reflex tests its nasociliary branch. Herpes zoster of the ophthalmic nerve can involve the eye; a rash at the tip of the nose warns of ocular involvement.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:58236",
+        "FMA:58237"
+      ],
+      "latin_name": "Iris",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The iris is the coloured ring of the eye. Its muscles change the size of the pupil to control how much light enters.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The iris lies in front of the lens and divides the space in front of the lens into anterior and posterior chambers; its central opening is the pupil.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "The sphincter pupillae (parasympathetic, via the oculomotor nerve) constricts the pupil; the dilator pupillae (sympathetic) widens it.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:58271",
+        "FMA:58272"
+      ],
+      "latin_name": "Sclera",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The sclera is the tough white outer coat of the eye that keeps its shape and protects it.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The sclera forms the posterior five-sixths of the fibrous layer of the eyeball, continuous anteriorly with the cornea at the limbus. The extra-ocular muscles insert into it and the optic nerve pierces it posteriorly.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:58299",
+        "FMA:58300"
+      ],
+      "latin_name": "Choroidea",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The choroid is a dark layer full of blood vessels between the white of the eye and the retina. It nourishes the outer retina.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The choroid is the posterior part of the vascular layer of the eyeball, between the sclera and the retina, continuous anteriorly with the ciliary body.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Its capillaries supply the outer layers of the retina, including the photoreceptors.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:49044",
+        "FMA:49045"
+      ],
+      "latin_name": "Musculus rectus superior",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The superior rectus is one of six muscles that move the eye. It mainly turns the eye upwards.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It arises from the common tendinous ring at the apex of the orbit and inserts into the upper sclera behind the cornea.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Elevates the eye (most effectively when it is turned outwards) and also adducts and intorts it. Supplied by the oculomotor nerve (CN III).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:49046",
+        "FMA:49047"
+      ],
+      "latin_name": "Musculus rectus inferior",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The inferior rectus is an eye muscle that mainly turns the eye downwards.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It arises from the common tendinous ring and inserts into the lower sclera.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Depresses the eye (most effectively when it is abducted) and also adducts and extorts it. Supplied by the oculomotor nerve.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "In an orbital floor (blow-out) fracture the inferior rectus can become trapped, limiting upward gaze and causing double vision.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:49056",
+        "FMA:49057"
+      ],
+      "latin_name": "Musculus rectus medialis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The medial rectus turns the eye inwards, towards the nose.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It arises from the common tendinous ring and inserts into the medial sclera.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Adducts the eye. Supplied by the oculomotor nerve.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:49054",
+        "FMA:49055"
+      ],
+      "latin_name": "Musculus rectus lateralis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The lateral rectus turns the eye outwards, away from the nose.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It arises from the common tendinous ring and inserts into the lateral sclera.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Abducts the eye. Supplied by the abducent nerve (CN VI).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Abducent nerve palsy, which can follow raised intracranial pressure because of the nerve's long intracranial course, leaves the eye unable to look outwards and causes horizontal double vision.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:49052",
+        "FMA:49053"
+      ],
+      "latin_name": "Musculus obliquus superior",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The superior oblique is an eye muscle whose tendon runs through a small pulley. It helps turn the eye down and in.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It arises above the common tendinous ring, runs forward along the medial orbital wall, and its tendon passes through the trochlea before turning back to insert into the upper outer posterior sclera.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Depresses the eye when adducted and intorts it. Supplied by the trochlear nerve (CN IV).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:49050",
+        "FMA:49051"
+      ],
+      "latin_name": "Musculus obliquus inferior",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The inferior oblique is an eye muscle under the eye. It helps turn the eye up and in.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It arises from the floor of the orbit near the front and passes back beneath the eyeball to insert into the lower outer posterior sclera.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Elevates the eye when adducted and extorts it. Supplied by the oculomotor nerve.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:49048",
+        "FMA:49049"
+      ],
+      "latin_name": "Musculus levator palpebrae superioris",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The levator palpebrae superioris lifts the upper eyelid.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It arises from the lesser wing of the sphenoid above the optic canal and inserts into the skin and tarsal plate of the upper eyelid; a smooth-muscle part (superior tarsal muscle) is sympathetically supplied.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Oculomotor nerve palsy causes complete ptosis; loss of sympathetic supply to the tarsal muscle (Horner syndrome) causes partial ptosis.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:59102",
+        "FMA:59103"
+      ],
+      "latin_name": "Glandula lacrimalis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The lacrimal gland, under the outer part of the upper eyelid, makes tears that keep the eye moist and clean.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The lacrimal gland lies in the lacrimal fossa of the frontal bone at the upper outer part of the orbit, divided into orbital and palpebral parts by the levator aponeurosis.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Tears are spread across the eye by blinking and drain through the lacrimal puncta, canaliculi, lacrimal sac and nasolacrimal duct into the nose. Secretion is driven by parasympathetic fibres from the facial nerve.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:59555",
+        "FMA:59556"
+      ],
+      "latin_name": "Ductus nasolacrimalis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The nasolacrimal duct drains tears from the inner corner of the eye into the nose, which is why your nose runs when you cry.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It runs downwards from the lacrimal sac through the nasolacrimal canal and opens into the inferior meatus of the nasal cavity, beneath the inferior concha.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Blockage of the duct, common in newborns, causes a watery, sticky eye.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:3949",
+        "FMA:4062"
+      ],
+      "latin_name": "Arteria carotis interna",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The internal carotid arteries carry blood up the neck to the brain and eyes. They have no branches in the neck.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Each internal carotid artery begins at the carotid bifurcation, ascends without branches in the neck, enters the skull through the carotid canal, passes through the cavernous sinus and ends by dividing into the anterior and middle cerebral arteries.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "relations",
+          "audience": "undergraduate",
+          "body": "Its branches include the ophthalmic artery (to the orbit), the posterior communicating artery and the anterior choroidal artery; it contributes to the cerebral arterial circle.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Atherosclerosis at the carotid bifurcation is a major source of emboli causing stroke and transient loss of vision in one eye (amaurosis fugax).",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:10635",
+      "latin_name": "Arteria carotis externa",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The external carotid artery supplies the face, scalp, jaws, tongue and neck, but not the brain.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Each external carotid artery begins at the carotid bifurcation (at about the upper border of the thyroid cartilage) and ascends behind the mandible into the parotid gland, where it ends by dividing into the maxillary and superficial temporal arteries.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "relations",
+          "audience": "undergraduate",
+          "body": "Its branches are the superior thyroid, ascending pharyngeal, lingual, facial, occipital and posterior auricular arteries, and the terminal maxillary and superficial temporal arteries.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "The superficial temporal pulse is felt in front of the ear; the middle meningeal artery, a maxillary branch, is torn in many extradural haematomas.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:3958",
+        "FMA:4066"
+      ],
+      "latin_name": "Arteria vertebralis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The vertebral arteries run up through the bones of the neck and join inside the skull to supply the back of the brain.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Each vertebral artery arises from the subclavian artery, ascends through the transverse foramina of C6 to C1, enters the skull through the foramen magnum and joins its partner at the lower border of the pons to form the basilar artery.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Dissection of a vertebral artery, sometimes after neck injury, can cause posterior circulation stroke.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:50542",
+      "latin_name": "Arteria basilaris",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The basilar artery is formed by the two vertebral arteries joining. It supplies the brainstem and cerebellum and the back of the brain.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The basilar artery ascends in front of the pons and divides at its upper border into the two posterior cerebral arteries. Its branches supply the pons, cerebellum and inner ear (labyrinthine artery).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Basilar artery occlusion is a severe stroke that can cause coma or 'locked-in' syndrome.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:50169",
+      "latin_name": "Arteria communicans anterior",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The anterior communicating artery is a short vessel joining the two anterior cerebral arteries, part of the circle of arteries at the base of the brain.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It connects the anterior cerebral arteries in front of the optic chiasm, completing the front of the cerebral arterial circle (circle of Willis).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "It is the most common site of berry aneurysms, whose rupture causes subarachnoid haemorrhage.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:50085",
+        "FMA:50086"
+      ],
+      "latin_name": "Arteria communicans posterior",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The posterior communicating arteries link the carotid and vertebral blood supplies at the base of the brain.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Each connects the internal carotid artery with the posterior cerebral artery, forming the side of the cerebral arterial circle.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "An aneurysm at its junction with the internal carotid can compress the oculomotor nerve, causing a dilated pupil and ptosis.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:50029",
+        "FMA:50030"
+      ],
+      "latin_name": "Arteria cerebri anterior",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The anterior cerebral arteries supply the inner surfaces of the front and middle of the brain.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Each arises from the internal carotid artery, passes forwards above the optic nerve and curves around the corpus callosum in the longitudinal fissure.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Occlusion causes weakness and sensory loss mainly in the opposite leg, because the leg area of the motor and sensory cortex lies on the medial surface.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:50082",
+      "latin_name": "Arteria cerebri media",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The middle cerebral artery is the largest branch of the internal carotid artery. It supplies most of the outer surface of each half of the brain.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It runs laterally in the lateral sulcus and branches over the lateral surface of the frontal, parietal and temporal lobes; its small central (lenticulostriate) branches supply the basal ganglia and internal capsule.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "It is the artery most often affected in stroke: occlusion causes weakness and sensory loss of the opposite face and arm and, in the dominant hemisphere, aphasia.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:50584",
+        "FMA:50585"
+      ],
+      "latin_name": "Arteria cerebri posterior",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The posterior cerebral arteries supply the back of the brain, including the visual cortex.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "They are the terminal branches of the basilar artery; each curves around the midbrain to supply the occipital lobe and the inferior surface of the temporal lobe.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Occlusion causes loss of the opposite half of the visual field (homonymous hemianopia).",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:49869",
+        "FMA:49870"
+      ],
+      "latin_name": "Arteria ophthalmica",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The ophthalmic artery supplies the eye and the structures around it.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It is the first intracranial branch of the internal carotid artery and enters the orbit through the optic canal below the optic nerve.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "relations",
+          "audience": "undergraduate",
+          "body": "Its central retinal artery enters the optic nerve and supplies the inner retina.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Occlusion of the central retinal artery causes sudden painless loss of vision in one eye.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:4754",
+      "latin_name": "Vena jugularis interna",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The internal jugular veins drain blood from the brain, face and neck back towards the heart.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Each internal jugular vein begins at the jugular foramen as the continuation of the sigmoid sinus, descends in the carotid sheath lateral to the carotid arteries and joins the subclavian vein to form the brachiocephalic vein.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "It is used for central venous catheter placement; pulsations of the right internal jugular vein reflect right atrial pressure (jugular venous pressure).",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:49006",
+      "latin_name": "Musculus temporalis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The temporalis is a fan-shaped chewing muscle at the side of the head. You can feel it tighten at your temple when you clench your teeth.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It arises from the temporal fossa and temporal fascia and converges through the gap deep to the zygomatic arch to insert on the coronoid process and anterior border of the ramus of the mandible.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Elevates the mandible (closes the jaw); its posterior fibres retract it. Supplied by deep temporal branches of the mandibular nerve (CN V3).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:48996",
+      "latin_name": "Musculus masseter",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The masseter is a powerful chewing muscle at the angle of the jaw. It is one of the strongest muscles for its size.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It arises from the zygomatic arch and inserts on the lateral surface of the ramus and angle of the mandible.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Elevates the mandible to close the jaw and clench the teeth. Supplied by the masseteric nerve from the mandibular nerve (CN V3).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "relations",
+          "audience": "undergraduate",
+          "body": "The parotid duct crosses its superficial surface before piercing the buccinator.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:46810",
+      "latin_name": "Musculus zygomaticus major",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The zygomaticus major is a muscle of facial expression that pulls the corner of the mouth up and out when you smile.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It runs from the zygomatic bone to the modiolus at the angle of the mouth.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Draws the angle of the mouth upwards and laterally. Supplied, like all muscles of facial expression, by the facial nerve (CN VII).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "In facial nerve palsy (for example Bell palsy) the smile is lost on the affected side.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:46631",
+        "FMA:46632"
+      ],
+      "latin_name": "Musculus constrictor pharyngis superior",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The superior pharyngeal constrictor is a curved muscle in the back wall of the throat. It squeezes food downwards when you swallow.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It arises from the pterygoid hamulus, pterygomandibular raphe and mandible and inserts into the pharyngeal raphe and pharyngeal tubercle of the occipital bone; it overlaps with the middle and inferior constrictors.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Constricts the upper pharynx during swallowing. Supplied by the pharyngeal plexus (vagus nerve).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:59790",
+      "latin_name": "Glandula parotidea",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The parotid gland is the largest salivary gland, in front of and below each ear. It makes watery saliva that flows into the mouth beside the upper molars.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The parotid gland lies between the ramus of the mandible and the mastoid process and sternocleidomastoid. Its duct crosses the masseter, pierces the buccinator and opens opposite the upper second molar.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "relations",
+          "audience": "undergraduate",
+          "body": "The facial nerve divides into its five terminal branches within the gland; the external carotid artery and retromandibular vein also run through it.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Mumps typically causes painful parotid swelling. Surgery for parotid tumours must preserve the facial nerve branches that pass through the gland.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:59802",
+        "FMA:59803"
+      ],
+      "latin_name": "Glandula submandibularis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The submandibular glands lie under the jaw and make most of the saliva produced at rest.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Each gland lies in the submandibular triangle, wrapped around the posterior border of the mylohyoid. Its duct runs forward in the floor of the mouth to open beside the frenulum of the tongue.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Salivary stones form most often in the submandibular duct and cause swelling of the gland during meals.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:59804",
+        "FMA:59805"
+      ],
+      "latin_name": "Glandula sublingualis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The sublingual glands, the smallest of the main salivary glands, lie under the tongue in the floor of the mouth.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Each lies above the mylohyoid in the floor of the mouth, beneath the sublingual fold, and opens through many small ducts into the floor of the mouth.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:9603",
+      "latin_name": "Glandula thyroidea",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The thyroid gland is a butterfly-shaped gland at the front of the lower neck. Its hormones control how fast the body uses energy.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The thyroid has two lobes joined by an isthmus that lies over the second to fourth tracheal rings. The lobes extend along the sides of the larynx and trachea, enclosed in pretracheal fascia.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Follicular cells secrete thyroxine (T4) and triiodothyronine (T3), which set the metabolic rate; parafollicular cells secrete calcitonin.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "relations",
+          "audience": "undergraduate",
+          "body": "The recurrent laryngeal nerves run close to the posterior surface of the lobes; the parathyroid glands usually lie on that surface.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "The gland moves up on swallowing because it is attached to the larynx. Thyroid surgery risks injury to the recurrent laryngeal nerves (hoarseness) and to the parathyroid glands (low calcium).",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:52781",
+      "latin_name": "Auris externa",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The external ear is the part you can see (the auricle) and the canal leading to the eardrum. It collects sound and directs it inwards.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The external ear consists of the auricle, a plate of elastic cartilage covered with skin, and the external acoustic meatus, about 2.5 cm long, ending at the tympanic membrane.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "A blow to the auricle can cause a haematoma between cartilage and perichondrium; untreated, it can lead to 'cauliflower ear'.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:9595",
+      "latin_name": "Membrana tympanica",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The tympanic membrane, or eardrum, is a thin membrane at the end of the ear canal. Sound makes it vibrate.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The tympanic membrane separates the external acoustic meatus from the middle ear. It is oval, about 1 cm across, and slightly cone-shaped, with the handle of the malleus attached to its inner surface.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "On examination with an otoscope a normal membrane is pearly grey with a cone of reflected light; it can perforate after infection or trauma, causing conductive hearing loss.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:52753",
+      "latin_name": "Malleus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The malleus (hammer) is the first and largest of the three tiny bones of the middle ear, attached to the eardrum.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Its handle is attached to the tympanic membrane and its head articulates with the incus in the epitympanic recess.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Transmits vibrations of the tympanic membrane to the incus. The tensor tympani inserts on it and damps loud sounds.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:52752",
+      "latin_name": "Incus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The incus (anvil) is the middle of the three small bones of the middle ear, linking the malleus and the stapes.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Its body articulates with the head of the malleus; its long process articulates with the head of the stapes.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Transmits vibrations from the malleus to the stapes.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:52751",
+      "latin_name": "Stapes",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The stapes (stirrup) is the smallest bone in the body. Its footplate rocks in the oval window, passing sound into the inner ear.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Its head articulates with the incus; its footplate fits into the oval window of the inner ear, held by an annular ligament.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Together the ossicles and the area difference between the tympanic membrane and the oval window amplify sound pressure about 20-fold, matching air to the fluid of the inner ear. The stapedius inserts on it and damps loud sounds.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "In otosclerosis the footplate becomes fixed by new bone, causing conductive hearing loss.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:49028",
+      "latin_name": "Musculus tensor tympani",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The tensor tympani is a tiny muscle in the middle ear that tightens the eardrum to protect the ear from loud sounds.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It lies in a bony canal above the auditory tube and inserts on the handle of the malleus. Supplied by the mandibular nerve (CN V3).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:49027",
+      "latin_name": "Musculus stapedius",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The stapedius is the smallest skeletal muscle in the body. It steadies the stapes and protects the inner ear from loud sounds.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It arises within the pyramidal eminence of the middle ear and inserts on the neck of the stapes. Supplied by the facial nerve (CN VII).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Facial nerve lesions proximal to the nerve to stapedius cause hyperacusis: ordinary sounds seem uncomfortably loud.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:60179",
+      "latin_name": "Labyrinthus osseus",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The bony labyrinth is a set of fluid-filled channels in the temporal bone. Its snail-shaped cochlea is for hearing; its vestibule and three semicircular canals are for balance.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The bony labyrinth lies in the petrous part of the temporal bone and consists of the cochlea, the vestibule and the three semicircular canals (anterior, posterior and lateral), containing perilymph and the membranous labyrinth.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Hair cells in the cochlea convert sound vibrations into nerve signals; those in the semicircular ducts detect rotation of the head and those in the utricle and saccule detect linear acceleration and head position.",
+          "references": [
+            "grays42",
+            "guyton14"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Benign paroxysmal positional vertigo, the commonest cause of vertigo, is caused by loose otoconia in a semicircular canal, usually the posterior one.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:56932",
+      "latin_name": "Fenestra cochleae",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The round window is a small membrane-covered opening between the middle ear and the cochlea. It bulges out as the stapes pushes in, letting the inner-ear fluid move.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It lies on the medial wall of the middle ear below the oval window and is closed by the secondary tympanic membrane.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:50868",
+      "latin_name": "Nervus facialis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The facial nerve controls the muscles of facial expression. It also carries taste from the front of the tongue and controls tears and some saliva.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The facial nerve (CN VII) leaves the brainstem at the pontomedullary junction, enters the internal acoustic meatus with the vestibulocochlear nerve, runs through the facial canal in the temporal bone (giving the nerve to stapedius and the chorda tympani) and leaves the skull at the stylomastoid foramen to divide within the parotid gland.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Motor to the muscles of facial expression, stapedius and posterior belly of digastric; taste from the anterior two-thirds of the tongue (chorda tympani); parasympathetic to the lacrimal, submandibular and sublingual glands.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "A lower motor neuron lesion (for example Bell palsy) paralyses the whole of one side of the face; an upper motor neuron lesion (stroke) spares the forehead because the forehead receives cortical input from both hemispheres.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:53431",
+      "latin_name": "Nervus cochlearis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The cochlear nerve carries hearing signals from the cochlea to the brainstem.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It is the auditory part of the vestibulocochlear nerve (CN VIII); its fibres arise from the spiral ganglion in the cochlea and pass through the internal acoustic meatus to the cochlear nuclei.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "A vestibular schwannoma in the internal acoustic meatus typically presents with one-sided hearing loss and tinnitus.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:53401",
+      "latin_name": "Nervus vestibularis",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The vestibular nerve carries balance signals from the inner ear to the brainstem.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It is the balance part of the vestibulocochlear nerve (CN VIII); its fibres arise from the vestibular ganglion and supply the semicircular ducts, utricle and saccule.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Inflammation of the nerve (vestibular neuritis) causes sudden severe vertigo without hearing loss.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:59837",
+      "latin_name": "Pars ossea septi nasi",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The bony part of the nasal septum is the back of the wall that divides the nose into two sides.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It is formed by the perpendicular plate of the ethmoid above and the vomer below, continuous anteriorly with the septal cartilage.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:59838",
+      "latin_name": "Pars cartilaginea septi nasi",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The cartilaginous part of the nasal septum is the flexible front part of the wall between the two sides of the nose.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "It is formed mainly by the septal cartilage, which joins the bony septum posteriorly.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "The anterior septum (Little's area, Kiesselbach plexus) is the commonest site of nosebleeds.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "FMA:55021",
+      "latin_name": "Palatum molle",
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The soft palate is the soft, muscular back part of the roof of the mouth. It rises when you swallow to stop food entering the nose.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "The soft palate hangs from the posterior edge of the hard palate and ends in the uvula; the palatoglossal and palatopharyngeal arches pass from it to the tongue and pharynx.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Elevated and tensed during swallowing and speech to close off the nasopharynx. Its muscles are supplied by the pharyngeal plexus (vagus), except tensor veli palatini (mandibular nerve).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "With a vagus nerve lesion the uvula deviates away from the affected side when the patient says 'ah'.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:55681",
+        "FMA:55682",
+        "FMA:55680",
+        "FMA:55683",
+        "FMA:57142",
+        "FMA:57143",
+        "FMA:57140",
+        "FMA:57141"
+      ],
+      "latin_name": "Dens incisivus",
+      "synonyms": [
+        {
+          "synonym": "incisor",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The incisors are the eight flat front teeth (four upper, four lower) used for cutting food.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Each quadrant of the permanent dentition has a central and a lateral incisor. Incisors have a single root and a chisel-shaped crown.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "physiology",
+          "audience": "undergraduate",
+          "body": "Cutting and biting. Upper incisors are supplied by the anterior superior alveolar nerve (from CN V2), lower incisors by the inferior alveolar nerve (from CN V3).",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:55798",
+        "FMA:55799",
+        "FMA:55686",
+        "FMA:55687"
+      ],
+      "latin_name": "Dens caninus",
+      "synonyms": [
+        {
+          "synonym": "canine tooth",
+          "kind": "exact"
+        },
+        {
+          "synonym": "eye tooth",
+          "kind": "exact"
+        },
+        {
+          "synonym": "cuspid",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The canines are the four pointed teeth at the corners of the mouth, used for tearing food.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "One canine in each quadrant, with the longest root of any tooth; the upper canine root reaches towards the side of the nose.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:55689",
+        "FMA:55690",
+        "FMA:55688",
+        "FMA:55691",
+        "FMA:55694",
+        "FMA:55693",
+        "FMA:55695",
+        "FMA:55692"
+      ],
+      "latin_name": "Dens premolaris",
+      "synonyms": [
+        {
+          "synonym": "premolar",
+          "kind": "exact"
+        },
+        {
+          "synonym": "bicuspid",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The premolars are the eight teeth between the canines and the molars, used for crushing and grinding.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Two premolars in each quadrant of the permanent dentition; they replace the deciduous molars and usually have one or two roots and two cusps.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        }
+      ]
+    },
+    {
+      "ids": [
+        "FMA:55698",
+        "FMA:55699",
+        "FMA:55697",
+        "FMA:55700",
+        "FMA:55705",
+        "FMA:55704",
+        "FMA:55706",
+        "FMA:55703"
+      ],
+      "latin_name": "Dens molaris",
+      "synonyms": [
+        {
+          "synonym": "molar",
+          "kind": "exact"
+        }
+      ],
+      "content": [
+        {
+          "section": "overview",
+          "audience": "basic",
+          "body": "The molars are the large back teeth used for grinding food. This model shows the first and second molars; the third molars (wisdom teeth) are not included.",
+          "references": [
+            "openstax_ap2e"
+          ]
+        },
+        {
+          "section": "gross_anatomy",
+          "audience": "undergraduate",
+          "body": "Up to three molars in each quadrant; upper molars usually have three roots and lower molars two. The roots of the upper molars lie close to the floor of the maxillary sinus.",
+          "references": [
+            "grays42",
+            "moore8"
+          ]
+        },
+        {
+          "section": "clinical_anatomy",
+          "audience": "undergraduate",
+          "body": "Impacted third molars are common; removal of lower third molars risks injury to the inferior alveolar and lingual nerves.",
+          "references": [
+            "moore8"
+          ]
+        }
+      ]
     }
   ]
 }

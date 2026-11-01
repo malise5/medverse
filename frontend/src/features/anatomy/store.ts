@@ -73,9 +73,22 @@ export interface IdentifyQuiz {
   answered: boolean;
 }
 
+/** "head" clips the body just below the neck and frames the head (head study mode). */
+export type Region = "body" | "head";
+
 export interface WorkspaceState {
   /** Which body is shown. Structure IDs are shared by both; mesh IDs are not. */
   bodyModel: BodyModel;
+  region: Region;
+  /** Last head layer preset applied (head study mode); null when edited freely. */
+  headPreset: string | null;
+  /** Biological process running (see features/biolab/processes.ts). */
+  activeProcess: "signalling" | "growth" | "blood" | "pathways" | null;
+  /** Pathway shown by the "pathways" process and the step currently lit. */
+  pathwayId: string | null;
+  pathwayStep: number;
+  processPlaying: boolean;
+  processSpeed: number;
   selectedId: string | null;
   /** Additional structures selected with Shift/Ctrl for comparison. */
   multiSelection: string[];
@@ -119,6 +132,13 @@ export interface WorkspaceState {
 
   /** Switch body; keeps the selected structure, clears mesh-level state. */
   setBodyModel: (model: BodyModel) => void;
+  setRegion: (region: Region) => void;
+  setHeadPreset: (id: string | null) => void;
+  setActiveProcess: (id: WorkspaceState["activeProcess"]) => void;
+  setPathway: (id: string | null) => void;
+  setPathwayStep: (step: number) => void;
+  setProcessPlaying: (on: boolean) => void;
+  setProcessSpeed: (speed: number) => void;
   select: (id: string | null, opts?: { additive?: boolean }) => void;
   setHover: (hover: Hover | null) => void;
   setHighlighted: (meshIds: Iterable<string>) => void;
@@ -154,6 +174,13 @@ export const DEFAULT_DISSECTION_DEPTH = 10; // skin removed (ghosted), muscles e
 
 const initial = () => ({
   bodyModel: "male" as BodyModel,
+  region: "body" as Region,
+  headPreset: null as string | null,
+  activeProcess: null as WorkspaceState["activeProcess"],
+  pathwayId: null as string | null,
+  pathwayStep: 0,
+  processPlaying: true,
+  processSpeed: 1,
   selectedId: null,
   multiSelection: [] as string[],
   highlightedMeshes: new Set<string>(),
@@ -240,12 +267,21 @@ export const useWorkspace = create<WorkspaceState>()((set) => ({
           },
     ),
   setQuiz: (quiz) => set({ quiz }),
+  setHeadPreset: (headPreset) => set({ headPreset }),
+  setActiveProcess: (activeProcess) => set({ activeProcess, processPlaying: true, pathwayStep: 0 }),
+  setPathway: (pathwayId) => set({ pathwayId, pathwayStep: 0 }),
+  setPathwayStep: (pathwayStep) => set({ pathwayStep }),
+  setProcessPlaying: (processPlaying) => set({ processPlaying }),
+  setProcessSpeed: (processSpeed) => set({ processSpeed }),
+  setRegion: (region) =>
+    set((s) => (s.region === region ? {} : { region, viewCommand: { preset: "anterior", nonce: ++nonce } })),
   requestView: (preset) => set({ viewCommand: { preset, nonce: ++nonce } }),
   requestFocus: (meshIds) => set({ focusCommand: { meshIds, nonce: ++nonce } }),
   reset: () =>
     set((s) => ({
       ...initial(),
       bodyModel: s.bodyModel,
+      region: s.region,
       autoPlay: s.autoPlay,
       viewCommand: { preset: "anterior", nonce: ++nonce },
     })),

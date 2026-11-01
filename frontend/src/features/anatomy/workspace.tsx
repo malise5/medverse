@@ -9,12 +9,15 @@ import { Skeleton } from "@/components/ui/skeleton";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useCirculation, useLearningModule, useModels, useStructure } from "@/lib/api/queries";
 
+import { ProcessStage } from "@/features/biolab/process-stage";
+
 import { useFunctionPlayer } from "./function/use-function-player";
 import { SystemPanel } from "./panels/system-panel";
 import { cn } from "@/lib/utils";
 
 import { HierarchyPanel } from "./panels/hierarchy-panel";
 import { IdentifyQuizBanner, QuizPanelPlaceholder } from "./quiz/identify-quiz";
+import { ProcessHud } from "./process-hud";
 import { LayersPanel } from "./panels/layers-panel";
 import { SearchPanel } from "./panels/search-panel";
 import { StructurePanel } from "./panels/structure-panel";
@@ -97,10 +100,27 @@ export function AnatomyWorkspace() {
     [children, ownedMeshes],
   );
 
+  // Head layer presets frame a structure (first one present in this body) without
+  // starting function playback, unlike choosing it from search.
+  const focusFirst = useCallback(
+    (ids: string[]) => {
+      for (const id of ids) {
+        const meshes = resolveMeshes(id);
+        if (meshes.length) {
+          select(id);
+          useWorkspace.getState().requestFocus(meshes);
+          return;
+        }
+      }
+    },
+    [resolveMeshes, select],
+  );
+
   // Body map: colour the selected structure's direct parts (largest first, up to the
   // validated categorical palette length) and trace its blood-vessel routes.
   const { names } = data;
   const partsHidden = useWorkspace((s) => !!s.quiz && !s.quiz.answered);
+  const activeProcess = useWorkspace((s) => s.activeProcess);
   useEffect(() => {
     const parts = selectedId && !partsHidden
       ? (children.get(selectedId) ?? [])
@@ -145,13 +165,18 @@ export function AnatomyWorkspace() {
   const pendingPlay = useRef<{ id: string; modelId: string | null } | null>(null);
   const selectFromList = useCallback(
     (id: string) => {
+      // A structure chosen by name must be visible even if its layer was switched off.
+      const sys = data.systemOf.get(id);
+      const ws0 = useWorkspace.getState();
+      if (sys && ws0.systemVisible[sys] === false) ws0.setSystemVisible(sys, true);
+      if (sys && (ws0.systemOpacity[sys] ?? 1) < 0.3) ws0.setSystemOpacity(sys, 1);
       selectAndFocus(id);
       pendingFocus.current = id;
       pendingPlay.current = { id, modelId: null };
       useWorkspace.getState().setSpotlight(true);
       if (!desktop) setLeftOpen(false);
     },
-    [selectAndFocus, desktop],
+    [selectAndFocus, desktop, data.systemOf],
   );
   useEffect(() => {
     if (!detail.data) return;
@@ -202,6 +227,12 @@ export function AnatomyWorkspace() {
   useEffect(() => {
     if (modelParam === "male" || modelParam === "female") useWorkspace.getState().setBodyModel(modelParam);
   }, [modelParam]);
+
+  // Head study mode: /anatomy?region=head
+  const regionParam = params.get("region");
+  useEffect(() => {
+    if (regionParam === "head" || regionParam === "body") useWorkspace.getState().setRegion(regionParam);
+  }, [regionParam]);
 
   // Layer builder: /anatomy?systems=skeletal,muscular shows only the listed systems.
   const systemsParam = params.get("systems");
@@ -305,7 +336,7 @@ export function AnatomyWorkspace() {
           <SearchPanel onSelect={selectFromList} systems={data.systems} onSelectSystem={selectSystem} />
         </TabsContent>
         <TabsContent value="layers">
-          <LayersPanel systems={data.systems} />
+          <LayersPanel systems={data.systems} onFocus={focusFirst} />
         </TabsContent>
         <TabsContent value="hierarchy">
           <HierarchyPanel
@@ -335,7 +366,11 @@ export function AnatomyWorkspace() {
   return (
     <div className="flex h-full min-h-0 flex-col">
       <TopToolbar onToggleLeft={() => setLeftOpen((o) => !o)} onToggleRight={() => setRightOpen((o) => !o)} />
-      <div className="flex min-h-0 flex-1">
+      <div className="relative flex min-h-0 flex-1">
+        {/* Cell-scale labs take over the whole workspace; closing returns to the head. */}
+        {(activeProcess === "signalling" || activeProcess === "growth") && (
+          <ProcessStage id={activeProcess} onClose={() => useWorkspace.getState().setActiveProcess(null)} />
+        )}
         {desktop ? (
           <aside className={cn("w-72 shrink-0 border-r bg-card/40", !leftOpen && "hidden")} aria-label="Explorer">
             {left}
@@ -367,6 +402,7 @@ export function AnatomyWorkspace() {
             <Skeleton className="m-4 h-[calc(100%-2rem)]" />
           )}
           <IdentifyQuizBanner onShow={selectFromList} />
+          <ProcessHud />
         </section>
         {desktop ? (
           <aside className={cn("w-[22rem] shrink-0 border-l bg-card/40", !rightOpen && "hidden")} aria-label="Structure information">

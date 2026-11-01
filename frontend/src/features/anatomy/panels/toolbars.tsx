@@ -99,6 +99,31 @@ function BodyModelSwitch() {
   );
 }
 
+/** Whole body / head study mode. Head mode clips below the neck and frames the head. */
+function RegionSwitch() {
+  const region = useWorkspace((s) => s.region);
+  const setRegion = useWorkspace((s) => s.setRegion);
+  return (
+    <div role="radiogroup" aria-label="Region" className="inline-flex shrink-0 rounded-md border bg-muted/40 p-0.5">
+      {(["body", "head"] as const).map((r) => (
+        <button
+          key={r}
+          type="button"
+          role="radio"
+          aria-checked={region === r}
+          onClick={() => setRegion(r)}
+          className={cn(
+            "rounded px-2.5 py-0.5 text-xs font-medium transition-colors",
+            region === r ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground",
+          )}
+        >
+          {r === "body" ? "Body" : "Head"}
+        </button>
+      ))}
+    </div>
+  );
+}
+
 export function TopToolbar({
   onToggleLeft,
   onToggleRight,
@@ -118,6 +143,7 @@ export function TopToolbar({
         <PanelLeft />
       </IconButton>
       <BodyModelSwitch />
+      <RegionSwitch />
       <div className="ml-auto flex items-center gap-1">
         {(isolated || hiddenCount > 0) && (
           <Button size="sm" variant="secondary" onClick={showAll}>

@@ -119,7 +119,8 @@ export class MaterialCache {
       if (emissive) {
         m.emissive = new Color(emissive);
         // Soft tints keep the surface shading readable (the x-ray rim marks selection).
-        m.emissiveIntensity = state === "hovered" ? 0.2 : state === "selected" ? 0.28 : 0.45;
+        // Highlights (pathways, pathology) must read clearly against translucent layers.
+        m.emissiveIntensity = state === "hovered" ? 0.2 : state === "selected" ? 0.28 : state === "highlighted" ? 0.9 : 0.45;
       }
       this.cache.set(key, m);
     }

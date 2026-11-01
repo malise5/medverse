@@ -9,6 +9,8 @@ import type { AnatomicalSystem } from "@/lib/api/types";
 
 import { SYSTEM_COLORS } from "../engine/palette";
 import { useWorkspace } from "../store";
+import { HeadLayers } from "./head-layers";
+import { HeadProcessesPanel } from "./head-processes-panel";
 
 const LAYER_STOPS = [
   { depth: 0, label: "Skin" },
@@ -75,7 +77,14 @@ export function DissectionControl({ systems }: { systems: AnatomicalSystem[] }) 
   );
 }
 
-export function LayersPanel({ systems }: { systems: AnatomicalSystem[] }) {
+export function LayersPanel({
+  systems,
+  onFocus,
+}: {
+  systems: AnatomicalSystem[];
+  onFocus: (structureIds: string[]) => void;
+}) {
+  const region = useWorkspace((s) => s.region);
   const visible = useWorkspace((s) => s.systemVisible);
   const opacity = useWorkspace((s) => s.systemOpacity);
   const setVisible = useWorkspace((s) => s.setSystemVisible);
@@ -84,6 +93,8 @@ export function LayersPanel({ systems }: { systems: AnatomicalSystem[] }) {
 
   return (
     <div className="grid gap-5">
+      {region === "head" && <HeadLayers systems={systems} onFocus={onFocus} />}
+      {region === "head" && <HeadProcessesPanel systems={systems} onFocus={onFocus} />}
       <DissectionControl systems={systems} />
       <section aria-labelledby="systems-h" className="grid gap-1">
         <h3 id="systems-h" className="mb-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">

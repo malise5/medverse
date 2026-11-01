@@ -107,6 +107,12 @@ export function Dashboard() {
             <CardTitle className="text-sm">Quick start</CardTitle>
           </CardHeader>
           <CardContent className="flex flex-wrap gap-2">
+            <Link
+              href="/anatomy?region=head"
+              className="rounded-md border border-primary/50 bg-primary/10 px-3 py-1.5 text-sm font-medium hover:bg-primary/20"
+            >
+              Head study (skull, brain, eye, ear, vessels)
+            </Link>
             {QUICK_STARTS.map((q) => (
               <Link
                 key={q.id}

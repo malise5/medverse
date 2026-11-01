@@ -100,7 +100,11 @@ function Overview({ d }: { d: StructureDetail }) {
             ? "BodyParts3D 4.0 (FMA)"
             : d.identity_source === "hra-vhf"
               ? "the Human Reference Atlas (Visible Human Female)"
-              : d.identity_source}
+              : d.identity_source === "bodyparts3d-4.0-isa"
+                ? "BodyParts3D 4.0 (IS-A set, FMA)"
+                : d.identity_source === "spl-atlas"
+                  ? "the SPL Head and Neck / Inner Ear atlases (Brigham and Women's Hospital), registered to the BodyParts3D skull"
+                  : d.identity_source}
           .
         </p>
         <p className="text-xs">Content is added through the expert-reviewed authoring workflow.</p>

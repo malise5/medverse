@@ -33,6 +33,7 @@ import {
   type Playback,
   type ViewPreset,
 } from "../store";
+import { BloodFlow, PathwayAnimator } from "./head-processes";
 import { MaterialCache, type MeshState } from "./materials";
 import { meshColor } from "./palette";
 
@@ -51,6 +52,18 @@ const VIEW_POSITIONS: Record<ViewPreset, [number, number, number]> = {
   oblique: [DIST * 0.7, 1.4, DIST * 0.7],
 };
 
+/** Head study mode: the region kept above the floor plane, measured down from the vertex.
+ * 0.40 m keeps the whole head plus the upper neck (hyoid, larynx, thyroid gland). */
+export const HEAD_SPAN_M = 0.4;
+
+/** Camera target and distance for a region, from the loaded scene bounds. */
+export function regionView(region: "body" | "head", box: Box3): { target: Vector3; dist: number } {
+  if (region === "head" && !box.isEmpty()) {
+    return { target: new Vector3(0, box.max.y - 0.13, 0), dist: 0.85 };
+  }
+  return { target: TARGET.clone(), dist: DIST };
+}
+
 export interface RegisteredMesh {
   mesh: Mesh;
   meshId: string;
@@ -60,6 +73,9 @@ export interface RegisteredMesh {
   overlay?: Mesh;
   /** Material chosen by the static view rules; animations fall back to it. */
   baseMaterial?: Material;
+  /** World-space vertical extent (region filtering). */
+  minY?: number;
+  maxY?: number;
   /** Rest transform, restored when playback stops. */
   basePosition: Vector3;
   baseScale: Vector3;
@@ -164,7 +180,15 @@ export function AnatomyScene({
   const { invalidate, gl, raycaster } = useThree();
   const controls = useRef<CameraControls>(null);
   const registry = useRef(new Map<string, RegisteredMesh>());
+  const [loadVersion, setLoadVersion] = useState(0);
+  const activeProcess = useWorkspace((s) => s.activeProcess);
+  const region = useWorkspace((s) => s.region);
+  const systemVisible = useWorkspace((s) => s.systemVisible);
+  const getMeshes = useCallback(() => [...registry.current.values()], []);
+  const getMesh = useCallback((id: string) => registry.current.get(id), []);
+  const getSceneBox = useCallback(() => sceneBox.current, []);
   const clipPlane = useMemo(() => new Plane(new Vector3(1, 0, 0), 0), []);
+  const headPlane = useMemo(() => new Plane(new Vector3(0, 1, 0), 0), []);
   const clipPlanes = useMemo<Plane[]>(() => [], []);
   const materials = useMemo(() => new MaterialCache(clipPlanes), [clipPlanes]);
   const sceneBox = useRef(new Box3());
@@ -188,12 +212,20 @@ export function AnatomyScene({
       .map(([, d]) => d);
     const removedGhost = ghostDepth(depths, s.dissectionDepth);
 
-    // Clipping plane from normalised slider position across the loaded scene bounds.
+    // Region: head study mode keeps everything above a floor plane below the neck.
     clipPlanes.length = 0;
-    if (s.clip.axis !== "none" && !sceneBox.current.isEmpty()) {
+    const regionBox = sceneBox.current.clone();
+    const floor = s.region === "head" && !regionBox.isEmpty() ? regionBox.max.y - HEAD_SPAN_M : null;
+    if (floor !== null) {
+      regionBox.min.y = floor;
+      headPlane.set(new Vector3(0, 1, 0), -floor);
+      clipPlanes.push(headPlane);
+    }
+    // Section plane from the normalised slider position across the region's bounds.
+    if (s.clip.axis !== "none" && !regionBox.isEmpty()) {
       const axis = { sagittal: 0, transverse: 1, coronal: 2 }[s.clip.axis];
-      const min = sceneBox.current.min.getComponent(axis);
-      const max = sceneBox.current.max.getComponent(axis);
+      const min = regionBox.min.getComponent(axis);
+      const max = regionBox.max.getComponent(axis);
       const at = min + (max - min) * s.clip.position;
       const n = new Vector3().setComponent(axis, s.clip.flip ? -1 : 1);
       clipPlane.set(n, s.clip.flip ? at : -at);
@@ -227,7 +259,8 @@ export function AnatomyScene({
         systemDepth: depthBySystem[r.systemId] ?? 50,
         removedGhostDepth: removedGhost,
       });
-      const vis = spotlightVisibility(base, r.meshId, focus);
+      const belowRegion = floor !== null && r.maxY !== undefined && r.maxY < floor;
+      const vis = belowRegion ? "hidden" : spotlightVisibility(base, r.meshId, focus);
       const contextOnly = vis === "ghost" && base === "visible";
       const { mesh } = r;
       mesh.visible = vis !== "hidden";
@@ -260,7 +293,7 @@ export function AnatomyScene({
       if (r.overlay) r.overlay.visible = wantOverlay;
     }
     invalidate();
-  }, [clipPlane, clipPlanes, depthBySystem, invalidate, materials, multiMeshIds, selectedMeshIds]);
+  }, [clipPlane, clipPlanes, headPlane, depthBySystem, invalidate, materials, multiMeshIds, selectedMeshIds]);
 
   useEffect(() => {
     apply();
@@ -274,6 +307,7 @@ export function AnatomyScene({
         state.dissectionDepth !== prev.dissectionDepth ||
         state.ghostRemovedLayer !== prev.ghostRemovedLayer ||
         state.clip !== prev.clip ||
+        state.region !== prev.region ||
         state.xraySelection !== prev.xraySelection ||
         state.spotlight !== prev.spotlight ||
         state.systemFocus !== prev.systemFocus ||
@@ -495,21 +529,39 @@ export function AnatomyScene({
     tryFocus();
   }, [focusCommand, tryFocus]);
 
+  // Head mode frames the head from the scene bounds, which grow as bundles load: keep
+  // re-framing until every bundle is in (only while no other focus is pending).
+  const loadedBundles = useRef(new Set<string>());
+  const frameRegion = useCallback(() => {
+    const s = useWorkspace.getState();
+    if (s.region !== "head" || !controls.current || pendingFocus.current || s.selectedId) return;
+    const { target, dist } = regionView("head", sceneBox.current);
+    void controls.current.setLookAt(target.x, target.y, target.z + dist, target.x, target.y, target.z, true);
+  }, []);
+
   const onLoaded = useCallback(
-    (_bundleId: string, meshes: RegisteredMesh[]) => {
+    (bundleId: string, meshes: RegisteredMesh[]) => {
       const box = new Box3();
       for (const m of meshes) {
         registry.current.set(m.meshId, m);
         // World-space bounds: quantised bundles carry per-node scale/translation.
         m.mesh.updateWorldMatrix(true, false);
-        sceneBox.current.union(box.setFromObject(m.mesh));
+        box.setFromObject(m.mesh);
+        m.minY = box.min.y;
+        m.maxY = box.max.y;
+        sceneBox.current.union(box);
       }
       apply();
       refreshLabels();
       syncPlayback(); // bound structures may have just loaded
       tryFocus();
+      setLoadVersion((v) => v + 1);
+      if (!loadedBundles.current.has(bundleId)) {
+        loadedBundles.current.add(bundleId);
+        if (loadedBundles.current.size <= bundles.length) frameRegion();
+      }
     },
-    [apply, refreshLabels, syncPlayback, tryFocus],
+    [apply, refreshLabels, syncPlayback, tryFocus, frameRegion, bundles.length],
   );
 
   // CameraControls owns the camera once mounted; set the initial anterior view here.
@@ -522,8 +574,11 @@ export function AnatomyScene({
   const viewCommand = useWorkspace((s) => s.viewCommand);
   useEffect(() => {
     if (!viewCommand || !controls.current) return;
-    const [x, y, z] = VIEW_POSITIONS[viewCommand.preset];
-    controls.current.setLookAt(x, y, z, TARGET.x, TARGET.y, TARGET.z, true);
+    // Presets are directions around the region's centre (whole body or head).
+    const { target, dist } = regionView(useWorkspace.getState().region, sceneBox.current);
+    const dir = new Vector3(...VIEW_POSITIONS[viewCommand.preset]).sub(TARGET).normalize();
+    const pos = target.clone().addScaledVector(dir, dist);
+    controls.current.setLookAt(pos.x, pos.y, pos.z, target.x, target.y, target.z, true);
   }, [viewCommand]);
 
 
@@ -589,6 +644,18 @@ export function AnatomyScene({
           </div>
         </Html>
       ))}
+      {activeProcess === "blood" && (
+        <BloodFlow
+          getMeshes={getMeshes}
+          getSceneBox={getSceneBox}
+          headSpan={HEAD_SPAN_M}
+          region={region}
+          version={`${loadVersion}|${JSON.stringify(systemVisible)}`}
+        />
+      )}
+      {activeProcess === "pathways" && (
+        <PathwayAnimator resolveMeshes={resolveMeshes} getMesh={getMesh} version={loadVersion} />
+      )}
       <gridHelper args={[3, 30, "#2c3a48", "#1d2731"]} position={[0, -0.002, 0]} />
     </>
   );

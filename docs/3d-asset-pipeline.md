@@ -169,6 +169,66 @@ cd backend && .venv/bin/python -m app.seed
    to a per-organ budget (e.g. brain 180 k, vasculature 220 k triangles; 7.5 M → 2.0 M
    in total), then bundled per system and meshopt-compressed as for the male body.
 
+## Head (male body supplements, `pipeline/bodyparts3d/supplements.py`)
+
+The head is being completed before other regions. Two supplements are merged into the
+male BodyParts3D build, so they share its coordinate frame and final transform:
+
+```bash
+backend/.venv/bin/python pipeline/bodyparts3d/build.py --source SRC \
+  --isa-source ISA_DIR \                    # unzipped isa_BP3D_4.0_obj_99.zip
+  --spl-head-neck head-neck-2016-09.zip \   # openanatomy.org/atlases/nac/
+  --spl-inner-ear inner-ear-2018-02.zip
+```
+
+1. **BodyParts3D IS-A elements** (same dataset, CC BY 4.0). Meshes that exist only in the
+   IS-A tree and whose centroid lies above a floor 40 mm below the mandible are added,
+   except generic subdivisions ("region of", "wall of" …) and neck muscles. Each element
+   is owned by its most specific IS-A concept; a part-of parent is inferred from the name
+   ("branch of left middle cerebral artery" → "left middle cerebral artery") when that
+   structure exists. Structures carry `identity_source = bodyparts3d-4.0-isa`.
+2. **SPL atlases** (Surgical Planning Laboratory, Brigham and Women's Hospital; 3D Slicer
+   License Part B). From the Head and Neck atlas: temporalis, masseter, zygomaticus
+   major, parotid glands, external carotid arteries and thyroid gland. From the Inner Ear
+   atlas: bony labyrinth, round window, malleus, incus, stapes, tympanic membrane, tensor
+   tympani, stapedius and the facial, cochlear and vestibular nerves.
+   *Registration* (`pipeline/spl/register.py`): the atlas skull + mandible are registered
+   onto the 22 BodyParts3D cranial and facial bones (symmetric trimmed ICP: similarity,
+   then affine with singular values bounded to 0.85–1.18 of the similarity scale); the
+   inner-ear atlas's temporal bone onto each BodyParts3D temporal bone with a uniform
+   scale only (its units are about 2.4× millimetres, and an affine fit would distort the
+   small ear structures). The atlas is a right ear; the left ear is its mirror image.
+   Residual surface distances are written to `pipeline_report.json`
+   (`supplements.spl_registration`); see the coverage table below for current values.
+   Structures carry `identity_source = spl-atlas`; the licence text (with the required
+   preface and a statement that the meshes are modified) ships as
+   `frontend/public/assets/anatomy/bp3d-4.0/LICENSE-3D-Slicer-Part-B.txt`, and affected
+   bundles list both licences.
+
+### Head coverage (current)
+
+Registration residuals: head-and-neck atlas median 3.25 mm / 90th percentile 6.64 mm;
+inner ear right 4.08 / 11.49 mm, left (mirrored) 4.07 / 10.99 mm.
+
+| Group | Male body | Female body | Missing (needs licensed assets) |
+|---|---|---|---|
+| Brain and CNS | lobes, gyri, cerebellum, midbrain, pons, medulla, thalamus, hypothalamus, epithalamus, corpus callosum, basal nuclei, amygdala, fornix, mammillary bodies, ventricles and aqueduct, cranial dura, spinal cord | 283 atlas regions, spinal cord by segment, dura | arachnoid and pia mater; cranial nerves VI, IX–XII (V2/V3, VII only intratemporal) |
+| Eye | eyeball layers, cornea, iris, lens, retina, choroid, sclera, optic nerve, chiasm and tract, extra-ocular muscles, lacrimal gland and drainage, orbital bones | eyeball layers, optic nerve and chiasm, extra-ocular muscles | — |
+| Vessels | internal carotid, vertebral, basilar, circle of Willis, cerebral arteries and branches, ophthalmic, external carotid (SPL), internal jugular | ophthalmic vessels, some cervical vessels | dural venous sinuses, facial and superficial temporal vessels, external jugular |
+| Skull | all 14 named cranial and facial bones, hyoid, conchae, teeth (28, no third molars) | teeth (mouth model) | female skull |
+| Muscles | temporalis, masseter, zygomaticus major (SPL), extra-ocular, tongue, suprahyoid/infrahyoid, pharyngeal, laryngeal, sternocleidomastoid, platysma | extra-ocular | orbicularis oculi/oris, buccinator, frontalis/occipitalis, pterygoids, most expression muscles |
+| Ear | external ear; bony labyrinth, malleus, incus, stapes, tympanic membrane, round window, tensor tympani, stapedius, facial/cochlear/vestibular nerves (SPL) | — | ear canal as a separate structure |
+| Nose and mouth | nasal septum, conchae, tongue, soft palate, salivary glands incl. parotid (SPL), pharynx muscles, larynx | mouth, teeth, tongue, palate, salivary glands, larynx, tonsils | nasal cavity, paranasal sinuses as spaces |
+| Glands and other | pituitary, pineal, thyroid (SPL), skin, hair of head, eyebrows | pineal, thymus, skin | parathyroids, lymph nodes of the head, fat pads |
+
+### Head study mode (UI)
+
+The Body/Head switch (or `/anatomy?region=head`) adds a horizontal clipping plane 0.40 m
+below the vertex (head plus upper neck: hyoid, larynx, thyroid), hides meshes entirely
+below it, frames the camera on the head, scales the section plane to the head and
+offers head layer presets (external, see-through skin, muscles, skull, vessels, brain,
+nerves, eye and orbit, ear, mouth and teeth, glands). Picking ignores clipped geometry.
+
 ## Rendering
 
 - Image-based lighting from a procedural studio room (three.js `RoomEnvironment`, no
