@@ -294,6 +294,7 @@ export interface ModuleSummary {
   id: string;
   title: string;
   tagline: string;
+  translation: TranslationState;
   latin_name: string | null;
   display_order: number;
   structure_count: number;
@@ -337,10 +338,14 @@ export interface QuizQuestion {
   body_models: BodyModel[];
 }
 
+/** How much of an item is translated into the requested language. */
+export type TranslationState = "source" | "complete" | "partial" | "missing";
+
 export interface ModuleDetail {
   id: string;
   title: string;
   tagline: string;
+  translation: TranslationState;
   latin_name: string | null;
   objectives: string[];
   overview: LevelText;

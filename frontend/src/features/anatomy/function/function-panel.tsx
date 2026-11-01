@@ -1,7 +1,7 @@
 "use client";
 
 import { Activity, ExternalLink, Loader2, Pause, Play, Square } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/lib/i18n/client";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import { Button } from "@/components/ui/button";

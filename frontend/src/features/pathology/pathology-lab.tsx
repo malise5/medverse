@@ -2,7 +2,7 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { Box, FlaskConical } from "lucide-react";
-import Link from "next/link";
+import { Link, useLocalePath } from "@/lib/i18n/client";
 import { useRouter, useSearchParams } from "next/navigation";
 
 import { Badge } from "@/components/ui/badge";
@@ -170,6 +170,7 @@ export function PathologyLab() {
   const list = useConditions();
   const params = useSearchParams();
   const router = useRouter();
+  const lp = useLocalePath();
   const selected = params.get("condition") ?? list.data?.[0]?.id ?? null;
   const detail = useCondition(selected);
 
@@ -181,7 +182,7 @@ export function PathologyLab() {
           <button
             key={c.id}
             type="button"
-            onClick={() => router.replace(`/pathology?condition=${encodeURIComponent(c.id)}`)}
+            onClick={() => router.replace(lp(`/pathology?condition=${encodeURIComponent(c.id)}`))}
             aria-current={c.id === selected ? "true" : undefined}
             className={cn(
               "grid gap-0.5 rounded-md border p-3 text-left hover:bg-accent",

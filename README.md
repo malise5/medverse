@@ -37,6 +37,14 @@ The goal is a better-equipped healthcare workforce across Africa.
 
 ## What you can do today
 
+| Sign in | Your home page: continue learning, quick actions, progress by system |
+|---|---|
+| ![Sign-in page with the MEDVERSE Africa mission beside the form](docs/images/sign-in.webp) | ![Home page with a greeting, continue-learning button, quiz score and quick actions](docs/images/home.webp) |
+
+A clean, light clinical design (with a dark mode for night study), a search box that
+finds any organ, structure or body system from every page (Ctrl K), and an English /
+Kiswahili switch.
+
 ### Explore and dissect the human body in 3D
 
 Two complete bodies, male and female, built from about **1,950 and 1,380 independently
@@ -90,10 +98,14 @@ module: it appears in a resizable panel beside the explanation, or full-screen o
 - **Pathology lab**: compare healthy and abnormal states (arterial stiffening, raised
   peripheral resistance).
 
-<p align="center"><img src="docs/images/phone-simulation.webp" alt="The breathing-mechanics simulation on a phone" width="260"></p>
+<p align="center">
+  <img src="docs/images/phone-home-sw.webp" alt="The home page in Kiswahili on a phone" width="240">
+  &nbsp;
+  <img src="docs/images/phone-simulation.webp" alt="The breathing-mechanics simulation on a phone" width="240">
+</p>
 
-The interface works at phone width; the 3D views and simulations adapt to the space they
-are given.
+The interface works at phone width (here in Kiswahili); the 3D views and simulations adapt
+to the space they are given.
 
 ## Status and next steps
 
@@ -116,7 +128,11 @@ they get harder to retrofit:
 Then the **chest**, abdomen, pelvis and limbs follow, in both languages and within the
 download-size limits.
 
-**Not available yet:** Swahili, offline use, the AI tutor, clinical cases, histology and
+**In progress:** English and Kiswahili ([languages](docs/i18n.md)): the interface shell,
+dashboard and learning hub are bilingual, and every module's title, objectives and
+beginner overview is in Kiswahili (draft translation, pending review).
+
+**Not available yet:** offline use, the AI tutor, clinical cases, histology and
 medical imaging. These appear in the app as planned features.
 
 ## How we build it
@@ -171,7 +187,7 @@ cd frontend && npm test && npm run lint && npm run typecheck && npm run build   
 | `frontend/` | Next.js 16 app: 3D anatomy engine (React Three Fiber), learning hub, physiology and pathology labs |
 | `pipeline/` | Builds the 3D bodies and their knowledge records: `bodyparts3d/` (male), `hra/` (female), `spl/` (atlas registration), `zanatomy/` (head and neck supplement), `meninges/` (schematic meninges). See [3D assets](docs/3d-asset-pipeline.md) |
 | `content/` | Version-controlled references, systems, curated anatomy, learning modules, quizzes, pathology and generated data |
-| `docs/` | [Architecture](docs/architecture.md) · [Database](docs/database.md) · [Knowledge graph](docs/knowledge-graph.md) · [3D assets](docs/3d-asset-pipeline.md) · [Simulation](docs/simulation-engine.md) · [API](docs/api.md) · [Security](docs/security.md) · [Deployment](docs/deployment.md) · [Governance](docs/content-governance.md) · [Roadmap](docs/roadmap.md) |
+| `docs/` | [Architecture](docs/architecture.md) · [Database](docs/database.md) · [Knowledge graph](docs/knowledge-graph.md) · [3D assets](docs/3d-asset-pipeline.md) · [Simulation](docs/simulation-engine.md) · [API](docs/api.md) · [Security](docs/security.md) · [Deployment](docs/deployment.md) · [Languages](docs/i18n.md) · [Governance](docs/content-governance.md) · [Roadmap](docs/roadmap.md) |
 
 ## 3D data and licences
 

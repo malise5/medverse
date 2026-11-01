@@ -18,12 +18,14 @@ from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.orm import Session
 
 from app.core.rbac import PERMISSION_DESCRIPTIONS, ROLES
+from app.i18n import DEFAULT_LOCALE, LOCALES
 from app.models import (
     AnatomicalSystem,
     AssetBundle,
     Condition,
     ConditionScenario,
     ConditionStructure,
+    ContentTranslation,
     LearningModule,
     Mesh,
     MeshContact,
@@ -558,6 +560,7 @@ def seed_content(db: Session, content_dir: Path) -> SeedReport:
     report.counts["conditions"] = len(conditions)
 
     seed_learning(db, content_dir, report, known=known, ref_ids=ref_ids, system_ids=system_ids)
+    seed_translations(db, content_dir, report)
     seed_rbac(db)
     return report
 
@@ -675,6 +678,95 @@ def seed_learning(
     db.execute(delete(LearningModule).where(LearningModule.id.not_in(module_ids)))
     report.counts["learning_modules"] = len(modules)
     report.counts["quiz_questions"] = len(questions)
+
+
+# Translation files (content/i18n/<locale>/<file>.json) and the items they translate.
+TRANSLATION_FILES = {
+    "systems.json": "system",
+    "modules.json": "module",
+    "questions.json": "question",
+    "structures.json": "structure",
+}
+
+
+def _unknown_fields(base: object, translated: object, path: str = "") -> list[str]:
+    """Fields of a translation that the English item does not have (typos, stale keys)."""
+    if isinstance(translated, dict):
+        if not isinstance(base, dict):
+            return [path or "(root)"]
+        out = []
+        for k, v in translated.items():
+            if k not in base:
+                out.append(f"{path}{k}")
+            else:
+                out.extend(_unknown_fields(base[k], v, f"{path}{k}."))
+        return out
+    if isinstance(translated, list):
+        if not isinstance(base, list):
+            return [path.rstrip(".") or "(root)"]
+        if len(translated) > len(base):
+            return [f"{path.rstrip('.')} has {len(translated)} items, English {len(base)}"]
+        return [
+            x for i, v in enumerate(translated) for x in _unknown_fields(base[i], v, f"{path}{i}.")
+        ]
+    return []
+
+
+def seed_translations(db: Session, content_dir: Path, report: SeedReport) -> None:
+    """Translations of systems, modules, questions and structures (content/i18n/<locale>).
+
+    Each file maps an item id to a partial copy of its translatable fields; it is checked
+    against the English item so a stale id or misspelt field is reported, not ignored.
+    """
+    sources = {
+        "system": {
+            s.id: {"name": s.name, "description": s.description or ""}
+            for s in db.scalars(select(AnatomicalSystem))
+        },
+        "module": {
+            m.id: {"title": m.title, "tagline": m.tagline, **m.body}
+            for m in db.scalars(select(LearningModule))
+        },
+        "question": {
+            q.id: {"stem": q.stem, "options": q.options or [], "explanation": q.explanation}
+            for q in db.scalars(select(QuizQuestion))
+        },
+        "structure": {
+            sid: {"name": name} for sid, name in db.execute(select(Structure.id, Structure.name))
+        },
+    }
+    rows: list[dict] = []
+    base_dir = content_dir / "i18n"
+    locale_dirs = sorted(p for p in base_dir.iterdir() if p.is_dir()) if base_dir.exists() else []
+    for locale_dir in locale_dirs:
+        locale = locale_dir.name
+        if locale not in LOCALES or locale == DEFAULT_LOCALE:
+            report.problems.append(f"i18n: unsupported locale directory {locale}")
+            continue
+        for file, entity in TRANSLATION_FILES.items():
+            path = locale_dir / file
+            if not path.exists():
+                continue
+            data = _read(path)
+            for item_id, payload in data.get("items", {}).items():
+                where = f"i18n/{locale}/{file} {item_id}"
+                if item_id not in sources[entity]:
+                    report.problems.append(f"{where}: no such {entity}")
+                    continue
+                for name in _unknown_fields(sources[entity][item_id], payload):
+                    report.problems.append(f"{where}: unknown field {name}")
+                rows.append(
+                    {
+                        "entity_type": entity,
+                        "entity_id": item_id,
+                        "locale": locale,
+                        "payload": payload,
+                        "status": data.get("status", "draft"),
+                    }
+                )
+    db.execute(delete(ContentTranslation))
+    _upsert(db, ContentTranslation, rows, ["entity_type", "entity_id", "locale"])
+    report.counts["translations"] = len(rows)
 
 
 def run_seed(db: Session, content_dir: Path, *, strict: bool = True) -> SeedReport:

@@ -190,10 +190,11 @@ export function useCondition(id: string | null) {
 
 // --- Learning --------------------------------------------------------------------------
 
-export function useLearningModules() {
+export function useLearningModules(enabled = true) {
   return useQuery({
     queryKey: qk.modules,
     queryFn: () => api<ModuleSummary[]>("/learning/modules"),
+    enabled,
   });
 }
 

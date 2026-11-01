@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link, useLocalePath, useT } from "@/lib/i18n/client";
 import { useState, type FormEvent } from "react";
 import type { z } from "zod";
 
@@ -15,18 +15,14 @@ import { loginSchema, registerSchema, safeNext } from "./schemas";
 
 type Mode = "login" | "register";
 
-const LEVELS = [
-  ["basic", "Basic anatomy"],
-  ["undergraduate", "Undergraduate (MBChB / MBBS)"],
-  ["clinical", "Clinical"],
-  ["postgraduate", "Postgraduate"],
-  ["specialist", "Specialist"],
-] as const;
+const LEVELS = ["basic", "undergraduate", "clinical", "postgraduate", "specialist"] as const;
 
 export function AuthForm({ mode }: { mode: Mode }) {
   const [errors, setErrors] = useState<Record<string, string>>({});
   const [formError, setFormError] = useState<string | null>(null);
   const [pending, setPending] = useState(false);
+  const lp = useLocalePath();
+  const { t } = useT();
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -46,9 +42,9 @@ export function AuthForm({ mode }: { mode: Mode }) {
       await api<{ user: User }>(`/auth/${mode}`, { method: "POST", json: parsed.data });
       const next = new URLSearchParams(window.location.search).get("next");
       // Full navigation so every cache starts clean for the new session.
-      window.location.assign(safeNext(next));
+      window.location.assign(lp(safeNext(next)));
     } catch (err) {
-      setFormError(err instanceof ApiError ? err.message : "Unable to reach the server");
+      setFormError(err instanceof ApiError ? err.message : t("auth.serverUnreachable"));
       setPending(false);
     }
   }
@@ -59,6 +55,7 @@ export function AuthForm({ mode }: { mode: Mode }) {
       <Input
         id={name}
         name={name}
+        className="h-11 rounded-xl bg-card px-3.5"
         aria-invalid={!!errors[name]}
         aria-describedby={errors[name] ? `${name}-error` : undefined}
         {...props}
@@ -73,36 +70,34 @@ export function AuthForm({ mode }: { mode: Mode }) {
 
   return (
     <div className="w-full max-w-sm">
-      <div className="mb-8 flex flex-col items-center gap-3 text-center">
-        <Logo className="text-lg" />
-        <h1 className="text-xl font-semibold">
-          {mode === "login" ? "Sign in to your workspace" : "Create your account"}
+      <div className="mb-8 grid gap-2">
+        <Logo className="mb-4 lg:hidden" />
+        <h1 className="text-2xl font-bold tracking-tight">
+          {mode === "login" ? t("auth.signInTitle") : t("auth.registerTitle")}
         </h1>
-        <p className="text-sm text-muted-foreground">
-          Interactive anatomy, physiology and pathology for medical education.
-        </p>
+        <p className="text-sm text-muted-foreground">{t("auth.tagline")}</p>
       </div>
       <form onSubmit={onSubmit} noValidate className="grid gap-4">
         {mode === "register" &&
-          field("full_name", "Full name", { autoComplete: "name", required: true })}
-        {field("email", "Email", { type: "email", autoComplete: "email", required: true })}
-        {field("password", "Password", {
+          field("full_name", t("auth.fullName"), { autoComplete: "name", required: true })}
+        {field("email", t("auth.email"), { type: "email", autoComplete: "email", required: true })}
+        {field("password", t("auth.password"), {
           type: "password",
           autoComplete: mode === "login" ? "current-password" : "new-password",
           required: true,
         })}
         {mode === "register" && (
           <div className="grid gap-1.5">
-            <Label htmlFor="educational_level">Educational level</Label>
+            <Label htmlFor="educational_level">{t("auth.educationalLevel")}</Label>
             <select
               id="educational_level"
               name="educational_level"
               defaultValue="undergraduate"
-              className="h-8 rounded-lg border border-input bg-transparent px-2.5 text-sm dark:bg-input/30"
+              className="h-11 rounded-xl border border-input bg-card px-3 text-sm"
             >
-              {LEVELS.map(([v, l]) => (
+              {LEVELS.map((v) => (
                 <option key={v} value={v} className="bg-popover">
-                  {l}
+                  {t(`auth.levels.${v}`)}
                 </option>
               ))}
             </select>
@@ -113,23 +108,23 @@ export function AuthForm({ mode }: { mode: Mode }) {
             {formError}
           </p>
         )}
-        <Button type="submit" size="lg" disabled={pending}>
-          {pending ? "Please wait…" : mode === "login" ? "Sign in" : "Create account"}
+        <Button type="submit" size="lg" disabled={pending} className="mt-2 h-11 rounded-xl text-[15px] font-semibold">
+          {pending ? t("common.pleaseWait") : mode === "login" ? t("auth.signIn") : t("auth.createAccount")}
         </Button>
       </form>
       <p className="mt-6 text-center text-sm text-muted-foreground">
         {mode === "login" ? (
           <>
-            New to MEDVERSE?{" "}
+            {t("auth.newHere")}{" "}
             <Link href="/register" className="text-primary hover:underline">
-              Create an account
+              {t("auth.createAnAccount")}
             </Link>
           </>
         ) : (
           <>
-            Already registered?{" "}
+            {t("auth.alreadyRegistered")}{" "}
             <Link href="/login" className="text-primary hover:underline">
-              Sign in
+              {t("auth.signIn")}
             </Link>
           </>
         )}

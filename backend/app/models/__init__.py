@@ -14,10 +14,12 @@ from app.models.anatomy import (
     StructureXref,
 )
 from app.models.clinical import Condition, ConditionScenario, ConditionStructure, SimulationRun
+from app.models.i18n import ContentTranslation
 from app.models.identity import AuditLog, AuthSession, Institution, Permission, Role, User
 from app.models.learning import LearningModule, QuizAttempt, QuizQuestion
 
 __all__ = [
+    "ContentTranslation",
     "AnatomicalSystem",
     "AssetBundle",
     "AuditLog",

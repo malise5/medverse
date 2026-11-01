@@ -1,0 +1,28 @@
+{
+  "_comment": "Kiswahili names and descriptions of the anatomical systems (content/systems.json). DRAFT: pending review by Swahili-speaking health professionals.",
+  "status": "draft",
+  "items": {
+    "integumentary": { "name": "Mfumo wa ngozi", "description": "Ngozi na viambatisho vyake." },
+    "muscular": { "name": "Mfumo wa misuli", "description": "Misuli ya kiunzi pamoja na kano, retinakula na fasia zake." },
+    "cardiovascular": { "name": "Mfumo wa moyo na mishipa ya damu", "description": "Moyo na mishipa ya damu." },
+    "nervous": { "name": "Mfumo wa neva", "description": "Mfumo mkuu wa neva na mfumo wa neva wa pembeni." },
+    "respiratory": { "name": "Mfumo wa upumuaji", "description": "Njia za hewa, mapafu na miundo inayohusiana nayo." },
+    "digestive": { "name": "Mfumo wa usagaji chakula", "description": "Njia ya chakula na viungo vinavyosaidia usagaji chakula." },
+    "urinary": { "name": "Mfumo wa mkojo", "description": "Figo, mirija ya mkojo (ureta), kibofu cha mkojo na urethra." },
+    "reproductive": {
+      "name": "Mfumo wa uzazi",
+      "description": "Viungo vya uzazi vya mwanamume na mwanamke. Mwili wa mwanamume (BodyParts3D) una tezi dume (prostate); mwili wa mwanamke (Human Reference Atlas) una mfuko wa uzazi, mirija ya uzazi, ovari na matiti."
+    },
+    "endocrine": { "name": "Mfumo wa endokrini (homoni)", "description": "Tezi na tishu zinazotoa homoni." },
+    "skeletal": { "name": "Mfumo wa mifupa", "description": "Mifupa, gegedu, viungo vya mifupa na ligamenti." },
+    "lymphatic": {
+      "name": "Mfumo wa limfu na kinga",
+      "description": "Mishipa ya limfu, tezi za limfu na viungo vya limfu. Mwili wa mwanamume una tezi ya thymus; mwili wa mwanamke una thymus, wengu, tonsili za kaakaa na mfano wa tezi ya limfu."
+    },
+    "special_senses": { "name": "Viungo vya hisi maalum", "description": "Miundo ya kuona, kusikia, kudumisha usawa, kunusa na kuonja." },
+    "unclassified": {
+      "name": "Miundo ya kimaeneo",
+      "description": "Maeneo ya mwili na miundo mchanganyiko inayovuka mifumo kadhaa (k.m. kiwiliwili, kiungo cha juu). Ukichagua mmoja, sehemu zake zote zinaangaziwa."
+    }
+  }
+}

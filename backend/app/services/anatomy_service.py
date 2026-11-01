@@ -13,6 +13,7 @@ from sqlalchemy import (
 from sqlalchemy.orm import Session
 
 from app.core.errors import not_found
+from app.i18n import DEFAULT_LOCALE, overlay
 from app.models import (
     AnatomicalSystem,
     AssetBundle,
@@ -38,6 +39,7 @@ from app.schemas.anatomy import (
     StructureSummary,
     SystemOut,
 )
+from app.services import i18n_service
 from app.simulation.registry import models_for_structure
 
 AUDIENCE_ORDER = list(AudienceLevel)
@@ -65,7 +67,9 @@ def summaries(db: Session, structures: list[Structure]) -> list[StructureSummary
     ]
 
 
-def list_systems(db: Session, body_model: str | None = None) -> list[SystemOut]:
+def list_systems(
+    db: Session, body_model: str | None = None, locale: str = DEFAULT_LOCALE
+) -> list[SystemOut]:
     """Systems with structure counts; mesh counts for one body model, or all bodies."""
     counts = dict(
         db.execute(select(Structure.system_id, func.count()).group_by(Structure.system_id)).all()
@@ -80,13 +84,22 @@ def list_systems(db: Session, body_model: str | None = None) -> list[SystemOut]:
             AssetBundle.body_model == body_model
         )
     mesh_counts = dict(db.execute(mesh_q).all())
-    systems = db.scalars(select(AnatomicalSystem).order_by(AnatomicalSystem.display_order))
-    return [
-        SystemOut.model_validate(s).model_copy(
-            update={"structure_count": counts.get(s.id, 0), "mesh_count": mesh_counts.get(s.id, 0)}
+    systems = list(db.scalars(select(AnatomicalSystem).order_by(AnatomicalSystem.display_order)))
+    tr = i18n_service.translations(db, "system", [s.id for s in systems], locale)
+    out = []
+    for s in systems:
+        local = overlay({"name": s.name, "description": s.description or ""}, tr.get(s.id))
+        out.append(
+            SystemOut.model_validate(s).model_copy(
+                update={
+                    "name": local["name"],
+                    "description": local["description"] or None,
+                    "structure_count": counts.get(s.id, 0),
+                    "mesh_count": mesh_counts.get(s.id, 0),
+                }
+            )
         )
-        for s in systems
-    ]
+    return out
 
 
 def structure_index(db: Session) -> StructureIndex:

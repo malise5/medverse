@@ -1,7 +1,7 @@
 "use client";
 
 import { Activity, Crosshair, EyeOff, Focus, HeartPulse, Lightbulb, MousePointerClick } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/lib/i18n/client";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";

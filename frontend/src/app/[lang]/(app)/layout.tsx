@@ -1,5 +1,5 @@
 import { AppShell } from "@/components/shell/app-shell";
 
-export default function AppLayout({ children }: LayoutProps<"/">) {
+export default function AppLayout({ children }: LayoutProps<"/[lang]">) {
   return <AppShell>{children}</AppShell>;
 }

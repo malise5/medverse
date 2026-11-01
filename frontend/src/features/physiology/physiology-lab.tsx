@@ -2,7 +2,7 @@
 
 import { useQuery } from "@tanstack/react-query";
 import { Box, RotateCcw } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/lib/i18n/client";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 
@@ -239,8 +239,8 @@ export function PhysiologyLab() {
   }
   const initial = models.data.find((m) => m.id === requested)?.id ?? models.data[0].id;
   return (
-    <Tabs defaultValue={initial}>
-      <TabsList>
+    <Tabs defaultValue={initial} className="min-w-0">
+      <TabsList className="h-auto flex-wrap justify-start">
         {models.data.map((m) => (
           <TabsTrigger key={m.id} value={m.id}>{m.name}</TabsTrigger>
         ))}

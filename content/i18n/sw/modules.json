@@ -1,0 +1,162 @@
+{
+  "_comment": "Kiswahili translations of the body-system modules (content/learning/modules.json). Each item is a partial copy of the module: fields left out are shown in English and the module is marked 'partial'. Lists follow the English order. DRAFT: pending review by Swahili-speaking health professionals.",
+  "status": "draft",
+  "items": {
+    "skeletal": {
+      "title": "Mfumo wa mifupa",
+      "tagline": "Kiunzi hai kinachoshikilia mwili, kulinda viungo, kuhifadhi madini na kutengeneza chembe za damu.",
+      "objectives": [
+        "Taja migawanyiko miwili ya kiunzi cha mifupa na utoe mifano ya mifupa katika kila mmoja.",
+        "Eleza kazi tano za mfupa zaidi ya kushikilia mwili.",
+        "Panga mifupa kwa umbo lake na viungo vya mifupa kwa muundo na mwendo wake.",
+        "Tafuta fuvu, uti wa mgongo, kifua cha mbavu, nyonga na mifupa mikuu ya mikono na miguu kwenye mfano wa 3D."
+      ],
+      "overview": {
+        "basic": "Kiunzi chako cha mifupa ni fremu ya mwili wako. Kimeundwa kwa mifupa, ambayo ni migumu lakini hai: ina mishipa ya damu na neva, na hujiponya baada ya kuvunjika. Mifupa hukushikilia wima, hulinda viungo laini (fuvu hulinda ubongo, mbavu hulinda moyo na mapafu), na hufanya kazi pamoja na misuli ili uweze kusogea. Ndani ya baadhi ya mifupa, uboho mwekundu laini hutengeneza chembe mpya za damu kila siku. Mifupa pia huhifadhi kalsiamu, ambayo mwili unaihitaji ili neva na misuli zifanye kazi."
+      }
+    },
+    "muscular": {
+      "title": "Mfumo wa misuli",
+      "tagline": "Misuli hubadilisha nishati ya kemikali kuwa nguvu: husogeza kiunzi, hudumisha mkao na hutoa joto.",
+      "objectives": [
+        "Linganisha misuli ya kiunzi, ya moyo na laini kwa muundo, udhibiti na mahali ilipo.",
+        "Eleza jinsi msuli unavyosababisha mwendo kwenye kiungo cha mifupa, ukitumia maneno chanzo, mwisho, agonisti na antagonisti.",
+        "Eleza hatua kuu za kusinyaa kwa msuli wa kiunzi.",
+        "Tambua kiwambo (diaframu) na misuli mikuu ya kiwiliwili kwenye mfano wa 3D."
+      ],
+      "overview": {
+        "basic": "Misuli husababisha kila mwendo unaofanya, kuanzia kutembea hadi kupepesa macho. Hufanya kazi kwa kujifupisha (kusinyaa) na kuvuta mifupa. Misuli inaweza kuvuta tu, haiwezi kusukuma, kwa hiyo hufanya kazi kwa jozi: mmoja hukunja kiungo na mwingine hukinyoosha. Kuna aina tatu za misuli. Misuli ya kiunzi husogeza mifupa yako na unaidhibiti wewe. Msuli wa moyo unapatikana kwenye moyo pekee. Misuli laini huzunguka viungo kama tumbo na mishipa ya damu na hufanya kazi yenyewe. Misuli inayofanya kazi pia hutoa joto, ambalo husaidia kuupa mwili wako joto."
+      }
+    },
+    "cardiovascular": {
+      "title": "Mfumo wa moyo na mishipa ya damu",
+      "tagline": "Pampu na mtandao uliofungwa wa mishipa unaopeleka oksijeni na virutubisho kwa kila chembe hai.",
+      "objectives": [
+        "Fuatilia tone la damu kupitia moyo, mapafu na mwili, ukitaja vyumba, vali na mishipa mikubwa.",
+        "Tofautisha mzunguko wa mapafu na mzunguko wa mwili mzima.",
+        "Linganisha muundo na kazi ya ateri, kapilari na vena.",
+        "Eleza kiasi cha damu kinachosukumwa na moyo na shinikizo la damu, na utaje viwango vya kawaida wakati wa kupumzika kwa vipimo vya SI na vya kawaida."
+      ],
+      "overview": {
+        "basic": "Moyo wako ni pampu ya misuli yenye ukubwa wa ngumi yako. Hupiga takriban mara 60 hadi 100 kwa dakika ukiwa umepumzika na husukuma damu kupitia mirija inayoitwa mishipa ya damu. Ateri hubeba damu kutoka kwenye moyo, vena huirudisha, na kapilari ndogo sana huziunganisha. Kwenye kapilari, oksijeni na chakula hupita kutoka kwenye damu kwenda kwenye chembe za mwili, na uchafu hurudi. Upande wa kulia wa moyo hupeleka damu kwenye mapafu ichukue oksijeni; upande wa kushoto hupeleka damu hii yenye oksijeni nyingi kwa mwili wote."
+      }
+    },
+    "nervous": {
+      "title": "Mfumo wa neva",
+      "tagline": "Mtandao wa mawasiliano wa haraka wa mwili: huhisi, huamua na huamuru kwa milisekunde.",
+      "objectives": [
+        "Tofautisha mfumo mkuu wa neva na mfumo wa neva wa pembeni na sehemu zake.",
+        "Taja sehemu kuu za ubongo na utoe kazi moja ya kila sehemu.",
+        "Eleza muundo wa niuroni na jinsi msukumo wa neva (action potential) unavyobeba ujumbe.",
+        "Linganisha mgawanyiko wa somatiki na wa ototonomia (simpathetiki na parasimpathetiki)."
+      ],
+      "overview": {
+        "basic": "Mfumo wako wa neva hudhibiti na kuunganisha kila kitu ambacho mwili wako hufanya. Ubongo na uti wa mgongo ndio kituo cha udhibiti. Neva hutoka kwenye hivyo kwenda kila sehemu ya mwili, kama nyaya. Viungo vya hisi hutuma ujumbe kupitia neva kwenda kwenye ubongo ('jiko lina moto'), ubongo huamua cha kufanya, na hutuma ujumbe kurudi kwenye misuli ('sogeza mkono wako'). Ujumbe huu ni mawimbi madogo ya umeme yanayosafiri kwa kasi sana. Mfumo wa neva pia huendesha mambo usiyoyafikiria, kama mapigo ya moyo na usagaji wa chakula."
+      }
+    },
+    "respiratory": {
+      "title": "Mfumo wa upumuaji",
+      "tagline": "Njia za hewa na mapafu yanayoingiza oksijeni na kutoa kaboni dioksidi kila unapopumua.",
+      "objectives": [
+        "Fuatilia njia ya hewa kutoka puani hadi kwenye alveoli.",
+        "Eleza jinsi kiwambo (diaframu) na ukuta wa kifua vinavyosababisha kuvuta na kutoa pumzi.",
+        "Eleza ubadilishanaji wa gesi kupitia utando wa alveoli na kapilari.",
+        "Linganisha pafu la kulia na la kushoto na ueleze kwa nini vitu vinavyovutwa mara nyingi huingia kwenye bronkasi kuu ya kulia."
+      ],
+      "overview": {
+        "basic": "Unavuta pumzi kuingiza oksijeni mwilini na kutoa pumzi kuondoa kaboni dioksidi, gesi ya taka. Hewa huingia kupitia pua au mdomo wako, hushuka kwenye koromeo la hewa (trakea) na kuingia kwenye mirija miwili, mmoja kwa kila pafu. Mirija hii hujigawa tena na tena, kama mti uliopinduliwa, na huishia kwenye mamilioni ya vifuko vidogo sana vya hewa vinavyoitwa alveoli. Kila kifuko cha hewa kimezungukwa na mishipa midogo ya damu. Oksijeni hupita kutoka kwenye hewa kwenda kwenye damu, na kaboni dioksidi hupita kutoka kwenye damu kwenda kwenye hewa, ambayo kisha unaitoa nje."
+      }
+    },
+    "digestive": {
+      "title": "Mfumo wa usagaji chakula",
+      "tagline": "Mrija mmoja mrefu na tezi zake zinazovunja chakula, kufyonza virutubisho na kuondoa uchafu.",
+      "objectives": [
+        "Orodhesha kwa mpangilio viungo vya njia ya chakula na viungo saidizi vya usagaji chakula.",
+        "Tofautisha usagaji wa kimakanika na wa kikemikali na utoe mifano ya kila mmoja.",
+        "Eleza mahali virutubisho vingi na maji vinapofyonzwa.",
+        "Eleza kazi za ini, kibofu cha nyongo na kongosho."
+      ],
+      "overview": {
+        "basic": "Mfumo wa usagaji chakula hubadilisha chakula kuwa vipande vidogo sana ambavyo mwili wako unaweza kutumia. Ni mrija mrefu unaoanzia mdomoni na kuishia kwenye njia ya haja kubwa. Meno hutafuna chakula, na mate huanza kukivunja. Chakula hushuka kupitia umio (koo la chakula) hadi tumboni, ambako asidi na kukorogwa hukigeuza kuwa uji mzito. Kwenye utumbo mwembamba, juisi kutoka kongosho na nyongo kutoka kwenye ini humaliza kukivunja, na virutubisho hupita kuingia kwenye damu. Utumbo mpana hurudisha maji, na kinachobaki hutoka mwilini kama kinyesi."
+      }
+    },
+    "urinary": {
+      "title": "Mfumo wa mkojo",
+      "tagline": "Figo zinazosafisha damu na kusawazisha maji na chumvi, pamoja na njia zinazohifadhi na kutoa mkojo.",
+      "objectives": [
+        "Taja viungo vya mfumo wa mkojo na ueleze njia ya mkojo.",
+        "Eleza nefroni na michakato ya uchujaji, ufyonzaji tena na utoaji.",
+        "Eleza jinsi figo zinavyosaidia kudhibiti shinikizo la damu, pH ya damu na utengenezaji wa chembe nyekundu za damu.",
+        "Linganisha urethra ya mwanamume na ya mwanamke na ueleze athari moja ya kliniki."
+      ],
+      "overview": {
+        "basic": "Figo zako mbili ni viungo vyenye umbo la haragwe vilivyo nyuma ya tumbo lako, kimoja kila upande wa uti wa mgongo. Husafisha damu yako: huondoa uchafu na maji ya ziada na kuyageuza kuwa mkojo. Mkojo hutiririka kupitia mirija miwili myembamba inayoitwa ureta hadi kwenye kibofu, mfuko unaonyumbuka unaouhifadhi. Unapokwenda chooni, mkojo hutoka kwenye kibofu kupitia mrija unaoitwa urethra. Figo pia hudumisha kiasi sahihi cha maji na chumvi mwilini mwako."
+      }
+    },
+    "reproductive": {
+      "title": "Mfumo wa uzazi",
+      "tagline": "Viungo vinavyotengeneza chembe za uzazi na homoni za jinsia na, kwa wanawake, vinavyosaidia ujauzito.",
+      "objectives": [
+        "Taja viungo vikuu vya mifumo ya uzazi ya mwanamume na ya mwanamke na kazi zake.",
+        "Eleza njia ya mbegu za kiume kutoka kwenye korodani hadi kwenye urethra.",
+        "Eleza kwa ufupi mizunguko ya ovari na ya mfuko wa uzazi na udhibiti wake wa kihomoni.",
+        "Eleza uhusiano wa kianatomia kati ya tezi dume (prostate) na urethra."
+      ],
+      "overview": {
+        "basic": "Mfumo wa uzazi huwawezesha watu kupata watoto. Viungo vyake hutengeneza chembe maalum zinazoitwa gameti: mbegu za kiume kwa wanaume na mayai (ova) kwa wanawake. Mbegu ya kiume inapoungana na yai, maisha mapya yanaweza kuanza. Viungo vya uzazi pia hutengeneza homoni za jinsia, kama testosteroni na estrojeni, zinazosababisha mabadiliko ya mwili wakati wa kubalehe. Kwa wanawake, mfuko wa uzazi hulinda na kulisha mtoto anayekua wakati wa ujauzito."
+      }
+    },
+    "endocrine": {
+      "title": "Mfumo wa endokrini (homoni)",
+      "tagline": "Tezi zinazotoa homoni kwenye damu ili kuratibu ukuaji, umetaboli na uwiano wa mwili.",
+      "objectives": [
+        "Fasili homoni na utofautishe tezi za endokrini na za eksokrini.",
+        "Taja tezi kuu za endokrini, mahali zilipo na homoni muhimu ya kila moja.",
+        "Eleza mrejesho hasi ukitumia mhimili wa haipothalamasi, tezi ya pituitari na tezi ya thairoidi.",
+        "Tafsiri viwango vya sukari kwenye damu kwa mmol/L na kwa mg/dL."
+      ],
+      "overview": {
+        "basic": "Mfumo wa endokrini hutuma jumbe za kikemikali zinazoitwa homoni. Tezi hutoa homoni kwenye damu, ambayo huzibeba kwenda mwili mzima. Kila homoni huathiri tu chembe zinazoweza 'kuisoma'. Homoni hufanya kazi polepole kuliko ishara za neva, lakini athari zake hudumu muda mrefu zaidi. Hudhibiti ukuaji, kasi ambayo mwili wako hutumia nishati, kiasi cha sukari kwenye damu yako, jinsi unavyokabiliana na msongo, na mabadiliko ya kubalehe. Tezi ndogo iliyo chini ya ubongo, pituitari, hudhibiti tezi nyingine nyingi."
+      }
+    },
+    "lymphatic": {
+      "title": "Mfumo wa limfu na kinga",
+      "tagline": "Mishipa inayorudisha majimaji ya tishu kwenye damu na viungo vinavyofunza na kuhifadhi kinga ya mwili.",
+      "objectives": [
+        "Eleza jinsi limfu inavyotengenezwa na kurudi kwenye mfumo wa vena.",
+        "Taja viungo vya msingi na vya pili vya limfu na kazi zake.",
+        "Tofautisha kinga ya asili na kinga ya kujifunza (adaptive).",
+        "Eleza kwa nini kuchunguza tezi za limfu ni sehemu ya kutathmini maambukizi na saratani."
+      ],
+      "overview": {
+        "basic": "Kila siku baadhi ya majimaji huvuja kutoka kwenye mishipa yako ya damu kuingia kwenye tishu. Mfumo wa limfu hukusanya majimaji haya, ambayo sasa huitwa limfu, na kuyarudisha kwenye damu. Njiani, limfu hupita kwenye tezi ndogo za limfu zenye umbo la haragwe ambazo hufanya kazi kama vichujio na kunasa vijidudu. Tezi za limfu, thymus, wengu na tonsili zimejaa chembe nyeupe za damu zinazopambana na maambukizi. Unapougua, tezi za shingoni au kwapani zinaweza kuvimba kwa sababu chembe hizi zina kazi nyingi."
+      }
+    },
+    "integumentary": {
+      "title": "Mfumo wa ngozi",
+      "tagline": "Ngozi, nywele na kucha: mfumo mkubwa zaidi wa viungo vya mwili na kinga yake ya kwanza.",
+      "objectives": [
+        "Taja tabaka za ngozi na tishu iliyo chini yake.",
+        "Orodhesha kazi za ngozi, ikiwemo jukumu lake katika kudhibiti joto la mwili na kutengeneza vitamini D.",
+        "Eleza miundo saidizi: nywele, kucha, tezi za jasho na tezi za mafuta (sebasi).",
+        "Panga majeraha ya moto kwa kina chake."
+      ],
+      "overview": {
+        "basic": "Ngozi yako hufunika na kulinda mwili wako wote. Huzuia vijidudu kuingia na maji kutoka, na hukukinga dhidi ya mwanga hatari wa jua. Ngozi husaidia kudhibiti joto lako: unatoa jasho unapohisi joto, na jasho hukupoza linapokauka. Ngozi imejaa vihisi vidogo vinavyohisi mguso, mgandamizo, maumivu, joto na baridi. Nywele na kucha hukua kutoka kwenye ngozi. Kwenye mwanga wa jua, ngozi pia hutengeneza vitamini D, ambayo unaihitaji kwa mifupa imara."
+      }
+    },
+    "special_senses": {
+      "title": "Hisi maalum",
+      "tagline": "Kuona, kusikia, kudumisha usawa, kunusa na kuonja: viungo maalum vinavyotuma taarifa kwenye ubongo.",
+      "objectives": [
+        "Taja hisi tano maalum na kiungo kinachohusika na kila moja.",
+        "Fuatilia mwanga kupitia jicho hadi kwenye retina, ukitaja kila muundo unaopita.",
+        "Eleza sehemu tatu za sikio na kazi zake katika kusikia na kudumisha usawa.",
+        "Eleza matatizo ya uoni yanayotokana na mwanga kutokukusanyika vizuri na jinsi lenzi zinavyoyarekebisha."
+      ],
+      "overview": {
+        "basic": "Hisi maalum hukueleza kuhusu ulimwengu unaokuzunguka. Macho yako hutambua mwanga ili uweze kuona. Masikio yako hutambua sauti na pia hukusaidia kudumisha usawa. Pua yako hutambua harufu, na vionjo vilivyo kwenye ulimi wako hutambua ladha. Kila kiungo cha hisi hubadilisha mwanga, sauti au kemikali kuwa ishara za neva zinazosafiri hadi kwenye ubongo wako, na ubongo huzielewa. Hisi mara nyingi hufanya kazi pamoja: sehemu kubwa ya kile tunachokiita 'ladha' kwa kweli hutokana na harufu."
+      }
+    }
+  }
+}

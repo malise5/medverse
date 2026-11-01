@@ -12,36 +12,40 @@ import {
   type LucideIcon,
 } from "lucide-react";
 
+/** Labels and descriptions are messages: nav.items.<id>.label / .description. */
+export type ModuleId =
+  | "dashboard"
+  | "anatomy"
+  | "physiology"
+  | "pathology"
+  | "library"
+  | "histology"
+  | "imaging"
+  | "cases"
+  | "assistant"
+  | "assessments";
+
 export interface ModuleDef {
-  id: string;
-  label: string;
+  id: ModuleId;
   href: string;
   icon: LucideIcon;
-  description: string;
-  /** "live" modules are implemented; others are listed honestly with their planned phase. */
+  /** "live" modules are implemented; planned ones appear only in the home page's
+   * "coming soon" strip, never as navigation that does nothing. */
   status: "live" | "planned";
-  phase?: string;
+  /** Sidebar group of live modules. */
+  group?: "learn" | "explore";
+  phase?: number;
 }
 
 export const MODULES: ModuleDef[] = [
-  { id: "dashboard", label: "Dashboard", href: "/dashboard", icon: LayoutDashboard, status: "live",
-    description: "Overview of your workspace and platform status." },
-  { id: "anatomy", label: "Anatomy Explorer", href: "/anatomy", icon: Brain, status: "live",
-    description: "Interactive 3D anatomy with selectable structures, layers and dissection." },
-  { id: "physiology", label: "Physiology Lab", href: "/physiology", icon: Activity, status: "live",
-    description: "Documented, parameterised physiological models computed by the simulation engine." },
-  { id: "pathology", label: "Pathology Lab", href: "/pathology", icon: HeartPulse, status: "live",
-    description: "Compare healthy and pathological states using educational models." },
-  { id: "library", label: "Body Systems", href: "/learn", icon: BookOpen, status: "live",
-    description: "Study the body system by system at three levels, with 3D links, key terms and quizzes." },
-  { id: "histology", label: "Histology Lab", href: "#", icon: Microscope, status: "planned", phase: "Phase 6",
-    description: "Virtual microscopy from organ to subcellular level." },
-  { id: "imaging", label: "Medical Imaging", href: "#", icon: ScanLine, status: "planned", phase: "Phase 6",
-    description: "DICOM series, windowing and 3D correlation." },
-  { id: "cases", label: "Clinical Cases", href: "#", icon: Stethoscope, status: "planned", phase: "Phase 7",
-    description: "Simulated virtual patients with decision feedback." },
-  { id: "assistant", label: "AI Assistant", href: "#", icon: Bot, status: "planned", phase: "Phase 7",
-    description: "Context-aware, cited educational assistant." },
-  { id: "assessments", label: "Assessments", href: "#", icon: ClipboardCheck, status: "planned", phase: "Phase 8",
-    description: "Quizzes, mock examinations and 3D identification tests." },
+  { id: "dashboard", href: "/dashboard", icon: LayoutDashboard, status: "live", group: "learn" },
+  { id: "library", href: "/learn", icon: BookOpen, status: "live", group: "learn" },
+  { id: "anatomy", href: "/anatomy", icon: Brain, status: "live", group: "explore" },
+  { id: "physiology", href: "/physiology", icon: Activity, status: "live", group: "explore" },
+  { id: "pathology", href: "/pathology", icon: HeartPulse, status: "live", group: "explore" },
+  { id: "histology", href: "#", icon: Microscope, status: "planned", phase: 6 },
+  { id: "imaging", href: "#", icon: ScanLine, status: "planned", phase: 6 },
+  { id: "cases", href: "#", icon: Stethoscope, status: "planned", phase: 7 },
+  { id: "assistant", href: "#", icon: Bot, status: "planned", phase: 7 },
+  { id: "assessments", href: "#", icon: ClipboardCheck, status: "planned", phase: 8 },
 ];

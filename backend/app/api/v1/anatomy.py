@@ -5,6 +5,7 @@ from sqlalchemy import select
 
 from app.api.deps import DbSession, require
 from app.core.rbac import Perm
+from app.i18n import request_locale
 from app.models import AssetBundle, Mesh
 from app.models.enums import AudienceLevel
 from app.schemas.anatomy import (
@@ -46,9 +47,15 @@ BODY_MODELS: dict[str, tuple[str, str]] = {
 
 
 @router.get("/anatomy/systems", response_model=list[SystemOut])
-def list_systems(db: DbSession, response: Response, model: BodyModel | None = None):
+def list_systems(
+    db: DbSession,
+    response: Response,
+    locale: Annotated[str, Depends(request_locale)],
+    model: BodyModel | None = None,
+):
     response.headers["Cache-Control"] = CACHE_REFERENCE
-    return anatomy_service.list_systems(db, model)
+    response.headers["Vary"] = "Accept-Language"  # system names are translated
+    return anatomy_service.list_systems(db, model, locale)
 
 
 @router.get("/assets/models", response_model=list[BodyModelOut])

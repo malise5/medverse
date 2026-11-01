@@ -1,7 +1,7 @@
 "use client";
 
 import { CheckCircle2, Crosshair, Eye, Loader2, Undo2, X, XCircle } from "lucide-react";
-import Link from "next/link";
+import { Link } from "@/lib/i18n/client";
 
 import { Button } from "@/components/ui/button";
 import { useAnswerQuestion } from "@/lib/api/queries";

@@ -7,7 +7,7 @@ export const metadata: Metadata = { title: "Pathology Lab" };
 
 export default function PathologyPage() {
   return (
-    <div className="mx-auto grid max-w-7xl gap-4 p-4 md:p-6">
+    <div className="mx-auto grid max-w-7xl grid-cols-[minmax(0,1fr)] gap-4 p-4 md:p-8">
       <header>
         <h1 className="text-xl font-semibold">Pathology Lab</h1>
         <p className="text-sm text-muted-foreground">

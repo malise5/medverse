@@ -2,7 +2,7 @@
 
 import { Activity, ArrowLeft, Box, ExternalLink, Maximize2, Minimize2, Sprout, X } from "lucide-react";
 import dynamic from "next/dynamic";
-import Link from "next/link";
+import { Link, useT } from "@/lib/i18n/client";
 import { useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore } from "react";
 
@@ -18,8 +18,13 @@ import { cn } from "@/lib/utils";
 // The 3D explorer needs WebGL and is large: load it only when the 3D tab opens.
 const AnatomyWorkspace = dynamic(() => import("@/features/anatomy/workspace").then((m) => m.AnatomyWorkspace), {
   ssr: false,
-  loading: () => <div className="grid h-full place-items-center text-sm text-muted-foreground">Starting 3D engine…</div>,
+  loading: () => <Starting3d />,
 });
+
+function Starting3d() {
+  const { t } = useT();
+  return <div className="grid h-full place-items-center text-sm text-muted-foreground">{t("lab.starting3d")}</div>;
+}
 
 export type LabTab = "3d" | "sim";
 
@@ -132,6 +137,7 @@ function Divider({
   onChange: (v: number) => void;
   containerRef: React.RefObject<HTMLDivElement | null>;
 }) {
+  const { t } = useT();
   const [dragging, setDragging] = useState(false);
   const move = (clientX: number) => {
     const box = containerRef.current?.getBoundingClientRect();
@@ -141,7 +147,7 @@ function Divider({
     <div
       role="separator"
       aria-orientation="vertical"
-      aria-label="Resize explanation and lab"
+      aria-label={t("lab.resize")}
       aria-valuemin={28}
       aria-valuemax={65}
       aria-valuenow={Math.round(percent)}
@@ -161,7 +167,7 @@ function Divider({
         else return;
         e.preventDefault();
       }}
-      title="Drag to resize · double-click to reset"
+      title={t("lab.resizeHint")}
       className={cn(
         "group relative z-10 w-2 shrink-0 cursor-col-resize touch-none bg-border/40 outline-none transition-colors hover:bg-primary/40 focus-visible:bg-primary/60",
         dragging && "bg-primary/60",
@@ -189,6 +195,7 @@ export function ModuleSplit({
   open: boolean;
 }) {
   const desktop = useDesktopSplit();
+  const { t } = useT();
   const [percent, setPercent] = useArticlePercent();
   const [maximized, setMaximized] = useState(false);
   const container = useRef<HTMLDivElement>(null);
@@ -210,7 +217,7 @@ export function ModuleSplit({
       <div
         className={cn("min-w-0 overflow-y-auto", maximized && "hidden")}
         style={{ width: `${percent}%` }}
-        aria-label="Module explanation"
+        aria-label={t("lab.explanation")}
         role="region"
       >
         {article}
@@ -259,6 +266,7 @@ function SimulationPane({
   onLinkedAnatomy: (link: LinkedAnatomy) => void;
 }) {
   const models = useModels();
+  const { t } = useT();
   const items = useMemo(() => labItems(moduleId, models.data ?? []), [moduleId, models.data]);
   if (models.isLoading) return <Skeleton className="m-4 h-96" />;
   if (!items.length) {
@@ -266,16 +274,13 @@ function SimulationPane({
     return (
       <div className="m-auto grid max-w-md gap-3 p-6 text-center">
         <Activity className="mx-auto size-8 text-muted-foreground" aria-hidden />
-        <p className="text-sm font-medium">No simulation for the {moduleTitle.toLowerCase()} yet</p>
-        <p className="text-sm text-muted-foreground">
-          Simulations are added only once a documented, referenced model exists. You can explore this system
-          in 3D now; models are available for:
-        </p>
+        <p className="text-sm font-medium">{t("lab.noSimTitle", { system: moduleTitle.toLowerCase() })}</p>
+        <p className="text-sm text-muted-foreground">{t("lab.noSimBody")}</p>
         <div className="flex flex-wrap justify-center gap-2">
           {withSims.map((d) => (
             <Button key={d} size="xs" variant="secondary" asChild>
               <Link href={`/learn/${d}?lab=sim`} className="capitalize">
-                {d} system
+                {t("lab.systemName", { system: d })}
               </Link>
             </Button>
           ))}
@@ -287,7 +292,7 @@ function SimulationPane({
   return (
     <div className="relative flex min-h-0 flex-1 flex-col">
       {items.length > 1 && (
-        <div role="tablist" aria-label="Simulations" className="flex gap-1.5 overflow-x-auto border-b px-3 py-2">
+        <div role="tablist" aria-label={t("lab.simulations")} className="flex gap-1.5 overflow-x-auto border-b px-3 py-2">
           {items.map((i) => (
             <button
               key={i.id}
@@ -301,7 +306,7 @@ function SimulationPane({
               )}
             >
               {i.kind === "growth" ? <Sprout className="size-3.5" /> : <Activity className="size-3.5" />}
-              {i.label}
+              {i.kind === "model" ? i.label : t(i.kind === "growth" ? "lab.neuronsGrowing" : "lab.neuronsCommunicating")}
             </button>
           ))}
         </div>
@@ -337,6 +342,7 @@ export function ModuleLab({
 }) {
   const { tab, params, open, close } = useModuleLab();
   const desktop = useDesktopSplit();
+  const { t } = useT();
   const heading = useRef<HTMLHeadingElement>(null);
   const models = useModels();
   const simCount = labItems(moduleId, models.data ?? []).length;
@@ -391,16 +397,16 @@ export function ModuleLab({
     <EmbedContext.Provider value={embed}>
       <header className="flex items-center gap-1.5 border-b bg-background/80 px-2 py-2 backdrop-blur sm:gap-2 sm:px-3">
         {!desktop && (
-          <Button size="sm" variant="ghost" className="px-2" onClick={() => close()} aria-label="Back to the module">
-            <ArrowLeft /> <span className="max-[359px]:sr-only">Module</span>
+          <Button size="sm" variant="ghost" className="px-2" onClick={() => close()} aria-label={t("lab.backToModule")}>
+            <ArrowLeft /> <span className="max-[359px]:sr-only">{t("lab.module")}</span>
           </Button>
         )}
         <h2 ref={heading} tabIndex={-1} className="sr-only">
-          {moduleTitle} lab
+          {t("lab.heading", { module: moduleTitle })}
         </h2>
-        <div role="tablist" aria-label="Lab" className="flex rounded-lg bg-muted/60 p-0.5">
-          {tabButton("3d", "3D anatomy", <Box className="size-4" />)}
-          {tabButton("sim", "Simulation", <Activity className="size-4" />, simCount ? String(simCount) : undefined)}
+        <div role="tablist" aria-label={t("lab.tablist")} className="flex rounded-lg bg-muted/60 p-0.5">
+          {tabButton("3d", t("lab.anatomy3d"), <Box className="size-4" />)}
+          {tabButton("sim", t("lab.simulation"), <Activity className="size-4" />, simCount ? String(simCount) : undefined)}
         </div>
         <div className="ml-auto flex items-center gap-1">
           {desktop && (
@@ -408,19 +414,19 @@ export function ModuleLab({
               size="icon-sm"
               variant="ghost"
               onClick={toggleMaximized}
-              aria-label={maximized ? "Show the explanation again" : "Maximise the lab"}
-              title={maximized ? "Show the explanation again" : "Maximise the lab"}
+              aria-label={maximized ? t("lab.restore") : t("lab.maximise")}
+              title={maximized ? t("lab.restore") : t("lab.maximise")}
             >
               {maximized ? <Minimize2 /> : <Maximize2 />}
             </Button>
           )}
-          <Button size="icon-sm" variant="ghost" asChild title="Open in full view">
-            <Link href={fullView} aria-label="Open in full view">
+          <Button size="icon-sm" variant="ghost" asChild title={t("lab.openFull")}>
+            <Link href={fullView} aria-label={t("lab.openFull")}>
               <ExternalLink />
             </Link>
           </Button>
           {desktop && (
-            <Button size="icon-sm" variant="ghost" onClick={() => close()} aria-label="Close the lab (Esc)" title="Close the lab (Esc)">
+            <Button size="icon-sm" variant="ghost" onClick={() => close()} aria-label={t("lab.close")} title={t("lab.close")}>
               <X />
             </Button>
           )}
