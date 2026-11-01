@@ -39,7 +39,31 @@ function useDebounced<T>(value: T, ms: number): T {
   return v;
 }
 
-function ModelRunner({ model }: { model: ModelDefinition }) {
+/** Where "Linked anatomy in 3D" points: the structure to frame, others to highlight and
+ * the model to play (when it drives a 3D animation). */
+export interface LinkedAnatomy {
+  structure: string;
+  highlight: string[];
+  play: string | null;
+}
+
+export function linkedAnatomy(model: ModelDefinition): LinkedAnatomy | null {
+  if (!model.linked_structure_ids.length) return null;
+  return {
+    structure: model.linked_structure_ids[0],
+    highlight: model.linked_structure_ids,
+    play: model.animations.length ? model.id : null,
+  };
+}
+
+export function ModelRunner({
+  model,
+  onLinkedAnatomy,
+}: {
+  model: ModelDefinition;
+  /** Show the linked anatomy in place (lab pane) instead of opening the 3D explorer. */
+  onLinkedAnatomy?: (link: LinkedAnatomy) => void;
+}) {
   const defaults = useMemo(
     () => Object.fromEntries(model.parameters.map((p) => [p.id, p.default])),
     [model],
@@ -70,6 +94,7 @@ function ModelRunner({ model }: { model: ModelDefinition }) {
 
   const changed = model.parameters.filter((p) => params[p.id] !== p.default);
   const groups = useMemo(() => chartGroups(model), [model]);
+  const link = linkedAnatomy(model);
   // With a pinned baseline, each chart compares the baseline and current run of its
   // first series (two series per chart keeps the comparison readable).
   const seriesFor = (g: ChartGroup, r: RunResult): ChartSeries[] =>
@@ -81,7 +106,10 @@ function ModelRunner({ model }: { model: ModelDefinition }) {
       : g.series.map((s) => ({ id: s.id, label: s.label, values: r.series[s.id] }));
 
   return (
-    <div className="grid gap-4 xl:grid-cols-[20rem_1fr]">
+    // Container queries: the runner lays out by the space it is given (full page or a
+    // learning module's lab pane), not by the window width.
+    <div className="@container">
+    <div className="grid gap-4 @4xl:grid-cols-[20rem_1fr]">
       <Card className="h-fit">
         <CardHeader className="flex flex-row items-center justify-between">
           <CardTitle className="text-sm">Parameters</CardTitle>
@@ -89,7 +117,8 @@ function ModelRunner({ model }: { model: ModelDefinition }) {
             <RotateCcw /> Defaults
           </Button>
         </CardHeader>
-        <CardContent className="grid gap-4">
+        {/* Stacked above the output (narrow host): sliders flow in two columns. */}
+        <CardContent className="grid gap-4 @lg:@max-4xl:grid-cols-2 @lg:@max-4xl:gap-x-6">
           {model.parameters.map((p) => (
             <div key={p.id} className="grid gap-1.5">
               <div className="flex items-baseline justify-between gap-2 text-sm">
@@ -112,7 +141,7 @@ function ModelRunner({ model }: { model: ModelDefinition }) {
             </div>
           ))}
           {run.error && (
-            <p role="alert" className="rounded-md bg-destructive/10 p-2 text-xs text-destructive">
+            <p role="alert" className="col-span-full rounded-md bg-destructive/10 p-2 text-xs text-destructive">
               {run.error.message}
               {errorDetails(run.error).map((m) => (
                 <span key={m} className="block">{m}</span>
@@ -134,10 +163,15 @@ function ModelRunner({ model }: { model: ModelDefinition }) {
                   Pin as baseline
                 </Button>
               )}
-              {model.linked_structure_ids.length > 0 && (
+              {link && onLinkedAnatomy && (
+                <Button size="sm" variant="ghost" onClick={() => onLinkedAnatomy(link)}>
+                  <Box /> {link.play ? "Watch it in 3D" : "Linked anatomy in 3D"}
+                </Button>
+              )}
+              {link && !onLinkedAnatomy && (
                 <Button size="sm" variant="ghost" asChild>
                   <Link
-                    href={`/anatomy?structure=${encodeURIComponent(model.linked_structure_ids[0])}&highlight=${encodeURIComponent(model.linked_structure_ids.join(","))}${model.animations.length ? `&play=${encodeURIComponent(model.id)}` : ""}`}
+                    href={`/anatomy?structure=${encodeURIComponent(link.structure)}&highlight=${encodeURIComponent(link.highlight.join(","))}${link.play ? `&play=${encodeURIComponent(link.play)}` : ""}`}
                   >
                     <Box /> Linked anatomy in 3D
                   </Link>
@@ -190,6 +224,7 @@ function ModelRunner({ model }: { model: ModelDefinition }) {
           </CardContent>
         </Card>
       </div>
+    </div>
     </div>
   );
 }

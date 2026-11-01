@@ -6,6 +6,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { useAnswerQuestion } from "@/lib/api/queries";
 
+import { useEmbedHost } from "../embed-context";
 import { useWorkspace } from "../store";
 
 /**
@@ -17,6 +18,8 @@ export function IdentifyQuizBanner({ onShow }: { onShow: (structureId: string) =
   const quiz = useWorkspace((s) => s.quiz);
   const selectedId = useWorkspace((s) => s.selectedId);
   const answer = useAnswerQuestion();
+  // Inside a module's lab pane, "back" closes the pane instead of navigating.
+  const embed = useEmbedHost();
   if (!quiz) return null;
 
   const result = answer.data;
@@ -33,6 +36,20 @@ export function IdentifyQuizBanner({ onShow }: { onShow: (structureId: string) =
     useWorkspace.getState().setQuiz({ ...quiz, answered: false });
   };
   const back = `/learn/${encodeURIComponent(quiz.moduleId)}#quiz`;
+  const leave = () => {
+    useWorkspace.getState().setQuiz(null);
+    embed?.onExit("quiz");
+  };
+  const backLink = (children: React.ReactNode, label?: string) =>
+    embed ? (
+      <button type="button" onClick={leave} aria-label={label}>
+        {children}
+      </button>
+    ) : (
+      <Link href={back} onClick={() => useWorkspace.getState().setQuiz(null)} aria-label={label}>
+        {children}
+      </Link>
+    );
 
   return (
     <div className="pointer-events-none absolute inset-x-0 top-3 z-10 flex justify-center px-3">
@@ -47,10 +64,8 @@ export function IdentifyQuizBanner({ onShow }: { onShow: (structureId: string) =
             <p className="text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">Find it in 3D</p>
             <p className="text-sm font-medium">{quiz.stem}</p>
           </div>
-          <Button size="icon-sm" variant="ghost" aria-label="Leave the question" asChild>
-            <Link href={back} onClick={() => useWorkspace.getState().setQuiz(null)}>
-              <X />
-            </Link>
+          <Button size="icon-sm" variant="ghost" asChild>
+            {backLink(<X />, "Leave the question")}
           </Button>
         </header>
 
@@ -91,9 +106,7 @@ export function IdentifyQuizBanner({ onShow }: { onShow: (structureId: string) =
                 </Button>
               )}
               <Button size="sm" variant={result.correct ? "default" : "ghost"} asChild>
-                <Link href={back} onClick={() => useWorkspace.getState().setQuiz(null)}>
-                  Back to the quiz
-                </Link>
+                {backLink("Back to the quiz")}
               </Button>
             </div>
           </div>

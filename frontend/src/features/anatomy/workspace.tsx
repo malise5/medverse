@@ -1,5 +1,6 @@
 "use client";
 
+import { Info, X } from "lucide-react";
 import dynamic from "next/dynamic";
 import { useSearchParams } from "next/navigation";
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
@@ -26,6 +27,20 @@ import { useWorkspace } from "./store";
 import { useAnatomyData } from "./use-anatomy-data";
 
 const HEART = "FMA:7088";
+
+/** Close button for the overlay panels of the embedded workspace. */
+function PanelClose({ label, onClick }: { label: string; onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      aria-label={label}
+      onClick={onClick}
+      className="absolute right-2 top-2 z-10 grid size-7 place-items-center rounded-md text-muted-foreground hover:bg-accent hover:text-foreground"
+    >
+      <X className="size-4" />
+    </button>
+  );
+}
 /** Validated dark-surface categorical palette (fixed order, never cycled). */
 const PART_COLORS = ["#3987e5", "#d95926", "#199e70", "#c98500", "#d55181", "#008300", "#9085e9", "#e66767"];
 
@@ -47,7 +62,12 @@ function useIsDesktop() {
   return desktop;
 }
 
-export function AnatomyWorkspace() {
+/**
+ * The 3D anatomy explorer. `embedded` runs it inside another page (a learning module's
+ * lab pane): the explorer and information panels become overlays inside the viewer so
+ * the 3D view keeps the room, and the explorer starts closed.
+ */
+export function AnatomyWorkspace({ embedded = false }: { embedded?: boolean } = {}) {
   const data = useAnatomyData();
   const selectedId = useWorkspace((s) => s.selectedId);
   const multi = useWorkspace((s) => s.multiSelection);
@@ -55,8 +75,9 @@ export function AnatomyWorkspace() {
   const select = useWorkspace((s) => s.select);
   const detail = useStructure(selectedId, audience);
   const desktop = useIsDesktop();
-  const [leftOpen, setLeftOpen] = useState(true);
-  const [rightOpen, setRightOpen] = useState(true);
+  const [leftOpen, setLeftOpen] = useState(!embedded);
+  // Embedded: the information panel opens on request (it would cover a narrow viewer).
+  const [rightOpen, setRightOpen] = useState(!embedded);
 
   // Selection may be a compound structure (e.g. "heart"); its meshes come from the API.
   // Until the detail loads, fall back to meshes owned directly by the structure.
@@ -76,9 +97,9 @@ export function AnatomyWorkspace() {
   const selectAndFocus = useCallback(
     (id: string) => {
       select(id);
-      if (!desktop) setRightOpen(true);
+      if (!desktop && !embedded) setRightOpen(true);
     },
-    [select, desktop],
+    [select, desktop, embedded],
   );
 
   // All meshes of a structure, including its parts (for playback bindings).
@@ -298,10 +319,10 @@ export function AnatomyWorkspace() {
       else if (!model) ws.stopPlayback();
       if (!desktop) {
         setLeftOpen(false);
-        setRightOpen(true);
+        if (!embedded) setRightOpen(true);
       }
     },
-    [select, data.systems, manifest, models.data, play, desktop],
+    [select, data.systems, manifest, models.data, play, desktop, embedded],
   );
 
   // /anatomy?system=<id> opens a whole system in spotlight (links from learning modules).
@@ -366,16 +387,30 @@ export function AnatomyWorkspace() {
 
   return (
     <div className="flex h-full min-h-0 flex-col">
-      <TopToolbar onToggleLeft={() => setLeftOpen((o) => !o)} onToggleRight={() => setRightOpen((o) => !o)} />
+      <TopToolbar
+        compact={embedded}
+        onToggleLeft={() => setLeftOpen((o) => !o)}
+        onToggleRight={() => setRightOpen((o) => !o)}
+      />
       <div className="relative flex min-h-0 flex-1">
         {/* Cell-scale labs take over the whole workspace; closing returns to the head. */}
         {(activeProcess === "signalling" || activeProcess === "growth") && (
           <ProcessStage id={activeProcess} onClose={() => useWorkspace.getState().setActiveProcess(null)} />
         )}
-        {desktop ? (
+        {desktop && !embedded ? (
           <aside className={cn("w-72 shrink-0 border-r bg-card/40", !leftOpen && "hidden")} aria-label="Explorer">
             {left}
           </aside>
+        ) : desktop && embedded ? (
+          leftOpen && (
+            <aside
+              aria-label="Explorer"
+              className="absolute inset-y-0 left-0 z-20 w-72 max-w-[85%] border-r bg-background/95 pt-8 shadow-xl backdrop-blur"
+            >
+              <PanelClose label="Close explorer" onClick={() => setLeftOpen(false)} />
+              {left}
+            </aside>
+          )
         ) : (
           <Sheet open={leftOpen} onOpenChange={setLeftOpen}>
             <SheetContent side="left" className="w-[85vw] max-w-sm p-0">
@@ -391,6 +426,7 @@ export function AnatomyWorkspace() {
             </p>
           ) : data.manifest && data.systems.length ? (
             <AnatomyCanvas
+              compactCredits={embedded}
               manifest={data.manifest}
               systems={data.systems}
               names={data.names}
@@ -403,12 +439,39 @@ export function AnatomyWorkspace() {
             <Skeleton className="m-4 h-[calc(100%-2rem)]" />
           )}
           <IdentifyQuizBanner onShow={selectFromList} />
+          {embedded && !rightOpen && !quizHidesNames && (selectedId || systemFocus) && (
+            <button
+              type="button"
+              onClick={() => setRightOpen(true)}
+              className="absolute bottom-3 left-3 z-10 flex max-w-[70%] items-center gap-2 rounded-full border bg-background/90 px-3 py-1.5 text-xs font-medium shadow-lg backdrop-blur transition-colors hover:border-primary/60"
+            >
+              <Info className="size-3.5 shrink-0 text-primary" aria-hidden />
+              <span className="block truncate first-letter:uppercase">
+                {selectedId
+                  ? (detail.data?.id === selectedId ? detail.data.name : data.names.get(selectedId)) ?? "Structure"
+                  : (data.systems.find((x) => x.id === systemFocus)?.name ?? "System")}
+              </span>
+              <span className="shrink-0 text-muted-foreground">· Details</span>
+            </button>
+          )}
           <ProcessHud />
         </section>
-        {desktop ? (
+        {desktop && !embedded ? (
           <aside className={cn("w-[22rem] shrink-0 border-l bg-card/40", !rightOpen && "hidden")} aria-label="Structure information">
             {right}
           </aside>
+        ) : desktop && embedded ? (
+          rightOpen &&
+          !quizHidesNames &&
+          (!!selectedId || !!systemFocus) && (
+            <aside
+              aria-label="Structure information"
+              className="absolute inset-y-0 right-0 z-20 w-80 max-w-[85%] border-l bg-background/95 pt-8 shadow-xl backdrop-blur"
+            >
+              <PanelClose label="Close information" onClick={() => setRightOpen(false)} />
+              {right}
+            </aside>
+          )
         ) : (
           <Sheet open={rightOpen && !quizHidesNames && (!!selectedId || !!systemFocus)} onOpenChange={setRightOpen}>
             <SheetContent side="bottom" className="h-[70dvh] p-0">

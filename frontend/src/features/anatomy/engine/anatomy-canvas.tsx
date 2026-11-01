@@ -8,6 +8,7 @@ import type { AnatomicalSystem, AssetManifest } from "@/lib/api/types";
 
 import { useWorkspace } from "../store";
 import { PlaybackBar } from "../function/playback-bar";
+import { PartLabelOverlay } from "./part-labels";
 import { AnatomyScene, TARGET, VIEW_POSITIONS } from "./anatomy-scene";
 
 class WebGLBoundary extends Component<{ children: ReactNode }, { error: Error | null }> {
@@ -79,7 +80,10 @@ export default function AnatomyCanvas({
   multiMeshIds,
   onPick,
   resolveMeshes,
+  compactCredits = false,
 }: {
+  /** Narrow host (module lab pane): credits collapse behind a toggle. */
+  compactCredits?: boolean;
   manifest: AssetManifest;
   systems: AnatomicalSystem[];
   names: Map<string, string>;
@@ -117,12 +121,22 @@ export default function AnatomyCanvas({
             />
           </Suspense>
         </Canvas>
+        <PartLabelOverlay />
         <LoadingOverlay />
         <PlaybackBar />
         <HoverLabel names={names} />
-        <p className="pointer-events-none absolute bottom-1.5 right-2 max-w-[70%] text-right text-[10px] leading-tight text-muted-foreground/70">
-          3D data: {attribution}
-        </p>
+        {compactCredits ? (
+          <details className="group absolute bottom-1.5 right-2 z-10 max-w-[85%] text-right text-[10px] leading-tight text-muted-foreground">
+            <summary className="ml-auto w-fit cursor-pointer list-none rounded px-1.5 py-0.5 hover:text-foreground [&::-webkit-details-marker]:hidden">
+              3D data credits
+            </summary>
+            <p className="mt-1 rounded-md border bg-background/95 p-2 text-left shadow-lg">3D data: {attribution}</p>
+          </details>
+        ) : (
+          <p className="pointer-events-none absolute bottom-1.5 right-2 max-w-[70%] text-right text-[10px] leading-tight text-muted-foreground/70">
+            3D data: {attribution}
+          </p>
+        )}
       </div>
     </WebGLBoundary>
   );

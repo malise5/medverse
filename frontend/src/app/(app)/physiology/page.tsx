@@ -12,7 +12,7 @@ export default function PhysiologyPage() {
         <h1 className="text-xl font-semibold">Physiology Lab</h1>
         <p className="text-sm text-muted-foreground">
           Models are computed by the MEDVERSE simulation engine; the browser only visualises results.
-          The catalogue currently contains one model. More are planned for Phase 4.
+          Each model documents its equations, assumptions, validated range and sources.
         </p>
       </header>
       <Suspense>

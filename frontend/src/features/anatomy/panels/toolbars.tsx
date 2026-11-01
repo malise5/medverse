@@ -68,7 +68,7 @@ const MODEL_SOURCE: Record<BodyModel, string> = {
 };
 
 /** Male / female body switch. Structure selection carries over; meshes are reloaded. */
-function BodyModelSwitch() {
+function BodyModelSwitch({ compact = false }: { compact?: boolean }) {
   const bodyModel = useWorkspace((s) => s.bodyModel);
   const setBodyModel = useWorkspace((s) => s.setBodyModel);
   const models = useBodyModels();
@@ -93,7 +93,11 @@ function BodyModelSwitch() {
           </button>
         ))}
       </div>
-      <Badge variant="outline" className="hidden truncate text-[10px] text-muted-foreground lg:inline-flex" title={models.data?.find((x) => x.id === bodyModel)?.description}>
+      <Badge
+        variant="outline"
+        className={cn("hidden truncate text-[10px] text-muted-foreground", !compact && "lg:inline-flex")}
+        title={models.data?.find((x) => x.id === bodyModel)?.description}
+      >
         {MODEL_SOURCE[bodyModel]}
       </Badge>
     </div>
@@ -128,9 +132,12 @@ function RegionSwitch() {
 export function TopToolbar({
   onToggleLeft,
   onToggleRight,
+  compact = false,
 }: {
   onToggleLeft: () => void;
   onToggleRight: () => void;
+  /** Narrow host (a learning module's lab pane): hide the source badge. */
+  compact?: boolean;
 }) {
   const requestView = useWorkspace((s) => s.requestView);
   const reset = useWorkspace((s) => s.reset);
@@ -143,7 +150,7 @@ export function TopToolbar({
       <IconButton label="Toggle explorer panel" onClick={onToggleLeft}>
         <PanelLeft />
       </IconButton>
-      <BodyModelSwitch />
+      <BodyModelSwitch compact={compact} />
       <RegionSwitch />
       <div className="ml-auto flex items-center gap-1">
         {(isolated || hiddenCount > 0) && (

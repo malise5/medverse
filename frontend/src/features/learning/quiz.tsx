@@ -67,7 +67,19 @@ function McqQuestion({ q, attempt, onAnswer, pending }: { q: QuizQuestion; attem
   );
 }
 
-export function Quiz({ module, level }: { module: ModuleDetail; level: LearningLevel }) {
+export function Quiz({
+  module,
+  level,
+  onFindIn3D,
+  activeQuestion = null,
+}: {
+  module: ModuleDetail;
+  level: LearningLevel;
+  /** Open a "find it in 3D" question beside the module (lab pane) instead of leaving it. */
+  onFindIn3D?: (q: QuizQuestion) => void;
+  /** Question currently open in the 3D panel. */
+  activeQuestion?: string | null;
+}) {
   const [allLevels, setAllLevels] = useState(false);
   const questions = useMemo(
     () => (allLevels ? module.questions : questionsForLevel(module.questions, level)),
@@ -153,18 +165,32 @@ export function Quiz({ module, level }: { module: ModuleDetail; level: LearningL
             ) : (
               <div className="grid gap-2 rounded-lg border border-dashed p-3">
                 <p className="text-sm text-muted-foreground">
-                  Answer this one in the 3D explorer: find the structure, select it and check your answer. You will come
-                  back here afterwards.
+                  Answer this one in 3D: find the structure, select it and check your answer. The 3D model opens beside
+                  this question, so you stay in the module.
                 </p>
-                <Button size="sm" className="justify-self-start" asChild>
-                  <Link
-                    href={`/anatomy?quiz=${encodeURIComponent(q.id)}&module=${encodeURIComponent(module.id)}${
-                      q.body_models.length === 1 ? `&model=${q.body_models[0]}` : ""
-                    }`}
+                {onFindIn3D ? (
+                  <Button
+                    size="sm"
+                    className="justify-self-start"
+                    variant={activeQuestion === q.id ? "secondary" : "default"}
+                    onClick={() => onFindIn3D(q)}
                   >
-                    <Crosshair /> Find it in 3D{q.body_models.length === 1 ? ` (${q.body_models[0]} body)` : ""}
-                  </Link>
-                </Button>
+                    <Crosshair />
+                    {activeQuestion === q.id
+                      ? "Answer it in the 3D panel"
+                      : `Find it in 3D${q.body_models.length === 1 ? ` (${q.body_models[0]} body)` : ""}`}
+                  </Button>
+                ) : (
+                  <Button size="sm" className="justify-self-start" asChild>
+                    <Link
+                      href={`/anatomy?quiz=${encodeURIComponent(q.id)}&module=${encodeURIComponent(module.id)}${
+                        q.body_models.length === 1 ? `&model=${q.body_models[0]}` : ""
+                      }`}
+                    >
+                      <Crosshair /> Find it in 3D{q.body_models.length === 1 ? ` (${q.body_models[0]} body)` : ""}
+                    </Link>
+                  </Button>
+                )}
               </div>
             )}
 
