@@ -64,7 +64,7 @@ cd frontend && npm test && npm run lint && npm run typecheck && npm run build   
 | `frontend/` | Next.js 16 app: shell, 3D anatomy engine, labs |
 | `pipeline/` | 3D bodies → knowledge records + GLB bundles: `bodyparts3d/` (male, BodyParts3D 4.0) and `hra/` (female, Human Reference Atlas Visible Human Female); see [3D assets](docs/3d-asset-pipeline.md) |
 | `content/` | Version-controlled references, systems, curated anatomy, pathology, generated data |
-| `docs/` | [Architecture](docs/architecture.md) · [Database](docs/database.md) · [Knowledge graph](docs/knowledge-graph.md) · [3D assets](docs/3d-asset-pipeline.md) · [Simulation](docs/simulation-engine.md) · [API](docs/api.md) · [Security](docs/security.md) · [Governance](docs/content-governance.md) · [Roadmap](docs/roadmap.md) |
+| `docs/` | [Architecture](docs/architecture.md) · [Database](docs/database.md) · [Knowledge graph](docs/knowledge-graph.md) · [3D assets](docs/3d-asset-pipeline.md) · [Simulation](docs/simulation-engine.md) · [API](docs/api.md) · [Security](docs/security.md) · [Deployment](docs/deployment.md) · [Governance](docs/content-governance.md) · [Roadmap](docs/roadmap.md) |
 
 ## Attribution
 

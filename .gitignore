@@ -5,6 +5,7 @@ __pycache__/
 .pytest_cache/
 .ruff_cache/
 backend/.env
+/.env
 
 # Node / Next.js
 node_modules/
